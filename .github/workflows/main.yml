@@ -1,0 +1,16 @@
+name: Automation Tests
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 0 0 * * *
+
+jobs:
+  download-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: download
+        uses: actions/checkout@v2
+        if: github.event.schedule == '0 0 * * *'
+        with:
+          command: npm run download
