@@ -4,7 +4,8 @@ const fs = require("fs");
 const path = require("path");
 
 const baseUrl = "https://qlik.dev";
-const downloadPath = path.resolve("../data");
+const downloadPath = path.resolve(`${process.cwd()}/data`);
+
 const saveRawData = false;
 
 async function scrape() {
@@ -44,9 +45,12 @@ function combineFiles(rawData) {
     }
   }
 
-  fs.writeFileSync("../data/SaaS_infos.json", JSON.stringify(info, null, 4));
   fs.writeFileSync(
-    "../data/SaaS_Swagger_Data.json",
+    `${process.cwd()}/data/SaaS_infos.json`,
+    JSON.stringify(info, null, 4)
+  );
+  fs.writeFileSync(
+    `${process.cwd()}/data/SaaS_Swagger_Data.json`,
     JSON.stringify(flatten, null, 4)
   );
 }
@@ -56,7 +60,10 @@ async function downloadQixData() {
     .get(`${baseUrl}/specs/openRPC/engine-rpc.json`)
     .then((r) => r.data);
 
-  fs.writeFileSync("../data/QIX_data.json", JSON.stringify(qixData, null, 4));
+  fs.writeFileSync(
+    `${process.cwd()}/data/QIX_data.json`,
+    JSON.stringify(qixData, null, 4)
+  );
 }
 
 async function downloadSaaSData() {
@@ -122,7 +129,7 @@ async function downloadSaaSData() {
 
   if (saveRawData)
     fs.writeFileSync(
-      "../data/SaaS_raw_data.json",
+      `${process.cwd()}/data/SaaS_raw_data.json`,
       JSON.stringify(data, null, 4)
     );
 
