@@ -1,4 +1,4 @@
-name: Automation Tests
+name: Data download
 
 on:
   workflow_dispatch:
@@ -11,6 +11,6 @@ jobs:
     steps:
       - name: download
         uses: actions/checkout@v2
-        if: github.event.schedule == '0 0 * * *'
+        #if: github.event.schedule == '0 0 * * *'
         with:
           command: npm run download
