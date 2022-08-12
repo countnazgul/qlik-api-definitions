@@ -14,4 +14,4 @@ jobs:
         #if: github.event.schedule == '0 0 * * *'
         # with:
         # command: npm run download
-      - run: npm download
+      - run: npm run download
