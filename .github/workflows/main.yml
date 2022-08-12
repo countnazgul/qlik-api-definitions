@@ -12,5 +12,6 @@ jobs:
       - name: download
         uses: actions/checkout@v2
         #if: github.event.schedule == '0 0 * * *'
-        with:
-          command: npm run download
+        # with:
+        # command: npm run download
+      - run: npm download
