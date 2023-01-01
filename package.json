@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/countnazgul/download-qlik-saas-api-definitions#readme",
   "dependencies": {
-    "axios": "^0.27.2",
-    "puppeteer": "^13.7.0"
+    "axios": "^1.2.2",
+    "puppeteer": "^19.4.1"
   }
 }

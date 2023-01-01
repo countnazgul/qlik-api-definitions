@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.1351.0",
+        "version": "12.1561.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -3779,6 +3779,32 @@
             "x-qlik-stability": "locked"
         },
         {
+            "name": "GenericBookmark.ApplyAndVerify",
+            "description": "Applies a bookmark and verify result dataset against originally selected values.\n\n<div class=note>The operation is successful if **qApplySuccess** is set to true. **qWarnings** lists state and field with unmatching values </div>",
+            "params": [],
+            "result": {
+                "name": "Results for GenericBookmark.ApplyAndVerify",
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "qResult": {
+                            "type": "object",
+                            "$ref": "#/components/schemas/BookmarkApplyAndVerifyResult"
+                        }
+                    }
+                }
+            },
+            "errors": [
+                {
+                    "$ref": "#/components/errors/GenericErrors"
+                }
+            ],
+            "x-qlik-see-also": [
+                "[Apply a bookmark](#csh-apply-bookmark)"
+            ],
+            "x-qlik-stability": "experimental"
+        },
+        {
             "name": "GenericBookmark.Publish",
             "description": "Publishes a bookmark.\n<div class=note>This operation is not applicable for Qlik Sense Desktop.</div>",
             "params": [],
@@ -6710,6 +6736,38 @@
             "x-qlik-stability": "locked"
         },
         {
+            "name": "Doc.ApplyAndVerifyBookmark",
+            "description": "Applies a bookmark and verifies result dataset against originally selected values.\n<div class=note>The operation is successful if **qApplySuccess** is set to true. **qWarnings** lists state and field with unmatching values </div>",
+            "params": [
+                {
+                    "name": "qId",
+                    "description": "Identifier of the bookmark.",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ],
+            "result": {
+                "name": "Results for Doc.ApplyAndVerifyBookmark",
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "qResult": {
+                            "type": "object",
+                            "$ref": "#/components/schemas/BookmarkApplyAndVerifyResult"
+                        }
+                    }
+                }
+            },
+            "errors": [
+                {
+                    "$ref": "#/components/errors/GenericErrors"
+                }
+            ],
+            "x-qlik-stability": "experimental"
+        },
+        {
             "name": "Doc.CloneBookmark",
             "description": "Clones a bookmark.\n<div class=note>The identifier is set by the engine.</div>",
             "params": [
@@ -7991,7 +8049,7 @@
         },
         {
             "name": "Doc.GuessFileType",
-            "description": "Guesses the data format for a given file.\nRecognized file formats are:\n* _CSV_ for Delimited\n* _FIX_ for Fixed Record\n* _DIF_ for Data Interchange Format\n* _EXCEL_BIFF_ for Microsoft Excel (XLS)\n* _EXCEL_OOXML_ for Microsoft Excel (XLSX)\n* _HTML_ for HTML\n* _QVD_ for QVD file\n* _XML_ for XML\n* _QVX_ for QVX file\n* _JSON_ for JSON format\n* _KML_ for KML file\n\n### FileType\nRecognized file formats are:\n* _CSV_ for Delimited\n* _FIX_ for Fixed Record\n* _DIF_ for Data Interchange Format\n* _EXCEL_BIFF_ for Microsoft Excel (XLS)\n* _EXCEL_OOXML_ for Microsoft Excel (XLSX)\n* _HTML_ for HTML\n* _QVD_ for QVD file\n* _XML_ for XML\n* _QVX_ for QVX file\n* _JSON_ for JSON format\n* _KML_ for KML file",
+            "description": "Guesses the data format for a given file.\nRecognized file formats are:\n* _CSV_ for Delimited\n* _FIX_ for Fixed Record\n* _DIF_ for Data Interchange Format\n* _EXCEL_BIFF_ for Microsoft Excel (XLS)\n* _EXCEL_OOXML_ for Microsoft Excel (XLSX)\n* _HTML_ for HTML\n* _QVD_ for QVD file\n* _XML_ for XML\n* _QVX_ for QVX file\n* _JSON_ for JSON format\n* _KML_ for KML file\n* _PARQUET_ for PARQUET file\n\n### FileType\nRecognized file formats are:\n* _CSV_ for Delimited\n* _FIX_ for Fixed Record\n* _DIF_ for Data Interchange Format\n* _EXCEL_BIFF_ for Microsoft Excel (XLS)\n* _EXCEL_OOXML_ for Microsoft Excel (XLSX)\n* _HTML_ for HTML\n* _QVD_ for QVD file\n* _XML_ for XML\n* _QVX_ for QVX file\n* _JSON_ for JSON format\n* _KML_ for KML file\n* _PARQUET_ for PARQUET file",
             "params": [
                 {
                     "name": "qConnectionId",
@@ -8033,7 +8091,7 @@
         },
         {
             "name": "Doc.GetFileTables",
-            "description": "Lists the tables for a folder connection.\n\n### FileType\nRecognized file formats are:\n* _CSV_ for Delimited\n* _FIX_ for Fixed Record\n* _DIF_ for Data Interchange Format\n* _EXCEL_BIFF_ for Microsoft Excel (XLS)\n* _EXCEL_OOXML_ for Microsoft Excel (XLSX)\n* _HTML_ for HTML\n* _QVD_ for QVD file\n* _XML_ for XML\n* _QVX_ for QVX file\n* _JSON_ for JSON format\n* _KML_ for KML file",
+            "description": "Lists the tables for a folder connection.\n\n### FileType\nRecognized file formats are:\n* _CSV_ for Delimited\n* _FIX_ for Fixed Record\n* _DIF_ for Data Interchange Format\n* _EXCEL_BIFF_ for Microsoft Excel (XLS)\n* _EXCEL_OOXML_ for Microsoft Excel (XLSX)\n* _HTML_ for HTML\n* _QVD_ for QVD file\n* _XML_ for XML\n* _QVX_ for QVX file\n* _JSON_ for JSON format\n* _KML_ for KML file\n* _PARQUET_ for PARQUET file",
             "params": [
                 {
                     "name": "qConnectionId",
@@ -8086,7 +8144,7 @@
         },
         {
             "name": "Doc.GetFileTableFields",
-            "description": "Lists the fields of a table for a folder connection.\n\n### FileType\nRecognized file formats are:\n* _CSV_ for Delimited\n* _FIX_ for Fixed Record\n* _DIF_ for Data Interchange Format\n* _EXCEL_BIFF_ for Microsoft Excel (XLS)\n* _EXCEL_OOXML_ for Microsoft Excel (XLSX)\n* _HTML_ for HTML\n* _QVD_ for QVD file\n* _XML_ for XML\n* _QVX_ for QVX file\n* _JSON_ for JSON format\n* _KML_ for KML file",
+            "description": "Lists the fields of a table for a folder connection.\n\n### FileType\nRecognized file formats are:\n* _CSV_ for Delimited\n* _FIX_ for Fixed Record\n* _DIF_ for Data Interchange Format\n* _EXCEL_BIFF_ for Microsoft Excel (XLS)\n* _EXCEL_OOXML_ for Microsoft Excel (XLSX)\n* _HTML_ for HTML\n* _QVD_ for QVD file\n* _XML_ for XML\n* _QVX_ for QVX file\n* _JSON_ for JSON format\n* _KML_ for KML file\n* _PARQUET_ for PARQUET file",
             "params": [
                 {
                     "name": "qConnectionId",
@@ -8150,7 +8208,7 @@
         },
         {
             "name": "Doc.GetFileTablePreview",
-            "description": "Lists the values in a table for a folder connection.\n\n### FileType\nRecognized file formats are:\n* _CSV_ for Delimited\n* _FIX_ for Fixed Record\n* _DIF_ for Data Interchange Format\n* _EXCEL_BIFF_ for Microsoft Excel (XLS)\n* _EXCEL_OOXML_ for Microsoft Excel (XLSX)\n* _HTML_ for HTML\n* _QVD_ for QVD file\n* _XML_ for XML\n* _QVX_ for QVX file\n* _JSON_ for JSON format\n* _KML_ for KML file",
+            "description": "Lists the values in a table for a folder connection.\n\n### FileType\nRecognized file formats are:\n* _CSV_ for Delimited\n* _FIX_ for Fixed Record\n* _DIF_ for Data Interchange Format\n* _EXCEL_BIFF_ for Microsoft Excel (XLS)\n* _EXCEL_OOXML_ for Microsoft Excel (XLSX)\n* _HTML_ for HTML\n* _QVD_ for QVD file\n* _XML_ for XML\n* _QVX_ for QVX file\n* _JSON_ for JSON format\n* _KML_ for KML file\n* _PARQUET_ for PARQUET file",
             "params": [
                 {
                     "name": "qConnectionId",
@@ -9273,6 +9331,143 @@
                 }
             ],
             "x-qlik-stability": "locked",
+            "x-qlik-access-control": [
+                "update"
+            ]
+        },
+        {
+            "name": "Doc.TransformApp",
+            "description": "Transform current app into an instance of the targeted mode",
+            "params": [
+                {
+                    "name": "qDstParameters",
+                    "description": "Attributes that should be set in the new app.",
+                    "required": true,
+                    "schema": {
+                        "type": "object",
+                        "$ref": "#/components/schemas/TransformAppParameters"
+                    }
+                }
+            ],
+            "result": {
+                "name": "Results for Doc.TransformApp",
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "qResult": {
+                            "type": "object",
+                            "$ref": "#/components/schemas/TransformAppResult"
+                        }
+                    }
+                }
+            },
+            "errors": [
+                {
+                    "$ref": "#/components/errors/GenericErrors"
+                }
+            ],
+            "x-qlik-stability": "locked"
+        },
+        {
+            "name": "Doc.CreateTemporaryBookmark",
+            "description": "Create temporary bookmark\n<div class=note>CreateTemporaryBookmark method is only supported in SaaS Editions of Qlik Sense.</div>",
+            "params": [
+                {
+                    "name": "qOptions",
+                    "description": "Options for the temporary bookmark",
+                    "required": true,
+                    "schema": {
+                        "type": "object",
+                        "$ref": "#/components/schemas/NxTempBookmarkOptions"
+                    }
+                },
+                {
+                    "name": "qObjectIdsToPatch",
+                    "description": "Add softpatches for this objects if available. If empty all softpatches are added to the bookmark. This is ignored if IncludePatches is false.",
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            ],
+            "result": {
+                "name": "Results for Doc.CreateTemporaryBookmark",
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "qId": {
+                            "type": "string"
+                        },
+                        "qReturn": {
+                            "type": "boolean"
+                        }
+                    }
+                }
+            },
+            "errors": [
+                {
+                    "$ref": "#/components/errors/GenericErrors"
+                }
+            ],
+            "x-qlik-stability": "experimental"
+        },
+        {
+            "name": "Doc.ApplyTemporaryBookmark",
+            "description": "Apply temporary bookmark identified by Id.\n<div class=note>ApplyTemporaryBookmark method is only supported in SaaS Editions of Qlik Sense.</div>",
+            "params": [
+                {
+                    "name": "qId",
+                    "description": "Identifier of the temporary selection state",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ],
+            "result": {
+                "name": "Results for Doc.ApplyTemporaryBookmark",
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "qReturn": {
+                            "type": "boolean"
+                        }
+                    }
+                }
+            },
+            "errors": [
+                {
+                    "$ref": "#/components/errors/GenericErrors"
+                }
+            ],
+            "x-qlik-stability": "experimental"
+        },
+        {
+            "name": "Doc.CommitScript",
+            "description": "Commits the current script version so that any future changes will be part of a new version.",
+            "params": [
+                {
+                    "name": "qCommitMessage",
+                    "description": "Name of the version.\n<div class=note> Only applicable to QCS. </div>",
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ],
+            "result": {
+                "name": "Results for Doc.CommitScript",
+                "schema": {
+                    "type": "object"
+                }
+            },
+            "errors": [
+                {
+                    "$ref": "#/components/errors/GenericErrors"
+                }
+            ],
+            "x-qlik-stability": "experimental",
             "x-qlik-access-control": [
                 "update"
             ]
@@ -10469,7 +10664,7 @@
             "params": [
                 {
                     "name": "qGroup",
-                    "description": "Name of the group.\nDefault is all groups.\n\nOne of:\n* ALL or FUNC_GROUP_ALL\n* U or FUNC_GROUP_UNKNOWN\n* NONE or FUNC_GROUP_NONE\n* AGGR or FUNC_GROUP_AGGR\n* NUM or FUNC_GROUP_NUMERIC\n* RNG or FUNC_GROUP_RANGE\n* EXP or FUNC_GROUP_EXPONENTIAL_AND_LOGARITHMIC\n* TRIG or FUNC_GROUP_TRIGONOMETRIC_AND_HYPERBOLIC\n* FIN or FUNC_GROUP_FINANCIAL\n* MATH or FUNC_GROUP_MATH_CONSTANT_AND_PARAM_FREE\n* COUNT or FUNC_GROUP_COUNTER\n* STR or FUNC_GROUP_STRING\n* MAPP or FUNC_GROUP_MAPPING\n* RCRD or FUNC_GROUP_INTER_RECORD\n* CND or FUNC_GROUP_CONDITIONAL\n* LOG or FUNC_GROUP_LOGICAL\n* NULL or FUNC_GROUP_NULL\n* SYS or FUNC_GROUP_SYSTEM\n* FILE or FUNC_GROUP_FILE\n* TBL or FUNC_GROUP_TABLE\n* DATE or FUNC_GROUP_DATE_AND_TIME\n* NUMI or FUNC_GROUP_NUMBER_INTERPRET\n* FRMT or FUNC_GROUP_FORMATTING\n* CLR or FUNC_GROUP_COLOR\n* RNK or FUNC_GROUP_RANKING\n* GEO or FUNC_GROUP_GEO\n* EXT or FUNC_GROUP_EXTERNAL\n* PROB or FUNC_GROUP_PROBABILITY\n* ARRAY or FUNC_GROUP_ARRAY\n* LEG or FUNC_GROUP_LEGACY",
+                    "description": "Name of the group.\nDefault is all groups.\n\nOne of:\n* ALL or FUNC_GROUP_ALL\n* U or FUNC_GROUP_UNKNOWN\n* NONE or FUNC_GROUP_NONE\n* AGGR or FUNC_GROUP_AGGR\n* NUM or FUNC_GROUP_NUMERIC\n* RNG or FUNC_GROUP_RANGE\n* EXP or FUNC_GROUP_EXPONENTIAL_AND_LOGARITHMIC\n* TRIG or FUNC_GROUP_TRIGONOMETRIC_AND_HYPERBOLIC\n* FIN or FUNC_GROUP_FINANCIAL\n* MATH or FUNC_GROUP_MATH_CONSTANT_AND_PARAM_FREE\n* COUNT or FUNC_GROUP_COUNTER\n* STR or FUNC_GROUP_STRING\n* MAPP or FUNC_GROUP_MAPPING\n* RCRD or FUNC_GROUP_INTER_RECORD\n* CND or FUNC_GROUP_CONDITIONAL\n* LOG or FUNC_GROUP_LOGICAL\n* NULL or FUNC_GROUP_NULL\n* SYS or FUNC_GROUP_SYSTEM\n* FILE or FUNC_GROUP_FILE\n* TBL or FUNC_GROUP_TABLE\n* DATE or FUNC_GROUP_DATE_AND_TIME\n* NUMI or FUNC_GROUP_NUMBER_INTERPRET\n* FRMT or FUNC_GROUP_FORMATTING\n* CLR or FUNC_GROUP_COLOR\n* RNK or FUNC_GROUP_RANKING\n* GEO or FUNC_GROUP_GEO\n* EXT or FUNC_GROUP_EXTERNAL\n* PROB or FUNC_GROUP_PROBABILITY\n* ARRAY or FUNC_GROUP_ARRAY\n* LEG or FUNC_GROUP_LEGACY\n* DB or FUNC_GROUP_DB_NATIVE",
                     "schema": {
                         "type": "string"
                     }
@@ -11275,6 +11470,10 @@
                         "title": "LOCERR_APP_SIZE_EXCEEDED"
                     },
                     {
+                        "x-qlik-const": 1016,
+                        "title": "LOCERR_APP_DIRECT_QUERY_WORKLOAD_NOT_SUPPORTED"
+                    },
+                    {
                         "x-qlik-const": 2000,
                         "title": "LOCERR_CONNECTION_ALREADY_EXISTS"
                     },
@@ -11293,6 +11492,10 @@
                     {
                         "x-qlik-const": 2004,
                         "title": "LOCERR_CONNECTION_NAME_IS_INVALID"
+                    },
+                    {
+                        "x-qlik-const": 2005,
+                        "title": "LOCERR_CONNECTION_MISSING_CREDENTIALS"
                     },
                     {
                         "x-qlik-const": 2300,
@@ -11713,6 +11916,10 @@
                     {
                         "x-qlik-const": 11047,
                         "title": "LOCERR_RELOAD_WRONG_FILE_FORMAT_QVD"
+                    },
+                    {
+                        "x-qlik-const": 11048,
+                        "title": "LOCERR_RELOAD_ACTION_BLOCKED_ENTITLEMENT"
                     },
                     {
                         "x-qlik-const": 12000,
@@ -13939,6 +14146,18 @@
                         "type": "object",
                         "description": "Definition of the dynamic properties.",
                         "$ref": "#/components/schemas/NxMetaDef"
+                    },
+                    "qIncludeVariables": {
+                        "type": "boolean",
+                        "description": "If true all variables will be stored in the bookmark.",
+                        "default": false,
+                        "x-qlik-stability": "experimental"
+                    },
+                    "qDistinctValues": {
+                        "type": "boolean",
+                        "description": "If true all selected values will be stored distinct, i.e. searchstrings will not be kept.",
+                        "default": false,
+                        "x-qlik-stability": "experimental"
                     }
                 }
             },
@@ -14933,6 +15152,10 @@
                         "type": "object",
                         "description": "Data",
                         "$ref": "#/components/schemas/JsonObject"
+                    },
+                    "qIncludePatches": {
+                        "type": "boolean",
+                        "description": "Include the bookmark patches. Patches can be very large and may make the list result unmanageable."
                     }
                 },
                 "x-qlik-see-also": [
@@ -15414,7 +15637,7 @@
                     },
                     "qContextSetExpression": {
                         "type": "string",
-                        "description": "Set Expression valid for the whole cube. Used to limit computations to the set specified. *"
+                        "description": "Set Expression valid for the whole cube. Used to limit computations to the set specified."
                     }
                 },
                 "x-qlik-see-also": [
@@ -16801,6 +17024,11 @@
                         "items": {
                             "$ref": "#/components/schemas/NxListObjectExpressionDef"
                         }
+                    },
+                    "qDirectQuerySimplifiedView": {
+                        "type": "boolean",
+                        "description": "If set to true, reduces the set of states returned.\nSupported for Direct Query mode only.\nDefault is false.",
+                        "x-qlik-stability": "experimental"
                     }
                 },
                 "x-qlik-see-also": [
@@ -17368,7 +17596,7 @@
                     },
                     "qContextSetExpression": {
                         "type": "string",
-                        "description": "Set Expression valid for the whole cube. Used to limit computations to the set specified. *"
+                        "description": "Set Expression valid for the whole cube. Used to limit computations to the set specified."
                     }
                 },
                 "x-qlik-stability": "stable"
@@ -17936,6 +18164,74 @@
                         "format": "int32"
                     }
                 }
+            },
+            "BookmarkApplyAndVerifyResult": {
+                "type": "object",
+                "properties": {
+                    "qApplySuccess": {
+                        "type": "boolean",
+                        "description": "Apply successfully or not *"
+                    },
+                    "qWarnings": {
+                        "type": "array",
+                        "description": "Field values verfication result *",
+                        "items": {
+                            "$ref": "#/components/schemas/BookmarkFieldVerifyWarning"
+                        }
+                    }
+                },
+                "x-qlik-stability": "experimental"
+            },
+            "BookmarkFieldVerifyWarning": {
+                "type": "object",
+                "properties": {
+                    "qState": {
+                        "type": "string",
+                        "description": "Alternate State *"
+                    },
+                    "qField": {
+                        "type": "string",
+                        "description": "Field Name *"
+                    },
+                    "qVerifyResult": {
+                        "type": "string",
+                        "description": "Field/values verfication result *\nDefines result of ApplyAndVerify.\nOne of:\n* NOT_VERIFIED\n* FIELD_VALUE_MATCH_ALL\n* FIELD_MISSING\n* FIELD_VALUE_MISSING\n* STATE_MISSING",
+                        "default": "NOT_VERIFIED",
+                        "$ref": "#/components/schemas/BookmarkFieldVerifyResultState"
+                    },
+                    "qMissingValues": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "x-qlik-stability": "experimental"
+            },
+            "BookmarkFieldVerifyResultState": {
+                "type": "string",
+                "oneOf": [
+                    {
+                        "x-qlik-const": 0,
+                        "title": "NOT_VERIFIED"
+                    },
+                    {
+                        "x-qlik-const": 1,
+                        "title": "FIELD_VALUE_MATCH_ALL"
+                    },
+                    {
+                        "x-qlik-const": 2,
+                        "title": "FIELD_MISSING"
+                    },
+                    {
+                        "x-qlik-const": 3,
+                        "title": "FIELD_VALUE_MISSING"
+                    },
+                    {
+                        "x-qlik-const": 4,
+                        "title": "STATE_MISSING"
+                    }
+                ]
             },
             "GenericVariableLayout": {
                 "type": "object",
@@ -18933,7 +19229,7 @@
                     },
                     "qIsBDILiveMode": {
                         "type": "boolean",
-                        "description": "If set to true, the app is in BDI Live Mode."
+                        "description": "If set to true, the app is in BDI Direct Query Mode."
                     },
                     "qIsDirectQueryMode": {
                         "type": "boolean",
@@ -19133,6 +19429,10 @@
                         "type": "object",
                         "description": "Set of data.",
                         "$ref": "#/components/schemas/JsonObject"
+                    },
+                    "qIncludePatches": {
+                        "type": "boolean",
+                        "description": "Include the bookmark patches. Patches can be very large and may make the list result unmanageable."
                     }
                 }
             },
@@ -19298,6 +19598,10 @@
                     "qScriptLogFile": {
                         "type": "string",
                         "description": "Path to the script log file."
+                    },
+                    "qEndedWithMemoryConstraint": {
+                        "type": "boolean",
+                        "description": "true if memory limits were exhausted during reload."
                     }
                 }
             },
@@ -19637,11 +19941,11 @@
             },
             "FileDataFormat": {
                 "type": "object",
-                "description": "### FileType\nRecognized file formats are:\n* _CSV_ for Delimited\n* _FIX_ for Fixed Record\n* _DIF_ for Data Interchange Format\n* _EXCEL_BIFF_ for Microsoft Excel (XLS)\n* _EXCEL_OOXML_ for Microsoft Excel (XLSX)\n* _HTML_ for HTML\n* _QVD_ for QVD file\n* _XML_ for XML\n* _QVX_ for QVX file\n* _JSON_ for JSON format\n* _KML_ for KML file",
+                "description": "### FileType\nRecognized file formats are:\n* _CSV_ for Delimited\n* _FIX_ for Fixed Record\n* _DIF_ for Data Interchange Format\n* _EXCEL_BIFF_ for Microsoft Excel (XLS)\n* _EXCEL_OOXML_ for Microsoft Excel (XLSX)\n* _HTML_ for HTML\n* _QVD_ for QVD file\n* _XML_ for XML\n* _QVX_ for QVX file\n* _JSON_ for JSON format\n* _KML_ for KML file\n* _PARQUET_ for PARQUET file",
                 "properties": {
                     "qType": {
                         "type": "string",
-                        "description": "Type of the file.\n\nOne of:\n* CSV or FILE_TYPE_CSV\n* FIX or FILE_TYPE_FIX\n* DIF or FILE_TYPE_DIF\n* EXCEL_BIFF or FILE_TYPE_EXCEL_BIFF\n* EXCEL_OOXML or FILE_TYPE_EXCEL_OOXML\n* HTML or FILE_TYPE_HTML\n* QVD or FILE_TYPE_QVD\n* XML or FILE_TYPE_XML\n* QVX or FILE_TYPE_QVX\n* JSON or FILE_TYPE_JSON\n* KML or FILE_TYPE_KML",
+                        "description": "Type of the file.\n\nOne of:\n* CSV or FILE_TYPE_CSV\n* FIX or FILE_TYPE_FIX\n* DIF or FILE_TYPE_DIF\n* EXCEL_BIFF or FILE_TYPE_EXCEL_BIFF\n* EXCEL_OOXML or FILE_TYPE_EXCEL_OOXML\n* HTML or FILE_TYPE_HTML\n* QVD or FILE_TYPE_QVD\n* XML or FILE_TYPE_XML\n* QVX or FILE_TYPE_QVX\n* JSON or FILE_TYPE_JSON\n* KML or FILE_TYPE_KML\n* PARQUET or FILE_TYPE_PARQUET",
                         "$ref": "#/components/schemas/FileType"
                     },
                     "qLabel": {
@@ -19748,6 +20052,11 @@
                         "x-qlik-const": 10,
                         "title": "KML",
                         "description": "FILE_TYPE_KML"
+                    },
+                    {
+                        "x-qlik-const": 11,
+                        "title": "PARQUET",
+                        "description": "FILE_TYPE_PARQUET"
                     }
                 ]
             },
@@ -20247,6 +20556,11 @@
                             "type": "integer",
                             "format": "int32"
                         }
+                    },
+                    "qMatchType": {
+                        "type": "string",
+                        "description": "Match type applied in this result group.\n\nOne of:\n* FieldMatchNone or FM_NONE\n* FieldMatchSubString or FM_SUBSTRING\n* FieldMatchWord or FM_WORD\n* FieldMatchExact or FM_EXACT\n* FieldMatchLast or FM_LAST",
+                        "$ref": "#/components/schemas/SearchFieldMatchType"
                     }
                 }
             },
@@ -20300,6 +20614,36 @@
                         "description": "String corresponding to _qKey_ for the current _SearchGroupItemMatch_. For example, if the match is _Make by Price_ found in the title of a generic object, _qValue_ will be _qMetaDef/title_."
                     }
                 }
+            },
+            "SearchFieldMatchType": {
+                "type": "string",
+                "oneOf": [
+                    {
+                        "x-qlik-const": 0,
+                        "title": "FieldMatchNone",
+                        "description": "FM_NONE"
+                    },
+                    {
+                        "x-qlik-const": 1,
+                        "title": "FieldMatchSubString",
+                        "description": "FM_SUBSTRING"
+                    },
+                    {
+                        "x-qlik-const": 2,
+                        "title": "FieldMatchWord",
+                        "description": "FM_WORD"
+                    },
+                    {
+                        "x-qlik-const": 3,
+                        "title": "FieldMatchExact",
+                        "description": "FM_EXACT"
+                    },
+                    {
+                        "x-qlik-const": 4,
+                        "title": "FieldMatchLast",
+                        "description": "FM_LAST"
+                    }
+                ]
             },
             "SearchObjectOptions": {
                 "type": "object",
@@ -20360,6 +20704,10 @@
                         "type": "object",
                         "description": "Information about publishing and permissions.\nThis parameter is optional.",
                         "$ref": "#/components/schemas/NxMeta"
+                    },
+                    "qIsLocked": {
+                        "type": "boolean",
+                        "description": "True if user is temporarily locked from modifying the script. Meta contains the ID of the last modifier. Only applicable to QCS."
                     }
                 }
             },
@@ -20550,7 +20898,7 @@
                     },
                     "qFG": {
                         "type": "string",
-                        "description": "Group of the function.\n\nOne of:\n* ALL or FUNC_GROUP_ALL\n* U or FUNC_GROUP_UNKNOWN\n* NONE or FUNC_GROUP_NONE\n* AGGR or FUNC_GROUP_AGGR\n* NUM or FUNC_GROUP_NUMERIC\n* RNG or FUNC_GROUP_RANGE\n* EXP or FUNC_GROUP_EXPONENTIAL_AND_LOGARITHMIC\n* TRIG or FUNC_GROUP_TRIGONOMETRIC_AND_HYPERBOLIC\n* FIN or FUNC_GROUP_FINANCIAL\n* MATH or FUNC_GROUP_MATH_CONSTANT_AND_PARAM_FREE\n* COUNT or FUNC_GROUP_COUNTER\n* STR or FUNC_GROUP_STRING\n* MAPP or FUNC_GROUP_MAPPING\n* RCRD or FUNC_GROUP_INTER_RECORD\n* CND or FUNC_GROUP_CONDITIONAL\n* LOG or FUNC_GROUP_LOGICAL\n* NULL or FUNC_GROUP_NULL\n* SYS or FUNC_GROUP_SYSTEM\n* FILE or FUNC_GROUP_FILE\n* TBL or FUNC_GROUP_TABLE\n* DATE or FUNC_GROUP_DATE_AND_TIME\n* NUMI or FUNC_GROUP_NUMBER_INTERPRET\n* FRMT or FUNC_GROUP_FORMATTING\n* CLR or FUNC_GROUP_COLOR\n* RNK or FUNC_GROUP_RANKING\n* GEO or FUNC_GROUP_GEO\n* EXT or FUNC_GROUP_EXTERNAL\n* PROB or FUNC_GROUP_PROBABILITY\n* ARRAY or FUNC_GROUP_ARRAY\n* LEG or FUNC_GROUP_LEGACY",
+                        "description": "Group of the function.\n\nOne of:\n* ALL or FUNC_GROUP_ALL\n* U or FUNC_GROUP_UNKNOWN\n* NONE or FUNC_GROUP_NONE\n* AGGR or FUNC_GROUP_AGGR\n* NUM or FUNC_GROUP_NUMERIC\n* RNG or FUNC_GROUP_RANGE\n* EXP or FUNC_GROUP_EXPONENTIAL_AND_LOGARITHMIC\n* TRIG or FUNC_GROUP_TRIGONOMETRIC_AND_HYPERBOLIC\n* FIN or FUNC_GROUP_FINANCIAL\n* MATH or FUNC_GROUP_MATH_CONSTANT_AND_PARAM_FREE\n* COUNT or FUNC_GROUP_COUNTER\n* STR or FUNC_GROUP_STRING\n* MAPP or FUNC_GROUP_MAPPING\n* RCRD or FUNC_GROUP_INTER_RECORD\n* CND or FUNC_GROUP_CONDITIONAL\n* LOG or FUNC_GROUP_LOGICAL\n* NULL or FUNC_GROUP_NULL\n* SYS or FUNC_GROUP_SYSTEM\n* FILE or FUNC_GROUP_FILE\n* TBL or FUNC_GROUP_TABLE\n* DATE or FUNC_GROUP_DATE_AND_TIME\n* NUMI or FUNC_GROUP_NUMBER_INTERPRET\n* FRMT or FUNC_GROUP_FORMATTING\n* CLR or FUNC_GROUP_COLOR\n* RNK or FUNC_GROUP_RANKING\n* GEO or FUNC_GROUP_GEO\n* EXT or FUNC_GROUP_EXTERNAL\n* PROB or FUNC_GROUP_PROBABILITY\n* ARRAY or FUNC_GROUP_ARRAY\n* LEG or FUNC_GROUP_LEGACY\n* DB or FUNC_GROUP_DB_NATIVE",
                         "$ref": "#/components/schemas/FunctionGroup"
                     },
                     "qFieldFlag": {
@@ -20729,6 +21077,11 @@
                         "x-qlik-const": 29,
                         "title": "LEG",
                         "description": "FUNC_GROUP_LEGACY"
+                    },
+                    {
+                        "x-qlik-const": 30,
+                        "title": "DB",
+                        "description": "FUNC_GROUP_DB_NATIVE"
                     }
                 ]
             },
@@ -20756,6 +21109,46 @@
                         "description": "META_DEFAULT_VALUE"
                     }
                 ]
+            },
+            "TransformAppParameters": {
+                "type": "object",
+                "properties": {
+                    "qName": {
+                        "type": "string",
+                        "description": "The name (title) of the application"
+                    },
+                    "qSpaceId": {
+                        "type": "string",
+                        "description": "ID of the space where the app is to be created. Empty value implies Personal space"
+                    },
+                    "qScriptParameterPrefix": {
+                        "type": "string",
+                        "description": "Prefix to be used on inserted ScriptParameters, only applicable for template apps"
+                    }
+                }
+            },
+            "TransformAppResult": {
+                "type": "object",
+                "properties": {
+                    "qAppId": {
+                        "type": "string",
+                        "description": "ID of created App"
+                    }
+                }
+            },
+            "NxTempBookmarkOptions": {
+                "type": "object",
+                "properties": {
+                    "qIncludeVariables": {
+                        "type": "boolean",
+                        "description": "IncludeVariables If true all variables will be stored in the temporary bookmark"
+                    },
+                    "qIncludeAllPatches": {
+                        "type": "boolean",
+                        "description": "IncludeAllPatches If true all patches will be stored in the temporary bookmark, if false ObjectIdsToPatch will determine what patches to include"
+                    }
+                },
+                "x-qlik-stability": "experimental"
             },
             "ProgressData": {
                 "type": "object",
@@ -21093,7 +21486,7 @@
                     },
                     "qGroup": {
                         "type": "string",
-                        "description": "Group of the script function.\n\nOne of:\n* ALL or FUNC_GROUP_ALL\n* U or FUNC_GROUP_UNKNOWN\n* NONE or FUNC_GROUP_NONE\n* AGGR or FUNC_GROUP_AGGR\n* NUM or FUNC_GROUP_NUMERIC\n* RNG or FUNC_GROUP_RANGE\n* EXP or FUNC_GROUP_EXPONENTIAL_AND_LOGARITHMIC\n* TRIG or FUNC_GROUP_TRIGONOMETRIC_AND_HYPERBOLIC\n* FIN or FUNC_GROUP_FINANCIAL\n* MATH or FUNC_GROUP_MATH_CONSTANT_AND_PARAM_FREE\n* COUNT or FUNC_GROUP_COUNTER\n* STR or FUNC_GROUP_STRING\n* MAPP or FUNC_GROUP_MAPPING\n* RCRD or FUNC_GROUP_INTER_RECORD\n* CND or FUNC_GROUP_CONDITIONAL\n* LOG or FUNC_GROUP_LOGICAL\n* NULL or FUNC_GROUP_NULL\n* SYS or FUNC_GROUP_SYSTEM\n* FILE or FUNC_GROUP_FILE\n* TBL or FUNC_GROUP_TABLE\n* DATE or FUNC_GROUP_DATE_AND_TIME\n* NUMI or FUNC_GROUP_NUMBER_INTERPRET\n* FRMT or FUNC_GROUP_FORMATTING\n* CLR or FUNC_GROUP_COLOR\n* RNK or FUNC_GROUP_RANKING\n* GEO or FUNC_GROUP_GEO\n* EXT or FUNC_GROUP_EXTERNAL\n* PROB or FUNC_GROUP_PROBABILITY\n* ARRAY or FUNC_GROUP_ARRAY\n* LEG or FUNC_GROUP_LEGACY",
+                        "description": "Group of the script function.\n\nOne of:\n* ALL or FUNC_GROUP_ALL\n* U or FUNC_GROUP_UNKNOWN\n* NONE or FUNC_GROUP_NONE\n* AGGR or FUNC_GROUP_AGGR\n* NUM or FUNC_GROUP_NUMERIC\n* RNG or FUNC_GROUP_RANGE\n* EXP or FUNC_GROUP_EXPONENTIAL_AND_LOGARITHMIC\n* TRIG or FUNC_GROUP_TRIGONOMETRIC_AND_HYPERBOLIC\n* FIN or FUNC_GROUP_FINANCIAL\n* MATH or FUNC_GROUP_MATH_CONSTANT_AND_PARAM_FREE\n* COUNT or FUNC_GROUP_COUNTER\n* STR or FUNC_GROUP_STRING\n* MAPP or FUNC_GROUP_MAPPING\n* RCRD or FUNC_GROUP_INTER_RECORD\n* CND or FUNC_GROUP_CONDITIONAL\n* LOG or FUNC_GROUP_LOGICAL\n* NULL or FUNC_GROUP_NULL\n* SYS or FUNC_GROUP_SYSTEM\n* FILE or FUNC_GROUP_FILE\n* TBL or FUNC_GROUP_TABLE\n* DATE or FUNC_GROUP_DATE_AND_TIME\n* NUMI or FUNC_GROUP_NUMBER_INTERPRET\n* FRMT or FUNC_GROUP_FORMATTING\n* CLR or FUNC_GROUP_COLOR\n* RNK or FUNC_GROUP_RANKING\n* GEO or FUNC_GROUP_GEO\n* EXT or FUNC_GROUP_EXTERNAL\n* PROB or FUNC_GROUP_PROBABILITY\n* ARRAY or FUNC_GROUP_ARRAY\n* LEG or FUNC_GROUP_LEGACY\n* DB or FUNC_GROUP_DB_NATIVE",
                         "$ref": "#/components/schemas/FunctionGroup"
                     },
                     "qSignature": {
@@ -21487,6 +21880,9 @@
                         "$ref": "#/components/errors/LOCERR_APP_SIZE_EXCEEDED"
                     },
                     {
+                        "$ref": "#/components/errors/LOCERR_APP_DIRECT_QUERY_WORKLOAD_NOT_SUPPORTED"
+                    },
+                    {
                         "$ref": "#/components/errors/LOCERR_CONNECTION_ALREADY_EXISTS"
                     },
                     {
@@ -21500,6 +21896,9 @@
                     },
                     {
                         "$ref": "#/components/errors/LOCERR_CONNECTION_NAME_IS_INVALID"
+                    },
+                    {
+                        "$ref": "#/components/errors/LOCERR_CONNECTION_MISSING_CREDENTIALS"
                     },
                     {
                         "$ref": "#/components/errors/LOCERR_CONNECTOR_NO_FILE_STREAMING_SUPPORT"
@@ -21815,6 +22214,9 @@
                     },
                     {
                         "$ref": "#/components/errors/LOCERR_RELOAD_WRONG_FILE_FORMAT_QVD"
+                    },
+                    {
+                        "$ref": "#/components/errors/LOCERR_RELOAD_ACTION_BLOCKED_ENTITLEMENT"
                     },
                     {
                         "$ref": "#/components/errors/LOCERR_PERSONAL_NEW_VERSION_AVAILABLE"
@@ -22506,6 +22908,10 @@
                 "code": 1015,
                 "message": "Static App size exceeded"
             },
+            "LOCERR_APP_DIRECT_QUERY_WORKLOAD_NOT_SUPPORTED": {
+                "code": 1016,
+                "message": "Unknown error"
+            },
             "LOCERR_CONNECTION_ALREADY_EXISTS": {
                 "code": 2000,
                 "message": "Connection already exists"
@@ -22525,6 +22931,10 @@
             "LOCERR_CONNECTION_NAME_IS_INVALID": {
                 "code": 2004,
                 "message": "Connection name is invalid. Should be 1-256 characters and not contain <>:\"/|?*"
+            },
+            "LOCERR_CONNECTION_MISSING_CREDENTIALS": {
+                "code": 2005,
+                "message": "Connection is missing credentials"
             },
             "LOCERR_CONNECTOR_NO_FILE_STREAMING_SUPPORT": {
                 "code": 2300,
@@ -22946,6 +23356,10 @@
                 "code": 11047,
                 "message": "Unsupported or bad format in QVD file"
             },
+            "LOCERR_RELOAD_ACTION_BLOCKED_ENTITLEMENT": {
+                "code": 11048,
+                "message": "Action is blocked due to that an entitlement quota limit has been reached."
+            },
             "LOCERR_PERSONAL_NEW_VERSION_AVAILABLE": {
                 "code": 12000,
                 "message": "New Qlik Sense Desktop version available"
@@ -23256,7 +23670,7 @@
             },
             "LOCERR_BDI_GENERIC_ERROR_NOT_TRANSLATED": {
                 "code": 24001,
-                "message": "Live Mode error"
+                "message": "Direct Query Mode error"
             },
             "LOCERR_TRENDLINE_INVALID_DEF": {
                 "code": 25000,
@@ -23509,5 +23923,8 @@
         }
     },
     "x-qlik-visibility": "public",
-    "x-qlik-stability": "locked"
+    "x-qlik-stability": "locked",
+    "x-qlik-categories": [
+        "external/manage"
+    ]
 }

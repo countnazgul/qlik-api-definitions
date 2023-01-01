@@ -9,9 +9,9 @@ const downloadPath = path.resolve(`${process.cwd()}/data`);
 const saveRawData = false;
 
 async function scrape() {
-  //   await downloadQixData();
+  await downloadQixData();
   await downloadSaaSData();
-  //   await downloadNebulaData();
+  // await downloadNebulaData();
 }
 
 scrape();
@@ -64,6 +64,8 @@ async function downloadQixData() {
     `${process.cwd()}/data/QIX_data.json`,
     JSON.stringify(qixData, null, 4)
   );
+
+  console.log(`1/1 QIX --> ${baseUrl}/specs/openRPC/engine-rpc.json`);
 }
 
 async function downloadSaaSData() {
