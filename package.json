@@ -1,8 +1,9 @@
 {
   "name": "download-qlik-saas-api-definitions",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "download": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -20,6 +21,8 @@
   "homepage": "https://github.com/countnazgul/download-qlik-saas-api-definitions#readme",
   "dependencies": {
     "axios": "^1.2.2",
-    "puppeteer": "^19.4.1"
+    "dotenv": "^16.0.3",
+    "puppeteer": "^19.4.1",
+    "qlik-repo-api": "^0.4.1"
   }
 }

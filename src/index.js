@@ -1,17 +1,58 @@
-const puppeteer = require("puppeteer");
-const axios = require("axios").default;
-const fs = require("fs");
-const path = require("path");
+import dotenv from "dotenv";
+dotenv.config();
+
+import path from "path";
+import { Agent } from "https";
+import { readFileSync, writeFileSync } from "fs";
+import puppeteer from "puppeteer";
+import axios from "axios";
+import { QlikProxyClient, QlikRepositoryClient } from "qlik-rest-api";
 
 const baseUrl = "https://qlik.dev";
 const downloadPath = path.resolve(`${process.cwd()}/data`);
 
 const saveRawData = false;
 
+const cert = readFileSync(`${process.env.CERT_LOCATION}/client.pem`);
+const key = readFileSync(`${process.env.CERT_LOCATION}/client_key.pem`);
+
+const proxyClient = new QlikProxyClient({
+  host: `${process.env.QLIK_LOCAL_HOST}`,
+  port: 4243,
+  httpsAgent: new Agent({
+    rejectUnauthorized: false,
+    cert,
+    key,
+  }),
+  authentication: {
+    user_dir: `${process.env.USER_DIR}`,
+    user_name: `${process.env.USER_ID}`,
+  },
+});
+
+const repoClient = new QlikRepositoryClient({
+  host: `${process.env.QLIK_LOCAL_HOST}`,
+  port: 4242,
+  httpsAgent: new Agent({
+    rejectUnauthorized: false,
+    cert,
+    key,
+  }),
+  authentication: {
+    user_dir: `${process.env.USER_DIR}`,
+    user_name: `${process.env.USER_ID}`,
+  },
+});
+
 async function scrape() {
   await downloadQixData();
   await downloadSaaSData();
   // await downloadNebulaData();
+
+  if (`${process.env.EXTRACT_ENTERPRISE}` == "yes") {
+    await downloadRepoData();
+    await downloadProxyData();
+  }
 }
 
 scrape();
@@ -45,11 +86,11 @@ function combineFiles(rawData) {
     }
   }
 
-  fs.writeFileSync(
+  writeFileSync(
     `${process.cwd()}/data/SaaS_infos.json`,
     JSON.stringify(info, null, 4)
   );
-  fs.writeFileSync(
+  writeFileSync(
     `${process.cwd()}/data/SaaS_Swagger_Data.json`,
     JSON.stringify(flatten, null, 4)
   );
@@ -60,7 +101,7 @@ async function downloadQixData() {
     .get(`${baseUrl}/specs/openRPC/engine-rpc.json`)
     .then((r) => r.data);
 
-  fs.writeFileSync(
+  writeFileSync(
     `${process.cwd()}/data/QIX_data.json`,
     JSON.stringify(qixData, null, 4)
   );
@@ -130,7 +171,7 @@ async function downloadSaaSData() {
   await browser.close();
 
   if (saveRawData)
-    fs.writeFileSync(
+    writeFileSync(
       `${process.cwd()}/data/SaaS_raw_data.json`,
       JSON.stringify(data, null, 4)
     );
@@ -154,4 +195,26 @@ async function downloadNebulaData() {
 
   await page.close();
   await browser.close();
+}
+
+async function downloadProxyData() {
+  console.log(
+    `1/1 PROXY --> ${process.env.QLIK_LOCAL_HOST}/about/openapi/main`
+  );
+
+  const data = await proxyClient.Get(`about/openapi/main`);
+  writeFileSync(
+    `${process.cwd()}/data/Proxy.json`,
+    JSON.stringify(data, null, 4)
+  );
+}
+
+async function downloadRepoData() {
+  console.log(`1/1 REPO --> ${process.env.QLIK_LOCAL_HOST}/about/openapi/main`);
+  const data = await repoClient.Get(`about/openapi/main`);
+
+  writeFileSync(
+    `${process.cwd()}/data/Repository.json`,
+    JSON.stringify(data, null, 4)
+  );
 }
