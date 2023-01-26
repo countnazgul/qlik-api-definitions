@@ -13,37 +13,6 @@ const downloadPath = path.resolve(`${process.cwd()}/data`);
 
 const saveRawData = false;
 
-const cert = readFileSync(`${process.env.CERT_LOCATION}/client.pem`);
-const key = readFileSync(`${process.env.CERT_LOCATION}/client_key.pem`);
-
-const proxyClient = new QlikProxyClient({
-  host: `${process.env.QLIK_LOCAL_HOST}`,
-  port: 4243,
-  httpsAgent: new Agent({
-    rejectUnauthorized: false,
-    cert,
-    key,
-  }),
-  authentication: {
-    user_dir: `${process.env.USER_DIR}`,
-    user_name: `${process.env.USER_ID}`,
-  },
-});
-
-const repoClient = new QlikRepositoryClient({
-  host: `${process.env.QLIK_LOCAL_HOST}`,
-  port: 4242,
-  httpsAgent: new Agent({
-    rejectUnauthorized: false,
-    cert,
-    key,
-  }),
-  authentication: {
-    user_dir: `${process.env.USER_DIR}`,
-    user_name: `${process.env.USER_ID}`,
-  },
-});
-
 async function scrape() {
   if (!process.argv.includes["--saas"]) {
     await downloadQixData();
@@ -202,6 +171,23 @@ async function downloadNebulaData() {
 }
 
 async function downloadProxyData() {
+  const cert = readFileSync(`${process.env.CERT_LOCATION}/client.pem`);
+  const key = readFileSync(`${process.env.CERT_LOCATION}/client_key.pem`);
+
+  const proxyClient = new QlikProxyClient({
+    host: `${process.env.QLIK_LOCAL_HOST}`,
+    port: 4243,
+    httpsAgent: new Agent({
+      rejectUnauthorized: false,
+      cert,
+      key,
+    }),
+    authentication: {
+      user_dir: `${process.env.USER_DIR}`,
+      user_name: `${process.env.USER_ID}`,
+    },
+  });
+
   console.log(
     `1/1 PROXY --> ${process.env.QLIK_LOCAL_HOST}/about/openapi/main`
   );
@@ -214,6 +200,23 @@ async function downloadProxyData() {
 }
 
 async function downloadRepoData() {
+  const cert = readFileSync(`${process.env.CERT_LOCATION}/client.pem`);
+  const key = readFileSync(`${process.env.CERT_LOCATION}/client_key.pem`);
+
+  const repoClient = new QlikRepositoryClient({
+    host: `${process.env.QLIK_LOCAL_HOST}`,
+    port: 4242,
+    httpsAgent: new Agent({
+      rejectUnauthorized: false,
+      cert,
+      key,
+    }),
+    authentication: {
+      user_dir: `${process.env.USER_DIR}`,
+      user_name: `${process.env.USER_ID}`,
+    },
+  });
+
   console.log(`1/1 REPO --> ${process.env.QLIK_LOCAL_HOST}/about/openapi/main`);
   const data = await repoClient.Get(`about/openapi/main`);
 
