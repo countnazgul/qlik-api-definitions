@@ -45,13 +45,17 @@ const repoClient = new QlikRepositoryClient({
 });
 
 async function scrape() {
-  await downloadQixData();
-  await downloadSaaSData();
-  // await downloadNebulaData();
+  if (!process.argv.includes["--saas"]) {
+    await downloadQixData();
+    await downloadSaaSData();
+    // await downloadNebulaData();
 
-  if (`${process.env.EXTRACT_ENTERPRISE}` == "yes") {
-    await downloadRepoData();
-    await downloadProxyData();
+    if (`${process.env.EXTRACT_ENTERPRISE}` == "yes") {
+      await downloadRepoData();
+      await downloadProxyData();
+    }
+  } else {
+    await downloadSaaSData();
   }
 }
 
