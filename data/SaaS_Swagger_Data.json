@@ -2975,6 +2975,205 @@
                 }
             }
         },
+        "/v1/apps/{appId}/scripts": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "headers": {},
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ScriptMetaList"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "appId",
+                        "required": true,
+                        "description": "Identifier of the app.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "filter",
+                        "description": "A scim filter expression defining which script versions should be retrieved. Filterable fields are:\n* ScriptId\n* ModifiedTime\n* ModifierId",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Maximum number of records to return from this request. Default: 100",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "page",
+                        "description": "Opaque definition of which page of the result set to return. Returned from a previous call using the same filter. Not yet supported.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "description": "Retrieves the script history for an app.\nReturns information about the saved versions of the script.",
+                "x-qlik-access-control": [
+                    "read"
+                ],
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "locked",
+                "x-qlik-categories": [],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "1",
+                    "limit": 1000
+                }
+            },
+            "post": {
+                "responses": {
+                    "200": {
+                        "headers": {},
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "appId",
+                        "required": true,
+                        "description": "Identifier of the app.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ScriptVersion"
+                            }
+                        }
+                    },
+                    "description": "The script to set.",
+                    "required": true
+                },
+                "description": "Sets script for an app.",
+                "x-qlik-access-control": [
+                    "update"
+                ],
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "locked",
+                "x-qlik-categories": [],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            }
+        },
+        "/v1/apps/{appId}/scripts/{version}": {
+            "patch": {
+                "responses": {
+                    "200": {
+                        "headers": {},
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "appId",
+                        "required": true,
+                        "description": "Identifier of the app.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "version",
+                        "required": true,
+                        "description": "Identifier of the script version.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/NxPatch"
+                            }
+                        }
+                    },
+                    "description": "Array of patches for the object ScriptVersion.\n<div class=note>Only /versionMessage can be modified using operations add, remove and replace.</div>",
+                    "required": true
+                },
+                "description": "Updates a specific version of the script for an app.",
+                "x-qlik-access-control": [
+                    "update"
+                ],
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "locked",
+                "x-qlik-categories": [],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            },
+            "delete": {
+                "responses": {
+                    "200": {
+                        "headers": {},
+                        "description": "OK"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "appId",
+                        "required": true,
+                        "description": "Identifier of the app.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "version",
+                        "required": true,
+                        "description": "Identifier of the script version",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "description": "Deletes a specific version of the script for an app.\nFails if the version to delete is the current version.",
+                "x-qlik-access-control": [
+                    "update"
+                ],
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "locked",
+                "x-qlik-categories": [],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            }
+        },
         "/v1/apps/{appId}/space": {
             "put": {
                 "responses": {
@@ -4342,289 +4541,6 @@
                 }
             }
         },
-        "/v1/automations/{automationId}/runs/{runId}": {
-            "get": {
-                "tags": [
-                    "automations"
-                ],
-                "summary": "Retrieves a run",
-                "responses": {
-                    "200": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/RunDetailResponseObject"
-                                }
-                            }
-                        },
-                        "description": "OK Response"
-                    },
-                    "400": {
-                        "$ref": "#/components/responses/BadRequest"
-                    },
-                    "401": {
-                        "$ref": "#/components/responses/Unauthorized"
-                    },
-                    "403": {
-                        "$ref": "#/components/responses/Forbidden"
-                    },
-                    "404": {
-                        "$ref": "#/components/responses/NotFound"
-                    },
-                    "500": {
-                        "$ref": "#/components/responses/InternalServerError"
-                    },
-                    "503": {
-                        "$ref": "#/components/responses/ServiceUnavailable"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "automationId",
-                        "schema": {
-                            "type": "string",
-                            "example": "00000000-0000-0000-0000-000000000000"
-                        },
-                        "required": true,
-                        "description": "The unique identifier for the automation."
-                    },
-                    {
-                        "in": "path",
-                        "name": "runId",
-                        "schema": {
-                            "type": "string",
-                            "example": "00000000-0000-0000-0000-000000000000"
-                        },
-                        "required": true,
-                        "description": "The unique identifier for the run."
-                    }
-                ],
-                "operationId": "getRun",
-                "x-qlik-visibility": "public",
-                "x-qlik-stability": "stable",
-                "x-qlik-categories": [
-                    "external/manage",
-                    "external/build"
-                ],
-                "x-qlik-deprecated": false,
-                "x-qlik-tier": {
-                    "tier": "1",
-                    "limit": 1000
-                }
-            }
-        },
-        "/v1/automations/{automationId}/runs/{runId}/actions/export": {
-            "post": {
-                "tags": [
-                    "automations"
-                ],
-                "summary": "Export a run.",
-                "responses": {
-                    "200": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "properties": {
-                                        "url": {
-                                            "type": "string",
-                                            "example": "https://<bucket>.s3.<region>.amazonaws.com/<run>.json"
-                                        }
-                                    }
-                                }
-                            }
-                        },
-                        "description": "OK Response"
-                    },
-                    "400": {
-                        "$ref": "#/components/responses/BadRequest"
-                    },
-                    "401": {
-                        "$ref": "#/components/responses/Unauthorized"
-                    },
-                    "403": {
-                        "$ref": "#/components/responses/Forbidden"
-                    },
-                    "404": {
-                        "$ref": "#/components/responses/NotFound"
-                    },
-                    "500": {
-                        "$ref": "#/components/responses/InternalServerError"
-                    },
-                    "503": {
-                        "$ref": "#/components/responses/ServiceUnavailable"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "automationId",
-                        "schema": {
-                            "type": "string",
-                            "example": "00000000-0000-0000-0000-000000000000"
-                        },
-                        "required": true,
-                        "description": "The unique identifier for the automation."
-                    },
-                    {
-                        "in": "path",
-                        "name": "runId",
-                        "schema": {
-                            "type": "string",
-                            "example": "00000000-0000-0000-0000-000000000000"
-                        },
-                        "required": true,
-                        "description": "The unique identifier for the run."
-                    }
-                ],
-                "description": "Creates a temporary pre-signed AWS S3 URL to download the raw logs of a completed run. This URL is valid for 5 minutes.",
-                "operationId": "exportRun",
-                "x-qlik-visibility": "public",
-                "x-qlik-stability": "stable",
-                "x-qlik-categories": [
-                    "external/manage",
-                    "external/build"
-                ],
-                "x-qlik-deprecated": false,
-                "x-qlik-tier": {
-                    "tier": "2",
-                    "limit": 100
-                }
-            }
-        },
-        "/v1/automations/{automationId}/runs/{runId}/actions/retry": {
-            "post": {
-                "tags": [
-                    "automations"
-                ],
-                "summary": "Retry a run.",
-                "responses": {
-                    "204": {
-                        "description": "OK Response"
-                    },
-                    "400": {
-                        "$ref": "#/components/responses/BadRequest"
-                    },
-                    "401": {
-                        "$ref": "#/components/responses/Unauthorized"
-                    },
-                    "403": {
-                        "$ref": "#/components/responses/Forbidden"
-                    },
-                    "404": {
-                        "$ref": "#/components/responses/NotFound"
-                    },
-                    "500": {
-                        "$ref": "#/components/responses/InternalServerError"
-                    },
-                    "503": {
-                        "$ref": "#/components/responses/ServiceUnavailable"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "automationId",
-                        "schema": {
-                            "type": "string",
-                            "example": "00000000-0000-0000-0000-000000000000"
-                        },
-                        "required": true,
-                        "description": "The unique identifier for the automation."
-                    },
-                    {
-                        "in": "path",
-                        "name": "runId",
-                        "schema": {
-                            "type": "string",
-                            "example": "00000000-0000-0000-0000-000000000000"
-                        },
-                        "required": true,
-                        "description": "The unique identifier for the run."
-                    }
-                ],
-                "description": "This action allows you to retry a specific run by creating a new run using the same inputs.",
-                "operationId": "retryRun",
-                "x-qlik-visibility": "public",
-                "x-qlik-stability": "stable",
-                "x-qlik-categories": [
-                    "external/manage",
-                    "external/build"
-                ],
-                "x-qlik-deprecated": false,
-                "x-qlik-tier": {
-                    "tier": "2",
-                    "limit": 100
-                }
-            }
-        },
-        "/v1/automations/{automationId}/runs/{runId}/actions/stop": {
-            "post": {
-                "tags": [
-                    "automations"
-                ],
-                "summary": "Stop a running automation.",
-                "responses": {
-                    "204": {
-                        "description": "OK Response"
-                    },
-                    "400": {
-                        "$ref": "#/components/responses/BadRequest"
-                    },
-                    "401": {
-                        "$ref": "#/components/responses/Unauthorized"
-                    },
-                    "403": {
-                        "$ref": "#/components/responses/Forbidden"
-                    },
-                    "404": {
-                        "$ref": "#/components/responses/NotFound"
-                    },
-                    "500": {
-                        "$ref": "#/components/responses/InternalServerError"
-                    },
-                    "503": {
-                        "$ref": "#/components/responses/ServiceUnavailable"
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "automationId",
-                        "schema": {
-                            "type": "string",
-                            "example": "00000000-0000-0000-0000-000000000000"
-                        },
-                        "required": true,
-                        "description": "The unique identifier for the automation."
-                    },
-                    {
-                        "in": "path",
-                        "name": "runId",
-                        "schema": {
-                            "type": "string",
-                            "example": "00000000-0000-0000-0000-000000000000"
-                        },
-                        "required": true,
-                        "description": "The unique identifier for the run."
-                    }
-                ],
-                "description": "Force a run to be stopped immediately.",
-                "operationId": "stopRun",
-                "x-qlik-visibility": "public",
-                "x-qlik-stability": "stable",
-                "x-qlik-categories": [
-                    "external/manage",
-                    "external/build"
-                ],
-                "x-qlik-deprecated": false,
-                "x-qlik-tier": {
-                    "tier": "2",
-                    "limit": 100
-                }
-            }
-        },
         "/v1/automations/{id}": {
             "get": {
                 "tags": [
@@ -5255,6 +5171,277 @@
                     "external/manage",
                     "external/build"
                 ],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            }
+        },
+        "/v1/automations/{id}/runs/{runId}": {
+            "get": {
+                "tags": [
+                    "automations"
+                ],
+                "summary": "Retrieves a run",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/RunDetailResponseObject"
+                                }
+                            }
+                        },
+                        "description": "OK Response"
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/BadRequest"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/Unauthorized"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/Forbidden"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFound"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    },
+                    "503": {
+                        "$ref": "#/components/responses/ServiceUnavailable"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "schema": {
+                            "type": "string",
+                            "example": "00000000-0000-0000-0000-000000000000"
+                        },
+                        "required": true,
+                        "description": "The unique identifier for the automation."
+                    },
+                    {
+                        "in": "path",
+                        "name": "runId",
+                        "schema": {
+                            "type": "string",
+                            "example": "00000000-0000-0000-0000-000000000000"
+                        },
+                        "required": true,
+                        "description": "The unique identifier for the run."
+                    }
+                ],
+                "operationId": "getRun",
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "1",
+                    "limit": 1000
+                }
+            }
+        },
+        "/v1/automations/{id}/runs/{runId}/actions/export": {
+            "post": {
+                "tags": [
+                    "automations"
+                ],
+                "summary": "Export a run.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "url": {
+                                            "type": "string",
+                                            "example": "https://<bucket>.s3.<region>.amazonaws.com/<run>.json"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "OK Response"
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/BadRequest"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/Unauthorized"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/Forbidden"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFound"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    },
+                    "503": {
+                        "$ref": "#/components/responses/ServiceUnavailable"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "schema": {
+                            "type": "string",
+                            "example": "00000000-0000-0000-0000-000000000000"
+                        },
+                        "required": true,
+                        "description": "The unique identifier for the automation."
+                    },
+                    {
+                        "in": "path",
+                        "name": "runId",
+                        "schema": {
+                            "type": "string",
+                            "example": "00000000-0000-0000-0000-000000000000"
+                        },
+                        "required": true,
+                        "description": "The unique identifier for the run."
+                    }
+                ],
+                "description": "Creates a temporary pre-signed AWS S3 URL to download the raw logs of a completed run. This URL is valid for 5 minutes.",
+                "operationId": "exportRun",
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            }
+        },
+        "/v1/automations/{id}/runs/{runId}/actions/retry": {
+            "post": {
+                "tags": [
+                    "automations"
+                ],
+                "summary": "Retry a run.",
+                "responses": {
+                    "204": {
+                        "description": "OK Response"
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/BadRequest"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/Unauthorized"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/Forbidden"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFound"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    },
+                    "503": {
+                        "$ref": "#/components/responses/ServiceUnavailable"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "schema": {
+                            "type": "string",
+                            "example": "00000000-0000-0000-0000-000000000000"
+                        },
+                        "required": true,
+                        "description": "The unique identifier for the automation."
+                    },
+                    {
+                        "in": "path",
+                        "name": "runId",
+                        "schema": {
+                            "type": "string",
+                            "example": "00000000-0000-0000-0000-000000000000"
+                        },
+                        "required": true,
+                        "description": "The unique identifier for the run."
+                    }
+                ],
+                "description": "This action allows you to retry a specific run by creating a new run using the same inputs.",
+                "operationId": "retryRun",
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            }
+        },
+        "/v1/automations/{id}/runs/{runId}/actions/stop": {
+            "post": {
+                "tags": [
+                    "automations"
+                ],
+                "summary": "Stop a running automation.",
+                "responses": {
+                    "204": {
+                        "description": "OK Response"
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/BadRequest"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/Unauthorized"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/Forbidden"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFound"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    },
+                    "503": {
+                        "$ref": "#/components/responses/ServiceUnavailable"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "schema": {
+                            "type": "string",
+                            "example": "00000000-0000-0000-0000-000000000000"
+                        },
+                        "required": true,
+                        "description": "The unique identifier for the automation."
+                    },
+                    {
+                        "in": "path",
+                        "name": "runId",
+                        "schema": {
+                            "type": "string",
+                            "example": "00000000-0000-0000-0000-000000000000"
+                        },
+                        "required": true,
+                        "description": "The unique identifier for the run."
+                    }
+                ],
+                "description": "Force a run to be stopped immediately.",
+                "operationId": "stopRun",
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [],
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -19656,7 +19843,7 @@
                         }
                     },
                     "required": false,
-                    "description": "Will contain the query filter to apply. It shall not contain more than 50 ids."
+                    "description": "Will contain the query filter to apply. It shall not contain more than 100 ids."
                 },
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
@@ -25357,6 +25544,16 @@
                         },
                         "description": "Return profiles of data set."
                     },
+                    "202": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/PageDataSetProfile"
+                                }
+                            }
+                        },
+                        "description": "The profile is currently running."
+                    },
                     "400": {
                         "content": {
                             "application/json": {
@@ -27658,6 +27855,35 @@
                 "$ref": "#/components/schemas/Error"
             }
         },
+        "Analysis": {
+            "enum": [
+                "breakdown",
+                "changePoint",
+                "comparison",
+                "contribution",
+                "correlation",
+                "fact",
+                "mutualInfo",
+                "rank",
+                "spike",
+                "trend",
+                "values"
+            ],
+            "type": "string"
+        },
+        "AnalysisGroup": {
+            "enum": [
+                "anomaly",
+                "brekadown",
+                "comparison",
+                "correl",
+                "fact",
+                "list",
+                "mutualInfo",
+                "rank"
+            ],
+            "type": "string"
+        },
         "AppMetadata": {
             "type": "object",
             "properties": {
@@ -27685,6 +27911,20 @@
                 }
             },
             "description": "Metadata for app"
+        },
+        "ChartType": {
+            "enum": [
+                "barchart",
+                "combochart",
+                "distributionplot",
+                "kpi",
+                "linechart",
+                "map",
+                "scatterplot",
+                "table"
+            ],
+            "type": "string",
+            "description": "Chart type given to current recommendation"
         },
         "ConversationalResponsePart": {
             "properties": {
@@ -27794,50 +28034,16 @@
                     "description": "Measure(s) considered for recommendation"
                 },
                 "analysis": {
-                    "enum": [
-                        "breakdown",
-                        "changePoint",
-                        "comparison",
-                        "contribution",
-                        "correlation",
-                        "fact",
-                        "mutualInfo",
-                        "rank",
-                        "spike",
-                        "trend",
-                        "values"
-                    ],
-                    "type": "string"
+                    "$ref": "#/components/schemas/Analysis"
                 },
                 "chartType": {
-                    "enum": [
-                        "barchart",
-                        "combochart",
-                        "distributionplot",
-                        "kpi",
-                        "linechart",
-                        "map",
-                        "scatterplot",
-                        "table"
-                    ],
-                    "type": "string",
-                    "description": "Chart type given to current recommendation"
+                    "$ref": "#/components/schemas/ChartType"
                 },
                 "relevance": {
                     "type": "number"
                 },
                 "analysisGroup": {
-                    "enum": [
-                        "anomaly",
-                        "brekadown",
-                        "comparison",
-                        "correl",
-                        "fact",
-                        "list",
-                        "mutualInfo",
-                        "rank"
-                    ],
-                    "type": "string"
+                    "$ref": "#/components/schemas/AnalysisGroup"
                 }
             },
             "description": "Visualisation recommendation specs for the query"
@@ -29688,6 +29894,19 @@
                 }
             }
         },
+        "NavigationLinks": {
+            "type": "object",
+            "properties": {
+                "next": {
+                    "type": "string",
+                    "description": "Link to next result page"
+                },
+                "prev": {
+                    "type": "string",
+                    "description": "Link to previous result page"
+                }
+            }
+        },
         "NxApp": {
             "type": "object",
             "properties": {
@@ -29800,6 +30019,32 @@
             },
             "description": "App attributes. This structure can also contain extra user-defined attributes."
         },
+        "NxPatch": {
+            "required": [
+                "qOp",
+                "qPath"
+            ],
+            "properties": {
+                "qOp": {
+                    "enum": [
+                        "add",
+                        "remove",
+                        "replace"
+                    ],
+                    "type": "string",
+                    "example": "add"
+                },
+                "qPath": {
+                    "type": "string",
+                    "description": "Path to the property to add, remove or replace."
+                },
+                "qValue": {
+                    "type": "string",
+                    "description": "Corresponds to the value of the property to add or to the new value of the property to update."
+                }
+            },
+            "description": "Patches to apply to sense charts. Patches are soft properties meaning that are not persistent and they live within a session."
+        },
         "objectmetrics": {
             "type": "object",
             "properties": {
@@ -29876,12 +30121,21 @@
                     "type": "string",
                     "description": "The published app will have data from source or target app.\nThe default is source.\n\n* source: Publish with source data\n* target: Publish with target data"
                 },
+                "moveApp": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "The original is moved instead of copied. The current published state of all objects is kept."
+                },
                 "spaceId": {
                     "type": "string",
                     "description": "The managed space ID where the app will be published."
                 },
                 "attributes": {
                     "$ref": "#/components/schemas/AppUpdateAttributes"
+                },
+                "originAppId": {
+                    "type": "string",
+                    "description": "If app is moved, originAppId needs to be provided."
                 }
             }
         },
@@ -30206,6 +30460,60 @@
                 }
             }
         },
+        "ScriptMeta": {
+            "type": "object",
+            "properties": {
+                "size": {
+                    "type": "integer",
+                    "format": "int64",
+                    "description": "Script size."
+                },
+                "scriptId": {
+                    "type": "string",
+                    "description": "Script id."
+                },
+                "modifierId": {
+                    "type": "string",
+                    "description": "User last modifying script version."
+                },
+                "modifiedTime": {
+                    "type": "string",
+                    "description": "Script version last modification time."
+                },
+                "versionMessage": {
+                    "type": "string",
+                    "description": "Description of this script version"
+                }
+            }
+        },
+        "ScriptMetaList": {
+            "type": "object",
+            "properties": {
+                "links": {
+                    "$ref": "#/components/schemas/NavigationLinks"
+                },
+                "scripts": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/components/schemas/ScriptMeta"
+                    },
+                    "description": "Script versions metadata."
+                }
+            }
+        },
+        "ScriptVersion": {
+            "type": "object",
+            "properties": {
+                "script": {
+                    "type": "string",
+                    "description": "Script text."
+                },
+                "versionMessage": {
+                    "type": "string",
+                    "description": "Description of this script version"
+                }
+            }
+        },
         "sortedcomparisonfields": {
             "allOf": [
                 {
@@ -30481,6 +30789,10 @@
                     "type": "string",
                     "description": "Id of the space related to the action performed on the eventContext."
                 },
+                "updates": {
+                    "x-qlik-pii": true,
+                    "description": "Might be present if the action is of type \"updated\" and should contain information about the changes made to the resource."
+                },
                 "topLevelResourceId": {
                     "type": "string",
                     "description": "If the event originated from a sub resource the topLevelResourceId contains the id of the top level resource associated with the sub resource."
@@ -30497,6 +30809,7 @@
                     "items": {
                         "type": "object"
                     },
+                    "x-qlik-pii": true,
                     "description": "List of archived events. The structure of the events depend on their type and version."
                 }
             }
@@ -30511,6 +30824,7 @@
                 },
                 "data": {
                     "type": "object",
+                    "x-qlik-pii": true,
                     "description": "Additional information about the event's details. The structure depends on the type and version of the event."
                 },
                 "links": {
@@ -30573,7 +30887,7 @@
                 "data": {
                     "type": "array",
                     "items": {
-                        "type": "object"
+                        "type": "string"
                     },
                     "description": "List of requested resources."
                 },
@@ -31583,7 +31897,9 @@
                 "note",
                 "dataasset",
                 "dataset",
-                "automation"
+                "automation",
+                "automl-experiment",
+                "automl-deployment"
             ],
             "type": "string",
             "description": "The case-sensitive string defining the item's type."
@@ -39599,7 +39915,20 @@
                     "description": "The path for the given resource field to patch"
                 },
                 "value": {
-                    "type": "string",
+                    "oneOf": [
+                        {
+                            "type": "boolean"
+                        },
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "object"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ],
                     "description": "The value to be used for this operation."
                 }
             },
@@ -42569,7 +42898,7 @@
             "properties": {
                 "code": {
                     "type": "string",
-                    "description": "The unique code for the error\n\n- \"REP-400000\" Bad request. The server could not understand the request due to invalid syntax.\n- \"REP-400008\" Selections error.\n- \"REP-400009\" Maximum 16384 columns limit exceeded. Download data in a visualization can't generate an .xlsx file due to limitations to the number of columns you can download.\n- \"REP-400010\" Maximum 1048566 rows limit exceeded. Download data in a visualization can't generate an .xlsx file due to limitations to the number of rows you can download.\n- \"REP-400011\" The size of the downloaded Excel file exceed 100 MB limit. Download data in a visualization can't generate an .xlsx file due to limitations to the amount of data you can download.\n- \"REP-400015\" Bad request in enigma request. The patch value has invalid JSON format.\n- \"REP-401000\" Unauthorized. The client must authenticate itself to get the requested response.\n- \"REP-401001\" Unauthorized, bad JWT.\n- \"REP-403000\" Forbidden. The client does not have access rights to the content.\n- \"REP-403001\" App forbidden, the user does not have read permission on the app.\n- \"REP-403002\" Chart type not supported.\n- \"REP-404000\" Not found. The server can not find the requested resource.\n- \"REP-404001\" App not found, the app does not exist or it has been deleted.\n- \"REP-404002\" Chart not found, the chart does not exist or it has been deleted.\n- \"REP-404003\" Sheet not found, the sheet does not exist or it has been deleted or it is unavailable.\n- \"REP-404004\" Story not found, the story does not exist or it has been deleted or it is unavailable.\n- \"REP-429000\" Too many request. The user has sent too many requests in a given amount of time (\"rate limiting\").\n- \"REP-429012\" Exceeded max session tenant quota. A tenant has opened too many different sessions at the same time.\n- \"REP-429014\" Reporting service was not able to return inside of request export deadline. Too many request at the same time for the same tenant.\n- \"REP-429016\" Exceeded max session tenant quota per day.\n- \"REP-500000\" Fail to resolve resource.\n- \"REP-500006\" Fail to get report session parameters.\n- \"REP-500007\" Image rendering error on Sense client.\n- \"REP-503005\" Engine unavailable, qix-sessions error no engines available.\n- \"REP-503013\" Session unavailable. The engine session used to create the report is unavailable.\n"
+                    "description": "The unique code for the error\n\n- \"REP-400000\" Bad request. The server could not understand the request due to invalid syntax.\n- \"REP-400008\" Selections error.\n- \"REP-400009\" Maximum 16384 columns limit exceeded. Download data in a visualization can't generate an .xlsx file due to limitations to the number of columns you can download.\n- \"REP-400010\" Maximum 1048566 rows limit exceeded. Download data in a visualization can't generate an .xlsx file due to limitations to the number of rows you can download.\n- \"REP-400011\" The size of the downloaded Excel file exceed 100 MB limit. Download data in a visualization can't generate an .xlsx file due to limitations to the amount of data you can download.\n- \"REP-400015\" Bad request in enigma request. The patch value has invalid JSON format.\n- \"REP-401000\" Unauthorized. The client must authenticate itself to get the requested response.\n- \"REP-401001\" Unauthorized, bad JWT.\n- \"REP-403000\" Forbidden. The client does not have access rights to the content.\n- \"REP-403001\" App forbidden, the user does not have read permission on the app.\n- \"REP-403002\" Chart type not supported.\n- \"REP-404000\" Not found. The server can not find the requested resource.\n- \"REP-404001\" App not found, the app does not exist or it has been deleted.\n- \"REP-404002\" Chart not found, the chart does not exist or it has been deleted.\n- \"REP-404003\" Sheet not found, the sheet does not exist or it has been deleted or it is unavailable.\n- \"REP-404004\" Story not found, the story does not exist or it has been deleted or it is unavailable.\n- \"REP-429000\" Too many request. The user has sent too many requests in a given amount of time (\"rate limiting\").\n- \"REP-429012\" Exceeded max session tenant quota. A tenant has opened too many different sessions at the same time.\n- \"REP-429014\" Reporting service was not able to return inside of request export deadline. Too many request at the same time for the same tenant.\n- \"REP-429016\" Exceeded max session tenant quota per day.\n- \"REP-500000\" Fail to resolve resource.\n- \"REP-500006\" Fail to get report session parameters.\n- \"REP-503005\" Engine unavailable, qix-sessions error no engines available.\n- \"REP-503013\" Session unavailable. The engine session used to create the report is unavailable.\n- \"REP-500100\" Image rendering generic error on Sense client.\n- \"REP-500101\" Image rendering could not set cookies error on Sense client.\n- \"REP-400102\" Image rendering invalid strategy error on Sense client.\n- \"REP-500103\" Image rendering JS timeout error on Sense client.\n- \"REP-500104\" Image rendering load URL timeout error on Sense client.\n- \"REP-500105\" Image rendering max paint attempts exceeded error on Sense client.\n- \"REP-500106\" Image rendering max JS attempts exceeded error on Sense client.\n- \"REP-500107\" Image rendering render timeout error on Sense client.\n- \"REP-500108\" Image rendering JS failure error on Sense client.\n"
                 },
                 "meta": {
                     "$ref": "#/components/schemas/MetaExportError"
@@ -42807,32 +43136,6 @@
             },
             "description": "Define the export error metadata. Each property is filled if it is related to the export error type."
         },
-        "NxPatch": {
-            "required": [
-                "qOp",
-                "qPath"
-            ],
-            "properties": {
-                "qOp": {
-                    "enum": [
-                        "add",
-                        "remove",
-                        "replace"
-                    ],
-                    "type": "string",
-                    "example": "add"
-                },
-                "qPath": {
-                    "type": "string",
-                    "description": "Path to the property to add, remove or replace."
-                },
-                "qValue": {
-                    "type": "string",
-                    "description": "Corresponds to the value of the property to add or to the new value of the property to update."
-                }
-            },
-            "description": "Patches to apply to sense charts. Patches are soft properties meaning that are not persistent and they live within a session."
-        },
         "OutputItem": {
             "example": {
                 "type": "pdf",
@@ -42865,10 +43168,11 @@
                         "pdfcomposition",
                         "excel",
                         "pptx",
-                        "pptxcomposition"
+                        "pptxcomposition",
+                        "csv"
                     ],
                     "type": "string",
-                    "description": "The generated report type.\n\nEach template type supports specific output types:\n   - composition-1.0 supports only pdfcomposition and pptxcomposition output types\n   - excel-1.0 supports only excel output type\n   - sense-image-1.0 supports pdf and image output types\n   - sense-sheet-1.0 supports only pdf output type\n\nEach output type requires a specific output to be provided:\n   - excel requires excelOutput to be set\n   - pdfcomposition requires pdfCompositionOutput to be set\n   - pptxcomposition requires pptxCompositionOutput to be set\n   - pdf requires pdfOuput to be set\n   - image requires imageOutput to be set\n"
+                    "description": "The generated report type.\n\nEach template type supports specific output types:\n   - composition-1.0 supports only pdfcomposition and pptxcomposition output types\n   - excel-1.0 supports only excel output type\n   - sense-image-1.0 supports pdf and image output types\n   - sense-sheet-1.0 supports only pdf output type\n\nEach output type requires a specific output to be provided:\n   - excel requires excelOutput to be set\n   - pdfcomposition requires pdfCompositionOutput to be set\n   - pptxcomposition requires pptxCompositionOutput to be set\n   - pdf requires pdfOuput to be set\n   - image requires imageOutput to be set\n   - csv doesn't have csv output.\n"
                 },
                 "callback": {
                     "type": "string",
@@ -43121,7 +43425,7 @@
                     ],
                     "type": "string",
                     "default": "L",
-                    "description": "L for landscape, P for portrait and A for auto-detect. Auto-detect sets the orientation depending on the content width and height proportions: if content width > height the orientation is automatically set to landscape, portrait otherwise."
+                    "description": "L for landscape, P for portrait and A for auto-detect. Auto-detect sets landscape, the default PowerPoint orientation."
                 },
                 "imageRenderingDpi": {
                     "type": "number",
@@ -43132,9 +43436,7 @@
                     "description": "This value is used for rendered images only, set to a default of 200 dpi."
                 }
             },
-            "description": "Output to be used to export a single visualization or a sheet as PowerPoint presentation.",
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
+            "description": "Output to be used to export a single visualization or a sheet as PowerPoint presentation."
         },
         "QFieldValue": {
             "properties": {
