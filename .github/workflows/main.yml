@@ -30,7 +30,7 @@ jobs:
           commit_message: Automated commit
           commit_options: "--no-verify --signoff"
           file_pattern: "*.json"
-          dd_options: '-u'
+          add_options: '-A'
           repository: .
           status_options: "--untracked-files=no"
           # add_option: "-u"
