@@ -34,16 +34,15 @@
         "version": "0.655.6",
         "description": "Apps are central to the Qlik platform and is the resource you use when interacting with Qlik Sense and QlikView apps."
     },
-    "Automations": {
-        "title": "Automations",
-        "version": "0.655.6",
-        "description": "Qlik Application Automation is a visual, no-code approach to connecting applications."
-    },
     "AutoML Dataset Predictions": {
-        "title": "AutoML Real-time Predictions",
+        "title": "AutoML Dataset Predictions",
         "version": "0.655.6"
     },
     "AutoML Real Time Predictions": {
+        "title": "AutoML Real-time Predictions",
+        "version": "0.655.6"
+    },
+    "Automations": {
         "title": "Automations",
         "version": "0.655.6",
         "description": "Qlik Application Automation is a visual, no-code approach to connecting applications."
