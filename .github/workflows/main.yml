@@ -1,14 +1,20 @@
 name: Data download
 
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: 0 0 * * *
+# on:
+#   workflow_dispatch:
+#   schedule:
+#     - cron: 0 0 * * *
+on: push
 
 jobs:
   download-data:
     runs-on: ubuntu-latest
     steps:
+      - name: Install xmllint1
+        # run: sudo apt-get install    
+        run: sudo apt update
+      - name: Install xmllint
+        run: sudo apt install -y libgconf-2-4 libatk1.0-0 libatk-bridge2.0-0 libgdk-pixbuf2.0-0 libgtk-3-0 libgbm-dev libnss3-dev libxss-dev libasound2
       - name: download
         uses: actions/checkout@v3
         with:
