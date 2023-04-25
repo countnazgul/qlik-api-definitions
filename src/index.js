@@ -224,6 +224,6 @@ async function downloadRepoData() {
 
   writeFileSync(
     `${process.cwd()}/data/Repository.json`,
-    JSON.stringify(data, null, 4)
+    JSON.stringify(data.data, null, 4)
   );
 }
