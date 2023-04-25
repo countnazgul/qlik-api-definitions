@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.1595.0",
+        "version": "12.1678.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -1520,7 +1520,7 @@
             "params": [
                 {
                     "name": "qFileType",
-                    "description": "Type of the file to export.\n\nOne of:\n* CSV_C or EXPORT_CSV_C\n* CSV_T or EXPORT_CSV_T\n* OOXML or EXPORT_OOXML",
+                    "description": "Type of the file to export.\n\nOne of:\n* CSV_C or EXPORT_CSV_C\n* CSV_T or EXPORT_CSV_T\n* OOXML or EXPORT_OOXML\n* PARQUET or EXPORT_PARQUET",
                     "required": true,
                     "schema": {
                         "type": "string"
@@ -9032,7 +9032,10 @@
                     "$ref": "#/components/errors/GenericErrors"
                 }
             ],
-            "x-qlik-stability": "experimental"
+            "x-qlik-stability": "experimental",
+            "x-qlik-access-control": [
+                "change_owner"
+            ]
         },
         {
             "name": "Doc.ChangeSessionAppSpace",
@@ -9468,6 +9471,62 @@
             "x-qlik-stability": "experimental",
             "x-qlik-access-control": [
                 "read"
+            ]
+        },
+        {
+            "name": "Doc.ReplaceBookmark",
+            "description": "Replace a bookmark. Optional inparams to change the original bookmarks properties, original are kept if left out.",
+            "params": [
+                {
+                    "name": "qId",
+                    "description": "Identifier of the bookmark.",
+                    "required": true,
+                    "schema": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "qIgnorePatches",
+                    "description": "Set to true to exclude patches from the bookmark. Default is false.",
+                    "schema": {
+                        "type": "boolean"
+                    }
+                },
+                {
+                    "name": "qObjectIdsToPatch",
+                    "description": "Add softpatches for this objects if available. If empty all softpatches are added to the bookmark. Ignored if IgnorePatches is set to true.",
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            ],
+            "result": {
+                "name": "Results for Doc.ReplaceBookmark",
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "qInfo": {
+                            "type": "object",
+                            "$ref": "#/components/schemas/NxInfo"
+                        },
+                        "qReturn": {
+                            "type": "object",
+                            "$ref": "#/components/schemas/ObjectInterface"
+                        }
+                    }
+                }
+            },
+            "errors": [
+                {
+                    "$ref": "#/components/errors/GenericErrors"
+                }
+            ],
+            "x-qlik-stability": "experimental",
+            "x-qlik-access-control": [
+                "update"
             ]
         },
         {
@@ -11396,6 +11455,10 @@
                         "title": "LOCERR_HTTP_422"
                     },
                     {
+                        "x-qlik-const": 423,
+                        "title": "LOCERR_HTTP_423"
+                    },
+                    {
                         "x-qlik-const": 429,
                         "title": "LOCERR_HTTP_429"
                     },
@@ -11738,6 +11801,10 @@
                     {
                         "x-qlik-const": 9010,
                         "title": "LOCERR_PERSISTENCE_MOVE_FAILED"
+                    },
+                    {
+                        "x-qlik-const": 9011,
+                        "title": "LOCERR_PERSISTENCE_OBJECT_LOCKED"
                     },
                     {
                         "x-qlik-const": 9510,
@@ -14938,6 +15005,11 @@
                         "x-qlik-const": 2,
                         "title": "OOXML",
                         "description": "EXPORT_OOXML"
+                    },
+                    {
+                        "x-qlik-const": 3,
+                        "title": "PARQUET",
+                        "description": "EXPORT_PARQUET"
                     }
                 ]
             },
@@ -17072,7 +17144,7 @@
                 "properties": {
                     "qDisplayNumberOfRows": {
                         "type": "integer",
-                        "description": "This parameter applies to list objects.\nIf the number of selected values in the list object is greater than the value set in _qDisplayNumberOfRows_ , the selected lines are promoted at the top of the list object.\nIf _qDisplayNumberOfRows_ is set to a negative value or to 0, the sort by state is disabled.",
+                        "description": "This parameter applies to list objects.\nIf the total number of values in the list object is greater than the value set in _qDisplayNumberOfRows_ , the selected lines are promoted at the top of the list object.\nIf _qDisplayNumberOfRows_ is set to a negative value or to 0, the sort by state is disabled.",
                         "format": "int32"
                     }
                 }
@@ -21850,6 +21922,9 @@
                         "$ref": "#/components/errors/LOCERR_HTTP_422"
                     },
                     {
+                        "$ref": "#/components/errors/LOCERR_HTTP_423"
+                    },
+                    {
                         "$ref": "#/components/errors/LOCERR_HTTP_429"
                     },
                     {
@@ -22106,6 +22181,9 @@
                     },
                     {
                         "$ref": "#/components/errors/LOCERR_PERSISTENCE_MOVE_FAILED"
+                    },
+                    {
+                        "$ref": "#/components/errors/LOCERR_PERSISTENCE_OBJECT_LOCKED"
                     },
                     {
                         "$ref": "#/components/errors/LOCERR_PERSISTENCE_SYNC_SET_CHUNK_INVALID_PARAMETERS"
@@ -22853,6 +22931,10 @@
                 "code": 422,
                 "message": "Unprocessable Entity"
             },
+            "LOCERR_HTTP_423": {
+                "code": 423,
+                "message": "Unknown error"
+            },
             "LOCERR_HTTP_429": {
                 "code": 429,
                 "message": "Too Many Requests"
@@ -23196,6 +23278,10 @@
             "LOCERR_PERSISTENCE_MOVE_FAILED": {
                 "code": 9010,
                 "message": "Unknown error"
+            },
+            "LOCERR_PERSISTENCE_OBJECT_LOCKED": {
+                "code": 9011,
+                "message": "Object locked"
             },
             "LOCERR_PERSISTENCE_SYNC_SET_CHUNK_INVALID_PARAMETERS": {
                 "code": 9510,
