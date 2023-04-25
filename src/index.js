@@ -90,7 +90,7 @@ async function downloadSaaSData() {
 
   await page.goto(`${baseUrl}/apis#rest`, { waitUntil: "load" });
 
-  const areasAll = await page.$$eval(`.endpoint`, (nodes) => {
+  const areasAll = await page.$$eval(`.endpoint`, (nodes) =>
     nodes.map((element) => {
       const title = element
         .querySelector("div > h3")
@@ -104,14 +104,12 @@ async function downloadSaaSData() {
         title,
         referenceLink,
       };
-    });
-  });
-
-  let areasRest = areasAll.filter(
-    (a) => a.referenceLink.indexOf("/apis/rest/") > -1
+    })
   );
 
-  areasRest = [areasRest[0]];
+  const areasRest = areasAll.filter(
+    (a) => a.referenceLink.indexOf("/apis/rest/") > -1
+  );
 
   let data = [];
 

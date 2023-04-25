@@ -1,51 +1,26 @@
 name: Data download
 
-# on:
-#   workflow_dispatch:
-#   schedule:
-#     - cron: 0 0 * * *
-on: push
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 0 0 * * *
 
 jobs:
   download-data:
     runs-on: ubuntu-latest
     steps:
-      - name: Install xmllint1
-        # run: sudo apt-get install    
-        run: sudo apt update
-      - name: Install xmllint
-        run: sudo apt install -y libgconf-2-4 libatk1.0-0 libatk-bridge2.0-0 libgdk-pixbuf2.0-0 libgtk-3-0 libgbm-dev libnss3-dev libxss-dev libasound2
       - name: download
         uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
-        #if: github.event.schedule == '0 0 * * *'
-        # with:
-        # command: npm run download
       - name: Install dependencies
         run: npm install
       - name: Run npm task
         run: npm run download-saas
-      #- name: Git add
-      #  run: git add -A
-      - run: |
+      - name: Commit and push (if any)
+        run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
-          git commit -m "generated"
-          git push      
-      #- name: Commit and Push
-      #  uses: stefanzweifel/git-auto-commit-action@v4
-        #env:
-        #  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        #with:
-        #  commit_message: Automated commit
-        #  commit_options: "--no-verify --signoff"
-        #  file_pattern: "*.json"
-        #  add_options: '-A'
-        #  repository: .
-        #  status_options: "--untracked-files=no"
-        #  # add_option: "-u"
-        #  push_options: "--force"
-        #  skip_fetch: true
-        #  skip_checkout: true
+          git commit -m "Auto-generated (from GH Actions)"
+          git push
