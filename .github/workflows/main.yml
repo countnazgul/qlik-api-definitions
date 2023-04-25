@@ -20,6 +20,8 @@ jobs:
         run: npm install
       - name: Run npm task
         run: npm run download-saas
+      - name: Git add
+        run: git add .
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v4
         #env:
