@@ -83,7 +83,9 @@ async function downloadQixData() {
 }
 
 async function downloadSaaSData() {
-  const browser = await puppeteer.launch({});
+  const browser = await puppeteer.launch({
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  });
   const page = await browser.newPage();
 
   await page.goto(`${baseUrl}/apis#rest`, { waitUntil: "load" });
