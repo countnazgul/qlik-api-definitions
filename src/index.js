@@ -177,7 +177,7 @@ async function downloadProxyData() {
   const key = readFileSync(`${process.env.CERT_LOCATION}/client_key.pem`);
 
   const proxyClient = new QlikProxyClient({
-    host: `${process.env.QLIK_LOCAL_HOST}`,
+    host: `${process.env.QLIK_HOST}`,
     port: 4243,
     httpsAgent: new Agent({
       rejectUnauthorized: false,
@@ -191,7 +191,7 @@ async function downloadProxyData() {
   });
 
   console.log(
-    `1/1 PROXY --> ${process.env.QLIK_LOCAL_HOST}/about/openapi/main`
+    `1/1 PROXY --> ${process.env.QLIK_HOST}/about/openapi/main`
   );
 
   const data = await proxyClient.Get(`about/openapi/main`);
@@ -206,7 +206,7 @@ async function downloadRepoData() {
   const key = readFileSync(`${process.env.CERT_LOCATION}/client_key.pem`);
 
   const repoClient = new QlikRepositoryClient({
-    host: `${process.env.QLIK_LOCAL_HOST}`,
+    host: `${process.env.QLIK_HOST}`,
     port: 4242,
     httpsAgent: new Agent({
       rejectUnauthorized: false,
@@ -219,7 +219,7 @@ async function downloadRepoData() {
     },
   });
 
-  console.log(`1/1 REPO --> ${process.env.QLIK_LOCAL_HOST}/about/openapi/main`);
+  console.log(`1/1 REPO --> ${process.env.QLIK_HOST}/about/openapi/main`);
   const data = await repoClient.Get(`about/openapi/main`);
 
   writeFileSync(

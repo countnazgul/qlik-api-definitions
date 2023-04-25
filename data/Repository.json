@@ -5,9 +5,9 @@
         "swagger": "2.0",
         "info": {
             "title": "Open API specification for Repository Main API",
-            "version": "38.16.0"
+            "version": "38.22.0"
         },
-        "host": "sense-apr-2019:4242",
+        "host": "qlik-sense:4242",
         "basePath": "/qrs",
         "paths": {
             "/about": {
@@ -486,6 +486,31 @@
                     "x-qlik-stability": "Locked"
                 }
             },
+            "/about/api/default/custombannermessage": {
+                "get": {
+                    "operationId": "d05525d0-49f9-746c-8a1a-dfdbc27a5ea2",
+                    "parameters": [
+                        {
+                            "name": "listentries",
+                            "in": "query",
+                            "required": false,
+                            "default": true,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK",
+                            "schema": {
+                                "$ref": "#/definitions/CustomBannerMessage"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
             "/about/api/default/custompropertydefinition": {
                 "get": {
                     "operationId": "88ca6e2d-e5f1-fea4-8c12-b5051255ab8c",
@@ -659,6 +684,31 @@
                     },
                     "x-qlik-visibility": "Public",
                     "x-qlik-stability": "Locked"
+                }
+            },
+            "/about/api/default/externalproductsignon": {
+                "get": {
+                    "operationId": "5292f5b4-ef79-d937-be62-6624d3f9e291",
+                    "parameters": [
+                        {
+                            "name": "listentries",
+                            "in": "query",
+                            "required": false,
+                            "default": true,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK",
+                            "schema": {
+                                "$ref": "#/definitions/ExternalProductSignOn"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
                 }
             },
             "/about/api/default/externalprogramtask": {
@@ -8763,6 +8813,403 @@
                     "x-qlik-stability": "Locked"
                 }
             },
+            "/custombannermessage": {
+                "get": {
+                    "operationId": "674b0768-1ff8-599b-4a35-30939497b214",
+                    "parameters": [
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "orderby",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "privileges",
+                            "in": "query",
+                            "required": false,
+                            "default": false,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK",
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/CustomBannerMessageCondensed"
+                                }
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                },
+                "post": {
+                    "operationId": "dd7d60ab-35b0-652c-558c-fa15a8a78fa7",
+                    "parameters": [
+                        {
+                            "name": "item",
+                            "in": "body",
+                            "required": true,
+                            "schema": {
+                                "$ref": "#/definitions/CustomBannerMessage"
+                            }
+                        },
+                        {
+                            "name": "privileges",
+                            "in": "query",
+                            "required": false,
+                            "default": false,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "201": {
+                            "description": "Created",
+                            "schema": {
+                                "$ref": "#/definitions/CustomBannerMessage"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
+            "/custombannermessage/{id}": {
+                "get": {
+                    "operationId": "7bbcb37b-f550-5e38-e3e7-ee46cf3bba84",
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        {
+                            "name": "privileges",
+                            "in": "query",
+                            "required": false,
+                            "default": false,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK",
+                            "schema": {
+                                "$ref": "#/definitions/CustomBannerMessage"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                },
+                "put": {
+                    "operationId": "4b8a7825-b3e2-39fb-297f-b306fa05ba1c",
+                    "parameters": [
+                        {
+                            "name": "item",
+                            "in": "body",
+                            "required": true,
+                            "schema": {
+                                "$ref": "#/definitions/CustomBannerMessage"
+                            }
+                        },
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        {
+                            "name": "privileges",
+                            "in": "query",
+                            "required": false,
+                            "default": false,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK",
+                            "schema": {
+                                "$ref": "#/definitions/CustomBannerMessage"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                },
+                "delete": {
+                    "operationId": "56b9e51e-eefd-2da2-1485-88a9745c3622",
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    ],
+                    "responses": {
+                        "204": {
+                            "description": "NoContent"
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
+            "/custombannermessage/count": {
+                "get": {
+                    "operationId": "f3d91f08-a8c2-9137-7f84-c67077e97fa2",
+                    "parameters": [
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK",
+                            "schema": {
+                                "type": "integer",
+                                "format": "int32"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
+            "/custombannermessage/full": {
+                "get": {
+                    "operationId": "4b8a0942-7a00-4fe4-b348-425ad6e5a462",
+                    "parameters": [
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "orderby",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "privileges",
+                            "in": "query",
+                            "required": false,
+                            "default": false,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK",
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/CustomBannerMessage"
+                                }
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
+            "/custombannermessage/many": {
+                "post": {
+                    "operationId": "fa22e10a-8027-c1a0-64b7-735ea60c06b4",
+                    "parameters": [
+                        {
+                            "name": "items",
+                            "in": "body",
+                            "required": true,
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/CustomBannerMessage"
+                                }
+                            }
+                        },
+                        {
+                            "name": "privileges",
+                            "in": "query",
+                            "required": false,
+                            "default": false,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "201": {
+                            "description": "Created",
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/CustomBannerMessage"
+                                }
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
+            "/custombannermessage/previewcreateprivilege": {
+                "post": {
+                    "operationId": "93e8addd-e955-ea2c-d162-ac5a7b860f8d",
+                    "parameters": [
+                        {
+                            "name": "item",
+                            "in": "body",
+                            "required": true,
+                            "schema": {
+                                "$ref": "#/definitions/CustomBannerMessage"
+                            }
+                        }
+                    ],
+                    "responses": {
+                        "201": {
+                            "description": "Created",
+                            "schema": {
+                                "type": "boolean"
+                            }
+                        }
+                    },
+                    "deprecated": true,
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental",
+                    "x-qlik-deprecated": true
+                }
+            },
+            "/custombannermessage/previewprivileges": {
+                "post": {
+                    "operationId": "cb8ba18b-92a4-bdad-3642-7eb05cd5569c",
+                    "parameters": [
+                        {
+                            "name": "item",
+                            "in": "body",
+                            "required": true,
+                            "schema": {
+                                "$ref": "#/definitions/CustomBannerMessage"
+                            }
+                        },
+                        {
+                            "name": "privilegesfilter",
+                            "in": "query",
+                            "required": false,
+                            "default": 4294967295,
+                            "type": "integer",
+                            "format": "int64",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "201": {
+                            "description": "Created",
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
+            "/custombannermessage/table": {
+                "post": {
+                    "operationId": "10c91ad0-31a6-4ce0-ee18-f439b5e6e6f5",
+                    "parameters": [
+                        {
+                            "name": "tabledefinition",
+                            "in": "body",
+                            "required": true,
+                            "schema": {
+                                "$ref": "#/definitions/TableDefinition"
+                            }
+                        },
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "skip",
+                            "in": "query",
+                            "required": false,
+                            "default": 0,
+                            "type": "integer",
+                            "format": "int32",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "take",
+                            "in": "query",
+                            "required": false,
+                            "default": 0,
+                            "type": "integer",
+                            "format": "int32",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "sortcolumn",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "orderascending",
+                            "in": "query",
+                            "required": false,
+                            "default": true,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "201": {
+                            "description": "Created",
+                            "schema": {
+                                "$ref": "#/definitions/Table"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
             "/custompropertydefinition": {
                 "get": {
                     "operationId": "2ff8dc35-cf5e-5da7-3706-1208da62d91a",
@@ -12057,6 +12504,403 @@
                     },
                     "x-qlik-visibility": "Public",
                     "x-qlik-stability": "Locked"
+                }
+            },
+            "/externalproductsignon": {
+                "get": {
+                    "operationId": "025dd07d-0ff5-06c9-a6a6-1331ac62aba4",
+                    "parameters": [
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "orderby",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "privileges",
+                            "in": "query",
+                            "required": false,
+                            "default": false,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK",
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/ExternalProductSignOnCondensed"
+                                }
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                },
+                "post": {
+                    "operationId": "e1ce0622-abdb-1416-8a72-865cb695da63",
+                    "parameters": [
+                        {
+                            "name": "item",
+                            "in": "body",
+                            "required": true,
+                            "schema": {
+                                "$ref": "#/definitions/ExternalProductSignOn"
+                            }
+                        },
+                        {
+                            "name": "privileges",
+                            "in": "query",
+                            "required": false,
+                            "default": false,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "201": {
+                            "description": "Created",
+                            "schema": {
+                                "$ref": "#/definitions/ExternalProductSignOn"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
+            "/externalproductsignon/{id}": {
+                "get": {
+                    "operationId": "ad92b90a-b2d8-d408-5fc9-dc9959fe674c",
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        {
+                            "name": "privileges",
+                            "in": "query",
+                            "required": false,
+                            "default": false,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK",
+                            "schema": {
+                                "$ref": "#/definitions/ExternalProductSignOn"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                },
+                "put": {
+                    "operationId": "780a06e4-c983-2324-d8bf-beb94c36eca2",
+                    "parameters": [
+                        {
+                            "name": "item",
+                            "in": "body",
+                            "required": true,
+                            "schema": {
+                                "$ref": "#/definitions/ExternalProductSignOn"
+                            }
+                        },
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        {
+                            "name": "privileges",
+                            "in": "query",
+                            "required": false,
+                            "default": false,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK",
+                            "schema": {
+                                "$ref": "#/definitions/ExternalProductSignOn"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                },
+                "delete": {
+                    "operationId": "daad47ac-ee46-5b37-3dd3-90edc20ab74e",
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    ],
+                    "responses": {
+                        "204": {
+                            "description": "NoContent"
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
+            "/externalproductsignon/count": {
+                "get": {
+                    "operationId": "4275d586-87a4-2e13-2070-98641abe74a6",
+                    "parameters": [
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK",
+                            "schema": {
+                                "type": "integer",
+                                "format": "int32"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
+            "/externalproductsignon/full": {
+                "get": {
+                    "operationId": "5b52005b-d282-a3dc-66d9-a775137ada9b",
+                    "parameters": [
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "orderby",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "privileges",
+                            "in": "query",
+                            "required": false,
+                            "default": false,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK",
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/ExternalProductSignOn"
+                                }
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
+            "/externalproductsignon/many": {
+                "post": {
+                    "operationId": "f91ae29a-ef7d-80f4-4fb2-f67a7a8f4a3e",
+                    "parameters": [
+                        {
+                            "name": "items",
+                            "in": "body",
+                            "required": true,
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/ExternalProductSignOn"
+                                }
+                            }
+                        },
+                        {
+                            "name": "privileges",
+                            "in": "query",
+                            "required": false,
+                            "default": false,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "201": {
+                            "description": "Created",
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/ExternalProductSignOn"
+                                }
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
+            "/externalproductsignon/previewcreateprivilege": {
+                "post": {
+                    "operationId": "71a1d34d-9354-0c31-59d7-fdb6b58d18da",
+                    "parameters": [
+                        {
+                            "name": "item",
+                            "in": "body",
+                            "required": true,
+                            "schema": {
+                                "$ref": "#/definitions/ExternalProductSignOn"
+                            }
+                        }
+                    ],
+                    "responses": {
+                        "201": {
+                            "description": "Created",
+                            "schema": {
+                                "type": "boolean"
+                            }
+                        }
+                    },
+                    "deprecated": true,
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental",
+                    "x-qlik-deprecated": true
+                }
+            },
+            "/externalproductsignon/previewprivileges": {
+                "post": {
+                    "operationId": "57c6d0c1-e104-52b1-ed27-3c514d13b96c",
+                    "parameters": [
+                        {
+                            "name": "item",
+                            "in": "body",
+                            "required": true,
+                            "schema": {
+                                "$ref": "#/definitions/ExternalProductSignOn"
+                            }
+                        },
+                        {
+                            "name": "privilegesfilter",
+                            "in": "query",
+                            "required": false,
+                            "default": 4294967295,
+                            "type": "integer",
+                            "format": "int64",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "201": {
+                            "description": "Created",
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
+            "/externalproductsignon/table": {
+                "post": {
+                    "operationId": "18d3262e-71ae-91fd-dbb4-c0eedeba03e4",
+                    "parameters": [
+                        {
+                            "name": "tabledefinition",
+                            "in": "body",
+                            "required": true,
+                            "schema": {
+                                "$ref": "#/definitions/TableDefinition"
+                            }
+                        },
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "skip",
+                            "in": "query",
+                            "required": false,
+                            "default": 0,
+                            "type": "integer",
+                            "format": "int32",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "take",
+                            "in": "query",
+                            "required": false,
+                            "default": 0,
+                            "type": "integer",
+                            "format": "int32",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "sortcolumn",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "orderascending",
+                            "in": "query",
+                            "required": false,
+                            "default": true,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "201": {
+                            "description": "Created",
+                            "schema": {
+                                "$ref": "#/definitions/Table"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
                 }
             },
             "/externalprogramtask": {
@@ -30078,6 +30922,307 @@
                     "x-qlik-stability": "Locked"
                 }
             },
+            "/selection/{id}/custombannermessage": {
+                "get": {
+                    "operationId": "3cc310e3-cfce-b7cd-8a5f-7d61dbffec43",
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "orderby",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "privileges",
+                            "in": "query",
+                            "required": false,
+                            "default": false,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK",
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/CustomBannerMessageCondensed"
+                                }
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                },
+                "delete": {
+                    "operationId": "54d7b411-0e07-5c09-baa5-9518e3a06fe5",
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "204": {
+                            "description": "NoContent"
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
+            "/selection/{id}/custombannermessage/count": {
+                "get": {
+                    "operationId": "913e8cbc-b11a-df41-3b68-cebf0b7f2a45",
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK",
+                            "schema": {
+                                "type": "integer",
+                                "format": "int32"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
+            "/selection/{id}/custombannermessage/full": {
+                "get": {
+                    "operationId": "91a82bbf-e3b9-4236-db52-5b830a4a48db",
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "orderby",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "privileges",
+                            "in": "query",
+                            "required": false,
+                            "default": false,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK",
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/CustomBannerMessage"
+                                }
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
+            "/selection/{id}/custombannermessage/synthetic": {
+                "get": {
+                    "operationId": "c34dfb59-b440-ec8a-81a5-4e448819b084",
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "privileges",
+                            "in": "query",
+                            "required": false,
+                            "default": false,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK",
+                            "schema": {
+                                "$ref": "#/definitions/SyntheticRootEntity"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                },
+                "put": {
+                    "operationId": "11deb02d-86ea-9855-7063-6b8c734c4d61",
+                    "parameters": [
+                        {
+                            "name": "item",
+                            "in": "body",
+                            "required": true,
+                            "schema": {
+                                "$ref": "#/definitions/SyntheticRootEntity"
+                            }
+                        },
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "204": {
+                            "description": "NoContent"
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
+            "/selection/{id}/custombannermessage/table": {
+                "post": {
+                    "operationId": "5757af21-0098-53b3-3874-b7ab1a33a800",
+                    "parameters": [
+                        {
+                            "name": "tabledefinition",
+                            "in": "body",
+                            "required": true,
+                            "schema": {
+                                "$ref": "#/definitions/TableDefinition"
+                            }
+                        },
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "skip",
+                            "in": "query",
+                            "required": false,
+                            "default": 0,
+                            "type": "integer",
+                            "format": "int32",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "take",
+                            "in": "query",
+                            "required": false,
+                            "default": 0,
+                            "type": "integer",
+                            "format": "int32",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "sortcolumn",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "orderascending",
+                            "in": "query",
+                            "required": false,
+                            "default": true,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "201": {
+                            "description": "Created",
+                            "schema": {
+                                "$ref": "#/definitions/Table"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
             "/selection/{id}/custompropertydefinition": {
                 "get": {
                     "operationId": "b7faade7-a204-0c24-d669-9a8fc46a43c3",
@@ -32497,6 +33642,307 @@
                     },
                     "x-qlik-visibility": "Public",
                     "x-qlik-stability": "Locked"
+                }
+            },
+            "/selection/{id}/externalproductsignon": {
+                "get": {
+                    "operationId": "58a6cacf-744a-5931-46c9-7c5ffed72f0e",
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "orderby",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "privileges",
+                            "in": "query",
+                            "required": false,
+                            "default": false,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK",
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/ExternalProductSignOnCondensed"
+                                }
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                },
+                "delete": {
+                    "operationId": "d54b3288-32fd-c63d-e192-23087100a91e",
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "204": {
+                            "description": "NoContent"
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
+            "/selection/{id}/externalproductsignon/count": {
+                "get": {
+                    "operationId": "d6582980-0494-79b0-a354-a58ea787c882",
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK",
+                            "schema": {
+                                "type": "integer",
+                                "format": "int32"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
+            "/selection/{id}/externalproductsignon/full": {
+                "get": {
+                    "operationId": "e0e8718c-eb0b-aef9-809e-badf5862abc1",
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "orderby",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "privileges",
+                            "in": "query",
+                            "required": false,
+                            "default": false,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK",
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/ExternalProductSignOn"
+                                }
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
+            "/selection/{id}/externalproductsignon/synthetic": {
+                "get": {
+                    "operationId": "0d43f272-6e45-7a47-9cec-e9bf365752c1",
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "privileges",
+                            "in": "query",
+                            "required": false,
+                            "default": false,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "200": {
+                            "description": "OK",
+                            "schema": {
+                                "$ref": "#/definitions/SyntheticRootEntity"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                },
+                "put": {
+                    "operationId": "4ddbbf90-c70c-8067-a046-f470be844b2f",
+                    "parameters": [
+                        {
+                            "name": "item",
+                            "in": "body",
+                            "required": true,
+                            "schema": {
+                                "$ref": "#/definitions/SyntheticRootEntity"
+                            }
+                        },
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "204": {
+                            "description": "NoContent"
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
+            "/selection/{id}/externalproductsignon/table": {
+                "post": {
+                    "operationId": "ffb68c71-c7a4-81e1-d1cb-29725d7a5927",
+                    "parameters": [
+                        {
+                            "name": "tabledefinition",
+                            "in": "body",
+                            "required": true,
+                            "schema": {
+                                "$ref": "#/definitions/TableDefinition"
+                            }
+                        },
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "skip",
+                            "in": "query",
+                            "required": false,
+                            "default": 0,
+                            "type": "integer",
+                            "format": "int32",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "take",
+                            "in": "query",
+                            "required": false,
+                            "default": 0,
+                            "type": "integer",
+                            "format": "int32",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "sortcolumn",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "orderascending",
+                            "in": "query",
+                            "required": false,
+                            "default": true,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "201": {
+                            "description": "Created",
+                            "schema": {
+                                "$ref": "#/definitions/Table"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
                 }
             },
             "/selection/{id}/externalprogramtask": {
@@ -48860,6 +50306,30 @@
                     "x-qlik-stability": "Locked"
                 }
             },
+            "/selection/custombannermessage": {
+                "post": {
+                    "operationId": "c637bfe0-c8de-3f1b-520e-9bdf58d1a919",
+                    "parameters": [
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "201": {
+                            "description": "Created",
+                            "schema": {
+                                "$ref": "#/definitions/Selection"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
             "/selection/custompropertydefinition": {
                 "post": {
                     "operationId": "8389b7a7-ffa6-588c-bffc-e733bbe477b0",
@@ -49026,6 +50496,30 @@
                     },
                     "x-qlik-visibility": "Public",
                     "x-qlik-stability": "Locked"
+                }
+            },
+            "/selection/externalproductsignon": {
+                "post": {
+                    "operationId": "0215e38a-d298-17b2-7dc9-6acb03e7823e",
+                    "parameters": [
+                        {
+                            "name": "filter",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "201": {
+                            "description": "Created",
+                            "schema": {
+                                "$ref": "#/definitions/Selection"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
                 }
             },
             "/selection/externalprogramtask": {
@@ -55702,6 +57196,53 @@
                     "x-qlik-stability": "Locked"
                 }
             },
+            "/task/{id}/copy": {
+                "post": {
+                    "operationId": "963e1631-89ad-4134-8953-98e72dbce011",
+                    "parameters": [
+                        {
+                            "name": "id",
+                            "in": "path",
+                            "required": true,
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        {
+                            "name": "name",
+                            "in": "query",
+                            "required": false,
+                            "type": "string",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "includecustomproperties",
+                            "in": "query",
+                            "required": false,
+                            "default": false,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        },
+                        {
+                            "name": "includetags",
+                            "in": "query",
+                            "required": false,
+                            "default": false,
+                            "type": "boolean",
+                            "allowEmptyValue": true
+                        }
+                    ],
+                    "responses": {
+                        "201": {
+                            "description": "Created",
+                            "schema": {
+                                "$ref": "#/definitions/Task"
+                            }
+                        }
+                    },
+                    "x-qlik-visibility": "Public",
+                    "x-qlik-stability": "Experimental"
+                }
+            },
             "/task/{id}/start": {
                 "post": {
                     "operationId": "e28675c1-2c35-4391-9639-42b6dfe74238",
@@ -61680,6 +63221,113 @@
                     "Extension"
                 ]
             },
+            "CustomBannerMessage": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid",
+                        "description": "This property is security accessible"
+                    },
+                    "createdDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "modifiedDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "modifiedByUserName": {
+                        "type": "string"
+                    },
+                    "schemaPath": {
+                        "type": "string"
+                    },
+                    "privileges": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "This property is part of the uniqueness for this schema and is security accessible",
+                        "maxLength": 255,
+                        "minLength": 1
+                    },
+                    "message": {
+                        "type": "string",
+                        "maxLength": 255
+                    },
+                    "messageType": {
+                        "$ref": "#/definitions/CustomBannerMessageType",
+                        "description": "This property is security accessible"
+                    },
+                    "isActive": {
+                        "type": "boolean"
+                    },
+                    "duration": {
+                        "type": "integer",
+                        "format": "seconds",
+                        "minimum": 0
+                    },
+                    "tags": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/TagCondensed"
+                        }
+                    }
+                },
+                "required": [
+                    "name",
+                    "message",
+                    "messageType",
+                    "isActive",
+                    "duration"
+                ],
+                "x-qlik-stability": "Experimental"
+            },
+            "CustomBannerMessageCondensed": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid",
+                        "description": "This property is security accessible"
+                    },
+                    "privileges": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "This property is part of the uniqueness for this schema and is security accessible",
+                        "maxLength": 255,
+                        "minLength": 1
+                    }
+                },
+                "required": [
+                    "name"
+                ],
+                "x-qlik-stability": "Experimental"
+            },
+            "CustomBannerMessageType": {
+                "type": "integer",
+                "enum": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "x-enumNames": [
+                    "Standard",
+                    "Info",
+                    "Warning",
+                    "Error"
+                ]
+            },
             "CustomPropertyDefinition": {
                 "type": "object",
                 "properties": {
@@ -63146,6 +64794,169 @@
                 ],
                 "x-qlik-stability": "Locked"
             },
+            "ExternalProductSignOn": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid",
+                        "description": "This property is security accessible"
+                    },
+                    "createdDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "modifiedDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "modifiedByUserName": {
+                        "type": "string"
+                    },
+                    "schemaPath": {
+                        "type": "string"
+                    },
+                    "privileges": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "This property is part of the uniqueness for this schema and is security accessible",
+                        "maxLength": 255,
+                        "minLength": 1
+                    },
+                    "productType": {
+                        "$ref": "#/definitions/ExternalProductTypes",
+                        "description": "This property is security accessible"
+                    },
+                    "host": {
+                        "type": "string",
+                        "format": "host",
+                        "maxLength": 255
+                    },
+                    "port": {
+                        "type": "integer",
+                        "format": "int32",
+                        "maximum": 65535,
+                        "minimum": 1
+                    },
+                    "signOnUrl": {
+                        "type": "string",
+                        "format": "uri",
+                        "maxLength": 2048
+                    },
+                    "startPageUrl": {
+                        "type": "string",
+                        "format": "uri",
+                        "maxLength": 2048
+                    },
+                    "healthCheckPath": {
+                        "type": "string",
+                        "maxLength": 2048
+                    },
+                    "signOnUILabel": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "minLength": 1
+                    },
+                    "iconClass": {
+                        "type": "string"
+                    },
+                    "tags": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/definitions/TagCondensed"
+                        }
+                    }
+                },
+                "required": [
+                    "name",
+                    "productType",
+                    "signOnUrl",
+                    "startPageUrl",
+                    "signOnUILabel"
+                ],
+                "x-qlik-stability": "Experimental"
+            },
+            "ExternalProductSignOnCondensed": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uuid",
+                        "description": "This property is security accessible"
+                    },
+                    "privileges": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "This property is part of the uniqueness for this schema and is security accessible",
+                        "maxLength": 255,
+                        "minLength": 1
+                    },
+                    "productType": {
+                        "$ref": "#/definitions/ExternalProductTypes",
+                        "description": "This property is security accessible"
+                    },
+                    "host": {
+                        "type": "string",
+                        "format": "host",
+                        "maxLength": 255
+                    },
+                    "port": {
+                        "type": "integer",
+                        "format": "int32",
+                        "maximum": 65535,
+                        "minimum": 1
+                    },
+                    "signOnUrl": {
+                        "type": "string",
+                        "format": "uri",
+                        "maxLength": 2048
+                    },
+                    "startPageUrl": {
+                        "type": "string",
+                        "format": "uri",
+                        "maxLength": 2048
+                    },
+                    "healthCheckPath": {
+                        "type": "string",
+                        "maxLength": 2048
+                    },
+                    "signOnUILabel": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "minLength": 1
+                    },
+                    "iconClass": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "name",
+                    "productType",
+                    "signOnUrl",
+                    "startPageUrl",
+                    "signOnUILabel"
+                ],
+                "x-qlik-stability": "Experimental"
+            },
+            "ExternalProductTypes": {
+                "type": "integer",
+                "enum": [
+                    0
+                ],
+                "x-enumNames": [
+                    "QlikAlerting"
+                ]
+            },
             "ExternalProgramTask": {
                 "type": "object",
                 "properties": {
@@ -63807,6 +65618,10 @@
                     },
                     "isElastic": {
                         "type": "boolean"
+                    },
+                    "updated": {
+                        "type": "string",
+                        "format": "date-time"
                     }
                 },
                 "x-qlik-stability": "Locked"

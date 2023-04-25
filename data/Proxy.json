@@ -1,860 +1,856 @@
 {
-    "status": 200,
-    "statusText": "OK",
-    "data": {
-        "swagger": "2.0",
-        "info": {
-            "title": "Open API specification for Proxy Main API",
-            "version": "38.11.0"
+    "swagger": "2.0",
+    "info": {
+        "title": "Open API specification for Proxy Main API",
+        "version": "38.11.0"
+    },
+    "host": "qlik-sense:4243",
+    "basePath": "/qps",
+    "paths": {
+        "/{virtualproxy}/session": {
+            "get": {
+                "operationId": "11f4b284-e15c-4092-afab-163c12887433",
+                "parameters": [
+                    {
+                        "name": "virtualproxy",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/SessionData"
+                            }
+                        }
+                    }
+                },
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Experimental"
+            },
+            "post": {
+                "operationId": "ceaa9ccb-87c8-4991-a420-b847749208f6",
+                "parameters": [
+                    {
+                        "name": "session",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/SessionData"
+                        }
+                    },
+                    {
+                        "name": "virtualproxy",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created",
+                        "schema": {
+                            "$ref": "#/definitions/AddedSession"
+                        }
+                    }
+                },
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Locked"
+            }
         },
-        "host": "sense-apr-2019:4243",
-        "basePath": "/qps",
-        "paths": {
-            "/{virtualproxy}/session": {
-                "get": {
-                    "operationId": "11f4b284-e15c-4092-afab-163c12887433",
-                    "parameters": [
-                        {
-                            "name": "virtualproxy",
-                            "in": "path",
-                            "required": true,
-                            "type": "string"
+        "/{virtualproxy}/session/{id}": {
+            "get": {
+                "operationId": "1c844222-3d24-45ed-b650-296f732a1d9e",
+                "parameters": [
+                    {
+                        "name": "virtualproxy",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/SessionData"
                         }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": "OK",
-                            "schema": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/definitions/SessionData"
-                                }
-                            }
+                    }
+                },
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Locked"
+            },
+            "delete": {
+                "operationId": "95057527-d0b3-4047-a926-4aa83abad7c2",
+                "parameters": [
+                    {
+                        "name": "virtualproxy",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/DeletedSession"
+                        }
+                    }
+                },
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Locked"
+            }
+        },
+        "/{virtualproxy}/ticket": {
+            "post": {
+                "operationId": "bc5e4859-3db6-4aef-bf8a-b2e8c886ad2f",
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/TicketRequest"
                         }
                     },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Experimental"
+                    {
+                        "name": "virtualproxy",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created",
+                        "schema": {
+                            "$ref": "#/definitions/TicketResponse"
+                        }
+                    }
                 },
-                "post": {
-                    "operationId": "ceaa9ccb-87c8-4991-a420-b847749208f6",
-                    "parameters": [
-                        {
-                            "name": "session",
-                            "in": "body",
-                            "required": true,
-                            "schema": {
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Locked"
+            }
+        },
+        "/{virtualproxy}/user/{directory}/{id}": {
+            "get": {
+                "operationId": "857cce65-932f-402c-af2c-175bbd68c7ad",
+                "parameters": [
+                    {
+                        "name": "virtualproxy",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "directory",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
                                 "$ref": "#/definitions/SessionData"
                             }
-                        },
-                        {
-                            "name": "virtualproxy",
-                            "in": "path",
-                            "required": true,
-                            "type": "string"
                         }
-                    ],
-                    "responses": {
-                        "201": {
-                            "description": "Created",
-                            "schema": {
-                                "$ref": "#/definitions/AddedSession"
-                            }
-                        }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Locked"
-                }
+                    }
+                },
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Locked"
             },
-            "/{virtualproxy}/session/{id}": {
-                "get": {
-                    "operationId": "1c844222-3d24-45ed-b650-296f732a1d9e",
-                    "parameters": [
-                        {
-                            "name": "virtualproxy",
-                            "in": "path",
-                            "required": true,
-                            "type": "string"
-                        },
-                        {
-                            "name": "id",
-                            "in": "path",
-                            "required": true,
-                            "type": "string"
-                        }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": "OK",
-                            "schema": {
+            "delete": {
+                "operationId": "63276ad3-168b-4d0d-a786-b62ec586491a",
+                "parameters": [
+                    {
+                        "name": "virtualproxy",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "directory",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
                                 "$ref": "#/definitions/SessionData"
                             }
                         }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Locked"
+                    }
                 },
-                "delete": {
-                    "operationId": "95057527-d0b3-4047-a926-4aa83abad7c2",
-                    "parameters": [
-                        {
-                            "name": "virtualproxy",
-                            "in": "path",
-                            "required": true,
-                            "type": "string"
-                        },
-                        {
-                            "name": "id",
-                            "in": "path",
-                            "required": true,
-                            "type": "string"
-                        }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": "OK",
-                            "schema": {
-                                "$ref": "#/definitions/DeletedSession"
-                            }
-                        }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Locked"
-                }
-            },
-            "/{virtualproxy}/ticket": {
-                "post": {
-                    "operationId": "bc5e4859-3db6-4aef-bf8a-b2e8c886ad2f",
-                    "parameters": [
-                        {
-                            "name": "request",
-                            "in": "body",
-                            "required": true,
-                            "schema": {
-                                "$ref": "#/definitions/TicketRequest"
-                            }
-                        },
-                        {
-                            "name": "virtualproxy",
-                            "in": "path",
-                            "required": true,
-                            "type": "string"
-                        }
-                    ],
-                    "responses": {
-                        "201": {
-                            "description": "Created",
-                            "schema": {
-                                "$ref": "#/definitions/TicketResponse"
-                            }
-                        }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Locked"
-                }
-            },
-            "/{virtualproxy}/user/{directory}/{id}": {
-                "get": {
-                    "operationId": "857cce65-932f-402c-af2c-175bbd68c7ad",
-                    "parameters": [
-                        {
-                            "name": "virtualproxy",
-                            "in": "path",
-                            "required": true,
-                            "type": "string"
-                        },
-                        {
-                            "name": "directory",
-                            "in": "path",
-                            "required": true,
-                            "type": "string"
-                        },
-                        {
-                            "name": "id",
-                            "in": "path",
-                            "required": true,
-                            "type": "string"
-                        }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": "OK",
-                            "schema": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/definitions/SessionData"
-                                }
-                            }
-                        }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Locked"
-                },
-                "delete": {
-                    "operationId": "63276ad3-168b-4d0d-a786-b62ec586491a",
-                    "parameters": [
-                        {
-                            "name": "virtualproxy",
-                            "in": "path",
-                            "required": true,
-                            "type": "string"
-                        },
-                        {
-                            "name": "directory",
-                            "in": "path",
-                            "required": true,
-                            "type": "string"
-                        },
-                        {
-                            "name": "id",
-                            "in": "path",
-                            "required": true,
-                            "type": "string"
-                        }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": "OK",
-                            "schema": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/definitions/SessionData"
-                                }
-                            }
-                        }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Locked"
-                }
-            },
-            "/about/default": {
-                "get": {
-                    "operationId": "3d1a3502-a020-4a37-8da3-90b7e030792e",
-                    "parameters": [
-                        {
-                            "name": "listentries",
-                            "in": "query",
-                            "required": false,
-                            "default": true,
-                            "type": "boolean",
-                            "allowEmptyValue": true
-                        }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": "OK",
-                            "schema": {
-                                "type": "object",
-                                "additionalProperties": {
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Locked"
-                }
-            },
-            "/about/description": {
-                "get": {
-                    "operationId": "15ae5962-4782-4f96-bbf7-0084395f615c",
-                    "parameters": [
-                        {
-                            "name": "extended",
-                            "in": "query",
-                            "required": false,
-                            "default": false,
-                            "type": "boolean",
-                            "allowEmptyValue": true
-                        },
-                        {
-                            "name": "method",
-                            "in": "query",
-                            "required": false,
-                            "type": "string",
-                            "allowEmptyValue": true
-                        },
-                        {
-                            "name": "format",
-                            "in": "query",
-                            "required": false,
-                            "type": "string",
-                            "allowEmptyValue": true
-                        }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": "OK",
-                            "schema": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            }
-                        }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Locked"
-                }
-            },
-            "/about/enums": {
-                "get": {
-                    "operationId": "25c796ae-8bf6-438d-85bc-2de02b213bdd",
-                    "responses": {
-                        "200": {
-                            "description": "OK",
-                            "schema": {
-                                "type": "object",
-                                "additionalProperties": {
-                                    "$ref": "#/definitions/EnumDescription"
-                                }
-                            }
-                        }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Locked"
-                }
-            },
-            "/about/openapi": {
-                "get": {
-                    "summary": "Returns a list of interface names",
-                    "operationId": "4eadfcb2-3b2d-4010-be8d-c22e223a0f15",
-                    "responses": {
-                        "200": {
-                            "description": "OK",
-                            "schema": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            }
-                        }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Experimental"
-                }
-            },
-            "/about/openapi/{interfacename}": {
-                "get": {
-                    "summary": "Returns an Open API specification in Json format for the specified interface",
-                    "operationId": "845fa020-0e5b-4af8-a408-7dd0738fc251",
-                    "parameters": [
-                        {
-                            "name": "interfacename",
-                            "in": "path",
-                            "required": true,
-                            "type": "string"
-                        }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": "OK",
-                            "schema": {
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Locked"
+            }
+        },
+        "/about/default": {
+            "get": {
+                "operationId": "3d1a3502-a020-4a37-8da3-90b7e030792e",
+                "parameters": [
+                    {
+                        "name": "listentries",
+                        "in": "query",
+                        "required": false,
+                        "default": true,
+                        "type": "boolean",
+                        "allowEmptyValue": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
                                 "type": "object"
                             }
                         }
+                    }
+                },
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Locked"
+            }
+        },
+        "/about/description": {
+            "get": {
+                "operationId": "15ae5962-4782-4f96-bbf7-0084395f615c",
+                "parameters": [
+                    {
+                        "name": "extended",
+                        "in": "query",
+                        "required": false,
+                        "default": false,
+                        "type": "boolean",
+                        "allowEmptyValue": true
                     },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Experimental"
-                }
-            },
-            "/about/relations": {
-                "get": {
-                    "operationId": "ffb2e685-46ef-49f8-b65d-007ef6d743bd",
-                    "responses": {
-                        "200": {
-                            "description": "OK",
-                            "schema": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            }
-                        }
+                    {
+                        "name": "method",
+                        "in": "query",
+                        "required": false,
+                        "type": "string",
+                        "allowEmptyValue": true
                     },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Locked"
-                }
-            },
-            "/alive": {
-                "get": {
-                    "operationId": "dac54b3c-162d-4dac-a9a5-b172349fb992",
-                    "responses": {
-                        "200": {
-                            "description": "OK",
-                            "schema": {
-                                "type": "boolean"
-                            }
-                        }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Locked"
-                }
-            },
-            "/error": {
-                "post": {
-                    "operationId": "a6035b90-9c10-41af-92f0-57672dc566b7",
-                    "parameters": [
-                        {
-                            "name": "error",
-                            "in": "body",
-                            "required": true,
-                            "schema": {
-                                "$ref": "#/definitions/ModuleError"
-                            }
-                        }
-                    ],
-                    "responses": {
-                        "204": {
-                            "description": "NoContent"
-                        }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Locked"
-                }
-            },
-            "/health": {
-                "get": {
-                    "operationId": "02e13212-f9ad-45d6-b3a0-ee841648e7ce",
-                    "responses": {
-                        "200": {
-                            "description": "OK",
-                            "schema": {
+                    {
+                        "name": "format",
+                        "in": "query",
+                        "required": false,
+                        "type": "string",
+                        "allowEmptyValue": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
                                 "type": "string"
                             }
                         }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Experimental"
-                }
-            },
-            "/notified": {
-                "post": {
-                    "operationId": "c0986ed1-7371-4971-872e-0b791325dd5d",
-                    "parameters": [
-                        {
-                            "name": "changeinfos",
-                            "in": "body",
-                            "required": true,
-                            "schema": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/definitions/ExternalChangeInfo"
-                                }
-                            }
-                        }
-                    ],
-                    "responses": {
-                        "204": {
-                            "description": "NoContent"
-                        }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Locked"
-                }
-            },
-            "/session": {
-                "get": {
-                    "operationId": "19b1cf4a-5629-4022-a146-c978a46f3a59",
-                    "responses": {
-                        "200": {
-                            "description": "OK",
-                            "schema": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/definitions/SessionData"
-                                }
-                            }
-                        }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Experimental"
+                    }
                 },
-                "post": {
-                    "operationId": "48b91e9a-f6fe-4bfe-a2a0-a51334a7840e",
-                    "parameters": [
-                        {
-                            "name": "session",
-                            "in": "body",
-                            "required": true,
-                            "schema": {
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Locked"
+            }
+        },
+        "/about/enums": {
+            "get": {
+                "operationId": "25c796ae-8bf6-438d-85bc-2de02b213bdd",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "$ref": "#/definitions/EnumDescription"
+                            }
+                        }
+                    }
+                },
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Locked"
+            }
+        },
+        "/about/openapi": {
+            "get": {
+                "summary": "Returns a list of interface names",
+                "operationId": "4eadfcb2-3b2d-4010-be8d-c22e223a0f15",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Experimental"
+            }
+        },
+        "/about/openapi/{interfacename}": {
+            "get": {
+                "summary": "Returns an Open API specification in Json format for the specified interface",
+                "operationId": "845fa020-0e5b-4af8-a408-7dd0738fc251",
+                "parameters": [
+                    {
+                        "name": "interfacename",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                },
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Experimental"
+            }
+        },
+        "/about/relations": {
+            "get": {
+                "operationId": "ffb2e685-46ef-49f8-b65d-007ef6d743bd",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Locked"
+            }
+        },
+        "/alive": {
+            "get": {
+                "operationId": "dac54b3c-162d-4dac-a9a5-b172349fb992",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Locked"
+            }
+        },
+        "/error": {
+            "post": {
+                "operationId": "a6035b90-9c10-41af-92f0-57672dc566b7",
+                "parameters": [
+                    {
+                        "name": "error",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ModuleError"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "NoContent"
+                    }
+                },
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Locked"
+            }
+        },
+        "/health": {
+            "get": {
+                "operationId": "02e13212-f9ad-45d6-b3a0-ee841648e7ce",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Experimental"
+            }
+        },
+        "/notified": {
+            "post": {
+                "operationId": "c0986ed1-7371-4971-872e-0b791325dd5d",
+                "parameters": [
+                    {
+                        "name": "changeinfos",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/ExternalChangeInfo"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "NoContent"
+                    }
+                },
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Locked"
+            }
+        },
+        "/session": {
+            "get": {
+                "operationId": "19b1cf4a-5629-4022-a146-c978a46f3a59",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
                                 "$ref": "#/definitions/SessionData"
                             }
                         }
-                    ],
-                    "responses": {
-                        "201": {
-                            "description": "Created",
-                            "schema": {
-                                "$ref": "#/definitions/AddedSession"
-                            }
-                        }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Locked"
-                }
+                    }
+                },
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Experimental"
             },
-            "/session/{id}": {
-                "get": {
-                    "operationId": "4b835d57-3212-4e94-babc-20875a00cc1c",
-                    "parameters": [
-                        {
-                            "name": "id",
-                            "in": "path",
-                            "required": true,
-                            "type": "string"
+            "post": {
+                "operationId": "48b91e9a-f6fe-4bfe-a2a0-a51334a7840e",
+                "parameters": [
+                    {
+                        "name": "session",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/SessionData"
                         }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": "OK",
-                            "schema": {
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created",
+                        "schema": {
+                            "$ref": "#/definitions/AddedSession"
+                        }
+                    }
+                },
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Locked"
+            }
+        },
+        "/session/{id}": {
+            "get": {
+                "operationId": "4b835d57-3212-4e94-babc-20875a00cc1c",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/SessionData"
+                        }
+                    }
+                },
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Locked"
+            },
+            "delete": {
+                "operationId": "5225eca7-8d5f-42b9-864c-138e8e54a751",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/DeletedSession"
+                        }
+                    }
+                },
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Locked"
+            }
+        },
+        "/ticket": {
+            "post": {
+                "operationId": "a5f64a02-3c67-48b2-a00e-eaeafcc680d0",
+                "parameters": [
+                    {
+                        "name": "request",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/TicketRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created",
+                        "schema": {
+                            "$ref": "#/definitions/TicketResponse"
+                        }
+                    }
+                },
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Locked"
+            }
+        },
+        "/user/{directory}/{id}": {
+            "get": {
+                "operationId": "10d70d99-f449-423c-9044-3b78c6b7ae56",
+                "parameters": [
+                    {
+                        "name": "directory",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
                                 "$ref": "#/definitions/SessionData"
                             }
                         }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Locked"
+                    }
                 },
-                "delete": {
-                    "operationId": "5225eca7-8d5f-42b9-864c-138e8e54a751",
-                    "parameters": [
-                        {
-                            "name": "id",
-                            "in": "path",
-                            "required": true,
-                            "type": "string"
-                        }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": "OK",
-                            "schema": {
-                                "$ref": "#/definitions/DeletedSession"
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Locked"
+            },
+            "delete": {
+                "operationId": "24b8edee-6069-415c-a3fe-80776c09b73d",
+                "parameters": [
+                    {
+                        "name": "directory",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/SessionData"
                             }
                         }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Locked"
+                    }
+                },
+                "x-qlik-visibility": "Public",
+                "x-qlik-stability": "Locked"
+            }
+        }
+    },
+    "definitions": {
+        "AddedSession": {
+            "type": "object",
+            "properties": {
+                "userDirectory": {
+                    "type": "string"
+                },
+                "userId": {
+                    "type": "string"
+                },
+                "attributes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/SessionUserAttributeCondensed"
+                    }
+                },
+                "sessionId": {
+                    "type": "string"
+                },
+                "newUser": {
+                    "type": "boolean"
+                },
+                "userName": {
+                    "type": "string"
                 }
             },
-            "/ticket": {
-                "post": {
-                    "operationId": "a5f64a02-3c67-48b2-a00e-eaeafcc680d0",
-                    "parameters": [
-                        {
-                            "name": "request",
-                            "in": "body",
-                            "required": true,
-                            "schema": {
-                                "$ref": "#/definitions/TicketRequest"
-                            }
-                        }
-                    ],
-                    "responses": {
-                        "201": {
-                            "description": "Created",
-                            "schema": {
-                                "$ref": "#/definitions/TicketResponse"
-                            }
-                        }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Locked"
+            "required": [
+                "userDirectory",
+                "userId",
+                "sessionId"
+            ]
+        },
+        "ChangeType": {
+            "type": "integer",
+            "enum": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "x-enumNames": [
+                "Undefined",
+                "Add",
+                "Update",
+                "Delete"
+            ]
+        },
+        "DeletedSession": {
+            "type": "object",
+            "properties": {
+                "session": {
+                    "$ref": "#/definitions/SessionDataCondensed"
+                },
+                "lastSessionForUser": {
+                    "type": "boolean"
                 }
             },
-            "/user/{directory}/{id}": {
-                "get": {
-                    "operationId": "10d70d99-f449-423c-9044-3b78c6b7ae56",
-                    "parameters": [
-                        {
-                            "name": "directory",
-                            "in": "path",
-                            "required": true,
-                            "type": "string"
-                        },
-                        {
-                            "name": "id",
-                            "in": "path",
-                            "required": true,
-                            "type": "string"
-                        }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": "OK",
-                            "schema": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/definitions/SessionData"
-                                }
-                            }
-                        }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Locked"
+            "required": [
+                "session"
+            ]
+        },
+        "EnumDescription": {
+            "type": "object",
+            "properties": {
+                "values": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
                 },
-                "delete": {
-                    "operationId": "24b8edee-6069-415c-a3fe-80776c09b73d",
-                    "parameters": [
-                        {
-                            "name": "directory",
-                            "in": "path",
-                            "required": true,
-                            "type": "string"
-                        },
-                        {
-                            "name": "id",
-                            "in": "path",
-                            "required": true,
-                            "type": "string"
-                        }
-                    ],
-                    "responses": {
-                        "200": {
-                            "description": "OK",
-                            "schema": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/definitions/SessionData"
-                                }
-                            }
-                        }
-                    },
-                    "x-qlik-visibility": "Public",
-                    "x-qlik-stability": "Locked"
+                "usages": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
                 }
             }
         },
-        "definitions": {
-            "AddedSession": {
-                "type": "object",
-                "properties": {
-                    "userDirectory": {
-                        "type": "string"
-                    },
-                    "userId": {
-                        "type": "string"
-                    },
-                    "attributes": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/definitions/SessionUserAttributeCondensed"
-                        }
-                    },
-                    "sessionId": {
-                        "type": "string"
-                    },
-                    "newUser": {
-                        "type": "boolean"
-                    },
-                    "userName": {
+        "ExternalChangeInfo": {
+            "type": "object",
+            "properties": {
+                "changeType": {
+                    "$ref": "#/definitions/ChangeType"
+                },
+                "objectType": {
+                    "type": "string"
+                },
+                "objectID": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "changedProperties": {
+                    "type": "array",
+                    "items": {
                         "type": "string"
                     }
                 },
-                "required": [
-                    "userDirectory",
-                    "userId",
-                    "sessionId"
-                ]
-            },
-            "ChangeType": {
-                "type": "integer",
-                "enum": [
-                    0,
-                    1,
-                    2,
-                    3
-                ],
-                "x-enumNames": [
-                    "Undefined",
-                    "Add",
-                    "Update",
-                    "Delete"
-                ]
-            },
-            "DeletedSession": {
-                "type": "object",
-                "properties": {
-                    "session": {
-                        "$ref": "#/definitions/SessionDataCondensed"
-                    },
-                    "lastSessionForUser": {
-                        "type": "boolean"
-                    }
+                "engineID": {
+                    "type": "string"
                 },
-                "required": [
-                    "session"
-                ]
-            },
-            "EnumDescription": {
-                "type": "object",
-                "properties": {
-                    "values": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        }
-                    },
-                    "usages": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        }
-                    }
+                "engineType": {
+                    "type": "string"
+                },
+                "originatorNodeID": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "originatorHostName": {
+                    "type": "string"
+                },
+                "originatorContextID": {
+                    "type": "string"
+                },
+                "createdDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "modifiedDate": {
+                    "type": "string",
+                    "format": "date-time"
                 }
-            },
-            "ExternalChangeInfo": {
-                "type": "object",
-                "properties": {
-                    "changeType": {
-                        "$ref": "#/definitions/ChangeType"
-                    },
-                    "objectType": {
-                        "type": "string"
-                    },
-                    "objectID": {
-                        "type": "string",
-                        "format": "uuid"
-                    },
-                    "changedProperties": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        }
-                    },
-                    "engineID": {
-                        "type": "string"
-                    },
-                    "engineType": {
-                        "type": "string"
-                    },
-                    "originatorNodeID": {
-                        "type": "string",
-                        "format": "uuid"
-                    },
-                    "originatorHostName": {
-                        "type": "string"
-                    },
-                    "originatorContextID": {
-                        "type": "string"
-                    },
-                    "createdDate": {
-                        "type": "string",
-                        "format": "date-time"
-                    },
-                    "modifiedDate": {
-                        "type": "string",
-                        "format": "date-time"
-                    }
-                }
-            },
-            "ModuleError": {
-                "type": "object",
-                "properties": {
-                    "userDirectory": {
-                        "type": "string"
-                    },
-                    "userId": {
-                        "type": "string"
-                    },
-                    "message": {
-                        "type": "string"
-                    }
-                },
-                "required": [
-                    "message"
-                ]
-            },
-            "SessionData": {
-                "type": "object",
-                "properties": {
-                    "userDirectory": {
-                        "type": "string"
-                    },
-                    "userId": {
-                        "type": "string"
-                    },
-                    "attributes": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/definitions/SessionUserAttributeCondensed"
-                        }
-                    },
-                    "sessionId": {
-                        "type": "string"
-                    },
-                    "userName": {
-                        "type": "string"
-                    }
-                },
-                "required": [
-                    "userDirectory",
-                    "userId",
-                    "sessionId"
-                ]
-            },
-            "SessionDataCondensed": {
-                "type": "object",
-                "properties": {}
-            },
-            "SessionUserAttributeCondensed": {
-                "type": "object",
-                "properties": {}
-            },
-            "TicketRequest": {
-                "type": "object",
-                "properties": {
-                    "userDirectory": {
-                        "type": "string"
-                    },
-                    "userId": {
-                        "type": "string"
-                    },
-                    "attributes": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/definitions/SessionUserAttributeCondensed"
-                        }
-                    },
-                    "targetId": {
-                        "type": "string"
-                    }
-                },
-                "required": [
-                    "userDirectory",
-                    "userId"
-                ]
-            },
-            "TicketResponse": {
-                "type": "object",
-                "properties": {
-                    "userDirectory": {
-                        "type": "string"
-                    },
-                    "userId": {
-                        "type": "string"
-                    },
-                    "attributes": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/definitions/SessionUserAttributeCondensed"
-                        }
-                    },
-                    "ticket": {
-                        "type": "string"
-                    },
-                    "targetUri": {
-                        "type": "string",
-                        "format": "uri"
-                    }
-                },
-                "required": [
-                    "userDirectory",
-                    "userId",
-                    "attributes",
-                    "ticket"
-                ]
             }
+        },
+        "ModuleError": {
+            "type": "object",
+            "properties": {
+                "userDirectory": {
+                    "type": "string"
+                },
+                "userId": {
+                    "type": "string"
+                },
+                "message": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "message"
+            ]
+        },
+        "SessionData": {
+            "type": "object",
+            "properties": {
+                "userDirectory": {
+                    "type": "string"
+                },
+                "userId": {
+                    "type": "string"
+                },
+                "attributes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/SessionUserAttributeCondensed"
+                    }
+                },
+                "sessionId": {
+                    "type": "string"
+                },
+                "userName": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "userDirectory",
+                "userId",
+                "sessionId"
+            ]
+        },
+        "SessionDataCondensed": {
+            "type": "object",
+            "properties": {}
+        },
+        "SessionUserAttributeCondensed": {
+            "type": "object",
+            "properties": {}
+        },
+        "TicketRequest": {
+            "type": "object",
+            "properties": {
+                "userDirectory": {
+                    "type": "string"
+                },
+                "userId": {
+                    "type": "string"
+                },
+                "attributes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/SessionUserAttributeCondensed"
+                    }
+                },
+                "targetId": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "userDirectory",
+                "userId"
+            ]
+        },
+        "TicketResponse": {
+            "type": "object",
+            "properties": {
+                "userDirectory": {
+                    "type": "string"
+                },
+                "userId": {
+                    "type": "string"
+                },
+                "attributes": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/SessionUserAttributeCondensed"
+                    }
+                },
+                "ticket": {
+                    "type": "string"
+                },
+                "targetUri": {
+                    "type": "string",
+                    "format": "uri"
+                }
+            },
+            "required": [
+                "userDirectory",
+                "userId",
+                "attributes",
+                "ticket"
+            ]
         }
     }
 }
