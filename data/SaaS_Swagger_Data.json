@@ -255,7 +255,8 @@
                             }
                         }
                     },
-                    "required": true
+                    "required": true,
+                    "description": "Properties that the user wants to set for the API key."
                 },
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
@@ -425,7 +426,8 @@
                             }
                         }
                     },
-                    "required": true
+                    "required": true,
+                    "description": "Properties that the user wants to update for the API key."
                 },
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
@@ -643,7 +645,8 @@
                             }
                         }
                     },
-                    "required": true
+                    "required": true,
+                    "description": "Configurations that the user wants to update for API keys."
                 },
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
@@ -2657,6 +2660,66 @@
                 }
             }
         },
+        "/v1/apps/{appId}/objects/{objectId}/actions/change-owner": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "headers": {},
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/NxAppObject"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "headers": {},
+                        "description": "Bad request"
+                    },
+                    "404": {
+                        "headers": {},
+                        "description": "Not Found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "appId",
+                        "required": true,
+                        "description": "Identifier of the app.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "objectId",
+                        "required": true,
+                        "description": "Identifier of the object.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "$ref": "#/components/requestBodies/UpdateOwner"
+                },
+                "description": "Sets owner on an app object.",
+                "x-qlik-access-control": [
+                    "update"
+                ],
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "locked",
+                "x-qlik-categories": [],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            }
+        },
         "/v1/apps/{appId}/owner": {
             "put": {
                 "responses": {
@@ -2692,15 +2755,7 @@
                     }
                 ],
                 "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/UpdateOwner"
-                            }
-                        }
-                    },
-                    "description": "New owner.",
-                    "required": true
+                    "$ref": "#/components/requestBodies/UpdateOwner"
                 },
                 "description": "Changes owner of the app.",
                 "x-qlik-access-control": [
@@ -13559,6 +13614,704 @@
                 }
             }
         },
+        "/v1/brands": {
+            "get": {
+                "tags": [
+                    "brands"
+                ],
+                "summary": "Lists all brand entries for a tenant",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BrandsList"
+                                }
+                            }
+                        },
+                        "description": "OK Response"
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/BadRequest"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/Unauthorized"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/Forbidden"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "endingBefore",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Cursor to previous."
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "schema": {
+                            "type": "integer",
+                            "default": 5,
+                            "maximum": 100,
+                            "minimum": 1
+                        },
+                        "required": false,
+                        "description": "Maximum number of brands to retrieve."
+                    },
+                    {
+                        "in": "query",
+                        "name": "sort",
+                        "schema": {
+                            "enum": [
+                                "id",
+                                "+id",
+                                "-id",
+                                "createdAt",
+                                "+createdAt",
+                                "-createdAt",
+                                "updatedAt",
+                                "+updatedAt",
+                                "-updatedAt"
+                            ],
+                            "type": "string",
+                            "default": "-id"
+                        },
+                        "required": false,
+                        "description": "Field to sort by, prefixed with -/+ to indicate the order."
+                    },
+                    {
+                        "in": "query",
+                        "name": "startingAfter",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Cursor to the next page."
+                    }
+                ],
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "1",
+                    "limit": 1000
+                }
+            },
+            "post": {
+                "tags": [
+                    "brands"
+                ],
+                "summary": "Creates a new brand",
+                "responses": {
+                    "201": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Brand"
+                                }
+                            }
+                        },
+                        "description": "Created Response"
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/BadRequest"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/Unauthorized"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/Forbidden"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "example": {
+                                    "logo": "image-file-content",
+                                    "name": "My brand",
+                                    "styles": "json-file-content",
+                                    "favicon": "image-file-content",
+                                    "description": "Some brand description"
+                                },
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "logo": {
+                                        "type": "string",
+                                        "format": "binary",
+                                        "description": "The path and name of a JPG or PNG file that will be adjusted to fit in a 'box' measuring 109px in width and 62 px in height while maintaining aspect ratio. Maximum size of 300 KB, but smaller is recommended."
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "description": "Name of the brand."
+                                    },
+                                    "styles": {
+                                        "type": "string",
+                                        "format": "binary",
+                                        "description": "The path and name of a JSON file to define brand style settings. Maximum size is 100 KB. This property is not currently operational."
+                                    },
+                                    "favIcon": {
+                                        "type": "string",
+                                        "format": "binary",
+                                        "description": "The path and name of a properly formatted ICO file. Maximum size is 100 KB."
+                                    },
+                                    "description": {
+                                        "type": "string",
+                                        "description": "Description of the brand."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            }
+        },
+        "/v1/brands/{brand-id}": {
+            "get": {
+                "tags": [
+                    "brands"
+                ],
+                "summary": "Retrieves a specific brand",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Brand"
+                                }
+                            }
+                        },
+                        "description": "OK Response"
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/BadRequest"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/Unauthorized"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/Forbidden"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFound"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    }
+                },
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/brand-id"
+                    }
+                ],
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "1",
+                    "limit": 1000
+                }
+            },
+            "patch": {
+                "tags": [
+                    "brands"
+                ],
+                "summary": "Patches a brand",
+                "responses": {
+                    "204": {
+                        "description": "No Content Response."
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/BadRequest"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/Unauthorized"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/Forbidden"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFound"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    }
+                },
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/brand-id"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/BrandPatch"
+                                }
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            },
+            "delete": {
+                "tags": [
+                    "brands"
+                ],
+                "summary": "Deletes a specific brand",
+                "responses": {
+                    "204": {
+                        "description": "No Content Response."
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/BadRequest"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/Unauthorized"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/Forbidden"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFound"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    }
+                },
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/brand-id"
+                    }
+                ],
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            }
+        },
+        "/v1/brands/{brand-id}/actions/activate": {
+            "post": {
+                "tags": [
+                    "brands"
+                ],
+                "summary": "Activates a brand",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Brand"
+                                }
+                            }
+                        },
+                        "description": "Responds with the brand that was activated."
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/BadRequest"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/Unauthorized"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/Forbidden"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFound"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    }
+                },
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/brand-id"
+                    }
+                ],
+                "description": "Sets the brand active and de-activates any other active brand. If the brand is already active, no action is taken.",
+                "requestBody": {
+                    "content": {
+                        "application/json": {}
+                    }
+                },
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            }
+        },
+        "/v1/brands/{brand-id}/actions/deactivate": {
+            "post": {
+                "tags": [
+                    "brands"
+                ],
+                "summary": "Deactivates a brand",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Brand"
+                                }
+                            }
+                        },
+                        "description": "Responds with the brand that was deactivated."
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/BadRequest"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/Unauthorized"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/Forbidden"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFound"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    }
+                },
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/brand-id"
+                    }
+                ],
+                "description": "Sets the brand so it is no longer active. If the brand is already inactive, no action is taken.",
+                "requestBody": {
+                    "content": {
+                        "application/json": {}
+                    }
+                },
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            }
+        },
+        "/v1/brands/{brand-id}/files/{brand-file-id}": {
+            "get": {
+                "tags": [
+                    "brands"
+                ],
+                "summary": "Downloads the brand file",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "type": "string",
+                                    "format": "binary"
+                                }
+                            }
+                        },
+                        "description": "OK Response"
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/BadRequest"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/Unauthorized"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/Forbidden"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFound"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    }
+                },
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/brand-id"
+                    },
+                    {
+                        "$ref": "#/components/parameters/brand-file-id"
+                    }
+                ],
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "1",
+                    "limit": 1000
+                }
+            },
+            "post": {
+                "tags": [
+                    "brands"
+                ],
+                "summary": "Creates a brand file",
+                "responses": {
+                    "201": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BrandFile"
+                                }
+                            }
+                        },
+                        "description": "Created Response"
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/BadRequest"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/Unauthorized"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/Forbidden"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFound"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    }
+                },
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/brand-id"
+                    },
+                    {
+                        "$ref": "#/components/parameters/brand-file-id"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "file": {
+                                        "type": "string",
+                                        "format": "binary",
+                                        "description": "The path and name of a file to upload."
+                                    }
+                                },
+                                "additionalProperties": false
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            },
+            "put": {
+                "tags": [
+                    "brands"
+                ],
+                "summary": "Updates existing file",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BrandFile"
+                                }
+                            }
+                        },
+                        "description": "OK Response - file updated"
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/BadRequest"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/Unauthorized"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/Forbidden"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFound"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    }
+                },
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/brand-id"
+                    },
+                    {
+                        "$ref": "#/components/parameters/brand-file-id"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "file": {
+                                        "type": "string",
+                                        "format": "binary",
+                                        "description": "A file to upload."
+                                    }
+                                },
+                                "additionalProperties": false
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            },
+            "delete": {
+                "tags": [
+                    "brands"
+                ],
+                "summary": "Deletes a specific brand file",
+                "responses": {
+                    "204": {
+                        "description": "No content response."
+                    },
+                    "400": {
+                        "$ref": "#/components/responses/BadRequest"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/Unauthorized"
+                    },
+                    "403": {
+                        "$ref": "#/components/responses/Forbidden"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/NotFound"
+                    },
+                    "500": {
+                        "$ref": "#/components/responses/InternalServerError"
+                    }
+                },
+                "parameters": [
+                    {
+                        "$ref": "#/components/parameters/brand-id"
+                    },
+                    {
+                        "$ref": "#/components/parameters/brand-file-id"
+                    }
+                ],
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            }
+        },
+        "/v1/brands/active": {
+            "get": {
+                "tags": [
+                    "brands"
+                ],
+                "summary": "Retrieves the current active brand",
+                "responses": {
+                    "200": {
+                        "description": "No active brand, returns an empty response."
+                    },
+                    "301": {
+                        "description": "Successful redirect."
+                    }
+                },
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "1",
+                    "limit": 1000
+                }
+            }
+        },
         "/v1/collections": {
             "get": {
                 "tags": [
@@ -20146,7 +20899,7 @@
                                 }
                             }
                         },
-                        "description": "unauthorized"
+                        "description": "Unauthorized (invalid token)."
                     },
                     "403": {
                         "content": {
@@ -20278,7 +21031,7 @@
                             "type": "string",
                             "format": "bearer"
                         },
-                        "description": "Authentication token. In the case of a user token, the tenant admin role is required."
+                        "description": "Authentication token."
                     }
                 ],
                 "x-qlik-stability": "stable",
@@ -26829,6 +27582,77 @@
                 }
             }
         },
+        "/v1/users/actions/invite": {
+            "post": {
+                "tags": [
+                    "invite"
+                ],
+                "summary": "Invite one or more users by email address.",
+                "responses": {
+                    "207": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/InviteDataResponse"
+                                }
+                            }
+                        },
+                        "description": "Request completed successfully. See Results for ResultDetail on each invite."
+                    },
+                    "403": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorsResponse"
+                                }
+                            }
+                        },
+                        "description": "Request denied."
+                    },
+                    "default": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorsResponse"
+                                }
+                            }
+                        },
+                        "description": "Request error. See Errors."
+                    }
+                },
+                "operationId": "inviteUsers",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/InviteRequest"
+                            },
+                            "example": {
+                                "invitees": [
+                                    {
+                                        "name": "Elvis Presley",
+                                        "email": "foo@qlik.com",
+                                        "resend": true,
+                                        "language": "en"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "x-qlik-stability": "stable",
+                "x-qlik-visibility": "public",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            }
+        },
         "/v1/users/me": {
             "get": {
                 "tags": [
@@ -28235,7 +29059,8 @@
                     "type": "array",
                     "items": {
                         "$ref": "#/components/schemas/ApiKey"
-                    }
+                    },
+                    "description": "Properties of API keys in a given tenant."
                 },
                 "links": {
                     "type": "object",
@@ -28252,7 +29077,8 @@
                         "self": {
                             "$ref": "#/components/schemas/Link"
                         }
-                    }
+                    },
+                    "description": "Navigation links to page results."
                 }
             }
         },
@@ -28290,7 +29116,8 @@
                         "expired",
                         "revoked"
                     ],
-                    "type": "string"
+                    "type": "string",
+                    "description": "The status of the API key."
                 },
                 "created": {
                     "type": "string",
@@ -28502,7 +29329,8 @@
                         "expired",
                         "revoked"
                     ],
-                    "type": "string"
+                    "type": "string",
+                    "description": "The status of the API key."
                 },
                 "created": {
                     "type": "string",
@@ -30559,6 +31387,22 @@
                 }
             }
         },
+        "NxAppObject": {
+            "type": "object",
+            "properties": {
+                "attributes": {
+                    "$ref": "#/components/schemas/NxObjectAttributes"
+                },
+                "privileges": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "Application object privileges.\nHints to the client what actions the user is allowed to perform.\nCould be any of:\n* read\n* create\n* update\n* delete\n* publish\n* exportdata\n* change_owner"
+                }
+            },
+            "description": "Application object attributes and user privileges."
+        },
         "NxAttributes": {
             "type": "object",
             "properties": {
@@ -30573,13 +31417,15 @@
                 "owner": {
                     "type": "string",
                     "x-qlik-pii": true,
-                    "description": "The owner of the app."
+                    "description": "Deprecated. Use user api to fetch user metadata.",
+                    "x-qlik-deprecated": true
                 },
                 "custom": {
                     "$ref": "#/components/schemas/JsonObject"
                 },
                 "ownerId": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "Identifier of the app owner."
                 },
                 "encrypted": {
                     "type": "boolean",
@@ -30635,6 +31481,62 @@
                 }
             },
             "description": "App attributes. This structure can also contain extra user-defined attributes."
+        },
+        "NxObjectAttributes": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "The object Id."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Object name."
+                },
+                "ownerId": {
+                    "type": "string",
+                    "description": "The object owner's Id."
+                },
+                "approved": {
+                    "type": "boolean",
+                    "description": "True if the object is approved."
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "The date and time when the object was created."
+                },
+                "updatedAt": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "The date and time when the object was modified."
+                },
+                "objectType": {
+                    "type": "string",
+                    "description": "The type of the object."
+                },
+                "description": {
+                    "type": "string",
+                    "description": "Object description."
+                },
+                "genericType": {
+                    "enum": [
+                        "genericObject",
+                        "genericBookmark",
+                        "genericMeasure",
+                        "genericDimension",
+                        "genericVariable"
+                    ],
+                    "type": "string",
+                    "description": "The generic type of the object.\n\nOne of:\n* genericObject\n* genericBookmark\n* genericMeasure\n* genericDimension\n* genericVariable"
+                },
+                "publishedAt": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "The date and time when the object was published, empty if unpublished."
+                }
+            },
+            "description": "App object attributes. This structure can also contain extra user-defined attributes."
         },
         "NxPatch": {
             "type": "object",
@@ -36572,6 +37474,9 @@
                         ]
                     }
                 },
+                "errorMessage": {
+                    "type": "string"
+                },
                 "followupSentence": {
                     "type": "string"
                 },
@@ -36980,6 +37885,12 @@
                     "type": "array",
                     "items": {
                         "$ref": "#/components/schemas/QlikApp"
+                    }
+                },
+                "errors": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/components/schemas/Error"
                     }
                 },
                 "nluInfo": {
@@ -37515,6 +38426,281 @@
                 },
                 "self": {
                     "$ref": "#/components/schemas/Self"
+                }
+            }
+        },
+        "Brand": {
+            "type": "object",
+            "required": [
+                "id",
+                "name",
+                "description",
+                "files"
+            ],
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "readOnly": true
+                },
+                "name": {
+                    "type": "string"
+                },
+                "files": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/components/schemas/BrandFile"
+                    },
+                    "description": "Collection of resources that make up the brand."
+                },
+                "active": {
+                    "type": "boolean",
+                    "readOnly": true
+                },
+                "createdAt": {
+                    "type": "string",
+                    "format": "date-time",
+                    "readOnly": true,
+                    "description": "The UTC timestamp when the brand was created."
+                },
+                "createdBy": {
+                    "type": "string",
+                    "readOnly": true,
+                    "description": "ID of a user that created the brand."
+                },
+                "updatedAt": {
+                    "type": "string",
+                    "format": "date-time",
+                    "readOnly": true,
+                    "description": "The UTC timestamp when the brand was last updated."
+                },
+                "updatedBy": {
+                    "type": "string",
+                    "readOnly": true,
+                    "description": "ID of a user that last updated the brand."
+                },
+                "description": {
+                    "type": "string"
+                }
+            },
+            "description": "A brand is a collection of assets for applying custom branding. Only a single brand can be active in a tenant."
+        },
+        "BrandFile": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "enum": [
+                        "logo",
+                        "favIcon",
+                        "styles"
+                    ],
+                    "type": "string"
+                },
+                "eTag": {
+                    "type": "string"
+                },
+                "path": {
+                    "type": "string"
+                },
+                "contentType": {
+                    "type": "string"
+                }
+            },
+            "description": "Represents one of the assets used as part of the brand. These include logos, favicons, and some styles."
+        },
+        "BrandPatch": {
+            "type": "object",
+            "required": [
+                "op",
+                "path"
+            ],
+            "properties": {
+                "op": {
+                    "enum": [
+                        "add",
+                        "remove",
+                        "replace"
+                    ],
+                    "type": "string",
+                    "description": "The operation to be performed."
+                },
+                "path": {
+                    "enum": [
+                        "/name",
+                        "/description"
+                    ],
+                    "type": "string",
+                    "example": "/description",
+                    "description": "The path for the given resource field to patch."
+                },
+                "value": {
+                    "type": "string",
+                    "description": "The value to be used for this operation."
+                }
+            },
+            "description": "A JSON Patch document as defined in https://datatracker.ietf.org/doc/html/rfc6902."
+        },
+        "BrandsList": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/components/schemas/Brand"
+                    }
+                },
+                "links": {
+                    "properties": {
+                        "next": {
+                            "$ref": "#/components/schemas/Link"
+                        },
+                        "prev": {
+                            "$ref": "#/components/schemas/Link"
+                        },
+                        "self": {
+                            "$ref": "#/components/schemas/Link"
+                        }
+                    }
+                }
+            },
+            "description": "A collection of brands."
+        },
+        "ErrorResponse400": {
+            "type": "object",
+            "properties": {
+                "errors": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "code": {
+                                "type": "string",
+                                "example": "HTTP-400"
+                            },
+                            "title": {
+                                "type": "string",
+                                "example": "Bad request"
+                            },
+                            "detail": {
+                                "type": "string",
+                                "example": "The request is incorrect."
+                            }
+                        }
+                    }
+                },
+                "traceId": {
+                    "type": "string"
+                }
+            }
+        },
+        "ErrorResponse401": {
+            "type": "object",
+            "properties": {
+                "errors": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "code": {
+                                "type": "string",
+                                "example": "HTTP-401"
+                            },
+                            "title": {
+                                "type": "string",
+                                "example": "Unauthorized"
+                            },
+                            "detail": {
+                                "type": "string",
+                                "example": "The user is not authorized to access the service."
+                            }
+                        }
+                    }
+                },
+                "traceId": {
+                    "type": "string"
+                }
+            }
+        },
+        "ErrorResponse403": {
+            "type": "object",
+            "properties": {
+                "errors": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "code": {
+                                "type": "string",
+                                "example": "HTTP-403"
+                            },
+                            "title": {
+                                "type": "string",
+                                "example": "Forbidden"
+                            },
+                            "detail": {
+                                "type": "string",
+                                "example": "You don't have sufficient permissions to access this resource."
+                            }
+                        }
+                    }
+                },
+                "traceId": {
+                    "type": "string"
+                }
+            }
+        },
+        "ErrorResponse404": {
+            "type": "object",
+            "properties": {
+                "errors": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "code": {
+                                "type": "string",
+                                "example": "HTTP-404"
+                            },
+                            "title": {
+                                "type": "string",
+                                "example": "Not found"
+                            },
+                            "detail": {
+                                "type": "string",
+                                "example": "The resource was not found."
+                            }
+                        }
+                    }
+                },
+                "traceId": {
+                    "type": "string"
+                }
+            }
+        },
+        "ErrorResponse500": {
+            "type": "object",
+            "properties": {
+                "errors": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "code": {
+                                "type": "string",
+                                "example": "HTTP-500"
+                            },
+                            "title": {
+                                "type": "string",
+                                "example": "Internal Server Error"
+                            },
+                            "detail": {
+                                "type": "string",
+                                "example": "Something went wrong in the server."
+                            }
+                        }
+                    }
+                },
+                "traceId": {
+                    "type": "string"
                 }
             }
         },
@@ -43570,7 +44756,7 @@
                         "group"
                     ],
                     "type": "string",
-                    "description": "The type of space such as shared, managed, and so on."
+                    "description": "The type of assignment such as user or group"
                 },
                 "roles": {
                     "type": "array",
@@ -44477,6 +45663,133 @@
             },
             "description": "An array of group references."
         },
+        "ErrorItem": {
+            "type": "object",
+            "required": [
+                "code",
+                "title"
+            ],
+            "properties": {
+                "code": {
+                    "type": "integer",
+                    "description": "Error code"
+                },
+                "title": {
+                    "type": "string",
+                    "description": "Summary of the problem"
+                },
+                "detail": {
+                    "type": "string",
+                    "description": "A human-readable explanation specific to this occurrence of the problem (if applicable)"
+                }
+            },
+            "description": "Error object."
+        },
+        "ErrorsResponse": {
+            "type": "object",
+            "properties": {
+                "errors": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/components/schemas/ErrorItem"
+                    }
+                }
+            }
+        },
+        "InviteDataResponse": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "oneOf": [
+                            {
+                                "$ref": "#/components/schemas/ResultItem"
+                            },
+                            {
+                                "$ref": "#/components/schemas/InviteErrorItem"
+                            }
+                        ]
+                    }
+                }
+            },
+            "description": "Data list - ResultItem or ErrorItem for each InviteeItem."
+        },
+        "InviteErrorItem": {
+            "type": "object",
+            "allOf": [
+                {
+                    "$ref": "#/components/schemas/ErrorItem"
+                },
+                {
+                    "type": "object",
+                    "required": [
+                        "status",
+                        "email"
+                    ],
+                    "properties": {
+                        "code": {
+                            "type": "string",
+                            "description": "Error code - | HTTP Status code | 1001 - Active User | 1002 - Disabled User | 1003 - Default External Dependency Error |"
+                        },
+                        "email": {
+                            "type": "string",
+                            "x-qlik-pii": true,
+                            "description": "Invitee email"
+                        },
+                        "status": {
+                            "enum": [
+                                "error"
+                            ],
+                            "type": "string",
+                            "description": "Result status = \"error\""
+                        }
+                    }
+                }
+            ],
+            "description": "Error object."
+        },
+        "InviteItem": {
+            "type": "object",
+            "required": [
+                "email"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "x-qlik-pii": true,
+                    "description": "Optional display name for this invitee. Example - \"Elvis Presley\"."
+                },
+                "email": {
+                    "type": "string",
+                    "x-qlik-pii": true,
+                    "description": "Email address for this invitee. Example - \"foo@qlik.com\"."
+                },
+                "resend": {
+                    "type": "boolean",
+                    "description": "Flag - when true invite message is sent to inactive or invited users. Typically used to force email resend to users who are not yet active."
+                },
+                "language": {
+                    "type": "string",
+                    "description": "Optional ISO 639-1 2 letter code for invite language. Defaults to 'en' when missing or not found."
+                }
+            }
+        },
+        "InviteRequest": {
+            "type": "object",
+            "properties": {
+                "invitees": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/components/schemas/InviteItem"
+                    },
+                    "required": [
+                        "items"
+                    ],
+                    "description": "List of invitees who should receive an invite email."
+                }
+            }
+        },
         "JSONPatch": {
             "type": "object",
             "required": [
@@ -44589,6 +45902,42 @@
             },
             "description": "An object containing the metadata for the user configuration.",
             "x-qlik-deprecated": true
+        },
+        "ResultItem": {
+            "type": "object",
+            "required": [
+                "status",
+                "email",
+                "subject",
+                "userId"
+            ],
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "x-qlik-pii": true,
+                    "description": "Email specified for this invitee"
+                },
+                "status": {
+                    "enum": [
+                        "ok",
+                        "exists"
+                    ],
+                    "type": "string",
+                    "description": "Result status = {\"ok\" (new user; email sent) | \"exists\" (existing user; no email sent)}"
+                },
+                "userId": {
+                    "type": "string",
+                    "format": "uid",
+                    "description": "UserId for this invitee"
+                },
+                "subject": {
+                    "type": "string",
+                    "format": "uuid",
+                    "x-qlik-pii": true,
+                    "description": "IdP generated UUID for this invitee"
+                }
+            },
+            "description": "Invitee result item"
         },
         "User": {
             "type": "object",
