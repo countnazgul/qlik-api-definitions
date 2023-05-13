@@ -703,7 +703,7 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "Web Integration ID associated with origin whitelist used to validate returnto value"
+                        "description": "Web Integration ID associated with origin whitelist used to validate returnto value."
                     },
                     {
                         "in": "query",
@@ -865,7 +865,7 @@
                         },
                         "explode": false,
                         "required": true,
-                        "description": "The scope of access that is being requested"
+                        "description": "The scope of access that is being requested."
                     },
                     {
                         "in": "query",
@@ -874,7 +874,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "State parameter to roundtrip to client in final redirect"
+                        "description": "State parameter to roundtrip to client in final redirect."
                     },
                     {
                         "in": "query",
@@ -892,7 +892,7 @@
                             "type": "number"
                         },
                         "required": false,
-                        "description": "Specifies the allowable elapsed time in seconds since the last time the End-User was actively authenticated by the OpenID Provider"
+                        "description": "Specifies the allowable elapsed time in seconds since the last time the End-User was actively authenticated by the OpenID Provider."
                     },
                     {
                         "in": "query",
@@ -901,7 +901,7 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "Specifies whether the Authorization Server prompts the End-User for re-authentication and consent"
+                        "description": "Specifies whether the Authorization Server prompts the End-User for re-authentication and consent."
                     }
                 ],
                 "x-qlik-dependencies": [
@@ -956,7 +956,8 @@
                             }
                         }
                     },
-                    "required": true
+                    "required": true,
+                    "description": "Properties of the token that the client wants to revoke."
                 },
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
@@ -995,7 +996,7 @@
                                 }
                             }
                         },
-                        "description": "Invalid request parameters"
+                        "description": "Invalid request parameters."
                     },
                     "401": {
                         "content": {
@@ -1015,7 +1016,7 @@
                                 }
                             }
                         },
-                        "description": "Forbidden because user is disabled or has reached the maximum number of tokens"
+                        "description": "Forbidden because user is disabled or has reached the maximum number of tokens."
                     }
                 },
                 "requestBody": {
@@ -1088,7 +1089,7 @@
                                 }
                             }
                         },
-                        "description": "The page result"
+                        "description": "The page result."
                     },
                     "400": {
                         "content": {
@@ -1098,7 +1099,7 @@
                                 }
                             }
                         },
-                        "description": "Invalid request parameter for querying tokens"
+                        "description": "Invalid request parameter for querying tokens."
                     },
                     "401": {
                         "content": {
@@ -1121,7 +1122,7 @@
                             "minimum": 1
                         },
                         "required": false,
-                        "description": "The maximum number of tokens to return"
+                        "description": "The maximum number of tokens to return."
                     },
                     {
                         "in": "query",
@@ -1130,7 +1131,7 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "The target page"
+                        "description": "The target page."
                     },
                     {
                         "in": "query",
@@ -1143,7 +1144,7 @@
                             "default": "userId"
                         },
                         "required": false,
-                        "description": "The field to sort by"
+                        "description": "The field to sort by."
                     },
                     {
                         "in": "query",
@@ -1152,7 +1153,7 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "The ID of the user to limit results to"
+                        "description": "The ID of the user to limit results to."
                     }
                 ],
                 "x-qlik-stability": "stable",
@@ -1178,7 +1179,7 @@
                         "content": {
                             "application/json": {}
                         },
-                        "description": "Token deleted successfully"
+                        "description": "Token deleted successfully."
                     },
                     "401": {
                         "content": {
@@ -1210,7 +1211,7 @@
                             "format": "uid"
                         },
                         "required": true,
-                        "description": "The ID of the token to revoke"
+                        "description": "The ID of the token to revoke."
                     }
                 ],
                 "x-qlik-visibility": "public",
@@ -13171,6 +13172,9 @@
         },
         "/v1/audits": {
             "get": {
+                "tags": [
+                    "audits"
+                ],
                 "summary": "Finds and returns the persisted audit events for the given tenant.",
                 "responses": {
                     "200": {
@@ -13192,6 +13196,16 @@
                             }
                         },
                         "description": "Bad Request"
+                    },
+                    "401": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Not authorized."
                     },
                     "500": {
                         "content": {
@@ -13307,6 +13321,9 @@
         },
         "/v1/audits/{id}": {
             "get": {
+                "tags": [
+                    "audits"
+                ],
                 "summary": "Finds and returns the persisted audit events for the given tenant.",
                 "responses": {
                     "200": {
@@ -13328,6 +13345,16 @@
                             }
                         },
                         "description": "Bad Request"
+                    },
+                    "401": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Not authorized."
                     },
                     "404": {
                         "content": {
@@ -13385,6 +13412,9 @@
         },
         "/v1/audits/archive": {
             "get": {
+                "tags": [
+                    "audits"
+                ],
                 "summary": "Retrieves audit events from long term storage.",
                 "responses": {
                     "200": {
@@ -13406,6 +13436,16 @@
                             }
                         },
                         "description": "Bad Request"
+                    },
+                    "401": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Not authorized."
                     },
                     "404": {
                         "content": {
@@ -13468,6 +13508,9 @@
         },
         "/v1/audits/settings": {
             "get": {
+                "tags": [
+                    "audits"
+                ],
                 "summary": "Returns the server configuration options.",
                 "responses": {
                     "200": {
@@ -13479,6 +13522,16 @@
                             }
                         },
                         "description": "OK Response"
+                    },
+                    "401": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Not authorized."
                     },
                     "500": {
                         "content": {
@@ -13518,6 +13571,9 @@
         },
         "/v1/audits/sources": {
             "get": {
+                "tags": [
+                    "audits"
+                ],
                 "summary": "Finds and returns the distinct list of unique event sources.",
                 "responses": {
                     "200": {
@@ -13529,6 +13585,16 @@
                             }
                         },
                         "description": "OK Response"
+                    },
+                    "401": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Not authorized."
                     },
                     "500": {
                         "content": {
@@ -13567,6 +13633,9 @@
         },
         "/v1/audits/types": {
             "get": {
+                "tags": [
+                    "audits"
+                ],
                 "summary": "Finds and returns the distinct list of unique event types.",
                 "responses": {
                     "200": {
@@ -13578,6 +13647,16 @@
                             }
                         },
                         "description": "OK Response"
+                    },
+                    "401": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponse"
+                                }
+                            }
+                        },
+                        "description": "Not authorized."
                     },
                     "500": {
                         "content": {
@@ -29016,35 +29095,35 @@
             "properties": {
                 "issuer": {
                     "type": "string",
-                    "description": "The issuer of the tokens"
+                    "description": "The issuer of the tokens."
                 },
                 "jwks_uri": {
                     "type": "string",
                     "format": "uri",
-                    "description": "The public keys endpoint"
+                    "description": "The public keys endpoint."
                 },
                 "token_endpoint": {
                     "type": "string",
                     "format": "uri",
-                    "description": "The token endpoint"
+                    "description": "The token endpoint."
                 },
                 "revocation_endpoint": {
                     "type": "string",
                     "format": "uri",
-                    "description": "The token endpoint"
+                    "description": "The token endpoint."
                 },
                 "grant_types_supported": {
                     "type": "array",
-                    "description": "List of supported grant types"
+                    "description": "List of supported grant types."
                 },
                 "authorization_endpoint": {
                     "type": "string",
                     "format": "uri",
-                    "description": "The authorization endpoint"
+                    "description": "The authorization endpoint."
                 },
                 "response_types_supported": {
                     "type": "array",
-                    "description": "List of supported authorization code responses"
+                    "description": "List of supported authorization code responses."
                 }
             }
         },
@@ -29430,17 +29509,18 @@
                 },
                 "deviceType": {
                     "type": "string",
-                    "description": "The type of the user device the authorization token is generated for (Tablet, Phone etc.)"
+                    "description": "The type of the user device the authorization token is generated for (Tablet, Phone etc.)."
                 },
                 "grant_type": {
                     "enum": [
                         "authorization_code"
                     ],
-                    "type": "string"
+                    "type": "string",
+                    "description": "The grant type used to exchange an authorization code for an access token."
                 },
                 "description": {
                     "type": "string",
-                    "description": "A user-friendly description to distinguish between multiple tokens"
+                    "description": "A user-friendly description to distinguish between multiple tokens."
                 },
                 "redirect_uri": {
                     "type": "string",
@@ -29474,7 +29554,8 @@
                     "enum": [
                         "client_credentials"
                     ],
-                    "type": "string"
+                    "type": "string",
+                    "description": "The grant type used to obtain an access token outside of the context of a user."
                 }
             }
         },
@@ -29488,7 +29569,8 @@
                     "enum": [
                         "refresh_token"
                     ],
-                    "type": "string"
+                    "type": "string",
+                    "description": "The grant type used to exchange a refresh token for an access token."
                 },
                 "client_secret": {
                     "type": "string",
@@ -29508,7 +29590,7 @@
             "properties": {
                 "token": {
                     "type": "string",
-                    "description": "The token to revoke"
+                    "description": "The token to revoke."
                 },
                 "token_type_hint": {
                     "enum": [
@@ -29516,7 +29598,7 @@
                         "refresh_token"
                     ],
                     "type": "string",
-                    "description": "Type of the provided token"
+                    "description": "Type of the provided token."
                 }
             }
         },
@@ -29570,33 +29652,33 @@
                 "scope": {
                     "type": "string",
                     "example": "offline_access user_default",
-                    "description": "The scope of access that is being granted, delimited by space"
+                    "description": "The scope of access that is being granted, delimited by space."
                 },
                 "auth_time": {
                     "type": "number",
                     "example": 1628524367,
-                    "description": "Unix time of when the last authentication occurred"
+                    "description": "Unix time of when the last authentication occurred."
                 },
                 "expires_at": {
                     "type": "string",
                     "format": "date-time",
                     "example": "1970-01-18T13:17:10.931Z",
-                    "description": "The date and time in ISO format for when the access token will expire"
+                    "description": "The date and time in ISO format for when the access token will expire."
                 },
                 "token_type": {
                     "enum": [
                         "bearer"
                     ],
                     "type": "string",
-                    "description": "The type of the token issued"
+                    "description": "The type of the token issued."
                 },
                 "access_token": {
                     "type": "string",
-                    "description": "The access token granted"
+                    "description": "The access token granted."
                 },
                 "refresh_token": {
                     "type": "string",
-                    "description": "Refresh token to be used to obtain a new access token without user intervention"
+                    "description": "Refresh token to be used to obtain a new access token without user intervention."
                 },
                 "issued_token_type": {
                     "enum": [
@@ -29615,7 +29697,7 @@
                 "href": {
                     "type": "string",
                     "format": "uri",
-                    "description": "The URL for the link"
+                    "description": "The URL for the link."
                 }
             }
         },
@@ -29628,28 +29710,28 @@
             "properties": {
                 "id": {
                     "type": "string",
-                    "description": "The token ID"
+                    "description": "The token ID."
                 },
                 "userId": {
                     "type": "string",
-                    "description": "The ID of the owning user"
+                    "description": "The ID of the owning user."
                 },
                 "lastUsed": {
                     "type": "string",
                     "format": "date-time",
-                    "description": "The last time the token was used"
+                    "description": "The last time the token was used."
                 },
                 "tenantId": {
                     "type": "string",
-                    "description": "The ID of the owning tenant"
+                    "description": "The ID of the owning tenant."
                 },
                 "deviceType": {
                     "type": "string",
-                    "description": "The type of the user device the authorization token is generated for (Tablet, Phone etc.)"
+                    "description": "The type of the user device the authorization token is generated for (Tablet, Phone etc.)."
                 },
                 "description": {
                     "type": "string",
-                    "description": "The description of the token"
+                    "description": "The description of the token."
                 }
             }
         },
@@ -36828,6 +36910,16 @@
                         "maxItems": 100
                     }
                 },
+                "selectionType": {
+                    "$ref": "#/components/schemas/SenseSelectionType"
+                },
+                "reloadTimestamp": {
+                    "type": "string",
+                    "format": "RFC3339",
+                    "description": "Reload time constraint. If reloadTimestamp is more recent than the one returned by Engine, the request will not go forward and an error is returned.",
+                    "x-qlik-stability": "experimental",
+                    "x-qlik-visibility": "private"
+                },
                 "templateLocation": {
                     "$ref": "#/components/schemas/TemplateLocation"
                 },
@@ -36844,6 +36936,15 @@
                         },
                         "maxItems": 125
                     }
+                },
+                "temporaryBookmark": {
+                    "$ref": "#/components/schemas/SenseTemporaryBookmark"
+                },
+                "persistentBookmark": {
+                    "$ref": "#/components/schemas/SensePersistentBookmark"
+                },
+                "temporaryBookmarkV2": {
+                    "$ref": "#/components/schemas/SenseTemporaryBookmarkV2"
                 },
                 "selectionsByStateDef": {
                     "type": "string",
