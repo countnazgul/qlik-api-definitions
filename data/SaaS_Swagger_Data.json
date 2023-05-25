@@ -1241,7 +1241,7 @@
                                 }
                             }
                         },
-                        "description": "An array of web integration objects"
+                        "description": "An array of web integration objects."
                     },
                     "default": {
                         "content": {
@@ -1307,7 +1307,7 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "The tenantId to filter by."
+                        "description": "The tenant ID to filter by."
                     }
                 ],
                 "description": "Retrieves web integrations matching the query.",
@@ -1425,7 +1425,8 @@
                             }
                         }
                     },
-                    "required": true
+                    "required": true,
+                    "description": "Properties that the user wants to set for the web integration."
                 },
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
@@ -1485,7 +1486,7 @@
                             "format": "uid"
                         },
                         "required": true,
-                        "description": "The ID of the web integration to retrieve"
+                        "description": "The ID of the web integration to retrieve."
                     }
                 ],
                 "description": "Retrieves a single web integration by ID.",
@@ -1601,7 +1602,8 @@
                             }
                         }
                     },
-                    "required": true
+                    "required": true,
+                    "description": "Properties that the user wants to update for the web integration."
                 },
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
@@ -29783,12 +29785,12 @@
                     "type": "string",
                     "format": "date-time",
                     "readOnly": true,
-                    "description": "The time the web integration was created at."
+                    "description": "The time the web integration was created."
                 },
                 "tenantId": {
                     "type": "string",
                     "format": "uid",
-                    "description": "The tenant that the web integration belongs too."
+                    "description": "The tenant that the web integration belongs to."
                 },
                 "createdBy": {
                     "type": "string",
@@ -29800,7 +29802,7 @@
                     "type": "string",
                     "format": "date-time",
                     "readOnly": true,
-                    "description": "The time the web integration was last updated at."
+                    "description": "The time the web integration was last updated."
                 },
                 "validOrigins": {
                     "type": "array",
@@ -29808,7 +29810,7 @@
                         "type": "string",
                         "format": "uri"
                     },
-                    "description": "The origins who are allowed to make requests to the tenant."
+                    "description": "The origins that are allowed to make requests to the tenant."
                 }
             },
             "description": "A web integration object."
@@ -29883,10 +29885,10 @@
                                 "href": {
                                     "type": "string",
                                     "example": "http://mytenant.region.domain/api/v1/web-integrations/id",
-                                    "description": "URL to the current page of records"
+                                    "description": "URL to the current page of records."
                                 }
                             },
-                            "description": "Link information for current page"
+                            "description": "Link information for current page."
                         }
                     },
                     "description": "Pagination links"
@@ -29895,12 +29897,12 @@
                     "type": "string",
                     "format": "date-time",
                     "readOnly": true,
-                    "description": "The time the web integration was created at."
+                    "description": "The time the web integration was created."
                 },
                 "tenantId": {
                     "type": "string",
                     "format": "uid",
-                    "description": "The tenant that the web integration belongs too."
+                    "description": "The tenant that the web integration belongs to."
                 },
                 "createdBy": {
                     "type": "string",
@@ -29912,7 +29914,7 @@
                     "type": "string",
                     "format": "date-time",
                     "readOnly": true,
-                    "description": "The time the web integration was last updated at."
+                    "description": "The time the web integration was last updated."
                 },
                 "validOrigins": {
                     "type": "array",
@@ -29923,7 +29925,7 @@
                     "example": [
                         "https://thirdPartyApp.com"
                     ],
-                    "description": "The origins who are allowed to make requests to the tenant."
+                    "description": "The origins that are allowed to make requests to the tenant."
                 }
             },
             "description": "The creation of a web integration response."
@@ -29947,7 +29949,7 @@
                     "example": [
                         "https://thirdPartyApp.com"
                     ],
-                    "description": "The origins who are allowed to make requests to the tenant."
+                    "description": "The origins that are allowed to make requests to the tenant."
                 }
             }
         },
@@ -29957,7 +29959,8 @@
                     "type": "array",
                     "items": {
                         "$ref": "#/components/schemas/WebIntegration"
-                    }
+                    },
+                    "description": "Properties of web integrations in a given tenant."
                 },
                 "links": {
                     "type": "object",
@@ -29973,10 +29976,10 @@
                             "properties": {
                                 "href": {
                                     "type": "string",
-                                    "description": "URL to the next page of records"
+                                    "description": "URL to the next page of records."
                                 }
                             },
-                            "description": "Link information for next page"
+                            "description": "Link information for next page."
                         },
                         "prev": {
                             "type": "object",
@@ -29986,10 +29989,10 @@
                             "properties": {
                                 "href": {
                                     "type": "string",
-                                    "description": "URL to the previous page of records"
+                                    "description": "URL to the previous page of records."
                                 }
                             },
-                            "description": "Link information for previous page"
+                            "description": "Link information for previous page."
                         },
                         "self": {
                             "type": "object",
@@ -29999,10 +30002,10 @@
                             "properties": {
                                 "href": {
                                     "type": "string",
-                                    "description": "URL to the current page of records"
+                                    "description": "URL to the current page of records."
                                 }
                             },
-                            "description": "Link information for current page"
+                            "description": "Link information for current page."
                         }
                     },
                     "description": "Pagination links"
