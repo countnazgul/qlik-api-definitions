@@ -3015,7 +3015,7 @@
                     {
                         "in": "query",
                         "name": "limit",
-                        "description": "Maximum number of records to return from this request. Default: 100",
+                        "description": "Maximum number of records to return from this request.",
                         "schema": {
                             "type": "string"
                         }
@@ -3632,7 +3632,8 @@
                 "responses": {
                     "200": {
                         "content": {
-                            "application/xml": {
+                            "application/xml": {},
+                            "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/comparison"
                                 }
@@ -3784,7 +3785,8 @@
                 "responses": {
                     "200": {
                         "content": {
-                            "application/xml": {
+                            "application/xml": {},
+                            "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/evaluation"
                                 }
@@ -24685,7 +24687,7 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "Action on space. For example, \"?action=publish\"."
+                        "description": "Action on space. Supports only \"?action=publish\"."
                     },
                     {
                         "in": "query",
@@ -26405,6 +26407,165 @@
                         "application/json": {
                             "schema": {
                                 "$ref": "#/components/schemas/TenantCreationRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "x-qlik-stability": "stable",
+                "x-qlik-visibility": "public",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            }
+        },
+        "/v1/tenants/{tenantId}": {
+            "get": {
+                "tags": [
+                    "tenants"
+                ],
+                "summary": "Retrieve a single tenant by id.",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Tenant"
+                                }
+                            }
+                        },
+                        "description": "Tenant found."
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Tenant not found."
+                    },
+                    "default": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Unexpected error"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "tenantId",
+                        "schema": {
+                            "type": "string",
+                            "format": "uid",
+                            "example": "TiQ8GPVr8qI714Lp5ChAAFFaU24MJy69"
+                        },
+                        "required": true,
+                        "description": "The id of the tenant to retrieve"
+                    }
+                ],
+                "operationId": "getTenantById",
+                "x-qlik-stability": "stable",
+                "x-qlik-visibility": "public",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "1",
+                    "limit": 1000
+                }
+            },
+            "patch": {
+                "tags": [
+                    "tenants"
+                ],
+                "summary": "Update a tenant by id.",
+                "responses": {
+                    "204": {
+                        "description": "Tenant updated successfully"
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/TenantPatchErrors"
+                                }
+                            }
+                        },
+                        "description": "Invalid PATCH request"
+                    },
+                    "403": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Tenant not found."
+                    },
+                    "429": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Request has been rate limited."
+                    },
+                    "default": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Unexpected error"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "tenantId",
+                        "schema": {
+                            "type": "string",
+                            "format": "uid",
+                            "example": "TiQ8GPVr8qI714Lp5ChAAFFaU24MJy69"
+                        },
+                        "required": true,
+                        "description": "The id of the tenant to update"
+                    }
+                ],
+                "operationId": "updateTenantById",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TenantPatchSchema"
                             }
                         }
                     },
@@ -31423,16 +31584,22 @@
                 }
             }
         },
+        "NavigationLink": {
+            "type": "object",
+            "properties": {
+                "href": {
+                    "type": "string"
+                }
+            }
+        },
         "NavigationLinks": {
             "type": "object",
             "properties": {
                 "next": {
-                    "type": "string",
-                    "description": "Link to next result page"
+                    "$ref": "#/components/schemas/NavigationLink"
                 },
                 "prev": {
-                    "type": "string",
-                    "description": "Link to previous result page"
+                    "$ref": "#/components/schemas/NavigationLink"
                 }
             }
         },
@@ -34306,7 +34473,8 @@
                 "id": {
                     "type": "string",
                     "format": "uuid",
-                    "example": "ee6a390c-5d33-11e8-9c2d-fa7ae01bbebc"
+                    "example": "ee6a390c-5d33-11e8-9c2d-fa7ae01bbebc",
+                    "description": "The unique identifier of the connection."
                 },
                 "name": {
                     "type": "string",
@@ -34434,17 +34602,20 @@
             "properties": {
                 "code": {
                     "type": "string",
-                    "example": "HTTP-400"
+                    "example": "HTTP-400",
+                    "description": "The error code."
                 },
                 "title": {
                     "type": "string",
                     "example": "Cursor not formatted correctly.",
-                    "nullable": true
+                    "nullable": true,
+                    "description": "Summary of the problem."
                 },
                 "detail": {
                     "type": "string",
                     "example": "Invalid encoding of cursor.",
-                    "nullable": true
+                    "nullable": true,
+                    "description": "A human-readable explanation specific to this occurrence of the problem."
                 }
             },
             "additionalProperties": false
@@ -34460,7 +34631,8 @@
                     "type": "array",
                     "items": {
                         "$ref": "#/components/schemas/ConnectionsResponse"
-                    }
+                    },
+                    "description": "Properties of the connections to the tenant spaces."
                 },
                 "links": {
                     "$ref": "#/components/schemas/LinksResponse"
@@ -34487,7 +34659,8 @@
                     "type": "array",
                     "items": {
                         "$ref": "#/components/schemas/DataFileUploadResponse"
-                    }
+                    },
+                    "description": "Properties of the uploaded data files."
                 },
                 "links": {
                     "$ref": "#/components/schemas/LinksResponse"
@@ -34515,7 +34688,8 @@
                 "href": {
                     "type": "string",
                     "format": "uri",
-                    "nullable": true
+                    "nullable": true,
+                    "description": "The URL for the link."
                 }
             },
             "additionalProperties": false
@@ -34567,26 +34741,31 @@
                 "id": {
                     "type": "string",
                     "format": "uuid",
-                    "example": "ee6a390c-5d33-11e8-9c2d-fa7ae01bbebc"
+                    "example": "ee6a390c-5d33-11e8-9c2d-fa7ae01bbebc",
+                    "description": "The unique identifier of the file."
                 },
                 "code": {
                     "type": "string",
-                    "example": "HTTP-400"
+                    "example": "HTTP-400",
+                    "description": "The error code."
                 },
                 "title": {
                     "type": "string",
                     "example": "Cursor not formatted correctly.",
-                    "nullable": true
+                    "nullable": true,
+                    "description": "Summary of the problem."
                 },
                 "detail": {
                     "type": "string",
                     "example": "Invalid encoding of cursor.",
-                    "nullable": true
+                    "nullable": true,
+                    "description": "A human-readable explanation specific to this occurrence of the problem."
                 },
                 "status": {
                     "type": "integer",
                     "format": "int32",
-                    "example": 400
+                    "example": 400,
+                    "description": "The HTTP status code."
                 }
             },
             "additionalProperties": false
@@ -39204,6 +39383,7 @@
                 },
                 "resourceAttributes": {
                     "type": "object",
+                    "x-qlik-pii": true,
                     "additionalProperties": true
                 },
                 "resourceReloadStatus": {
@@ -40927,6 +41107,10 @@
                 "datasourceID": {
                     "type": "string",
                     "description": "ID of the datasource associated with this connection"
+                },
+                "qriInRequest": {
+                    "type": "string",
+                    "description": "QRI string of the connection. The string will be persisted to mongo when the request is originated from trusted client (i.e. dcaas) to avoid invalid QRi string."
                 },
                 "qArchitecture": {
                     "enum": [
@@ -44493,9 +44677,16 @@
                     "description": "The log describing the result of the reload request."
                 },
                 "type": {
+                    "enum": [
+                        "hub",
+                        "chronos",
+                        "external",
+                        "automations",
+                        "data-refresh"
+                    ],
                     "type": "string",
                     "example": "hub",
-                    "description": "The type of reload event (hub, chronos or external)."
+                    "description": "What initiated the reload: hub = one-time reload manually triggered in hub, chronos = time based scheduled reload triggered by chronos, external = reload triggered via external API request, automations = reload triggered in automation, data-refresh = reload triggered by refresh of data."
                 },
                 "appId": {
                     "type": "string",
@@ -44938,17 +45129,19 @@
                 "operator",
                 "producer",
                 "publisher",
-                "basicconsumer"
+                "basicconsumer",
+                "codeveloper"
             ],
             "type": "string",
-            "description": "Supported roles by space type:\n- Shared: consumer, dataconsumer, facilitator, producer\n- Managed: consumer, contributor, dataconsumer, facilitator, publisher, basicconsumer\n- Data: consumer, dataconsumer, facilitator, operator, producer, publisher\n"
+            "description": "Supported roles by space type:\n- Shared: codeveloper, consumer, dataconsumer, facilitator, producer\n- Managed: consumer, contributor, dataconsumer, facilitator, publisher, basicconsumer\n- Data: consumer, dataconsumer, facilitator, operator, producer, publisher\n"
         },
         "SharedSpaceRoleType": {
             "enum": [
                 "facilitator",
                 "consumer",
                 "producer",
-                "dataconsumer"
+                "dataconsumer",
+                "codeveloper"
             ],
             "type": "string",
             "description": "The supported roles for Shared spaces."
@@ -45286,12 +45479,14 @@
                 "id": {
                     "type": "string",
                     "format": "uid",
+                    "example": "TiQ8GPVr8qI714Lp5ChAAFFaU24MJy69",
                     "readOnly": true,
                     "description": "The unique tenant identifier.",
                     "x-qlik-visibility": "private"
                 },
                 "name": {
                     "type": "string",
+                    "example": "QlikTenant",
                     "description": "The display name of the tenant."
                 },
                 "links": {
@@ -45309,6 +45504,7 @@
                             "properties": {
                                 "href": {
                                     "type": "string",
+                                    "example": "http://foo.example/api/v1/tenants/TiQ8GPVr8qI714Lp5ChAAFFaU24MJy69",
                                     "description": "URL that defines the resource."
                                 }
                             },
@@ -45334,9 +45530,15 @@
                 "hostnames": {
                     "type": "array",
                     "items": {
-                        "type": "string"
+                        "type": "string",
+                        "example": "foo.example"
                     },
                     "description": "List of case insensitive hostnames that are mapped to the tenant. The first record maps to the display name and the subsequent entries are aliases."
+                },
+                "datacenter": {
+                    "type": "string",
+                    "example": "us-east-1",
+                    "description": "The datacenter where the tenant is located."
                 },
                 "lastUpdated": {
                     "type": "string",
@@ -45346,6 +45548,7 @@
                 },
                 "createdByUser": {
                     "type": "string",
+                    "example": "TiQ8GPVr8qI714Lp5ChAAFFaU24MJy7A",
                     "description": "The user ID who created the tenant."
                 },
                 "enableAnalyticCreation": {
@@ -45386,12 +45589,117 @@
                     "description": "The hostnames of the created tenant. Can only create with a single entry that lines up wtih the tenant name.",
                     "x-qlik-visibility": "private"
                 },
+                "datacenter": {
+                    "type": "string",
+                    "example": "us-east-1",
+                    "description": "The datacenter where the tenant is located."
+                },
                 "licenseKey": {
                     "type": "string",
                     "example": 1234567890,
                     "description": "The signed license key of the license that will be associated with the created tenant."
                 }
             }
+        },
+        "TenantPatchErrors": {
+            "properties": {
+                "errors": {
+                    "type": "array",
+                    "items": {
+                        "required": [
+                            "code",
+                            "title"
+                        ],
+                        "properties": {
+                            "code": {
+                                "type": "string",
+                                "example": "TENANTS-10",
+                                "description": "The error code."
+                            },
+                            "meta": {
+                                "type": "object",
+                                "properties": {
+                                    "code": {
+                                        "type": "string",
+                                        "example": "TENANTS-11",
+                                        "description": "The error code."
+                                    },
+                                    "title": {
+                                        "type": "string",
+                                        "example": "The specified hostname is unavailable for use",
+                                        "description": "Summary of the problem."
+                                    }
+                                },
+                                "description": "Additional properties relating to the error."
+                            },
+                            "title": {
+                                "type": "string",
+                                "example": "Invalid PATCH request",
+                                "description": "Summary of the problem."
+                            },
+                            "source": {
+                                "type": "object",
+                                "properties": {
+                                    "pointer": {
+                                        "type": "string",
+                                        "example": "/hostnames/1",
+                                        "description": "A JSON Pointer to the property that caused the error."
+                                    },
+                                    "parameter": {
+                                        "type": "string",
+                                        "description": "The URI query parameter that caused the error."
+                                    }
+                                },
+                                "description": "References to the source of the error."
+                            }
+                        },
+                        "description": "An error object."
+                    }
+                }
+            }
+        },
+        "TenantPatchSchema": {
+            "type": "array",
+            "items": {
+                "required": [
+                    "op",
+                    "path",
+                    "value"
+                ],
+                "properties": {
+                    "op": {
+                        "enum": [
+                            "replace"
+                        ],
+                        "type": "string",
+                        "description": "The operation to be performed."
+                    },
+                    "path": {
+                        "enum": [
+                            "/name",
+                            "/hostnames/1",
+                            "/autoAssignCreateSharedSpacesRoleToProfessionals",
+                            "/autoAssignPrivateAnalyticsContentCreatorRoleToProfessionals",
+                            "/autoAssignDataServicesContributorRoleToProfessionals",
+                            "/enableAnalyticCreation"
+                        ],
+                        "type": "string",
+                        "description": "A JSON Pointer value that references a location within the target document where the operation is performed."
+                    },
+                    "value": {
+                        "type": "string",
+                        "description": "The value to be used for this operation."
+                    }
+                },
+                "description": "A JSON Patch document as defined in http://tools.ietf.org/html/rfc6902."
+            },
+            "example": [
+                {
+                    "op": "replace",
+                    "path": "/name",
+                    "value": "Corp"
+                }
+            ]
         },
         "DeleteConfigNotFoundError": {
             "type": "object",
