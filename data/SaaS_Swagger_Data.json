@@ -14488,8 +14488,20 @@
                         "schema": {
                             "type": "string"
                         },
+                        "examples": {
+                            "json": {
+                                "value": {
+                                    "sort": "-createdAt",
+                                    "limit": 10,
+                                    "resourceType": "app"
+                                }
+                            },
+                            "deep object": {
+                                "value": "includeItems[limit]=10&includeItems[sort]=-createdAt&IncludeItems[resourceType]=app"
+                            }
+                        },
                         "required": false,
-                        "description": "JSON-formatted string for querying collection items."
+                        "description": "Includes the list of items belonging to the collections. Supported parameters are 'limit', 'sort' and 'resourceType'. Supported formats are json formatted string or deep object style using square brackets."
                     },
                     {
                         "in": "query",
@@ -18395,6 +18407,123 @@
                     "tier": "1",
                     "limit": 1000
                 }
+            },
+            "post": {
+                "tags": [
+                    "groups"
+                ],
+                "summary": "Create group.",
+                "responses": {
+                    "201": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Group"
+                                }
+                            }
+                        },
+                        "description": "Group was successfully created."
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Invalid request was made."
+                    },
+                    "401": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Unauthorized to create a group."
+                    },
+                    "403": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Forbidden from creating a group."
+                    },
+                    "409": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Name conflict when attempting to create a new group."
+                    },
+                    "413": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Payload was too large."
+                    },
+                    "429": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "retry-after": {
+                                "schema": {
+                                    "type": "integer",
+                                    "default": 1
+                                },
+                                "description": "The amount of seconds to wait before retrying the request."
+                            }
+                        },
+                        "description": "Request has been rate limited."
+                    },
+                    "500": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Internal server error."
+                    }
+                },
+                "description": "Creates a group. The maximum number of groups a tenant can have is 10,000.",
+                "operationId": "postGroups",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/GroupPostSchema"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
             }
         },
         "/v1/groups/{groupId}": {
@@ -18486,6 +18615,117 @@
                 "x-qlik-tier": {
                     "tier": "1",
                     "limit": 1000
+                }
+            },
+            "patch": {
+                "tags": [
+                    "groups"
+                ],
+                "summary": "Update group by id",
+                "responses": {
+                    "204": {
+                        "description": "Group updated successfully."
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Invalid request for patching a user."
+                    },
+                    "401": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Unauthorized to patch a group."
+                    },
+                    "403": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Forbidden from patching a group."
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Group was not found."
+                    },
+                    "429": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "retry-after": {
+                                "schema": {
+                                    "type": "integer",
+                                    "default": 1
+                                },
+                                "description": "The amount of seconds to wait before retrying the request."
+                            }
+                        },
+                        "description": "Request has been rate limited."
+                    },
+                    "500": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Internal server error."
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "groupId",
+                        "schema": {
+                            "type": "string",
+                            "format": "uid"
+                        },
+                        "required": true,
+                        "description": "The ID of the group to update."
+                    }
+                ],
+                "operationId": "updateGroupById",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/GroupPatchSchema"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
                 }
             },
             "delete": {
@@ -26583,6 +26823,29 @@
                 }
             }
         },
+        "/v1/tenants/me": {
+            "get": {
+                "tags": [
+                    "tenants"
+                ],
+                "summary": "Redirects to current tenant.",
+                "responses": {
+                    "302": {
+                        "description": "Successful redirect."
+                    }
+                },
+                "x-qlik-stability": "stable",
+                "x-qlik-visibility": "public",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "1",
+                    "limit": 1000
+                }
+            }
+        },
         "/v1/transports/email-config": {
             "get": {
                 "tags": [
@@ -26757,7 +27020,7 @@
                 "responses": {
                     "200": {
                         "content": {
-                            "application-json": {
+                            "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/smtpResult"
                                 }
@@ -29776,8 +30039,10 @@
             "properties": {
                 "purpose": {
                     "enum": [
-                        "websocket"
+                        "websocket",
+                        "webresource"
                     ],
+                    "type": "string",
                     "description": "The intended use for the requested token."
                 },
                 "client_id": {
@@ -31603,6 +31868,29 @@
                 }
             }
         },
+        "numberFormat": {
+            "type": "object",
+            "properties": {
+                "qDec": {
+                    "type": "string"
+                },
+                "qFmt": {
+                    "type": "string"
+                },
+                "qThou": {
+                    "type": "string"
+                },
+                "qType": {
+                    "type": "string"
+                },
+                "qnDec": {
+                    "type": "number"
+                },
+                "qUseThou": {
+                    "type": "number"
+                }
+            }
+        },
         "NxApp": {
             "type": "object",
             "properties": {
@@ -32025,6 +32313,14 @@
             "properties": {
                 "libId": {
                     "type": "string"
+                },
+                "overrides": {
+                    "type": "object",
+                    "properties": {
+                        "format": {
+                            "$ref": "#/components/schemas/numberFormat"
+                        }
+                    }
                 }
             },
             "description": "structure for providing master items in recommendation request, user can retrieve the libId of master item using insight-analyses/model endpoint\n"
@@ -41599,6 +41895,27 @@
             ],
             "description": "An array of role reference identifiers."
         },
+        "AssignedRolesRefNames": {
+            "type": "array",
+            "items": {
+                "required": [
+                    "name"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "TenantAdmin",
+                        "description": "The name of the role"
+                    }
+                }
+            },
+            "example": [
+                {
+                    "name": "TenantAdmin"
+                }
+            ],
+            "description": "An array of role reference names."
+        },
         "Filter": {
             "properties": {
                 "filter": {
@@ -41758,6 +42075,105 @@
                 }
             },
             "description": "represents a Group document"
+        },
+        "GroupPatch": {
+            "type": "object",
+            "required": [
+                "op",
+                "path",
+                "value"
+            ],
+            "properties": {
+                "op": {
+                    "enum": [
+                        "replace"
+                    ],
+                    "type": "string",
+                    "example": "replace",
+                    "description": "The operation to be performed. Currently \"replace\" is the only supported operation."
+                },
+                "path": {
+                    "enum": [
+                        "assignedRoles"
+                    ],
+                    "type": "string",
+                    "example": "assignedRoles",
+                    "description": "Attribute name of a field of the Groups entity."
+                },
+                "value": {
+                    "oneOf": [
+                        {
+                            "$ref": "#/components/schemas/AssignedRolesRefIDs"
+                        },
+                        {
+                            "$ref": "#/components/schemas/AssignedRolesRefNames"
+                        }
+                    ],
+                    "description": "The roles to assign to the groups (limit of 100 roles per group)."
+                }
+            },
+            "description": "A JSON Patch document."
+        },
+        "GroupPatchSchema": {
+            "type": "array",
+            "items": {
+                "$ref": "#/components/schemas/GroupPatch"
+            },
+            "example": [
+                {
+                    "op": "replace",
+                    "path": "/assignedRoles",
+                    "value": [
+                        {
+                            "name": "TenantAdmin"
+                        },
+                        {
+                            "name": "AnalyticsAdmin"
+                        }
+                    ]
+                }
+            ],
+            "description": "An array of JSON Patches for a group."
+        },
+        "GroupPostSchema": {
+            "type": "object",
+            "example": {
+                "name": "Development",
+                "status": "active",
+                "assignedRoles": [
+                    {
+                        "name": "Developer"
+                    }
+                ]
+            },
+            "required": [
+                "name"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "example": "Development",
+                    "description": "The name of the group."
+                },
+                "status": {
+                    "enum": [
+                        "active"
+                    ],
+                    "type": "string",
+                    "example": "active",
+                    "description": "The status of the created group within the tenant. Defaults to active if empty."
+                },
+                "assignedRoles": {
+                    "oneOf": [
+                        {
+                            "$ref": "#/components/schemas/AssignedRolesRefIDs"
+                        },
+                        {
+                            "$ref": "#/components/schemas/AssignedRolesRefNames"
+                        }
+                    ]
+                }
+            }
         },
         "Groups": {
             "type": "object",
@@ -45698,6 +46114,31 @@
                     "op": "replace",
                     "path": "/name",
                     "value": "Corp"
+                },
+                {
+                    "op": "replace",
+                    "path": "/hostnames/1",
+                    "value": "example-tenant.us.qlikcloud.com"
+                },
+                {
+                    "op": "replace",
+                    "path": "/autoAssignCreateSharedSpacesRoleToProfessionals",
+                    "value": true
+                },
+                {
+                    "op": "replace",
+                    "path": "/autoAssignPrivateAnalyticsContentCreatorRoleToProfessionals",
+                    "value": false
+                },
+                {
+                    "op": "replace",
+                    "path": "/autoAssignDataServicesContributorRoleToProfessionals",
+                    "value": true
+                },
+                {
+                    "op": "replace",
+                    "path": "/enableAnalyticCreation",
+                    "value": false
                 }
             ]
         },
