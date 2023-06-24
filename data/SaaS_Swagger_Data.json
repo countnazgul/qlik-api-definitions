@@ -14571,14 +14571,22 @@
                         "in": "query",
                         "name": "type",
                         "schema": {
-                            "enum": [
-                                "public",
-                                "private"
-                            ],
-                            "type": "string"
+                            "$ref": "#/components/schemas/CollectionTypes"
                         },
                         "required": false,
-                        "description": "The case-sensitive string used to search for a collection by type."
+                        "description": "The case-sensitive string used to filter for a collection by type."
+                    },
+                    {
+                        "in": "query",
+                        "name": "types",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/CollectionTypes"
+                            }
+                        },
+                        "required": false,
+                        "description": "A commaseparated case-sensitive string used to filter by multiple types."
                     }
                 ],
                 "description": "Finds and returns the collections that the user can access. This endpoint does not return the user's favorites collection.\n",
@@ -20453,11 +20461,7 @@
                         "in": "query",
                         "name": "type",
                         "schema": {
-                            "enum": [
-                                "public",
-                                "private"
-                            ],
-                            "type": "string"
+                            "$ref": "#/components/schemas/CollectionTypes"
                         },
                         "required": false,
                         "description": "The case-sensitive string used to search for a collection by type."
@@ -38604,6 +38608,7 @@
                 },
                 "author": {
                     "type": "string",
+                    "x-qlik-pii": true,
                     "description": "Author of the extension."
                 },
                 "bundle": {
@@ -38751,6 +38756,7 @@
                 },
                 "author": {
                     "type": "string",
+                    "x-qlik-pii": true,
                     "description": "Author of the theme."
                 },
                 "userId": {
@@ -39329,12 +39335,12 @@
                 },
                 "type": {
                     "enum": [
-                        "public",
                         "private",
-                        "favorite"
+                        "public",
+                        "favorite",
+                        "publicgoverned"
                     ],
-                    "type": "string",
-                    "description": "The collection's type."
+                    "type": "string"
                 },
                 "links": {
                     "$ref": "#/components/schemas/collectionLinksResponseBody"
@@ -39396,12 +39402,7 @@
                     "minLength": 1
                 },
                 "type": {
-                    "enum": [
-                        "public",
-                        "private"
-                    ],
-                    "type": "string",
-                    "description": "The collection's type."
+                    "$ref": "#/components/schemas/CollectionTypes"
                 },
                 "description": {
                     "type": "string"
@@ -39471,6 +39472,14 @@
                     "type": "string"
                 }
             }
+        },
+        "CollectionTypes": {
+            "enum": [
+                "private",
+                "public",
+                "publicgoverned"
+            ],
+            "type": "string"
         },
         "ErrorResponseBody": {
             "type": "object",
@@ -46688,6 +46697,9 @@
                         },
                         {
                             "$ref": "#/components/schemas/AssignedRolesRefIDs"
+                        },
+                        {
+                            "$ref": "#/components/schemas/AssignedRolesRefNames"
                         }
                     ],
                     "description": "The value to be used for this operation."
@@ -46711,7 +46723,7 @@
                     "path": "/assignedRoles",
                     "value": [
                         {
-                            "id": "507f191e810c19729de860ea"
+                            "name": "Developer"
                         }
                     ]
                 },
@@ -46970,7 +46982,7 @@
                 "tenantId": "q3VRZ4YMixRaLKEPhkZWM-XMIDN7cO8f",
                 "assignedRoles": [
                     {
-                        "id": "507f191e810c19729de860ea"
+                        "name": "Developer"
                     }
                 ]
             },
@@ -47032,7 +47044,15 @@
                     "description": "The tenant that the user will belong too."
                 },
                 "assignedRoles": {
-                    "$ref": "#/components/schemas/AssignedRolesRefIDs"
+                    "oneOf": [
+                        {
+                            "$ref": "#/components/schemas/AssignedRolesRefIDs"
+                        },
+                        {
+                            "$ref": "#/components/schemas/AssignedRolesRefNames"
+                        }
+                    ],
+                    "description": "The roles to assign to the user."
                 }
             }
         },
