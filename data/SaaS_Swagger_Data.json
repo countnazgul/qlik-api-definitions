@@ -26835,6 +26835,20 @@
                 "summary": "Redirects to current tenant.",
                 "responses": {
                     "302": {
+                        "content": {
+                            "text/html": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "Location": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
                         "description": "Successful redirect."
                     }
                 },
@@ -30200,6 +30214,7 @@
             }
         },
         "WebIntegration": {
+            "type": "object",
             "properties": {
                 "id": {
                     "type": "string",
@@ -30246,6 +30261,7 @@
             "description": "A web integration object."
         },
         "WebIntegrationPatch": {
+            "type": "object",
             "required": [
                 "op",
                 "path",
@@ -30288,6 +30304,7 @@
             ]
         },
         "WebIntegrationPost": {
+            "type": "object",
             "properties": {
                 "id": {
                     "type": "string",
@@ -37113,7 +37130,6 @@
                     "items": {
                         "$ref": "#/components/schemas/ComposableTemplate"
                     },
-                    "maxItems": 50,
                     "minItems": 1,
                     "description": "Composition of senseSheetTemplate and/or senseImageTemplate templates."
                 }
@@ -39326,6 +39342,10 @@
                     "type": "string",
                     "description": "The collection's unique identifier."
                 },
+                "full": {
+                    "type": "boolean",
+                    "description": "States if a collection has reached its items limit or not"
+                },
                 "meta": {
                     "$ref": "#/components/schemas/collectionMetaResponseBody"
                 },
@@ -39361,7 +39381,7 @@
                 "itemCount": {
                     "type": "integer",
                     "format": "int64",
-                    "description": "The number of items that have been added to the collection."
+                    "description": "The number of items that have been added to the collection that the user has access to."
                 },
                 "updatedAt": {
                     "type": "string",
@@ -43658,7 +43678,8 @@
                             "name": {
                                 "type": "string",
                                 "x-qlik-pii": true,
-                                "description": "User name"
+                                "description": "User name",
+                                "x-qlik-deprecated": true
                             },
                             "type": {
                                 "type": "string",
@@ -43670,7 +43691,8 @@
                             },
                             "userId": {
                                 "type": "string",
-                                "description": "User ID"
+                                "description": "User ID",
+                                "x-qlik-deprecated": true
                             },
                             "created": {
                                 "type": "string",
@@ -45896,6 +45918,7 @@
             }
         },
         "Tenant": {
+            "type": "object",
             "required": [
                 "name",
                 "id"
@@ -46027,10 +46050,12 @@
             }
         },
         "TenantPatchErrors": {
+            "type": "object",
             "properties": {
                 "errors": {
                     "type": "array",
                     "items": {
+                        "type": "object",
                         "required": [
                             "code",
                             "title"
@@ -46086,6 +46111,7 @@
         "TenantPatchSchema": {
             "type": "array",
             "items": {
+                "type": "object",
                 "required": [
                     "op",
                     "path",
