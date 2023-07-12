@@ -38730,6 +38730,10 @@
                     "type": "boolean",
                     "description": "Is the error a server-side fault?"
                 },
+                "explain": {
+                    "type": "object",
+                    "description": "Further explanation of the error"
+                },
                 "timeout": {
                     "type": "boolean",
                     "description": "Is the error a timeout?"
@@ -42138,7 +42142,7 @@
                             "$ref": "#/components/schemas/AssignedRolesRefNames"
                         }
                     ],
-                    "description": "The roles to assign to the groups (limit of 100 roles per group)."
+                    "description": "The roles to assign to the group (limit of 100 roles per group)."
                 }
             },
             "description": "A JSON Patch document."
@@ -42182,7 +42186,7 @@
                 "name": {
                     "type": "string",
                     "example": "Development",
-                    "description": "The name of the group."
+                    "description": "The name of the group (maximum length of 256 characters)."
                 },
                 "status": {
                     "enum": [
@@ -42200,7 +42204,8 @@
                         {
                             "$ref": "#/components/schemas/AssignedRolesRefNames"
                         }
-                    ]
+                    ],
+                    "description": "The roles to assign to the group (limit of 100 roles per group)."
                 }
             }
         },
@@ -42397,6 +42402,9 @@
                         },
                         {
                             "$ref": "#/components/schemas/AssignedRolesRefIDs"
+                        },
+                        {
+                            "$ref": "#/components/schemas/AssignedRolesRefNames"
                         }
                     ],
                     "description": "The value to be used for this operation."
@@ -42414,6 +42422,25 @@
                     "op": "replace",
                     "path": "/syncIdpGroups",
                     "value": true
+                },
+                {
+                    "op": "replace",
+                    "path": "/autoCreateGroups",
+                    "value": true
+                },
+                {
+                    "op": "replace",
+                    "path": "/systemGroups/000000000000000000000001/enabled",
+                    "value": false
+                },
+                {
+                    "op": "replace",
+                    "path": "/systemGroups/000000000000000000000001/assignedRoles",
+                    "value": [
+                        {
+                            "name": "Steward"
+                        }
+                    ]
                 }
             ],
             "description": "An array of JSON Patches for the groups settings."
@@ -43175,6 +43202,7 @@
                 },
                 "idpClaims": {
                     "type": "object",
+                    "x-qlik-pii": true,
                     "description": "The claims retrieved from the external IdP."
                 },
                 "oauth2Error": {
@@ -43199,6 +43227,7 @@
                 },
                 "resultantClaims": {
                     "type": "object",
+                    "x-qlik-pii": true,
                     "description": "The resultant claims based on the claims received from the external IdP."
                 }
             }
@@ -44230,6 +44259,11 @@
                             "code": {
                                 "type": "string",
                                 "example": "HTTP-500"
+                            },
+                            "meta": {
+                                "type": "object",
+                                "example": "{\"id\":\"e5c651d5-1198-45a2-be5d-f016cee0baf5\"}",
+                                "description": "The meta contains additional inforomation when requests fail due to internal errors."
                             },
                             "title": {
                                 "type": "string",
