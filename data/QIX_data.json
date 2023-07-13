@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.1678.0",
+        "version": "12.1777.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -1516,7 +1516,7 @@
         },
         {
             "name": "GenericObject.ExportData",
-            "description": "Exports the data of any generic object to an Excel file or a open XML file. If the object contains excluded values, those excluded values are not exported.\nThis API has limited functionality and will not support CSV export from all types of objects. Consider using Excel export instead. Treemap and bar chart are not supported.\n<div class=note>ExportData method is not supported in SaaS Editions of Qlik Sense.</div>\n\n### Default limitations in number of rows and columns\nThe default maximum number of rows and columns in the Excel export file is:\n* 1048566 rows per sheet. For pivot tables: 1048566 column dimensions. 10 rows can be added after the export.\n* 16384 columns per sheet. If the number of columns exceeds the limit, the exported file is truncated and a warning message is sent.\n\n### Default limitation in number of columns\nThe default maximum number of columns in the export file is:\n* 1000 to export to a CSV file\n\nThe exported file is truncated if the number of cells exceeds the limit. A warning message with code 1000 is sent.\n<div class=note>There is an option to export only the possible values ( _qExportState_ is P). </div>\n\n### Default limitation in size\nIf the exported file is larger than the maximum value, then an out-of-memory error with code 13000 is returned.\n\n<div class=note>Exported files are temporary and are available only for a certain time span and only to the user who created them.</div>",
+            "description": "Exports the data of any generic object to an Excel file or a open XML file. If the object contains excluded values, those excluded values are not exported.\nThis API has limited functionality and will not support CSV export from all types of objects. Consider using Excel export instead. Treemap and bar chart are not supported.\n<div class=note>ExportData method is not supported in SaaS Editions of Qlik Sense.</div>\n\n### Default limitations in number of rows and columns\nThe default maximum number of rows and columns in the Excel export file is:\n* 1048566 rows per sheet. For pivot tables: 1048566 column dimensions. 10 rows can be added after the export.\n* 16384 columns per sheet. If the number of columns exceeds the limit, the exported file is truncated and a warning message is sent.\n\n### Default limitation in number of columns\nThe default maximum number of columns in the export file is:\n* 1000 to export to a CSV file\n\n### Default limitations in number of cells\nThe default maximum number of cells in the export file is:\n* 5000000 to export to a CSV file\n\nThe exported file is truncated if the number of cells exceeds the limit. A warning message with code 1000 is sent.\n<div class=note>There is an option to export only the possible values ( _qExportState_ is P). </div>\n\n### Default limitation in size\nIf the exported file is larger than the maximum value, then an out-of-memory error with code 13000 is returned.\n\n<div class=note>Exported files are temporary and are available only for a certain time span and only to the user who created them.</div>",
             "params": [
                 {
                     "name": "qFileType",
@@ -9414,7 +9414,7 @@
                     "$ref": "#/components/errors/GenericErrors"
                 }
             ],
-            "x-qlik-stability": "experimental"
+            "x-qlik-stability": "locked"
         },
         {
             "name": "Doc.ApplyTemporaryBookmark",
@@ -9445,7 +9445,7 @@
                     "$ref": "#/components/errors/GenericErrors"
                 }
             ],
-            "x-qlik-stability": "experimental"
+            "x-qlik-stability": "locked"
         },
         {
             "name": "Doc.GetScriptMeta",
@@ -9528,6 +9528,23 @@
             "x-qlik-access-control": [
                 "update"
             ]
+        },
+        {
+            "name": "Doc.ClearAllSoftPatches",
+            "description": "Clear the soft properties of all generic objects in the app",
+            "params": [],
+            "result": {
+                "name": "Results for Doc.ClearAllSoftPatches",
+                "schema": {
+                    "type": "object"
+                }
+            },
+            "errors": [
+                {
+                    "$ref": "#/components/errors/GenericErrors"
+                }
+            ],
+            "x-qlik-stability": "experimental"
         },
         {
             "name": "Doc.CommitScript",
@@ -10684,7 +10701,15 @@
         {
             "name": "Global.CancelReload",
             "description": "Cancels an ongoing reload. The reload of the app is stopped. The indexation can be canceled and _true_ is still the return value of the reload task.",
-            "params": [],
+            "params": [
+                {
+                    "name": "qReason",
+                    "description": "Reason for why the reload was cancelled. This will be echoed back to the user in the script log.",
+                    "schema": {
+                        "type": "string"
+                    }
+                }
+            ],
             "result": {
                 "name": "Results for Global.CancelReload",
                 "schema": {
@@ -19324,6 +19349,10 @@
                         "type": "boolean",
                         "description": "If set to true, the app is a Session App, i.e. not persistent."
                     },
+                    "qProhibitBinaryLoad": {
+                        "type": "boolean",
+                        "description": "If set to true, the persisted app cannot be used in a Binary load statement in Qlik load script."
+                    },
                     "qThumbnail": {
                         "type": "object",
                         "description": "App thumbnail.",
@@ -19343,6 +19372,11 @@
                         "items": {
                             "$ref": "#/components/schemas/NxFeature"
                         }
+                    },
+                    "qUsage": {
+                        "type": "string",
+                        "description": "\nOne of:\n* ANALYTICS or ANALYTICS_USAGE\n* DATA_PREPARATION or DATA_PREPARATION_USAGE",
+                        "$ref": "#/components/schemas/UsageEnum"
                     }
                 }
             },
@@ -19451,6 +19485,21 @@
                     }
                 ]
             },
+            "UsageEnum": {
+                "type": "string",
+                "oneOf": [
+                    {
+                        "x-qlik-const": 0,
+                        "title": "ANALYTICS",
+                        "description": "ANALYTICS_USAGE"
+                    },
+                    {
+                        "x-qlik-const": 1,
+                        "title": "DATA_PREPARATION",
+                        "description": "DATA_PREPARATION_USAGE"
+                    }
+                ]
+            },
             "NxAppProperties": {
                 "type": "object",
                 "description": "### Qlik Sense Desktop\nIn Qlik Sense Desktop, this structure can contain dynamic properties.\n\n### Qlik Sense Enterprise\nIn Qlik Sense Enterprise, only a few dynamic properties at the app level are persisted.\nThe persisted dynamic properties are the following:\n* modifiedDate\n* published\n* publishTime\n* privileges\n* description\n* dynamicColor",
@@ -19479,6 +19528,11 @@
                     "qHasSectionAccess": {
                         "type": "boolean",
                         "description": "If true the app has section access configured."
+                    },
+                    "qUsage": {
+                        "type": "string",
+                        "description": "Indicates whether the app is used for Analytics or DataPreparation\n\nOne of:\n* ANALYTICS or ANALYTICS_USAGE\n* DATA_PREPARATION or DATA_PREPARATION_USAGE",
+                        "$ref": "#/components/schemas/UsageEnum"
                     }
                 }
             },
@@ -19730,6 +19784,17 @@
                     "qReloadId": {
                         "type": "string",
                         "description": "Optional reload ID.\nID will be automatically generated if not set."
+                    },
+                    "qSkipStore": {
+                        "type": "boolean",
+                        "description": "Set to true to skip Store statements.\nThe default value is false.",
+                        "default": false
+                    },
+                    "qRowLimit": {
+                        "type": "integer",
+                        "description": "If greater than or equal 0, defines max number of rows loaded from a data source.",
+                        "format": "int64",
+                        "default": -1
                     }
                 }
             },
@@ -21249,8 +21314,7 @@
                         "type": "boolean",
                         "description": "IncludeAllPatches If true all patches will be stored in the temporary bookmark, if false ObjectIdsToPatch will determine what patches to include"
                     }
-                },
-                "x-qlik-stability": "experimental"
+                }
             },
             "AppScriptMeta": {
                 "type": "object",
@@ -21446,6 +21510,11 @@
                     "qIsDirectQueryMode": {
                         "type": "boolean",
                         "description": "Is the app a Direct Query app?"
+                    },
+                    "qUsage": {
+                        "type": "string",
+                        "description": "\nOne of:\n* ANALYTICS or ANALYTICS_USAGE\n* DATA_PREPARATION or DATA_PREPARATION_USAGE",
+                        "$ref": "#/components/schemas/UsageEnum"
                     }
                 }
             },
@@ -23037,7 +23106,7 @@
             },
             "LOCERR_APP_DIRECT_QUERY_WORKLOAD_NOT_SUPPORTED": {
                 "code": 1016,
-                "message": "Unknown error"
+                "message": "Direct Query mode not supported"
             },
             "LOCERR_CONNECTION_ALREADY_EXISTS": {
                 "code": 2000,
