@@ -13890,13 +13890,6 @@
                         "multipart/form-data": {
                             "schema": {
                                 "type": "object",
-                                "example": {
-                                    "logo": "image-file-content",
-                                    "name": "My brand",
-                                    "styles": "json-file-content",
-                                    "favicon": "image-file-content",
-                                    "description": "Some brand description"
-                                },
                                 "required": [
                                     "name"
                                 ],
@@ -13924,6 +13917,24 @@
                                         "type": "string",
                                         "description": "Description of the brand."
                                     }
+                                }
+                            },
+                            "example": {
+                                "logo": "image-file-content",
+                                "name": "My brand",
+                                "styles": "json-file-content",
+                                "favIcon": "image-file-content",
+                                "description": "Some brand description"
+                            },
+                            "encoding": {
+                                "logo": {
+                                    "contentType": "image/png, image/jpeg"
+                                },
+                                "styles": {
+                                    "contentType": "application/json"
+                                },
+                                "favIcon": {
+                                    "contentType": "image/x-icon, image/vnd.microsoft.icon"
                                 }
                             }
                         }
@@ -14304,6 +14315,11 @@
                                     }
                                 },
                                 "additionalProperties": false
+                            },
+                            "encoding": {
+                                "file": {
+                                    "contentType": "image/png, image/jpeg, image/x-icon, image/vnd.microsoft.icon, application/json"
+                                }
                             }
                         }
                     },
@@ -14373,6 +14389,11 @@
                                     }
                                 },
                                 "additionalProperties": false
+                            },
+                            "encoding": {
+                                "file": {
+                                    "contentType": "image/png, image/jpeg, image/x-icon, image/vnd.microsoft.icon, application/json"
+                                }
                             }
                         }
                     },
@@ -14442,6 +14463,13 @@
                 "summary": "Retrieves the current active brand",
                 "responses": {
                     "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/NoActiveBrand"
+                                }
+                            }
+                        },
                         "description": "No active brand, returns an empty response."
                     },
                     "301": {
@@ -27400,6 +27428,15 @@
                     },
                     {
                         "in": "query",
+                        "name": "totalResults",
+                        "schema": {
+                            "type": "boolean"
+                        },
+                        "required": false,
+                        "description": "Whether to return a total match count in the result. Defaults to false. It will trigger an extra DB query to count, reducing the efficiency of the endpoint."
+                    },
+                    {
+                        "in": "query",
                         "name": "email",
                         "schema": {
                             "type": "string",
@@ -27724,6 +27761,15 @@
                         },
                         "required": true,
                         "description": "The user's unique identifier"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "A comma-delimited string of the requested fields per entity. If the 'links' value is omitted, then the entity HATEOAS link will also be omitted."
                     }
                 ],
                 "description": "Returns the requested user.",
@@ -28467,7 +28513,7 @@
                                 "-updatedAt"
                             ],
                             "type": "string",
-                            "default": "-created"
+                            "default": "-createdAt"
                         },
                         "required": false,
                         "description": "The field to sort by, with +/- prefix indicating sort order"
@@ -30780,6 +30826,14 @@
                 "name": {
                     "type": "string",
                     "description": "The name (title) of the application"
+                },
+                "usage": {
+                    "enum": [
+                        "ANALYTICS_USAGE",
+                        "DATA_PREPARATION_USAGE"
+                    ],
+                    "type": "string",
+                    "description": "Indicates whether the app is used for Analytics or DataPreparation\n\nOne of:\n* ANALYTICS or ANALYTICS_USAGE\n* DATA_PREPARATION or DATA_PREPARATION_USAGE"
                 },
                 "locale": {
                     "type": "string",
@@ -38750,6 +38804,10 @@
                     "type": "string",
                     "description": "Keywords for the extension."
                 },
+                "loadpath": {
+                    "type": "string",
+                    "description": "Relative path to the extension's entry file, defaults to `filename` from the qext file."
+                },
                 "supplier": {
                     "type": "string",
                     "description": "Supplier of the extension."
@@ -39396,6 +39454,10 @@
                     "type": "string"
                 }
             }
+        },
+        "NoActiveBrand": {
+            "type": "object",
+            "description": "Empty object inferring lack of active branding."
         },
         "collectionLinksResponseBody": {
             "type": "object",
@@ -42477,7 +42539,6 @@
                     "enum": [
                         "/autoCreateGroups",
                         "/syncIdpGroups",
-                        "/systemGroups/{id}/enabled",
                         "/systemGroups/{id}/assignedRoles"
                     ],
                     "type": "string",
@@ -42515,11 +42576,6 @@
                     "op": "replace",
                     "path": "/autoCreateGroups",
                     "value": true
-                },
-                {
-                    "op": "replace",
-                    "path": "/systemGroups/000000000000000000000001/enabled",
-                    "value": false
                 },
                 {
                     "op": "replace",
@@ -46260,7 +46316,14 @@
                         "description": "A JSON Pointer value that references a location within the target document where the operation is performed."
                     },
                     "value": {
-                        "type": "string",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "boolean"
+                            }
+                        ],
                         "description": "The value to be used for this operation."
                     }
                 },
