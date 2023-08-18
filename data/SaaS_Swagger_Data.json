@@ -20744,7 +20744,7 @@
         "/v1/items/settings": {
             "get": {
                 "tags": [
-                    "itemsSettings"
+                    "items-settings"
                 ],
                 "summary": "Returns tenant specific settings.",
                 "responses": {
@@ -20824,7 +20824,7 @@
             },
             "patch": {
                 "tags": [
-                    "itemsSettings"
+                    "items-settings"
                 ],
                 "summary": "Patches tenant specific settings.",
                 "responses": {
