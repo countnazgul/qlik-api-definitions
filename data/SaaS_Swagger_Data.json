@@ -26926,6 +26926,245 @@
                 }
             }
         },
+        "/v1/tenants/{tenantId}/actions/deactivate": {
+            "post": {
+                "tags": [
+                    "tenants"
+                ],
+                "summary": "Deactivate a tenant",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/TenantDeactivateResponse"
+                                }
+                            }
+                        },
+                        "description": "Tenant deactivated successfully"
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Invalid request"
+                    },
+                    "403": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Tenant Not Found"
+                    },
+                    "412": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Precondition Failed (invalid qlik-confirm-hostname value)"
+                    },
+                    "429": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Request has been rate limited."
+                    },
+                    "default": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Unexpected error"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "qlik-confirm-hostname",
+                        "schema": {
+                            "type": "string",
+                            "format": "hostname",
+                            "example": "unicorn.eu.qlik.com"
+                        },
+                        "required": true,
+                        "description": "A confirmation string that should match the hostname associated with the tenant resource to be deactivated. Example: unicorn.eu.qlik.com"
+                    },
+                    {
+                        "in": "path",
+                        "name": "tenantId",
+                        "schema": {
+                            "type": "string",
+                            "format": "uid",
+                            "example": "TiQ8GPVr8qI714Lp5ChAAFFaU24MJy69"
+                        },
+                        "required": true,
+                        "description": "The id of the tenant to deactivate"
+                    }
+                ],
+                "description": "Deactivates a tenant.",
+                "operationId": "deactivateTenantById",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TenantDeactivateRequest"
+                            }
+                        }
+                    }
+                },
+                "x-qlik-stability": "stable",
+                "x-qlik-visibility": "public",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            }
+        },
+        "/v1/tenants/{tenantId}/actions/reactivate": {
+            "post": {
+                "tags": [
+                    "tenants"
+                ],
+                "summary": "Reactivates a tenant",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        },
+                        "description": "Tenant reactivated successfully"
+                    },
+                    "403": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Forbidden"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Not Found"
+                    },
+                    "412": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Precondition Failed (invalid qlik-confirm-hostname value)"
+                    },
+                    "429": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Request has been rate limited."
+                    },
+                    "default": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Unexpected error"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "qlik-confirm-hostname",
+                        "schema": {
+                            "type": "string",
+                            "example": "unicorn.us.qlikcloud.com"
+                        },
+                        "required": true,
+                        "description": "A confirmation string that should match one of the hostnames of the tenant resource to be reactivated. Example: unicorn.eu.qlik.com"
+                    },
+                    {
+                        "in": "path",
+                        "name": "tenantId",
+                        "schema": {
+                            "type": "string",
+                            "format": "uid",
+                            "example": "TiQ8GPVr8qI714Lp5ChAAFFaU24MJy69"
+                        },
+                        "required": true,
+                        "description": "The id of the tenant to reactivate"
+                    }
+                ],
+                "description": "Reactivates a disabled tenant.",
+                "operationId": "reactivateTenantById",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "x-qlik-stability": "stable",
+                "x-qlik-visibility": "public",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            }
+        },
         "/v1/tenants/me": {
             "get": {
                 "tags": [
@@ -46227,6 +46466,45 @@
                 }
             }
         },
+        "TenantDeactivateRequest": {
+            "type": "object",
+            "properties": {
+                "purgeAfterDays": {
+                    "type": "integer",
+                    "default": 30,
+                    "maximum": 90,
+                    "minimum": 10,
+                    "description": "Sets the number of days to purge the tenant after deactivation. Only available to OEMs."
+                }
+            },
+            "description": "A request to deactivate a tenant."
+        },
+        "TenantDeactivateResponse": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "format": "uid",
+                    "example": "TiQ8GPVr8qI714Lp5ChAAFFaU24MJy69",
+                    "readOnly": true,
+                    "description": "The unique tenant identifier."
+                },
+                "status": {
+                    "enum": [
+                        "disabled"
+                    ],
+                    "type": "string",
+                    "description": "The status of the tenant."
+                },
+                "estimatedPurgeDate": {
+                    "type": "string",
+                    "format": "date-time",
+                    "example": "2023-08-18T00:00:00.000Z",
+                    "description": "The estimated date time of when tenant will be purged."
+                }
+            },
+            "description": "The result of tenant deactivation."
+        },
         "TenantPatchErrors": {
             "type": "object",
             "properties": {
@@ -47388,6 +47666,10 @@
                     "readOnly": true
                 },
                 "resourceType": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "subResourceType": {
                     "type": "string",
                     "format": "string"
                 }
