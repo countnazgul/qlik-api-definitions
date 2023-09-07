@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.1815.0",
+        "version": "12.1823.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -11588,6 +11588,10 @@
                         "title": "LOCERR_APP_DIRECT_QUERY_WORKLOAD_NOT_SUPPORTED"
                     },
                     {
+                        "x-qlik-const": 1017,
+                        "title": "LOCERR_APP_NOT_OPEN"
+                    },
+                    {
                         "x-qlik-const": 2000,
                         "title": "LOCERR_CONNECTION_ALREADY_EXISTS"
                     },
@@ -22076,6 +22080,9 @@
                         "$ref": "#/components/errors/LOCERR_APP_DIRECT_QUERY_WORKLOAD_NOT_SUPPORTED"
                     },
                     {
+                        "$ref": "#/components/errors/LOCERR_APP_NOT_OPEN"
+                    },
+                    {
                         "$ref": "#/components/errors/LOCERR_CONNECTION_ALREADY_EXISTS"
                     },
                     {
@@ -23114,6 +23121,10 @@
             "LOCERR_APP_DIRECT_QUERY_WORKLOAD_NOT_SUPPORTED": {
                 "code": 1016,
                 "message": "Direct Query mode not supported"
+            },
+            "LOCERR_APP_NOT_OPEN": {
+                "code": 1017,
+                "message": "Unknown error"
             },
             "LOCERR_CONNECTION_ALREADY_EXISTS": {
                 "code": 2000,
