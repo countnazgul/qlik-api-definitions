@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.1823.0",
+        "version": "12.1829.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -19383,7 +19383,7 @@
                     },
                     "qUsage": {
                         "type": "string",
-                        "description": "\nOne of:\n* ANALYTICS or ANALYTICS_USAGE\n* DATA_PREPARATION or DATA_PREPARATION_USAGE",
+                        "description": "\nOne of:\n* ANALYTICS\n* DATA_PREPARATION",
                         "$ref": "#/components/schemas/UsageEnum"
                     }
                 }
@@ -19498,13 +19498,11 @@
                 "oneOf": [
                     {
                         "x-qlik-const": 0,
-                        "title": "ANALYTICS",
-                        "description": "ANALYTICS_USAGE"
+                        "title": "ANALYTICS"
                     },
                     {
                         "x-qlik-const": 1,
-                        "title": "DATA_PREPARATION",
-                        "description": "DATA_PREPARATION_USAGE"
+                        "title": "DATA_PREPARATION"
                     }
                 ]
             },
@@ -19539,7 +19537,7 @@
                     },
                     "qUsage": {
                         "type": "string",
-                        "description": "Indicates whether the app is used for Analytics or DataPreparation\n\nOne of:\n* ANALYTICS or ANALYTICS_USAGE\n* DATA_PREPARATION or DATA_PREPARATION_USAGE",
+                        "description": "Indicates whether the app is used for Analytics or DataPreparation\n\nOne of:\n* ANALYTICS\n* DATA_PREPARATION",
                         "$ref": "#/components/schemas/UsageEnum"
                     }
                 }
@@ -21521,7 +21519,7 @@
                     },
                     "qUsage": {
                         "type": "string",
-                        "description": "\nOne of:\n* ANALYTICS or ANALYTICS_USAGE\n* DATA_PREPARATION or DATA_PREPARATION_USAGE",
+                        "description": "\nOne of:\n* ANALYTICS\n* DATA_PREPARATION",
                         "$ref": "#/components/schemas/UsageEnum"
                     }
                 }
