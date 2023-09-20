@@ -3525,7 +3525,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "e1cd5f3d-3ffd-4a2f-bbf7-16294a5776d0",
+                "x-qlik-entity-revision": "c4148842-2067-4014-96d6-afc1e1d57c20",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -3609,7 +3609,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "41621908-bedf-4b2d-9c9a-037cbd5eb81c",
+                "x-qlik-entity-revision": "ac7b1587-10d9-475b-9bae-25b99d0d3148",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -3864,7 +3864,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "a009a9fc-b73f-465c-9997-352cacadfcaa",
+                "x-qlik-entity-revision": "2029a33c-e4e9-4476-9208-cedc2a92d479",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -3931,7 +3931,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "75c42585-6cb0-4395-8845-2bbd2dd02565",
+                "x-qlik-entity-revision": "79d22b52-0b7d-4a99-9d21-f2501ded86f9",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -14851,7 +14851,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "56f0e976-39c3-4dc5-b13d-d879b566aef4",
+                "x-qlik-entity-revision": "03b88109-c3c5-4b08-bd4e-a91687ec2ecb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -14972,7 +14972,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c0766ecf-28ce-4e52-95c6-18323693a807",
+                "x-qlik-entity-revision": "1d86ca3c-b504-4d93-8118-fef4a65cb1bd",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -15081,7 +15081,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b17cfeae-1835-426f-9f98-ef8d792534ac",
+                "x-qlik-entity-revision": "b86bcbf9-45d2-41be-9821-8d3c92c99f1b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -15198,7 +15198,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0ac21bde-2bc1-476f-a09a-5d1e1ae93eba",
+                "x-qlik-entity-revision": "78880c36-fb6c-49de-b080-b71ead088621",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -15505,7 +15505,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "16ebace6-5b1f-4adb-8fd4-da834206805a",
+                "x-qlik-entity-revision": "641a0766-c076-4d49-856d-09c6455a84f1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -15652,7 +15652,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "8226c0c0-bced-4b18-bb07-c8934440cf4e",
+                "x-qlik-entity-revision": "afba1be2-352c-40ec-875c-ab9217446de4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -15770,7 +15770,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "bc47f6b6-443e-48e6-891b-37c17023f79b",
+                "x-qlik-entity-revision": "2c7a4279-60cf-4325-8fce-b347b596b7e1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -18109,7 +18109,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "740db068-73d0-4a57-b951-79c2207968c8",
+                "x-qlik-entity-revision": "4b4b0cc8-5cb7-4677-a075-bc1bdcc21c60",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -18577,7 +18577,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "144e1902-d8fa-4b93-83e8-ba01d0b6da30",
+                "x-qlik-entity-revision": "671859db-cfa3-4b84-a131-3b09432ea3d1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -23281,7 +23281,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "e69a90b1-ba98-4266-bcaf-3584ea725464",
+                "x-qlik-entity-revision": "981bd3a0-f895-4e47-a271-03fdde9a6b75",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -23390,7 +23390,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "40846858-e7e2-43bb-9424-254fe56e2555",
+                "x-qlik-entity-revision": "4a57aa43-c591-494a-9854-8bb5c1eca46d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -23537,7 +23537,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "62603ffb-ca39-441a-919e-ea44a15024c6",
+                "x-qlik-entity-revision": "15cacd77-dd4c-497f-b3d4-af11045c934a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -23819,7 +23819,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0c34f482-a6d7-4713-8050-28047c0ec48a",
+                "x-qlik-entity-revision": "97391cb7-ba81-4d6c-b509-b48cd386b977",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -23983,7 +23983,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "6791bb18-e683-4097-9ed5-298cf4f8b9d3",
+                "x-qlik-entity-revision": "eb0528e8-55fd-438a-a076-5f4c61348d46",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -24284,7 +24284,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f6a0ff5d-9b86-45e5-b2d7-95fded938bbd",
+                "x-qlik-entity-revision": "ac704ced-d842-4338-8048-71ee6012f059",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -34964,7 +34964,8 @@
                         },
                         "dedicated": {
                             "type": "boolean",
-                            "example": false
+                            "example": false,
+                            "deprecated": true
                         },
                         "objectMetrics": {
                             "type": "object",
@@ -43110,7 +43111,8 @@
                 },
                 "name": {
                     "type": "string",
-                    "minLength": 1
+                    "minLength": 1,
+                    "x-qlik-customer-data": true
                 },
                 "type": {
                     "enum": [
@@ -43152,7 +43154,8 @@
                     "description": "The ID of the user who last updated the collection. This property is only populated if the JWT contains a userId."
                 },
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 }
             },
             "description": "A collection."
@@ -43302,7 +43305,8 @@
                     "items": {
                         "$ref": "#/components/schemas/itemTagResponseBody"
                     },
-                    "description": "An array of tags that the item is part of."
+                    "description": "An array of tags that the item is part of.",
+                    "x-qlik-customer-data": true
                 },
                 "actions": {
                     "type": "array",
@@ -43373,7 +43377,8 @@
                 },
                 "name": {
                     "type": "string",
-                    "minLength": 1
+                    "minLength": 1,
+                    "x-qlik-customer-data": true
                 },
                 "links": {
                     "$ref": "#/components/schemas/itemLinksResponseBody"
@@ -43423,7 +43428,8 @@
                     "description": "The case-sensitive string used to search for an item by resourceId. If resourceId is provided, then resourceType must be provided. Provide either the resourceId or resourceLink, but not both."
                 },
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "isFavorited": {
                     "type": "boolean",
@@ -43468,7 +43474,8 @@
                 "resourceAttributes": {
                     "type": "object",
                     "x-qlik-pii": true,
-                    "additionalProperties": true
+                    "additionalProperties": true,
+                    "x-qlik-customer-data": true
                 },
                 "resourceReloadStatus": {
                     "type": "string",
@@ -43481,7 +43488,8 @@
                 },
                 "resourceCustomAttributes": {
                     "type": "object",
-                    "additionalProperties": true
+                    "additionalProperties": true,
+                    "x-qlik-customer-data": true
                 }
             },
             "description": "An item."
@@ -43548,7 +43556,8 @@
                 },
                 "name": {
                     "type": "string",
-                    "description": "The name of the tag/collection."
+                    "description": "The name of the tag/collection.",
+                    "x-qlik-customer-data": true
                 }
             },
             "description": "Holds basic information about a tag or collection."
@@ -45733,12 +45742,12 @@
                             },
                             "path": {
                                 "type": "string",
-                                "example": "Use '/qName' to pacth the field 'qName' on toplevel",
+                                "example": "Use '/qName' to patch the field 'qName' on toplevel, use '/tags/<index_number>' to patch an item in array properties like 'tags'",
                                 "description": "Path to the target field to be patched"
                             },
                             "value": {
                                 "type": "string",
-                                "description": "The value used for the patch, only needed for 'add' or 'replace'. Value type coul dbe either string or integer, should match with the type of the target field"
+                                "description": "The value used for the patch, only needed for 'add' or 'replace'. Value type could be either string or integer, should match with the type of the target field"
                             }
                         }
                     }
@@ -49336,12 +49345,6 @@
                             "created"
                         ],
                         "properties": {
-                            "name": {
-                                "type": "string",
-                                "x-qlik-pii": true,
-                                "description": "User name",
-                                "x-qlik-deprecated": true
-                            },
                             "type": {
                                 "type": "string",
                                 "description": "Allotment type"
