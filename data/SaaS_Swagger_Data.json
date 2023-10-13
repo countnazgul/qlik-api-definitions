@@ -184,7 +184,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "691f0a9d-0ff4-40c8-b0fb-0bfb4a44977e",
+                "x-qlik-entity-revision": "09531419-1656-428f-94ef-45f5139c05a4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -349,7 +349,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "d3e707e1-854b-4d5a-8aee-553441f7dd44",
+                "x-qlik-entity-revision": "df896c2a-6311-4ffe-9a85-a5bf67ac97a3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -438,7 +438,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "4506308e-9816-46ab-9865-886a5eecf1bf",
+                "x-qlik-entity-revision": "bcba9ad3-a0ce-4a0d-a578-2b49de472c42",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -1327,12 +1327,18 @@
                 ],
                 "description": "Retrieves web integrations matching the query.",
                 "operationId": "getWebIntegrations",
+                "x-qlik-dependencies": [
+                    "POST:/accesscontrol/evaluation"
+                ],
+                "x-qlik-guidelines-ignore": [
+                    "must-always-return-json-objects-as-top-level-data-structures"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "a3a9fd52-1781-4b63-98a5-f5bb4689f96d",
+                "x-qlik-entity-revision": "e1221c4f-aa85-4a48-8590-05a132880ddf",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -1444,12 +1450,15 @@
                     "required": true,
                     "description": "Properties that the user wants to set for the web integration."
                 },
+                "x-qlik-dependencies": [
+                    "POST:/accesscontrol/evaluation"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "7e80f746-cc42-4bc4-85da-5bf2a6eaec56",
+                "x-qlik-entity-revision": "caa96517-2789-4785-b96f-35a665e56ae3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -1508,12 +1517,15 @@
                 ],
                 "description": "Retrieves a single web integration by ID.",
                 "operationId": "getWebIntegrationById",
+                "x-qlik-dependencies": [
+                    "POST:/accesscontrol/evaluation"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "47ee67cd-f56e-46af-a2dd-cd32c19d0d61",
+                "x-qlik-entity-revision": "00658353-c434-4998-95f8-f60fd156f6fd",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -1623,12 +1635,15 @@
                     "required": true,
                     "description": "Properties that the user wants to update for the web integration."
                 },
+                "x-qlik-dependencies": [
+                    "POST:/accesscontrol/evaluation"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "57b66f46-5d11-4a01-ab82-e5a24a329c23",
+                "x-qlik-entity-revision": "a8e30cab-13d3-459c-924d-bbfccbcdbcfe",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -1678,12 +1693,15 @@
                 ],
                 "description": "Deletes a single web integration by ID.",
                 "operationId": "deleteWebIntegrationById",
+                "x-qlik-dependencies": [
+                    "POST:/accesscontrol/evaluation"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "b791c312-da44-4de6-b150-7b8e302644d0",
+                "x-qlik-entity-revision": "748ecc14-52da-4e45-96b9-efee7b695d45",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -2754,7 +2772,7 @@
                 "requestBody": {
                     "$ref": "#/components/requestBodies/UpdateOwner"
                 },
-                "description": "Sets owner on an app object.",
+                "description": "Sets owner on an app object.\nThe user must be the owner of the object.",
                 "x-qlik-access-control": [
                     "update"
                 ],
@@ -2764,7 +2782,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "233e5ad1-b450-4d3f-b5eb-134da78f759f",
+                "x-qlik-entity-revision": "c4c3e149-e06e-4384-ba1d-67ad5ce90f33",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -4898,7 +4916,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "4d7df204-4d5c-458c-8f26-fff40dadb294",
+                "x-qlik-entity-revision": "aaeae2c9-92d8-4aa6-abf8-eb8992d7aeeb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -4955,7 +4973,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "06081af8-3d44-4d7e-8dc1-26622049e6d4",
+                "x-qlik-entity-revision": "db7ecc38-68e6-4f5a-beff-715d93c21cd5",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -5018,7 +5036,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "c6a72105-b5af-4246-adec-410bd96ea913",
+                "x-qlik-entity-revision": "d563be4d-5a4e-4da4-9371-5e6cabc4bdf9",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -5090,7 +5108,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "b02d6a5f-e1de-489d-a16b-34026e75ae0a",
+                "x-qlik-entity-revision": "86079f05-0330-4dc0-9ea2-10e0ad20b158",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -5601,7 +5619,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "9a561b60-404f-4464-a0e8-4da930ca9e57",
+                "x-qlik-entity-revision": "b9d57958-8b69-4f6a-918a-5236189f3aed",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -5674,7 +5692,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "88f8e78c-24d4-4d6b-8f60-5734b3d712cf",
+                "x-qlik-entity-revision": "aa7b08a4-54d5-407c-b0bf-455c39c16fbe",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -6946,7 +6964,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "3fc76c31-d434-4b95-94a0-c961725b68e2",
+                "x-qlik-entity-revision": "65095de7-c9e6-4d3d-aad1-1e0226d1872c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -7174,7 +7192,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "297fb080-77aa-4e20-91ef-c8402b331701",
+                "x-qlik-entity-revision": "8a1a5b53-861c-4dd6-ad24-5b575af206ca",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -7308,7 +7326,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "cc44ee4e-9725-4c1e-ba86-c6d8810567b6",
+                "x-qlik-entity-revision": "be2de806-4f48-4729-9d6b-2978c2332b52",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -7428,7 +7446,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "ac5579e9-18f3-4646-946a-708b5170fbc1",
+                "x-qlik-entity-revision": "91505984-1967-4e75-a826-6140267f03e6",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -8674,7 +8692,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "180d24ab-ffd8-46e1-9745-6b4d3fb87859",
+                "x-qlik-entity-revision": "abc73221-4edd-4a16-ae9e-79b0160f2b31",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -8902,7 +8920,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "2d9dacba-abc7-4bc3-ac33-018e1ed8b032",
+                "x-qlik-entity-revision": "0a4b22b1-6a50-4c12-aee5-7adbd5de1dc1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -9036,7 +9054,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "8a356334-d6d6-4f5d-820d-76ab0e8a8b98",
+                "x-qlik-entity-revision": "888a1116-54c9-4cf9-acef-0b48c6c10072",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -9156,7 +9174,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "97e8682d-e88a-4362-b515-bc224257303e",
+                "x-qlik-entity-revision": "a76ef655-aaa5-4fbb-bcb3-0c52975b4ef2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -9336,7 +9354,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "9e07826b-2182-4c2b-88a5-f46f85506770",
+                "x-qlik-entity-revision": "e7bacc8b-82e8-4232-a886-ed3dc1d8596d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -9487,7 +9505,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "1830616d-8f45-4a49-86fa-908356f76c1c",
+                "x-qlik-entity-revision": "255d7b66-cb3a-472a-9058-cb72bd750733",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -9597,7 +9615,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "e0f17509-984a-4877-9023-3c08d2afebab",
+                "x-qlik-entity-revision": "16294615-4623-475e-abce-0be5773180f3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -9825,7 +9843,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "30527865-fe34-4adc-b419-929ef1900739",
+                "x-qlik-entity-revision": "f4a5b6df-5fce-42f1-915a-7a8d7d6b6e89",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -9959,7 +9977,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "ad81330e-5166-4982-a366-28d71e109222",
+                "x-qlik-entity-revision": "9cb18ee4-3201-4c5b-976b-fbb506adb1cc",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -10079,7 +10097,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "865c51fe-ca8d-45af-9208-431aed980475",
+                "x-qlik-entity-revision": "b85c1aa0-0d27-470b-b001-908d104ced17",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -10242,7 +10260,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "943c06c9-7679-4308-892d-da0dbf4e9611",
+                "x-qlik-entity-revision": "09c1f258-b650-46a3-94ef-8a067895a832",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -10524,7 +10542,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "06da3522-53a8-41e5-9477-4979ca564a98",
+                "x-qlik-entity-revision": "0f1baa36-aedc-4d80-96c8-2711e6211a7a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -11153,7 +11171,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "0b987746-2940-41fc-a319-acc530de09e0",
+                "x-qlik-entity-revision": "e8ed80be-7b42-47cf-a92c-b2ee9aa50802",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13464,9 +13482,11 @@
                         "schema": {
                             "type": "integer",
                             "format": "int64",
-                            "default": 10
+                            "default": 10,
+                            "maximum": 100,
+                            "minimum": 1
                         },
-                        "description": "The maximum number of resources to return for a request. The limit must be an integer between 1 and 100 (inclusive)."
+                        "description": "The maximum number of resources to return for a request."
                     },
                     {
                         "in": "query",
@@ -13525,7 +13545,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "59ae624d-c9a5-435c-a514-ab30f71dce1c",
+                "x-qlik-entity-revision": "6f0fca17-58a1-4fc8-bff2-73a2be88007c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -15462,14 +15482,6 @@
                     },
                     {
                         "in": "query",
-                        "name": "shared",
-                        "schema": {
-                            "type": "boolean"
-                        },
-                        "description": "Whether or not to return items in a shared space."
-                    },
-                    {
-                        "in": "query",
                         "name": "sort",
                         "schema": {
                             "enum": [
@@ -15495,6 +15507,15 @@
                         "description": "The space's unique identifier (supports \\'personal\\' as spaceId)."
                     },
                     {
+                        "in": "query",
+                        "name": "shared",
+                        "schema": {
+                            "type": "boolean"
+                        },
+                        "description": "Whether or not to return items in a shared space.",
+                        "x-qlik-deprecated": true
+                    },
+                    {
                         "$ref": "#/components/parameters/noActionParam"
                     }
                 ],
@@ -15505,7 +15526,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "641a0766-c076-4d49-856d-09c6455a84f1",
+                "x-qlik-entity-revision": "7c9e093c-f8f2-4cc0-84cb-7e2fc2529ac5",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -19064,7 +19085,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "4421f09c-2913-4b93-8114-87e0e47e8f55",
+                "x-qlik-entity-revision": "ac9da5d9-0847-4127-a09a-ea1671b502f2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -19136,7 +19157,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b3c5bc34-0e9f-42a8-a67e-9807e8518b95",
+                "x-qlik-entity-revision": "c60bad89-a489-4519-943e-1f9cebe458a2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -19224,7 +19245,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "4e1d5f89-419c-4966-b366-ec54a1a5a7ba",
+                "x-qlik-entity-revision": "9eb71e1c-cb76-4d5e-9398-4eda3034c62d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -19455,7 +19476,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b595824b-0dfc-4003-9706-5eed9d830909",
+                "x-qlik-entity-revision": "87d4b345-ec83-4e0c-89a0-8f52e290e803",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -19539,7 +19560,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/fullGlossary"
+                                    "$ref": "#/components/schemas/exportGlossary"
                                 }
                             }
                         },
@@ -19594,7 +19615,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "90fa24aa-8f3e-493c-9f20-3b5675f35119",
+                "x-qlik-entity-revision": "4d02acf5-db8d-4313-9adf-e3ea020b8f96",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -19722,7 +19743,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b7dbc140-540a-4f63-aa61-bcbe7ee31a0f",
+                "x-qlik-entity-revision": "899120c7-9ca9-4e0e-b0ae-d714c1860451",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -19817,7 +19838,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "2259d199-4eb2-4731-898f-3792c7a076e3",
+                "x-qlik-entity-revision": "47fb75ca-6020-45db-bc09-6c84c7046e6b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -19925,7 +19946,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "060df1d2-488f-4d44-9e1e-98d9db7cb118",
+                "x-qlik-entity-revision": "f6429e8d-f21d-4c64-9d58-4ec96c091169",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -20178,7 +20199,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "6469fd3d-2b37-486d-9d21-2c53dce7e271",
+                "x-qlik-entity-revision": "0472e31b-5ecc-4efb-90dc-b8703e5d717a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -20396,7 +20417,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d0196a7e-d8d2-4e21-a8cd-e4a52cce9925",
+                "x-qlik-entity-revision": "6ba5fd2d-0cf8-4e6f-8db4-801cab836430",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -20491,7 +20512,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "5d51ab1a-fe31-4dc3-87f7-aa3d06739aba",
+                "x-qlik-entity-revision": "e4555cc0-fd70-4af7-bbb5-bdc0d364cfeb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -20590,7 +20611,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "22bcd5e6-b318-45a6-91ce-8e07dea11a25",
+                "x-qlik-entity-revision": "beebfef7-4d4f-43ae-a491-53f1395db57b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -20863,7 +20884,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "ceeb397c-8152-4e3a-8590-6e2add500e80",
+                "x-qlik-entity-revision": "7588809c-c0ab-404f-b75e-deb03c91d17d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -21071,7 +21092,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "6afe2feb-7748-4e28-ac23-f676f7a0213b",
+                "x-qlik-entity-revision": "92284aed-84c2-4c5b-ab68-9f0928a3b260",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -21218,7 +21239,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "729454da-98ed-4701-b211-7bedcf62d59b",
+                "x-qlik-entity-revision": "cd1b34af-918c-4ea4-b738-eec0f503122e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -21343,7 +21364,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f04a0130-4730-4a29-820e-a62ecdc27cf1",
+                "x-qlik-entity-revision": "0337d681-9b93-4382-bec3-463137ea63b3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -21476,7 +21497,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "3e739b0d-f584-47eb-97a2-c5442c1a9d2c",
+                "x-qlik-entity-revision": "6c977001-9cd9-4e17-8a91-293157eca450",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -21573,7 +21594,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "6c0d6b85-c3be-4c2c-82e2-2aeccfbd3fc7",
+                "x-qlik-entity-revision": "af1e3de1-6f79-4ba5-960e-c7306e85bdb9",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -21731,7 +21752,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "9310977f-e983-4374-9a1e-e210b01b9e11",
+                "x-qlik-entity-revision": "3423a22f-6b5d-48de-921d-2fa42673d5d9",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -21851,7 +21872,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0924d376-1bd5-44ca-a5a7-130643aa8d0b",
+                "x-qlik-entity-revision": "7d8a0830-71ed-4502-b991-aa5855a99f49",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -21944,7 +21965,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d4ee6e6f-226a-4986-a2a2-acf688801985",
+                "x-qlik-entity-revision": "0caa9d63-f35c-48fb-8cd8-ed6e36238563",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -22058,7 +22079,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "05042bc6-8502-43ef-80bc-2bd457d98629",
+                "x-qlik-entity-revision": "4915cdb8-50ff-48a1-b6f2-ca60e40fd3e3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -22282,7 +22303,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "be8eaff9-539f-451a-a91f-2a3a8b733d7c",
+                "x-qlik-entity-revision": "b1c84976-fe69-46c0-a8c5-8a36a8fc7190",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -23238,14 +23259,6 @@
                     },
                     {
                         "in": "query",
-                        "name": "shared",
-                        "schema": {
-                            "type": "boolean"
-                        },
-                        "description": "Whether or not to return items in a shared space."
-                    },
-                    {
-                        "in": "query",
                         "name": "sort",
                         "schema": {
                             "enum": [
@@ -23271,6 +23284,15 @@
                         "description": "The space's unique identifier (supports \\'personal\\' as spaceId)."
                     },
                     {
+                        "in": "query",
+                        "name": "shared",
+                        "schema": {
+                            "type": "boolean"
+                        },
+                        "description": "Whether or not to return items in a shared space.",
+                        "x-qlik-deprecated": true
+                    },
+                    {
                         "$ref": "#/components/parameters/noActionParam"
                     }
                 ],
@@ -23281,7 +23303,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "981bd3a0-f895-4e47-a271-03fdde9a6b75",
+                "x-qlik-entity-revision": "1416fbe0-f8ee-48b8-8ddb-af826dcb4fb0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -23976,14 +23998,14 @@
                         "description": "The property of a resource to sort on (default sort is +createdAt). The supported properties are createdAt, updatedAt, and name. A property must be prefixed by + or   - to indicate ascending or descending sort order respectively."
                     }
                 ],
-                "description": "Finds and returns the published items for a given item.\n",
+                "description": "Finds and returns the published items for a given item. This endpoint is particularly useful for finding the published copies of an app or a qvapp when you want to replace the content of a published copy with new information from the source item.\n",
                 "operationId": "items#listPublishedItems",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "eb0528e8-55fd-438a-a076-5f4c61348d46",
+                "x-qlik-entity-revision": "fd11db86-21d6-4ecb-96f4-abf2ecfa75bb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -28950,6 +28972,15 @@
                         },
                         "required": false,
                         "description": "The previous page cursor. Previous links make use of this."
+                    },
+                    {
+                        "in": "query",
+                        "name": "type",
+                        "schema": {
+                            "$ref": "#/components/schemas/AssignmentType"
+                        },
+                        "required": false,
+                        "description": "The type of assignment."
                     }
                 ],
                 "operationId": "getSpaceAssignments",
@@ -28958,7 +28989,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "2868bc7c-6264-473f-9657-1c7a2a146431",
+                "x-qlik-entity-revision": "9b242182-70bc-4da1-805f-2eb3100f758c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -29061,7 +29092,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d7fb4c83-929d-4339-aef9-34afda676481",
+                "x-qlik-entity-revision": "1538a575-fce3-4c7d-a789-6e619baba2b8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -29155,7 +29186,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "92c69fc6-8983-49dc-aa84-b26f0708a447",
+                "x-qlik-entity-revision": "516ca6a5-f0dd-4587-b005-be5e47cae907",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -29258,7 +29289,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "ee2b6bc6-ad5e-49b4-a3ab-44b1e3802836",
+                "x-qlik-entity-revision": "9813ba3d-ba95-4379-bbf5-70b6d123955d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30079,10 +30110,18 @@
                 },
                 "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
+                "x-qlik-dependencies": [
+                    "POST:/accesscontrol/evaluation",
+                    "GET:/features",
+                    "POST:/licenses/definition/action/validate",
+                    "GET:/oauth-clients/{clientId}",
+                    "POST:/licenses/definition/tenants",
+                    "PUT:/licenses/definition"
+                ],
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "76a5cf19-1ec8-4e5f-bbff-1ebe1fc86bb5",
+                "x-qlik-entity-revision": "196decdb-8afa-4804-957b-0616573806c3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30144,10 +30183,13 @@
                 "operationId": "getTenantById",
                 "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
+                "x-qlik-dependencies": [
+                    "POST:/accesscontrol/evaluation"
+                ],
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "6f46f64d-98cb-4c88-b887-ff4a781b03c2",
+                "x-qlik-entity-revision": "0617e7e7-992b-4d72-927e-2ce7c09020a0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30240,10 +30282,13 @@
                 },
                 "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
+                "x-qlik-dependencies": [
+                    "POST:/accesscontrol/evaluation"
+                ],
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "ba54a284-ed16-4091-850d-30709662239f",
+                "x-qlik-entity-revision": "9cdeda77-7391-4af2-b15b-0a06d60dde99",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30366,10 +30411,18 @@
                 },
                 "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
+                "x-qlik-dependencies": [
+                    "POST:/accesscontrol/evaluation",
+                    "GET:/features",
+                    "GET:/licenses/overview",
+                    "GET:/oauth-clients/{clientId}",
+                    "DELETE:/jobs/{id}",
+                    "POST:/jobs"
+                ],
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0720ea11-3622-4fac-8e31-07f024ab47f7",
+                "x-qlik-entity-revision": "7ea97baa-dafd-432a-94fb-30c008ce7f23",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30481,10 +30534,17 @@
                 },
                 "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
+                "x-qlik-dependencies": [
+                    "POST:/accesscontrol/evaluation",
+                    "GET:/features",
+                    "GET:/licenses/overview",
+                    "GET:/oauth-clients/{clientId}",
+                    "DELETE:/jobs/{id}"
+                ],
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "ffc3d763-5a88-46c5-9e9d-0c8da69753a6",
+                "x-qlik-entity-revision": "1dd1e5d7-e78b-4cb5-87fb-7d1283187067",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30519,10 +30579,16 @@
                 },
                 "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
+                "x-qlik-dependencies": [
+                    "POST:/accesscontrol/evaluation"
+                ],
+                "x-qlik-guidelines-ignore": [
+                    "must-pluralize-resource-names"
+                ],
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "2a094c91-b119-42e4-a4de-b23a11774dc4",
+                "x-qlik-entity-revision": "53d956b7-aa77-440a-9397-3eab5c690ac8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -31018,7 +31084,8 @@
                         "required": false,
                         "x-qlik-pii": true,
                         "description": "The email to filter by. Deprecated. Use the new `filter` parameter to provide an advanced query filter.",
-                        "x-qlik-deprecated": true
+                        "x-qlik-deprecated": true,
+                        "x-qlik-customer-data": true
                     },
                     {
                         "in": "query",
@@ -31105,7 +31172,8 @@
                         "required": false,
                         "x-qlik-pii": true,
                         "description": "The subject to filter by. Deprecated. Use the new `filter` parameter to provide an advanced query filter.",
-                        "x-qlik-deprecated": true
+                        "x-qlik-deprecated": true,
+                        "x-qlik-customer-data": true
                     },
                     {
                         "in": "query",
@@ -31126,7 +31194,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "01d1cd47-875f-4fbb-9e33-a9ffce43482f",
+                "x-qlik-entity-revision": "102913a6-6ad0-48e1-9986-9c668b96e209",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -31251,7 +31319,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "14d1e0f8-049e-4f51-b5cc-cb4d6fe58972",
+                "x-qlik-entity-revision": "957e6203-20d6-427c-809b-ab28b7628e80",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -31354,7 +31422,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "cb8bc056-b12b-4d1d-b023-d0ccbe889b61",
+                "x-qlik-entity-revision": "bb9011d2-c54f-4b51-9cb9-0cd1fd327da5",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -31462,7 +31530,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f2d7f5e8-e5cf-4665-b134-21cf46d0d6a4",
+                "x-qlik-entity-revision": "5e440011-c938-41fd-a9ba-d01b4dccf254",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -31794,7 +31862,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "15020c2d-9881-4611-a3f4-69fec8264481",
+                "x-qlik-entity-revision": "1ad976df-9fd9-46eb-ab6f-bb075365eeda",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -32631,7 +32699,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "dd3e865c-1c08-49af-b386-89e824ff9762",
+                "x-qlik-entity-revision": "62c38247-58f9-4523-9795-98770aac124b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -32648,7 +32716,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Webhook"
+                                    "$ref": "#/components/schemas/WebhookResponse"
                                 }
                             }
                         },
@@ -32675,7 +32743,7 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/Webhook"
+                                "$ref": "#/components/schemas/WebhookPost"
                             }
                         }
                     },
@@ -32686,7 +32754,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "18970559-7f15-41de-83f6-d3dc457d6d6f",
+                "x-qlik-entity-revision": "6a7b9f31-9b7d-4621-9eb5-4f520ae6d5e2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -32705,7 +32773,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Webhook"
+                                    "$ref": "#/components/schemas/WebhookResponse"
                                 }
                             }
                         },
@@ -32747,7 +32815,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d8a2f023-5254-4715-9b3d-55e5d68ee2a2",
+                "x-qlik-entity-revision": "bec30764-7c0e-4c99-a059-436322603d4e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -32829,7 +32897,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Webhook"
+                                    "$ref": "#/components/schemas/WebhookResponse"
                                 }
                             }
                         },
@@ -32870,7 +32938,7 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/Webhook"
+                                "$ref": "#/components/schemas/WebhookBase"
                             }
                         }
                     },
@@ -32881,7 +32949,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0d651e33-93bd-4a52-bd9a-366b47278472",
+                "x-qlik-entity-revision": "d9d39f9d-8c29-4ef3-afca-d18f7a64861c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -33378,7 +33446,8 @@
                 },
                 "description": {
                     "type": "string",
-                    "description": "A description for the API key."
+                    "description": "A description for the API key.",
+                    "x-qlik-customer-data": true
                 },
                 "lastUpdated": {
                     "type": "string",
@@ -33470,7 +33539,8 @@
                 },
                 "value": {
                     "type": "string",
-                    "description": "The value to be used for this operation."
+                    "description": "The value to be used for this operation.",
+                    "x-qlik-customer-data": true
                 }
             },
             "description": "A JSON Patch document as defined in https://datatracker.ietf.org/doc/html/rfc6902."
@@ -33971,7 +34041,8 @@
                         "type": "string",
                         "format": "uri"
                     },
-                    "description": "The origins that are allowed to make requests to the tenant."
+                    "description": "The origins that are allowed to make requests to the tenant.",
+                    "x-qlik-customer-data": true
                 }
             },
             "description": "A web integration object."
@@ -34001,7 +34072,8 @@
                 },
                 "value": {
                     "type": "string",
-                    "description": "New value to be used for this operation."
+                    "description": "New value to be used for this operation.",
+                    "x-qlik-customer-data": true
                 }
             },
             "description": "A JSON Patch document as defined in http://tools.ietf.org/html/rfc6902."
@@ -34031,7 +34103,8 @@
                 "name": {
                     "type": "string",
                     "example": "My Web Integration",
-                    "description": "The name of the newly created web integration."
+                    "description": "The name of the newly created web integration.",
+                    "x-qlik-customer-data": true
                 },
                 "links": {
                     "type": "object",
@@ -34088,7 +34161,8 @@
                     "example": [
                         "https://thirdPartyApp.com"
                     ],
-                    "description": "The origins that are allowed to make requests to the tenant."
+                    "description": "The origins that are allowed to make requests to the tenant.",
+                    "x-qlik-customer-data": true
                 }
             },
             "description": "The creation of a web integration response."
@@ -34101,7 +34175,8 @@
                 "name": {
                     "type": "string",
                     "example": "My Web Integration",
-                    "description": "The name of the web integration to create."
+                    "description": "The name of the web integration to create.",
+                    "x-qlik-customer-data": true
                 },
                 "validOrigins": {
                     "type": "array",
@@ -34112,7 +34187,8 @@
                     "example": [
                         "https://thirdPartyApp.com"
                     ],
-                    "description": "The origins that are allowed to make requests to the tenant."
+                    "description": "The origins that are allowed to make requests to the tenant.",
+                    "x-qlik-customer-data": true
                 }
             }
         },
@@ -36845,10 +36921,12 @@
                 },
                 "workspace": {
                     "type": "object",
-                    "description": "The workspace generated by the Qlik Application Automations editor."
+                    "description": "The workspace generated by the Qlik Application Automations editor.",
+                    "x-qlik-customer-data": true
                 },
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 }
             }
         },
@@ -36919,7 +36997,8 @@
                 },
                 "workspace": {
                     "type": "object",
-                    "description": "The workspace generated by the Qlik Application Automations editor."
+                    "description": "The workspace generated by the Qlik Application Automations editor.",
+                    "x-qlik-customer-data": true
                 },
                 "snippetIds": {
                     "type": "array",
@@ -36930,10 +37009,12 @@
                         "e0e720d0-4947-11ec-a1d2-9559fa35801d"
                     ],
                     "readOnly": true,
-                    "description": "A list of snippets used inside the workspace."
+                    "description": "A list of snippets used inside the workspace.",
+                    "x-qlik-customer-data": true
                 },
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "endpointIds": {
                     "type": "array",
@@ -36945,7 +37026,8 @@
                         "53a6fb70-b28f-11eb-b601-b545a40867e0"
                     ],
                     "readOnly": true,
-                    "description": "A list of endpoints used inside the workspace."
+                    "description": "A list of endpoints used inside the workspace.",
+                    "x-qlik-customer-data": true
                 },
                 "connectorIds": {
                     "type": "array",
@@ -36957,7 +37039,8 @@
                         "0d86ee8a-27c0-11ea-921c-022e6b5ea1e2"
                     ],
                     "readOnly": true,
-                    "description": "A list of connectors used inside the workspace."
+                    "description": "A list of connectors used inside the workspace.",
+                    "x-qlik-customer-data": true
                 },
                 "lastRunStatus": {
                     "enum": [
@@ -36978,7 +37061,8 @@
                 "executionToken": {
                     "type": "string",
                     "example": "aZXuEogT9X3le0k0WXMBnzuYKq4xRlkDnurjs8NVhEAAW1BYx8C1PpIl3ielgRb1",
-                    "readOnly": true
+                    "readOnly": true,
+                    "x-qlik-customer-data": true
                 }
             }
         },
@@ -37056,7 +37140,8 @@
                     "readOnly": true
                 },
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "lastRunStatus": {
                     "enum": [
@@ -37135,7 +37220,8 @@
                 },
                 "inputs": {
                     "type": "object",
-                    "x-qlik-stability": "private"
+                    "x-qlik-stability": "private",
+                    "x-qlik-customer-data": true
                 },
                 "context": {
                     "enum": [
@@ -37164,7 +37250,8 @@
                 },
                 "inputs": {
                     "type": "object",
-                    "x-qlik-stability": "private"
+                    "x-qlik-stability": "private",
+                    "x-qlik-customer-data": true
                 },
                 "status": {
                     "enum": [
@@ -37306,7 +37393,8 @@
                 },
                 "expectedInputs": {
                     "type": "object",
-                    "x-qlik-stability": "private"
+                    "x-qlik-stability": "private",
+                    "x-qlik-customer-data": true
                 },
                 "scheduledStartTime": {
                     "type": "string",
@@ -38329,12 +38417,14 @@
                 "name": {
                     "type": "string",
                     "maxLength": 255,
-                    "minLength": 0
+                    "minLength": 0,
+                    "x-qlik-customer-data": true
                 },
                 "tags": {
                     "type": "array",
                     "items": {
-                        "type": "string"
+                        "type": "string",
+                        "x-qlik-customer-data": true
                     },
                     "uniqueItems": true
                 },
@@ -38383,7 +38473,8 @@
                 "description": {
                     "type": "string",
                     "maxLength": 1024,
-                    "minLength": 0
+                    "minLength": 0,
+                    "x-qlik-customer-data": true
                 },
                 "dataStoreInfo": {
                     "$ref": "#/components/schemas/DataStoreInfo"
@@ -38391,7 +38482,8 @@
                 "technicalName": {
                     "type": "string",
                     "maxLength": 255,
-                    "minLength": 1
+                    "minLength": 1,
+                    "x-qlik-customer-data": true
                 },
                 "lastModifiedBy": {
                     "type": "string",
@@ -38407,7 +38499,8 @@
                 "technicalDescription": {
                     "type": "string",
                     "maxLength": 1024,
-                    "minLength": 0
+                    "minLength": 0,
+                    "x-qlik-customer-data": true
                 }
             }
         },
@@ -38955,19 +39048,22 @@
                 "name": {
                     "type": "string",
                     "maxLength": 255,
-                    "minLength": 1
+                    "minLength": 1,
+                    "x-qlik-customer-data": true
                 },
                 "tags": {
                     "type": "array",
                     "items": {
                         "type": "string",
-                        "description": "An array of system tags"
+                        "description": "An array of system tags",
+                        "x-qlik-customer-data": true
                     },
                     "description": "An array of system tags",
                     "uniqueItems": true
                 },
                 "alias": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "index": {
                     "type": "integer",
@@ -39007,7 +39103,8 @@
                     }
                 },
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "ordinalPositionInKey": {
                     "type": "integer",
@@ -39039,12 +39136,14 @@
                 "name": {
                     "type": "string",
                     "maxLength": 255,
-                    "minLength": 0
+                    "minLength": 0,
+                    "x-qlik-customer-data": true
                 },
                 "tags": {
                     "type": "array",
                     "items": {
-                        "type": "string"
+                        "type": "string",
+                        "x-qlik-customer-data": true
                     },
                     "uniqueItems": true
                 },
@@ -39096,7 +39195,8 @@
                 "description": {
                     "type": "string",
                     "maxLength": 1024,
-                    "minLength": 0
+                    "minLength": 0,
+                    "x-qlik-customer-data": true
                 },
                 "operational": {
                     "$ref": "#/components/schemas/Operational"
@@ -39107,7 +39207,8 @@
                 "technicalName": {
                     "type": "string",
                     "maxLength": 255,
-                    "minLength": 1
+                    "minLength": 1,
+                    "x-qlik-customer-data": true
                 },
                 "lastModifiedBy": {
                     "type": "string",
@@ -39133,7 +39234,8 @@
                 "technicalDescription": {
                     "type": "string",
                     "maxLength": 1024,
-                    "minLength": 0
+                    "minLength": 0,
+                    "x-qlik-customer-data": true
                 }
             }
         },
@@ -39201,12 +39303,14 @@
             "title": "Field Profile",
             "properties": {
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "tags": {
                     "type": "array",
                     "items": {
-                        "type": "string"
+                        "type": "string",
+                        "x-qlik-customer-data": true
                     }
                 },
                 "index": {
@@ -39259,7 +39363,8 @@
                     }
                 },
                 "technicalName": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "classification": {
                     "$ref": "#/components/schemas/Classification"
@@ -39509,7 +39614,8 @@
                     }
                 },
                 "schemaName": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "loadOptions": {
                     "type": "object",
@@ -39534,7 +39640,8 @@
             "type": "object",
             "properties": {
                 "tableName": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "selectionScript": {
                     "type": "string"
@@ -39553,7 +39660,8 @@
             "properties": {
                 "name": {
                     "type": "string",
-                    "readOnly": true
+                    "readOnly": true,
+                    "x-qlik-customer-data": true
                 },
                 "sizeInBytes": {
                     "type": "integer",
@@ -39591,7 +39699,8 @@
             "properties": {
                 "name": {
                     "type": "string",
-                    "readOnly": true
+                    "readOnly": true,
+                    "x-qlik-customer-data": true
                 },
                 "records": {
                     "type": "array",
@@ -39603,7 +39712,8 @@
                 "fieldNames": {
                     "type": "array",
                     "items": {
-                        "type": "string"
+                        "type": "string",
+                        "x-qlik-customer-data": true
                     },
                     "readOnly": true
                 }
@@ -39624,7 +39734,8 @@
                 "name": {
                     "type": "string",
                     "maxLength": 128,
-                    "minLength": 1
+                    "minLength": 1,
+                    "x-qlik-customer-data": true
                 }
             },
             "description": "An array of user-supplied tags"
@@ -39650,12 +39761,14 @@
                 "name": {
                     "type": "string",
                     "maxLength": 255,
-                    "minLength": 0
+                    "minLength": 0,
+                    "x-qlik-customer-data": true
                 },
                 "tags": {
                     "type": "array",
                     "items": {
-                        "type": "string"
+                        "type": "string",
+                        "x-qlik-customer-data": true
                     },
                     "uniqueItems": true
                 },
@@ -39703,12 +39816,14 @@
                 "description": {
                     "type": "string",
                     "maxLength": 1024,
-                    "minLength": 0
+                    "minLength": 0,
+                    "x-qlik-customer-data": true
                 },
                 "technicalName": {
                     "type": "string",
                     "maxLength": 255,
-                    "minLength": 1
+                    "minLength": 1,
+                    "x-qlik-customer-data": true
                 },
                 "lastModifiedBy": {
                     "type": "string",
@@ -39724,7 +39839,8 @@
                 "technicalDescription": {
                     "type": "string",
                     "maxLength": 1024,
-                    "minLength": 0
+                    "minLength": 0,
+                    "x-qlik-customer-data": true
                 }
             }
         },
@@ -39916,6 +40032,38 @@
                 }
             },
             "description": "The callback to be performed once the report is done."
+        },
+        "ChainableSelection": {
+            "required": [
+                "selectionType"
+            ],
+            "properties": {
+                "selectionType": {
+                    "$ref": "#/components/schemas/ChainableSelectionType"
+                },
+                "selectionFilter": {
+                    "$ref": "#/components/schemas/SelectionFilter"
+                },
+                "persistentBookmark": {
+                    "$ref": "#/components/schemas/SensePersistentBookmark"
+                },
+                "temporaryBookmarkV2": {
+                    "$ref": "#/components/schemas/SenseTemporaryBookmarkV2"
+                }
+            },
+            "x-qlik-stability": "experimental",
+            "x-qlik-visibility": "private"
+        },
+        "ChainableSelectionType": {
+            "enum": [
+                "selectionFilter",
+                "persistentBookmark",
+                "temporaryBookmarkV2"
+            ],
+            "type": "string",
+            "default": "selectionFilter",
+            "x-qlik-stability": "experimental",
+            "x-qlik-visibility": "private"
         },
         "ComposableTemplate": {
             "required": [
@@ -41003,6 +41151,17 @@
             "x-qlik-stability": "experimental",
             "x-qlik-visibility": "private"
         },
+        "SelectionChain": {
+            "type": "array",
+            "items": {
+                "$ref": "#/components/schemas/ChainableSelection"
+            },
+            "maxItems": 50,
+            "minItems": 1,
+            "description": "Array of ChainableSelection",
+            "x-qlik-stability": "experimental",
+            "x-qlik-visibility": "private"
+        },
         "SelectionError": {
             "properties": {
                 "detail": {
@@ -41047,6 +41206,41 @@
                 "$ref": "#/components/schemas/SelectionError"
             },
             "description": "Errors occurring in selections."
+        },
+        "SelectionFilter": {
+            "properties": {
+                "variables": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/components/schemas/Variable"
+                    },
+                    "maxItems": 1100
+                },
+                "patchesById": {
+                    "type": "object",
+                    "description": "A map for applying soft properties, aka patches, to specific visualization IDs within the sheet.",
+                    "additionalProperties": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/NxPatch"
+                        },
+                        "maxItems": 100
+                    }
+                },
+                "selectionsByState": {
+                    "type": "object",
+                    "description": "Map of selections to apply by state. Maximum number of states allowed is 125. Maximum number of fields allowed is 125 and Maximum number of overall field values allowed is 150000.",
+                    "additionalProperties": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/QSelection"
+                        },
+                        "maxItems": 125
+                    }
+                }
+            },
+            "x-qlik-stability": "experimental",
+            "x-qlik-visibility": "private"
         },
         "SelectionStrategy": {
             "enum": [
@@ -41153,6 +41347,9 @@
                 "selectionType": {
                     "$ref": "#/components/schemas/SenseSelectionType"
                 },
+                "selectionChain": {
+                    "$ref": "#/components/schemas/SelectionChain"
+                },
                 "reloadTimestamp": {
                     "type": "string",
                     "format": "RFC3339",
@@ -41168,7 +41365,7 @@
                 },
                 "selectionsByState": {
                     "type": "object",
-                    "description": "Map of selections to apply by state. Maximum number of states allowed is 125. Maximum number of fields allowed is 125 and maximum number of overall field values allowed is 150000.",
+                    "description": "Deprecated. Use selectionChain. Map of selections to apply by state. Maximum number of states allowed is 125. Maximum number of fields allowed is 125 and maximum number of overall field values allowed is 150000.",
                     "additionalProperties": {
                         "type": "array",
                         "items": {
@@ -41189,7 +41386,7 @@
                 "selectionsByStateDef": {
                     "type": "string",
                     "x-nullable": true,
-                    "description": "The definition ID referring to a selectionsByState definition declared in definitions."
+                    "description": "Deprecated. Use selectionChain. The definition ID referring to a selectionsByState definition declared in definitions."
                 }
             },
             "description": "Used to export an excel template.",
@@ -46128,7 +46325,8 @@
                     "type": "string"
                 },
                 "typeName": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "attributes": {
                     "$ref": "#/components/schemas/atlanEntityAttributes"
@@ -46145,25 +46343,30 @@
                     "type": "string"
                 },
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "usage": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "examples": {
                     "type": "array",
                     "items": {
                         "type": "string"
-                    }
+                    },
+                    "x-qlik-customer-data": true
                 },
                 "relations": {
                     "$ref": "#/components/schemas/atlanResourceLink"
                 },
                 "displayText": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "abbreviation": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "relationGuid": {
                     "type": "string"
@@ -46172,7 +46375,8 @@
                     "type": "string"
                 },
                 "userDescription": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 }
             }
         },
@@ -46198,10 +46402,12 @@
                     "type": "string"
                 },
                 "typeName": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "displayText": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "entityStatus": {
                     "type": "string"
@@ -46241,10 +46447,12 @@
             "type": "object",
             "properties": {
                 "url": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "displayName": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 }
             }
         },
@@ -46258,13 +46466,16 @@
                     "type": "string"
                 },
                 "expression": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "displayText": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "entityStatus": {
                     "type": "string"
@@ -46278,10 +46489,12 @@
             "type": "object",
             "properties": {
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "displayText": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "categoryGuid": {
                     "type": "string"
@@ -46301,7 +46514,8 @@
                     "type": "string"
                 },
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "terms": {
                     "type": "array",
@@ -46310,7 +46524,8 @@
                     }
                 },
                 "usage": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "language": {
                     "type": "string"
@@ -46322,13 +46537,16 @@
                     }
                 },
                 "qualifiedName": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "longDescription": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "shortDescription": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 }
             }
         },
@@ -46348,13 +46566,16 @@
                     "type": "string"
                 },
                 "expression": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "displayText": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "relationGuid": {
                     "type": "string"
@@ -46400,7 +46621,8 @@
                     "example": "507f191e810c19729de860ea"
                 },
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "parentId": {
                     "type": "string",
@@ -46450,15 +46672,23 @@
                     "example": "507f191e810c19729de860ea"
                 },
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 }
             }
         },
         "createCategory": {
             "type": "object",
             "properties": {
+                "id": {
+                    "type": "string",
+                    "example": "507f191e810c19729de860ea",
+                    "description": "The id for resolving updates in future imports/updates. \nOpposed to the id of terms, id on category are not resolved by backend. Any category referred in the category array in terms will have to be identical to the id property of the category. If not, the category reference will be discarded.\n"
+                },
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "The name of the category. May not be identical to another category belonging to the same parent.\n",
+                    "x-qlik-customer-data": true
                 },
                 "parentId": {
                     "type": "string",
@@ -46478,7 +46708,8 @@
                     "description": "This list contains the uuids of the stewards of the category."
                 },
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 }
             }
         },
@@ -46491,7 +46722,8 @@
                 "name": {
                     "type": "string",
                     "example": "Organization wide glossary",
-                    "description": "Name of the glossary"
+                    "description": "Name of the glossary",
+                    "x-qlik-customer-data": true
                 },
                 "tags": {
                     "type": "array",
@@ -46502,7 +46734,8 @@
                         "Red",
                         "Sales"
                     ],
-                    "description": "List of tags for glossary"
+                    "description": "List of tags for glossary",
+                    "x-qlik-customer-data": true
                 },
                 "spaceId": {
                     "type": "string",
@@ -46512,12 +46745,14 @@
                 },
                 "overview": {
                     "type": "string",
-                    "description": "Overview of the glossary content"
+                    "description": "Overview of the glossary content",
+                    "x-qlik-customer-data": true
                 },
                 "description": {
                     "type": "string",
                     "example": "This glossary contains definitions and concepts of business terms.",
-                    "description": "Description of the glossary"
+                    "description": "Description of the glossary",
+                    "x-qlik-customer-data": true
                 },
                 "termTemplate": {
                     "$ref": "#/components/schemas/termTemplate"
@@ -46532,7 +46767,8 @@
             "properties": {
                 "name": {
                     "type": "string",
-                    "example": "Earnings Before Interest and Tax (EBIT)"
+                    "example": "Earnings Before Interest and Tax (EBIT)",
+                    "x-qlik-customer-data": true
                 },
                 "tags": {
                     "type": "array",
@@ -46542,7 +46778,8 @@
                     "example": [
                         "Finance",
                         "Accounting"
-                    ]
+                    ],
+                    "x-qlik-customer-data": true
                 },
                 "linksTo": {
                     "type": "array",
@@ -46580,15 +46817,18 @@
                     "description": "Category Ids that the term belongs to. NOTE! In case of import the string refers to the index of the category in the import document."
                 },
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "abbreviation": {
                     "type": "string",
-                    "example": "EBIT"
+                    "example": "EBIT",
+                    "x-qlik-customer-data": true
                 },
                 "relatedInformation": {
                     "type": "string",
-                    "example": "In accounting and finance, earnings before interest and taxes (EBIT) is a measure of a firm's profit that includes all incomes and expenses (operating and non-operating) except interest expenses and income tax expenses."
+                    "example": "In accounting and finance, earnings before interest and taxes (EBIT) is a measure of a firm's profit that includes all incomes and expenses (operating and non-operating) except interest expenses and income tax expenses.",
+                    "x-qlik-customer-data": true
                 }
             }
         },
@@ -46708,7 +46948,7 @@
             },
             "description": "### Custom error codes\n* BG-8 - Glossary not found\n* BG-9 - Category not found\n* BG-10 - Term not found\n"
         },
-        "fullGlossary": {
+        "exportGlossary": {
             "type": "object",
             "properties": {
                 "id": {
@@ -46717,7 +46957,8 @@
                     "example": "507f191e810c19729de860ea"
                 },
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "tags": {
                     "type": "array",
@@ -46727,7 +46968,8 @@
                     "example": [
                         "tag1",
                         "tag2"
-                    ]
+                    ],
+                    "x-qlik-customer-data": true
                 },
                 "terms": {
                     "type": "array",
@@ -46747,7 +46989,8 @@
                 },
                 "overview": {
                     "type": "string",
-                    "example": "glossary overview"
+                    "example": "glossary overview",
+                    "x-qlik-customer-data": true
                 },
                 "createdAt": {
                     "type": "string",
@@ -46781,7 +47024,11 @@
                     }
                 },
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
+                },
+                "termTemplate": {
+                    "$ref": "#/components/schemas/termTemplate"
                 }
             }
         },
@@ -46828,7 +47075,8 @@
                 "name": {
                     "type": "string",
                     "example": "Organization wide glossary",
-                    "description": "Name of the glossary"
+                    "description": "Name of the glossary",
+                    "x-qlik-customer-data": true
                 },
                 "tags": {
                     "type": "array",
@@ -46839,7 +47087,8 @@
                         "Red",
                         "Sales"
                     ],
-                    "description": "List of tags associated with the glossary."
+                    "description": "List of tags associated with the glossary.",
+                    "x-qlik-customer-data": true
                 },
                 "ownerId": {
                     "type": "string",
@@ -46855,7 +47104,8 @@
                 },
                 "overview": {
                     "type": "string",
-                    "description": "Overview of the glossary contents"
+                    "description": "Overview of the glossary contents",
+                    "x-qlik-customer-data": true
                 },
                 "createdAt": {
                     "type": "string",
@@ -46888,7 +47138,8 @@
                 "description": {
                     "type": "string",
                     "example": "This glossary contains definitions and concepts of business terms.",
-                    "description": "Description of the glossary"
+                    "description": "Description of the glossary",
+                    "x-qlik-customer-data": true
                 },
                 "termTemplate": {
                     "$ref": "#/components/schemas/termTemplate"
@@ -46900,11 +47151,13 @@
             "properties": {
                 "name": {
                     "type": "string",
-                    "example": "Joe Smith"
+                    "example": "Joe Smith",
+                    "x-qlik-pii": true
                 },
                 "email": {
                     "type": "string",
-                    "example": "joe.smith@qlik.com"
+                    "example": "joe.smith@qlik.com",
+                    "x-qlik-pii": true
                 },
                 "userId": {
                     "type": "string",
@@ -46916,9 +47169,15 @@
         "importTerm": {
             "type": "object",
             "properties": {
+                "id": {
+                    "type": "string",
+                    "example": "507f191e810c19729de860ea",
+                    "description": "The id of the term. Used to identify the term in future updates. If not provided, will use the leading 30 chars of the term name and an incremental index\n"
+                },
                 "name": {
                     "type": "string",
-                    "example": "name"
+                    "example": "name",
+                    "x-qlik-customer-data": true
                 },
                 "tags": {
                     "type": "array",
@@ -46928,7 +47187,8 @@
                     "example": [
                         "tag1",
                         "tag2"
-                    ]
+                    ],
+                    "x-qlik-customer-data": true
                 },
                 "owner": {
                     "type": "array",
@@ -46955,18 +47215,19 @@
                         "format": "uuid"
                     },
                     "example": [
-                        "507f191e810c19729de860ea",
                         "507f191e810c19729de860ea"
                     ],
-                    "description": "Category Ids that the term belongs to. NOTE! In case of import the string refers to the index of the category in the import document."
+                    "description": "Categories that the term belongs to. Refers to the `id` property of the category object\n"
                 },
                 "description": {
                     "type": "string",
-                    "example": "description"
+                    "example": "description",
+                    "x-qlik-customer-data": true
                 },
                 "abbreviation": {
                     "type": "string",
-                    "example": "abbr"
+                    "example": "abbr",
+                    "x-qlik-customer-data": true
                 }
             }
         },
@@ -47020,7 +47281,8 @@
                             "$ref": "#/components/schemas/AssignedRolesRefNames"
                         }
                     ],
-                    "description": "The value to be used for this operation."
+                    "description": "The value to be used for this operation.",
+                    "x-qlik-customer-data": true
                 }
             },
             "description": "A JSON Patch document as defined in http://tools.ietf.org/html/rfc6902."
@@ -47111,7 +47373,8 @@
             "type": "object",
             "properties": {
                 "name": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "tags": {
                     "type": "array",
@@ -47121,7 +47384,8 @@
                     "example": [
                         "tag1",
                         "tag2"
-                    ]
+                    ],
+                    "x-qlik-customer-data": true
                 },
                 "terms": {
                     "type": "array",
@@ -47144,7 +47408,11 @@
                     }
                 },
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
+                },
+                "termTemplate": {
+                    "$ref": "#/components/schemas/termTemplate"
                 }
             }
         },
@@ -47182,7 +47450,8 @@
                 },
                 "name": {
                     "type": "string",
-                    "example": "Earnings Before Interest and Tax (EBIT)"
+                    "example": "Earnings Before Interest and Tax (EBIT)",
+                    "x-qlik-customer-data": true
                 },
                 "tags": {
                     "type": "array",
@@ -47192,7 +47461,8 @@
                     "example": [
                         "Finance",
                         "Accounting"
-                    ]
+                    ],
+                    "x-qlik-customer-data": true
                 },
                 "status": {
                     "$ref": "#/components/schemas/termStatus"
@@ -47266,15 +47536,18 @@
                     "example": "507f191e810c19729de860ea"
                 },
                 "description": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "abbreviation": {
                     "type": "string",
-                    "example": "EBIT"
+                    "example": "EBIT",
+                    "x-qlik-customer-data": true
                 },
                 "relatedInformation": {
                     "type": "string",
-                    "example": "In accounting and finance, earnings before interest and taxes (EBIT) is a measure of a firm's profit that includes all incomes and expenses (operating and non-operating) except interest expenses and income tax expenses."
+                    "example": "In accounting and finance, earnings before interest and taxes (EBIT) is a measure of a firm's profit that includes all incomes and expenses (operating and non-operating) except interest expenses and income tax expenses.",
+                    "x-qlik-customer-data": true
                 }
             }
         },
@@ -47306,7 +47579,8 @@
                     "type": "string"
                 },
                 "subResourceName": {
-                    "type": "string"
+                    "type": "string",
+                    "x-qlik-customer-data": true
                 },
                 "subResourceType": {
                     "enum": [
@@ -47329,7 +47603,8 @@
                 },
                 "name": {
                     "type": "string",
-                    "example": "Sales App"
+                    "example": "Sales App",
+                    "x-qlik-customer-data": true
                 },
                 "type": {
                     "enum": [
@@ -47390,7 +47665,8 @@
                 },
                 "subResourceName": {
                     "type": "string",
-                    "example": "Sales YTD"
+                    "example": "Sales YTD",
+                    "x-qlik-customer-data": true
                 },
                 "subResourceType": {
                     "enum": [
@@ -47487,7 +47763,8 @@
             "properties": {
                 "relatedInformation": {
                     "type": "string",
-                    "description": "Template text for new terms"
+                    "description": "Template text for new terms",
+                    "x-qlik-customer-data": true
                 }
             }
         },
@@ -47632,7 +47909,8 @@
                     "maxLength": 256,
                     "minLength": 1,
                     "description": "The name of the group.",
-                    "x-qlik-filterable": true
+                    "x-qlik-filterable": true,
+                    "x-qlik-customer-data": true
                 },
                 "idpId": {
                     "type": "string",
@@ -47789,7 +48067,8 @@
                             "$ref": "#/components/schemas/AssignedRolesRefNames"
                         }
                     ],
-                    "description": "The roles to assign to the group (limit of 100 roles per group)."
+                    "description": "The roles to assign to the group (limit of 100 roles per group).",
+                    "x-qlik-customer-data": true
                 }
             },
             "description": "A JSON Patch document."
@@ -47833,7 +48112,8 @@
                 "name": {
                     "type": "string",
                     "example": "Development",
-                    "description": "The name of the group (maximum length of 256 characters)."
+                    "description": "The name of the group (maximum length of 256 characters).",
+                    "x-qlik-customer-data": true
                 },
                 "status": {
                     "enum": [
@@ -51036,11 +51316,7 @@
                     "readOnly": true
                 },
                 "type": {
-                    "enum": [
-                        "user",
-                        "group"
-                    ],
-                    "type": "string"
+                    "$ref": "#/components/schemas/AssignmentType"
                 },
                 "links": {
                     "type": "object",
@@ -51115,12 +51391,7 @@
             ],
             "properties": {
                 "type": {
-                    "enum": [
-                        "user",
-                        "group"
-                    ],
-                    "type": "string",
-                    "description": "The type of assignment such as user or group"
+                    "$ref": "#/components/schemas/AssignmentType"
                 },
                 "roles": {
                     "type": "array",
@@ -51177,6 +51448,14 @@
                     }
                 }
             }
+        },
+        "AssignmentType": {
+            "enum": [
+                "user",
+                "group"
+            ],
+            "type": "string",
+            "description": "The type of assignment such as user or group"
         },
         "AssignmentUpdate": {
             "properties": {
@@ -52209,7 +52488,8 @@
                         "type": "string",
                         "example": "Finance",
                         "readOnly": true,
-                        "description": "The group name"
+                        "description": "The group name",
+                        "x-qlik-customer-data": true
                     },
                     "assignedRoles": {
                         "$ref": "#/components/schemas/AssignedRoles"
@@ -52420,13 +52700,15 @@
                     "type": "string",
                     "x-qlik-pii": true,
                     "description": "The name of the user.",
-                    "x-qlik-filterable": true
+                    "x-qlik-filterable": true,
+                    "x-qlik-customer-data": true
                 },
                 "email": {
                     "type": "string",
                     "x-qlik-pii": true,
                     "description": "The email address for the user.",
-                    "x-qlik-filterable": true
+                    "x-qlik-filterable": true,
+                    "x-qlik-customer-data": true
                 },
                 "links": {
                     "type": "object",
@@ -52472,7 +52754,8 @@
                 },
                 "locale": {
                     "type": "string",
-                    "description": "Represents the end-user's language tag."
+                    "description": "Represents the end-user's language tag.",
+                    "x-qlik-customer-data": true
                 },
                 "status": {
                     "enum": [
@@ -52496,13 +52779,15 @@
                     "type": "string",
                     "format": "url",
                     "x-qlik-pii": true,
-                    "description": "A static url linking to the avatar of the user."
+                    "description": "A static url linking to the avatar of the user.",
+                    "x-qlik-customer-data": true
                 },
                 "subject": {
                     "type": "string",
                     "x-qlik-pii": true,
                     "description": "The unique user identitier from an identity provider.",
-                    "x-qlik-filterable": true
+                    "x-qlik-filterable": true,
+                    "x-qlik-customer-data": true
                 },
                 "tenantId": {
                     "type": "string",
@@ -52511,7 +52796,8 @@
                 },
                 "zoneinfo": {
                     "type": "string",
-                    "description": "Represents the end-user's time zone."
+                    "description": "Represents the end-user's time zone.",
+                    "x-qlik-customer-data": true
                 },
                 "createdAt": {
                     "type": "string",
@@ -52589,12 +52875,14 @@
                 "name": {
                     "type": "string",
                     "x-qlik-pii": true,
-                    "description": "The name of the user."
+                    "description": "The name of the user.",
+                    "x-qlik-customer-data": true
                 },
                 "email": {
                     "type": "string",
                     "x-qlik-pii": true,
-                    "description": "The email address for the user. This is a required field when inviting a user."
+                    "description": "The email address for the user. This is a required field when inviting a user.",
+                    "x-qlik-customer-data": true
                 },
                 "roles": {
                     "type": "array",
@@ -52625,13 +52913,15 @@
                     "type": "string",
                     "format": "url",
                     "x-qlik-pii": true,
-                    "description": "A static url linking to the avatar of the user."
+                    "description": "A static url linking to the avatar of the user.",
+                    "x-qlik-customer-data": true
                 },
                 "subject": {
                     "type": "string",
                     "example": "foo\\12345",
                     "x-qlik-pii": true,
-                    "description": "The unique user identitier from an identity provider."
+                    "description": "The unique user identitier from an identity provider.",
+                    "x-qlik-customer-data": true
                 },
                 "tenantId": {
                     "type": "string",
@@ -52991,7 +53281,7 @@
                 }
             }
         },
-        "Webhook": {
+        "WebhookBase": {
             "type": "object",
             "required": [
                 "name",
@@ -53108,7 +53398,7 @@
                 "data": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/components/schemas/Webhook"
+                        "$ref": "#/components/schemas/WebhookResponse"
                     }
                 },
                 "links": {
@@ -53175,6 +53465,51 @@
                 }
             },
             "description": "A JSON Patch document as defined in https://datatracker.ietf.org/doc/html/rfc6902"
+        },
+        "WebhookPost": {
+            "allOf": [
+                {
+                    "$ref": "#/components/schemas/WebhookBase"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "origin": {
+                            "enum": [
+                                "api",
+                                "automations",
+                                "management-console"
+                            ],
+                            "type": "string",
+                            "default": "api",
+                            "description": "Indicates from where the webhook was created and its purpose"
+                        }
+                    }
+                }
+            ]
+        },
+        "WebhookResponse": {
+            "allOf": [
+                {
+                    "$ref": "#/components/schemas/WebhookBase"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "origin": {
+                            "enum": [
+                                "api",
+                                "automations",
+                                "management-console"
+                            ],
+                            "type": "string",
+                            "default": "api",
+                            "readOnly": true,
+                            "description": "Indicates from where the webhook was created and its purpose"
+                        }
+                    }
+                }
+            ]
         }
     }
 }

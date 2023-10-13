@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.1831.0",
+        "version": "12.1860.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -14867,11 +14867,8 @@
                 }
             },
             "Blob": {
-                "type": "array",
-                "items": {
-                    "type": "integer",
-                    "format": "byte"
-                }
+                "type": "string",
+                "contentEncoding": "base64"
             },
             "InterFieldSortData": {
                 "type": "object",
@@ -23478,7 +23475,7 @@
             },
             "LOCERR_RELOAD_MATCHING_CONTROL_STATEMENT_ERROR": {
                 "code": 11023,
-                "message": "The control statement is not correctly matched with its corresponding start statement"
+                "message": "The control statement is not correctly matched with its corresponding start statement."
             },
             "LOCERR_RELOAD_MATCHING_LIBPATH_X_NOT_FOUND": {
                 "code": 11024,
