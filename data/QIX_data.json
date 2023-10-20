@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.1860.0",
+        "version": "12.1869.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -15770,6 +15770,10 @@
                     "qContextSetExpression": {
                         "type": "string",
                         "description": "Set Expression valid for the whole cube. Used to limit computations to the set specified."
+                    },
+                    "qSuppressMeasureTotals": {
+                        "type": "boolean",
+                        "description": "If set to true, suppress any measure grand totals, ignoring any AggrFunc."
                     }
                 },
                 "x-qlik-see-also": [
