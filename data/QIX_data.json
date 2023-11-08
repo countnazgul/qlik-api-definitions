@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.1869.0",
+        "version": "12.1885.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -11592,6 +11592,10 @@
                         "title": "LOCERR_APP_NOT_OPEN"
                     },
                     {
+                        "x-qlik-const": 1018,
+                        "title": "LOCERR_APP_EVENT_SOURCE_TIMEOUT"
+                    },
+                    {
                         "x-qlik-const": 2000,
                         "title": "LOCERR_CONNECTION_ALREADY_EXISTS"
                     },
@@ -16268,7 +16272,7 @@
                     },
                     "qAggrFunc": {
                         "type": "string",
-                        "description": "Aggregate function.\nFor more information on the aggregate function syntax, see the section Working with Qlik Sense on the online help portal.\nThe default value is 0 (Sum of rows)\nThis parameter is optional."
+                        "description": "Flag indicating how the measure should be aggregated to create a grand total.\n\"None\" - No total calculation.\n\"Expr\" - Calculate total according to the measure expression.\n\"\"     - Empty string is default and has same effect as \"Expr\".\nThis parameter is optional."
                     },
                     "qAccumulate": {
                         "type": "integer",
@@ -22082,6 +22086,9 @@
                         "$ref": "#/components/errors/LOCERR_APP_NOT_OPEN"
                     },
                     {
+                        "$ref": "#/components/errors/LOCERR_APP_EVENT_SOURCE_TIMEOUT"
+                    },
+                    {
                         "$ref": "#/components/errors/LOCERR_CONNECTION_ALREADY_EXISTS"
                     },
                     {
@@ -23124,6 +23131,10 @@
             "LOCERR_APP_NOT_OPEN": {
                 "code": 1017,
                 "message": "Unknown error"
+            },
+            "LOCERR_APP_EVENT_SOURCE_TIMEOUT": {
+                "code": 1018,
+                "message": "App event source timeout"
             },
             "LOCERR_CONNECTION_ALREADY_EXISTS": {
                 "code": 2000,

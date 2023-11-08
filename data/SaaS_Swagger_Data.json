@@ -3051,6 +3051,58 @@
                 }
             }
         },
+        "/v1/apps/{appId}/reloads/metadata/{reloadId}": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "headers": {},
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ReloadListMetadata"
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "appId",
+                        "required": true,
+                        "description": "Identifier of the app",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "in": "path",
+                        "name": "reloadId",
+                        "required": true,
+                        "description": "Identifier of the reload. Use empty reloadId to get all reloads.",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "description": "Retrieves the app reload metadata list.\nReload metadata contains reload information, including reload id, duration, endtime and lineage load info.",
+                "x-qlik-access-control": [
+                    "read"
+                ],
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "locked",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-entity-revision": "1c2365a8-ed84-4671-bcce-0fb80dadeebe",
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "1",
+                    "limit": 1000
+                }
+            }
+        },
         "/v1/apps/{appId}/scripts": {
             "get": {
                 "responses": {
@@ -14783,6 +14835,7 @@
                         "name": "limit",
                         "schema": {
                             "type": "integer",
+                            "default": 10,
                             "maximum": 100,
                             "minimum": 1
                         },
@@ -14866,12 +14919,16 @@
                 ],
                 "description": "Finds and returns the collections that the user can access. This endpoint does not return the user's favorites collection.\n",
                 "operationId": "collections#listCollections",
+                "x-qlik-guidelines-ignore": [
+                    "must-include-common-properties-for-endpoints-and-functions-method",
+                    "must-not-prefix-boolean-fields-with-is"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "03b88109-c3c5-4b08-bd4e-a91687ec2ecb",
+                "x-qlik-entity-revision": "a2de69ac-0d49-4c36-82f5-27b803b9ceaa",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -14987,12 +15044,15 @@
                     },
                     "required": true
                 },
+                "x-qlik-guidelines-ignore": [
+                    "must-include-common-properties-for-endpoints-and-functions-method"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "1d86ca3c-b504-4d93-8118-fef4a65cb1bd",
+                "x-qlik-entity-revision": "03052eaa-469a-4d75-ab15-3dc60a2e4495",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -15096,12 +15156,16 @@
                 ],
                 "description": "Finds and returns a collection.\n",
                 "operationId": "collections#getCollection",
+                "x-qlik-guidelines-ignore": [
+                    "must-include-common-properties-for-endpoints-and-functions-method",
+                    "must-not-prefix-boolean-fields-with-is"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b86bcbf9-45d2-41be-9821-8d3c92c99f1b",
+                "x-qlik-entity-revision": "e62335b0-02b1-41c1-86a2-ae328e5a6093",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -15213,12 +15277,16 @@
                     },
                     "required": true
                 },
+                "x-qlik-guidelines-ignore": [
+                    "must-include-common-properties-for-endpoints-and-functions-method",
+                    "must-not-prefix-boolean-fields-with-is"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "78880c36-fb6c-49de-b080-b71ead088621",
+                "x-qlik-entity-revision": "ef512551-0e8c-4cf3-9972-6aa4ed688c68",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -15298,12 +15366,15 @@
                 ],
                 "description": "Deletes a collection and removes all items from the collection.\n",
                 "operationId": "collections#deleteCollection",
+                "x-qlik-guidelines-ignore": [
+                    "must-include-common-properties-for-endpoints-and-functions-method"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f863bbb8-334c-470d-b220-04d08769efb9",
+                "x-qlik-entity-revision": "44d14160-1f12-40b2-a7f7-86091d42df04",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -15521,12 +15592,18 @@
                 ],
                 "description": "Finds and returns items from a collection that the user has access to.\n",
                 "operationId": "collections#listCollectionItems",
+                "x-qlik-guidelines-ignore": [
+                    "must-include-common-properties-for-endpoints-and-functions-parameters",
+                    "must-include-common-properties-for-endpoints-and-functions-method",
+                    "must-include-common-properties-for-endpoints-and-functions-parameters",
+                    "must-not-prefix-boolean-fields-with-is"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "7c9e093c-f8f2-4cc0-84cb-7e2fc2529ac5",
+                "x-qlik-entity-revision": "7663572f-4fcc-46fe-a15e-94d58ae1bc7b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -15668,12 +15745,15 @@
                     },
                     "required": true
                 },
+                "x-qlik-guidelines-ignore": [
+                    "must-include-common-properties-for-endpoints-and-functions-method"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "afba1be2-352c-40ec-875c-ab9217446de4",
+                "x-qlik-entity-revision": "e2614d6d-b8c8-4f5b-ac95-7b9da8e756a4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -15786,12 +15866,16 @@
                 ],
                 "description": "Finds and returns an item. See GET /items/{id}\n",
                 "operationId": "collections#getCollectionItem",
+                "x-qlik-guidelines-ignore": [
+                    "must-include-common-properties-for-endpoints-and-functions-method",
+                    "must-not-prefix-boolean-fields-with-is"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "2c7a4279-60cf-4325-8fce-b347b596b7e1",
+                "x-qlik-entity-revision": "1ff3ec4c-4739-4ee0-9aec-0ae8afea7962",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -15890,12 +15974,15 @@
                 ],
                 "description": "Removes an item from a collection.\n",
                 "operationId": "collections#deleteCollectionItem",
+                "x-qlik-guidelines-ignore": [
+                    "must-include-common-properties-for-endpoints-and-functions-method"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "67498ef6-f727-4875-88cc-3e5adbd1d115",
+                "x-qlik-entity-revision": "b52785d6-3b84-4518-ba9f-ecdf6e447a8e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -15978,12 +16065,17 @@
                 },
                 "description": "Finds and returns the user's favorites collection.\n",
                 "operationId": "collections#getFavoritesCollection",
+                "x-qlik-guidelines-ignore": [
+                    "must-include-common-properties-for-endpoints-and-functions-method",
+                    "should-not-use-302-found-if-avoidable",
+                    "must-not-prefix-boolean-fields-with-is"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "cb318380-58a6-4748-84a4-fa850ba8d43a",
+                "x-qlik-entity-revision": "264b2a6c-5a3b-4b7d-b781-dacada3902bc",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -17877,7 +17969,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "8670ddfc-208c-42f1-bf18-f271aa41e348",
+                "x-qlik-entity-revision": "5bb5929b-aeef-4a40-bb3a-462f55a9f11a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -17956,7 +18048,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "e087ce62-7d1c-47ff-8eec-f3d87f0c14b8",
+                "x-qlik-entity-revision": "45950766-2db2-4d6d-b949-46d3fef35ff2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -18050,7 +18142,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0f57bee7-af6a-4b7f-b4f6-99be8aafa9c5",
+                "x-qlik-entity-revision": "41d516fe-3ce6-4cd7-a3a5-73b58efa8818",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -18130,7 +18222,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "4b4b0cc8-5cb7-4677-a075-bc1bdcc21c60",
+                "x-qlik-entity-revision": "bca042ba-45a6-4ef5-93f2-f844f10a9c68",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -18213,7 +18305,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "8cfa5a4a-f5f8-4b3b-91fd-e32b075149d0",
+                "x-qlik-entity-revision": "a7a6bb43-1337-4d2d-bece-a485507fa79b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -18266,7 +18358,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d8ca2630-492b-4912-a992-0ba44ae2771c",
+                "x-qlik-entity-revision": "b4a1f6f5-78ab-47dd-9188-7c130efc8ab1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -18327,7 +18419,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b82a4f46-99b8-4cb2-8d2c-11de307b595f",
+                "x-qlik-entity-revision": "3c31a18e-3ba0-42bd-80a3-57126e3d8248",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -18408,7 +18500,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "41c9862e-eea2-4175-8576-4a7317ecf49c",
+                "x-qlik-entity-revision": "f9890833-7905-4f71-acb2-286d3eeb854e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -18469,7 +18561,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "a8f2c0de-3ed4-4995-89d0-54c5c1ad4ec0",
+                "x-qlik-entity-revision": "25c2b161-30ac-49e3-98de-5c591c147c5c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -18528,7 +18620,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "a2002b7b-9c3e-4382-98d4-fd36ff08108d",
+                "x-qlik-entity-revision": "61ee8d0b-5a63-4d58-957f-a79f1665d69d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -18598,7 +18690,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "671859db-cfa3-4b84-a131-3b09432ea3d1",
+                "x-qlik-entity-revision": "3aaf7f06-4820-4304-afd6-11f204738729",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -18668,7 +18760,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "87c507aa-41cb-4df7-9386-36aa4389723e",
+                "x-qlik-entity-revision": "4139d90a-1ab5-442b-a38f-fa5adf4c2d8d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -18708,7 +18800,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "4139b41c-2586-4745-83a2-f28881a72896",
+                "x-qlik-entity-revision": "741f7cb5-ea3b-411b-b573-eda7f1771f18",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -24063,6 +24155,7 @@
                         "name": "limit",
                         "schema": {
                             "type": "integer",
+                            "default": 10,
                             "maximum": 100,
                             "minimum": 1
                         },
@@ -24206,6 +24299,15 @@
                     },
                     {
                         "in": "query",
+                        "name": "spaceType",
+                        "schema": {
+                            "$ref": "#/components/schemas/spaceTypeEnum"
+                        },
+                        "required": false,
+                        "description": "The case-sensitive string used to filter items on space type(s). For example '?spaceType=shared,personal'."
+                    },
+                    {
+                        "in": "query",
                         "name": "shared",
                         "schema": {
                             "type": "boolean"
@@ -24219,12 +24321,17 @@
                 ],
                 "description": "Finds and returns items that the user has access to.\n",
                 "operationId": "items#listItems",
+                "x-qlik-guidelines-ignore": [
+                    "must-include-common-properties-for-endpoints-and-functions-method",
+                    "must-include-common-properties-for-endpoints-and-functions-parameters",
+                    "must-not-prefix-boolean-fields-with-is"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "1416fbe0-f8ee-48b8-8ddb-af826dcb4fb0",
+                "x-qlik-entity-revision": "d2974779-7c5d-451b-8cfb-2f64b534abff",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -24328,12 +24435,16 @@
                 ],
                 "description": "Finds and returns an item.\n",
                 "operationId": "items#getItem",
+                "x-qlik-guidelines-ignore": [
+                    "must-include-common-properties-for-endpoints-and-functions-method",
+                    "must-not-prefix-boolean-fields-with-is"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "4a57aa43-c591-494a-9854-8bb5c1eca46d",
+                "x-qlik-entity-revision": "9c827e3e-f293-410d-af57-04287db53fcc",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -24475,12 +24586,16 @@
                     },
                     "required": true
                 },
+                "x-qlik-guidelines-ignore": [
+                    "must-include-common-properties-for-endpoints-and-functions-method",
+                    "must-not-prefix-boolean-fields-with-is"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "15cacd77-dd4c-497f-b3d4-af11045c934a",
+                "x-qlik-entity-revision": "b177cdc2-6ca5-4eb2-809e-6fa5800b1e5b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -24575,12 +24690,15 @@
                 ],
                 "description": "Deletes an item and removes the item from all collections.\n",
                 "operationId": "items#deleteItem",
+                "x-qlik-guidelines-ignore": [
+                    "must-include-common-properties-for-endpoints-and-functions-method"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c29803bb-6c4c-4635-841b-2b13471e308b",
+                "x-qlik-entity-revision": "b5aa08c3-ea69-4d84-94a4-0e21193dcc92",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -24686,6 +24804,7 @@
                         "name": "limit",
                         "schema": {
                             "type": "integer",
+                            "default": 10,
                             "maximum": 100,
                             "minimum": 1
                         },
@@ -24757,12 +24876,16 @@
                 ],
                 "description": "Finds and returns the collections of an item. This endpoint does not return the user's favorites collection.\n",
                 "operationId": "items#listItemCollections",
+                "x-qlik-guidelines-ignore": [
+                    "must-include-common-properties-for-endpoints-and-functions-method",
+                    "must-not-prefix-boolean-fields-with-is"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "97391cb7-ba81-4d6c-b509-b48cd386b977",
+                "x-qlik-entity-revision": "e7544651-6aac-4318-b9ad-c58610f65da0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -24868,6 +24991,7 @@
                         "name": "limit",
                         "schema": {
                             "type": "integer",
+                            "default": 10,
                             "maximum": 100,
                             "minimum": 1
                         },
@@ -24921,12 +25045,16 @@
                 ],
                 "description": "Finds and returns the published items for a given item. This endpoint is particularly useful for finding the published copies of an app or a qvapp when you want to replace the content of a published copy with new information from the source item.\n",
                 "operationId": "items#listPublishedItems",
+                "x-qlik-guidelines-ignore": [
+                    "must-include-common-properties-for-endpoints-and-functions-method",
+                    "must-not-prefix-boolean-fields-with-is"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "fd11db86-21d6-4ecb-96f4-abf2ecfa75bb",
+                "x-qlik-entity-revision": "012b7f5b-d5fc-4934-a9a6-cbb5165c36c5",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -25004,12 +25132,15 @@
                 },
                 "description": "Finds and returns the settings for the current tenant.\n",
                 "operationId": "items#GetSettings",
+                "x-qlik-guidelines-ignore": [
+                    "must-include-common-properties-for-endpoints-and-functions-method"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "a274aa68-0492-401b-86e8-3906a12965ae",
+                "x-qlik-entity-revision": "d8e39fdd-9c12-4c42-a9ae-361aad9e3690",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -25110,12 +25241,16 @@
                     },
                     "required": true
                 },
+                "x-qlik-guidelines-ignore": [
+                    "must-return-http-204-on-successful-patch",
+                    "must-include-common-properties-for-endpoints-and-functions-method"
+                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f9600f80-d96f-4ba0-9dfc-b5d8670cadd1",
+                "x-qlik-entity-revision": "d7b00b03-9579-420e-903d-abf55fe49b2e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -28010,6 +28145,16 @@
                         },
                         "description": "Not Found."
                     },
+                    "429": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Too Many Requests."
+                    },
                     "500": {
                         "content": {
                             "application/json": {
@@ -28039,7 +28184,8 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "The case sensitive string used to search for a task by app ID."
+                        "description": "The case sensitive string used to search for a task by app ID.",
+                        "x-qlik-customer-data": false
                     },
                     {
                         "in": "query",
@@ -28052,7 +28198,8 @@
                             "minimum": 1
                         },
                         "required": false,
-                        "description": "The maximum number of resources to return for a request. The limit must be an integer between 1 and 100 (inclusive)."
+                        "description": "The maximum number of resources to return for a request. The limit must be an integer between 1 and 100 (inclusive).",
+                        "x-qlik-customer-data": false
                     },
                     {
                         "in": "query",
@@ -28061,7 +28208,8 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "The cursor to the next page of resources. Provide either the next or prev cursor, but not both."
+                        "description": "The cursor to the next page of resources. Provide either the next or prev cursor, but not both.",
+                        "x-qlik-customer-data": false
                     },
                     {
                         "in": "query",
@@ -28070,7 +28218,8 @@
                             "type": "boolean"
                         },
                         "required": false,
-                        "description": "The boolean value used to search for a task is partial or not"
+                        "description": "The boolean value used to search for a task is partial or not",
+                        "x-qlik-customer-data": false
                     },
                     {
                         "in": "query",
@@ -28079,7 +28228,8 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "The cursor to the previous page of resources. Provide either the next or prev cursor, but not both."
+                        "description": "The cursor to the previous page of resources. Provide either the next or prev cursor, but not both.",
+                        "x-qlik-customer-data": false
                     },
                     {
                         "in": "header",
@@ -28088,7 +28238,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "JWT containing tenant credentials."
+                        "description": "JWT containing tenant credentials.",
+                        "x-qlik-customer-data": false
                     }
                 ],
                 "x-qlik-visibility": "public",
@@ -28096,7 +28247,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f4474a32-0422-4392-a1b5-2fb9ebd650af",
+                "x-qlik-entity-revision": "fa38a705-a011-4447-9c2f-c5d3ad173997",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -28188,7 +28339,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "JWT containing tenant credentials."
+                        "description": "JWT containing tenant credentials.",
+                        "x-qlik-customer-data": false
                     }
                 ],
                 "requestBody": {
@@ -28207,7 +28359,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "96886ae1-5d6f-460a-b898-1fe4072c11e4",
+                "x-qlik-entity-revision": "c073952b-46de-4c34-a012-53841de2f63d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -28272,6 +28424,16 @@
                         },
                         "description": "Not Found."
                     },
+                    "429": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Too Many Requests."
+                    },
                     "500": {
                         "content": {
                             "application/json": {
@@ -28301,7 +28463,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "The unique identifier of the task."
+                        "description": "The unique identifier of the task.",
+                        "x-qlik-customer-data": false
                     },
                     {
                         "in": "header",
@@ -28310,7 +28473,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "JWT containing tenant credentials."
+                        "description": "JWT containing tenant credentials.",
+                        "x-qlik-customer-data": false
                     }
                 ],
                 "x-qlik-visibility": "public",
@@ -28318,7 +28482,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "3b8c2f8a-dc05-4ab9-8024-87164fc8d4e7",
+                "x-qlik-entity-revision": "06dddcec-cf54-40a5-84a3-9cb93cb5b6fa",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -28410,7 +28574,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "The unique identifier of the task."
+                        "description": "The unique identifier of the task.",
+                        "x-qlik-customer-data": false
                     },
                     {
                         "in": "header",
@@ -28419,7 +28584,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "JWT containing tenant credentials."
+                        "description": "JWT containing tenant credentials.",
+                        "x-qlik-customer-data": false
                     }
                 ],
                 "requestBody": {
@@ -28438,7 +28604,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0e8de427-50f8-4775-81f7-d2cafdd15904",
+                "x-qlik-entity-revision": "79943efe-6a8c-46bf-8519-da6900ead47a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -28513,7 +28679,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "The unique identifier of the task."
+                        "description": "The unique identifier of the task.",
+                        "x-qlik-customer-data": false
                     },
                     {
                         "in": "header",
@@ -28522,7 +28689,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "JWT containing tenant credentials."
+                        "description": "JWT containing tenant credentials.",
+                        "x-qlik-customer-data": false
                     }
                 ],
                 "x-qlik-visibility": "public",
@@ -28530,7 +28698,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "034709b6-8e04-4986-923c-5f2843e5e92b",
+                "x-qlik-entity-revision": "374511c7-8193-4923-a116-7fed07a56a54",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -28604,7 +28772,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "The UUID formatted string used to search for an app's reload history entries. TenantAdmin users may omit this parameter to list all reload history in the tenant."
+                        "description": "The UUID formatted string used to search for an app's reload history entries. TenantAdmin users may omit this parameter to list all reload history in the tenant.",
+                        "x-qlik-customer-data": false
                     },
                     {
                         "in": "query",
@@ -28612,9 +28781,10 @@
                         "schema": {
                             "type": "string"
                         },
-                        "example": "(status eq \"FAILED\" or status eq \"EXCEEDED_LIMIT\") and partial eq \"false\"\n",
+                        "example": "(status eq \"FAILED\" or status eq \"EXCEEDED_LIMIT\") and partial eq \"false\" and type eq \"chronos\"\n",
                         "required": false,
-                        "description": "SCIM filter expression used to search for reloads.\nThe filter syntax is defined in RFC 7644 section 3.4.2.2\n\nSupported attributes:\n- status: see #schemas/Status\n- partial: see #schemas/Partial\n\nSupported operators:\n- eq\n"
+                        "description": "SCIM filter expression used to search for reloads.\nThe filter syntax is defined in RFC 7644 section 3.4.2.2\n\nSupported attributes:\n- status: see #schemas/Status\n- partial: see #schemas/Partial\n- type: see #schemas/Type\n\nSupported operators:\n- eq\n",
+                        "x-qlik-customer-data": false
                     },
                     {
                         "in": "query",
@@ -28627,7 +28797,8 @@
                             "minimum": 1
                         },
                         "required": false,
-                        "description": "The maximum number of resources to return for a request. The limit must be an integer between 1 and 100 (inclusive)."
+                        "description": "The maximum number of resources to return for a request. The limit must be an integer between 1 and 100 (inclusive).",
+                        "x-qlik-customer-data": false
                     },
                     {
                         "in": "query",
@@ -28637,7 +28808,8 @@
                             "default": true
                         },
                         "required": false,
-                        "description": "The boolean value used to include the log field or not, default is included, set log=false to exclude the log field."
+                        "description": "The boolean value used to include the log field or not, default is included, set log=false to exclude the log field.",
+                        "x-qlik-customer-data": false
                     },
                     {
                         "in": "query",
@@ -28646,7 +28818,8 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "The cursor to the next page of resources. Provide either the next or prev cursor, but not both."
+                        "description": "The cursor to the next page of resources. Provide either the next or prev cursor, but not both.",
+                        "x-qlik-customer-data": false
                     },
                     {
                         "in": "query",
@@ -28655,7 +28828,8 @@
                             "type": "boolean"
                         },
                         "required": false,
-                        "description": "The boolean value used to search for a reload is partial or not."
+                        "description": "The boolean value used to search for a reload is partial or not.",
+                        "x-qlik-customer-data": false
                     },
                     {
                         "in": "query",
@@ -28664,7 +28838,8 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "The cursor to the previous page of resources. Provide either the next or prev cursor, but not both."
+                        "description": "The cursor to the previous page of resources. Provide either the next or prev cursor, but not both.",
+                        "x-qlik-customer-data": false
                     },
                     {
                         "in": "header",
@@ -28673,7 +28848,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "JWT containing tenant credentials."
+                        "description": "JWT containing tenant credentials.",
+                        "x-qlik-customer-data": false
                     }
                 ],
                 "x-qlik-stability": "stable",
@@ -28681,7 +28857,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f9055f43-32d4-4cb1-954b-473ef12345d2",
+                "x-qlik-entity-revision": "bb480790-3d5d-4411-8f0a-27fae7079bbc",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -28763,7 +28939,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "JWT containing tenant credentials."
+                        "description": "JWT containing tenant credentials.",
+                        "x-qlik-customer-data": false
                     }
                 ],
                 "requestBody": {
@@ -28782,7 +28959,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "6548fbe3-854c-4818-8a99-7c20b8dda005",
+                "x-qlik-entity-revision": "7f7c2fbd-850e-4336-a806-0181c1280d4c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -28866,7 +29043,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "The unique identifier of the reload."
+                        "description": "The unique identifier of the reload.",
+                        "x-qlik-customer-data": false
                     },
                     {
                         "in": "header",
@@ -28875,7 +29053,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "JWT containing tenant credentials."
+                        "description": "JWT containing tenant credentials.",
+                        "x-qlik-customer-data": false
                     }
                 ],
                 "description": "Finds and returns a reload record",
@@ -28884,7 +29063,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "89a7df03-2caa-4521-a63f-4fcff27c68a9",
+                "x-qlik-entity-revision": "b58f5b56-c7b7-4681-a103-2dfaa9d025f1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -28974,7 +29153,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "The unique identifier of the reload."
+                        "description": "The unique identifier of the reload.",
+                        "x-qlik-customer-data": false
                     },
                     {
                         "in": "header",
@@ -28983,7 +29163,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "JWT containing tenant credentials."
+                        "description": "JWT containing tenant credentials.",
+                        "x-qlik-customer-data": false
                     }
                 ],
                 "description": "Cancels a reload that is in progress or has been queued",
@@ -28992,7 +29173,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "113768ff-f0d1-4645-a8d1-fee3f3715e02",
+                "x-qlik-entity-revision": "de27b3b4-bcfc-4685-bdb2-0f995c658779",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -36477,7 +36658,8 @@
                 "href": {
                     "type": "string",
                     "format": "uri",
-                    "example": "http://example.com"
+                    "example": "http://example.com",
+                    "x-qlik-customer-data": false
                 }
             }
         },
@@ -37093,6 +37275,125 @@
                 "text": {
                     "type": "string",
                     "description": "The NL query."
+                }
+            }
+        },
+        "ReloadListMetadata": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/components/schemas/ReloadMeta"
+                    },
+                    "description": "Array of ReloadMeta."
+                }
+            }
+        },
+        "ReloadMeta": {
+            "type": "object",
+            "properties": {
+                "endTime": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Time when reload ended."
+                },
+                "success": {
+                    "type": "boolean",
+                    "description": "true if the reload was successful."
+                },
+                "duration": {
+                    "type": "integer",
+                    "format": "int64",
+                    "description": "Duration of reload (ms)."
+                },
+                "reloadId": {
+                    "type": "string",
+                    "description": "Reload identifier."
+                },
+                "statements": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/components/schemas/ReloadStatements"
+                    },
+                    "description": "List of external loaded or stored statements."
+                },
+                "loadFilesBytes": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "isPartialReload": {
+                    "type": "boolean",
+                    "description": "True if the reload is a partial reload."
+                },
+                "storeFilesBytes": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "loadExternalBytes": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "loadDataFilesBytes": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "storeDataFilesBytes": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "ReloadStatements": {
+            "type": "object",
+            "properties": {
+                "qri": {
+                    "type": "string",
+                    "description": "Resource Identifier."
+                },
+                "type": {
+                    "type": "string",
+                    "description": "Type of statement, e.g. Store/Load."
+                },
+                "label": {
+                    "type": "string",
+                    "description": "Label of the resource level node in lineage."
+                },
+                "dataSize": {
+                    "type": "integer",
+                    "format": "int64",
+                    "description": "Data loaded from the network (bytes)."
+                },
+                "duration": {
+                    "type": "integer",
+                    "format": "int64",
+                    "description": "Duration of data generation (ms)."
+                },
+                "nbrOfRows": {
+                    "type": "integer",
+                    "format": "int64",
+                    "description": "Number of rows loaded."
+                },
+                "tableName": {
+                    "type": "string",
+                    "description": "Name of the source table in lineage."
+                },
+                "connection": {
+                    "type": "string",
+                    "description": "The connecton name."
+                },
+                "nbrOfFields": {
+                    "type": "integer",
+                    "format": "int64",
+                    "description": "Number of fields loaded."
+                },
+                "connectionId": {
+                    "type": "string",
+                    "description": "Connection ID."
+                },
+                "partialReloadOperation": {
+                    "type": "string",
+                    "description": "Partial load operation. e.g. add/replace/update/merge. n/a when not in partial load mode."
                 }
             }
         },
@@ -50491,6 +50792,16 @@
                 }
             }
         },
+        "spaceTypeEnum": {
+            "enum": [
+                "shared",
+                "managed",
+                "personal",
+                "data"
+            ],
+            "type": "string",
+            "description": "The case-sensitive string defining the space type."
+        },
         "assignmentsActionsAddRequest": {
             "type": "object",
             "example": {
@@ -52018,7 +52329,8 @@
                             "type": "string",
                             "example": "scheduled_reload",
                             "description": "Type of task being created - only contains the \"scheduled_reload\" value. Type value is not used for creating a schedule reload. It has been deprecated since 2022-04-05.",
-                            "x-qlik-deprecated": true
+                            "x-qlik-deprecated": true,
+                            "x-qlik-customer-data": false
                         }
                     }
                 }
@@ -52039,7 +52351,8 @@
                             ],
                             "type": "string",
                             "example": "Disabled",
-                            "description": "Toggle for enabling and disabling the reload task"
+                            "description": "Toggle for enabling and disabling the reload task",
+                            "x-qlik-customer-data": false
                         }
                     }
                 }
@@ -52076,13 +52389,15 @@
                         "id": {
                             "type": "string",
                             "example": "5be59decca62aa00097268a4",
-                            "description": "The ID of the task."
+                            "description": "The ID of the task.",
+                            "x-qlik-customer-data": false
                         },
                         "log": {
                             "type": "string",
                             "example": "Scheduled reload has been disabled since exceeded limit of 5 consecutive reload failures. Please fix error and re-enable schedule.",
                             "description": "The reason why the task was disabled.",
-                            "x-qlik-deprecated": true
+                            "x-qlik-deprecated": true,
+                            "x-qlik-customer-data": false
                         },
                         "links": {
                             "$ref": "#/components/schemas/SelfLink"
@@ -52095,28 +52410,33 @@
                             ],
                             "type": "string",
                             "example": "Enabled",
-                            "description": "Toggle for enabling and disabling the reload task"
+                            "description": "Toggle for enabling and disabling the reload task",
+                            "x-qlik-customer-data": false
                         },
                         "userId": {
                             "type": "string",
                             "example": "FyPG6xWp6prDU6BXQ3g7LY9gWR_YRkkx",
-                            "description": "The ID of the user who owns the task."
+                            "description": "The ID of the user who owns the task.",
+                            "x-qlik-customer-data": false
                         },
                         "spaceId": {
                             "type": "string",
                             "example": "602c2c2be2be220002a22a22",
-                            "description": "The space ID of the application"
+                            "description": "The space ID of the application",
+                            "x-qlik-customer-data": false
                         },
                         "tenantId": {
                             "type": "string",
                             "example": "efSCcpNYuayTysONkUcE3F80zYQ_LV9w",
-                            "description": "The ID of the tenant who owns the task."
+                            "description": "The ID of the tenant who owns the task.",
+                            "x-qlik-customer-data": false
                         },
                         "fortressId": {
                             "type": "string",
                             "example": "5c5b097116d25a0001a48b06",
                             "description": "The fortress ID of the application",
-                            "x-qlik-deprecated": true
+                            "x-qlik-deprecated": true,
+                            "x-qlik-customer-data": false
                         },
                         "disabledCode": {
                             "enum": [
@@ -52127,17 +52447,20 @@
                             ],
                             "type": "string",
                             "example": "CONSECUTIVE-FAILURES",
-                            "description": "The reason why the task was disabled."
+                            "description": "The reason why the task was disabled.",
+                            "x-qlik-customer-data": false
                         },
                         "lastExecutionTime": {
                             "type": "string",
                             "example": "2022-09-20T17:17:00Z",
-                            "description": "The last time the task executed."
+                            "description": "The last time the task executed.",
+                            "x-qlik-customer-data": false
                         },
                         "nextExecutionTime": {
                             "type": "string",
                             "example": "2022-09-20T17:17:00Z",
-                            "description": "The next time the task will execute."
+                            "description": "The next time the task will execute.",
+                            "x-qlik-customer-data": false
                         }
                     }
                 }
@@ -52149,22 +52472,26 @@
                 "appId": {
                     "type": "string",
                     "example": "116dbfae-7fb9-4983-8e23-5ccd8c508722",
-                    "description": "The ID of the app."
+                    "description": "The ID of the app.",
+                    "x-qlik-customer-data": false
                 },
                 "partial": {
                     "type": "boolean",
                     "default": false,
-                    "description": "The task is partial reload or not"
+                    "description": "The task is partial reload or not",
+                    "x-qlik-customer-data": false
                 },
                 "timeZone": {
                     "type": "string",
                     "example": "America/Toronto",
-                    "description": "The time zone in which the time is specified. (Formatted as an IANA Time Zone Database name, e.g. Europe/Zurich.) This field specifies the time zone in which the event start/end are expanded. If missing the start/end fields must specify a UTC offset in RFC3339 format."
+                    "description": "The time zone in which the time is specified. (Formatted as an IANA Time Zone Database name, e.g. Europe/Zurich.) This field specifies the time zone in which the event start/end are expanded. If missing the start/end fields must specify a UTC offset in RFC3339 format.",
+                    "x-qlik-customer-data": false
                 },
                 "autoReload": {
                     "type": "boolean",
                     "default": false,
-                    "description": "A flag that indicates whether a reload is triggered when data of the app is changed"
+                    "description": "A flag that indicates whether a reload is triggered when data of the app is changed",
+                    "x-qlik-customer-data": false
                 },
                 "recurrence": {
                     "type": "array",
@@ -52175,22 +52502,26 @@
                         "RRULE:FREQ=DAILY;INTERVAL=1;BYHOUR=11;BYMINUTE=18;BYSECOND=0",
                         "RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=MO,TU;BYHOUR=13;BYMINUTE=17;BYSECOND=0"
                     ],
-                    "description": "List of RECUR lines for a recurring event, as specified in RFC5545. Note that DTSTART and DTEND lines are not allowed in this field; event start and end times are specified in the start and end fields. This field is omitted for single events or instances of recurring events"
+                    "description": "List of RECUR lines for a recurring event, as specified in RFC5545. Note that DTSTART and DTEND lines are not allowed in this field; event start and end times are specified in the start and end fields. This field is omitted for single events or instances of recurring events",
+                    "x-qlik-customer-data": false
                 },
                 "endDateTime": {
                     "type": "string",
                     "example": "2022-10-12T23:59:00",
-                    "description": "The time that the task will stop recurring. If the time zone is missing, this is a combined date-time value expressing a time with a fixed UTC offset (formatted according to RFC3339). If a time zone is given, the zone offset must be omitted."
+                    "description": "The time that the task will stop recurring. If the time zone is missing, this is a combined date-time value expressing a time with a fixed UTC offset (formatted according to RFC3339). If a time zone is given, the zone offset must be omitted.",
+                    "x-qlik-customer-data": false
                 },
                 "startDateTime": {
                     "type": "string",
                     "example": "2022-09-19T11:18:00",
-                    "description": "The time that the task execution start recurring. If the time zone is missing, this is a combined date-time value expressing a time with a fixed UTC offset (formatted according to RFC3339). If a time zone is given, the zone offset must be omitted. Field startDateTime should not be before the Unix epoch 00:00:00 UTC on 1 January 1970. Note that the empty string value with the empty recurrence array indicates the scheduled job is not set."
+                    "description": "The time that the task execution start recurring. If the time zone is missing, this is a combined date-time value expressing a time with a fixed UTC offset (formatted according to RFC3339). If a time zone is given, the zone offset must be omitted. Field startDateTime should not be before the Unix epoch 00:00:00 UTC on 1 January 1970. Note that the empty string value with the empty recurrence array indicates the scheduled job is not set.",
+                    "x-qlik-customer-data": false
                 },
                 "autoReloadPartial": {
                     "type": "boolean",
                     "default": false,
-                    "description": "A flag that indicates whether it is a partial reload or not for the auto reload"
+                    "description": "A flag that indicates whether it is a partial reload or not for the auto reload",
+                    "x-qlik-customer-data": false
                 }
             }
         },
@@ -52215,7 +52546,8 @@
         "Partial": {
             "type": "boolean",
             "example": false,
-            "description": "The boolean value used to present the reload is partial or not."
+            "description": "The boolean value used to present the reload is partial or not.",
+            "x-qlik-customer-data": false
         },
         "Reload": {
             "type": "object",
@@ -52232,29 +52564,23 @@
                 "id": {
                     "type": "string",
                     "example": "5be59decca62aa00097268a4",
-                    "description": "The ID of the reload."
+                    "description": "The ID of the reload.",
+                    "x-qlik-customer-data": false
                 },
                 "log": {
                     "type": "string",
                     "example": "ReloadID: 5be59decca62aa00097268a4\\nStarted loading\\n(A detailed script progress log can be downloaded when the reload is finished)\\nApp saved\\nFinished successfully\\n",
-                    "description": "The log describing the result of the latest reload execution from the request."
+                    "description": "The log describing the result of the latest reload execution from the request.",
+                    "x-qlik-customer-data": true
                 },
                 "type": {
-                    "enum": [
-                        "hub",
-                        "chronos",
-                        "external",
-                        "automations",
-                        "data-refresh"
-                    ],
-                    "type": "string",
-                    "example": "hub",
-                    "description": "What initiated the reload: hub = one-time reload manually triggered in hub, chronos = time based scheduled reload triggered by chronos, external = reload triggered via external API request, automations = reload triggered in automation, data-refresh = reload triggered by refresh of data."
+                    "$ref": "#/components/schemas/Type"
                 },
                 "appId": {
                     "type": "string",
                     "example": "116dbfae-7fb9-4983-8e23-5ccd8c508722",
-                    "description": "The ID of the app."
+                    "description": "The ID of the app.",
+                    "x-qlik-customer-data": false
                 },
                 "links": {
                     "$ref": "#/components/schemas/ReloadLinks"
@@ -52265,12 +52591,14 @@
                 "userId": {
                     "type": "string",
                     "example": "FyPG6xWp6prDU6BXQ3g7LY9gWR_YRkkx",
-                    "description": "The ID of the user who created the reload."
+                    "description": "The ID of the user who created the reload.",
+                    "x-qlik-customer-data": false
                 },
                 "endTime": {
                     "type": "string",
                     "example": "2020-11-03T17:00:11.865Z",
-                    "description": "The time the reload job finished."
+                    "description": "The time the reload job finished.",
+                    "x-qlik-customer-data": false
                 },
                 "partial": {
                     "$ref": "#/components/schemas/Partial"
@@ -52278,22 +52606,26 @@
                 "tenantId": {
                     "type": "string",
                     "example": "efSCcpNYuayTysONkUcE3F80zYQ_LV9w",
-                    "description": "The ID of the tenant who owns the reload."
+                    "description": "The ID of the tenant who owns the reload.",
+                    "x-qlik-customer-data": false
                 },
                 "startTime": {
                     "type": "string",
                     "example": "2020-11-03T17:00:06.351Z",
-                    "description": "The time the reload job was consumed from the queue."
+                    "description": "The time the reload job was consumed from the queue.",
+                    "x-qlik-customer-data": false
                 },
                 "engineTime": {
                     "type": "string",
                     "example": "2020-11-03T17:00:07.048Z",
-                    "description": "The timestamp returned from the Sense engine upon successful reload."
+                    "description": "The timestamp returned from the Sense engine upon successful reload.",
+                    "x-qlik-customer-data": false
                 },
                 "creationTime": {
                     "type": "string",
                     "example": "2020-11-03T17:00:00.164Z",
-                    "description": "The time the reload job was created."
+                    "description": "The time the reload job was created.",
+                    "x-qlik-customer-data": false
                 }
             }
         },
@@ -52313,12 +52645,14 @@
                 "appId": {
                     "type": "string",
                     "example": "116dbfae-7fb9-4983-8e23-5ccd8c508722",
-                    "description": "The ID of the app to be reloaded."
+                    "description": "The ID of the app to be reloaded.",
+                    "x-qlik-customer-data": false
                 },
                 "partial": {
                     "type": "boolean",
                     "example": false,
-                    "description": "The boolean value used to present the reload is partial or not"
+                    "description": "The boolean value used to present the reload is partial or not",
+                    "x-qlik-customer-data": false
                 }
             }
         },
@@ -52370,7 +52704,21 @@
             ],
             "type": "string",
             "example": "SUCCEEDED",
-            "description": "The status of the reload. There are seven statuses. `QUEUED`, `RELOADING`, `CANCELING` are the active statuses. `SUCCEEDED`, `FAILED`, `CANCELED`, `EXCEEDED_LIMIT` are the end statuses."
+            "description": "The status of the reload. There are seven statuses. `QUEUED`, `RELOADING`, `CANCELING` are the active statuses. `SUCCEEDED`, `FAILED`, `CANCELED`, `EXCEEDED_LIMIT` are the end statuses.",
+            "x-qlik-customer-data": false
+        },
+        "Type": {
+            "enum": [
+                "hub",
+                "external",
+                "chronos",
+                "automations",
+                "data-refresh"
+            ],
+            "type": "string",
+            "example": "chronos",
+            "description": "What initiated the reload: hub = one-time reload manually triggered in hub, chronos = time based scheduled reload triggered by chronos, external = reload triggered via external API request, automations = reload triggered in automation, data-refresh = reload triggered by refresh of data.",
+            "x-qlik-customer-data": false
         },
         "ListRolesResult": {
             "type": "object",
