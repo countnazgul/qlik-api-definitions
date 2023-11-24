@@ -914,9 +914,6 @@
                         "description": "Specifies whether the Authorization Server prompts the End-User for re-authentication and consent."
                     }
                 ],
-                "x-qlik-dependencies": [
-                    "GET:/v1/oauth-clients/{clientId}"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
@@ -1071,9 +1068,6 @@
                         }
                     }
                 },
-                "x-qlik-dependencies": [
-                    "GET:/v1/licenses/assignments"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
@@ -1327,12 +1321,6 @@
                 ],
                 "description": "Retrieves web integrations matching the query.",
                 "operationId": "getWebIntegrations",
-                "x-qlik-dependencies": [
-                    "POST:/accesscontrol/evaluation"
-                ],
-                "x-qlik-guidelines-ignore": [
-                    "must-always-return-json-objects-as-top-level-data-structures"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
@@ -1450,9 +1438,6 @@
                     "required": true,
                     "description": "Properties that the user wants to set for the web integration."
                 },
-                "x-qlik-dependencies": [
-                    "POST:/accesscontrol/evaluation"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
@@ -1517,9 +1502,6 @@
                 ],
                 "description": "Retrieves a single web integration by ID.",
                 "operationId": "getWebIntegrationById",
-                "x-qlik-dependencies": [
-                    "POST:/accesscontrol/evaluation"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
@@ -1635,9 +1617,6 @@
                     "required": true,
                     "description": "Properties that the user wants to update for the web integration."
                 },
-                "x-qlik-dependencies": [
-                    "POST:/accesscontrol/evaluation"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
@@ -1693,9 +1672,6 @@
                 ],
                 "description": "Deletes a single web integration by ID.",
                 "operationId": "deleteWebIntegrationById",
-                "x-qlik-dependencies": [
-                    "POST:/accesscontrol/evaluation"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
@@ -3084,6 +3060,14 @@
                         "schema": {
                             "type": "string"
                         }
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Maximum number of records to return from this request. Default: 100",
+                        "schema": {
+                            "type": "string"
+                        }
                     }
                 ],
                 "description": "Retrieves the app reload metadata list.\nReload metadata contains reload information, including reload id, duration, endtime and lineage load info.",
@@ -3095,7 +3079,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "1c2365a8-ed84-4671-bcce-0fb80dadeebe",
+                "x-qlik-entity-revision": "f83e544e-d2b6-4420-a742-0a9a15ee8788",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -14919,16 +14903,12 @@
                 ],
                 "description": "Finds and returns the collections that the user can access. This endpoint does not return the user's favorites collection.\n",
                 "operationId": "collections#listCollections",
-                "x-qlik-guidelines-ignore": [
-                    "must-include-common-properties-for-endpoints-and-functions-method",
-                    "must-not-prefix-boolean-fields-with-is"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "a2de69ac-0d49-4c36-82f5-27b803b9ceaa",
+                "x-qlik-entity-revision": "40e7b94b-41c2-4c2e-a880-7acdf1c6eafd",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -15044,15 +15024,12 @@
                     },
                     "required": true
                 },
-                "x-qlik-guidelines-ignore": [
-                    "must-include-common-properties-for-endpoints-and-functions-method"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "03052eaa-469a-4d75-ab15-3dc60a2e4495",
+                "x-qlik-entity-revision": "d135b4a4-07ac-4f6f-9eb4-0616c95032c1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -15156,16 +15133,12 @@
                 ],
                 "description": "Finds and returns a collection.\n",
                 "operationId": "collections#getCollection",
-                "x-qlik-guidelines-ignore": [
-                    "must-include-common-properties-for-endpoints-and-functions-method",
-                    "must-not-prefix-boolean-fields-with-is"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "e62335b0-02b1-41c1-86a2-ae328e5a6093",
+                "x-qlik-entity-revision": "c02b389c-ecd5-4432-bc01-f9103f409abf",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -15277,16 +15250,12 @@
                     },
                     "required": true
                 },
-                "x-qlik-guidelines-ignore": [
-                    "must-include-common-properties-for-endpoints-and-functions-method",
-                    "must-not-prefix-boolean-fields-with-is"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "ef512551-0e8c-4cf3-9972-6aa4ed688c68",
+                "x-qlik-entity-revision": "b89500d5-fd4d-4073-844f-524d3a149b14",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -15366,9 +15335,6 @@
                 ],
                 "description": "Deletes a collection and removes all items from the collection.\n",
                 "operationId": "collections#deleteCollection",
-                "x-qlik-guidelines-ignore": [
-                    "must-include-common-properties-for-endpoints-and-functions-method"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
@@ -15592,18 +15558,12 @@
                 ],
                 "description": "Finds and returns items from a collection that the user has access to.\n",
                 "operationId": "collections#listCollectionItems",
-                "x-qlik-guidelines-ignore": [
-                    "must-include-common-properties-for-endpoints-and-functions-parameters",
-                    "must-include-common-properties-for-endpoints-and-functions-method",
-                    "must-include-common-properties-for-endpoints-and-functions-parameters",
-                    "must-not-prefix-boolean-fields-with-is"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "7663572f-4fcc-46fe-a15e-94d58ae1bc7b",
+                "x-qlik-entity-revision": "ca0defe4-37f6-4f61-95d4-e59b2b926a3c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -15745,15 +15705,12 @@
                     },
                     "required": true
                 },
-                "x-qlik-guidelines-ignore": [
-                    "must-include-common-properties-for-endpoints-and-functions-method"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "e2614d6d-b8c8-4f5b-ac95-7b9da8e756a4",
+                "x-qlik-entity-revision": "90378677-4f18-41cb-948b-6734886d362f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -15866,16 +15823,12 @@
                 ],
                 "description": "Finds and returns an item. See GET /items/{id}\n",
                 "operationId": "collections#getCollectionItem",
-                "x-qlik-guidelines-ignore": [
-                    "must-include-common-properties-for-endpoints-and-functions-method",
-                    "must-not-prefix-boolean-fields-with-is"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "1ff3ec4c-4739-4ee0-9aec-0ae8afea7962",
+                "x-qlik-entity-revision": "5b2fa9ff-544c-4fed-9acd-53ed590cdad4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -15974,9 +15927,6 @@
                 ],
                 "description": "Removes an item from a collection.\n",
                 "operationId": "collections#deleteCollectionItem",
-                "x-qlik-guidelines-ignore": [
-                    "must-include-common-properties-for-endpoints-and-functions-method"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
@@ -16065,11 +16015,6 @@
                 },
                 "description": "Finds and returns the user's favorites collection.\n",
                 "operationId": "collections#getFavoritesCollection",
-                "x-qlik-guidelines-ignore": [
-                    "must-include-common-properties-for-endpoints-and-functions-method",
-                    "should-not-use-302-found-if-avoidable",
-                    "must-not-prefix-boolean-fields-with-is"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
@@ -19140,7 +19085,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b68a81fe-ddea-4279-9ecc-57fc44aacfb8",
+                "x-qlik-entity-revision": "bf25e9d5-0b10-4541-bf0a-a5cfc9a07648",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -19264,7 +19209,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "9d013c74-246e-40ac-bdd2-a6055e7190fa",
+                "x-qlik-entity-revision": "b23f8567-280e-48c3-9642-a1e033723a60",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -19350,7 +19295,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c308085b-e7fe-4511-85d7-ff27f0c562f3",
+                "x-qlik-entity-revision": "7dcd840e-2312-4c5c-a506-64d4c058e31c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -19753,7 +19698,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "cf3c6f83-ab25-46ad-afec-d90e51defd3a",
+                "x-qlik-entity-revision": "8bdadc1a-f3b8-4243-90af-f70562729a06",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -19820,7 +19765,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "bd637754-873c-4713-8149-bbe50ac6a7a8",
+                "x-qlik-entity-revision": "b069e5be-9d21-472d-857b-afdd4214e7f2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -24321,17 +24266,12 @@
                 ],
                 "description": "Finds and returns items that the user has access to.\n",
                 "operationId": "items#listItems",
-                "x-qlik-guidelines-ignore": [
-                    "must-include-common-properties-for-endpoints-and-functions-method",
-                    "must-include-common-properties-for-endpoints-and-functions-parameters",
-                    "must-not-prefix-boolean-fields-with-is"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d2974779-7c5d-451b-8cfb-2f64b534abff",
+                "x-qlik-entity-revision": "16cfd015-6af4-4ea5-9ee7-9405c03aa21a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -24435,16 +24375,12 @@
                 ],
                 "description": "Finds and returns an item.\n",
                 "operationId": "items#getItem",
-                "x-qlik-guidelines-ignore": [
-                    "must-include-common-properties-for-endpoints-and-functions-method",
-                    "must-not-prefix-boolean-fields-with-is"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "9c827e3e-f293-410d-af57-04287db53fcc",
+                "x-qlik-entity-revision": "0d61daf6-13a0-420a-8429-acc057c4e7da",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -24586,16 +24522,12 @@
                     },
                     "required": true
                 },
-                "x-qlik-guidelines-ignore": [
-                    "must-include-common-properties-for-endpoints-and-functions-method",
-                    "must-not-prefix-boolean-fields-with-is"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b177cdc2-6ca5-4eb2-809e-6fa5800b1e5b",
+                "x-qlik-entity-revision": "f5bfdf00-76ff-493b-a103-2780eeff52ae",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -24690,9 +24622,6 @@
                 ],
                 "description": "Deletes an item and removes the item from all collections.\n",
                 "operationId": "items#deleteItem",
-                "x-qlik-guidelines-ignore": [
-                    "must-include-common-properties-for-endpoints-and-functions-method"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
@@ -24876,16 +24805,12 @@
                 ],
                 "description": "Finds and returns the collections of an item. This endpoint does not return the user's favorites collection.\n",
                 "operationId": "items#listItemCollections",
-                "x-qlik-guidelines-ignore": [
-                    "must-include-common-properties-for-endpoints-and-functions-method",
-                    "must-not-prefix-boolean-fields-with-is"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "e7544651-6aac-4318-b9ad-c58610f65da0",
+                "x-qlik-entity-revision": "2f81d0c3-dba7-4606-b062-95313647d6f4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -25045,16 +24970,12 @@
                 ],
                 "description": "Finds and returns the published items for a given item. This endpoint is particularly useful for finding the published copies of an app or a qvapp when you want to replace the content of a published copy with new information from the source item.\n",
                 "operationId": "items#listPublishedItems",
-                "x-qlik-guidelines-ignore": [
-                    "must-include-common-properties-for-endpoints-and-functions-method",
-                    "must-not-prefix-boolean-fields-with-is"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "012b7f5b-d5fc-4934-a9a6-cbb5165c36c5",
+                "x-qlik-entity-revision": "56a7b8c1-d410-437d-b671-52e6965b2d44",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -25132,9 +25053,6 @@
                 },
                 "description": "Finds and returns the settings for the current tenant.\n",
                 "operationId": "items#GetSettings",
-                "x-qlik-guidelines-ignore": [
-                    "must-include-common-properties-for-endpoints-and-functions-method"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
@@ -25241,10 +25159,6 @@
                     },
                     "required": true
                 },
-                "x-qlik-guidelines-ignore": [
-                    "must-return-http-204-on-successful-patch",
-                    "must-include-common-properties-for-endpoints-and-functions-method"
-                ],
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
@@ -26140,7 +26054,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "85cffc16-9137-4e05-b279-a96adf4a8bae",
+                "x-qlik-entity-revision": "04e27649-3385-4d5b-a225-6a7cb771160b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -26239,16 +26153,6 @@
                     },
                     {
                         "in": "query",
-                        "name": "terms",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "required": true,
-                        "description": "Comma separated, case-insensitive list of search terms.",
-                        "x-qlik-visibility": "private"
-                    },
-                    {
-                        "in": "query",
                         "name": "down",
                         "schema": {
                             "type": "integer",
@@ -26263,7 +26167,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "70c1002d-57b3-4870-87b8-22b3fe313726",
+                "x-qlik-entity-revision": "0d80f766-4cd4-4ea7-a1bd-a7236eea8438",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -26366,7 +26270,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c0b03324-ea41-4fde-9de5-bffb809db7a5",
+                "x-qlik-entity-revision": "7c4ff81e-bacb-450e-bc49-be16015c45ac",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -26459,7 +26363,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "1b751509-27f9-409f-a01e-55e149a5f7f9",
+                "x-qlik-entity-revision": "63ba778e-14d1-4800-a67a-fc8d858587c7",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -26587,7 +26491,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b5d7a1dc-7c10-4a8b-86fd-7adbd2499d9f",
+                "x-qlik-entity-revision": "8decd6cb-0562-4ac9-8504-9c952d989996",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -26723,7 +26627,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f20f9a2b-ca8d-4ab2-ad91-b87ceb7486c7",
+                "x-qlik-entity-revision": "cfe22d8e-a493-4dfb-a435-46484489153b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -26822,16 +26726,6 @@
                     },
                     {
                         "in": "query",
-                        "name": "terms",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "required": true,
-                        "description": "Comma separated, case-insensitive list of search terms.",
-                        "x-qlik-visibility": "private"
-                    },
-                    {
-                        "in": "query",
                         "name": "collapse",
                         "schema": {
                             "type": "boolean",
@@ -26856,7 +26750,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "e3b234c6-b674-4db3-b86e-91effb6570a3",
+                "x-qlik-entity-revision": "211c2b79-41e2-41e4-8a74-e56dc855ab9e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -26998,7 +26892,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "56058a5e-0c2c-4e32-8b78-33ed71a09c02",
+                "x-qlik-entity-revision": "7aa67b0f-d10b-4597-b5d7-6786374653cd",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -29543,7 +29437,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "21ce9ce0-0534-4f64-ab47-c4b2279d2f5c",
+                "x-qlik-entity-revision": "a86c268e-28ae-42be-be53-982d314375aa",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -29624,7 +29518,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f16f0f73-77b1-4291-8a75-8f2f8f638166",
+                "x-qlik-entity-revision": "12821155-e725-4b1d-9f1d-850603f3b67e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -29708,7 +29602,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b686d1d1-c9e4-48ab-ae79-0ab1dd740c49",
+                "x-qlik-entity-revision": "0c09a773-a3d0-46f3-9290-aa5cd280f862",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -29801,7 +29695,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f22daa5d-8ae1-43ce-995b-49fdd046a9d6",
+                "x-qlik-entity-revision": "863a452a-0435-4f45-a07e-2bfccc65b975",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -29894,7 +29788,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0cac152b-9263-4b6f-bca3-bbe6c2358a4e",
+                "x-qlik-entity-revision": "f7b794d9-8d83-4e42-8011-54c676f69086",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -29940,6 +29834,16 @@
                         },
                         "description": "Space not found or access denied."
                     },
+                    "412": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Space delete precondition (space not empty) failed."
+                    },
                     "500": {
                         "content": {
                             "application/json": {
@@ -29969,7 +29873,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "877d12d9-55ef-48e0-a29e-959e70475283",
+                "x-qlik-entity-revision": "c2df8b95-ec79-4837-a587-5609ab3167ad",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30091,7 +29995,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "9b242182-70bc-4da1-805f-2eb3100f758c",
+                "x-qlik-entity-revision": "795d228e-03f3-44f7-a8fe-2c49cde8fe27",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30148,7 +30052,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Space"
+                                    "$ref": "#/components/schemas/Errors"
                                 }
                             }
                         },
@@ -30194,7 +30098,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "1538a575-fce3-4c7d-a789-6e619baba2b8",
+                "x-qlik-entity-revision": "644c3e18-18ca-4481-b858-92c7a9e0331b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30288,7 +30192,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "516ca6a5-f0dd-4587-b005-be5e47cae907",
+                "x-qlik-entity-revision": "3f353431-8a89-43ef-bd05-a4b4a622e99a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30391,7 +30295,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "9813ba3d-ba95-4379-bbf5-70b6d123955d",
+                "x-qlik-entity-revision": "8746399f-02f6-40df-b2cc-303a4630d900",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30476,7 +30380,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "769f4105-83eb-423c-ad34-8c727a9a659b",
+                "x-qlik-entity-revision": "4689442e-d6fd-4d7e-a15c-1c0463cf10a8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30528,7 +30432,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b0b5d220-7bc0-4eaa-80d6-371e099e07ad",
+                "x-qlik-entity-revision": "229fdbf5-c3dc-4cb2-b447-cc7eafcd6036",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -31212,14 +31116,6 @@
                 },
                 "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
-                "x-qlik-dependencies": [
-                    "POST:/accesscontrol/evaluation",
-                    "GET:/features",
-                    "POST:/licenses/definition/action/validate",
-                    "GET:/oauth-clients/{clientId}",
-                    "POST:/licenses/definition/tenants",
-                    "PUT:/licenses/definition"
-                ],
                 "x-qlik-categories": [
                     "external/manage"
                 ],
@@ -31285,9 +31181,6 @@
                 "operationId": "getTenantById",
                 "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
-                "x-qlik-dependencies": [
-                    "POST:/accesscontrol/evaluation"
-                ],
                 "x-qlik-categories": [
                     "external/manage"
                 ],
@@ -31384,9 +31277,6 @@
                 },
                 "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
-                "x-qlik-dependencies": [
-                    "POST:/accesscontrol/evaluation"
-                ],
                 "x-qlik-categories": [
                     "external/manage"
                 ],
@@ -31513,14 +31403,6 @@
                 },
                 "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
-                "x-qlik-dependencies": [
-                    "POST:/accesscontrol/evaluation",
-                    "GET:/features",
-                    "GET:/licenses/overview",
-                    "GET:/oauth-clients/{clientId}",
-                    "DELETE:/jobs/{id}",
-                    "POST:/jobs"
-                ],
                 "x-qlik-categories": [
                     "external/manage"
                 ],
@@ -31636,13 +31518,6 @@
                 },
                 "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
-                "x-qlik-dependencies": [
-                    "POST:/accesscontrol/evaluation",
-                    "GET:/features",
-                    "GET:/licenses/overview",
-                    "GET:/oauth-clients/{clientId}",
-                    "DELETE:/jobs/{id}"
-                ],
                 "x-qlik-categories": [
                     "external/manage"
                 ],
@@ -31681,12 +31556,6 @@
                 },
                 "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
-                "x-qlik-dependencies": [
-                    "POST:/accesscontrol/evaluation"
-                ],
-                "x-qlik-guidelines-ignore": [
-                    "must-pluralize-resource-names"
-                ],
                 "x-qlik-categories": [
                     "external/manage"
                 ],
@@ -34666,12 +34535,6 @@
                     "type": "string",
                     "default": "PT24H",
                     "description": "The maximum lifetime, in ISO8601 duration format, for which an API key can be issued for the specified tenant."
-                },
-                "scim_externalClient_expiry": {
-                    "type": "string",
-                    "default": "P365D",
-                    "description": "The expiry of the scim externalClient token in ISO8601 duration format. Used during the creation of an externalClient API key.",
-                    "x-qlik-visibility": "private"
                 }
             }
         },
@@ -37310,6 +37173,17 @@
                 "reloadId": {
                     "type": "string",
                     "description": "Reload identifier."
+                },
+                "rowLimit": {
+                    "type": "integer",
+                    "format": "int64",
+                    "default": -1,
+                    "description": "If greater than or equal 0, defines max number of rows loaded from a data source."
+                },
+                "skipStore": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Set to true to skip Store statements.\nThe default value is false."
                 },
                 "statements": {
                     "type": "array",
@@ -40195,20 +40069,6 @@
             },
             "additionalProperties": false
         },
-        "AggregateClassificationFieldInfo": {
-            "type": "object",
-            "properties": {
-                "fieldName": {
-                    "type": "string"
-                },
-                "tableName": {
-                    "type": "string"
-                },
-                "fieldAlias": {
-                    "type": "string"
-                }
-            }
-        },
         "BinnedFrequency": {
             "type": "object",
             "properties": {
@@ -40436,9 +40296,6 @@
                     "type": "string",
                     "readOnly": true,
                     "description": "The value is automatically set by the application. User defined value is ignored."
-                },
-                "classifications": {
-                    "$ref": "#/components/schemas/Classifications"
                 },
                 "lastModifiedTime": {
                     "type": "string",
@@ -40942,9 +40799,17 @@
             }
         },
         "Tag": {
-            "type": "string",
-            "maxLength": 40,
-            "description": "The tag passed by the requesting client. For more information please look at the document docs/meta-tags.md in the reporting-service repository"
+            "type": "object",
+            "properties": {
+                "tag": {
+                    "type": "string",
+                    "x-qlik-customer-data": true
+                },
+                "score": {
+                    "type": "number",
+                    "format": "double"
+                }
+            }
         },
         "UserTag": {
             "type": "object",
@@ -41228,64 +41093,13 @@
             },
             "description": "Errors occurring when dealing with the app."
         },
-        "Blob": {
-            "type": "array",
-            "items": {
-                "type": "integer",
-                "format": "int8"
-            },
-            "x-go-type": {
-                "type": "Blob",
-                "import": {
-                    "alias": "cModels",
-                    "package": "github.com/qlik-trial/reporting-service/v9/pkg/models"
-                }
-            },
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
-        },
         "CallBackAction": {
             "properties": {
                 "httpRequest": {
                     "$ref": "#/components/schemas/HttpRequest"
-                },
-                "stanMessage": {
-                    "$ref": "#/components/schemas/StanMessage"
                 }
             },
             "description": "The callback to be performed once the report is done."
-        },
-        "ChainableSelection": {
-            "required": [
-                "selectionType"
-            ],
-            "properties": {
-                "selectionType": {
-                    "$ref": "#/components/schemas/ChainableSelectionType"
-                },
-                "selectionFilter": {
-                    "$ref": "#/components/schemas/SelectionFilter"
-                },
-                "persistentBookmark": {
-                    "$ref": "#/components/schemas/SensePersistentBookmark"
-                },
-                "temporaryBookmarkV2": {
-                    "$ref": "#/components/schemas/SenseTemporaryBookmarkV2"
-                }
-            },
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
-        },
-        "ChainableSelectionType": {
-            "enum": [
-                "selectionFilter",
-                "persistentBookmark",
-                "temporaryBookmarkV2"
-            ],
-            "type": "string",
-            "default": "selectionFilter",
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
         },
         "ComposableTemplate": {
             "required": [
@@ -41357,26 +41171,6 @@
             },
             "description": "Output to be used to export a excel template."
         },
-        "ExpansionData": {
-            "type": "object",
-            "x-go-type": {
-                "type": "ExpansionData",
-                "import": {
-                    "alias": "cModels",
-                    "package": "github.com/qlik-trial/reporting-service/v9/pkg/models"
-                }
-            },
-            "properties": {
-                "qPos": {
-                    "$ref": "#/components/schemas/PositionMark"
-                },
-                "qExcludeList": {
-                    "type": "boolean"
-                }
-            },
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
-        },
         "ExportError": {
             "type": "object",
             "required": [
@@ -41409,125 +41203,6 @@
             },
             "description": "Errors occured during report generation."
         },
-        "ExtendedLayoutBookmarkData": {
-            "type": "object",
-            "x-go-type": {
-                "type": "ExtendedLayoutBookmarkData",
-                "import": {
-                    "alias": "cModels",
-                    "package": "github.com/qlik-trial/reporting-service/v9/pkg/models"
-                }
-            },
-            "properties": {
-                "qId": {
-                    "type": "string"
-                },
-                "qActive": {
-                    "type": "boolean"
-                },
-                "qShowMode": {
-                    "type": "integer",
-                    "format": "int32"
-                },
-                "qSortData": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/components/schemas/InterFieldSortData"
-                    }
-                },
-                "qGraphMode": {
-                    "enum": [
-                        "GRAPH_MODE_BAR",
-                        "GRAPH_MODE_PIE",
-                        "GRAPH_MODE_PIVOTTABLE",
-                        "GRAPH_MODE_SCATTER",
-                        "GRAPH_MODE_LINE",
-                        "GRAPH_MODE_STRAIGHTTABLE",
-                        "GRAPH_MODE_COMBO",
-                        "GRAPH_MODE_RADAR",
-                        "GRAPH_MODE_GAUGE",
-                        "GRAPH_MODE_GRID",
-                        "GRAPH_MODE_BLOCK",
-                        "GRAPH_MODE_FUNNEL",
-                        "GRAPH_MODE_MEKKO",
-                        "GRAPH_MODE_LAST"
-                    ],
-                    "type": "string"
-                },
-                "qScrollPos": {
-                    "$ref": "#/components/schemas/ScrollPosition"
-                },
-                "qTopCollapsed": {
-                    "type": "boolean"
-                },
-                "qUseGraphMode": {
-                    "type": "boolean"
-                },
-                "qExpansionInfo": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/components/schemas/ExpansionData"
-                    }
-                },
-                "qLeftCollapsed": {
-                    "type": "boolean"
-                },
-                "qDimensionGroupPos": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/components/schemas/GroupStateInfo"
-                    }
-                },
-                "qExpressionGroupPos": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/components/schemas/GroupStateInfo"
-                    }
-                },
-                "qExtendedPivotState": {
-                    "$ref": "#/components/schemas/ExtendedPivotStateData"
-                },
-                "qActiveContainerChildObjectId": {
-                    "type": "string"
-                }
-            },
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
-        },
-        "ExtendedPivotStateData": {
-            "type": "object",
-            "x-go-type": {
-                "type": "ExtendedPivotStateData",
-                "import": {
-                    "alias": "cModels",
-                    "package": "github.com/qlik-trial/reporting-service/v9/pkg/models"
-                }
-            },
-            "properties": {
-                "qDimensionNames": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qEnableConditions": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "qExpressionPosition": {
-                    "type": "integer",
-                    "format": "int32"
-                },
-                "qNumberOfLeftDimensions": {
-                    "type": "integer",
-                    "format": "int32"
-                }
-            },
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
-        },
         "Float64": {
             "type": "number",
             "format": "float64",
@@ -41538,26 +41213,6 @@
                     "package": "github.com/qlik-trial/reporting-service/v9/pkg/models"
                 }
             }
-        },
-        "GroupStateInfo": {
-            "type": "object",
-            "x-go-type": {
-                "type": "GroupStateInfo",
-                "import": {
-                    "alias": "cModels",
-                    "package": "github.com/qlik-trial/reporting-service/v9/pkg/models"
-                }
-            },
-            "properties": {
-                "qGroupName": {
-                    "type": "string"
-                },
-                "qCurrentItemName": {
-                    "type": "string"
-                }
-            },
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
         },
         "HttpRequest": {
             "properties": {
@@ -41592,26 +41247,6 @@
                 }
             },
             "description": "Output to be used to export a single visualization as image."
-        },
-        "InterFieldSortData": {
-            "type": "object",
-            "x-go-type": {
-                "type": "InterFieldSortData",
-                "import": {
-                    "alias": "cModels",
-                    "package": "github.com/qlik-trial/reporting-service/v9/pkg/models"
-                }
-            },
-            "properties": {
-                "qName": {
-                    "type": "string"
-                },
-                "qReversed": {
-                    "type": "boolean"
-                }
-            },
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
         },
         "Meta": {
             "type": "object",
@@ -41674,13 +41309,6 @@
                     "type": "string",
                     "description": "The generated report type.\n\nEach template type supports specific output types:\n   - composition-1.0 supports only pdfcomposition and pptxcomposition output types\n   - excel-1.0 supports only excel output type\n   - sense-image-1.0 supports pdf and image output types\n   - sense-sheet-1.0 supports only pdf output type\n\nEach output type requires a specific output to be provided:\n   - excel requires excelOutput to be set\n   - pdfcomposition requires pdfCompositionOutput to be set\n   - pptxcomposition requires pptxCompositionOutput to be set\n   - pdf requires pdfOuput to be set\n   - image requires imageOutput to be set\n   - csv doesn't have csv output.\n"
                 },
-                "callback": {
-                    "type": "string",
-                    "description": "Callback for report requests. Deprecated in favor of callBackAction.",
-                    "x-qlik-stability": "experimental",
-                    "x-qlik-deprecated": true,
-                    "x-qlik-visibility": "private"
-                },
                 "outputId": {
                     "type": "string",
                     "example": "output1",
@@ -41692,11 +41320,6 @@
                 },
                 "pptxOutput": {
                     "$ref": "#/components/schemas/PptxOutput"
-                },
-                "xlsxOutput": {
-                    "type": "object",
-                    "x-qlik-stability": "experimental",
-                    "x-qlik-visibility": "private"
                 },
                 "excelOutput": {
                     "$ref": "#/components/schemas/ExcelOutput"
@@ -41772,13 +41395,6 @@
                     },
                     "description": "Content alignment."
                 },
-                "margins": {
-                    "type": "string",
-                    "example": "1cm",
-                    "description": "The overall margin to be applied. It must be in the following format \"{value}{cm|mm}\" (e.g. \"1cm\" means that a margin of 1cm will be applied to all PDF edges). Note that the minimum printable area, including margins, is 1.5cmx1.5cm (corresponding to 0.6x0.6 inches at 96 DPI). If the margins make the content size smaller than the minimum printable area, the content size is capped to the minimum printable area. Default values are: - \"1cm\" for autofit resizeType - \"0cm\" for fit resizeType - \"0cm\" for none resizeType",
-                    "x-qlik-stability": "experimental",
-                    "x-qlik-visibility": "private"
-                },
                 "properties": {
                     "$ref": "#/components/schemas/DocProperties"
                 },
@@ -41824,60 +41440,6 @@
             },
             "description": "Output to be used to export a single visualization or a sheet as pdf."
         },
-        "Point": {
-            "type": "object",
-            "x-go-type": {
-                "type": "Point",
-                "import": {
-                    "alias": "cModels",
-                    "package": "github.com/qlik-trial/reporting-service/v9/pkg/models"
-                }
-            },
-            "properties": {
-                "qx": {
-                    "type": "integer",
-                    "format": "int32",
-                    "description": "x-coordinate in pixels.\nThe origin is the top left of the screen."
-                },
-                "qy": {
-                    "type": "integer",
-                    "format": "int32",
-                    "description": "y-coordinate in pixels.\nThe origin is the top left of the screen."
-                }
-            },
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
-        },
-        "PositionMark": {
-            "type": "object",
-            "x-go-type": {
-                "type": "PositionMark",
-                "import": {
-                    "alias": "cModels",
-                    "package": "github.com/qlik-trial/reporting-service/v9/pkg/models"
-                }
-            },
-            "properties": {
-                "qElemNo": {
-                    "type": "array",
-                    "items": {
-                        "type": "integer",
-                        "format": "int32"
-                    }
-                },
-                "qDimName": {
-                    "type": "string"
-                },
-                "qElemValues": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/components/schemas/Blob"
-                    }
-                }
-            },
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
-        },
         "PptxCompositionOutput": {
             "properties": {
                 "pptxOutput": {
@@ -41898,13 +41460,6 @@
                     "type": "string",
                     "default": "Widescreen",
                     "description": "Size of the PowerPoint slide:\n  - Widescreen: 960x540\n  - OnScreen: 720x540\n  - OnScreen16x9: 720x405\n  - OnScreen16x10: 720x450\n"
-                },
-                "margins": {
-                    "type": "string",
-                    "example": "1cm",
-                    "description": "The overall margin to be applied. It must be in the following format \"{value}{cm|mm}\" (e.g. \"1cm\" means that a margin of 1cm will be applied to all PowerPoint edges). Note that the minimum printable area, including margins, is 1.5cmx1.5cm (corresponding to 0.6x0.6 inches at 96 DPI). If the margins make the content size smaller than the minimum printable area, the content size is capped to the minimum printable area. Default is \"1cm\".",
-                    "x-qlik-stability": "experimental",
-                    "x-qlik-visibility": "private"
                 },
                 "properties": {
                     "$ref": "#/components/schemas/DocProperties"
@@ -41984,77 +41539,8 @@
                 }
             }
         },
-        "QvDataTemplate": {
-            "required": [
-                "appId",
-                "id"
-            ],
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "example": "QbtwdFg",
-                    "description": "QV visualization id."
-                },
-                "appId": {
-                    "type": "string",
-                    "example": "11ecf638-0be4-4b94-a9e6-91218f34e175"
-                },
-                "variables": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/components/schemas/Variable"
-                    },
-                    "maxItems": 1100
-                },
-                "expansionInfo": {
-                    "$ref": "#/components/schemas/ExtendedLayoutBookmarkData"
-                },
-                "selectionStrategy": {
-                    "$ref": "#/components/schemas/SelectionStrategy"
-                },
-                "selectionsByState": {
-                    "type": "object",
-                    "description": "Map of selections to apply by state. Maximum number of states allowed is 125. Maximum number of fields allowed is 125 and maximum number of overall field values allowed is 150000.",
-                    "additionalProperties": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/QSelection"
-                        },
-                        "maxItems": 125
-                    }
-                }
-            },
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
-        },
-        "QvDataTemplate-2.0": {
-            "required": [
-                "appId",
-                "id"
-            ],
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "example": "QbtwdFg",
-                    "description": "QV visualization id."
-                },
-                "appId": {
-                    "type": "string",
-                    "example": "11ecf638-0be4-4b94-a9e6-91218f34e175"
-                },
-                "bookmarkId": {
-                    "type": "string",
-                    "description": "A specific selection state Bookmark ID"
-                }
-            },
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
-        },
         "Reason": {
             "properties": {
-                "error": {
-                    "$ref": "#/components/schemas/ReasonError"
-                },
                 "traceId": {
                     "type": "string",
                     "example": "00000000000000000000000000000000"
@@ -42068,21 +41554,6 @@
                     "$ref": "#/components/schemas/ExportErrors"
                 }
             }
-        },
-        "ReasonError": {
-            "properties": {
-                "code": {
-                    "type": "integer",
-                    "format": "int32"
-                },
-                "message": {
-                    "type": "string"
-                }
-            },
-            "description": "Deprecated. Use exportErrors instead of error",
-            "x-qlik-stability": "experimental",
-            "x-qlik-deprecated": true,
-            "x-qlik-visibility": "private"
         },
         "ReportRequest": {
             "example": {
@@ -42179,62 +41650,14 @@
                 "output": {
                     "$ref": "#/components/schemas/OutputItem"
                 },
-                "loadType": {
-                    "enum": [
-                        "interactive",
-                        "batch"
-                    ],
-                    "type": "string",
-                    "default": "batch",
-                    "description": "Load type expressing the kind of request, eg. interactive for report requests from the Web UI, batch for scheduled report generation.",
-                    "x-qlik-stability": "experimental",
-                    "x-qlik-visibility": "private"
-                },
                 "definitions": {
                     "$ref": "#/components/schemas/Definitions"
-                },
-                "qvDataTemplate": {
-                    "$ref": "#/components/schemas/QvDataTemplate"
-                },
-                "reloadTimestamp": {
-                    "type": "string",
-                    "format": "RFC3339",
-                    "description": "Deprecated, use template reloadTimestamp. Reload time constraint. If reloadTimestamp is more recent than the one returned by Engine, the request will not go forward and an error is returned.",
-                    "x-qlik-stability": "experimental",
-                    "x-qlik-deprecated": true,
-                    "x-qlik-visibility": "private"
-                },
-                "selectionsByState": {
-                    "type": "object",
-                    "description": "Deprecated. Use selectionsByState inside the template objects i.e. senseImageTemplate, senseDataTemplate, senseSheetTemplate, qvDataTemplate, qvDataTemplate-2.0, senseExcelTemplate",
-                    "x-qlik-stability": "experimental",
-                    "x-qlik-deprecated": true,
-                    "x-qlik-visibility": "private",
-                    "additionalProperties": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Selection"
-                        },
-                        "maxItems": 125
-                    }
-                },
-                "senseDataTemplate": {
-                    "$ref": "#/components/schemas/SenseDataTemplate"
-                },
-                "qvDataTemplate-2.0": {
-                    "$ref": "#/components/schemas/QvDataTemplate-2.0"
-                },
-                "senseExcelTemplate": {
-                    "$ref": "#/components/schemas/SenseExcelTemplate"
                 },
                 "senseImageTemplate": {
                     "$ref": "#/components/schemas/SenseImageTemplate"
                 },
                 "senseSheetTemplate": {
                     "$ref": "#/components/schemas/SenseSheetTemplate"
-                },
-                "senseStoryTemplate": {
-                    "$ref": "#/components/schemas/SenseStoryTemplate"
                 },
                 "compositionTemplates": {
                     "type": "array",
@@ -42329,61 +41752,6 @@
             },
             "description": "Result and info about the generated report."
         },
-        "ScrollPosition": {
-            "type": "object",
-            "x-go-type": {
-                "type": "ScrollPosition",
-                "import": {
-                    "alias": "cModels",
-                    "package": "github.com/qlik-trial/reporting-service/v9/pkg/models"
-                }
-            },
-            "properties": {
-                "qPos": {
-                    "$ref": "#/components/schemas/Point"
-                },
-                "qUsePosition": {
-                    "type": "boolean"
-                }
-            },
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
-        },
-        "Selection": {
-            "required": [
-                "name",
-                "values",
-                "isNumeric"
-            ],
-            "properties": {
-                "name": {
-                    "type": "string"
-                },
-                "values": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    },
-                    "maxItems": 150000
-                },
-                "isNumeric": {
-                    "type": "boolean"
-                }
-            },
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
-        },
-        "SelectionChain": {
-            "type": "array",
-            "items": {
-                "$ref": "#/components/schemas/ChainableSelection"
-            },
-            "maxItems": 50,
-            "minItems": 1,
-            "description": "Array of ChainableSelection",
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
-        },
         "SelectionError": {
             "properties": {
                 "detail": {
@@ -42429,41 +41797,6 @@
             },
             "description": "Errors occurring in selections."
         },
-        "SelectionFilter": {
-            "properties": {
-                "variables": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/components/schemas/Variable"
-                    },
-                    "maxItems": 1100
-                },
-                "patchesById": {
-                    "type": "object",
-                    "description": "A map for applying soft properties, aka patches, to specific visualization IDs within the sheet.",
-                    "additionalProperties": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/NxPatch"
-                        },
-                        "maxItems": 100
-                    }
-                },
-                "selectionsByState": {
-                    "type": "object",
-                    "description": "Map of selections to apply by state. Maximum number of states allowed is 125. Maximum number of fields allowed is 125 and Maximum number of overall field values allowed is 150000.",
-                    "additionalProperties": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/QSelection"
-                        },
-                        "maxItems": 125
-                    }
-                }
-            },
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
-        },
         "SelectionStrategy": {
             "enum": [
                 "failOnErrors",
@@ -42472,148 +41805,6 @@
             ],
             "type": "string",
             "default": "ignoreErrorsNoDetails"
-        },
-        "SenseDataTemplate": {
-            "required": [
-                "appId",
-                "id"
-            ],
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "example": "QbtwdFg",
-                    "description": "Sense visualization id. Visualizations created \"on the fly\" are not supported."
-                },
-                "appId": {
-                    "type": "string"
-                },
-                "patches": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/components/schemas/NxPatch"
-                    },
-                    "maxItems": 100
-                },
-                "variables": {
-                    "type": "array",
-                    "items": {
-                        "$ref": "#/components/schemas/Variable"
-                    },
-                    "maxItems": 1100
-                },
-                "selectionType": {
-                    "$ref": "#/components/schemas/SenseSelectionType"
-                },
-                "reloadTimestamp": {
-                    "type": "string",
-                    "format": "RFC3339",
-                    "description": "Reload time constraint. If reloadTimestamp is more recent than the one returned by Engine, the request will not go forward and an error is returned.",
-                    "x-qlik-stability": "experimental",
-                    "x-qlik-visibility": "private"
-                },
-                "selectionStrategy": {
-                    "$ref": "#/components/schemas/SelectionStrategy"
-                },
-                "selectionsByState": {
-                    "type": "object",
-                    "description": "Map of selections to apply by state. Maximum number of states allowed is 125. Maximum number of fields allowed is 125 and maximum number of overall field values allowed is 150000.",
-                    "additionalProperties": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/QSelection"
-                        },
-                        "maxItems": 125
-                    }
-                },
-                "temporaryBookmark": {
-                    "$ref": "#/components/schemas/SenseTemporaryBookmark"
-                },
-                "persistentBookmark": {
-                    "$ref": "#/components/schemas/SensePersistentBookmark"
-                },
-                "temporaryBookmarkV2": {
-                    "$ref": "#/components/schemas/SenseTemporaryBookmarkV2"
-                }
-            },
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
-        },
-        "SenseExcelTemplate": {
-            "required": [
-                "templateLocation"
-            ],
-            "properties": {
-                "jsOpts": {
-                    "type": "object",
-                    "description": "A JSON object that is passed as-is to the mashup page while rendering, this will be applied to all charts within the sheet. It includes properties of the whole sheet such as theme, gradient etc."
-                },
-                "jsOptsById": {
-                    "type": "object",
-                    "description": "A map for applying jsOpts to specific visualization IDs within the sheet.",
-                    "additionalProperties": {
-                        "type": "object",
-                        "description": "A JSON object that is passed as-is to the mashup page while rendering."
-                    }
-                },
-                "patchesById": {
-                    "type": "object",
-                    "description": "A map for applying soft properties, aka patches, to specific visualization IDs within the sheet.",
-                    "additionalProperties": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/NxPatch"
-                        },
-                        "maxItems": 100
-                    }
-                },
-                "selectionType": {
-                    "$ref": "#/components/schemas/SenseSelectionType"
-                },
-                "selectionChain": {
-                    "$ref": "#/components/schemas/SelectionChain"
-                },
-                "reloadTimestamp": {
-                    "type": "string",
-                    "format": "RFC3339",
-                    "description": "Reload time constraint. If reloadTimestamp is more recent than the one returned by Engine, the request will not go forward and an error is returned.",
-                    "x-qlik-stability": "experimental",
-                    "x-qlik-visibility": "private"
-                },
-                "templateLocation": {
-                    "$ref": "#/components/schemas/TemplateLocation"
-                },
-                "selectionStrategy": {
-                    "$ref": "#/components/schemas/SelectionStrategy"
-                },
-                "selectionsByState": {
-                    "type": "object",
-                    "description": "Deprecated. Use selectionChain. Map of selections to apply by state. Maximum number of states allowed is 125. Maximum number of fields allowed is 125 and maximum number of overall field values allowed is 150000.",
-                    "additionalProperties": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/QSelection"
-                        },
-                        "maxItems": 125
-                    }
-                },
-                "temporaryBookmark": {
-                    "$ref": "#/components/schemas/SenseTemporaryBookmark"
-                },
-                "persistentBookmark": {
-                    "$ref": "#/components/schemas/SensePersistentBookmark"
-                },
-                "temporaryBookmarkV2": {
-                    "$ref": "#/components/schemas/SenseTemporaryBookmarkV2"
-                },
-                "selectionsByStateDef": {
-                    "type": "string",
-                    "x-nullable": true,
-                    "description": "Deprecated. Use selectionChain. The definition ID referring to a selectionsByState definition declared in definitions."
-                }
-            },
-            "description": "Used to export an excel template.",
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
         },
         "SenseImageTemplate": {
             "required": [
@@ -42624,18 +41815,8 @@
                 "appId": {
                     "type": "string"
                 },
-                "selectionType": {
-                    "$ref": "#/components/schemas/SenseSelectionType"
-                },
                 "visualization": {
                     "$ref": "#/components/schemas/Visualization"
-                },
-                "reloadTimestamp": {
-                    "type": "string",
-                    "format": "RFC3339",
-                    "description": "Reload time constraint. If reloadTimestamp is more recent than the one returned by Engine, the request will not go forward and an error is returned.",
-                    "x-qlik-stability": "experimental",
-                    "x-qlik-visibility": "private"
                 },
                 "selectionStrategy": {
                     "$ref": "#/components/schemas/SelectionStrategy"
@@ -42651,15 +41832,6 @@
                         "maxItems": 125
                     }
                 },
-                "temporaryBookmark": {
-                    "$ref": "#/components/schemas/SenseTemporaryBookmark"
-                },
-                "persistentBookmark": {
-                    "$ref": "#/components/schemas/SensePersistentBookmark"
-                },
-                "temporaryBookmarkV2": {
-                    "$ref": "#/components/schemas/SenseTemporaryBookmarkV2"
-                },
                 "selectionsByStateDef": {
                     "type": "string",
                     "x-nullable": true,
@@ -42667,33 +41839,6 @@
                 }
             },
             "description": "Used to export a single visualization as pdf or png."
-        },
-        "SensePersistentBookmark": {
-            "type": "object",
-            "required": [
-                "id"
-            ],
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "example": "21edf789-0be4-4b94-a9e6-31456kl4e175",
-                    "description": "Sense Persistence Bookmark id."
-                }
-            },
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
-        },
-        "SenseSelectionType": {
-            "enum": [
-                "selectionsByState",
-                "temporaryBookmark",
-                "persistentBookmark",
-                "temporaryBookmarkV2"
-            ],
-            "type": "string",
-            "default": "selectionsByState",
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
         },
         "SenseSheetTemplate": {
             "required": [
@@ -42708,16 +41853,6 @@
                 "sheet": {
                     "$ref": "#/components/schemas/Sheet"
                 },
-                "selectionType": {
-                    "$ref": "#/components/schemas/SenseSelectionType"
-                },
-                "reloadTimestamp": {
-                    "type": "string",
-                    "format": "RFC3339",
-                    "description": "Reload time constraint. If reloadTimestamp is more recent than the one returned by Engine, the request will not go forward and an error is returned.",
-                    "x-qlik-stability": "experimental",
-                    "x-qlik-visibility": "private"
-                },
                 "selectionStrategy": {
                     "$ref": "#/components/schemas/SelectionStrategy"
                 },
@@ -42732,15 +41867,6 @@
                         "maxItems": 125
                     }
                 },
-                "temporaryBookmark": {
-                    "$ref": "#/components/schemas/SenseTemporaryBookmark"
-                },
-                "persistentBookmark": {
-                    "$ref": "#/components/schemas/SensePersistentBookmark"
-                },
-                "temporaryBookmarkV2": {
-                    "$ref": "#/components/schemas/SenseTemporaryBookmarkV2"
-                },
                 "selectionsByStateDef": {
                     "type": "string",
                     "x-nullable": true,
@@ -42748,64 +41874,6 @@
                 }
             },
             "description": "Used to export a sheet as pdf."
-        },
-        "SenseStoryTemplate": {
-            "required": [
-                "appId",
-                "story"
-            ],
-            "properties": {
-                "appId": {
-                    "type": "string",
-                    "example": "11ecf638-0be4-4b94-a9e6-91218f34e175"
-                },
-                "story": {
-                    "$ref": "#/components/schemas/Story"
-                },
-                "reloadTimestamp": {
-                    "type": "string",
-                    "format": "RFC3339",
-                    "description": "Reload time constraint. If reloadTimestamp is more recent than the one returned by Engine, the request will not go forward and an error is returned.",
-                    "x-qlik-stability": "experimental",
-                    "x-qlik-visibility": "private"
-                }
-            },
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
-        },
-        "SenseTemporaryBookmark": {
-            "type": "object",
-            "required": [
-                "id"
-            ],
-            "deprecated": true,
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "example": "21edf789-0be4-4b94-a9e6-31456kl4e175",
-                    "description": "Sense Temporary Bookmark id."
-                }
-            },
-            "description": "Deprecated. Use TemporaryBookmarkV2",
-            "x-qlik-stability": "experimental",
-            "x-qlik-deprecated": true,
-            "x-qlik-visibility": "private"
-        },
-        "SenseTemporaryBookmarkV2": {
-            "type": "object",
-            "required": [
-                "id"
-            ],
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "example": "21edf789-0be4-4b94-a9e6-31456kl4e175",
-                    "description": "Sense Temporary Bookmark id."
-                }
-            },
-            "description": "The temporary bookmark to apply. Patches and Variables are ignored if passed to the API, because they already are applied in the backend.",
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
         },
         "Sheet": {
             "required": [
@@ -42860,125 +41928,6 @@
                 }
             },
             "description": "It refers to the Sense Sheet to be exported. Note that if widthPx and heightPx are not specified, default values will be applied depending on the actual size and layout properties of the Sense Sheet object."
-        },
-        "StanMessage": {
-            "properties": {
-                "payload": {
-                    "type": "object",
-                    "description": "The payload object included in the data field of the NATS message. Used in version \"2.0\" only.",
-                    "additionalProperties": {
-                        "type": "object"
-                    }
-                },
-                "subject": {
-                    "type": "string",
-                    "description": "The subject for the NATS streaming message. A default prefix with value \"reporting.\" is added to the subject if not present already."
-                },
-                "version": {
-                    "enum": [
-                        "1.0",
-                        "2.0"
-                    ],
-                    "type": "string",
-                    "default": "1.0",
-                    "example": "2.0",
-                    "description": "The eventTypeVersion of the callback NATS event. Supported versions are 1.0 and 2.0. Version 1.0 is deprecated."
-                },
-                "extensions": {
-                    "type": "object",
-                    "description": "The data field of the NATS message. Used in version \"1.0\", it is ignored in version \"2.0\".",
-                    "additionalProperties": {
-                        "type": "object"
-                    }
-                }
-            },
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
-        },
-        "Story": {
-            "required": [
-                "id"
-            ],
-            "properties": {
-                "id": {
-                    "type": "string",
-                    "example": "Cbpvks",
-                    "description": "The id of the story."
-                },
-                "jsOpts": {
-                    "type": "object",
-                    "description": "A JSON object that is passed as-is to the mashup page while rendering, this will be applied to all slide items."
-                },
-                "embeddedSheetWidthPx": {
-                    "type": "number",
-                    "format": "float",
-                    "default": 1123,
-                    "description": "The width of the embedded sheet in px, in play mode. If not specified the A4 width size is used as default."
-                },
-                "embeddedSheetHeightPx": {
-                    "type": "number",
-                    "format": "float",
-                    "default": 794,
-                    "description": "The height of the embedded sheet in px, in play mode. If not specified the A4 height size is used as default."
-                }
-            },
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
-        },
-        "TemplateLocation": {
-            "required": [
-                "path"
-            ],
-            "properties": {
-                "path": {
-                    "type": "string",
-                    "example": "/temp/123",
-                    "description": "resource location path."
-                },
-                "format": {
-                    "enum": [
-                        "url"
-                    ],
-                    "type": "string",
-                    "default": "url"
-                }
-            },
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
-        },
-        "Variable": {
-            "required": [
-                "qName",
-                "qNum",
-                "qText"
-            ],
-            "x-go-type": {
-                "type": "Variable",
-                "import": {
-                    "alias": "cModels",
-                    "package": "github.com/qlik-trial/reporting-service/v9/pkg/models"
-                }
-            },
-            "properties": {
-                "qNum": {
-                    "type": "number",
-                    "format": "double",
-                    "example": 20,
-                    "description": "variable numeric value"
-                },
-                "qName": {
-                    "type": "string",
-                    "example": "variable1"
-                },
-                "qText": {
-                    "type": "string",
-                    "example": "Arizona",
-                    "description": "variable string value"
-                }
-            },
-            "description": "Variable that need to be created as session object to get data accordingly",
-            "x-qlik-stability": "experimental",
-            "x-qlik-visibility": "private"
         },
         "Visualization": {
             "required": [
@@ -44996,9 +43945,8 @@
                 },
                 "trend": {
                     "type": "number",
-                    "maximum": 1,
-                    "minimum": -1,
-                    "description": "Trend in views over the last 4 weeks."
+                    "example": -4.2,
+                    "description": "Trend in views over the last 4 weeks. The trend value is a float number representing a linear regression slope (the x-coefficient) calculated from the weekly unique users views in the preceding 4 weeks."
                 },
                 "unique": {
                     "type": "integer",
@@ -47534,11 +46482,19 @@
         "KeyProvider": {
             "type": "object",
             "example": {
-                "arn": "arn:aws:kms:eu-north-1:857519135519:key/ee358547-5716-4e66-9524-1618716e221a",
+                "arn": "arn:aws:kms:us-east-1:857519135519:key/ee358547-5716-4e66-9524-1618716e221a",
+                "qcg": false,
                 "name": "test name",
                 "current": false,
                 "description": "test description",
-                "keyprovider": "AWS-KMS"
+                "keyprovider": "AWS-KMS",
+                "multiRegion": true,
+                "replicaKeys": [
+                    {
+                        "arn": "arn:aws:kms:us-east-2:857519135519:key/ee358547-5716-4e66-9524-1618716e221a",
+                        "region": "us-east-2"
+                    }
+                ]
             },
             "required": [
                 "name",
@@ -47581,6 +46537,28 @@
                     ],
                     "type": "string",
                     "description": "Key Provider type."
+                },
+                "multiRegion": {
+                    "type": "boolean",
+                    "readOnly": true,
+                    "description": "Indicates whether the key has multi-region configurations and has replica key in qcs secondary region."
+                },
+                "replicaKeys": {
+                    "type": "array",
+                    "items": {
+                        "properties": {
+                            "arn": {
+                                "type": "string",
+                                "x-qlik-pii": true,
+                                "description": "Replica key keeps list of backup keys from the supported qcs secondary region."
+                            },
+                            "region": {
+                                "type": "string",
+                                "description": "Region indicates the backup qcs-region link to the primary region."
+                            }
+                        }
+                    },
+                    "readOnly": true
                 },
                 "arnFingerPrint": {
                     "type": "string",
@@ -47642,11 +46620,19 @@
             "type": "object",
             "example": [
                 {
-                    "arn": "arn:aws:kms:eu-north-1:857519135519:key/ee358547-5716-4e66-9524-1618716e221a",
+                    "arn": "arn:aws:kms:us-east-1:857519135519:key/ee358547-5716-4e66-9524-1618716e221a",
+                    "qcg": false,
                     "name": "test name",
                     "current": true,
                     "description": "test description",
-                    "keyprovider": "AWS-KMS"
+                    "keyprovider": "AWS-KMS",
+                    "multiRegion": true,
+                    "replicaKeys": [
+                        {
+                            "arn": "arn:aws:kms:us-east-2:857519135519:key/ee358547-5716-4e66-9524-1618716e221a",
+                            "region": "us-east-2"
+                        }
+                    ]
                 }
             ],
             "properties": {
@@ -47679,33 +46665,52 @@
             "example": [
                 {
                     "arn": "#QLIK_MANAGED_KEY_PROVIDER#",
+                    "qcg": false,
                     "name": "Qlik Internal Kms",
                     "tenantId": "ImTRa-bkJTD-NZRYjNBa_rDhwSVA6Qo8",
                     "createdAt": "Qlik managed",
                     "description": "Default key management service",
                     "keyprovider": "Qlik",
+                    "multiRegion": false,
+                    "replicaKeys": [],
                     "arnFingerPrint": "ImTRa-bkJTD-NZRYjNBa_rDhwSVA6Qo8",
                     "promotedToCurrentAt": "2023-06-21T18:45:57Z",
                     "demotedFromCurrentAt": "0001-01-01T00:00:00Z"
                 },
                 {
-                    "arn": "arn:aws:kms:eu-north-1:857519135519:key/e4e84fc7-7817-4121-b927-9d1d4ef03f1d",
+                    "arn": "arn:aws:kms:us-east-1:857519135519:key/e4e84fc7-7817-4121-b927-9d1d4ef03f1d",
+                    "qcg": false,
                     "name": "CMK - 01",
                     "tenantId": "ImTRa-bkJTD-NZRYjNBa_rDhwSVA6Qo8",
                     "createdAt": "2023-06-21T18:43:49Z",
                     "keyprovider": "AWS-KMS",
+                    "multiRegion": true,
+                    "replicaKeys": [
+                        {
+                            "arn": "arn:aws:kms:us-east-2:857519135519:key/ee358547-5716-4e66-9524-1618716e221a",
+                            "region": "us-east-2"
+                        }
+                    ],
                     "arnFingerPrint": "9f352c5a9c1618485051892cb57467e4",
                     "promotedToCurrentAt": "2023-06-21T18:43:54Z",
                     "demotedFromCurrentAt": "2023-06-21T18:45:57Z"
                 },
                 {
-                    "arn": "arn:aws:kms:eu-north-1:857519135519:key/b6a2a74c-fb34-464a-8ea6-d867fd3b9438",
+                    "arn": "arn:aws:kms:us-east-1:857519135519:key/b6a2a74c-fb34-464a-8ea6-d867fd3b9438",
+                    "qcg": false,
                     "name": "CMK - 02",
                     "current": true,
                     "tenantId": "ImTRa-bkJTD-NZRYjNBa_rDhwSVA6Qo8",
                     "createdAt": "2023-06-21T18:59:17Z",
                     "description": "CMK migration test",
                     "keyprovider": "AWS-KMS",
+                    "multiRegion": true,
+                    "replicaKeys": [
+                        {
+                            "arn": "arn:aws:kms:us-east-2:857519135519:key/ee358547-5716-4e66-9524-1618716e221a",
+                            "region": "us-east-2"
+                        }
+                    ],
                     "arnFingerPrint": "b5fe2c83b25f9e39487bca28f69e4210",
                     "promotedToCurrentAt": "2023-06-21T18:59:18Z",
                     "demotedFromCurrentAt": "0001-01-01T00:00:00Z"
@@ -49415,14 +48420,6 @@
                     "description": "The name of the group.",
                     "x-qlik-filterable": true,
                     "x-qlik-customer-data": true
-                },
-                "idpId": {
-                    "type": "string",
-                    "format": "uuid",
-                    "example": "4ecbe7f9e8c1c9092c000027",
-                    "description": "The unique identifier for the source IDP.",
-                    "x-qlik-filterable": true,
-                    "x-qlik-visibility": "private"
                 },
                 "links": {
                     "type": "object",
@@ -51499,6 +50496,33 @@
                 }
             }
         },
+        "dataAsset": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "example": "qri:app:landing://65083739daf9b2658503f93c",
+                    "description": "The id (QRI) of the data asset"
+                },
+                "type": {
+                    "type": "string",
+                    "example": "DI_APP",
+                    "description": "The type of the data asset"
+                },
+                "label": {
+                    "type": "string",
+                    "example": "example.Landing.Asset",
+                    "description": "The lable of the data asset",
+                    "x-qlik-customer-data": true
+                },
+                "subtype": {
+                    "type": "string",
+                    "example": "LANDING_SAAS_MANAGED",
+                    "description": "The subtype of the data asset"
+                }
+            },
+            "description": "The data integration data asset where the node belongs to"
+        },
         "edge": {
             "type": "object",
             "properties": {
@@ -51698,7 +50722,8 @@
                 },
                 "label": {
                     "type": "string",
-                    "description": "Label string for this graph."
+                    "description": "Label string for this graph.",
+                    "x-qlik-customer-data": true
                 },
                 "nodes": {
                     "$ref": "#/components/schemas/nodes"
@@ -51764,7 +50789,8 @@
                 "tableLabel": {
                     "type": "string",
                     "nullable": true,
-                    "description": "Table level label"
+                    "description": "Table level label",
+                    "x-qlik-customer-data": true
                 },
                 "resourceQRI": {
                     "type": "string",
@@ -51775,7 +50801,8 @@
                 "resourceLabel": {
                     "type": "string",
                     "nullable": true,
-                    "description": "Resource level label"
+                    "description": "Resource level label",
+                    "x-qlik-customer-data": true
                 }
             }
         },
@@ -51815,7 +50842,8 @@
             "properties": {
                 "label": {
                     "type": "string",
-                    "description": "Name label of the node."
+                    "description": "Name label of the node.",
+                    "x-qlik-customer-data": true
                 },
                 "metadata": {
                     "type": "object",
@@ -51824,6 +50852,11 @@
                         "type"
                     ],
                     "properties": {
+                        "id": {
+                            "type": "string",
+                            "example": "qri:app:sense://3634fc0d-273d-429e-8d0b-1b4b1b66a1f2",
+                            "description": "The id (QRI) of the node"
+                        },
                         "type": {
                             "type": "string",
                             "example": [
@@ -51835,6 +50868,16 @@
                             ],
                             "description": "The type of the node."
                         },
+                        "fields": {
+                            "type": "integer",
+                            "example": 1,
+                            "description": "The number of fields that are impacted. \nThis will be returned as part of the response from /impact/{id}/overview and /impact/{id}/actions/expand on the table level.\n"
+                        },
+                        "tables": {
+                            "type": "integer",
+                            "example": 1,
+                            "description": "The number of tables that are impacted. \nThis will be returned as part of the response from /impact/{id}/overview.\n"
+                        },
                         "subtype": {
                             "type": "string",
                             "example": [
@@ -51843,6 +50886,15 @@
                                 "FILE"
                             ],
                             "description": "The subtype of the node."
+                        },
+                        "filePath": {
+                            "type": "string",
+                            "example": "example.qvd",
+                            "description": "The file path of a node",
+                            "x-qlik-customer-data": true
+                        },
+                        "dataAsset": {
+                            "$ref": "#/components/schemas/dataAsset"
                         }
                     },
                     "description": "This contains additional node information such as node types, subtypes, queryExpressions, etc."
@@ -51851,7 +50903,7 @@
         },
         "nodes": {
             "type": "object",
-            "example": "{\"qri:app:sense://3634fc0d-273d-429e-8d0b-1b4b1b66a1f2\":{\"label\":\"a\",\"metadata\":{\"subtype\":\"PROCESSOR\",\"type\":\"DA_APP\"}}}",
+            "example": "{\"qri:app:sense://3634fc0d-273d-429e-8d0b-1b4b1b66a1f2\":{\"label\":\"a\",\"metadata\":{\"id\":\"qri:app:sense://3634fc0d-273d-429e-8d0b-1b4b1b66a1f2\",\"subtype\":\"PROCESSOR\",\"type\":\"DA_APP\",\"filePath\":\"example.qvd\"}}}",
             "description": "All the nodes contained in a graph.",
             "additionalProperties": {
                 "$ref": "#/components/schemas/node"
@@ -53389,14 +52441,6 @@
                 "id"
             ],
             "properties": {
-                "id": {
-                    "type": "string",
-                    "format": "uid",
-                    "example": "TiQ8GPVr8qI714Lp5ChAAFFaU24MJy69",
-                    "readOnly": true,
-                    "description": "The unique tenant identifier.",
-                    "x-qlik-visibility": "private"
-                },
                 "name": {
                     "type": "string",
                     "example": "QlikTenant",
@@ -53485,23 +52529,6 @@
         "TenantCreationRequest": {
             "type": "object",
             "properties": {
-                "name": {
-                    "type": "string",
-                    "example": "bk1672h181jm1b1",
-                    "description": "The name of the created tenant, provided by the onboarding service.",
-                    "x-qlik-visibility": "private"
-                },
-                "hostnames": {
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    },
-                    "example": [
-                        "bk1672h181jm1b1.us.qlikcloud.com"
-                    ],
-                    "description": "The hostnames of the created tenant. Can only create with a single entry that lines up wtih the tenant name.",
-                    "x-qlik-visibility": "private"
-                },
                 "datacenter": {
                     "type": "string",
                     "example": "us-east-1",
