@@ -851,7 +851,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Relative or full URL to redirect to after successful login."
+                        "description": "Relative or full URL to redirect to after successful login.",
+                        "x-qlik-customer-data": true
                     },
                     {
                         "in": "query",
@@ -884,7 +885,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "State parameter to roundtrip to client in final redirect."
+                        "description": "State parameter to roundtrip to client in final redirect.",
+                        "x-qlik-customer-data": true
                     },
                     {
                         "in": "query",
@@ -893,7 +895,8 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "The code challenge created by the client."
+                        "description": "The code challenge created by the client.",
+                        "x-qlik-customer-data": true
                     },
                     {
                         "in": "query",
@@ -919,7 +922,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "8c21d539-fddf-406e-9a92-9299ee844380",
+                "x-qlik-entity-revision": "542e1d73-375a-4e07-96a5-7639170586b3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -1073,7 +1076,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "ba45edf8-1aa1-4a13-aece-3699544200e0",
+                "x-qlik-entity-revision": "c1e5416f-b181-4576-8e26-9bbc71a2262d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -23519,7 +23522,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c9698944-09dc-4dd9-9d16-aa49f3ba222c",
+                "x-qlik-entity-revision": "25293e9a-c740-4510-ade3-e2e13ed35ef1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -23585,7 +23588,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "e13f7f42-b596-4411-8265-82bfccccda01",
+                "x-qlik-entity-revision": "ed37c1d9-2aec-4b44-89de-67009ee690c4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -23687,7 +23690,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "e68fc33b-a12d-4654-b82a-111e3ed9bf35",
+                "x-qlik-entity-revision": "6fb6fe3f-fb2b-421f-b063-c668d4250653",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -25245,6 +25248,15 @@
                     },
                     {
                         "in": "query",
+                        "name": "orphans",
+                        "schema": {
+                            "type": "boolean"
+                        },
+                        "required": false,
+                        "description": "Only return assignments which are 'orphans' in the current tenant."
+                    },
+                    {
+                        "in": "query",
                         "name": "page",
                         "schema": {
                             "type": "string"
@@ -25276,7 +25288,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "ac704ced-d842-4338-8048-71ee6012f059",
+                "x-qlik-entity-revision": "9a98ce3c-a95d-43da-a63e-1044dbee2850",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -33670,7 +33682,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "62c38247-58f9-4523-9795-98770aac124b",
+                "x-qlik-entity-revision": "d9e1b034-a8c0-4c93-a5ad-17e1b2597611",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -33725,7 +33737,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "6a7b9f31-9b7d-4621-9eb5-4f520ae6d5e2",
+                "x-qlik-entity-revision": "838539b5-3519-4ebb-a2d5-fac83cd0bc47",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -33786,7 +33798,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "bec30764-7c0e-4c99-a059-436322603d4e",
+                "x-qlik-entity-revision": "7c060eac-429d-4bc4-90f3-caf0a15fa1a5",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -33920,7 +33932,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d9d39f9d-8c29-4ef3-afca-d18f7a64861c",
+                "x-qlik-entity-revision": "e9a126f9-92c8-4330-9d8c-504f66843ba1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -34097,7 +34109,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "9585a125-0da9-4813-91bb-cb63a30cab74",
+                "x-qlik-entity-revision": "7a421cd0-3634-49c2-9ac3-2fb73fa86880",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -34167,7 +34179,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "03335cff-2afd-412e-8b70-98b422e9de5a",
+                "x-qlik-entity-revision": "fac0d2b5-9bed-4b9d-a446-60ea68ac3783",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -34238,7 +34250,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "5ab43416-a1f0-4dd7-855e-de6dc15604ab",
+                "x-qlik-entity-revision": "b0cca309-dc86-4c31-a33c-700f9fef73fc",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -34719,7 +34731,8 @@
                 },
                 "redirect_uri": {
                     "type": "string",
-                    "description": "The original redirect URI provided during authorization. For verification purposes only."
+                    "description": "The original redirect URI provided during authorization. For verification purposes only.",
+                    "x-qlik-customer-data": true
                 },
                 "client_secret": {
                     "type": "string",
@@ -48920,7 +48933,8 @@
                 },
                 "postLogoutRedirectUri": {
                     "type": "string",
-                    "description": "Direct the user on logout to a specific URI."
+                    "description": "Direct the user on logout to a specific URI.",
+                    "x-qlik-customer-data": true
                 }
             }
         },
@@ -49043,11 +49057,13 @@
                                 "properties": {
                                     "kid": {
                                         "type": "string",
-                                        "description": "Key ID used to sign the JWTs."
+                                        "description": "Key ID used to sign the JWTs.",
+                                        "x-qlik-customer-data": true
                                     },
                                     "pem": {
                                         "type": "string",
-                                        "description": "Pem-encoded public key for verifying the JWTs."
+                                        "description": "Pem-encoded public key for verifying the JWTs.",
+                                        "x-qlik-customer-data": true
                                     }
                                 }
                             },
@@ -49109,16 +49125,19 @@
                             "type": "string",
                             "pattern": "^[A-Za-z0-9][A-Za-z0-9.\\-_]+$",
                             "maxLength": 254,
-                            "description": "The realm identifier for the IdP."
+                            "description": "The realm identifier for the IdP.",
+                            "x-qlik-customer-data": true
                         },
                         "audience": {
                             "type": "string",
                             "maxLength": 256,
-                            "description": "Allows for setting audience in access tokens."
+                            "description": "Allows for setting audience in access tokens.",
+                            "x-qlik-customer-data": true
                         },
                         "discoveryUrl": {
                             "type": "string",
-                            "description": "The OpenID configuration endpoint. (Ex: https://<domain>/.well-known/openid-configuration). Required if openid_configuration is not given."
+                            "description": "The OpenID configuration endpoint. (Ex: https://<domain>/.well-known/openid-configuration). Required if openid_configuration is not given.",
+                            "x-qlik-customer-data": true
                         },
                         "claimsMapping": {
                             "$ref": "#/components/schemas/claimsMappingNonInteractive"
@@ -49170,7 +49189,8 @@
                 },
                 "description": {
                     "type": "string",
-                    "maxLength": 128
+                    "maxLength": 128,
+                    "x-qlik-customer-data": true
                 },
                 "interactive": {
                     "type": "boolean",
@@ -49189,7 +49209,8 @@
                             "type": "string",
                             "pattern": "^[A-Za-z0-9][A-Za-z0-9.\\-_]+$",
                             "maxLength": 254,
-                            "description": "The realm identifier for the IdP."
+                            "description": "The realm identifier for the IdP.",
+                            "x-qlik-customer-data": true
                         },
                         "scope": {
                             "type": "string",
@@ -49198,15 +49219,18 @@
                         },
                         "clientId": {
                             "type": "string",
-                            "description": "The client identifier used as part of authenticating an interactive identity provider."
+                            "description": "The client identifier used as part of authenticating an interactive identity provider.",
+                            "x-qlik-customer-data": true
                         },
                         "clientSecret": {
                             "type": "string",
-                            "description": "The client secret used as part of authenticating an interactive identity provider."
+                            "description": "The client secret used as part of authenticating an interactive identity provider.",
+                            "x-qlik-customer-data": true
                         },
                         "discoveryUrl": {
                             "type": "string",
-                            "description": "The OpenID configuration endpoint. (Ex: https://<domain>/.well-known/openid-configuration). Required if openid_configuration is not given."
+                            "description": "The OpenID configuration endpoint. (Ex: https://<domain>/.well-known/openid-configuration). Required if openid_configuration is not given.",
+                            "x-qlik-customer-data": true
                         },
                         "claimsMapping": {
                             "$ref": "#/components/schemas/claimsMappingInteractive"
@@ -49244,7 +49268,8 @@
                 "postLogoutRedirectUri": {
                     "type": "string",
                     "maxLength": 2083,
-                    "description": "Direct the user on logout to a specific URI."
+                    "description": "Direct the user on logout to a specific URI.",
+                    "x-qlik-customer-data": true
                 }
             },
             "description": "Payload for creating an OIDC-compatible identity provider."
@@ -49299,11 +49324,13 @@
                                         "properties": {
                                             "kid": {
                                                 "type": "string",
-                                                "description": "Key ID used to sign the JWTs."
+                                                "description": "Key ID used to sign the JWTs.",
+                                                "x-qlik-customer-data": true
                                             },
                                             "pem": {
                                                 "type": "string",
-                                                "description": "Pem-encoded public key for verifying the JWTs."
+                                                "description": "Pem-encoded public key for verifying the JWTs.",
+                                                "x-qlik-customer-data": true
                                             }
                                         }
                                     }
@@ -49364,7 +49391,8 @@
             "properties": {
                 "realm": {
                     "type": "string",
-                    "description": "The realm identifier for the IdP."
+                    "description": "The realm identifier for the IdP.",
+                    "x-qlik-customer-data": true
                 },
                 "scope": {
                     "type": "string",
@@ -49372,19 +49400,23 @@
                 },
                 "issuer": {
                     "type": "string",
-                    "description": "This field is only used in Qlik Sense Enterprise Client-Managed IdPs."
+                    "description": "This field is only used in Qlik Sense Enterprise Client-Managed IdPs.",
+                    "x-qlik-customer-data": true
                 },
                 "clientId": {
                     "type": "string",
-                    "description": "The client identifier used as part of authenticating an interactive identity provider."
+                    "description": "The client identifier used as part of authenticating an interactive identity provider.",
+                    "x-qlik-customer-data": true
                 },
                 "clientSecret": {
                     "type": "string",
-                    "description": "The client secret used as part of authenticating an interactive identity provider."
+                    "description": "The client secret used as part of authenticating an interactive identity provider.",
+                    "x-qlik-customer-data": true
                 },
                 "discoveryUrl": {
                     "type": "string",
-                    "description": "The OpenID configuration endpoint. (Ex: https://<domain>/.well-known/openid-configuration)."
+                    "description": "The OpenID configuration endpoint. (Ex: https://<domain>/.well-known/openid-configuration).",
+                    "x-qlik-customer-data": true
                 },
                 "claimsMapping": {
                     "$ref": "#/components/schemas/claimsMappingInteractive"
@@ -49495,23 +49527,28 @@
             "properties": {
                 "issuer": {
                     "type": "string",
-                    "description": "OpenID Provider issuer"
+                    "description": "OpenID Provider issuer",
+                    "x-qlik-customer-data": true
                 },
                 "jwks_uri": {
                     "type": "string",
-                    "description": "URL of the OP's JSON Web Key Set [JWK] document"
+                    "description": "URL of the OP's JSON Web Key Set [JWK] document",
+                    "x-qlik-customer-data": true
                 },
                 "token_endpoint": {
                     "type": "string",
-                    "description": "OAuth 2.0 Token Endpoint"
+                    "description": "OAuth 2.0 Token Endpoint",
+                    "x-qlik-customer-data": true
                 },
                 "userinfo_endpoint": {
                     "type": "string",
-                    "description": "URL of the OP's UserInfo Endpoint"
+                    "description": "URL of the OP's UserInfo Endpoint",
+                    "x-qlik-customer-data": true
                 },
                 "end_session_endpoint": {
                     "type": "string",
-                    "description": "URL at the OP to which an RP can perform a redirect to request that the End-User be logged out at the OP."
+                    "description": "URL at the OP to which an RP can perform a redirect to request that the End-User be logged out at the OP.",
+                    "x-qlik-customer-data": true
                 },
                 "authorization_endpoint": {
                     "type": "string",
@@ -49519,7 +49556,8 @@
                 },
                 "introspection_endpoint": {
                     "type": "string",
-                    "description": "The introspection endpoint is an OAuth 2.0 endpoint that takes a parameter representing an OAuth 2.0 token and returns a JSON [RFC7159] document representing the meta information."
+                    "description": "The introspection endpoint is an OAuth 2.0 endpoint that takes a parameter representing an OAuth 2.0 token and returns a JSON [RFC7159] document representing the meta information.",
+                    "x-qlik-customer-data": true
                 }
             },
             "description": "OpenID configuration"
@@ -49625,7 +49663,8 @@
                 "idpClaims": {
                     "type": "object",
                     "x-qlik-pii": true,
-                    "description": "The claims retrieved from the external IdP."
+                    "description": "The claims retrieved from the external IdP.",
+                    "x-qlik-customer-data": true
                 },
                 "oauth2Error": {
                     "type": "object",
@@ -49650,7 +49689,8 @@
                 "resultantClaims": {
                     "type": "object",
                     "x-qlik-pii": true,
-                    "description": "The resultant claims based on the claims received from the external IdP."
+                    "description": "The resultant claims based on the claims received from the external IdP.",
+                    "x-qlik-customer-data": true
                 }
             }
         },
@@ -53775,7 +53815,8 @@
                     "properties": {
                         "body": {
                             "type": "string",
-                            "description": "The received body of the delivery"
+                            "description": "The received body of the delivery",
+                            "x-qlik-customer-data": true
                         },
                         "headers": {
                             "type": "object",
@@ -53785,7 +53826,8 @@
                             "description": "Headers received for this delivery",
                             "additionalProperties": {
                                 "type": "string"
-                            }
+                            },
+                            "x-qlik-customer-data": true
                         },
                         "statusCode": {
                             "type": "number",
@@ -53887,12 +53929,14 @@
                 "url": {
                     "type": "string",
                     "maxLength": 2048,
-                    "description": "Target URL for webhook HTTPS requests"
+                    "description": "Target URL for webhook HTTPS requests",
+                    "x-qlik-customer-data": true
                 },
                 "name": {
                     "type": "string",
                     "maxLength": 512,
-                    "description": "The name for the webhook"
+                    "description": "The name for the webhook",
+                    "x-qlik-customer-data": true
                 },
                 "level": {
                     "enum": [
@@ -53916,7 +53960,8 @@
                     "type": "string",
                     "maxLength": 64,
                     "minLength": 32,
-                    "description": "String used as secret for calculating HMAC hash sent as header"
+                    "description": "String used as secret for calculating HMAC hash sent as header",
+                    "x-qlik-customer-data": true
                 },
                 "enabled": {
                     "type": "boolean",
@@ -53931,7 +53976,8 @@
                     "description": "Additional headers in the post request",
                     "additionalProperties": {
                         "type": "string"
-                    }
+                    },
+                    "x-qlik-customer-data": true
                 },
                 "ownerId": {
                     "type": "string",
@@ -53959,7 +54005,8 @@
                 "description": {
                     "type": "string",
                     "maxLength": 1024,
-                    "description": "The reason for creating the webhook"
+                    "description": "The reason for creating the webhook",
+                    "x-qlik-customer-data": true
                 },
                 "disabledReason": {
                     "type": "string",
