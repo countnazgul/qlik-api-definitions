@@ -1,6 +1,6 @@
 {
   "name": "qlik-api-definitions",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -22,9 +22,9 @@
   },
   "homepage": "https://github.com/countnazgul/qlik-api-definitions#readme",
   "dependencies": {
-    "axios": "^1.3.6",
-    "dotenv": "^16.0.3",
-    "puppeteer": "^19.11.0",
-    "qlik-repo-api": "^0.6.1"
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "puppeteer": "^21.6.1",
+    "qlik-repo-api": "^0.12.0"
   }
 }

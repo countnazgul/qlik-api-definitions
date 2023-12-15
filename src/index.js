@@ -71,7 +71,7 @@ function combineFiles(rawData) {
 
 async function downloadQixData() {
   const qixData = await axios
-    .get(`${baseUrl}/specs/openRPC/engine-rpc.json`)
+    .get(`${baseUrl}/specs/json-rpc/qix.json`)
     .then((r) => r.data);
 
   writeFileSync(
@@ -85,19 +85,34 @@ async function downloadQixData() {
 async function downloadSaaSData() {
   const browser = await puppeteer.launch({
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    headless: "new",
   });
   const page = await browser.newPage();
 
+  await page.setViewport({
+    width: 1280,
+    height: 960,
+    deviceScaleFactor: 1,
+  });
+
   await page.goto(`${baseUrl}/apis#rest`, { waitUntil: "load" });
 
-  const areasAll = await page.$$eval(`.endpoint`, (nodes) =>
+  try {
+    await page.click("#onetrust-accept-btn-handler");
+  } catch (e) {}
+
+  await page.goto(`${baseUrl}/apis#rest`, { waitUntil: "load" });
+
+  await page.click(".items > li:nth-of-type(4) > a");
+
+  const areasAll = await page.$$eval(`.api`, (nodes) =>
     nodes.map((element) => {
       const title = element
         .querySelector("div > h3")
         .innerText.replace("# ", "");
 
       const referenceLink = element
-        .querySelector("div > div > a")
+        .querySelector("div > div:nth-of-type(2) > a")
         .getAttribute("href");
 
       return {
@@ -115,15 +130,15 @@ async function downloadSaaSData() {
 
   for (let [index, area] of areasRest.entries()) {
     await page.goto(`${baseUrl}${area.referenceLink}`, {
-      waitUntil: "load",
+      waitUntil: "networkidle0",
     });
 
-    const downloadLinks = await page.$$eval(
-      `[data-testid="entity-download-spec"]`,
-      (elements) =>
-        elements.map((element) => {
-          return element.getAttribute("href");
-        })
+    try {
+      await page.click("#onetrust-accept-btn-handler");
+    } catch (e) {}
+
+    const downloadLinks = await page.$$eval(".download-link", (elements) =>
+      elements.map((element) => element.getAttribute("href"))
     );
     const specLink = `${baseUrl}${downloadLinks[0]}`;
 
@@ -155,7 +170,7 @@ async function downloadSaaSData() {
 }
 
 async function downloadNebulaData() {
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch({ headless: "new" });
   const page = await browser.newPage();
 
   await page.goto(`${baseUrl}/apis/javascript/nebula-bar-chart`, {
@@ -190,14 +205,12 @@ async function downloadProxyData() {
     },
   });
 
-  console.log(
-    `1/1 PROXY --> ${process.env.QLIK_HOST}/about/openapi/main`
-  );
+  console.log(`1/1 PROXY --> ${process.env.QLIK_HOST}/about/openapi/main`);
 
   const data = await proxyClient.Get(`about/openapi/main`);
   writeFileSync(
     `${process.cwd()}/data/Proxy.json`,
-    JSON.stringify(data, null, 4)
+    JSON.stringify(data.data, null, 4)
   );
 }
 
