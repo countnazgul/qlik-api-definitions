@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.1909.0",
+        "version": "12.1923.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -9386,7 +9386,7 @@
                 },
                 {
                     "name": "qObjectIdsToPatch",
-                    "description": "Add softpatches for this objects if available. If empty all softpatches are added to the bookmark. This is ignored if IncludePatches is false.",
+                    "description": "Add softpatches for these objects to the bookmark if available. If IncludePatches is true, softpatches are included for all objects.\nAny session objects included are also added to the bookmark. IncludePatches has no effect on the patching of session objects.",
                     "schema": {
                         "type": "array",
                         "items": {

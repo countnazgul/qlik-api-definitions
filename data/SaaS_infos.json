@@ -1,257 +1,214 @@
 {
     ".Well Known": {
         "title": ".well-known",
-        "version": "0.879.8",
-        "description": ""
+        "version": ""
     },
     "API Keys": {
-        "title": "API keys",
-        "version": "0.879.8",
-        "description": "API keys can be used by developers to gain programmatic access to the Qlik platform, acting as their own user."
-    },
-    "Login": {
-        "title": "Login",
-        "version": "0.879.8",
-        "description": "This API is used to interact with Edge Auth resources in Qlik elastic environments."
-    },
-    "OAuth": {
-        "title": "OAuth",
-        "version": "0.879.8",
-        "description": "This API is used to interact with Edge Auth resources in Qlik elastic environments."
-    },
-    "OAuth Tokens": {
-        "title": "OAuth tokens",
-        "version": "0.879.8",
-        "description": "This API is used to interact with Edge Auth resources in Qlik elastic environments."
-    },
-    "Web Integrations": {
-        "title": "Web integrations",
-        "version": "0.879.8",
-        "description": "A web integration is a resource representing a list of whitelisted origins that can make requests to a specified tenant. It is the implementation of the CORS mechanism within Qlik Sense SaaS."
+        "title": "api-keys",
+        "version": ""
     },
     "Apps": {
-        "title": "Apps",
-        "version": "0.879.8",
-        "description": "Apps are central to the Qlik platform and is the resource you use when interacting with Qlik Sense and QlikView apps."
-    },
-    "Automations": {
-        "title": "Automations",
-        "version": "0.879.8",
-        "description": "Qlik Application Automation is a visual, no-code approach to connecting applications."
-    },
-    "AutoML Dataset Predictions": {
-        "title": "AutoML Real-time Predictions",
-        "version": "0.879.8",
-        "description": ""
-    },
-    "AutoML Real Time Predictions": {
-        "title": "Automations",
-        "version": "0.879.8",
-        "description": "Qlik Application Automation is a visual, no-code approach to connecting applications."
-    },
-    "Conditions": {
-        "title": "Conditions",
-        "version": "0.879.8",
-        "description": "Conditions is the resource representing a condition query based on data in a Qlik app."
-    },
-    "Data Assets": {
-        "title": "Data assets",
-        "version": "0.879.8",
-        "description": "Catalog Service provides persistence and REST APIs for Catalog CRUD and List operations."
-    },
-    "Data Files": {
-        "title": "Data files",
-        "version": "0.879.8",
-        "description": "API for uploading and managing user data files"
-    },
-    "Data Sets": {
-        "title": "Data sets",
-        "version": "0.879.8",
-        "description": "Catalog Service provides persistence and REST APIs for Catalog CRUD and List operations."
-    },
-    "Data Stores": {
-        "title": "Data stores",
-        "version": "0.879.8",
-        "description": "Catalog Service provides persistence and REST APIs for Catalog CRUD and List operations."
-    },
-    "Evaluations": {
-        "title": "Evaluations",
-        "version": "0.879.8",
-        "description": "The `app-evaluator` service is responsible for running in-cluster performance and scalability tests/evaluations of apps"
-    },
-    "Reports": {
-        "title": "Reports",
-        "version": "0.879.8",
-        "description": "Request a report generation."
-    },
-    "CSP Origins": {
-        "title": "CSP origins",
-        "version": "0.879.8",
-        "description": "CSP origins allows you to configure domains, or origins, that Qlik Sense client visualizations/extensions are allowed to communicate with."
-    },
-    "CSRF Token": {
-        "title": "CSRF token",
-        "version": "0.879.8",
-        "description": "This API is used to interact with the CSRF token resource in Edge Auth in Qlik elastic environments."
-    },
-    "Natural Language": {
-        "title": "Natural Language",
-        "version": "0.879.8",
-        "description": "Ask natural languages questions and context aware partial questions against applications enabled for conversational analytics or a specific app to receive Insight Advisor generated responses and suggestions"
-    },
-    "Extensions": {
-        "title": "Extensions",
-        "version": "0.879.8",
-        "description": "Extensions is a powerful capability in Qlik Sense which allows third-party visualizations and other presentation objects to be used in the Qlik Sense client."
-    },
-    "Themes": {
-        "title": "Themes",
-        "version": "0.879.8",
-        "description": "Themes enable you to customize/style the Qlik Sense client experience."
+        "title": "apps",
+        "version": ""
     },
     "Audits": {
-        "title": "Audits",
-        "version": "0.879.8",
-        "description": "The audit resource allows you to gain insight of what goes on in your tenant."
+        "title": "audits",
+        "version": ""
+    },
+    "Automation Connections": {
+        "title": "automation-connections",
+        "version": ""
+    },
+    "Automations": {
+        "title": "automations",
+        "version": ""
+    },
+    "AutoML Dataset Predictions": {
+        "title": "automl-predictions",
+        "version": ""
+    },
+    "AutoML Real-Time Predictions": {
+        "title": "automl-deployments",
+        "version": ""
     },
     "Brands": {
-        "title": "Brands",
-        "version": "0.879.8",
-        "description": ""
+        "title": "brands",
+        "version": ""
     },
     "Collections": {
-        "title": "Collections",
-        "version": "0.879.8",
-        "description": "Collections is a way to catalog various content a user has access to, and group that content based on various properties."
+        "title": "collections",
+        "version": ""
+    },
+    "Conditions": {
+        "title": "conditions",
+        "version": ""
     },
     "Consumption": {
-        "title": "Consumption",
-        "version": "0.879.8",
-        "description": ""
+        "title": "consumption",
+        "version": ""
+    },
+    "CSP Origins": {
+        "title": "csp-origins",
+        "version": ""
+    },
+    "CSRF Token": {
+        "title": "csrf-token",
+        "version": ""
     },
     "Data Alerts": {
-        "title": "Data alerts",
-        "version": "0.879.8",
-        "description": "Supports chart sharing, chart monitoring and alerting features. The legacy sharing APIs refer to chart sharing and chart monitoring, which is a feature that allows the user to send an e-mail with an embedded chart either manually (chart sharing) or in a recurring manner (chart monitoring). It also stores the history related to these actions. The alerting/ data-alerts APIs support the alerting feature, where a user is able to create alerts that trigger notifications in case a condition in the dataset of an app is fulfilled."
+        "title": "data-alerts",
+        "version": ""
+    },
+    "Data Assets": {
+        "title": "data-assets",
+        "version": ""
     },
     "Data Connections": {
-        "title": "Data connections",
-        "version": "0.879.8",
-        "description": "data-connections is the resource representing a connection"
+        "title": "data-connections",
+        "version": ""
     },
     "Data Credentials": {
-        "title": "Data credentials",
-        "version": "0.879.8",
-        "description": "data-credentials is the resource representing a credential"
+        "title": "data-credentials",
+        "version": ""
+    },
+    "Data Files": {
+        "title": "data-files",
+        "version": ""
+    },
+    "Data Sets": {
+        "title": "data-sets",
+        "version": ""
+    },
+    "Data Stores": {
+        "title": "data-stores",
+        "version": ""
     },
     "Dcaas": {
-        "title": "Dcaas",
-        "version": "0.879.8",
-        "description": ""
+        "title": "dcaas",
+        "version": ""
     },
     "Encryption": {
-        "title": "Encryption",
-        "version": "0.879.8",
-        "description": ""
+        "title": "encryption",
+        "version": ""
+    },
+    "Evaluations": {
+        "title": "evaluations",
+        "version": ""
+    },
+    "Extensions": {
+        "title": "extensions",
+        "version": ""
     },
     "Glossaries": {
-        "title": "Glossaries",
-        "version": "0.879.8",
-        "description": "A glossary is a collection of common and agreed upon (business) terms, typically focused on defining the meaning of data and described in terms that everyone understands."
+        "title": "glossaries",
+        "version": ""
     },
     "Groups": {
-        "title": "Groups",
-        "version": "0.879.8",
-        "description": "Groups is the resource representing a group in the system."
+        "title": "groups",
+        "version": ""
     },
     "Identity Providers": {
-        "title": "Identity providers",
-        "version": "0.879.8",
-        "description": "A service for managing identity providers."
+        "title": "identity-providers",
+        "version": ""
     },
     "Items": {
-        "title": "Items",
-        "version": "0.879.8",
-        "description": "Items is a discovery API for core resources in the Qlik platform. This API is used to list apps and other resources a user has access to."
+        "title": "items",
+        "version": ""
     },
     "Licenses": {
-        "title": "Licenses",
-        "version": "0.879.8",
-        "description": "Licenses is the resource representing tenant and user entitlements."
+        "title": "licenses",
+        "version": ""
     },
     "Lineage Graphs": {
-        "title": "Lineage graphs",
-        "version": "0.879.8",
-        "description": "Lineage-graphs represents the lineage information for a specific Qlik item."
+        "title": "lineage-graphs",
+        "version": ""
+    },
+    "Login": {
+        "title": "login",
+        "version": ""
+    },
+    "Natural Language": {
+        "title": "questions",
+        "version": ""
     },
     "Notes": {
-        "title": "Notes",
-        "version": "0.879.8",
-        "description": "CRUD for notes and note syncing APIs for real time collaborative editing"
+        "title": "notes",
+        "version": ""
+    },
+    "Notification Channels": {
+        "title": "notification-channels",
+        "version": ""
     },
     "Notification Digests": {
-        "title": "Notification digests",
-        "version": "0.879.8",
-        "description": "Supports chart sharing, chart monitoring and alerting features. The legacy sharing APIs refer to chart sharing and chart monitoring, which is a feature that allows the user to send an e-mail with an embedded chart either manually (chart sharing) or in a recurring manner (chart monitoring). It also stores the history related to these actions. The alerting/ data-alerts APIs support the alerting feature, where a user is able to create alerts that trigger notifications in case a condition in the dataset of an app is fulfilled."
+        "title": "notification-digests",
+        "version": ""
     },
     "Notifications": {
-        "title": "Notifications",
-        "version": "0.879.8",
-        "description": "notifications is the resource representing the various notifications that notification-prep can render"
+        "title": "notifications",
+        "version": ""
+    },
+    "OAuth": {
+        "title": "oauth",
+        "version": ""
+    },
+    "OAuth Tokens": {
+        "title": "oauth-tokens",
+        "version": ""
     },
     "Quotas": {
-        "title": "Quotas",
-        "version": "0.879.8",
-        "description": "Quotas is the resource representing tenant quotas originating from the license."
+        "title": "quotas",
+        "version": ""
     },
     "Reload Tasks": {
-        "title": "Reload tasks",
-        "version": "0.879.8",
-        "description": "reload-tasks allows for publishing a reload schedule job request to the job queue, and for handling CRUD operations of scheduled reload tasks."
+        "title": "reload-tasks",
+        "version": ""
     },
     "Reloads": {
-        "title": "Reloads",
-        "version": "0.879.8",
-        "description": "Reloads allows for triggering reloads of apps to refresh its data. Traditionally this has only been possible through the JSON-RPC websocket API, but can now also be done by using this REST API."
+        "title": "reloads",
+        "version": ""
+    },
+    "Reports": {
+        "title": "reports",
+        "version": ""
     },
     "Roles": {
-        "title": "Roles",
-        "version": "0.879.8",
-        "description": "The resource representing a role in the system."
+        "title": "roles",
+        "version": ""
     },
     "Spaces": {
-        "title": "Spaces",
-        "version": "0.879.8",
-        "description": "Spaces is a central concept in the Qlik platform and is used to control access to various other resources in the system."
+        "title": "spaces",
+        "version": ""
     },
     "Temp Contents": {
-        "title": "Temp-contents",
-        "version": "0.879.8",
-        "description": ""
+        "title": "temp-contents",
+        "version": ""
     },
     "Tenants": {
-        "title": "Tenants",
-        "version": "0.879.8",
-        "description": "Tenants is the resource representing a tenant."
+        "title": "tenants",
+        "version": ""
+    },
+    "Themes": {
+        "title": "themes",
+        "version": ""
     },
     "Transports": {
-        "title": "Transports",
-        "version": "0.879.8",
-        "description": ""
+        "title": "transports",
+        "version": ""
     },
     "Users": {
-        "title": "Users",
-        "version": "0.879.8",
-        "description": "The resource representing a user in the system."
+        "title": "users",
+        "version": ""
+    },
+    "Web Integrations": {
+        "title": "web-integrations",
+        "version": ""
     },
     "Web Notifications": {
-        "title": "Web notifications",
-        "version": "0.879.8",
-        "description": "Web notifications is the resource representing a user's notification"
+        "title": "web-notifications",
+        "version": ""
     },
     "Webhooks": {
-        "title": "Webhooks",
-        "version": "0.879.8",
-        "description": "Webhooks are a way for Qlik Cloud to provide other applications with real-time information."
+        "title": "webhooks",
+        "version": ""
     }
 }
