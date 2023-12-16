@@ -167,12 +167,20 @@
         "title": "reloads",
         "version": ""
     },
+    "Report Templates": {
+        "title": "report-templates",
+        "version": ""
+    },
     "Reports": {
         "title": "reports",
         "version": ""
     },
     "Roles": {
         "title": "roles",
+        "version": ""
+    },
+    "Sharing Tasks": {
+        "title": "sharing-tasks",
         "version": ""
     },
     "Spaces": {
