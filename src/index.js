@@ -77,6 +77,18 @@ function combineFiles(rawData) {
 
   for (let area of combined) {
     for (let [path, data] of Object.entries(area.paths)) {
+      // force add apps tag for all /v1/apps endpoints that
+      // do not have tags defined. For some reason the only endpoints
+      // without tags are the /v1/apps
+      if (path.indexOf("/v1/apps") > -1) {
+        if (data["get"] && !data["get"].tags) data["get"].tags = ["apps"];
+        if (data["post"] && !data["post"].tags) data["post"].tags = ["apps"];
+        if (data["put"] && !data["put"].tags) data["put"].tags = ["apps"];
+        if (data["patch"] && !data["patch"].tags) data["patch"].tags = ["apps"];
+        if (data["delete"] && !data["delete"].tags)
+          data["delete"].tags = ["apps"];
+      }
+
       flatten.paths[path] = data;
     }
 
