@@ -34,10 +34,36 @@ function combineFiles(rawData) {
   const info = {};
   const combined = rawData.map((a) => {
     info[a.title] = a.specData.info;
-    return {
+
+    let d = {
       paths: a.specData.paths,
-      definitions: a.specData.components.schemas,
+      components: {},
     };
+
+    if (a.specData.components) {
+      if (a.specData.components.schemas)
+        d.components.schemas = a.specData.components.schemas;
+
+      if (a.specData.components.errors)
+        d.components.schemas = a.specData.components.errors;
+
+      if (a.specData.components.requestBodies)
+        d.components.requestBodies = a.specData.components.requestBodies;
+
+      if (a.specData.components.responses)
+        d.components.responses = a.specData.components.responses;
+
+      if (a.specData.components.parameters)
+        d.components.parameters = a.specData.components.parameters;
+
+      if (a.specData.components.headers)
+        d.components.headers = a.specData.components.headers;
+
+      if (a.specData.components.examples)
+        d.components.examples = a.specData.components.examples;
+    }
+
+    return d;
   });
 
   const flatten = {
@@ -46,7 +72,7 @@ function combineFiles(rawData) {
       title: "Open API specification for Qlik SaaS REST API",
     },
     paths: {},
-    definitions: {},
+    components: {},
   };
 
   for (let area of combined) {
@@ -54,8 +80,8 @@ function combineFiles(rawData) {
       flatten.paths[path] = data;
     }
 
-    for (let [path, data] of Object.entries(area.definitions)) {
-      flatten.definitions[path] = data;
+    for (let [path, data] of Object.entries(area.components)) {
+      flatten.components[path] = { ...flatten.components[path], ...data };
     }
   }
 
