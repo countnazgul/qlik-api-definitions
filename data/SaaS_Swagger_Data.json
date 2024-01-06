@@ -672,29 +672,29 @@
             "post": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/NxApp"
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     }
                 },
+                "description": "Creates a new app.",
                 "requestBody": {
                     "content": {
-                        "application/json": {
+                        "*/*": {
                             "schema": {
                                 "$ref": "#/components/schemas/CreateApp"
                             }
                         }
                     },
-                    "description": "Attributes that the user wants to set in new app.",
-                    "required": true
+                    "required": true,
+                    "description": "Attributes that the user wants to set in new app."
                 },
-                "description": "Creates a new app.",
                 "x-qlik-access-control": [
                     "create"
                 ],
@@ -704,7 +704,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "c1724460-df3b-48a2-9a8f-9eb1068ca9f7",
+                "x-qlik-entity-revision": "a81b195a-4aec-4e83-88e6-4336569d9e0f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -719,26 +719,26 @@
             "get": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/NxApp"
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     }
                 },
                 "parameters": [
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app."
                     }
                 ],
                 "description": "Retrieves information for a specific app.",
@@ -751,7 +751,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "1aa6d01c-a0bb-4bce-a04a-e6096aac9d2b",
+                "x-qlik-entity-revision": "ba092387-ff06-4924-8710-b5bbe3703a0a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -764,40 +764,40 @@
             "put": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/NxApp"
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     }
                 },
                 "parameters": [
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app."
                     }
                 ],
+                "description": "Updates the information for a specific app.",
                 "requestBody": {
                     "content": {
-                        "application/json": {
+                        "*/*": {
                             "schema": {
                                 "$ref": "#/components/schemas/UpdateApp"
                             }
                         }
                     },
-                    "description": "Attributes that user wants to set.",
-                    "required": true
+                    "required": true,
+                    "description": "Attributes that user wants to set."
                 },
-                "description": "Updates the information for a specific app.",
                 "x-qlik-access-control": [
                     "update"
                 ],
@@ -807,7 +807,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "753e4940-1c46-415b-8bd5-b945c31b7d2b",
+                "x-qlik-entity-revision": "1bf67333-bc94-434f-8618-f97d829b5527",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -820,6 +820,9 @@
             "delete": {
                 "responses": {
                     "200": {
+                        "content": {
+                            "application/json": {}
+                        },
                         "headers": {},
                         "description": "OK"
                     }
@@ -828,11 +831,11 @@
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app."
                     }
                 ],
                 "description": "Deletes a specific app.",
@@ -845,7 +848,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "7d83c741-c220-46d9-971c-341fbde93d10",
+                "x-qlik-entity-revision": "bc9c6790-e7a9-4893-82da-fe45259f54b5",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -860,40 +863,40 @@
             "post": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/NxApp"
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     }
                 },
                 "parameters": [
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app."
                     }
                 ],
+                "description": "Copies a specific app.",
                 "requestBody": {
                     "content": {
-                        "application/json": {
+                        "*/*": {
                             "schema": {
                                 "$ref": "#/components/schemas/CreateApp"
                             }
                         }
                     },
-                    "description": "Attributes that should be set in the copy.",
-                    "required": true
+                    "required": true,
+                    "description": "Attributes that should be set in the copy."
                 },
-                "description": "Copies a specific app.",
                 "x-qlik-access-control": [
                     "duplicate"
                 ],
@@ -903,7 +906,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "a0b99b4d-e2c3-4e3c-b69f-d1835f78ed06",
+                "x-qlik-entity-revision": "dd0aaced-a03f-417b-9bbd-431c71dec61f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -918,8 +921,6 @@
             "get": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -929,18 +930,20 @@
                                     }
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     }
                 },
                 "parameters": [
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app."
                     }
                 ],
                 "description": "Retrieves the lineage for an app.\nReturns a JSON-formatted array of strings describing the lineage of the app.",
@@ -953,7 +956,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "edd2e95f-4af5-443d-897f-80e10218ee88",
+                "x-qlik-entity-revision": "1779deaf-82e9-4678-a064-6c93c0a6dd65",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -968,26 +971,26 @@
             "get": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/DataModelMetadata"
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     }
                 },
                 "parameters": [
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app."
                     }
                 ],
                 "description": "Retrieves the data model and reload statistics metadata of an app.\nAn empty metadata structure is returned if the metadata is not available in the app.",
@@ -1000,7 +1003,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "4d720d89-a46b-411a-8f6b-af527ba5e4b1",
+                "x-qlik-entity-revision": "9d8b963c-a8a6-4c35-a95e-cc8eaa012605",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -1017,10 +1020,10 @@
                     "201": {
                         "headers": {
                             "Location": {
-                                "description": "The URL of the exported app on Temporary content service.",
                                 "schema": {
                                     "type": "string"
-                                }
+                                },
+                                "description": "The URL of the exported app on Temporary content service."
                             }
                         },
                         "description": "Created"
@@ -1042,19 +1045,19 @@
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app."
                     },
                     {
                         "in": "query",
                         "name": "NoData",
-                        "description": "The flag indicating if only object contents should be exported.",
                         "schema": {
                             "type": "boolean"
-                        }
+                        },
+                        "description": "The flag indicating if only object contents should be exported."
                     }
                 ],
                 "description": "Exports a specific app.",
@@ -1067,7 +1070,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "a36e020a-8138-4b53-ac48-513021afef38",
+                "x-qlik-entity-revision": "70a53bc3-7775-42c5-b334-6a057e84d4c9",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -1415,8 +1418,6 @@
             "get": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/octet-stream": {
                                 "schema": {
@@ -1424,7 +1425,9 @@
                                     "format": "binary"
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     },
                     "403": {
                         "headers": {},
@@ -1439,20 +1442,20 @@
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Unique application identifier.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Unique application identifier."
                     },
                     {
                         "in": "path",
                         "name": "path",
-                        "required": true,
-                        "description": "Path to file content.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Path to file content."
                     }
                 ],
                 "description": "Gets media content from file.\nReturns a stream of bytes containing the media file content on success, or error if file is not found.",
@@ -1465,7 +1468,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "b3093593-f533-4017-9497-c6d72dd0b89a",
+                "x-qlik-entity-revision": "bb894cab-35e9-4f42-af3a-6d6e2f6825a2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -1478,6 +1481,9 @@
             "put": {
                 "responses": {
                     "200": {
+                        "content": {
+                            "application/json": {}
+                        },
                         "headers": {},
                         "description": "OK"
                     },
@@ -1494,22 +1500,23 @@
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Unique application identifier.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Unique application identifier."
                     },
                     {
                         "in": "path",
                         "name": "path",
-                        "required": true,
-                        "description": "Path to file content.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Path to file content."
                     }
                 ],
+                "description": "Stores the media content file.\nReturns OK if the bytes containing the media file content were successfully stored, or error in case of failure, lack of permission or file already exists on the supplied path.",
                 "requestBody": {
                     "content": {
                         "application/octet-stream": {
@@ -1518,9 +1525,9 @@
                             }
                         }
                     },
-                    "required": true
+                    "required": true,
+                    "description": ""
                 },
-                "description": "Stores the media content file.\nReturns OK if the bytes containing the media file content were successfully stored, or error in case of failure, lack of permission or file already exists on the supplied path.",
                 "x-qlik-access-control": [
                     "update"
                 ],
@@ -1530,7 +1537,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "10a79b9f-6d73-402b-88a0-32c24a0f8c02",
+                "x-qlik-entity-revision": "5deba42b-0e1b-48b9-aa13-54dccc647921",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -1543,6 +1550,9 @@
             "delete": {
                 "responses": {
                     "200": {
+                        "content": {
+                            "application/json": {}
+                        },
                         "headers": {},
                         "description": "OK"
                     },
@@ -1559,20 +1569,20 @@
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Unique application identifier.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Unique application identifier."
                     },
                     {
                         "in": "path",
                         "name": "path",
-                        "required": true,
-                        "description": "Path to file content.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Path to file content."
                     }
                 ],
                 "description": "Deletes a media content file or complete directory.\nReturns OK if the bytes containing the media file (or the complete content of a directory) were successfully deleted, or error in case of failure or lack of permission.",
@@ -1585,7 +1595,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "dce966aa-a6db-4530-b411-6809446ac5e6",
+                "x-qlik-entity-revision": "fb53da60-2d25-422b-a5ae-849acb4828f1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -1600,15 +1610,15 @@
             "get": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/AppContentList"
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     },
                     "403": {
                         "headers": {},
@@ -1623,28 +1633,28 @@
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Unique application identifier.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Unique application identifier."
                     },
                     {
                         "in": "path",
                         "name": "path",
-                        "required": true,
-                        "description": "The path to sub folder with static content relative to the root folder. Use empty path to access the root folder.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "The path to sub folder with static content relative to the root folder. Use empty path to access the root folder."
                     },
                     {
                         "in": "query",
                         "name": "show",
-                        "description": "Optional. List output can include files and folders in different ways:\n* Not recursive, default if show option is not supplied or incorrectly specified, results in output with files and empty directories for the path specified only.\n* Recursive(r), use ?show=r or ?show=recursive, results in a recursive output with files, all empty folders are excluded.\n* All(a), use ?show=a or ?show=all, results in a recursive output with files and empty directories.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "description": "Optional. List output can include files and folders in different ways:\n* Not recursive, default if show option is not supplied or incorrectly specified, results in output with files and empty directories for the path specified only.\n* Recursive(r), use ?show=r or ?show=recursive, results in a recursive output with files, all empty folders are excluded.\n* All(a), use ?show=a or ?show=all, results in a recursive output with files and empty directories."
                     }
                 ],
                 "description": "Lists media content.\nReturns a JSON formatted array of strings describing the available media content or error if the optional path supplied is not found.",
@@ -1657,7 +1667,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "b9a2f75b-f334-4896-9888-78ac54b325b4",
+                "x-qlik-entity-revision": "9f37a9e7-1e71-4d9a-a9b6-4e584013e8ca",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -1672,8 +1682,6 @@
             "get": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/octet-stream": {
                                 "schema": {
@@ -1681,7 +1689,9 @@
                                     "format": "binary"
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     },
                     "403": {
                         "headers": {},
@@ -1696,11 +1706,11 @@
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Unique application identifier.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Unique application identifier."
                     }
                 ],
                 "description": "Gets media content from file currently used as application thumbnail.\nReturns a stream of bytes containing the media file content on success, or error if file is not found.\nThe image selected as thumbnail is only updated when application is saved.",
@@ -1713,7 +1723,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "52ebf390-e250-41d5-a5a7-4bbe88d4ce55",
+                "x-qlik-entity-revision": "ad104a43-46d3-4c37-bffd-5c9aa0288c22",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -1728,15 +1738,15 @@
             "post": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/NxAppObject"
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     },
                     "400": {
                         "headers": {},
@@ -1751,26 +1761,34 @@
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app."
                     },
                     {
                         "in": "path",
                         "name": "objectId",
-                        "required": true,
-                        "description": "Identifier of the object.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the object."
                     }
                 ],
-                "requestBody": {
-                    "$ref": "#/components/requestBodies/UpdateOwner"
-                },
                 "description": "Sets owner on an app object.\nThe user must be the owner of the object.",
+                "requestBody": {
+                    "content": {
+                        "*/*": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateOwner"
+                            }
+                        }
+                    },
+                    "required": true,
+                    "description": "New owner."
+                },
                 "x-qlik-access-control": [
                     "update"
                 ],
@@ -1780,7 +1798,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "c4c3e149-e06e-4384-ba1d-67ad5ce90f33",
+                "x-qlik-entity-revision": "bf7ed92e-2cff-4c49-b6c4-65eefb7400e4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -1795,15 +1813,15 @@
             "put": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/NxApp"
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     },
                     "403": {
                         "headers": {},
@@ -1818,17 +1836,25 @@
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app."
                     }
                 ],
-                "requestBody": {
-                    "$ref": "#/components/requestBodies/UpdateOwner"
-                },
                 "description": "Changes owner of the app.",
+                "requestBody": {
+                    "content": {
+                        "*/*": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateOwner"
+                            }
+                        }
+                    },
+                    "required": true,
+                    "description": "New owner."
+                },
                 "x-qlik-access-control": [
                     "change_owner"
                 ],
@@ -1838,7 +1864,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "f6434d09-1d2e-4524-b646-925f97b185f1",
+                "x-qlik-entity-revision": "f98c1c46-926f-441a-87bb-2f4415629225",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -1853,40 +1879,40 @@
             "post": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/NxApp"
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     }
                 },
                 "parameters": [
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app."
                     }
                 ],
+                "description": "Publishes a specific app to a managed space.",
                 "requestBody": {
                     "content": {
-                        "application/json": {
+                        "*/*": {
                             "schema": {
                                 "$ref": "#/components/schemas/PublishApp"
                             }
                         }
                     },
-                    "description": "Publish information for the app.",
-                    "required": true
+                    "required": true,
+                    "description": "Publish information for the app."
                 },
-                "description": "Publishes a specific app to a managed space.",
                 "x-qlik-access-control": [
                     "publish"
                 ],
@@ -1896,7 +1922,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "abe3e764-155e-49f3-b852-53a143a29592",
+                "x-qlik-entity-revision": "1864fbee-8b17-4b2d-84ef-e21e3c5ca716",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -1909,40 +1935,40 @@
             "put": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/NxApp"
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     }
                 },
                 "parameters": [
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app."
                     }
                 ],
+                "description": "Republishes a published app to a managed space.",
                 "requestBody": {
                     "content": {
-                        "application/json": {
+                        "*/*": {
                             "schema": {
                                 "$ref": "#/components/schemas/RepublishApp"
                             }
                         }
                     },
-                    "description": "Republish information for the app.",
-                    "required": true
+                    "required": true,
+                    "description": "Republish information for the app."
                 },
-                "description": "Republishes a published app to a managed space.",
                 "x-qlik-access-control": [
                     "publish"
                 ],
@@ -1952,7 +1978,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "92843805-1074-4e29-af72-20f934c59cbf",
+                "x-qlik-entity-revision": "02c3d6c2-93d3-4e3a-9b5d-b1ebb4ca9f3d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -1967,26 +1993,26 @@
             "get": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/ScriptLogList"
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     }
                 },
                 "parameters": [
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app."
                     }
                 ],
                 "description": "Retrieves the metadata about all script logs stored for an app.\nReturns an array of ScriptLogMeta objects.",
@@ -1999,7 +2025,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "edcb9779-a5ee-47b2-a68a-e7897b934073",
+                "x-qlik-entity-revision": "23e517c3-cb0a-4f72-ac8d-da9965ca7b71",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -2014,8 +2040,6 @@
             "get": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/octet-stream": {
                                 "schema": {
@@ -2023,27 +2047,29 @@
                                     "format": "binary"
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     }
                 },
                 "parameters": [
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app."
                     },
                     {
                         "in": "path",
                         "name": "reloadId",
-                        "required": true,
-                        "description": "Identifier of the reload.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the reload."
                     }
                 ],
                 "description": "Retrieves the log of a specific reload.\nReturns the log as \"text/plain; charset=UTF-8\".",
@@ -2056,7 +2082,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "9332edc6-55e1-4488-adae-7588e473af61",
+                "x-qlik-entity-revision": "f624792e-34a8-4965-8c73-024f109b6467",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -2071,43 +2097,43 @@
             "get": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/ReloadListMetadata"
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     }
                 },
                 "parameters": [
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app"
                     },
                     {
                         "in": "path",
                         "name": "reloadId",
-                        "required": true,
-                        "description": "Identifier of the reload. Use empty reloadId to get all reloads.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the reload. Use empty reloadId to get all reloads."
                     },
                     {
                         "in": "query",
                         "name": "limit",
-                        "description": "Maximum number of records to return from this request. Default: 100",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "description": "Maximum number of records to return from this request. Default: 100"
                     }
                 ],
                 "description": "Retrieves the app reload metadata list.\nReload metadata contains reload information, including reload id, duration, endtime and lineage load info.",
@@ -2117,9 +2143,10 @@
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "locked",
                 "x-qlik-categories": [
-                    "external/manage"
+                    "external/manage",
+                    "external/build"
                 ],
-                "x-qlik-entity-revision": "f83e544e-d2b6-4420-a742-0a9a15ee8788",
+                "x-qlik-entity-revision": "24f3b306-7f44-482b-846b-b4a1048a57ff",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -2784,50 +2811,50 @@
             "get": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/ScriptMetaList"
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     }
                 },
                 "parameters": [
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app."
                     },
                     {
                         "in": "query",
                         "name": "filter",
-                        "description": "A scim filter expression defining which script versions should be retrieved. Filterable fields are:\n* ScriptId\n* ModifiedTime\n* ModifierId",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "description": "A scim filter expression defining which script versions should be retrieved. Filterable fields are:\n* ScriptId\n* ModifiedTime\n* ModifierId"
                     },
                     {
                         "in": "query",
                         "name": "limit",
-                        "description": "Maximum number of records to return from this request.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "description": "Maximum number of records to return from this request."
                     },
                     {
                         "in": "query",
                         "name": "page",
-                        "description": "Opaque definition of which page of the result set to return. Returned from a previous call using the same filter. Not yet supported.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "description": "Opaque definition of which page of the result set to return. Returned from a previous call using the same filter. Not yet supported."
                     }
                 ],
                 "description": "Retrieves the script history for an app.\nReturns information about the saved versions of the script.",
@@ -2840,7 +2867,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "f9c28699-b05a-4444-8718-7c49a2a98345",
+                "x-qlik-entity-revision": "b4ce019e-53ac-4a7d-b44f-efddfdb483f7",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -2853,6 +2880,9 @@
             "post": {
                 "responses": {
                     "200": {
+                        "content": {
+                            "application/json": {}
+                        },
                         "headers": {},
                         "description": "OK"
                     }
@@ -2861,25 +2891,25 @@
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app."
                     }
                 ],
+                "description": "Sets script for an app.",
                 "requestBody": {
                     "content": {
-                        "application/json": {
+                        "*/*": {
                             "schema": {
                                 "$ref": "#/components/schemas/ScriptVersion"
                             }
                         }
                     },
-                    "description": "The script to set.",
-                    "required": true
+                    "required": true,
+                    "description": "The script to set."
                 },
-                "description": "Sets script for an app.",
                 "x-qlik-access-control": [
                     "update"
                 ],
@@ -2889,7 +2919,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "dd265b61-237d-4402-8d83-3a35e95efed4",
+                "x-qlik-entity-revision": "0e189948-07ef-4d73-a71b-0e3342b80cee",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -2904,35 +2934,35 @@
             "get": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/ScriptVersion"
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     }
                 },
                 "parameters": [
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app."
                     },
                     {
                         "in": "path",
                         "name": "version",
-                        "required": true,
-                        "description": "Identifier of the script version, or 'current' for retrieving the current version.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the script version, or 'current' for retrieving the current version."
                     }
                 ],
                 "description": "Retrieves a version of the script for an app.\nReturns the script text.",
@@ -2945,7 +2975,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "93472b12-fbd4-46f9-b51a-0ff8dd3dc7a2",
+                "x-qlik-entity-revision": "117e28c0-ba97-4880-aaaf-de2cee3fe6be",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -2958,6 +2988,9 @@
             "patch": {
                 "responses": {
                     "200": {
+                        "content": {
+                            "application/json": {}
+                        },
                         "headers": {},
                         "description": "OK"
                     }
@@ -2966,34 +2999,34 @@
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app."
                     },
                     {
                         "in": "path",
                         "name": "version",
-                        "required": true,
-                        "description": "Identifier of the script version.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the script version."
                     }
                 ],
+                "description": "Updates a specific version of the script for an app.",
                 "requestBody": {
                     "content": {
-                        "application/json": {
+                        "*/*": {
                             "schema": {
                                 "$ref": "#/components/schemas/NxPatch"
                             }
                         }
                     },
-                    "description": "Array of patches for the object ScriptVersion.\n<div class=note>Only /versionMessage can be modified using operations add, remove and replace.</div>",
-                    "required": true
+                    "required": true,
+                    "description": "Array of patches for the object ScriptVersion.\n<div class=note>Only /versionMessage can be modified using operations add, remove and replace.</div>"
                 },
-                "description": "Updates a specific version of the script for an app.",
                 "x-qlik-access-control": [
                     "update"
                 ],
@@ -3003,7 +3036,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "206bf4c7-9ee4-440b-bd91-5034ed8c7321",
+                "x-qlik-entity-revision": "e0e9d34e-514a-45c8-a289-104f25c4d73c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -3016,6 +3049,9 @@
             "delete": {
                 "responses": {
                     "200": {
+                        "content": {
+                            "application/json": {}
+                        },
                         "headers": {},
                         "description": "OK"
                     }
@@ -3024,20 +3060,20 @@
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app."
                     },
                     {
                         "in": "path",
                         "name": "version",
-                        "required": true,
-                        "description": "Identifier of the script version",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the script version"
                     }
                 ],
                 "description": "Deletes a specific version of the script for an app.\nFails if the version to delete is the current version.",
@@ -3050,7 +3086,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "950430ed-10a0-449a-bb6f-a9b6aec15659",
+                "x-qlik-entity-revision": "9289a606-2938-434f-83ca-4e5a7ead6bda",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -3065,47 +3101,47 @@
             "put": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/NxApp"
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     }
                 },
                 "parameters": [
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app."
                     }
                 ],
+                "description": "Sets space on a specific app.",
                 "requestBody": {
                     "content": {
-                        "application/json": {
+                        "*/*": {
                             "schema": {
                                 "$ref": "#/components/schemas/UpdateSpace"
                             }
                         }
                     },
-                    "description": "New space.",
-                    "required": true
+                    "required": true,
+                    "description": "New space."
                 },
-                "description": "Sets space on a specific app.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "locked",
                 "x-qlik-categories": [
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "30d2ff2f-9259-4308-bf69-d6f0c3470ba5",
+                "x-qlik-entity-revision": "9c754a44-6448-472a-8fe4-0fc4c5a1cc44",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -3118,26 +3154,26 @@
             "delete": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/NxApp"
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     }
                 },
                 "parameters": [
                     {
                         "in": "path",
                         "name": "appId",
-                        "required": true,
-                        "description": "Identifier of the app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "required": true,
+                        "description": "Identifier of the app."
                     }
                 ],
                 "description": "Removes space from a specific app.",
@@ -3147,7 +3183,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "6e386124-932f-4ca0-af6a-03fe6cbe91a8",
+                "x-qlik-entity-revision": "d4346461-0102-49b1-a7c3-dd13a4dd3fa4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -3711,15 +3747,15 @@
             "post": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/NxApp"
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     },
                     "404": {
                         "headers": {},
@@ -3730,66 +3766,61 @@
                     {
                         "in": "query",
                         "name": "appId",
-                        "description": "The app ID of the target app when source is qvw file.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "description": "The app ID of the target app when source is qvw file."
                     },
                     {
                         "in": "query",
                         "name": "fallbackName",
-                        "description": "The name of the target app when source does not have a specified name, applicable if source is qvw file.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "description": "The name of the target app when source does not have a specified name, applicable if source is qvw file."
                     },
                     {
                         "in": "query",
                         "name": "fileId",
-                        "description": "The file ID to be downloaded from Temporary Content Service (TCS) and used during import.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "description": "The file ID to be downloaded from Temporary Content Service (TCS) and used during import."
                     },
                     {
                         "in": "query",
                         "name": "mode",
-                        "description": "The import mode. In `new` mode (default), the source app will be imported as a new app.<div class=note>The `autoreplace` mode is an internal mode only and is not permitted for external use.</div>\n\nOne of:\n* NEW\n* AUTOREPLACE",
                         "schema": {
-                            "type": "string",
-                            "items": {
-                                "enum": [
-                                    "NEW",
-                                    "AUTOREPLACE"
-                                ]
-                            }
-                        }
+                            "type": "string"
+                        },
+                        "description": "The import mode. In `new` mode (default), the source app will be imported as a new app.<div class=note>The `autoreplace` mode is an internal mode only and is not permitted for external use.</div>\n\nOne of:\n* NEW\n* AUTOREPLACE"
                     },
                     {
                         "in": "query",
                         "name": "name",
-                        "description": "The name of the target app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "description": "The name of the target app."
                     },
                     {
                         "in": "query",
                         "name": "NoData",
-                        "description": "If NoData is true, the data of the existing app will be kept as is, otherwise it will be replaced by the new incoming data.",
                         "schema": {
                             "type": "boolean"
-                        }
+                        },
+                        "description": "If NoData is true, the data of the existing app will be kept as is, otherwise it will be replaced by the new incoming data."
                     },
                     {
                         "in": "query",
                         "name": "spaceId",
-                        "description": "The space ID of the target app.",
                         "schema": {
                             "type": "string"
-                        }
+                        },
+                        "description": "The space ID of the target app."
                     }
                 ],
+                "description": "Imports an app into the system.",
                 "requestBody": {
                     "content": {
                         "application/octet-stream": {
@@ -3800,7 +3831,6 @@
                     },
                     "description": "Path of the source app."
                 },
-                "description": "Imports an app into the system.",
                 "x-qlik-access-control": [
                     "import"
                 ],
@@ -3810,7 +3840,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "75292956-ac03-40ac-9d3c-d642a3fe4bf5",
+                "x-qlik-entity-revision": "aeb6e207-aebb-42fb-99bd-63695027425a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -3825,18 +3855,18 @@
             "get": {
                 "responses": {
                     "200": {
-                        "headers": {},
-                        "description": "OK",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "type": "array",
                                     "items": {
-                                        "type": "string"
+                                        "$ref": "#/components/schemas/UserPrivileges"
                                     }
                                 }
                             }
-                        }
+                        },
+                        "headers": {},
+                        "description": "OK"
                     }
                 },
                 "description": "Gets the app privileges for the current user, such as create app and import app. Empty means that the current user has no app privileges.",
@@ -3849,7 +3879,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "9ce7a8e3-d041-4362-8971-e34c6965f58f",
+                "x-qlik-entity-revision": "d41878f3-fe23-489f-a687-332c8ae8eb55",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -17015,6 +17045,496 @@
                 }
             }
         },
+        "/v1/di-projects": {
+            "get": {
+                "tags": [
+                    "data project"
+                ],
+                "summary": "list data integration projects",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ListDiProjectsRsp"
+                                }
+                            }
+                        },
+                        "description": "OK"
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Not Found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "spaceId",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Filter by space id"
+                    }
+                ],
+                "description": "List data integration projects",
+                "operationId": "list_projects",
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-entity-revision": "0dc87046-6925-4b88-b755-10f1880414b7",
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "1",
+                    "limit": 1000
+                }
+            }
+        },
+        "/v1/di-projects/{projectId}": {
+            "get": {
+                "tags": [
+                    "data project"
+                ],
+                "summary": "get data integration project",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DiProjectItemRsp"
+                                }
+                            }
+                        },
+                        "description": "OK"
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Not Found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "projectId",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "65424a71c11367914c1e659b",
+                        "required": true
+                    }
+                ],
+                "operationId": "get_project",
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-entity-revision": "c83b735a-f583-4d23-ba49-f461be3ab4f0",
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "1",
+                    "limit": 1000
+                }
+            }
+        },
+        "/v1/di-projects/{projectId}/di-tasks": {
+            "get": {
+                "tags": [
+                    "data task"
+                ],
+                "summary": "list data tasks within data project",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ListDataTasksRsp"
+                                }
+                            }
+                        },
+                        "description": "OK"
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Not Found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "projectId",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "65424a71c11367914c1e659b",
+                        "required": true,
+                        "description": "Data project id"
+                    }
+                ],
+                "operationId": "list_project_tasks",
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-entity-revision": "f1791771-425d-41bc-adec-e24196e6a25f",
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "1",
+                    "limit": 1000
+                }
+            }
+        },
+        "/v1/di-projects/{projectId}/di-tasks/{dataTaskId}": {
+            "get": {
+                "tags": [
+                    "data task"
+                ],
+                "summary": "get data task",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DataTaskItemRsp"
+                                }
+                            }
+                        },
+                        "description": "OK"
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Not Found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "dataTaskId",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "task-cYSY",
+                        "required": true,
+                        "description": "Data task id"
+                    },
+                    {
+                        "in": "path",
+                        "name": "projectId",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "65424a71c11367914c1e659b",
+                        "required": true,
+                        "description": "Data project id"
+                    }
+                ],
+                "operationId": "get_data_task",
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-entity-revision": "7ead37d6-b7f7-4c56-9124-c5d567ab6d4b",
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "1",
+                    "limit": 1000
+                }
+            }
+        },
+        "/v1/di-projects/{projectId}/di-tasks/{dataTaskId}/runtime/actions/start": {
+            "post": {
+                "tags": [
+                    "data task"
+                ],
+                "summary": "start data task",
+                "responses": {
+                    "204": {
+                        "description": "NO CONTENT"
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Not Found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "dataTaskId",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "task-cYSY",
+                        "required": true,
+                        "description": "Data task id"
+                    },
+                    {
+                        "in": "path",
+                        "name": "projectId",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "65424a71c11367914c1e659b",
+                        "required": true,
+                        "description": "Data project id"
+                    }
+                ],
+                "operationId": "start_data_task",
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-entity-revision": "7ce1d46a-8cca-4165-be1b-a66e2281cc30",
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            }
+        },
+        "/v1/di-projects/{projectId}/di-tasks/{dataTaskId}/runtime/actions/stop": {
+            "post": {
+                "tags": [
+                    "data task"
+                ],
+                "summary": "stop data task",
+                "responses": {
+                    "204": {
+                        "description": "NO CONTENT"
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Not Found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "dataTaskId",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "task-cYSY",
+                        "required": true
+                    },
+                    {
+                        "in": "path",
+                        "name": "projectId",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "65424a71c11367914c1e659b",
+                        "required": true
+                    }
+                ],
+                "operationId": "stop_data_task",
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-entity-revision": "4af0d12c-651b-4eff-894d-b8e5e2628377",
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            }
+        },
+        "/v1/di-projects/{projectId}/di-tasks/{dataTaskId}/runtime/state": {
+            "get": {
+                "tags": [
+                    "data task"
+                ],
+                "summary": "get data task runtime state",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "lastRun": {
+                                            "$ref": "#/components/schemas/DataTaskInstanceState"
+                                        },
+                                        "runReadiness": {
+                                            "type": "object",
+                                            "properties": {
+                                                "state": {
+                                                    "enum": [
+                                                        "READY_TO_RUN",
+                                                        "ALREADY_RUNNING",
+                                                        "NOT_RUNNABLE"
+                                                    ],
+                                                    "type": "string"
+                                                },
+                                                "message": {
+                                                    "type": "string"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "OK"
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Not Found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "dataTaskId",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "task-cYSY",
+                        "required": true
+                    },
+                    {
+                        "in": "path",
+                        "name": "projectId",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "65424a71c11367914c1e659b",
+                        "required": true
+                    }
+                ],
+                "operationId": "get_data_task_runtime_state",
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-entity-revision": "6e326134-14d2-4249-bb24-d130059b5d6c",
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "1",
+                    "limit": 1000
+                }
+            }
+        },
         "/v1/encryption/keyproviders": {
             "get": {
                 "tags": [
@@ -17074,7 +17594,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "bf25e9d5-0b10-4541-bf0a-a5cfc9a07648",
+                "x-qlik-entity-revision": "d3729f75-62e4-48b2-8019-4c11ab9461cc",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -17085,7 +17605,7 @@
                 "tags": [
                     "tenant key providers management"
                 ],
-                "summary": "Registers an AWS-KMS key for the specific tenant",
+                "summary": "Registers a multi-region AWS-KMS key for the specific tenant",
                 "responses": {
                     "201": {
                         "content": {
@@ -17198,7 +17718,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b23f8567-280e-48c3-9642-a1e033723a60",
+                "x-qlik-entity-revision": "49a397ce-bffa-407b-a690-ccc3e758ea1a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -17284,7 +17804,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "7dcd840e-2312-4c5c-a506-64d4c058e31c",
+                "x-qlik-entity-revision": "6ea822bc-72d7-4802-83ce-7601a31e9d45",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -17687,7 +18207,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "8bdadc1a-f3b8-4243-90af-f70562729a06",
+                "x-qlik-entity-revision": "788a62ab-68bf-4e31-b6cd-ff31e265578d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -17754,7 +18274,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b069e5be-9d21-472d-857b-afdd4214e7f2",
+                "x-qlik-entity-revision": "b96abaf4-7367-4986-a22a-eae6d3c9a1f0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -29928,7 +30448,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "b8e51ecd-fdd2-4a3e-a242-cc2dac3ab686",
+                "x-qlik-entity-revision": "d2aecca2-e875-414a-beae-1d4e8ced1567",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -37845,12 +38365,7 @@
                         "description": "The name (title) of the application"
                     },
                     "usage": {
-                        "enum": [
-                            "ANALYTICS",
-                            "DATA_PREPARATION"
-                        ],
-                        "type": "string",
-                        "description": "Indicates whether the app is used for Analytics or DataPreparation\n\nOne of:\n* ANALYTICS\n* DATA_PREPARATION"
+                        "$ref": "#/components/schemas/UsageEnum"
                     },
                     "locale": {
                         "type": "string",
@@ -37906,6 +38421,31 @@
                         "description": "Content type."
                     }
                 }
+            },
+            "AppObjectGenericType": {
+                "type": "string",
+                "oneOf": [
+                    {
+                        "title": "genericObject",
+                        "x-qlik-const": 0
+                    },
+                    {
+                        "title": "genericBookmark",
+                        "x-qlik-const": 1
+                    },
+                    {
+                        "title": "genericMeasure",
+                        "x-qlik-const": 2
+                    },
+                    {
+                        "title": "genericDimension",
+                        "x-qlik-const": 3
+                    },
+                    {
+                        "title": "genericVariable",
+                        "x-qlik-const": 4
+                    }
+                ]
             },
             "AppUpdateAttributes": {
                 "type": "object",
@@ -38281,12 +38821,7 @@
                 "type": "object",
                 "properties": {
                     "usage": {
-                        "enum": [
-                            "ANALYTICS",
-                            "DATA_PREPARATION"
-                        ],
-                        "type": "string",
-                        "description": "\nOne of:\n* ANALYTICS\n* DATA_PREPARATION"
+                        "$ref": "#/components/schemas/UsageEnum"
                     },
                     "fields": {
                         "type": "array",
@@ -38595,21 +39130,7 @@
                         "description": "Defines the thousand separator (if any).\nIs used if **qUseThou** is set to 1.\nExample: **,**"
                     },
                     "Type": {
-                        "enum": [
-                            "UNKNOWN",
-                            "ASCII",
-                            "INTEGER",
-                            "REAL",
-                            "FIX",
-                            "MONEY",
-                            "DATE",
-                            "TIME",
-                            "TIMESTAMP",
-                            "INTERVAL"
-                        ],
-                        "type": "string",
-                        "default": "UNKNOWN",
-                        "description": "Type of the field.\nDefault is U.\n\nOne of:\n* U or UNKNOWN\n* A or ASCII\n* I or INTEGER\n* R or REAL\n* F or FIX\n* M or MONEY\n* D or DATE\n* T or TIME\n* TS or TIMESTAMP\n* IV or INTERVAL"
+                        "$ref": "#/components/schemas/FieldAttrType"
                     },
                     "nDec": {
                         "type": "integer",
@@ -38625,6 +39146,61 @@
                     }
                 },
                 "description": "Sets the formatting of a field.\nThe properties of _qFieldAttributes_ and the formatting mechanism are described below.\n\n### Formatting mechanism\nThe formatting mechanism depends on the type set in _qType,_ as shown below:\n<div class=note>In case of inconsistencies between the type and the format pattern, the format pattern takes precedence over the type.</div>\n\n### Type is DATE, TIME, TIMESTAMP or INTERVAL\nThe following applies:\n* If a format pattern is defined in _qFmt_ , the formatting is as defined in _qFmt_ .\n* If _qFmt_ is empty, the formatting is defined by the number interpretation variables included at the top of the script ( _TimeFormat_ , _DateFormat_ , _TimeStampFormat_ ).\n* The properties _qDec_ , _qThou_ , _qnDec_ , _qUseThou_ are not used.\n\n### Type is INTEGER\nThe following applies:\n* If a format pattern is defined in _qFmt_ , the engine looks at the values set in _qDec_ and _qThou_ . If these properties are not defined, the formatting mechanism uses the number interpretation variables included at the top of the script ( _DecimalSep_ and _ThousandSep_ ).\n* If no format pattern is defined in _qFmt_ , no formatting is applied. The properties _qDec_ , _qThou_ , _qnDec_ , _qUseThou_ and the number interpretation variables defined in the script are not used .\n\n### Type is REAL\nThe following applies:\n* If a format pattern is defined in _qFmt_ , the engine looks at the values set in _qDec_ and _qThou_ . If these properties are not defined, the engine uses the number interpretation variables included at the top of the script ( _DecimalSep_ and _ThousandSep_ ).\n* If no format pattern is defined in _qFmt_ , and if the value is almost an integer value (for example, 14,000012), the value is formatted as an integer. The properties _qDec_ , _qThou_ , _qnDec_ , _qUseThou_ are not used.\n* If no format pattern is defined in _qFmt_ , and if _qnDec_ is defined and not 0, the property _qDec_ is used. If _qDec_ is not defined, the variable _DecimalSep_ defined at the top of the script is used.\n* If no format pattern is defined in _qFmt_ , and if _qnDec_ is 0, the number of decimals is 14 and the property _qDec_ is used. If _qDec_ is not defined, the variable _DecimalSep_ defined at the top of the script is used.\n\n### Type is FIX\nThe following applies:\n* If a format pattern is defined in _qFmt_ , the engine looks at the values set in _qDec_ and _qThou_ . If these properties are not defined, the engine uses the number interpretation variables included at the top of the script ( _DecimalSep_ and _ThousandSep_ ).\n* If no format pattern is defined in _qFmt_ , the properties _qDec_ and _qnDec_ are used. If _qDec_ is not defined, the variable _DecimalSep_ defined at the top of the script is used.\n\n### Type is MONEY\nThe following applies:\n* If a format pattern is defined in _qFmt_ , the engine looks at the values set in _qDec_ and _qThou_ . If these properties are not defined, the engine uses the number interpretation variables included at the top of any script ( _MoneyDecimalSep_ and _MoneyThousandSep_ ).\n* If no format pattern is defined in _qFmt_ , the engine uses the number interpretation variables included at the top of the script ( _MoneyDecimalSep_ and _MoneyThousandSep_ ).\n\n### Type is ASCII\nNo formatting, _qFmt_ is ignored."
+            },
+            "FieldAttrType": {
+                "type": "string",
+                "oneOf": [
+                    {
+                        "title": "U",
+                        "description": "UNKNOWN",
+                        "x-qlik-const": 0
+                    },
+                    {
+                        "title": "A",
+                        "description": "ASCII",
+                        "x-qlik-const": 1
+                    },
+                    {
+                        "title": "I",
+                        "description": "INTEGER",
+                        "x-qlik-const": 10
+                    },
+                    {
+                        "title": "R",
+                        "description": "REAL",
+                        "x-qlik-const": 2
+                    },
+                    {
+                        "title": "F",
+                        "description": "FIX",
+                        "x-qlik-const": 11
+                    },
+                    {
+                        "title": "M",
+                        "description": "MONEY",
+                        "x-qlik-const": 12
+                    },
+                    {
+                        "title": "D",
+                        "description": "DATE",
+                        "x-qlik-const": 3
+                    },
+                    {
+                        "title": "T",
+                        "description": "TIME",
+                        "x-qlik-const": 4
+                    },
+                    {
+                        "title": "TS",
+                        "description": "TIMESTAMP",
+                        "x-qlik-const": 5
+                    },
+                    {
+                        "title": "IV",
+                        "description": "INTERVAL",
+                        "x-qlik-const": 6
+                    }
+                ]
             },
             "FieldInTableProfilingData": {
                 "type": "object",
@@ -39568,12 +40144,7 @@
                         "x-qlik-deprecated": true
                     },
                     "usage": {
-                        "enum": [
-                            "ANALYTICS",
-                            "DATA_PREPARATION"
-                        ],
-                        "type": "string",
-                        "description": "\nOne of:\n* ANALYTICS\n* DATA_PREPARATION"
+                        "$ref": "#/components/schemas/UsageEnum"
                     },
                     "custom": {
                         "$ref": "#/components/schemas/JsonObject"
@@ -39675,15 +40246,7 @@
                         "description": "Object description."
                     },
                     "genericType": {
-                        "enum": [
-                            "genericObject",
-                            "genericBookmark",
-                            "genericMeasure",
-                            "genericDimension",
-                            "genericVariable"
-                        ],
-                        "type": "string",
-                        "description": "The generic type of the object.\n\nOne of:\n* genericObject\n* genericBookmark\n* genericMeasure\n* genericDimension\n* genericVariable"
+                        "$ref": "#/components/schemas/AppObjectGenericType"
                     },
                     "publishedAt": {
                         "type": "string",
@@ -39718,6 +40281,26 @@
                     }
                 },
                 "description": "Patches to apply to sense charts. Patches are soft properties meaning that are not persistent and they live within a session."
+            },
+            "NxPatchOperationType": {
+                "type": "string",
+                "oneOf": [
+                    {
+                        "title": "add",
+                        "description": "Add",
+                        "x-qlik-const": 0
+                    },
+                    {
+                        "title": "remove",
+                        "description": "Remove",
+                        "x-qlik-const": 1
+                    },
+                    {
+                        "title": "replace",
+                        "description": "Replace",
+                        "x-qlik-const": 2
+                    }
+                ]
             },
             "objectmetrics": {
                 "type": "object",
@@ -39828,12 +40411,7 @@
                 "type": "object",
                 "properties": {
                     "data": {
-                        "enum": [
-                            "source",
-                            "target"
-                        ],
-                        "type": "string",
-                        "description": "The published app will have data from source or target app.\nThe default is source.\n\n* source: Publish with source data\n* target: Publish with target data"
+                        "$ref": "#/components/schemas/PublishData"
                     },
                     "moveApp": {
                         "type": "boolean",
@@ -39852,6 +40430,19 @@
                         "description": "If app is moved, originAppId needs to be provided."
                     }
                 }
+            },
+            "PublishData": {
+                "type": "string",
+                "oneOf": [
+                    {
+                        "title": "source",
+                        "x-qlik-const": 0
+                    },
+                    {
+                        "title": "target",
+                        "x-qlik-const": 1
+                    }
+                ]
             },
             "RecommendedAnalysis": {
                 "type": "object",
@@ -40000,6 +40591,10 @@
                         "default": -1,
                         "description": "If greater than or equal 0, defines max number of rows loaded from a data source."
                     },
+                    "appDbHash": {
+                        "type": "string",
+                        "description": "A Base64-encoded hash value of the new app database."
+                    },
                     "skipStore": {
                         "type": "boolean",
                         "default": false,
@@ -40011,6 +40606,10 @@
                             "$ref": "#/components/schemas/ReloadStatements"
                         },
                         "description": "List of external loaded or stored statements."
+                    },
+                    "accessDbHash": {
+                        "type": "string",
+                        "description": "A Base64-encoded hash value of the new section access database."
                     },
                     "loadFilesBytes": {
                         "type": "integer",
@@ -40095,12 +40694,7 @@
                 "type": "object",
                 "properties": {
                     "data": {
-                        "enum": [
-                            "source",
-                            "target"
-                        ],
-                        "type": "string",
-                        "description": "The republished app will have data from source or target app.\nThe default is source.\n\n* source: Publish with source data\n* target: Publish with target data"
+                        "$ref": "#/components/schemas/PublishData"
                     },
                     "targetId": {
                         "type": "string",
@@ -40726,6 +41320,36 @@
                         "type": "string"
                     }
                 }
+            },
+            "UsageEnum": {
+                "type": "string",
+                "oneOf": [
+                    {
+                        "title": "ANALYTICS",
+                        "x-qlik-const": 0
+                    },
+                    {
+                        "title": "DATA_PREPARATION",
+                        "x-qlik-const": 1
+                    }
+                ]
+            },
+            "UserPrivileges": {
+                "type": "string",
+                "oneOf": [
+                    {
+                        "title": "can_create_app",
+                        "x-qlik-const": 0
+                    },
+                    {
+                        "title": "can_import_app",
+                        "x-qlik-const": 1
+                    },
+                    {
+                        "title": "can_create_session_app",
+                        "x-qlik-const": 2
+                    }
+                ]
             },
             "ErrorResponse": {
                 "type": "object",
@@ -47646,20 +48270,150 @@
                     }
                 }
             },
+            "DataTaskInstanceState": {
+                "type": "object",
+                "properties": {
+                    "state": {
+                        "enum": [
+                            "STARTING",
+                            "RUNNING",
+                            "COMPLETED",
+                            "FAILED",
+                            "CANCELED"
+                        ],
+                        "type": "string"
+                    },
+                    "message": {
+                        "type": "string"
+                    }
+                }
+            },
+            "DataTaskItemRsp": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string",
+                        "x-qlik-customer-data": true
+                    },
+                    "type": {
+                        "$ref": "#/components/schemas/DataTaskType"
+                    },
+                    "ownerId": {
+                        "type": "string"
+                    },
+                    "spaceId": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string",
+                        "x-qlik-customer-data": true
+                    }
+                }
+            },
+            "DataTaskType": {
+                "enum": [
+                    "LANDING",
+                    "STORAGE",
+                    "QVD_STORAGE",
+                    "TRANSFORM",
+                    "DATAMART",
+                    "REGISTERED_DATA",
+                    "REPLICATION",
+                    "DISTRIBUTION",
+                    "LAKE_LANDING"
+                ],
+                "type": "string",
+                "x-enum-varnames": [
+                    "LANDING",
+                    "STORAGE",
+                    "QVD_STORAGE",
+                    "TRANSFORM",
+                    "DATAMART",
+                    "REGISTERED_DATA",
+                    "REPLICATION",
+                    "DISTRIBUTION",
+                    "LAKE_LANDING"
+                ]
+            },
+            "DiProjectItemRsp": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string",
+                        "x-qlik-customer-data": true
+                    },
+                    "ownerId": {
+                        "type": "string"
+                    },
+                    "spaceId": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string",
+                        "x-qlik-customer-data": true
+                    }
+                }
+            },
+            "ErrorSource": {
+                "type": "object",
+                "properties": {
+                    "pointer": {
+                        "type": "string"
+                    },
+                    "parameter": {
+                        "type": "string"
+                    }
+                }
+            },
+            "ListDataTasksRsp": {
+                "type": "object",
+                "properties": {
+                    "dataTasks": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/DataTaskItemRsp"
+                        }
+                    }
+                }
+            },
+            "ListDiProjectsRsp": {
+                "type": "object",
+                "properties": {
+                    "projects": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/DiProjectItemRsp"
+                        }
+                    }
+                }
+            },
             "KeyProvider": {
                 "type": "object",
                 "example": {
-                    "arn": "arn:aws:kms:us-east-1:857519135519:key/ee358547-5716-4e66-9524-1618716e221a",
-                    "qcg": false,
+                    "arn": "arn:aws:kms:eu-west-1:111222334455:key/mrk-1237c011a37erft67ei987c7612q456",
                     "name": "test name",
                     "current": false,
                     "description": "test description",
+                    "drCompliant": true,
                     "keyprovider": "AWS-KMS",
                     "multiRegion": true,
                     "replicaKeys": [
                         {
-                            "arn": "arn:aws:kms:us-east-2:857519135519:key/ee358547-5716-4e66-9524-1618716e221a",
-                            "region": "us-east-2"
+                            "arn": "arn:aws:kms:eu-west-3:111222334455:key/mrk-1237c011a37erft67ei987c7612q456",
+                            "region": "eu-west-3"
+                        }
+                    ],
+                    "complianceError": [
+                        {
+                            "code": "",
+                            "region": "",
+                            "message": ""
                         }
                     ]
                 },
@@ -47787,19 +48541,24 @@
                 "type": "object",
                 "example": [
                     {
-                        "arn": "arn:aws:kms:us-east-1:857519135519:key/ee358547-5716-4e66-9524-1618716e221a",
-                        "qcg": false,
+                        "arn": "arn:aws:kms:eu-west-1:111222334455:key/mrk-1237c011a37erft67ei987c7612q456",
                         "name": "test name",
                         "current": true,
                         "description": "test description",
+                        "drCompliant": true,
                         "keyprovider": "AWS-KMS",
                         "multiRegion": true,
                         "replicaKeys": [
                             {
-                                "arn": "arn:aws:kms:us-east-2:857519135519:key/ee358547-5716-4e66-9524-1618716e221a",
-                                "region": "us-east-2"
+                                "arn": "arn:aws:kms:eu-west-3:111222334455:key/mrk-1237c011a37erft67ei987c7612q456",
+                                "region": "eu-west-3"
                             }
-                        ]
+                        ],
+                        "complianceError": {
+                            "code": "",
+                            "region": "",
+                            "message": ""
+                        }
                     }
                 ],
                 "properties": {
@@ -47832,53 +48591,60 @@
                 "example": [
                     {
                         "arn": "#QLIK_MANAGED_KEY_PROVIDER#",
-                        "qcg": false,
                         "name": "Qlik Internal Kms",
                         "tenantId": "ImTRa-bkJTD-NZRYjNBa_rDhwSVA6Qo8",
                         "createdAt": "Qlik managed",
                         "description": "Default key management service",
                         "keyprovider": "Qlik",
-                        "multiRegion": false,
-                        "replicaKeys": [],
                         "arnFingerPrint": "ImTRa-bkJTD-NZRYjNBa_rDhwSVA6Qo8",
                         "promotedToCurrentAt": "2023-06-21T18:45:57Z",
                         "demotedFromCurrentAt": "0001-01-01T00:00:00Z"
                     },
                     {
-                        "arn": "arn:aws:kms:us-east-1:857519135519:key/e4e84fc7-7817-4121-b927-9d1d4ef03f1d",
-                        "qcg": false,
+                        "arn": "arn:aws:kms:eu-west-1:111222334455:key/mrk-1237c011a37erft67ei987c7612q456",
                         "name": "CMK - 01",
                         "tenantId": "ImTRa-bkJTD-NZRYjNBa_rDhwSVA6Qo8",
                         "createdAt": "2023-06-21T18:43:49Z",
+                        "drCompliant": true,
                         "keyprovider": "AWS-KMS",
                         "multiRegion": true,
                         "replicaKeys": [
                             {
-                                "arn": "arn:aws:kms:us-east-2:857519135519:key/ee358547-5716-4e66-9524-1618716e221a",
-                                "region": "us-east-2"
+                                "arn": "arn:aws:kms:eu-west-3:111222334455:key/mrk-1237c011a37erft67ei987c7612q456",
+                                "region": "eu-west-3"
                             }
                         ],
                         "arnFingerPrint": "9f352c5a9c1618485051892cb57467e4",
+                        "complianceError": {
+                            "code": "",
+                            "region": "",
+                            "message": ""
+                        },
                         "promotedToCurrentAt": "2023-06-21T18:43:54Z",
                         "demotedFromCurrentAt": "2023-06-21T18:45:57Z"
                     },
                     {
-                        "arn": "arn:aws:kms:us-east-1:857519135519:key/b6a2a74c-fb34-464a-8ea6-d867fd3b9438",
-                        "qcg": false,
+                        "arn": "arn:aws:kms:eu-west-1:111222334455:key/mrk-2678f8123w236c3123469387dc2ce561",
                         "name": "CMK - 02",
                         "current": true,
                         "tenantId": "ImTRa-bkJTD-NZRYjNBa_rDhwSVA6Qo8",
                         "createdAt": "2023-06-21T18:59:17Z",
                         "description": "CMK migration test",
+                        "drCompliant": false,
                         "keyprovider": "AWS-KMS",
                         "multiRegion": true,
                         "replicaKeys": [
                             {
-                                "arn": "arn:aws:kms:us-east-2:857519135519:key/ee358547-5716-4e66-9524-1618716e221a",
-                                "region": "us-east-2"
+                                "arn": "arn:aws:kms:eu-west-3:111222334455:key/mrk-2678f8123w236c3123469387dc2ce561",
+                                "region": "eu-west-3"
                             }
                         ],
-                        "arnFingerPrint": "b5fe2c83b25f9e39487bca28f69e4210",
+                        "arnFingerPrint": "12342c83b25f9e36543bca28f69e4210",
+                        "complianceError": {
+                            "code": "Encryption-88",
+                            "region": "eu-west-3",
+                            "message": "The policy of the provided key does not allow the required action [eu-west-3] [GenerateDataKey]."
+                        },
                         "promotedToCurrentAt": "2023-06-21T18:59:18Z",
                         "demotedFromCurrentAt": "0001-01-01T00:00:00Z"
                     }
@@ -54634,6 +55400,34 @@
                 },
                 "description": "The callback to be performed once the report is done."
             },
+            "ChainableSelection": {
+                "required": [
+                    "selectionType"
+                ],
+                "properties": {
+                    "selectionType": {
+                        "$ref": "#/components/schemas/ChainableSelectionType"
+                    },
+                    "selectionFilter": {
+                        "$ref": "#/components/schemas/SelectionFilter"
+                    },
+                    "persistentBookmark": {
+                        "$ref": "#/components/schemas/SensePersistentBookmark"
+                    },
+                    "temporaryBookmarkV2": {
+                        "$ref": "#/components/schemas/SenseTemporaryBookmarkV2"
+                    }
+                }
+            },
+            "ChainableSelectionType": {
+                "enum": [
+                    "selectionFilter",
+                    "persistentBookmark",
+                    "temporaryBookmarkV2"
+                ],
+                "type": "string",
+                "default": "selectionFilter"
+            },
             "ComposableTemplate": {
                 "required": [
                     "type"
@@ -55065,6 +55859,16 @@
                     }
                 }
             },
+            "reloadTimestampMatchType": {
+                "enum": [
+                    "noCheck",
+                    "requestTimeExact"
+                ],
+                "type": "string",
+                "default": "noCheck",
+                "example": "noCheck",
+                "description": "Choose the reloadTimestamp constraint to apply. An empty value leads to the default noCheck."
+            },
             "ReportRequest": {
                 "example": {
                     "type": "composition-1.0",
@@ -55162,6 +55966,9 @@
                     },
                     "definitions": {
                         "$ref": "#/components/schemas/Definitions"
+                    },
+                    "senseExcelTemplate": {
+                        "$ref": "#/components/schemas/SenseExcelTemplate"
                     },
                     "senseImageTemplate": {
                         "$ref": "#/components/schemas/SenseImageTemplate"
@@ -55262,6 +56069,15 @@
                 },
                 "description": "Result and info about the generated report."
             },
+            "SelectionChain": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/ChainableSelection"
+                },
+                "maxItems": 50,
+                "minItems": 1,
+                "description": "Array of ChainableSelection"
+            },
             "SelectionError": {
                 "properties": {
                     "detail": {
@@ -55307,6 +56123,36 @@
                 },
                 "description": "Errors occurring in selections."
             },
+            "SelectionFilter": {
+                "properties": {
+                    "variables": {
+                        "type": "array",
+                        "maxItems": 1100
+                    },
+                    "patchesById": {
+                        "type": "object",
+                        "description": "A map for applying soft properties, aka patches, to specific visualization IDs within the sheet.",
+                        "additionalProperties": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/NxPatch"
+                            },
+                            "maxItems": 100
+                        }
+                    },
+                    "selectionsByState": {
+                        "type": "object",
+                        "description": "Map of selections to apply by state. Maximum number of states allowed is 125. Maximum number of fields allowed is 125 and Maximum number of overall field values allowed is 150000.",
+                        "additionalProperties": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/QSelection"
+                            },
+                            "maxItems": 125
+                        }
+                    }
+                }
+            },
             "SelectionStrategy": {
                 "enum": [
                     "failOnErrors",
@@ -55315,6 +56161,36 @@
                 ],
                 "type": "string",
                 "default": "ignoreErrorsNoDetails"
+            },
+            "SenseExcelTemplate": {
+                "required": [
+                    "templateLocation"
+                ],
+                "properties": {
+                    "jsOpts": {
+                        "type": "object",
+                        "description": "A JSON object that is passed as-is to the mashup page while rendering, this will be applied to all charts within the sheet. It includes properties of the whole sheet such as theme, gradient etc. Currently only the \"theme\" property is supported."
+                    },
+                    "selectionChain": {
+                        "$ref": "#/components/schemas/SelectionChain"
+                    },
+                    "templateLocation": {
+                        "$ref": "#/components/schemas/TemplateLocation"
+                    },
+                    "selectionStrategy": {
+                        "$ref": "#/components/schemas/SelectionStrategy"
+                    },
+                    "persistentBookmark": {
+                        "$ref": "#/components/schemas/SensePersistentBookmark"
+                    },
+                    "temporaryBookmarkV2": {
+                        "$ref": "#/components/schemas/SenseTemporaryBookmarkV2"
+                    },
+                    "reloadTimestampMatchType": {
+                        "$ref": "#/components/schemas/reloadTimestampMatchType"
+                    }
+                },
+                "description": "Used to export an excel template."
             },
             "SenseImageTemplate": {
                 "required": [
@@ -55342,13 +56218,35 @@
                             "maxItems": 125
                         }
                     },
+                    "persistentBookmark": {
+                        "$ref": "#/components/schemas/SensePersistentBookmark"
+                    },
+                    "temporaryBookmarkV2": {
+                        "$ref": "#/components/schemas/SenseTemporaryBookmarkV2"
+                    },
                     "selectionsByStateDef": {
                         "type": "string",
                         "x-nullable": true,
                         "description": "The definition ID referring to a selectionsByState definition declared in definitions."
+                    },
+                    "reloadTimestampMatchType": {
+                        "$ref": "#/components/schemas/reloadTimestampMatchType"
                     }
                 },
                 "description": "Used to export a single visualization as pdf or png."
+            },
+            "SensePersistentBookmark": {
+                "type": "object",
+                "required": [
+                    "id"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "example": "21edf789-0be4-4b94-a9e6-31456kl4e175",
+                        "description": "Sense Persistence Bookmark id."
+                    }
+                }
             },
             "SenseSheetTemplate": {
                 "required": [
@@ -55377,13 +56275,36 @@
                             "maxItems": 125
                         }
                     },
+                    "persistentBookmark": {
+                        "$ref": "#/components/schemas/SensePersistentBookmark"
+                    },
+                    "temporaryBookmarkV2": {
+                        "$ref": "#/components/schemas/SenseTemporaryBookmarkV2"
+                    },
                     "selectionsByStateDef": {
                         "type": "string",
                         "x-nullable": true,
                         "description": "The definition ID referring to a selectionsByState definition declared in definitions."
+                    },
+                    "reloadTimestampMatchType": {
+                        "$ref": "#/components/schemas/reloadTimestampMatchType"
                     }
                 },
                 "description": "Used to export a sheet as pdf."
+            },
+            "SenseTemporaryBookmarkV2": {
+                "type": "object",
+                "required": [
+                    "id"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "example": "21edf789-0be4-4b94-a9e6-31456kl4e175",
+                        "description": "Sense Temporary Bookmark id."
+                    }
+                },
+                "description": "The temporary bookmark to apply. Patches and Variables are ignored if passed to the API, because they already are applied in the backend."
             },
             "Sheet": {
                 "required": [
@@ -55438,6 +56359,26 @@
                     }
                 },
                 "description": "It refers to the Sense Sheet to be exported. Note that if widthPx and heightPx are not specified, default values will be applied depending on the actual size and layout properties of the Sense Sheet object."
+            },
+            "TemplateLocation": {
+                "required": [
+                    "path"
+                ],
+                "properties": {
+                    "path": {
+                        "type": "string",
+                        "example": "https://qlikcloud.com:443/api/v1/report-templates/223940f7-3170-46b7-91ea-e0c81230adf7",
+                        "description": "The report template location path."
+                    },
+                    "format": {
+                        "enum": [
+                            "url"
+                        ],
+                        "type": "string",
+                        "default": "url"
+                    }
+                },
+                "description": "The location of the report template. Currently it can be an absolute or relative URL to a persisted report template, or to a template file saved as temporary content, as in the following examples: - https://qlikcloud.com:443/api/v1/report-templates/223940f7-3170-46b7-91ea-e0c81230adf7 - https://qlikcloud.com:443/api/v1/temp-contents/653bb4acae966r0730da15fc"
             },
             "Visualization": {
                 "required": [
@@ -59600,30 +60541,6 @@
                 ]
             }
         },
-        "requestBodies": {
-            "UpdateOwner": {
-                "content": {
-                    "application/json": {
-                        "schema": {
-                            "$ref": "#/components/schemas/UpdateOwner"
-                        }
-                    }
-                },
-                "description": "New owner.",
-                "required": true
-            },
-            "JsonPatches": {
-                "content": {
-                    "application/json": {
-                        "schema": {
-                            "$ref": "#/components/schemas/JsonPatches"
-                        }
-                    }
-                },
-                "required": true,
-                "description": "The notification digest patch operations."
-            }
-        },
         "responses": {
             "BadRequest": {
                 "content": {
@@ -60011,6 +60928,19 @@
                     "type": "string"
                 },
                 "description": "A comma-separated list of tus protocol versions supported by the server."
+            }
+        },
+        "requestBodies": {
+            "JsonPatches": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/JsonPatches"
+                        }
+                    }
+                },
+                "required": true,
+                "description": "The notification digest patch operations."
             }
         },
         "examples": {
