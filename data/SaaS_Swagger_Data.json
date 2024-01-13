@@ -2328,7 +2328,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "93e0ff04-45cf-4292-8c96-608ba2e7d06b",
+                "x-qlik-entity-revision": "d623c54b-3e92-4055-99f5-55707d2554f1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -2453,7 +2453,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "dda51a55-2f29-49bb-9386-ee38e95f5578",
+                "x-qlik-entity-revision": "f92116f7-3a9e-461e-8bfe-7d4f041347bf",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -2568,7 +2568,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "f8dc0b47-c744-4da4-8748-5efe1ddc4bc9",
+                "x-qlik-entity-revision": "e2b647a2-7078-482c-b8b5-159c279dbd71",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -9840,7 +9840,7 @@
                 "x-qlik-categories": [
                     "external/embed"
                 ],
-                "x-qlik-entity-revision": "c365d74d-06a4-4be0-9eaf-601314f092ff",
+                "x-qlik-entity-revision": "91e5d6f9-d897-4c93-b0d5-526b4a5c93fd",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -9930,7 +9930,7 @@
                 "x-qlik-categories": [
                     "external/embed"
                 ],
-                "x-qlik-entity-revision": "28edf14c-b77e-4e0f-9302-6f30c77d6ee8",
+                "x-qlik-entity-revision": "b057d727-a46b-4b87-9f53-64c61888a2e7",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -10033,7 +10033,7 @@
                 "x-qlik-categories": [
                     "external/embed"
                 ],
-                "x-qlik-entity-revision": "9924cfed-e33b-4d19-afcb-fc7d5400084b",
+                "x-qlik-entity-revision": "fb8dabfe-afbf-4093-a4a4-d43a3854f4d0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -10144,7 +10144,7 @@
                 "x-qlik-categories": [
                     "external/embed"
                 ],
-                "x-qlik-entity-revision": "feb0ab51-015b-43be-b094-60b1c56fa317",
+                "x-qlik-entity-revision": "7078c25a-fcd6-426d-9878-3cd0442c453b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -10309,13 +10309,28 @@
                         "description": "Service Unavailable"
                     }
                 },
+                "parameters": [
+                    {
+                        "in": "header",
+                        "name": "Accept",
+                        "schema": {
+                            "enum": [
+                                "application/json",
+                                "text/plain"
+                            ],
+                            "type": "string",
+                            "default": "application/json"
+                        },
+                        "description": "The Accept request HTTP header indicates which content types, expressed as MIME types, the client is able to understand"
+                    }
+                ],
                 "operationId": "getCSPHeader",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/embed"
                 ],
-                "x-qlik-entity-revision": "dd17316a-fa25-4070-bfa1-b102c8bbbd23",
+                "x-qlik-entity-revision": "0b34ca90-1b65-435c-9765-f26213c4f8fa",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30448,7 +30463,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "d2aecca2-e875-414a-beae-1d4e8ced1567",
+                "x-qlik-entity-revision": "23566ddf-6259-4801-affb-1270540f3150",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -30625,7 +30640,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "925dcf34-3114-4e9b-9459-fbd12c2b6f03",
+                "x-qlik-entity-revision": "48eaac09-ce71-43d0-8c1b-1f47593d2845",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -39813,7 +39828,7 @@
                     "type": "Float64",
                     "import": {
                         "alias": "cModels",
-                        "package": "github.com/qlik-trial/reporting-service/v9/pkg/models"
+                        "package": "github.com/qlik-trial/reporting-service/v10/pkg/models"
                     }
                 }
             },
@@ -44488,7 +44503,8 @@
                     "name": {
                         "type": "string",
                         "maxLength": 512,
-                        "description": "The name for this entry."
+                        "description": "The name for this entry.",
+                        "x-qlik-customer-data": true
                     },
                     "imgSrc": {
                         "type": "boolean",
@@ -44497,7 +44513,8 @@
                     "origin": {
                         "type": "string",
                         "maxLength": 256,
-                        "description": "The origin that the CSP directives should be applied to."
+                        "description": "The origin that the CSP directives should be applied to.",
+                        "x-qlik-customer-data": true
                     },
                     "fontSrc": {
                         "type": "boolean",
@@ -44548,7 +44565,8 @@
                     "description": {
                         "type": "string",
                         "maxLength": 1024,
-                        "description": "The reason for adding this origin to the Content Security Policy."
+                        "description": "The reason for adding this origin to the Content Security Policy.",
+                        "x-qlik-customer-data": true
                     },
                     "modifiedDate": {
                         "type": "string",
@@ -44596,7 +44614,8 @@
                 "properties": {
                     "Content-Security-Policy": {
                         "type": "string",
-                        "description": "The compiled CSP header."
+                        "description": "The compiled CSP header.",
+                        "x-qlik-customer-data": true
                     }
                 }
             },
