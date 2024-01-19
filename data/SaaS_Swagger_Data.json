@@ -19965,7 +19965,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "4d02acf5-db8d-4313-9adf-e3ea020b8f96",
+                "x-qlik-entity-revision": "0b96cf33-5f6a-42d2-bef2-0ce033fc02f9",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -21906,6 +21906,22 @@
                 "parameters": [
                     {
                         "in": "query",
+                        "name": "importerAsFallbackSteward",
+                        "schema": {
+                            "type": "boolean"
+                        },
+                        "description": "Appending the current importer user as steward to categories/terms where no steward is defined/not match the identity service."
+                    },
+                    {
+                        "in": "query",
+                        "name": "lookupUserOnEmail",
+                        "schema": {
+                            "type": "boolean"
+                        },
+                        "description": "Using email in the steward fields to lookup userIds in the identity service"
+                    },
+                    {
+                        "in": "query",
                         "name": "spaceId",
                         "schema": {
                             "type": "string",
@@ -21944,7 +21960,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "af1e3de1-6f79-4ba5-960e-c7306e85bdb9",
+                "x-qlik-entity-revision": "1dddae95-2fa6-4caa-9456-4e14ba0e7d37",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30779,7 +30795,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "25d5d99a-88d8-407d-828e-13c070eae515",
+                "x-qlik-entity-revision": "299c75e0-f14c-443f-a510-51cdd447bb8e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30862,7 +30878,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "6ea2620b-4dcc-4ac7-b9a5-3291c5a4e8e5",
+                "x-qlik-entity-revision": "7683ce52-4d73-4e9f-8910-77fd65e50032",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -35156,7 +35172,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "102913a6-6ad0-48e1-9986-9c668b96e209",
+                "x-qlik-entity-revision": "3a5e625d-d4c5-4486-ab74-41bb87e814b9",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -35281,7 +35297,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "957e6203-20d6-427c-809b-ab28b7628e80",
+                "x-qlik-entity-revision": "e39a43a2-92b7-415d-a1f5-27ddaaa700ba",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -35384,7 +35400,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "bb9011d2-c54f-4b51-9cb9-0cd1fd327da5",
+                "x-qlik-entity-revision": "4a3498bb-76d5-4f09-80f6-2d870cd7e625",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -35824,7 +35840,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "1ad976df-9fd9-46eb-ab6f-bb075365eeda",
+                "x-qlik-entity-revision": "62ef004c-d892-4f1c-b543-e7fd5637ca72",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -49607,6 +49623,36 @@
                 },
                 "description": "### Custom error codes\n* BG-8 - Glossary not found\n* BG-9 - Category not found\n* BG-10 - Term not found\n"
             },
+            "exportCategory": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "example": "507f191e810c19729de860ea",
+                        "description": "The id for resolving updates in future imports/updates. \nOpposed to the id of terms, id on category are not resolved by backend. Any category referred in the category array in terms will have to be identical to the id property of the category. If not, the category reference will be discarded.\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the category. May not be identical to another category belonging to the same parent.\n",
+                        "x-qlik-customer-data": true
+                    },
+                    "parentId": {
+                        "type": "string",
+                        "format": "uuid",
+                        "example": "507f191e810c19729de860ea"
+                    },
+                    "description": {
+                        "type": "string",
+                        "x-qlik-customer-data": true
+                    },
+                    "stewardDetails": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/stewardDetail"
+                        }
+                    }
+                }
+            },
             "exportGlossary": {
                 "type": "object",
                 "properties": {
@@ -49633,7 +49679,7 @@
                     "terms": {
                         "type": "array",
                         "items": {
-                            "$ref": "#/components/schemas/term"
+                            "$ref": "#/components/schemas/exportTerm"
                         }
                     },
                     "ownerId": {
@@ -49679,7 +49725,7 @@
                     "categories": {
                         "type": "array",
                         "items": {
-                            "$ref": "#/components/schemas/category"
+                            "$ref": "#/components/schemas/exportCategory"
                         }
                     },
                     "description": {
@@ -49688,6 +49734,83 @@
                     },
                     "termTemplate": {
                         "$ref": "#/components/schemas/termTemplate"
+                    }
+                }
+            },
+            "exportTerm": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "example": "507f191e810c19729de860ea",
+                        "description": "The id of the term. Used to identify the term in future updates. If not provided, will use the leading 30 chars of the term name and an incremental index\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "name",
+                        "x-qlik-customer-data": true
+                    },
+                    "tags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "example": [
+                            "tag1",
+                            "tag2"
+                        ],
+                        "x-qlik-customer-data": true
+                    },
+                    "owner": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/importOwner"
+                        }
+                    },
+                    "linksTo": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/termCreateLinksTo"
+                        }
+                    },
+                    "stewards": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/stewardDetail"
+                        }
+                    },
+                    "relatesTo": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/termRelatesTo"
+                        }
+                    },
+                    "categories": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "uuid"
+                        },
+                        "example": [
+                            "507f191e810c19729de860ea"
+                        ],
+                        "description": "Categories that the term belongs to. Refers to the `id` property of the category object\n"
+                    },
+                    "description": {
+                        "type": "string",
+                        "example": "description",
+                        "x-qlik-customer-data": true
+                    },
+                    "abbreviation": {
+                        "type": "string",
+                        "example": "abbr",
+                        "x-qlik-customer-data": true
+                    },
+                    "stewardDetails": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/stewardDetail"
+                        }
                     }
                 }
             },
@@ -49805,6 +49928,44 @@
                     }
                 }
             },
+            "importCategory": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "example": "507f191e810c19729de860ea",
+                        "description": "The id for resolving updates in future imports/updates. \nOpposed to the id of terms, id on category are not resolved by backend. Any category referred in the category array in terms will have to be identical to the id property of the category. If not, the category reference will be discarded.\n"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "The name of the category. May not be identical to another category belonging to the same parent.\n",
+                        "x-qlik-customer-data": true
+                    },
+                    "parentId": {
+                        "type": "string",
+                        "format": "uuid",
+                        "example": "507f191e810c19729de860ea"
+                    },
+                    "stewards": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "format": "uuid",
+                            "example": "507f191e810c19729de860ea"
+                        }
+                    },
+                    "description": {
+                        "type": "string",
+                        "x-qlik-customer-data": true
+                    },
+                    "stewardDetails": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/stewardDetail"
+                        }
+                    }
+                }
+            },
             "importOwner": {
                 "type": "object",
                 "properties": {
@@ -49861,6 +50022,12 @@
                             "$ref": "#/components/schemas/termCreateLinksTo"
                         }
                     },
+                    "stewards": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/stewardDetail"
+                        }
+                    },
                     "relatesTo": {
                         "type": "array",
                         "items": {
@@ -49887,6 +50054,12 @@
                         "type": "string",
                         "example": "abbr",
                         "x-qlik-customer-data": true
+                    },
+                    "stewardDetails": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/stewardDetail"
+                        }
                     }
                 }
             },
@@ -50063,7 +50236,7 @@
                     "categories": {
                         "type": "array",
                         "items": {
-                            "$ref": "#/components/schemas/createCategory"
+                            "$ref": "#/components/schemas/importCategory"
                         }
                     },
                     "description": {
@@ -50080,6 +50253,23 @@
                 "properties": {
                     "countTotal": {
                         "type": "integer"
+                    }
+                }
+            },
+            "stewardDetail": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "x-qlik-customer-data": true
+                    },
+                    "email": {
+                        "type": "string",
+                        "x-qlik-customer-data": true
+                    },
+                    "userId": {
+                        "type": "string",
+                        "format": "uuid"
                     }
                 }
             },
@@ -56483,7 +56673,8 @@
                     "description",
                     "createdAt",
                     "lastUpdatedAt",
-                    "links"
+                    "links",
+                    "isCustom"
                 ],
                 "properties": {
                     "id": {
@@ -56542,6 +56733,17 @@
                         },
                         "description": "Contains links for the role."
                     },
+                    "canEdit": {
+                        "type": "boolean",
+                        "default": false,
+                        "readOnly": true,
+                        "description": "Indicate if role can be edited by tenant (Shown as Profile in MC)"
+                    },
+                    "fullUser": {
+                        "type": "boolean",
+                        "readOnly": true,
+                        "description": "Indicate if this role will trigger promotion to full user in STP"
+                    },
                     "tenantId": {
                         "type": "string",
                         "format": "uuid",
@@ -56549,12 +56751,28 @@
                         "description": "The tenant unique identifier associated with the given Role.",
                         "x-qlik-filterable": true
                     },
+                    "canDelete": {
+                        "type": "boolean",
+                        "default": false,
+                        "readOnly": true,
+                        "description": "Indicate if role can be deleted"
+                    },
                     "createdAt": {
                         "type": "string",
                         "format": "date-time",
                         "example": "2021-03-21T17:32:28Z",
                         "description": "The timestamp for when the role was created.",
                         "x-qlik-filterable": true
+                    },
+                    "createdBy": {
+                        "type": "string",
+                        "readOnly": true,
+                        "description": "Id of user that created role"
+                    },
+                    "updatedBy": {
+                        "type": "string",
+                        "readOnly": true,
+                        "description": "Id of user that last updated`` role"
                     },
                     "description": {
                         "type": "string",
@@ -56579,6 +56797,13 @@
                         "example": "2021-03-22T10:01:02Z",
                         "description": "The timestamp for when the role was last updated.",
                         "x-qlik-filterable": true
+                    },
+                    "assignedScopes": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "Selection of scopes added to this Role"
                     }
                 }
             },
@@ -59287,6 +59512,14 @@
                 },
                 "description": "An array of group references."
             },
+            "AssignedScopes": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                },
+                "readOnly": true,
+                "description": "An array of scopes assigned to user"
+            },
             "ErrorItem": {
                 "type": "object",
                 "required": [
@@ -59616,6 +59849,9 @@
                     },
                     "assignedGroups": {
                         "$ref": "#/components/schemas/AssignedGroups"
+                    },
+                    "assignedScopes": {
+                        "$ref": "#/components/schemas/AssignedScopes"
                     },
                     "preferredLocale": {
                         "type": "string",

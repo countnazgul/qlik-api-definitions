@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.1936.0",
+        "version": "12.1951.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -3543,6 +3543,32 @@
             "x-qlik-access-control": [
                 "approve"
             ]
+        },
+        {
+            "name": "GenericDimension.StepCycle",
+            "description": "Step active field in a cyclic dimension.\n<div class=tip>This operation is only possible for cyclic dimensions.</div>",
+            "params": [
+                {
+                    "name": "qStep",
+                    "description": "The number of steps made through the dimension. Positive values step forward and negative values step backward.",
+                    "required": true,
+                    "schema": {
+                        "type": "integer"
+                    }
+                }
+            ],
+            "result": {
+                "name": "Results for GenericDimension.StepCycle",
+                "schema": {
+                    "type": "object"
+                }
+            },
+            "errors": [
+                {
+                    "$ref": "#/components/errors/GenericErrors"
+                }
+            ],
+            "x-qlik-stability": "experimental"
         },
         {
             "name": "GenericBookmark.GetFieldValues",
@@ -10774,7 +10800,7 @@
             "params": [
                 {
                     "name": "qGroup",
-                    "description": "Name of the group.\nDefault is all groups.\n\nOne of:\n* ALL or FUNC_GROUP_ALL\n* U or FUNC_GROUP_UNKNOWN\n* NONE or FUNC_GROUP_NONE\n* AGGR or FUNC_GROUP_AGGR\n* NUM or FUNC_GROUP_NUMERIC\n* RNG or FUNC_GROUP_RANGE\n* EXP or FUNC_GROUP_EXPONENTIAL_AND_LOGARITHMIC\n* TRIG or FUNC_GROUP_TRIGONOMETRIC_AND_HYPERBOLIC\n* FIN or FUNC_GROUP_FINANCIAL\n* MATH or FUNC_GROUP_MATH_CONSTANT_AND_PARAM_FREE\n* COUNT or FUNC_GROUP_COUNTER\n* STR or FUNC_GROUP_STRING\n* MAPP or FUNC_GROUP_MAPPING\n* RCRD or FUNC_GROUP_INTER_RECORD\n* CND or FUNC_GROUP_CONDITIONAL\n* LOG or FUNC_GROUP_LOGICAL\n* NULL or FUNC_GROUP_NULL\n* SYS or FUNC_GROUP_SYSTEM\n* FILE or FUNC_GROUP_FILE\n* TBL or FUNC_GROUP_TABLE\n* DATE or FUNC_GROUP_DATE_AND_TIME\n* NUMI or FUNC_GROUP_NUMBER_INTERPRET\n* FRMT or FUNC_GROUP_FORMATTING\n* CLR or FUNC_GROUP_COLOR\n* RNK or FUNC_GROUP_RANKING\n* GEO or FUNC_GROUP_GEO\n* EXT or FUNC_GROUP_EXTERNAL\n* PROB or FUNC_GROUP_PROBABILITY\n* ARRAY or FUNC_GROUP_ARRAY\n* LEG or FUNC_GROUP_LEGACY\n* DB or FUNC_GROUP_DB_NATIVE",
+                    "description": "Name of the group.\nDefault is all groups.\n\nOne of:\n* ALL or FUNC_GROUP_ALL\n* U or FUNC_GROUP_UNKNOWN\n* NONE or FUNC_GROUP_NONE\n* AGGR or FUNC_GROUP_AGGR\n* NUM or FUNC_GROUP_NUMERIC\n* RNG or FUNC_GROUP_RANGE\n* EXP or FUNC_GROUP_EXPONENTIAL_AND_LOGARITHMIC\n* TRIG or FUNC_GROUP_TRIGONOMETRIC_AND_HYPERBOLIC\n* FIN or FUNC_GROUP_FINANCIAL\n* MATH or FUNC_GROUP_MATH_CONSTANT_AND_PARAM_FREE\n* COUNT or FUNC_GROUP_COUNTER\n* STR or FUNC_GROUP_STRING\n* MAPP or FUNC_GROUP_MAPPING\n* RCRD or FUNC_GROUP_INTER_RECORD\n* CND or FUNC_GROUP_CONDITIONAL\n* LOG or FUNC_GROUP_LOGICAL\n* NULL or FUNC_GROUP_NULL\n* SYS or FUNC_GROUP_SYSTEM\n* FILE or FUNC_GROUP_FILE\n* TBL or FUNC_GROUP_TABLE\n* DATE or FUNC_GROUP_DATE_AND_TIME\n* NUMI or FUNC_GROUP_NUMBER_INTERPRET\n* FRMT or FUNC_GROUP_FORMATTING\n* CLR or FUNC_GROUP_COLOR\n* RNK or FUNC_GROUP_RANKING\n* GEO or FUNC_GROUP_GEO\n* EXT or FUNC_GROUP_EXTERNAL\n* PROB or FUNC_GROUP_PROBABILITY\n* ARRAY or FUNC_GROUP_ARRAY\n* LEG or FUNC_GROUP_LEGACY\n* DB or FUNC_GROUP_DB_NATIVE\n* WINDOW or FUNC_GROUP_WINDOW",
                     "schema": {
                         "type": "string"
                     }
@@ -21076,7 +21102,7 @@
                     },
                     "qFG": {
                         "type": "string",
-                        "description": "Group of the function.\n\nOne of:\n* ALL or FUNC_GROUP_ALL\n* U or FUNC_GROUP_UNKNOWN\n* NONE or FUNC_GROUP_NONE\n* AGGR or FUNC_GROUP_AGGR\n* NUM or FUNC_GROUP_NUMERIC\n* RNG or FUNC_GROUP_RANGE\n* EXP or FUNC_GROUP_EXPONENTIAL_AND_LOGARITHMIC\n* TRIG or FUNC_GROUP_TRIGONOMETRIC_AND_HYPERBOLIC\n* FIN or FUNC_GROUP_FINANCIAL\n* MATH or FUNC_GROUP_MATH_CONSTANT_AND_PARAM_FREE\n* COUNT or FUNC_GROUP_COUNTER\n* STR or FUNC_GROUP_STRING\n* MAPP or FUNC_GROUP_MAPPING\n* RCRD or FUNC_GROUP_INTER_RECORD\n* CND or FUNC_GROUP_CONDITIONAL\n* LOG or FUNC_GROUP_LOGICAL\n* NULL or FUNC_GROUP_NULL\n* SYS or FUNC_GROUP_SYSTEM\n* FILE or FUNC_GROUP_FILE\n* TBL or FUNC_GROUP_TABLE\n* DATE or FUNC_GROUP_DATE_AND_TIME\n* NUMI or FUNC_GROUP_NUMBER_INTERPRET\n* FRMT or FUNC_GROUP_FORMATTING\n* CLR or FUNC_GROUP_COLOR\n* RNK or FUNC_GROUP_RANKING\n* GEO or FUNC_GROUP_GEO\n* EXT or FUNC_GROUP_EXTERNAL\n* PROB or FUNC_GROUP_PROBABILITY\n* ARRAY or FUNC_GROUP_ARRAY\n* LEG or FUNC_GROUP_LEGACY\n* DB or FUNC_GROUP_DB_NATIVE",
+                        "description": "Group of the function.\n\nOne of:\n* ALL or FUNC_GROUP_ALL\n* U or FUNC_GROUP_UNKNOWN\n* NONE or FUNC_GROUP_NONE\n* AGGR or FUNC_GROUP_AGGR\n* NUM or FUNC_GROUP_NUMERIC\n* RNG or FUNC_GROUP_RANGE\n* EXP or FUNC_GROUP_EXPONENTIAL_AND_LOGARITHMIC\n* TRIG or FUNC_GROUP_TRIGONOMETRIC_AND_HYPERBOLIC\n* FIN or FUNC_GROUP_FINANCIAL\n* MATH or FUNC_GROUP_MATH_CONSTANT_AND_PARAM_FREE\n* COUNT or FUNC_GROUP_COUNTER\n* STR or FUNC_GROUP_STRING\n* MAPP or FUNC_GROUP_MAPPING\n* RCRD or FUNC_GROUP_INTER_RECORD\n* CND or FUNC_GROUP_CONDITIONAL\n* LOG or FUNC_GROUP_LOGICAL\n* NULL or FUNC_GROUP_NULL\n* SYS or FUNC_GROUP_SYSTEM\n* FILE or FUNC_GROUP_FILE\n* TBL or FUNC_GROUP_TABLE\n* DATE or FUNC_GROUP_DATE_AND_TIME\n* NUMI or FUNC_GROUP_NUMBER_INTERPRET\n* FRMT or FUNC_GROUP_FORMATTING\n* CLR or FUNC_GROUP_COLOR\n* RNK or FUNC_GROUP_RANKING\n* GEO or FUNC_GROUP_GEO\n* EXT or FUNC_GROUP_EXTERNAL\n* PROB or FUNC_GROUP_PROBABILITY\n* ARRAY or FUNC_GROUP_ARRAY\n* LEG or FUNC_GROUP_LEGACY\n* DB or FUNC_GROUP_DB_NATIVE\n* WINDOW or FUNC_GROUP_WINDOW",
                         "$ref": "#/components/schemas/FunctionGroup"
                     },
                     "qFieldFlag": {
@@ -21260,6 +21286,11 @@
                         "x-qlik-const": 30,
                         "title": "DB",
                         "description": "FUNC_GROUP_DB_NATIVE"
+                    },
+                    {
+                        "x-qlik-const": 31,
+                        "title": "WINDOW",
+                        "description": "FUNC_GROUP_WINDOW"
                     }
                 ]
             },
@@ -21683,7 +21714,7 @@
                     },
                     "qGroup": {
                         "type": "string",
-                        "description": "Group of the script function.\n\nOne of:\n* ALL or FUNC_GROUP_ALL\n* U or FUNC_GROUP_UNKNOWN\n* NONE or FUNC_GROUP_NONE\n* AGGR or FUNC_GROUP_AGGR\n* NUM or FUNC_GROUP_NUMERIC\n* RNG or FUNC_GROUP_RANGE\n* EXP or FUNC_GROUP_EXPONENTIAL_AND_LOGARITHMIC\n* TRIG or FUNC_GROUP_TRIGONOMETRIC_AND_HYPERBOLIC\n* FIN or FUNC_GROUP_FINANCIAL\n* MATH or FUNC_GROUP_MATH_CONSTANT_AND_PARAM_FREE\n* COUNT or FUNC_GROUP_COUNTER\n* STR or FUNC_GROUP_STRING\n* MAPP or FUNC_GROUP_MAPPING\n* RCRD or FUNC_GROUP_INTER_RECORD\n* CND or FUNC_GROUP_CONDITIONAL\n* LOG or FUNC_GROUP_LOGICAL\n* NULL or FUNC_GROUP_NULL\n* SYS or FUNC_GROUP_SYSTEM\n* FILE or FUNC_GROUP_FILE\n* TBL or FUNC_GROUP_TABLE\n* DATE or FUNC_GROUP_DATE_AND_TIME\n* NUMI or FUNC_GROUP_NUMBER_INTERPRET\n* FRMT or FUNC_GROUP_FORMATTING\n* CLR or FUNC_GROUP_COLOR\n* RNK or FUNC_GROUP_RANKING\n* GEO or FUNC_GROUP_GEO\n* EXT or FUNC_GROUP_EXTERNAL\n* PROB or FUNC_GROUP_PROBABILITY\n* ARRAY or FUNC_GROUP_ARRAY\n* LEG or FUNC_GROUP_LEGACY\n* DB or FUNC_GROUP_DB_NATIVE",
+                        "description": "Group of the script function.\n\nOne of:\n* ALL or FUNC_GROUP_ALL\n* U or FUNC_GROUP_UNKNOWN\n* NONE or FUNC_GROUP_NONE\n* AGGR or FUNC_GROUP_AGGR\n* NUM or FUNC_GROUP_NUMERIC\n* RNG or FUNC_GROUP_RANGE\n* EXP or FUNC_GROUP_EXPONENTIAL_AND_LOGARITHMIC\n* TRIG or FUNC_GROUP_TRIGONOMETRIC_AND_HYPERBOLIC\n* FIN or FUNC_GROUP_FINANCIAL\n* MATH or FUNC_GROUP_MATH_CONSTANT_AND_PARAM_FREE\n* COUNT or FUNC_GROUP_COUNTER\n* STR or FUNC_GROUP_STRING\n* MAPP or FUNC_GROUP_MAPPING\n* RCRD or FUNC_GROUP_INTER_RECORD\n* CND or FUNC_GROUP_CONDITIONAL\n* LOG or FUNC_GROUP_LOGICAL\n* NULL or FUNC_GROUP_NULL\n* SYS or FUNC_GROUP_SYSTEM\n* FILE or FUNC_GROUP_FILE\n* TBL or FUNC_GROUP_TABLE\n* DATE or FUNC_GROUP_DATE_AND_TIME\n* NUMI or FUNC_GROUP_NUMBER_INTERPRET\n* FRMT or FUNC_GROUP_FORMATTING\n* CLR or FUNC_GROUP_COLOR\n* RNK or FUNC_GROUP_RANKING\n* GEO or FUNC_GROUP_GEO\n* EXT or FUNC_GROUP_EXTERNAL\n* PROB or FUNC_GROUP_PROBABILITY\n* ARRAY or FUNC_GROUP_ARRAY\n* LEG or FUNC_GROUP_LEGACY\n* DB or FUNC_GROUP_DB_NATIVE\n* WINDOW or FUNC_GROUP_WINDOW",
                         "$ref": "#/components/schemas/FunctionGroup"
                     },
                     "qSignature": {
