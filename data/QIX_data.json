@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.1951.0",
+        "version": "12.1962.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -3561,6 +3561,54 @@
                 "name": "Results for GenericDimension.StepCycle",
                 "schema": {
                     "type": "object"
+                }
+            },
+            "errors": [
+                {
+                    "$ref": "#/components/errors/GenericErrors"
+                }
+            ],
+            "x-qlik-stability": "experimental"
+        },
+        {
+            "name": "GenericDimension.SetActiveField",
+            "description": "Set a cyclic dimension's active field directly.\n<div class=tip>This operation is only possible for cyclic dimensions.</div>",
+            "params": [
+                {
+                    "name": "qIx",
+                    "description": "Index of the new active field.",
+                    "required": true,
+                    "schema": {
+                        "type": "integer"
+                    }
+                }
+            ],
+            "result": {
+                "name": "Results for GenericDimension.SetActiveField",
+                "schema": {
+                    "type": "object"
+                }
+            },
+            "errors": [
+                {
+                    "$ref": "#/components/errors/GenericErrors"
+                }
+            ],
+            "x-qlik-stability": "experimental"
+        },
+        {
+            "name": "GenericDimension.GetActiveField",
+            "description": "Get a cyclic dimension's active field.\n<div class=tip>This operation is only possible for cyclic dimensions.</div>",
+            "params": [],
+            "result": {
+                "name": "Results for GenericDimension.GetActiveField",
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "qReturn": {
+                            "type": "integer"
+                        }
+                    }
                 }
             },
             "errors": [
