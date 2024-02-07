@@ -30482,7 +30482,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "76e4ba8c-a66a-46ab-b7ac-518fa6070e7a",
+                "x-qlik-entity-revision": "3e3b9ed7-3e74-4bcf-a1df-161f9c594a5b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -31123,7 +31123,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "f6ac372a-958c-4718-9917-b9b7b35a9901",
+                "x-qlik-entity-revision": "5a9556fc-134c-4474-ab2c-3d86c39b787c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -31195,7 +31195,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "17b18505-8fab-4f8c-8619-b397a09ef55e",
+                "x-qlik-entity-revision": "2fd9ee60-cfb0-4147-bdd0-3148b767e523",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -31279,7 +31279,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "6b45184c-b3c1-4ce6-9f9e-7390cd9712c4",
+                "x-qlik-entity-revision": "13ae8d2e-afaf-4aca-9f25-386b7509759f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -55968,7 +55968,7 @@
                         "description": "This value is used for rendered images only, set to a default of 300 dpi."
                     }
                 },
-                "description": "Output to be used to export a single visualization or a sheet as pdf."
+                "description": "Output to be used to export a single visualization, a sheet, Sense Excel template as pdf. For Sense Excel template (sense-excel-template-1.0) no properties are needed, any property specified has no effect."
             },
             "PptxCompositionOutput": {
                 "properties": {
@@ -58042,7 +58042,8 @@
                             "DISABLED_DUE_TO_OWNERSHIP_CHANGE",
                             "REPORTING_CONSUMPTION_EXCEEDED",
                             "REPORTING_CAPABILITY_NOT_FOUND",
-                            "EXECUTION_TIME_OUT"
+                            "EXECUTION_TIME_OUT",
+                            "OWNER_INSUFFICIENT_PERMISSIONS"
                         ],
                         "type": "string",
                         "description": "Identifier for type of error occurring on sharing task"
