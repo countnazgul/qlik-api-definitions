@@ -3329,7 +3329,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "12da2e02-f815-4209-8a3c-0892d17fb1f8",
+                "x-qlik-entity-revision": "dfe4e5e2-6c8a-493e-a62d-350821b313d6",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -3413,7 +3413,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "f799f6c3-4b6a-4b6a-90fc-b1520523969f",
+                "x-qlik-entity-revision": "e2c98210-61fa-4f09-8432-fdc127e69552",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -3507,7 +3507,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "635aeef0-cd6e-45f8-9ba7-e92d3f9afce5",
+                "x-qlik-entity-revision": "8386df79-9cce-4087-88bd-4035acbbb271",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -3584,7 +3584,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "0231c599-7a18-4d20-98fa-c784b5c57ee8",
+                "x-qlik-entity-revision": "237e4618-7478-406e-82c2-48e791f22e5e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -3668,7 +3668,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "76e15615-9a2b-4499-aec4-a1990c58b8c8",
+                "x-qlik-entity-revision": "0fb92ca5-e15a-4554-9060-c58ff9bde6c1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -3735,7 +3735,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "b589ca5d-3988-44b1-95b9-cf9a28798cec",
+                "x-qlik-entity-revision": "e542cc47-b08d-446c-bfb6-3fd65e87d58c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -18845,7 +18845,7 @@
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "3f466ec5-f7df-4ee0-b742-219c560960b8",
+                "x-qlik-entity-revision": "adbc2ded-b141-48ee-a556-1d23b1df2d96",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -18922,7 +18922,8 @@
                                     "file": {
                                         "type": "string",
                                         "format": "binary",
-                                        "description": "Extension archive."
+                                        "description": "Extension archive.",
+                                        "x-qlik-customer-data": true
                                     }
                                 }
                             }
@@ -18935,7 +18936,7 @@
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "06d5b162-4362-4dd0-afe3-c07a2a8c1601",
+                "x-qlik-entity-revision": "5e39a18d-87ef-4998-b0e8-28d85d7baec0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -18999,7 +19000,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Extension identifier or its qextFilename."
+                        "description": "Extension identifier or its qextFilename.",
+                        "x-qlik-customer-data": true
                     }
                 ],
                 "operationId": "getExtensionById",
@@ -19008,7 +19010,7 @@
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "7abe39d4-38e4-484d-8ca0-63eb73e25d5e",
+                "x-qlik-entity-revision": "ce5082ec-7e5a-43a6-93d5-6f5578ffab41",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -19100,7 +19102,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Extension identifier or its qextFilename."
+                        "description": "Extension identifier or its qextFilename.",
+                        "x-qlik-customer-data": true
                     }
                 ],
                 "operationId": "updateExtensionById",
@@ -19116,7 +19119,8 @@
                                     "file": {
                                         "type": "string",
                                         "format": "binary",
-                                        "description": "Extension archive."
+                                        "description": "Extension archive.",
+                                        "x-qlik-customer-data": true
                                     }
                                 }
                             }
@@ -19129,7 +19133,7 @@
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "93253f95-12a2-4e97-a316-ed0affa2c746",
+                "x-qlik-entity-revision": "efe1615e-cc3e-4b93-81be-ce88b5237361",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -19184,7 +19188,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Extension identifier or its qextFilename."
+                        "description": "Extension identifier or its qextFilename.",
+                        "x-qlik-customer-data": true
                     }
                 ],
                 "operationId": "deleteExtensionById",
@@ -19193,7 +19198,7 @@
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "016f1d31-bb42-48c5-949e-3e7045cb3a18",
+                "x-qlik-entity-revision": "4a41f434-9cb6-4684-aaae-81a7b2488473",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -19209,7 +19214,8 @@
                 "summary": "Downloads the extension as an archive.",
                 "responses": {
                     "200": {
-                        "description": "OK. Extension exists. Returns the extension archive."
+                        "description": "OK. Extension exists. Returns the extension archive.",
+                        "x-qlik-customer-data": true
                     },
                     "403": {
                         "content": {
@@ -19250,7 +19256,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Extension identifier or its qextFilename."
+                        "description": "Extension identifier or its qextFilename.",
+                        "x-qlik-customer-data": true
                     }
                 ],
                 "operationId": "getExtensionArchive",
@@ -19259,7 +19266,7 @@
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "b6cc71b6-f41e-4239-90fc-d12d52804acb",
+                "x-qlik-entity-revision": "3b45c2c9-afe0-4784-9ebd-1c4628af72d1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -19316,7 +19323,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Path to the file archive for the specified extension archive. Folders separated with forward slashes."
+                        "description": "Path to the file archive for the specified extension archive. Folders separated with forward slashes.",
+                        "x-qlik-customer-data": true
                     },
                     {
                         "in": "path",
@@ -19325,7 +19333,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Extension identifier or its qextFilename."
+                        "description": "Extension identifier or its qextFilename.",
+                        "x-qlik-customer-data": true
                     }
                 ],
                 "operationId": "getFileFromExtensionArchive",
@@ -19334,7 +19343,7 @@
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "32bd4d13-07a4-4d33-9634-634d4a3f5885",
+                "x-qlik-entity-revision": "4562b371-d6b9-4921-94c1-a6efd9349f00",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -26790,7 +26799,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b77dcc15-c396-428d-ba11-13b87a329392",
+                "x-qlik-entity-revision": "978f33ea-13d8-48ec-904f-d0bdcb56d6be",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -28290,6 +28299,9 @@
                                     },
                                     {
                                         "$ref": "#/components/schemas/oauth-token-exchange"
+                                    },
+                                    {
+                                        "$ref": "#/components/schemas/oauth-user-impersonation-request"
                                     }
                                 ]
                             }
@@ -28319,7 +28331,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "c1e5416f-b181-4576-8e26-9bbc71a2262d",
+                "x-qlik-entity-revision": "2ee7ca28-ba4a-48fc-a9ef-e9717c0e2f07",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30022,6 +30034,16 @@
                         },
                         "description": "A template with the specified ID was not found."
                     },
+                    "409": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResult"
+                                }
+                            }
+                        },
+                        "description": "Conflict"
+                    },
                     "413": {
                         "content": {
                             "application/json": {
@@ -30071,7 +30093,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "91866645-0bf3-4a63-b7a1-e5bae77e759a",
+                "x-qlik-entity-revision": "8bfc1211-ad37-4268-ab10-797e9a5174c9",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30124,6 +30146,16 @@
                         },
                         "description": "A template with the specified ID was not found."
                     },
+                    "409": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResult"
+                                }
+                            }
+                        },
+                        "description": "Conflict"
+                    },
                     "413": {
                         "content": {
                             "application/json": {
@@ -30162,7 +30194,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "58b241c3-13d8-40fd-ac6b-69bd0d240796",
+                "x-qlik-entity-revision": "900c6de7-8840-43c2-94d3-9dc0b00351a8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -31123,7 +31155,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "5a9556fc-134c-4474-ab2c-3d86c39b787c",
+                "x-qlik-entity-revision": "2bea0ed0-595d-465e-b626-f44f5d28e9db",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -31195,7 +31227,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "2fd9ee60-cfb0-4147-bdd0-3148b767e523",
+                "x-qlik-entity-revision": "13b2863c-f560-41eb-ac07-515838d68e8b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -31279,7 +31311,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "13ae8d2e-afaf-4aca-9f25-386b7509759f",
+                "x-qlik-entity-revision": "ec27f707-0596-443f-859b-1a313e853e2c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -34080,7 +34112,7 @@
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "2b3bdc92-b85f-4c9f-a499-9f8f59537d70",
+                "x-qlik-entity-revision": "35870afe-2f6a-4768-b25f-91e9ce4bc770",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -34157,7 +34189,8 @@
                                     "file": {
                                         "type": "string",
                                         "format": "binary",
-                                        "description": "Theme archive."
+                                        "description": "Theme archive.",
+                                        "x-qlik-customer-data": true
                                     }
                                 }
                             }
@@ -34170,7 +34203,7 @@
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "21f474a4-3373-4ce6-a33a-2c5e15cfa2c2",
+                "x-qlik-entity-revision": "abafe341-1cc3-46ee-9826-6b2d502de843",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -34234,7 +34267,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Theme identifier or its qextFilename"
+                        "description": "Theme identifier or its qextFilename",
+                        "x-qlik-customer-data": true
                     }
                 ],
                 "operationId": "getThemeById",
@@ -34243,7 +34277,7 @@
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "b24aa736-1bdd-4bea-8d55-1ff521f68be3",
+                "x-qlik-entity-revision": "eefef154-3650-43f3-9c73-9910fe26577d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -34335,7 +34369,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Theme identifier or its qextFilename."
+                        "description": "Theme identifier or its qextFilename.",
+                        "x-qlik-customer-data": true
                     }
                 ],
                 "operationId": "updateThemeById",
@@ -34351,7 +34386,8 @@
                                     "file": {
                                         "type": "string",
                                         "format": "binary",
-                                        "description": "Theme archive."
+                                        "description": "Theme archive.",
+                                        "x-qlik-customer-data": true
                                     }
                                 }
                             }
@@ -34364,7 +34400,7 @@
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "fa928850-6565-40fc-8cf9-dae1373d2bf1",
+                "x-qlik-entity-revision": "3de47702-fd18-4120-b587-969c4d2628d1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -34419,7 +34455,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Theme identifier or its qextFilename."
+                        "description": "Theme identifier or its qextFilename.",
+                        "x-qlik-customer-data": true
                     }
                 ],
                 "operationId": "deleteThemeById",
@@ -34428,7 +34465,7 @@
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "383bdbc1-5f5f-469a-9109-d72b84d821c7",
+                "x-qlik-entity-revision": "cec17d0b-08b5-42df-861d-3a5398fda28f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -34444,7 +34481,8 @@
                 "summary": "Downloads the theme as an archive.",
                 "responses": {
                     "200": {
-                        "description": "OK. Theme exists. Returns the theme archive."
+                        "description": "OK. Theme exists. Returns the theme archive.",
+                        "x-qlik-customer-data": true
                     },
                     "403": {
                         "content": {
@@ -34485,7 +34523,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Theme identifier or its qextFilename"
+                        "description": "Theme identifier or its qextFilename",
+                        "x-qlik-customer-data": true
                     }
                 ],
                 "operationId": "getThemeArchive",
@@ -34494,7 +34533,7 @@
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "89b4c8ac-b7f6-4952-bf3c-5ad87a3c30a1",
+                "x-qlik-entity-revision": "6f341b5a-2227-4a29-871b-e9007452130f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -34510,7 +34549,8 @@
                 "summary": "Downloads a file from the theme archive.",
                 "responses": {
                     "200": {
-                        "description": "OK. Theme exists and the file specified exists. Returns the specific file."
+                        "description": "OK. Theme exists and the file specified exists. Returns the specific file.",
+                        "x-qlik-customer-data": true
                     },
                     "403": {
                         "content": {
@@ -34551,7 +34591,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Path to the file archive for the specified theme archive. Folders separated with forward slashes."
+                        "description": "Path to the file archive for the specified theme archive. Folders separated with forward slashes.",
+                        "x-qlik-customer-data": true
                     },
                     {
                         "in": "path",
@@ -34560,7 +34601,8 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Theme identifier or its qextFilename."
+                        "description": "Theme identifier or its qextFilename.",
+                        "x-qlik-customer-data": true
                     }
                 ],
                 "operationId": "getFileFromThemeArchive",
@@ -34569,7 +34611,7 @@
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "227c9975-134f-47df-b564-ef2b0ddcc386",
+                "x-qlik-entity-revision": "af6faf18-4cb0-40ec-99f7-8eca201521b0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -38603,6 +38645,26 @@
                     }
                 ]
             },
+            "cmpfloatWithTimeout": {
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/cmpfloat"
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "baselineTimeoutStatusCode": {
+                                "type": "string",
+                                "example": "CALC-TIMEOUT"
+                            },
+                            "comparisonTimeoutStatusCode": {
+                                "type": "string",
+                                "example": "CALC-TIMEOUT"
+                            }
+                        }
+                    }
+                ]
+            },
             "cmpint": {
                 "allOf": [
                     {
@@ -38652,6 +38714,9 @@
                     },
                     "objSlowCached": {
                         "$ref": "#/components/schemas/sortedcomparisonobjresponsetime"
+                    },
+                    "objMemoryLimit": {
+                        "$ref": "#/components/schemas/comparisonobjMemoryLimit"
                     },
                     "sheetsUncached": {
                         "$ref": "#/components/schemas/sortedcomparisonobjresponsetime"
@@ -38724,6 +38789,39 @@
                     ]
                 }
             },
+            "comparisonobjMemoryLimit": {
+                "type": "array",
+                "items": {
+                    "allOf": [
+                        {
+                            "$ref": "#/components/schemas/objectspec"
+                        },
+                        {
+                            "type": "object",
+                            "properties": {
+                                "dataSourceStatus": {
+                                    "enum": [
+                                        "full",
+                                        "none",
+                                        "baselinemissing",
+                                        "comparisonmissing"
+                                    ],
+                                    "type": "string",
+                                    "example": "full"
+                                },
+                                "baselineMemoryLimitStatusCode": {
+                                    "type": "string",
+                                    "example": "OUT-OF-MEMORY"
+                                },
+                                "comparisonMemoryLimitStatusCode": {
+                                    "type": "string",
+                                    "example": "OUT-OF-MEMORY"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
             "comparisonobjresponsetime": {
                 "type": "array",
                 "items": {
@@ -38745,10 +38843,10 @@
                                     "example": "full"
                                 },
                                 "responseTimeSeconds1": {
-                                    "$ref": "#/components/schemas/cmpfloat"
+                                    "$ref": "#/components/schemas/cmpfloatWithTimeout"
                                 },
                                 "responseTimeSeconds2": {
-                                    "$ref": "#/components/schemas/cmpfloat"
+                                    "$ref": "#/components/schemas/cmpfloatWithTimeout"
                                 }
                             }
                         }
@@ -40915,6 +41013,22 @@
                     }
                 ]
             },
+            "resultobjMemoryLimit": {
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/objectspec"
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "memoryLimitStatusCode": {
+                                "type": "string",
+                                "example": "OUT-OF-MEMORY"
+                            }
+                        }
+                    }
+                ]
+            },
             "resultobjresponsetime": {
                 "allOf": [
                     {
@@ -40952,43 +41066,6 @@
                         }
                     }
                 }
-            },
-            "resultobjsinglethreaded": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/objectspec"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "schema": {
-                                "$ref": "#/components/schemas/objectspec"
-                            },
-                            "cpuQuotients1": {
-                                "type": "array",
-                                "items": {
-                                    "type": "number",
-                                    "example": 12.3
-                                }
-                            },
-                            "cpuQuotients2": {
-                                "type": "array",
-                                "items": {
-                                    "type": "number",
-                                    "example": 12.3
-                                }
-                            },
-                            "responseTimeSeconds1": {
-                                "type": "number",
-                                "example": 12.3
-                            },
-                            "responseTimeSeconds2": {
-                                "type": "number",
-                                "example": 12.3
-                            }
-                        }
-                    }
-                ]
             },
             "resultsingle": {
                 "allOf": [
@@ -48846,6 +48923,43 @@
                     }
                 ]
             },
+            "resultobjsinglethreaded": {
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/objectspec"
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "schema": {
+                                "$ref": "#/components/schemas/objectspec"
+                            },
+                            "cpuQuotients1": {
+                                "type": "array",
+                                "items": {
+                                    "type": "number",
+                                    "example": 12.3
+                                }
+                            },
+                            "cpuQuotients2": {
+                                "type": "array",
+                                "items": {
+                                    "type": "number",
+                                    "example": 12.3
+                                }
+                            },
+                            "responseTimeSeconds1": {
+                                "type": "number",
+                                "example": 12.3
+                            },
+                            "responseTimeSeconds2": {
+                                "type": "number",
+                                "example": 12.3
+                            }
+                        }
+                    }
+                ]
+            },
             "bundleMeta": {
                 "properties": {
                     "id": {
@@ -48854,11 +48968,13 @@
                     },
                     "name": {
                         "type": "string",
-                        "description": "Name of the bundle."
+                        "description": "Name of the bundle.",
+                        "x-qlik-customer-data": true
                     },
                     "description": {
                         "type": "string",
-                        "description": "Description of the bundle."
+                        "description": "Description of the bundle.",
+                        "x-qlik-customer-data": true
                     }
                 },
                 "description": "Object containing meta data regarding the bundle the extension belongs to. If it does not belong to a bundle, this object is not defined."
@@ -48872,22 +48988,26 @@
                     },
                     "file": {
                         "type": "object",
-                        "description": "The file that was uploaded with the extension."
+                        "description": "The file that was uploaded with the extension.",
+                        "x-qlik-customer-data": true
                     },
                     "icon": {
                         "type": "string",
-                        "description": "Icon to show in the client."
+                        "description": "Icon to show in the client.",
+                        "x-qlik-customer-data": true
                     },
                     "name": {
                         "type": "string",
-                        "description": "The display name of this extension."
+                        "description": "The display name of this extension.",
+                        "x-qlik-customer-data": true
                     },
                     "tags": {
                         "type": "array",
                         "items": {
                             "type": "string"
                         },
-                        "description": "List of tags."
+                        "description": "List of tags.",
+                        "x-qlik-customer-data": true
                     },
                     "type": {
                         "type": "string",
@@ -48896,7 +49016,8 @@
                     "author": {
                         "type": "string",
                         "x-qlik-pii": true,
-                        "description": "Author of the extension."
+                        "description": "Author of the extension.",
+                        "x-qlik-customer-data": true
                     },
                     "bundle": {
                         "$ref": "#/components/schemas/bundleMeta"
@@ -48911,15 +49032,18 @@
                     },
                     "license": {
                         "type": "string",
-                        "description": "Under which license this extension is published."
+                        "description": "Under which license this extension is published.",
+                        "x-qlik-customer-data": true
                     },
                     "preview": {
                         "type": "string",
-                        "description": "Path to an image that enables users to preview the extension."
+                        "description": "Path to an image that enables users to preview the extension.",
+                        "x-qlik-customer-data": true
                     },
                     "version": {
                         "type": "string",
-                        "description": "Version of the extension."
+                        "description": "Version of the extension.",
+                        "x-qlik-customer-data": true
                     },
                     "checksum": {
                         "type": "string",
@@ -48927,19 +49051,23 @@
                     },
                     "homepage": {
                         "type": "string",
-                        "description": "Home page of the extension."
+                        "description": "Home page of the extension.",
+                        "x-qlik-customer-data": true
                     },
                     "keywords": {
                         "type": "string",
-                        "description": "Keywords for the extension."
+                        "description": "Keywords for the extension.",
+                        "x-qlik-customer-data": true
                     },
                     "loadpath": {
                         "type": "string",
-                        "description": "Relative path to the extension's entry file, defaults to `filename` from the qext file."
+                        "description": "Relative path to the extension's entry file, defaults to `filename` from the qext file.",
+                        "x-qlik-customer-data": true
                     },
                     "supplier": {
                         "type": "string",
-                        "description": "Supplier of the extension."
+                        "description": "Supplier of the extension.",
+                        "x-qlik-customer-data": true
                     },
                     "tenantId": {
                         "type": "string",
@@ -48966,23 +49094,28 @@
                     },
                     "repository": {
                         "type": "string",
-                        "description": "Link to the extension source code."
+                        "description": "Link to the extension source code.",
+                        "x-qlik-customer-data": true
                     },
                     "description": {
                         "type": "string",
-                        "description": "Description of the extension."
+                        "description": "Description of the extension.",
+                        "x-qlik-customer-data": true
                     },
                     "qextVersion": {
                         "type": "string",
-                        "description": "The version from the qext file that was uploaded with this extension."
+                        "description": "The version from the qext file that was uploaded with this extension.",
+                        "x-qlik-customer-data": true
                     },
                     "dependencies": {
                         "type": "object",
-                        "description": "Map of dependencies describing version of the component it requires."
+                        "description": "Map of dependencies describing version of the component it requires.",
+                        "x-qlik-customer-data": true
                     },
                     "qextFilename": {
                         "type": "string",
-                        "description": "The name of the qext file that was uploaded with this extension."
+                        "description": "The name of the qext file that was uploaded with this extension.",
+                        "x-qlik-customer-data": true
                     }
                 },
                 "description": "The extension model."
@@ -53921,10 +54054,6 @@
                     "toggledOn": {
                         "type": "boolean",
                         "description": "pass 'true' to enable the note toggle for the tenant, 'false' to disable the toggle (other values are ignore)."
-                    },
-                    "snapshotRelations": {
-                        "type": "boolean",
-                        "description": "pass 'true' to enable the relations api to search notes for the tenant."
                     }
                 }
             },
@@ -53934,10 +54063,6 @@
                     "toggleOn": {
                         "type": "boolean",
                         "description": "'true' if the note feature is enabled for this tenant and user otherwise 'false'."
-                    },
-                    "snapshotRelations": {
-                        "type": "boolean",
-                        "description": "'true' if relations api to search notes for the tenant are enabled else false."
                     }
                 }
             },
@@ -54659,7 +54784,7 @@
                             "user_default"
                         ],
                         "type": "string",
-                        "description": "The scope of access that is being requested."
+                        "description": "The scope of access that is being requested. The scope should already be assigned to the OAuth client"
                     },
                     "grant_type": {
                         "enum": [
@@ -54799,6 +54924,56 @@
                         ],
                         "type": "string",
                         "description": "The type of the token issued for a token exchange. See https://datatracker.ietf.org/doc/html/rfc8693#section-2.2.1 for more details."
+                    }
+                }
+            },
+            "oauth-user-impersonation-request": {
+                "required": [
+                    "client_id",
+                    "client_secret",
+                    "grant_type",
+                    "user_lookup"
+                ],
+                "properties": {
+                    "scope": {
+                        "type": "string",
+                        "description": "The scope of access that is being requested."
+                    },
+                    "client_id": {
+                        "type": "string",
+                        "description": "The client identifier."
+                    },
+                    "grant_type": {
+                        "enum": [
+                            "urn:qlik:oauth:user-impersonation"
+                        ],
+                        "type": "string",
+                        "description": "The grant type used to obtain an access token on behalf of an existing user."
+                    },
+                    "user_lookup": {
+                        "type": "object",
+                        "required": [
+                            "field",
+                            "value"
+                        ],
+                        "properties": {
+                            "field": {
+                                "enum": [
+                                    "subject",
+                                    "userId"
+                                ],
+                                "type": "string",
+                                "description": "The identifier to impersonate the user by."
+                            },
+                            "value": {
+                                "type": "string",
+                                "description": "The value of the identifier to impersonate the user by."
+                            }
+                        }
+                    },
+                    "client_secret": {
+                        "type": "string",
+                        "description": "The client secret."
                     }
                 }
             },
@@ -58043,7 +58218,8 @@
                             "REPORTING_CONSUMPTION_EXCEEDED",
                             "REPORTING_CAPABILITY_NOT_FOUND",
                             "EXECUTION_TIME_OUT",
-                            "OWNER_INSUFFICIENT_PERMISSIONS"
+                            "OWNER_INSUFFICIENT_PERMISSIONS",
+                            "MAX_UNIQUE_REPORTS_LIMIT_REACHED"
                         ],
                         "type": "string",
                         "description": "Identifier for type of error occurring on sharing task"
@@ -59045,22 +59221,26 @@
                     },
                     "file": {
                         "type": "object",
-                        "description": "The file that was uploaded with the theme."
+                        "description": "The file that was uploaded with the theme.",
+                        "x-qlik-customer-data": true
                     },
                     "icon": {
                         "type": "string",
-                        "description": "Icon to show in the client."
+                        "description": "Icon to show in the client.",
+                        "x-qlik-customer-data": true
                     },
                     "name": {
                         "type": "string",
-                        "description": "The display name of this theme."
+                        "description": "The display name of this theme.",
+                        "x-qlik-customer-data": true
                     },
                     "tags": {
                         "type": "array",
                         "items": {
                             "type": "string"
                         },
-                        "description": "List of tags."
+                        "description": "List of tags.",
+                        "x-qlik-customer-data": true
                     },
                     "type": {
                         "type": "string",
@@ -59069,7 +59249,8 @@
                     "author": {
                         "type": "string",
                         "x-qlik-pii": true,
-                        "description": "Author of the theme."
+                        "description": "Author of the theme.",
+                        "x-qlik-customer-data": true
                     },
                     "userId": {
                         "type": "string",
@@ -59077,23 +59258,28 @@
                     },
                     "license": {
                         "type": "string",
-                        "description": "Under which license this theme is published."
+                        "description": "Under which license this theme is published.",
+                        "x-qlik-customer-data": true
                     },
                     "version": {
                         "type": "string",
-                        "description": "Version of the theme."
+                        "description": "Version of the theme.",
+                        "x-qlik-customer-data": true
                     },
                     "homepage": {
                         "type": "string",
-                        "description": "Home page of the theme."
+                        "description": "Home page of the theme.",
+                        "x-qlik-customer-data": true
                     },
                     "keywords": {
                         "type": "string",
-                        "description": "Keywords for the theme."
+                        "description": "Keywords for the theme.",
+                        "x-qlik-customer-data": true
                     },
                     "supplier": {
                         "type": "string",
-                        "description": "Supplier of the theme."
+                        "description": "Supplier of the theme.",
+                        "x-qlik-customer-data": true
                     },
                     "tenantId": {
                         "type": "string",
@@ -59111,23 +59297,28 @@
                     },
                     "repository": {
                         "type": "string",
-                        "description": "Link to the theme source code."
+                        "description": "Link to the theme source code.",
+                        "x-qlik-customer-data": true
                     },
                     "description": {
                         "type": "string",
-                        "description": "Description of the theme."
+                        "description": "Description of the theme.",
+                        "x-qlik-customer-data": true
                     },
                     "qextVersion": {
                         "type": "string",
-                        "description": "The version from the qext file that was uploaded with this extension."
+                        "description": "The version from the qext file that was uploaded with this extension.",
+                        "x-qlik-customer-data": true
                     },
                     "dependencies": {
                         "type": "object",
-                        "description": "Map of dependencies describing version of the component it requires."
+                        "description": "Map of dependencies describing version of the component it requires.",
+                        "x-qlik-customer-data": true
                     },
                     "qextFilename": {
                         "type": "string",
-                        "description": "The name of the qext file that was uploaded with this theme."
+                        "description": "The name of the qext file that was uploaded with this theme.",
+                        "x-qlik-customer-data": true
                     }
                 },
                 "description": "The theme model."
