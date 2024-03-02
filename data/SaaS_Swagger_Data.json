@@ -2146,7 +2146,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "d528ffc4-43db-4c35-991c-3777ad951f77",
+                "x-qlik-entity-revision": "ffef5c86-7305-4119-bb43-c57912a089d2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -2328,7 +2328,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "d623c54b-3e92-4055-99f5-55707d2554f1",
+                "x-qlik-entity-revision": "126a14c0-d86a-44d9-9b28-76afb690946c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -2453,7 +2453,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "f92116f7-3a9e-461e-8bfe-7d4f041347bf",
+                "x-qlik-entity-revision": "166d15d9-c31c-4772-8899-bd781505bba3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -2568,7 +2568,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "e2b647a2-7078-482c-b8b5-159c279dbd71",
+                "x-qlik-entity-revision": "8b164ad9-3081-4522-9916-0213f85ddc4a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -6582,7 +6582,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "9fe2106a-d27d-408d-b80b-c639fd0a4188",
+                "x-qlik-entity-revision": "21fbfce3-abff-4368-8a47-46e991f1fcad",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -6678,7 +6678,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "65554325-08ae-4cba-8e54-acef24a65916",
+                "x-qlik-entity-revision": "8fd56133-9139-4e3a-a0aa-558501ceb4fd",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -6729,7 +6729,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "7530f44c-2eac-4a6e-a4b1-36b33bc4dd95",
+                "x-qlik-entity-revision": "8dd15e03-be2e-4e9f-9889-68ae310b869b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -6883,7 +6883,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "099b1351-5462-41a7-b066-1d5832b7ac14",
+                "x-qlik-entity-revision": "f7495682-2bec-4a1a-8000-3451cbfc75cc",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -6940,7 +6940,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "39d2ba1d-228b-4238-ac4d-fb13e6f234f0",
+                "x-qlik-entity-revision": "f7157942-3838-46c2-a0df-be4dfa320648",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -7737,6 +7737,21 @@
                         },
                         "description": "Not Found response."
                     },
+                    "409": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponseBody"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "X-B3-Traceid": {
+                                "$ref": "#/components/headers/X-B3-Traceid"
+                            }
+                        },
+                        "description": "Conflict response."
+                    },
                     "500": {
                         "content": {
                             "application/json": {
@@ -7781,7 +7796,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "baccdb2d-a716-420e-b6f4-370528526544",
+                "x-qlik-entity-revision": "0ccfd2dc-265f-4965-81de-017a0cdc0339",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -7854,6 +7869,21 @@
                         },
                         "description": "Not Found response."
                     },
+                    "409": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ErrorResponseBody"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "X-B3-Traceid": {
+                                "$ref": "#/components/headers/X-B3-Traceid"
+                            }
+                        },
+                        "description": "Conflict response."
+                    },
                     "500": {
                         "content": {
                             "application/json": {
@@ -7898,7 +7928,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b89500d5-fd4d-4073-844f-524d3a149b14",
+                "x-qlik-entity-revision": "c93221f8-1cc3-4bdf-9935-63a69af9ed8f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -9591,7 +9621,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "e6a9e07e-1156-4710-94da-1dfb9cda3561",
+                "x-qlik-entity-revision": "8a653832-3ea6-430a-a87b-43139dc539ff",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -13387,7 +13417,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "da6dd66b-12d0-4d24-aec1-a583c7c380f9",
+                "x-qlik-entity-revision": "fcac36d5-a74f-4259-bd33-99f94be432da",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -13457,7 +13487,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "3aaf7f06-4820-4304-afd6-11f204738729",
+                "x-qlik-entity-revision": "4f8349c4-88c5-481c-a7ba-1eea6e01a095",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13527,7 +13557,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "4139d90a-1ab5-442b-a38f-fa5adf4c2d8d",
+                "x-qlik-entity-revision": "1e66bd88-6ce2-47d3-9f29-f6f3b92c3306",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13567,7 +13597,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "741f7cb5-ea3b-411b-b573-eda7f1771f18",
+                "x-qlik-entity-revision": "153918b8-ca4e-4f72-8da4-3eb35a90831a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -15475,7 +15505,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "e7bacc8b-82e8-4232-a886-ed3dc1d8596d",
+                "x-qlik-entity-revision": "ce6a0a51-5f43-4712-94c5-762756cfb294",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -22130,7 +22160,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "3423a22f-6b5d-48de-921d-2fa42673d5d9",
+                "x-qlik-entity-revision": "7db24c88-2e25-4c50-add8-eb9d6b5cc59e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -22250,7 +22280,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "7d8a0830-71ed-4502-b991-aa5855a99f49",
+                "x-qlik-entity-revision": "563f1acb-760c-41cf-a110-19dba9f09615",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -22343,7 +22373,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0caa9d63-f35c-48fb-8cd8-ed6e36238563",
+                "x-qlik-entity-revision": "cccbb49d-bdb3-4b3b-9808-7ee4d624bea8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -22681,7 +22711,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b1c84976-fe69-46c0-a8c5-8a36a8fc7190",
+                "x-qlik-entity-revision": "b7c4e98b-d468-40f1-845c-091ee8d061aa",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -22763,7 +22793,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "66237eb8-ccd2-4ec7-9f17-cb22376a2a8a",
+                "x-qlik-entity-revision": "0a161172-87bb-40d7-9719-af433d1e61ff",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -22939,7 +22969,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "25293e9a-c740-4510-ade3-e2e13ed35ef1",
+                "x-qlik-entity-revision": "1dd573f6-dd13-4cd7-9e1c-409f1b97e579",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -23005,7 +23035,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "ed37c1d9-2aec-4b44-89de-67009ee690c4",
+                "x-qlik-entity-revision": "2c1cb436-dd1b-4374-8b79-a51c7b3506fe",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -23107,7 +23137,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "6fb6fe3f-fb2b-421f-b063-c668d4250653",
+                "x-qlik-entity-revision": "288d62fa-07c3-42e7-bd8f-cec31364d24c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -23215,7 +23245,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "3b55a309-51dd-4acd-84e3-35018a038046",
+                "x-qlik-entity-revision": "1e8d7643-8f67-4148-991b-8cdc212069bc",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -28331,7 +28361,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "2ee7ca28-ba4a-48fc-a9ef-e9717c0e2f07",
+                "x-qlik-entity-revision": "24c54416-bdd5-4ef8-b9fc-7b1fea327176",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30514,7 +30544,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "3e3b9ed7-3e74-4bcf-a1df-161f9c594a5b",
+                "x-qlik-entity-revision": "605b6e34-98b7-4931-b2e8-a62a54e817a0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -30691,7 +30721,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "48eaac09-ce71-43d0-8c1b-1f47593d2845",
+                "x-qlik-entity-revision": "3819f2ca-ae32-4a97-9181-02dcaf15ca0a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -31227,7 +31257,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "13b2863c-f560-41eb-ac07-515838d68e8b",
+                "x-qlik-entity-revision": "ef686fec-2404-4b81-aa42-2cf527c29cc2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -35217,7 +35247,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "112278c9-1577-4edb-94ca-50c34592aaa5",
+                "x-qlik-entity-revision": "ccd77d83-08ef-49e9-a146-b67081f7496c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -35342,7 +35372,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0fdd2fe3-8eda-49a9-959c-8d07f1b44ecc",
+                "x-qlik-entity-revision": "86cc5199-aa37-4bac-8d1e-952a9816258c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -35361,7 +35391,15 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/User"
+                                    "allOf": [
+                                        {
+                                            "$ref": "#/components/schemas/User"
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {}
+                                        }
+                                    ]
                                 }
                             }
                         },
@@ -35445,7 +35483,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "9fa5a96e-47df-4376-8287-4f2e0d572861",
+                "x-qlik-entity-revision": "c1e1a7e7-fb3c-43cd-a07b-cc7da00f9ddb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -35885,7 +35923,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "9b0c4eca-1bc7-4589-b803-2d8d9c088024",
+                "x-qlik-entity-revision": "ed6e38c5-f613-4d73-ad92-a84ff470c503",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -39681,7 +39719,8 @@
                     },
                     "valueAsText": {
                         "type": "string",
-                        "example": "2001"
+                        "example": "2001",
+                        "x-qlik-customer-data": true
                     },
                     "valueAsNumber": {
                         "$ref": "#/components/schemas/Float64"
@@ -39721,7 +39760,8 @@
                         "type": "string",
                         "example": "Filter 1",
                         "readOnly": true,
-                        "description": "The filter name."
+                        "description": "The filter name.",
+                        "x-qlik-customer-data": true
                     },
                     "ownerId": {
                         "type": "string",
@@ -39751,7 +39791,8 @@
                         "type": "string",
                         "example": "This is the filter description",
                         "readOnly": true,
-                        "description": "The filter description."
+                        "description": "The filter description.",
+                        "x-qlik-customer-data": true
                     },
                     "filterVersion": {
                         "enum": [
@@ -39811,7 +39852,8 @@
                     "name": {
                         "type": "string",
                         "example": "Filter 1",
-                        "description": "The filter name."
+                        "description": "The filter name.",
+                        "x-qlik-customer-data": true
                     },
                     "appId": {
                         "type": "string",
@@ -39833,7 +39875,8 @@
                         "type": "string",
                         "example": "This is the filter description",
                         "x-nullable": true,
-                        "description": "The filter description."
+                        "description": "The filter description.",
+                        "x-qlik-customer-data": true
                     },
                     "filterVersion": {
                         "enum": [
@@ -39926,7 +39969,8 @@
                 "properties": {
                     "name": {
                         "type": "string",
-                        "example": "variable 1"
+                        "example": "variable 1",
+                        "x-qlik-customer-data": true
                     },
                     "value": {
                         "type": "string",
@@ -40684,6 +40728,23 @@
                     }
                 }
             },
+            "ReloadIncludeFile": {
+                "type": "object",
+                "properties": {
+                    "qri": {
+                        "type": "string",
+                        "description": "File QRI resource identifier."
+                    },
+                    "path": {
+                        "type": "string",
+                        "description": "File location within the connection."
+                    },
+                    "connection": {
+                        "type": "string",
+                        "description": "The connection name."
+                    }
+                }
+            },
             "ReloadListMetadata": {
                 "type": "object",
                 "properties": {
@@ -40746,6 +40807,13 @@
                     "accessDbHash": {
                         "type": "string",
                         "description": "A Base64-encoded hash value of the new section access database."
+                    },
+                    "includeFiles": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ReloadIncludeFile"
+                        },
+                        "description": "Files brought into the script via include/mustInclude macros."
                     },
                     "loadFilesBytes": {
                         "type": "integer",
@@ -42582,7 +42650,8 @@
                         "readOnly": true
                     },
                     "name": {
-                        "type": "string"
+                        "type": "string",
+                        "x-qlik-customer-data": true
                     },
                     "files": {
                         "type": "array",
@@ -42618,7 +42687,8 @@
                         "description": "ID of a user that last updated the brand."
                     },
                     "description": {
-                        "type": "string"
+                        "type": "string",
+                        "x-qlik-customer-data": true
                     }
                 },
                 "description": "A brand is a collection of assets for applying custom branding. Only a single brand can be active in a tenant."
@@ -46677,15 +46747,17 @@
                                         "remove"
                                     ],
                                     "type": "string",
+                                    "example": "add",
                                     "description": "Operation type"
                                 },
                                 "path": {
                                     "type": "string",
-                                    "example": "Use '/qName' to patch the field 'qName' on toplevel, use '/tags/<index_number>' to patch an item in array properties like 'tags'",
+                                    "example": "/qName",
                                     "description": "Path to the target field to be patched"
                                 },
                                 "value": {
                                     "type": "string",
+                                    "example": "New value",
                                     "description": "The value used for the patch, only needed for 'add' or 'replace'. Value type could be either string or integer, should match with the type of the target field"
                                 }
                             }
@@ -46769,6 +46841,7 @@
                 "properties": {
                     "qID": {
                         "type": "string",
+                        "example": "065f977e-6eca-408c-b78b-ecded823712c",
                         "description": "UUID of the credential"
                     },
                     "links": {
@@ -46776,25 +46849,29 @@
                     },
                     "qName": {
                         "type": "string",
-                        "description": "Name of the credential",
-                        "x-qlik-filterable": true
+                        "example": "MyCredential for REST datasource",
+                        "description": "Name of the credential"
                     },
                     "qType": {
                         "type": "string",
+                        "example": "QvWebStorageProviderConnectorPackage.exe",
                         "description": "Type of credential",
                         "x-qlik-filterable": true
                     },
                     "qConnCount": {
                         "type": "integer",
+                        "example": 1,
                         "description": "Number of linked connections"
                     },
                     "datasourceID": {
                         "type": "string",
+                        "example": "rest",
                         "description": "ID datasource that the credential is created for",
                         "x-qlik-filterable": true
                     },
                     "qReferenceKey": {
                         "type": "string",
+                        "example": "credential:key",
                         "description": "Reference key of credential in redis"
                     }
                 }
@@ -46809,30 +46886,37 @@
                 "properties": {
                     "qID": {
                         "type": "string",
+                        "example": "c2dd20e3-1842-42d0-81fe-1ecf08e6abde",
                         "description": "UUID of the credential"
                     },
                     "qName": {
                         "type": "string",
-                        "description": "UName of the credential"
+                        "example": "MyCredential for REST datasource",
+                        "description": "Name of the credential"
                     },
                     "qType": {
                         "type": "string",
-                        "description": "Type of credential"
+                        "example": "QvWebStorageProviderConnectorPackage.exe",
+                        "description": "Type of credential (i.e. connector provider of the corresponding connection)"
                     },
                     "qPassword": {
                         "type": "string",
+                        "example": "MyPassword",
                         "description": "Password"
                     },
                     "qUsername": {
                         "type": "string",
+                        "example": "MyUsername",
                         "description": "User name"
                     },
                     "connectionId": {
                         "type": "string",
+                        "example": "2eb98dea-5e3b-4f50-9967-841cec04b72f",
                         "description": "ID of connection that will be associated with the credential"
                     },
                     "datasourceID": {
                         "type": "string",
+                        "example": "rest",
                         "description": "ID datasource that the credential is created for"
                     }
                 },
@@ -47809,6 +47893,13 @@
                         }
                     },
                     "dataSetId": {
+                        "type": "string"
+                    },
+                    "resultType": {
+                        "enum": [
+                            "NORMAL",
+                            "BASIC"
+                        ],
                         "type": "string"
                     },
                     "connectionId": {
@@ -50775,8 +50866,7 @@
                         "id",
                         "name",
                         "type",
-                        "level",
-                        "permissions"
+                        "level"
                     ],
                     "properties": {
                         "id": {
@@ -50810,17 +50900,6 @@
                             "example": "user",
                             "readOnly": true,
                             "description": "The role level"
-                        },
-                        "permissions": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
-                            },
-                            "example": [
-                                "app:create"
-                            ],
-                            "readOnly": true,
-                            "description": "An array of permissions associated to a given role."
                         }
                     },
                     "description": "represents a role entity stored in the database"
@@ -50955,8 +51034,7 @@
                                 "id",
                                 "name",
                                 "type",
-                                "level",
-                                "permissions"
+                                "level"
                             ],
                             "properties": {
                                 "id": {
@@ -50987,17 +51065,6 @@
                                     ],
                                     "type": "string",
                                     "example": "admin",
-                                    "readOnly": true,
-                                    "x-qlik-filterable": true
-                                },
-                                "permissions": {
-                                    "type": "array",
-                                    "items": {
-                                        "type": "string"
-                                    },
-                                    "example": [
-                                        "app:create"
-                                    ],
                                     "readOnly": true,
                                     "x-qlik-filterable": true
                                 }
@@ -51405,6 +51472,34 @@
                     }
                 }
             },
+            "CertificateInfo": {
+                "type": "object",
+                "required": [
+                    "certificate"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "Given name for this certificate.",
+                        "x-qlik-customer-data": true
+                    },
+                    "signature": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "Indicates whether the certificate is used for the signature."
+                    },
+                    "encryption": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "Indicates whether the certificate is used for encryption."
+                    },
+                    "certificate": {
+                        "type": "string",
+                        "description": "The X.509 certificate for validating signed SAML responses.",
+                        "x-qlik-customer-data": true
+                    }
+                }
+            },
             "claimsMappingInteractive": {
                 "type": "object",
                 "properties": {
@@ -51493,6 +51588,54 @@
                     }
                 },
                 "description": "Mappings from claim name to an array of JSON pointers that point to locations in the claims from the IdP to retrieve the value from."
+            },
+            "claimsMappingSAML": {
+                "type": "object",
+                "required": [
+                    "sub",
+                    "name",
+                    "email",
+                    "picture",
+                    "groups"
+                ],
+                "properties": {
+                    "sub": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "A list of SAML attributes used to map the user's subject."
+                    },
+                    "name": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "A list of SAML attributes used to map the user's name."
+                    },
+                    "email": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "A list of SAML attributes used to map the user's email."
+                    },
+                    "groups": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "A list of SAML attributes used to map the user's groups."
+                    },
+                    "picture": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "A list of SAML attributes used to map the user's picture."
+                    }
+                },
+                "description": "Mappings from claim name to an array of SAML attribute names that point to locations in the claims from the IdP to retrieve the value from."
             },
             "CreateJWTAuthPayload": {
                 "type": "object",
@@ -51741,10 +51884,198 @@
                 },
                 "description": "Payload for creating an OIDC-compatible identity provider."
             },
+            "CreateSAMLPayload": {
+                "type": "object",
+                "required": [
+                    "provider",
+                    "protocol",
+                    "interactive"
+                ],
+                "properties": {
+                    "options": {
+                        "type": "object",
+                        "required": [
+                            "claimsMapping"
+                        ],
+                        "properties": {
+                            "entityId": {
+                                "type": "string",
+                                "description": "The entity ID for the SAML IdP. Required if metadata is not provided.",
+                                "x-qlik-customer-data": true
+                            },
+                            "metadata": {
+                                "type": "object",
+                                "required": [
+                                    "raw"
+                                ],
+                                "properties": {
+                                    "raw": {
+                                        "type": "string",
+                                        "format": "byte",
+                                        "description": "The IDP metadata XML in base64-encoded format.",
+                                        "x-qlik-customer-data": true
+                                    }
+                                },
+                                "description": "Metadata for the SAML IdP. Required if individual SAML parameters are not provided."
+                            },
+                            "signOnUrl": {
+                                "type": "string",
+                                "description": "The sign on URL for the SAML IdP. Required if metadata is not provided.",
+                                "x-qlik-customer-data": true
+                            },
+                            "certificates": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/CertificateInfo"
+                                },
+                                "maxItems": 5,
+                                "minItems": 1,
+                                "description": "The certificates used for validating signed responses. Required if metadata is not provided."
+                            },
+                            "nameIdFormat": {
+                                "enum": [
+                                    "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress",
+                                    "urn:oasis:names:tc:SAML:2.0:nameid-format:persistent",
+                                    "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"
+                                ],
+                                "type": "string",
+                                "description": "The name identifier format that will be requested from the identity provider."
+                            },
+                            "claimsMapping": {
+                                "$ref": "#/components/schemas/claimsMappingSAML"
+                            },
+                            "allowIdpInitiatedLogin": {
+                                "type": "boolean",
+                                "default": false,
+                                "description": "Toggle to allow IdP initated login by the SAML IdP."
+                            }
+                        },
+                        "description": "Required SAML configurations for IdPs with `skipVerify` flag enabled."
+                    },
+                    "protocol": {
+                        "enum": [
+                            "SAML"
+                        ],
+                        "type": "string",
+                        "description": "The protocol to be used for communicating with the identity provider."
+                    },
+                    "provider": {
+                        "enum": [
+                            "okta",
+                            "generic",
+                            "adfs",
+                            "azureAD"
+                        ],
+                        "type": "string",
+                        "description": "The identity provider to be used."
+                    },
+                    "tenantIds": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "The tenant identifiers that map to the given IdP."
+                    },
+                    "skipVerify": {
+                        "type": "boolean",
+                        "default": false,
+                        "description": "If set to `true`, skips IdP verification process and assumes the IdP is verified."
+                    },
+                    "description": {
+                        "type": "string",
+                        "maxLength": 128,
+                        "x-qlik-customer-data": true
+                    },
+                    "interactive": {
+                        "type": "boolean",
+                        "description": "Indicates whether the IdP is meant for interactive login. Must be true for SAML IdPs."
+                    },
+                    "pendingOptions": {
+                        "type": "object",
+                        "required": [
+                            "claimsMapping"
+                        ],
+                        "properties": {
+                            "entityId": {
+                                "type": "string",
+                                "description": "The entity ID for the SAML IdP. Required if metadata is not provided.",
+                                "x-qlik-customer-data": true
+                            },
+                            "metadata": {
+                                "type": "object",
+                                "required": [
+                                    "raw"
+                                ],
+                                "properties": {
+                                    "raw": {
+                                        "type": "string",
+                                        "format": "byte",
+                                        "description": "The IDP metadata XML in base64-encoded format.",
+                                        "x-qlik-customer-data": true
+                                    }
+                                },
+                                "description": "Metadata for the SAML IdP. Required if individual SAML parameters are not provided."
+                            },
+                            "signOnUrl": {
+                                "type": "string",
+                                "description": "The sign on URL for the SAML IdP. Required if metadata is not provided.",
+                                "x-qlik-customer-data": true
+                            },
+                            "certificates": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/CertificateInfo"
+                                },
+                                "description": "The certificates used for validating signed responses. Required if metadata is not provided."
+                            },
+                            "nameIdFormat": {
+                                "enum": [
+                                    "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress",
+                                    "urn:oasis:names:tc:SAML:2.0:nameid-format:persistent",
+                                    "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"
+                                ],
+                                "type": "string",
+                                "description": "The name identifier format that will be requested from the identity provider."
+                            },
+                            "claimsMapping": {
+                                "$ref": "#/components/schemas/claimsMappingSAML"
+                            },
+                            "allowIdpInitiatedLogin": {
+                                "type": "boolean",
+                                "default": false,
+                                "description": "Toggle to allow IdP initated login by the SAML IdP."
+                            }
+                        },
+                        "description": "Required configurations for SAML IdPs that require verification."
+                    },
+                    "clockToleranceSec": {
+                        "type": "number",
+                        "default": 5,
+                        "maximum": 7200,
+                        "minimum": 0,
+                        "description": "There can be clock skew between the IdP and Qlik's login server. In these cases, a tolerance can be set, decimals will be rounded off."
+                    },
+                    "createNewUsersOnLogin": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "Tells the consumer of the IdP that new users should be created on login if they don't exist."
+                    },
+                    "postLogoutRedirectUri": {
+                        "type": "string",
+                        "maxLength": 2083,
+                        "description": "Direct the user on logout to a specific URI.",
+                        "x-qlik-customer-data": true
+                    }
+                },
+                "description": "Payload for creating a SAML compatible identity provider."
+            },
             "IDP": {
                 "oneOf": [
                     {
                         "$ref": "#/components/schemas/IDPOIDC"
+                    },
+                    {
+                        "$ref": "#/components/schemas/IDPSAML"
                     },
                     {
                         "$ref": "#/components/schemas/IDPJWTAuth"
@@ -51831,7 +52162,7 @@
                         "type": "object",
                         "properties": {
                             "options": {
-                                "$ref": "#/components/schemas/IDPOptions"
+                                "$ref": "#/components/schemas/IDPOIDCOptions"
                             },
                             "pendingState": {
                                 "enum": [
@@ -51846,14 +52177,14 @@
                                 "$ref": "#/components/schemas/PendingResult"
                             },
                             "pendingOptions": {
-                                "$ref": "#/components/schemas/IDPOptions"
+                                "$ref": "#/components/schemas/IDPOIDCOptions"
                             }
                         }
                     }
                 ],
                 "description": "An OIDC-compliant identity provider."
             },
-            "IDPOptions": {
+            "IDPOIDCOptions": {
                 "type": "object",
                 "properties": {
                     "realm": {
@@ -51912,6 +52243,12 @@
                     {
                         "type": "array",
                         "items": {
+                            "$ref": "#/components/schemas/PatchSAMLPayload"
+                        }
+                    },
+                    {
+                        "type": "array",
+                        "items": {
                             "$ref": "#/components/schemas/PatchJWTAuthPayload"
                         }
                     }
@@ -51924,6 +52261,9 @@
                     },
                     {
                         "$ref": "#/components/schemas/CreateJWTAuthPayload"
+                    },
+                    {
+                        "$ref": "#/components/schemas/CreateSAMLPayload"
                     }
                 ],
                 "discriminator": {
@@ -51933,11 +52273,12 @@
             "IDPProtocol": {
                 "enum": [
                     "OIDC",
+                    "SAML",
                     "jwtAuth",
                     "qsefw-local-bearer-token"
                 ],
                 "type": "string",
-                "description": "The protocol to be used for communicating with the identity provider. Valid values are `OIDC`, `jwtAuth`, and `qsefw-local-bearer-token`."
+                "description": "The protocol to be used for communicating with the identity provider. Valid values are `OIDC`, `SAML`, `jwtAuth`, and `qsefw-local-bearer-token`."
             },
             "IDPProvider": {
                 "enum": [
@@ -51953,6 +52294,86 @@
                 ],
                 "type": "string",
                 "description": "The identity provider to be used. If protocol is `OIDC`, the valid values are `auth0`, `okta`, `generic`, `salesforce`, `keycloak`, `adfs`, and `azureAD`. If protocol is `jwtAuth`, the valid value is `external`."
+            },
+            "IDPSAML": {
+                "allOf": [
+                    {
+                        "$ref": "#/components/schemas/BaseIDP"
+                    },
+                    {
+                        "type": "object",
+                        "properties": {
+                            "options": {
+                                "$ref": "#/components/schemas/IDPSAMLOptions"
+                            },
+                            "pendingState": {
+                                "enum": [
+                                    "verified",
+                                    "pending",
+                                    "error"
+                                ],
+                                "type": "string",
+                                "description": "The state of pendingOptions. This represents the latest IdP test result."
+                            },
+                            "pendingResult": {
+                                "$ref": "#/components/schemas/PendingResult"
+                            },
+                            "pendingOptions": {
+                                "$ref": "#/components/schemas/IDPSAMLOptions"
+                            }
+                        }
+                    }
+                ],
+                "description": "A SAML-compliant identity provider."
+            },
+            "IDPSAMLOptions": {
+                "type": "object",
+                "properties": {
+                    "entityId": {
+                        "type": "string",
+                        "description": "The entity URL for the SAML IdP.",
+                        "x-qlik-customer-data": true
+                    },
+                    "signOnUrl": {
+                        "type": "string",
+                        "description": "The sign on URL for the SAML IdP.",
+                        "x-qlik-customer-data": true
+                    },
+                    "signingKeys": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/SigningKey"
+                        },
+                        "description": "Set of certificates used to sign SAMLRequest payloads. Not present in `pendingOptions`."
+                    },
+                    "certificates": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/CertificateInfo"
+                        },
+                        "description": "The certificates used for validating signed responses."
+                    },
+                    "nameIdFormat": {
+                        "enum": [
+                            "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress",
+                            "urn:oasis:names:tc:SAML:2.0:nameid-format:persistent",
+                            "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"
+                        ],
+                        "type": "string",
+                        "description": "The name identifier format that will be requested from the identity provider."
+                    },
+                    "claimsMapping": {
+                        "$ref": "#/components/schemas/claimsMappingSAML"
+                    },
+                    "allowIdpInitiatedLogin": {
+                        "type": "boolean",
+                        "description": "Toggle to allow IdP initated login by the SAML IdP."
+                    },
+                    "signingKeySelectedRefId": {
+                        "type": "string",
+                        "description": "The reference ID of the chosen signing key pair."
+                    }
+                }
             },
             "IDPsStatus": {
                 "type": "object",
@@ -52097,6 +52518,44 @@
                 },
                 "description": "A patch request for an identity provider using the `OIDC` protocol."
             },
+            "PatchSAMLPayload": {
+                "type": "object",
+                "required": [
+                    "op"
+                ],
+                "properties": {
+                    "op": {
+                        "enum": [
+                            "replace",
+                            "promote-options"
+                        ],
+                        "type": "string",
+                        "description": "The \"operation\" to be performed on a given IdP."
+                    },
+                    "path": {
+                        "enum": [
+                            "/active",
+                            "/description",
+                            "/pendingOptions",
+                            "/pendingOptions/nameIdFormat",
+                            "/pendingOptions/allowIdpInitiatedLogin",
+                            "/pendingOptions/entityId",
+                            "/pendingOptions/signOnUrl",
+                            "/pendingOptions/metadata",
+                            "/pendingOptions/certificates",
+                            "/pendingOptions/claimsMapping",
+                            "/postLogoutRedirectUri",
+                            "/clockToleranceSec"
+                        ],
+                        "type": "string",
+                        "description": "The \"path\" to the part of the IdP document."
+                    },
+                    "value": {
+                        "description": "The \"value\" data type is dependent on the path value being used."
+                    }
+                },
+                "description": "A patch request for an identity provider using the `SAML` protocol. Supports a custom operation value called `promote-options` that allows the test configuration (`pendingOptions`) to be promoted to the live configuration (`options`) used for login.'"
+            },
             "PendingResult": {
                 "type": "object",
                 "required": [
@@ -52126,6 +52585,14 @@
                         "type": "string",
                         "format": "date-time",
                         "description": "The timestamp for when the test was started for an IdP configuration. This field is only available during lifespan of the test."
+                    },
+                    "protocol": {
+                        "enum": [
+                            "OIDC",
+                            "SAML"
+                        ],
+                        "type": "string",
+                        "description": "The protocol used to communicate with the IdP during the test flow."
                     },
                     "idpClaims": {
                         "type": "object",
@@ -52158,6 +52625,19 @@
                         "x-qlik-pii": true,
                         "description": "The resultant claims based on the claims received from the external IdP.",
                         "x-qlik-customer-data": true
+                    }
+                }
+            },
+            "SigningKey": {
+                "type": "object",
+                "properties": {
+                    "refId": {
+                        "type": "string",
+                        "description": "The reference ID for choosing this key pair."
+                    },
+                    "certificate": {
+                        "type": "string",
+                        "description": "The certificate to be uploaded to the identity provider for verifying SAML requests."
                     }
                 }
             },
@@ -54780,11 +55260,8 @@
                 ],
                 "properties": {
                     "scope": {
-                        "enum": [
-                            "user_default"
-                        ],
                         "type": "string",
-                        "description": "The scope of access that is being requested. The scope should already be assigned to the OAuth client"
+                        "description": "The scope of access that is being requested. The scope should already be assigned to the OAuth client. For a list of available scopes, visit: https://qlik.dev/authenticate/oauth/scopes/#available-scopes"
                     },
                     "grant_type": {
                         "enum": [
@@ -56203,7 +56680,8 @@
                     "text": {
                         "type": "string",
                         "example": "2021",
-                        "description": "String value of the field value."
+                        "description": "String value of the field value.",
+                        "x-qlik-customer-data": true
                     },
                     "number": {
                         "$ref": "#/components/schemas/Float64"
@@ -56235,7 +56713,8 @@
                     "fieldName": {
                         "type": "string",
                         "example": "Year",
-                        "description": "The name of the field to be selected."
+                        "description": "The name of the field to be selected.",
+                        "x-qlik-customer-data": true
                     },
                     "defaultIsNumeric": {
                         "type": "boolean",
@@ -56496,7 +56975,8 @@
                     "fieldName": {
                         "type": "string",
                         "example": "Year",
-                        "description": "The field name that is missing."
+                        "description": "The field name that is missing.",
+                        "x-qlik-customer-data": true
                     },
                     "stateName": {
                         "type": "string",
@@ -56782,7 +57262,8 @@
                     "id": {
                         "type": "string",
                         "example": "QbtwdFg",
-                        "description": "The sense visualization id or json definition."
+                        "description": "The sense visualization id or json definition.",
+                        "x-qlik-customer-data": true
                     },
                     "type": {
                         "enum": [
@@ -57537,7 +58018,6 @@
             "SharingTaskRecurringCreateRequest": {
                 "type": "object",
                 "required": [
-                    "appName",
                     "name",
                     "state",
                     "templates",
@@ -57573,7 +58053,8 @@
                     "appName": {
                         "type": "string",
                         "minLength": 1,
-                        "description": "Name of the app associated (through the templates) with this sharing task"
+                        "description": "Name of the app associated (through the templates) with this sharing task",
+                        "x-qlik-deprecated": true
                     },
                     "enabled": {
                         "type": "boolean",
@@ -59687,8 +60168,7 @@
                     "type": "object",
                     "required": [
                         "id",
-                        "name",
-                        "permissions"
+                        "name"
                     ],
                     "properties": {
                         "id": {
@@ -61126,6 +61606,7 @@
                 "schema": {
                     "type": "boolean"
                 },
+                "example": false,
                 "required": false,
                 "description": "If set to true, credentialId in the query will be intepreted as credential's name"
             },
@@ -61323,6 +61804,7 @@
                 "schema": {
                     "type": "string"
                 },
+                "example": "027d2703-e745-43ec-8876-a2e6ac341700",
                 "required": true,
                 "description": "Credential ID"
             },
