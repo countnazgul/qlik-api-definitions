@@ -12766,7 +12766,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "7c22eeae-8109-4bdb-aab3-c262c2c98d12",
+                "x-qlik-entity-revision": "d6ce250a-109a-4e8e-bf2d-72b6b7f82461",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -12777,13 +12777,20 @@
                 "tags": [
                     "data-connections"
                 ],
-                "summary": "Creates a connection. Depends on the fields defined in the request body, credentials embedded (or associated) in the connection can be updated or created.",
+                "summary": "Creates a new connection. Depending on the fields defined in the request body, credentials embedded (or associated) in the connection can be updated or created.",
                 "responses": {
                     "201": {
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/ConnectionCreateResponse"
+                                    "oneOf": [
+                                        {
+                                            "$ref": "#/components/schemas/ConnectionCreateResponse"
+                                        },
+                                        {
+                                            "$ref": "#/components/schemas/DcaasConnectionCreateAuthResponse"
+                                        }
+                                    ]
                                 }
                             }
                         },
@@ -12817,7 +12824,7 @@
                                 }
                             }
                         },
-                        "description": "Credentials pointed by qCredentialsID in the request body doesn't exist"
+                        "description": "Credentials referenced by qCredentialsID in the request body could not be found"
                     },
                     "409": {
                         "content": {
@@ -12834,7 +12841,14 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/ConnectionCreate"
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/components/schemas/ConnectionCreate"
+                                    },
+                                    {
+                                        "$ref": "#/components/schemas/DcaasConnectionCreate"
+                                    }
+                                ]
                             }
                         }
                     },
@@ -12845,7 +12859,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "45950766-2db2-4d6d-b949-46d3fef35ff2",
+                "x-qlik-entity-revision": "b133c015-f379-4810-8c83-ac3293f7c821",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -12858,17 +12872,17 @@
                 "tags": [
                     "data-connections"
                 ],
-                "summary": "Gets a connection by connection ID (or by name when type=connectionname is set in query)",
+                "summary": "Retrieves a connection by connection ID, or by name when the query parameter \"type\" is set to \"connectionname.\"",
                 "responses": {
                     "200": {
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/Connection"
+                                    "$ref": "#/components/schemas/ConnectionGet"
                                 }
                             }
                         },
-                        "description": "Data connection fetched"
+                        "description": "Data connection retrieved"
                     },
                     "400": {
                         "content": {
@@ -12878,7 +12892,7 @@
                                 }
                             }
                         },
-                        "description": "qID is an invalid UUID"
+                        "description": "The qID is not a valid UUID"
                     },
                     "403": {
                         "content": {
@@ -12908,7 +12922,7 @@
                                 }
                             }
                         },
-                        "description": "Credential decryption failed, which is most likely caused by invalid credentials"
+                        "description": "Credential decryption failed, likely due to invalid credentials"
                     }
                 },
                 "parameters": [
@@ -12932,6 +12946,9 @@
                     },
                     {
                         "$ref": "#/components/parameters/nocache"
+                    },
+                    {
+                        "$ref": "#/components/parameters/parseConnection"
                     }
                 ],
                 "x-qlik-visibility": "public",
@@ -12939,7 +12956,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "da21935b-c54a-409e-a90e-2f1c01ec36ec",
+                "x-qlik-entity-revision": "b99fc1ba-8652-489e-a214-45786292f987",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -13019,7 +13036,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "bca042ba-45a6-4ef5-93f2-f844f10a9c68",
+                "x-qlik-entity-revision": "0d168b8c-5738-4797-9578-62787c2d2253",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13102,7 +13119,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "a7a6bb43-1337-4d2d-bece-a485507fa79b",
+                "x-qlik-entity-revision": "9eecc134-7052-4097-8058-c7fe95d41c43",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13155,7 +13172,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b4a1f6f5-78ab-47dd-9188-7c130efc8ab1",
+                "x-qlik-entity-revision": "0f2c8f64-98d6-4a7b-a897-abd51d2d7565",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13216,7 +13233,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "3c31a18e-3ba0-42bd-80a3-57126e3d8248",
+                "x-qlik-entity-revision": "f78681ea-fee3-4a9f-ba3f-f5692a78aaeb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13297,7 +13314,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f9890833-7905-4f71-acb2-286d3eeb854e",
+                "x-qlik-entity-revision": "c894541a-9783-476d-98a9-ca1f387ea213",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13358,7 +13375,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "25c2b161-30ac-49e3-98de-5c591c147c5c",
+                "x-qlik-entity-revision": "8d2e1a87-542e-43d5-baa7-3d071914cc84",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -15506,6 +15523,101 @@
                     "external/build"
                 ],
                 "x-qlik-entity-revision": "ce6a0a51-5f43-4712-94c5-762756cfb294",
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "1",
+                    "limit": 1000
+                }
+            }
+        },
+        "/v1/data-sources": {
+            "get": {
+                "tags": [
+                    "data-sources"
+                ],
+                "summary": "Get data sources",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/DataSourcesResponseNew"
+                                }
+                            }
+                        },
+                        "description": "An array of data source info"
+                    },
+                    "401": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseErrors"
+                                }
+                            }
+                        },
+                        "description": "Unauthorized request (Bad JWT token etc)"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseErrors"
+                                }
+                            }
+                        },
+                        "description": "Datasource not found or it is not enabled"
+                    },
+                    "500": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseErrors"
+                                }
+                            }
+                        },
+                        "description": "Internal errors"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "dataSourceId",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "rest",
+                        "required": false,
+                        "description": "Filtering on datasourceID, when multiple dataSourceId are set in query, last dataSourceId will be used"
+                    },
+                    {
+                        "in": "query",
+                        "name": "detail",
+                        "schema": {
+                            "type": "boolean"
+                        },
+                        "example": true,
+                        "required": false,
+                        "description": "Determines if provider detail is returned"
+                    },
+                    {
+                        "in": "query",
+                        "name": "includeui",
+                        "schema": {
+                            "type": "boolean"
+                        },
+                        "example": true,
+                        "required": false,
+                        "description": "Determines if UI info is returned"
+                    }
+                ],
+                "description": "Gets the list of data sources available on the node.",
+                "operationId": "getDataSources",
+                "x-qlik-stability": "stable",
+                "x-qlik-visibility": "public",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-entity-revision": "b14e8df4-e804-4f2a-9b7e-25984761153e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -46198,10 +46310,12 @@
                             "properties": {
                                 "id": {
                                     "type": "string",
+                                    "example": "b2c1ab1f-392c-4cd1-87bd-4c3cd256f5fd",
                                     "description": "ID of connection"
                                 },
                                 "name": {
                                     "type": "string",
+                                    "example": "MyConnection",
                                     "description": "Connection name"
                                 }
                             }
@@ -46217,22 +46331,27 @@
                 "properties": {
                     "id": {
                         "type": "string",
+                        "example": "b2c1ab1f-392c-4cd1-87bd-4c3cd256f5fd",
                         "description": "ID of the source connection being duplicated"
                     },
                     "name": {
                         "type": "string",
+                        "example": "ResourceName",
                         "description": "Optional name for the duplicated connection, must be unique in the target scope. If not specified, a name will be automatically generated"
                     },
                     "spaceId": {
                         "type": "string",
+                        "example": "611bcebaeec1203d88211ac4",
                         "description": "Optional target space ID for the duplicated connection. If not specified, the duplicated connection will be in the same space as the source connection"
                     },
                     "qPassword": {
                         "type": "string",
+                        "example": "Password",
                         "description": "Optional credential password, specify to override credential embedded (or associated) with the source connection"
                     },
                     "qUsername": {
                         "type": "string",
+                        "example": "UserName",
                         "description": "Optional credential username, specify to override credential embedded (or associated) with the source connection"
                     }
                 }
@@ -46253,18 +46372,22 @@
                             "properties": {
                                 "id": {
                                     "type": "string",
+                                    "example": "b2c1ab1f-392c-4cd1-87bd-4c3cd256f5fd",
                                     "description": "Connection ID"
                                 },
                                 "name": {
                                     "type": "string",
+                                    "example": "MyConnection",
                                     "description": "Connection name"
                                 },
                                 "ownerId": {
                                     "type": "string",
+                                    "example": "6K9xjsItDexffSlu5vg1oWYkY8x7f-06",
                                     "description": "User ID to which the connection will be updated. If not present, the connection's owner wont be changed"
                                 },
                                 "spaceId": {
                                     "type": "string",
+                                    "example": "611bcebaeec1203d88211ac4",
                                     "description": "Space ID to which the connection will be updated. If not present, the connection's space wont be changed. If it is empty string, then the connection will be moved to the personal space of the user identified by ownerId (If ownerId is undefined, then the connection will be in oroginal owner's personal space)"
                                 },
                                 "spaceType": {
@@ -46275,6 +46398,7 @@
                                         "data"
                                     ],
                                     "type": "string",
+                                    "example": "personal",
                                     "description": "Space type. Required when spaceId is specified"
                                 }
                             }
@@ -46295,6 +46419,7 @@
                             "properties": {
                                 "id": {
                                     "type": "string",
+                                    "example": "b2c1ab1f-392c-4cd1-87bd-4c3cd256f5fd",
                                     "description": "ID of the resource"
                                 },
                                 "error": {
@@ -46302,131 +46427,13 @@
                                 },
                                 "status": {
                                     "type": "integer",
+                                    "example": 204,
                                     "description": "Status code of operation on resource identified by ID"
                                 }
                             }
                         }
                     }
                 }
-            },
-            "Connection": {
-                "type": "object",
-                "required": [
-                    "qID",
-                    "qName",
-                    "qConnectStatement",
-                    "qType",
-                    "qLogOn",
-                    "qEngineObjectID",
-                    "qArchitecture",
-                    "qSeparateCredentials",
-                    "privileges",
-                    "created",
-                    "updated",
-                    "user"
-                ],
-                "properties": {
-                    "qID": {
-                        "type": "string",
-                        "description": "Unique identifier (UUID) for the data connection, must be same as qEngineObjectID"
-                    },
-                    "qri": {
-                        "type": "string",
-                        "description": "Encrypted base Qri string"
-                    },
-                    "user": {
-                        "type": "string",
-                        "description": "User ID of the connection's creator"
-                    },
-                    "links": {
-                        "$ref": "#/components/schemas/Link"
-                    },
-                    "qName": {
-                        "type": "string",
-                        "description": "Descriptive name of the data connection",
-                        "x-qlik-filterable": true
-                    },
-                    "qType": {
-                        "type": "string",
-                        "description": "Type of connection - indicates connection provider type",
-                        "x-qlik-filterable": true
-                    },
-                    "space": {
-                        "type": "string",
-                        "description": "ID of the space to which the connection belongs"
-                    },
-                    "qLogOn": {
-                        "enum": [
-                            "0",
-                            "1",
-                            "LOG_ON_SERVICE_USER",
-                            "LOG_ON_CURRENT_USER"
-                        ],
-                        "type": "string",
-                        "description": "Indicates the type of user associated with the data connection"
-                    },
-                    "tenant": {
-                        "type": "string",
-                        "description": "Tenant ID of the connection's creator (Only when extended=true in query)"
-                    },
-                    "created": {
-                        "type": "string",
-                        "description": "Datetime when the connection was created"
-                    },
-                    "updated": {
-                        "type": "string",
-                        "description": "Datetime when the connection was last updated"
-                    },
-                    "privileges": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/Privilege"
-                        },
-                        "description": "Array of string (i.e. update, delete, read) indicating the user's privileges on the associated connection"
-                    },
-                    "datasourceID": {
-                        "type": "string",
-                        "description": "Data source ID",
-                        "x-qlik-filterable": true
-                    },
-                    "qArchitecture": {
-                        "enum": [
-                            0,
-                            1
-                        ],
-                        "type": "integer",
-                        "description": "0 or 1 value indicating whether the data connector is 64-bit (0) or 32-bit (1). Defaults to 0 if not specified."
-                    },
-                    "qReferenceKey": {
-                        "type": "string",
-                        "description": "Reference key of credential in redis"
-                    },
-                    "qCredentialsID": {
-                        "type": "string",
-                        "description": "ID of the credential associated with the connection"
-                    },
-                    "qEngineObjectID": {
-                        "type": "string",
-                        "description": "Unique identifier (UUID) for the data connection, must be same as qID"
-                    },
-                    "qCredentialsName": {
-                        "type": "string",
-                        "description": "Name of the credential associated with the connection"
-                    },
-                    "qConnectStatement": {
-                        "type": "string",
-                        "description": "Connection string for the data connection"
-                    },
-                    "qConnectionSecret": {
-                        "type": "string",
-                        "description": "String that contains connection specific secret (or password). This field will not be included in response of GET /data-connections, will only be included in the response of GET /data-connections/{qID}"
-                    },
-                    "qSeparateCredentials": {
-                        "type": "boolean",
-                        "description": "Indicates whether or not this is a credential-less connection"
-                    }
-                },
-                "description": "Essential fields of a connection"
             },
             "ConnectionCreate": {
                 "type": "object",
@@ -46439,22 +46446,37 @@
                 "properties": {
                     "qID": {
                         "type": "string",
+                        "example": "b4a949cb-3aaf-4cd5-a140-dd3ea34f0d28",
                         "description": "Unique identifier (UUID) for the data connection. A UUID will be generated automatically if qID is not specified or empty"
+                    },
+                    "tags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "example": "tag",
+                            "description": "tag string (256 bytes or less)"
+                        },
+                        "example": "[\"tag1, \"tag2\"]",
+                        "description": "List of tags attached to the connection (allow max 32 tags)"
                     },
                     "owner": {
                         "type": "string",
-                        "description": "ID of the cloud app that owns this connection"
+                        "example": "928e2a66-01ba-4678-aa32-e74c213896fa",
+                        "description": "App ID"
                     },
                     "qName": {
                         "type": "string",
+                        "example": "MyConnection",
                         "description": "Descriptive name of the data connection"
                     },
                     "qType": {
                         "type": "string",
+                        "example": "QvOdbcConnectorPackage.exe",
                         "description": "Type of connection - indicates connection provider type"
                     },
                     "space": {
                         "type": "string",
+                        "example": "611bcebaeec1203d88211ac4",
                         "description": "ID of the space to which the connection belongs"
                     },
                     "qLogOn": {
@@ -46465,22 +46487,27 @@
                             "LOG_ON_CURRENT_USER"
                         ],
                         "type": "string",
+                        "example": "1",
                         "description": "Indicates the type of user associated with the data connection."
                     },
                     "qPassword": {
                         "type": "string",
-                        "description": "Any logon password associated with the data connection"
+                        "example": "Connector encoded password",
+                        "description": "Any logon password associated with the data connection (connector encoded)"
                     },
                     "qUsername": {
                         "type": "string",
+                        "example": "MyUsername",
                         "description": "Any logon username associated with the data connection"
                     },
                     "datasourceID": {
                         "type": "string",
+                        "example": "snowflake",
                         "description": "ID of the datasource associated with this connection"
                     },
                     "qriInRequest": {
                         "type": "string",
+                        "example": "qri:db:snowflake://BQ1-3F_BvWfxxCDDiz9vQepqHLAcHWqacoqwLq4wxWM",
                         "description": "QRI string of the connection. The string will be persisted to mongo when the request is originated from trusted client (i.e. dcaas) to avoid invalid QRi string."
                     },
                     "qArchitecture": {
@@ -46489,35 +46516,42 @@
                             1
                         ],
                         "type": "integer",
+                        "example": 0,
                         "description": "0 or 1 value indicating whether the data connector is 64-bit (0) or 32-bit (1). Defaults to 0 if not specified."
                     },
                     "qCredentialsID": {
                         "type": "string",
+                        "example": "935ec250-65bc-47c0-965b-53554f3f87d8",
                         "description": "ID of the credential associated with the connection"
                     },
                     "qEngineObjectID": {
                         "type": "string",
+                        "example": "b4a949cb-3aaf-4cd5-a140-dd3ea34f0d28",
                         "description": "Unique identifier (UUID) for the data connection as specified by the Sense engine. A UUID will be generated automatically if this field is not specified or empty"
                     },
                     "qCredentialsName": {
                         "type": "string",
+                        "example": "MyCredential",
                         "description": "Name of the credential associated with the connection"
                     },
                     "qConnectStatement": {
                         "type": "string",
+                        "example": "CUSTOM CONNECT TO \\\"provider=QvOdbcConnectorPackage.exe;driver=snowflake;server=...\\\"",
                         "description": "Connection string for the data connection"
                     },
                     "qConnectionSecret": {
                         "type": "string",
-                        "example": "Any string",
+                        "example": "Any connection specific secret string",
                         "description": "String that contains connection specific secret (or password) that requires encryption before persist to database. This field is connection level secret"
                     },
                     "qSeparateCredentials": {
                         "type": "boolean",
                         "default": false,
+                        "example": false,
                         "description": "Indicates whether or not to create a credential-less connection"
                     }
-                }
+                },
+                "description": "Schema used to create a connection with given connection string (i.e. qConnectStatement) along with other metadata"
             },
             "ConnectionCreateResponse": {
                 "type": "object",
@@ -46535,10 +46569,12 @@
                 "properties": {
                     "qID": {
                         "type": "string",
+                        "example": "b4a949cb-3aaf-4cd5-a140-dd3ea34f0d28",
                         "description": "Unique identifier (UUID) for the data connection, must be same as qEngineObjectID"
                     },
                     "user": {
                         "type": "string",
+                        "example": "rFdHeUOiVYgPX5iTbvL0x0Cs6F62QI",
                         "description": "User ID of the connection's creator"
                     },
                     "links": {
@@ -46546,14 +46582,17 @@
                     },
                     "qName": {
                         "type": "string",
+                        "example": "MyConnection",
                         "description": "Descriptive name of the data connection"
                     },
                     "qType": {
                         "type": "string",
+                        "example": "QvOdbcConnectorPackage.exe",
                         "description": "Type of connection - indicates connection provider type"
                     },
                     "space": {
                         "type": "string",
+                        "example": "611bcebaeec1203d88211ac4",
                         "description": "ID of the space to which the connection belongs"
                     },
                     "qLogOn": {
@@ -46564,21 +46603,26 @@
                             "LOG_ON_CURRENT_USER"
                         ],
                         "type": "string",
+                        "example": "1",
                         "description": "Indicates the type of user associated with the data connection."
                     },
                     "created": {
                         "type": "string",
+                        "example": "2022-04-09T10:00:28.287Z",
                         "description": "Datetime when the connection was created"
                     },
                     "updated": {
                         "type": "string",
+                        "example": "2022-04-09T10:00:28.287Z",
                         "description": "Datetime when the connection was last updated"
                     },
                     "privileges": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/Privilege"
-                        }
+                        },
+                        "example": "[update, delete, read]",
+                        "description": "Array of string (i.e. update, delete, read) indicating the user's privileges on the associated connection"
                     },
                     "qArchitecture": {
                         "enum": [
@@ -46586,30 +46630,180 @@
                             1
                         ],
                         "type": "integer",
+                        "example": 0,
                         "description": "0 or 1 value indicating whether the data connector is 64-bit (0) or 32-bit (1). Defaults to 0 if not specified."
                     },
                     "qReferenceKey": {
                         "type": "string",
+                        "example": "credential:key",
                         "description": "Reference key of credential in redis"
                     },
                     "qCredentialsID": {
                         "type": "string",
+                        "example": "7b475581-2f68-4c81-ac52-25705b8229fb",
                         "description": "ID of the credential associated with the connection"
                     },
                     "qEngineObjectID": {
                         "type": "string",
+                        "example": "b4a949cb-3aaf-4cd5-a140-dd3ea34f0d28",
                         "description": "Unique identifier (UUID) for the data connection, must be same as qID"
                     },
                     "qCredentialsName": {
                         "type": "string",
+                        "example": "MyCredential",
                         "description": "Name of the credential associated with the connection"
                     },
                     "qConnectStatement": {
                         "type": "string",
+                        "example": "CUSTOM CONNECT TO \\\"provider=QvOdbcConnectorPackage.exe;driver=snowflake;server=...\\\"",
                         "description": "Connection string for the data connection"
                     },
                     "qSeparateCredentials": {
                         "type": "boolean",
+                        "example": true,
+                        "description": "Indicates whether or not this is a credential-less connection"
+                    }
+                },
+                "description": "Essential fields of a connection"
+            },
+            "ConnectionGet": {
+                "type": "object",
+                "required": [
+                    "qID",
+                    "qName",
+                    "qConnectStatement",
+                    "qType",
+                    "qLogOn",
+                    "qEngineObjectID",
+                    "qArchitecture",
+                    "qSeparateCredentials",
+                    "privileges",
+                    "created",
+                    "updated",
+                    "user",
+                    "tenant"
+                ],
+                "properties": {
+                    "qID": {
+                        "type": "string",
+                        "example": "a7eb530e-475a-4864-bc12-dacf4b081e72",
+                        "description": "Unique identifier (UUID) for the data connection, must be same as qEngineObjectID"
+                    },
+                    "qri": {
+                        "type": "string",
+                        "example": "qri:db:snowflake://BQ1-3F_BvWfxxCDDiz9vQepqHLAcHWqacoqwLq4wxWM",
+                        "description": "Encrypted base Qri string"
+                    },
+                    "tags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "example": "tag",
+                            "description": "tag string"
+                        },
+                        "example": "[\"tag1, \"tag2\"]",
+                        "description": "List of tags attached to the connection"
+                    },
+                    "user": {
+                        "type": "string",
+                        "example": "rFdHeUOiVYgPX5iTbvL0x0Cs6F62QI",
+                        "description": "User ID of the connection's creator"
+                    },
+                    "links": {
+                        "$ref": "#/components/schemas/Link"
+                    },
+                    "qName": {
+                        "type": "string",
+                        "example": "MyConnection",
+                        "description": "Descriptive name of the data connection",
+                        "x-qlik-filterable": true
+                    },
+                    "qType": {
+                        "type": "string",
+                        "example": "QvOdbcConnectorPackage.exe",
+                        "description": "Type of connection, i.e. provider type of underlying connector",
+                        "x-qlik-filterable": true
+                    },
+                    "space": {
+                        "type": "string",
+                        "example": "6226583d53a69876774d4f96",
+                        "description": "ID of the space to which the connection belongs"
+                    },
+                    "qLogOn": {
+                        "enum": [
+                            0,
+                            1
+                        ],
+                        "type": "integer",
+                        "example": 1,
+                        "description": "Indicates the type of user associated with the data connection"
+                    },
+                    "tenant": {
+                        "type": "string",
+                        "example": "xqFQ0k34vSR0d9G7J-vZtHZQkiYrCqc8",
+                        "description": "Tenant ID of the connection's creator"
+                    },
+                    "created": {
+                        "type": "string",
+                        "example": "2022-04-08T10:00:28.287Z",
+                        "description": "Datetime when the connection was created"
+                    },
+                    "updated": {
+                        "type": "string",
+                        "example": "2022-04-09T10:00:28.287Z",
+                        "description": "Datetime when the connection was last updated"
+                    },
+                    "privileges": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Privilege"
+                        },
+                        "example": "[update, delete, read]",
+                        "description": "Array of string (i.e. update, delete, read) indicating the user's privileges on the associated connection"
+                    },
+                    "datasourceID": {
+                        "type": "string",
+                        "example": "sfdc",
+                        "description": "Data source ID",
+                        "x-qlik-filterable": true
+                    },
+                    "qArchitecture": {
+                        "enum": [
+                            0,
+                            1
+                        ],
+                        "type": "integer",
+                        "example": 0,
+                        "description": "0 or 1 value indicating whether the data connector is 64-bit (0) or 32-bit (1). Defaults to 0 if not specified."
+                    },
+                    "qCredentialsID": {
+                        "type": "string",
+                        "example": "a4e00184-8743-4a44-a1a8-07bba573afea",
+                        "description": "ID of the credential associated with the connection"
+                    },
+                    "qEngineObjectID": {
+                        "type": "string",
+                        "example": "a7eb530e-475a-4864-bc12-dacf4b081e72",
+                        "description": "Unique identifier (UUID) for the data connection, must be same as qID"
+                    },
+                    "qConnectStatement": {
+                        "type": "string",
+                        "example": "CUSTOM CONNECT TO \\\"provider=QvOdbcConnectorPackage.exe;driver=snowflake;server=...\\\"",
+                        "description": "Connection string for the data connection"
+                    },
+                    "qConnectionSecret": {
+                        "type": "string",
+                        "example": "Connection_Specific_Secret",
+                        "description": "String that contains connection specific secret (or password). This field will not be included in response of GET /data-connections, will only be included in the response of GET /data-connections/{qID}"
+                    },
+                    "connectionProperties": {
+                        "type": "object",
+                        "example": "{\"property1\": \"value\", \"property2\": \"value\"}",
+                        "description": "List of connection parsed from connection string (only available when query parseConnection=true is set)"
+                    },
+                    "qSeparateCredentials": {
+                        "type": "boolean",
+                        "example": true,
                         "description": "Indicates whether or not this is a credential-less connection"
                     }
                 },
@@ -46621,7 +46815,7 @@
                     "data": {
                         "type": "array",
                         "items": {
-                            "$ref": "#/components/schemas/Connection"
+                            "$ref": "#/components/schemas/ConnectionGet"
                         }
                     },
                     "meta": {
@@ -46647,18 +46841,22 @@
                 "properties": {
                     "qID": {
                         "type": "string",
+                        "example": "55e13286-fbd8-4a59-a10d-807937a97443",
                         "description": "Unique identifier for the data connection"
                     },
                     "qName": {
                         "type": "string",
+                        "example": "MyConnection",
                         "description": "Descriptive name of the data connection"
                     },
                     "qType": {
                         "type": "string",
+                        "example": "snowflake",
                         "description": "Type of connection - indicates connection provider type"
                     },
                     "space": {
                         "type": "string",
+                        "example": "611bcebaeec1203d88211ac4",
                         "description": "ID of the space to which the connection belongs"
                     },
                     "qLogOn": {
@@ -46669,18 +46867,22 @@
                             "LOG_ON_CURRENT_USER"
                         ],
                         "type": "string",
+                        "example": "1",
                         "description": "Indicates the type of user associated with the data connection."
                     },
                     "qPassword": {
                         "type": "string",
+                        "example": "password",
                         "description": "Any logon password associated with the data connection"
                     },
                     "qUsername": {
                         "type": "string",
+                        "example": "MyUsername",
                         "description": "Any logon username associated with the data connection"
                     },
                     "datasourceID": {
                         "type": "string",
+                        "example": "snowflake",
                         "description": "ID of the datasource associated with this connection"
                     },
                     "qArchitecture": {
@@ -46689,33 +46891,100 @@
                             1
                         ],
                         "type": "integer",
+                        "example": 1,
                         "description": "0 or 1 value indicating whether the data connector is 64-bit (0) or 32-bit (1). Defaults to 0 if not specified."
                     },
                     "qCredentialsID": {
                         "type": "string",
+                        "example": "cea94172-fa83-47c8-8171-b6f151918ad0",
                         "description": "ID of the credential associated with the connection"
                     },
                     "qEngineObjectID": {
                         "type": "string",
+                        "example": "55e13286-fbd8-4a59-a10d-807937a97443",
                         "description": "Unique identifier for the data connection as specified by the Sense engine"
                     },
                     "qCredentialsName": {
                         "type": "string",
+                        "example": "CredentialName",
                         "description": "Name of the credential associated with the connection"
                     },
                     "qConnectStatement": {
                         "type": "string",
+                        "example": "CUSTOM CONNECT TO \\\"provider=QvOdbcConnectorPackage.exe;driver=snowflake;server=...\\\"",
                         "description": "Connection string for the data connection"
                     },
                     "qConnectionSecret": {
                         "type": "string",
+                        "example": "connection specific secret string",
                         "description": "String that contains connection level secret (or password). If this field presents in request, then existing connection secret will be updated to its value. If is an empty string, then eixsting connection secret will be cleared. If this field is missing, existing secret will not be updated."
                     },
                     "qSeparateCredentials": {
                         "type": "boolean",
+                        "example": true,
                         "description": "Indicates whether or not this is a credential-less connection"
                     }
                 }
+            },
+            "DcaasConnectionCreate": {
+                "type": "object",
+                "required": [
+                    "qName",
+                    "datasourceID",
+                    "connectionProperties"
+                ],
+                "properties": {
+                    "tags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "example": "tag",
+                            "description": "tag string (256 bytes or less)"
+                        },
+                        "example": "[\"tag1, \"tag2\"]",
+                        "description": "List of tags attached to the connection (allow max 31 tags)"
+                    },
+                    "qName": {
+                        "type": "string",
+                        "example": "MyConnection",
+                        "description": "Descriptive name of the data connection"
+                    },
+                    "space": {
+                        "type": "string",
+                        "example": "611bcebaeec1203d88211ac4",
+                        "description": "ID of the space in which the connection shall be created. Connection will be created in user's personal space if undefined"
+                    },
+                    "authUrlOnly": {
+                        "type": "boolean",
+                        "example": true,
+                        "description": "When set to true, only authentication URL will be returned (i.e. no connection will be created) if datasource supports OAuth, and other properties set in the request will ignored. This property will be ignored if the request is not OAuth or datasource doesn't support OAuth"
+                    },
+                    "datasourceID": {
+                        "type": "string",
+                        "example": "rest",
+                        "description": "ID of the datasource of the connection"
+                    },
+                    "connectionProperties": {
+                        "type": "object",
+                        "example": "{\"property1\": \"value1\", \"property2\": \"value2\", ...}",
+                        "description": "Connection properties required to create dataconnection for the given datasource, which is defined by the response of 'GET /v1/data-sources/:{datasourceId}/api-specs'"
+                    }
+                },
+                "description": "Schema used to create a connection using a list of connection properties for given datasource"
+            },
+            "DcaasConnectionCreateAuthResponse": {
+                "type": "object",
+                "required": [
+                    "authUrl"
+                ],
+                "properties": {
+                    "authUrl": {
+                        "type": "string",
+                        "example": "https://www.dropbox.com/oauth2/authorize?client_id=...",
+                        "description": "Authentication URL used to generate authentication code for datasources supporting OAuth"
+                    }
+                },
+                "description": "Authentication URL response for OAuth datasources (when authUrlOnly is set to true in request)"
             },
             "Meta": {
                 "type": "object",
@@ -46770,9 +47039,12 @@
                     "list",
                     "update",
                     "delete",
-                    "read"
+                    "read",
+                    "change_owner",
+                    "change_space"
                 ],
                 "type": "string",
+                "example": "list",
                 "description": "Access type allowed on associated data connection"
             },
             "ResponseErrors": {
@@ -46799,7 +47071,9 @@
                         ],
                         "properties": {
                             "href": {
-                                "type": "string"
+                                "type": "string",
+                                "example": "https://mytenant.us.qlik-stage.com/...",
+                                "description": "URL pointing to the next page of resources"
                             }
                         },
                         "description": "URL link to next page of requested resources (available to paged request only)"
@@ -46811,7 +47085,9 @@
                         ],
                         "properties": {
                             "href": {
-                                "type": "string"
+                                "type": "string",
+                                "example": "https://mytenant.us.qlik-stage.com/...",
+                                "description": "URL pointing to the previous page of resources"
                             }
                         },
                         "description": "URL link to previous page of requested resources (available to paged request only)"
@@ -46823,7 +47099,9 @@
                         ],
                         "properties": {
                             "href": {
-                                "type": "string"
+                                "type": "string",
+                                "example": "https://mytenant.us.qlik-stage.com/.../0e445014-a564-496a-9a8d-28baadcc3ef9",
+                                "description": "URL pointing to the resource"
                             }
                         },
                         "description": "Link to cirrent query"
@@ -48076,6 +48354,303 @@
                 },
                 "description": "An array of user-supplied tags"
             },
+            "ConnectorNodesInfo": {
+                "type": "object",
+                "required": [
+                    "url",
+                    "contractType",
+                    "providerName",
+                    "dataSourcesUpdated",
+                    "state"
+                ],
+                "properties": {
+                    "url": {
+                        "type": "string",
+                        "example": "localhost:50060",
+                        "description": "URL of connector node"
+                    },
+                    "state": {
+                        "type": "string",
+                        "example": "READY",
+                        "description": "State of the connector node"
+                    },
+                    "contractType": {
+                        "type": "number",
+                        "example": 2,
+                        "description": "Contract type used to communicate with the connector (between 0 and 3)"
+                    },
+                    "providerName": {
+                        "type": "string",
+                        "example": "Qlik® REST Connector",
+                        "description": "Connector provider name"
+                    },
+                    "cachedDataSources": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "example": [
+                            "rest"
+                        ],
+                        "description": "List of datasource Ids provided by the provider"
+                    },
+                    "dataSourcesUpdated": {
+                        "type": "boolean",
+                        "example": "true",
+                        "description": "Indicates if the datasources is up to date"
+                    }
+                },
+                "description": "Datasource metadata"
+            },
+            "DataSourceNew": {
+                "type": "object",
+                "required": [
+                    "dataSourceId",
+                    "name",
+                    "provider",
+                    "providerName"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "Qlik® REST Connector",
+                        "description": "Datasource name"
+                    },
+                    "uiInfo": {
+                        "$ref": "#/components/schemas/UiInfo"
+                    },
+                    "provider": {
+                        "type": "string",
+                        "example": "QvRestConnector.exe",
+                        "description": "Connector provider"
+                    },
+                    "capabilities": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "example": "datasource-specific-capabity"
+                        },
+                        "description": "List of capabilities supported by the datasource"
+                    },
+                    "dataSourceId": {
+                        "type": "string",
+                        "example": "rest",
+                        "description": "Unique identifier of datasource"
+                    },
+                    "providerName": {
+                        "type": "string",
+                        "example": "Qlik® REST Connector",
+                        "description": "Provider name"
+                    },
+                    "qriDefinition": {
+                        "$ref": "#/components/schemas/QriDefinition"
+                    },
+                    "dataLoadUrlOverride": {
+                        "type": "string",
+                        "example": "ml-endpoints:50055",
+                        "description": "Override value of dataload URL (could be null)"
+                    },
+                    "dataSourcePropertyName": {
+                        "type": "string",
+                        "example": "sourceType",
+                        "description": "Datasource property name (could be null)"
+                    }
+                },
+                "description": "Datasource metadata"
+            },
+            "DataSourcesResponseNew": {
+                "type": "object",
+                "required": [
+                    "dataSources",
+                    "lastUpdated"
+                ],
+                "properties": {
+                    "dataSources": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/DataSourceNew"
+                        },
+                        "description": "List of datasources metadata object"
+                    },
+                    "lastUpdated": {
+                        "type": "string",
+                        "example": "2023-11-03T15:45:14.195Z",
+                        "description": "Time stamp of last updated"
+                    },
+                    "connectorNodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ConnectorNodesInfo"
+                        },
+                        "description": "List of connector nodes (only present when query parameter 'detail' is set to true)"
+                    }
+                }
+            },
+            "PublicApiError": {
+                "type": "object",
+                "required": [
+                    "code",
+                    "title",
+                    "details"
+                ],
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "example": "DCAAS-2001",
+                        "description": "A service specific error code string"
+                    },
+                    "meta": {
+                        "type": "object",
+                        "description": "Additional metadata associated with the error"
+                    },
+                    "title": {
+                        "type": "string",
+                        "example": "Data source is not enabled.",
+                        "description": "Summary of the error"
+                    },
+                    "detail": {
+                        "type": "string",
+                        "example": "This resource requires app read privileges.",
+                        "description": "Concrete detail about the error"
+                    }
+                }
+            },
+            "QriDefinition": {
+                "type": "object",
+                "required": [
+                    "qriPrefix",
+                    "connectionPart",
+                    "pathPart"
+                ],
+                "properties": {
+                    "itemPart": {
+                        "allOf": [
+                            {
+                                "description": "Item part of QRI"
+                            },
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "prefix": {
+                                        "type": "string",
+                                        "example": "#",
+                                        "description": "Prefix of the template"
+                                    }
+                                }
+                            },
+                            {
+                                "$ref": "#/components/schemas/QriTemplate"
+                            }
+                        ]
+                    },
+                    "pathPart": {
+                        "allOf": [
+                            {
+                                "description": "Path part of QRI"
+                            },
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "prefix": {
+                                        "type": "string",
+                                        "example": "#",
+                                        "description": "Prefix of the template"
+                                    }
+                                }
+                            },
+                            {
+                                "$ref": "#/components/schemas/QriTemplate"
+                            }
+                        ]
+                    },
+                    "qriPrefix": {
+                        "type": "string",
+                        "example": "qri:db:sap-sql://",
+                        "description": "Qri prefix"
+                    },
+                    "connectionPart": {
+                        "allOf": [
+                            {
+                                "description": "Connection part of Qri"
+                            },
+                            {
+                                "$ref": "#/components/schemas/QriTemplate"
+                            }
+                        ]
+                    }
+                },
+                "description": "Qri definition template"
+            },
+            "QriTemplate": {
+                "type": "object",
+                "required": [
+                    "template",
+                    "properties"
+                ],
+                "properties": {
+                    "template": {
+                        "type": "string",
+                        "example": "{schema}.{table}",
+                        "description": "Qri template"
+                    },
+                    "properties": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "example": "schema",
+                            "description": "List of string values in template"
+                        },
+                        "description": "List of properties used in template"
+                    }
+                },
+                "description": "Connection part of Qri template"
+            },
+            "UiInfo": {
+                "type": "object",
+                "properties": {
+                    "iframe": {
+                        "type": "boolean",
+                        "example": true,
+                        "description": "If support iframe"
+                    },
+                    "selectUrl": {
+                        "type": "string",
+                        "example": "/customdata/64/QvRestConnector/web/standalone/select-dialog.html",
+                        "description": "Select URL"
+                    },
+                    "connectUrl": {
+                        "type": "string",
+                        "example": "/customdata/64/QvRestConnector/web/standalone/connect-dialog.html",
+                        "description": "Connect URL"
+                    },
+                    "iconRectUrl": {
+                        "type": "string",
+                        "example": "/customdata/64/QvRestConnector/web/Icons/rest.png",
+                        "description": "Icon URL"
+                    },
+                    "iconSquareUrl": {
+                        "type": "string",
+                        "example": "/customdata/64/QvRestConnector/web/Icons/rest-square.png",
+                        "description": "Square icon URL"
+                    },
+                    "credentialsUrl": {
+                        "type": "string",
+                        "example": "/customdata/64/QvRestConnector/web/standalone/credentials-dialog.html",
+                        "description": "Credentials URL"
+                    },
+                    "connectorMainUrl": {
+                        "type": "string",
+                        "example": "/customdata/64/QvRestConnector/web/connector-main-iframe.js",
+                        "description": "Connector main URL"
+                    },
+                    "loadModelSupport": {
+                        "type": "string",
+                        "example": "false",
+                        "description": "Indicate if the datasource supports load model"
+                    }
+                },
+                "description": "UI related metadata (only present when 'includeui' is set to true in query)"
+            },
             "DataStore": {
                 "type": "object",
                 "title": "Data Store",
@@ -48458,35 +49033,6 @@
                     "connectionProperties": {
                         "type": "object",
                         "description": "List of connection properties"
-                    }
-                }
-            },
-            "PublicApiError": {
-                "type": "object",
-                "required": [
-                    "code",
-                    "title",
-                    "details"
-                ],
-                "properties": {
-                    "code": {
-                        "type": "string",
-                        "example": "DCAAS-2001",
-                        "description": "A service specific error code string"
-                    },
-                    "meta": {
-                        "type": "object",
-                        "description": "Additional metadata associated with the error"
-                    },
-                    "title": {
-                        "type": "string",
-                        "example": "Data source is not enabled.",
-                        "description": "Summary of the error"
-                    },
-                    "detail": {
-                        "type": "string",
-                        "example": "This resource requires app read privileges.",
-                        "description": "Concrete detail about the error"
                     }
                 }
             },
@@ -61617,6 +62163,7 @@
                     "type": "boolean",
                     "example": false
                 },
+                "example": true,
                 "required": false,
                 "description": "Sort results will be returned in case insensitive order if set to true (Only used along with sort query)"
             },
@@ -61626,6 +62173,7 @@
                 "schema": {
                     "type": "string"
                 },
+                "example": "22379dc5-076e-4fec-ae20-5529a8a57dc2",
                 "required": false,
                 "description": "Credential ID"
             },
@@ -61635,6 +62183,7 @@
                 "schema": {
                     "type": "string"
                 },
+                "example": "data",
                 "required": false,
                 "description": "Provides an alternate name to be used for data[] element in GET response."
             },
@@ -61644,8 +62193,9 @@
                 "schema": {
                     "type": "boolean"
                 },
+                "example": false,
                 "required": false,
-                "description": "Returns extended list of properties when set to true."
+                "description": "Returns extended list of properties (e.g. encrypted credential string) when set to true."
             },
             "filter": {
                 "in": "query",
@@ -61661,9 +62211,9 @@
                 "in": "query",
                 "name": "includeQris",
                 "schema": {
-                    "type": "boolean",
-                    "example": true
+                    "type": "boolean"
                 },
+                "example": true,
                 "required": false,
                 "description": "Base Qri (encrypted) will be returned when the query is set to true, default is false"
             },
@@ -61677,16 +62227,17 @@
                     "maximum": 100,
                     "minimum": 1
                 },
+                "example": 30,
                 "required": false,
-                "description": "Number of resources to be returned"
+                "description": "Number of resources to be returned (between 1 and 100)"
             },
             "locale": {
                 "in": "query",
                 "name": "locale",
                 "schema": {
-                    "type": "string",
-                    "example": "en"
+                    "type": "string"
                 },
+                "example": "en",
                 "required": false,
                 "description": "ICU locale ID, used only when caseinsensitive is set to true, default to 'en' if undefined"
             },
@@ -61694,9 +62245,9 @@
                 "in": "query",
                 "name": "noCache",
                 "schema": {
-                    "type": "boolean",
-                    "example": false
+                    "type": "boolean"
                 },
+                "example": false,
                 "required": false,
                 "description": "datafiles connections will be returned from cache by default (if data-connections is configured to use cache), this query parameter is used disable this default behavior, e.g. return an update-to-date datafiles connection if the query is set to true"
             },
@@ -61704,9 +62255,9 @@
                 "in": "query",
                 "name": "noDatafiles",
                 "schema": {
-                    "type": "boolean",
-                    "example": false
+                    "type": "boolean"
                 },
+                "example": true,
                 "required": false,
                 "description": "Datafiles connections will not be returned if set to true"
             },
@@ -61714,11 +62265,11 @@
                 "in": "query",
                 "name": "ownedByMe",
                 "schema": {
-                    "type": "boolean",
-                    "example": true
+                    "type": "boolean"
                 },
+                "example": true,
                 "required": false,
-                "description": "Filtering on conneections, return connections owned by the caller if set to true (doesn't apply to datafiles connectionos)"
+                "description": "Filtering on connections, return connections owned by the caller if set to true (doesn't apply to datafiles connections)"
             },
             "owner": {
                 "in": "query",
@@ -61726,6 +62277,7 @@
                 "schema": {
                     "type": "string"
                 },
+                "example": "928e2a66-01ba-4678-aa32-e74c213896fa",
                 "required": false,
                 "description": "Filtering on datafile connections by owner (i.e. app) ID."
             },
@@ -61733,11 +62285,22 @@
                 "in": "query",
                 "name": "page",
                 "schema": {
-                    "type": "string",
-                    "example": "page=JwAAAAljcmVhdGVkAPfQ-sx0AQAAB19pZABfb93nZcM4SN1M0e8A"
+                    "type": "string"
                 },
+                "example": "page=JwAAAAljcmVhdGVkAPfQ-sx0AQAAB19pZABfb93nZcM4SN1M0e8A",
                 "required": false,
                 "description": "Pagination sursor string, which is generated auotmatically in previous pagination query."
+            },
+            "parseConnection": {
+                "in": "query",
+                "name": "parseConnection",
+                "schema": {
+                    "type": "boolean",
+                    "example": true
+                },
+                "example": true,
+                "required": false,
+                "description": "List of connection properties shall be returned when the query is set to true, default is false"
             },
             "personal": {
                 "in": "query",
@@ -61745,8 +62308,9 @@
                 "schema": {
                     "type": "boolean"
                 },
+                "example": false,
                 "required": false,
-                "description": "Filtering on connections, connections in personal space will be returned if set to true"
+                "description": "Filtering on personal connections, ignored if spaceId is defined in same request"
             },
             "qConnID": {
                 "in": "path",
@@ -61754,6 +62318,7 @@
                 "schema": {
                     "type": "string"
                 },
+                "example": "82ee7b44-0c4d-491b-bd38-82640c0430a5",
                 "required": true,
                 "description": "Connection ID"
             },
@@ -61761,9 +62326,9 @@
                 "in": "query",
                 "name": "sort",
                 "schema": {
-                    "type": "string",
-                    "example": "sort=+qName will be sorting by qName in ascending order"
+                    "type": "string"
                 },
+                "example": "+qName",
                 "required": false,
                 "description": "Name of field sort on for pagination, with prefix with + or - indicating ascending or descending order. When used for data-connections, sort field only applies to non-datafiles connections. Whatever sorting order is, datafiles connections will be returned after all regular connections being returned."
             },
@@ -61773,6 +62338,7 @@
                 "schema": {
                     "type": "string"
                 },
+                "example": "611bcebaeec1203d88211ac4",
                 "required": false,
                 "description": "Filtering on connections by space ID"
             },
@@ -61786,6 +62352,7 @@
                     ],
                     "type": "string"
                 },
+                "example": "connectionname",
                 "required": false,
                 "description": "Connection / credential ID defined in path become connection / credential name when this query parameter is set"
             },
@@ -61795,6 +62362,7 @@
                 "schema": {
                     "type": "string"
                 },
+                "example": "6K9xjsItDexffolu5vg1oWYkY8x7f-0G",
                 "required": false,
                 "description": "Filtering on userId. Requires admin role if specified userId doesn't match that is defined in JWT."
             },

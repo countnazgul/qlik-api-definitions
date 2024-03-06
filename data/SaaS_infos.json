@@ -79,6 +79,10 @@
         "title": "data-sets",
         "version": ""
     },
+    "Data Sources": {
+        "title": "data-sources",
+        "version": ""
+    },
     "Data Stores": {
         "title": "data-stores",
         "version": ""
