@@ -1003,7 +1003,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "9d8b963c-a8a6-4c35-a95e-cc8eaa012605",
+                "x-qlik-entity-revision": "7c7e780b-e62d-4617-ad7f-77506154a6d1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -19064,8 +19064,7 @@
                                     "file": {
                                         "type": "string",
                                         "format": "binary",
-                                        "description": "Extension archive.",
-                                        "x-qlik-customer-data": true
+                                        "description": "Extension archive."
                                     }
                                 }
                             }
@@ -19142,8 +19141,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Extension identifier or its qextFilename.",
-                        "x-qlik-customer-data": true
+                        "description": "Extension identifier or its qextFilename."
                     }
                 ],
                 "operationId": "getExtensionById",
@@ -19244,8 +19242,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Extension identifier or its qextFilename.",
-                        "x-qlik-customer-data": true
+                        "description": "Extension identifier or its qextFilename."
                     }
                 ],
                 "operationId": "updateExtensionById",
@@ -19261,8 +19258,7 @@
                                     "file": {
                                         "type": "string",
                                         "format": "binary",
-                                        "description": "Extension archive.",
-                                        "x-qlik-customer-data": true
+                                        "description": "Extension archive."
                                     }
                                 }
                             }
@@ -19330,8 +19326,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Extension identifier or its qextFilename.",
-                        "x-qlik-customer-data": true
+                        "description": "Extension identifier or its qextFilename."
                     }
                 ],
                 "operationId": "deleteExtensionById",
@@ -19356,8 +19351,7 @@
                 "summary": "Downloads the extension as an archive.",
                 "responses": {
                     "200": {
-                        "description": "OK. Extension exists. Returns the extension archive.",
-                        "x-qlik-customer-data": true
+                        "description": "OK. Extension exists. Returns the extension archive."
                     },
                     "403": {
                         "content": {
@@ -19398,8 +19392,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Extension identifier or its qextFilename.",
-                        "x-qlik-customer-data": true
+                        "description": "Extension identifier or its qextFilename."
                     }
                 ],
                 "operationId": "getExtensionArchive",
@@ -19465,8 +19458,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Path to the file archive for the specified extension archive. Folders separated with forward slashes.",
-                        "x-qlik-customer-data": true
+                        "description": "Path to the file archive for the specified extension archive. Folders separated with forward slashes."
                     },
                     {
                         "in": "path",
@@ -19475,8 +19467,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Extension identifier or its qextFilename.",
-                        "x-qlik-customer-data": true
+                        "description": "Extension identifier or its qextFilename."
                     }
                 ],
                 "operationId": "getFileFromExtensionArchive",
@@ -24847,7 +24838,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "9a98ce3c-a95d-43da-a63e-1044dbee2850",
+                "x-qlik-entity-revision": "edd6f551-b9fa-426b-9cae-d6ee1d46b734",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -24931,7 +24922,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d32d3a14-61dd-48a5-86c6-dd5d56c0d2ce",
+                "x-qlik-entity-revision": "f768069f-d79b-46f3-b79d-857dd949c42c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -28245,8 +28236,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Relative or full URL to redirect to after successful login.",
-                        "x-qlik-customer-data": true
+                        "description": "Relative or full URL to redirect to after successful login."
                     },
                     {
                         "in": "query",
@@ -28279,8 +28269,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "State parameter to roundtrip to client in final redirect.",
-                        "x-qlik-customer-data": true
+                        "description": "State parameter to roundtrip to client in final redirect."
                     },
                     {
                         "in": "query",
@@ -28289,8 +28278,7 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "The code challenge created by the client.",
-                        "x-qlik-customer-data": true
+                        "description": "The code challenge created by the client."
                     },
                     {
                         "in": "query",
@@ -28876,8 +28864,7 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "The case sensitive string used to search for a task by app ID.",
-                        "x-qlik-customer-data": false
+                        "description": "The case sensitive string used to search for a task by app ID."
                     },
                     {
                         "in": "query",
@@ -28890,8 +28877,7 @@
                             "minimum": 1
                         },
                         "required": false,
-                        "description": "The maximum number of resources to return for a request. The limit must be an integer between 1 and 100 (inclusive).",
-                        "x-qlik-customer-data": false
+                        "description": "The maximum number of resources to return for a request. The limit must be an integer between 1 and 100 (inclusive)."
                     },
                     {
                         "in": "query",
@@ -28900,8 +28886,7 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "The cursor to the next page of resources. Provide either the next or prev cursor, but not both.",
-                        "x-qlik-customer-data": false
+                        "description": "The cursor to the next page of resources. Provide either the next or prev cursor, but not both."
                     },
                     {
                         "in": "query",
@@ -28910,8 +28895,7 @@
                             "type": "boolean"
                         },
                         "required": false,
-                        "description": "The boolean value used to search for a task is partial or not",
-                        "x-qlik-customer-data": false
+                        "description": "The boolean value used to search for a task is partial or not"
                     },
                     {
                         "in": "query",
@@ -28920,8 +28904,7 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "The cursor to the previous page of resources. Provide either the next or prev cursor, but not both.",
-                        "x-qlik-customer-data": false
+                        "description": "The cursor to the previous page of resources. Provide either the next or prev cursor, but not both."
                     },
                     {
                         "in": "header",
@@ -28930,8 +28913,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "JWT containing tenant credentials.",
-                        "x-qlik-customer-data": false
+                        "description": "JWT containing tenant credentials."
                     }
                 ],
                 "x-qlik-visibility": "public",
@@ -29031,8 +29013,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "JWT containing tenant credentials.",
-                        "x-qlik-customer-data": false
+                        "description": "JWT containing tenant credentials."
                     }
                 ],
                 "requestBody": {
@@ -29155,8 +29136,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "The unique identifier of the task.",
-                        "x-qlik-customer-data": false
+                        "description": "The unique identifier of the task."
                     },
                     {
                         "in": "header",
@@ -29165,8 +29145,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "JWT containing tenant credentials.",
-                        "x-qlik-customer-data": false
+                        "description": "JWT containing tenant credentials."
                     }
                 ],
                 "x-qlik-visibility": "public",
@@ -29266,8 +29245,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "The unique identifier of the task.",
-                        "x-qlik-customer-data": false
+                        "description": "The unique identifier of the task."
                     },
                     {
                         "in": "header",
@@ -29276,8 +29254,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "JWT containing tenant credentials.",
-                        "x-qlik-customer-data": false
+                        "description": "JWT containing tenant credentials."
                     }
                 ],
                 "requestBody": {
@@ -29371,8 +29348,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "The unique identifier of the task.",
-                        "x-qlik-customer-data": false
+                        "description": "The unique identifier of the task."
                     },
                     {
                         "in": "header",
@@ -29381,8 +29357,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "JWT containing tenant credentials.",
-                        "x-qlik-customer-data": false
+                        "description": "JWT containing tenant credentials."
                     }
                 ],
                 "x-qlik-visibility": "public",
@@ -29464,8 +29439,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "The UUID formatted string used to search for an app's reload history entries. TenantAdmin users may omit this parameter to list all reload history in the tenant.",
-                        "x-qlik-customer-data": false
+                        "description": "The UUID formatted string used to search for an app's reload history entries. TenantAdmin users may omit this parameter to list all reload history in the tenant."
                     },
                     {
                         "in": "query",
@@ -29475,8 +29449,7 @@
                         },
                         "example": "(status eq \"FAILED\" or status eq \"EXCEEDED_LIMIT\") and partial eq \"false\" and type eq \"chronos\"\n",
                         "required": false,
-                        "description": "SCIM filter expression used to search for reloads.\nThe filter syntax is defined in RFC 7644 section 3.4.2.2\n\nSupported attributes:\n- status: see #schemas/Status\n- partial: see #schemas/Partial\n- type: see #schemas/Type\n\nSupported operators:\n- eq\n",
-                        "x-qlik-customer-data": false
+                        "description": "SCIM filter expression used to search for reloads.\nThe filter syntax is defined in RFC 7644 section 3.4.2.2\n\nSupported attributes:\n- status: see #schemas/Status\n- partial: see #schemas/Partial\n- type: see #schemas/Type\n\nSupported operators:\n- eq\n"
                     },
                     {
                         "in": "query",
@@ -29489,8 +29462,7 @@
                             "minimum": 1
                         },
                         "required": false,
-                        "description": "The maximum number of resources to return for a request. The limit must be an integer between 1 and 100 (inclusive).",
-                        "x-qlik-customer-data": false
+                        "description": "The maximum number of resources to return for a request. The limit must be an integer between 1 and 100 (inclusive)."
                     },
                     {
                         "in": "query",
@@ -29500,8 +29472,7 @@
                             "default": true
                         },
                         "required": false,
-                        "description": "The boolean value used to include the log field or not, default is included, set log=false to exclude the log field.",
-                        "x-qlik-customer-data": false
+                        "description": "The boolean value used to include the log field or not, default is included, set log=false to exclude the log field."
                     },
                     {
                         "in": "query",
@@ -29510,8 +29481,7 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "The cursor to the next page of resources. Provide either the next or prev cursor, but not both.",
-                        "x-qlik-customer-data": false
+                        "description": "The cursor to the next page of resources. Provide either the next or prev cursor, but not both."
                     },
                     {
                         "in": "query",
@@ -29520,8 +29490,7 @@
                             "type": "boolean"
                         },
                         "required": false,
-                        "description": "The boolean value used to search for a reload is partial or not.",
-                        "x-qlik-customer-data": false
+                        "description": "The boolean value used to search for a reload is partial or not."
                     },
                     {
                         "in": "query",
@@ -29530,8 +29499,7 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "The cursor to the previous page of resources. Provide either the next or prev cursor, but not both.",
-                        "x-qlik-customer-data": false
+                        "description": "The cursor to the previous page of resources. Provide either the next or prev cursor, but not both."
                     },
                     {
                         "in": "header",
@@ -29540,8 +29508,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "JWT containing tenant credentials.",
-                        "x-qlik-customer-data": false
+                        "description": "JWT containing tenant credentials."
                     }
                 ],
                 "x-qlik-stability": "stable",
@@ -29631,8 +29598,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "JWT containing tenant credentials.",
-                        "x-qlik-customer-data": false
+                        "description": "JWT containing tenant credentials."
                     }
                 ],
                 "requestBody": {
@@ -29735,8 +29701,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "The unique identifier of the reload.",
-                        "x-qlik-customer-data": false
+                        "description": "The unique identifier of the reload."
                     },
                     {
                         "in": "header",
@@ -29745,8 +29710,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "JWT containing tenant credentials.",
-                        "x-qlik-customer-data": false
+                        "description": "JWT containing tenant credentials."
                     }
                 ],
                 "description": "Finds and returns a reload record",
@@ -29845,8 +29809,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "The unique identifier of the reload.",
-                        "x-qlik-customer-data": false
+                        "description": "The unique identifier of the reload."
                     },
                     {
                         "in": "header",
@@ -29855,8 +29818,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "JWT containing tenant credentials.",
-                        "x-qlik-customer-data": false
+                        "description": "JWT containing tenant credentials."
                     }
                 ],
                 "description": "Cancels a reload that is in progress or has been queued",
@@ -30656,7 +30618,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "605b6e34-98b7-4931-b2e8-a62a54e817a0",
+                "x-qlik-entity-revision": "7ccbae7b-2bfc-4938-a745-3116742c70fd",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -34331,8 +34293,7 @@
                                     "file": {
                                         "type": "string",
                                         "format": "binary",
-                                        "description": "Theme archive.",
-                                        "x-qlik-customer-data": true
+                                        "description": "Theme archive."
                                     }
                                 }
                             }
@@ -34409,8 +34370,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Theme identifier or its qextFilename",
-                        "x-qlik-customer-data": true
+                        "description": "Theme identifier or its qextFilename"
                     }
                 ],
                 "operationId": "getThemeById",
@@ -34511,8 +34471,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Theme identifier or its qextFilename.",
-                        "x-qlik-customer-data": true
+                        "description": "Theme identifier or its qextFilename."
                     }
                 ],
                 "operationId": "updateThemeById",
@@ -34528,8 +34487,7 @@
                                     "file": {
                                         "type": "string",
                                         "format": "binary",
-                                        "description": "Theme archive.",
-                                        "x-qlik-customer-data": true
+                                        "description": "Theme archive."
                                     }
                                 }
                             }
@@ -34597,8 +34555,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Theme identifier or its qextFilename.",
-                        "x-qlik-customer-data": true
+                        "description": "Theme identifier or its qextFilename."
                     }
                 ],
                 "operationId": "deleteThemeById",
@@ -34623,8 +34580,7 @@
                 "summary": "Downloads the theme as an archive.",
                 "responses": {
                     "200": {
-                        "description": "OK. Theme exists. Returns the theme archive.",
-                        "x-qlik-customer-data": true
+                        "description": "OK. Theme exists. Returns the theme archive."
                     },
                     "403": {
                         "content": {
@@ -34665,8 +34621,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Theme identifier or its qextFilename",
-                        "x-qlik-customer-data": true
+                        "description": "Theme identifier or its qextFilename"
                     }
                 ],
                 "operationId": "getThemeArchive",
@@ -34691,8 +34646,7 @@
                 "summary": "Downloads a file from the theme archive.",
                 "responses": {
                     "200": {
-                        "description": "OK. Theme exists and the file specified exists. Returns the specific file.",
-                        "x-qlik-customer-data": true
+                        "description": "OK. Theme exists and the file specified exists. Returns the specific file."
                     },
                     "403": {
                         "content": {
@@ -34733,8 +34687,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Path to the file archive for the specified theme archive. Folders separated with forward slashes.",
-                        "x-qlik-customer-data": true
+                        "description": "Path to the file archive for the specified theme archive. Folders separated with forward slashes."
                     },
                     {
                         "in": "path",
@@ -34743,8 +34696,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "Theme identifier or its qextFilename.",
-                        "x-qlik-customer-data": true
+                        "description": "Theme identifier or its qextFilename."
                     }
                 ],
                 "operationId": "getFileFromThemeArchive",
@@ -35247,10 +35199,8 @@
                             "format": "email"
                         },
                         "required": false,
-                        "x-qlik-pii": true,
                         "description": "The email to filter by. Deprecated. Use the new `filter` parameter to provide an advanced query filter.",
-                        "x-qlik-deprecated": true,
-                        "x-qlik-customer-data": true
+                        "x-qlik-deprecated": true
                     },
                     {
                         "in": "query",
@@ -35335,10 +35285,8 @@
                             "type": "string"
                         },
                         "required": false,
-                        "x-qlik-pii": true,
                         "description": "The subject to filter by. Deprecated. Use the new `filter` parameter to provide an advanced query filter.",
-                        "x-qlik-deprecated": true,
-                        "x-qlik-customer-data": true
+                        "x-qlik-deprecated": true
                     },
                     {
                         "in": "query",
@@ -38070,8 +38018,7 @@
                     },
                     "description": {
                         "type": "string",
-                        "description": "A description for the API key.",
-                        "x-qlik-customer-data": true
+                        "description": "A description for the API key."
                     },
                     "lastUpdated": {
                         "type": "string",
@@ -38163,8 +38110,7 @@
                     },
                     "value": {
                         "type": "string",
-                        "description": "The value to be used for this operation.",
-                        "x-qlik-customer-data": true
+                        "description": "The value to be used for this operation."
                     }
                 },
                 "description": "A JSON Patch document as defined in https://datatracker.ietf.org/doc/html/rfc6902."
@@ -38433,8 +38379,7 @@
                 "type": "object",
                 "properties": {
                     "title": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "analysis": {
                         "$ref": "#/components/schemas/Analysis"
@@ -38462,8 +38407,7 @@
                 "properties": {
                     "name": {
                         "type": "string",
-                        "description": "populated only for fields",
-                        "x-qlik-customer-data": true
+                        "description": "populated only for fields"
                     },
                     "isHidden": {
                         "type": "boolean",
@@ -38909,8 +38853,7 @@
                             "properties": {
                                 "name": {
                                     "type": "string",
-                                    "example": "a",
-                                    "x-qlik-customer-data": true
+                                    "example": "a"
                                 },
                                 "cardinal": {
                                     "$ref": "#/components/schemas/cmpint"
@@ -39052,8 +38995,7 @@
                             "properties": {
                                 "name": {
                                     "type": "string",
-                                    "example": "a",
-                                    "x-qlik-customer-data": true
+                                    "example": "a"
                                 },
                                 "byte_size": {
                                     "$ref": "#/components/schemas/cmpint"
@@ -39831,8 +39773,7 @@
                     },
                     "valueAsText": {
                         "type": "string",
-                        "example": "2001",
-                        "x-qlik-customer-data": true
+                        "example": "2001"
                     },
                     "valueAsNumber": {
                         "$ref": "#/components/schemas/Float64"
@@ -39872,8 +39813,7 @@
                         "type": "string",
                         "example": "Filter 1",
                         "readOnly": true,
-                        "description": "The filter name.",
-                        "x-qlik-customer-data": true
+                        "description": "The filter name."
                     },
                     "ownerId": {
                         "type": "string",
@@ -39903,8 +39843,7 @@
                         "type": "string",
                         "example": "This is the filter description",
                         "readOnly": true,
-                        "description": "The filter description.",
-                        "x-qlik-customer-data": true
+                        "description": "The filter description."
                     },
                     "filterVersion": {
                         "enum": [
@@ -39964,8 +39903,7 @@
                     "name": {
                         "type": "string",
                         "example": "Filter 1",
-                        "description": "The filter name.",
-                        "x-qlik-customer-data": true
+                        "description": "The filter name."
                     },
                     "appId": {
                         "type": "string",
@@ -39987,8 +39925,7 @@
                         "type": "string",
                         "example": "This is the filter description",
                         "x-nullable": true,
-                        "description": "The filter description.",
-                        "x-qlik-customer-data": true
+                        "description": "The filter description."
                     },
                     "filterVersion": {
                         "enum": [
@@ -40081,8 +40018,7 @@
                 "properties": {
                     "name": {
                         "type": "string",
-                        "example": "variable 1",
-                        "x-qlik-customer-data": true
+                        "example": "variable 1"
                     },
                     "value": {
                         "type": "string",
@@ -40164,8 +40100,7 @@
                     "href": {
                         "type": "string",
                         "format": "uri",
-                        "example": "http://example.com",
-                        "x-qlik-customer-data": false
+                        "example": "http://example.com"
                     }
                 }
             },
@@ -40188,6 +40123,16 @@
                         "type": "integer",
                         "format": "int64",
                         "description": "Maximum number of bytes used during reload of the app."
+                    },
+                    "fullReloadPeakMemoryBytes": {
+                        "type": "integer",
+                        "format": "int64",
+                        "description": "Maximum number of bytes used during full reload of the app."
+                    },
+                    "partialReloadPeakMemoryBytes": {
+                        "type": "integer",
+                        "format": "int64",
+                        "description": "Maximum number of bytes used during partial reload of the app."
                     }
                 }
             },
@@ -40427,7 +40372,6 @@
                     },
                     "owner": {
                         "type": "string",
-                        "x-qlik-pii": true,
                         "description": "Deprecated. Use user api to fetch user metadata.",
                         "x-qlik-deprecated": true
                     },
@@ -40668,8 +40612,7 @@
                     },
                     "text": {
                         "type": "string",
-                        "description": "Matching token or phrase from query",
-                        "x-qlik-customer-data": true
+                        "description": "Matching token or phrase from query"
                     },
                     "type": {
                         "enum": [
@@ -40684,13 +40627,11 @@
                     },
                     "fieldName": {
                         "type": "string",
-                        "description": "Qlik sense application field selected for given token or phrase",
-                        "x-qlik-customer-data": true
+                        "description": "Qlik sense application field selected for given token or phrase"
                     },
                     "fieldValue": {
                         "type": "string",
-                        "description": "Filter value found from query",
-                        "x-qlik-customer-data": true
+                        "description": "Filter value found from query"
                     }
                 },
                 "description": "Contains break down of the asked question in the form of tokens with their classification."
@@ -40775,8 +40716,7 @@
                 "type": "object",
                 "properties": {
                     "name": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "overrides": {
                         "$ref": "#/components/schemas/FieldOverride"
@@ -40835,8 +40775,7 @@
                 "properties": {
                     "text": {
                         "type": "string",
-                        "description": "The NL query.",
-                        "x-qlik-customer-data": true
+                        "description": "The NL query."
                     }
                 }
             },
@@ -41688,9 +41627,7 @@
                         "description": "Id of the space related to the action performed on the eventContext."
                     },
                     "updates": {
-                        "x-qlik-pii": true,
-                        "description": "Might be present if the action is of type \"updated\" and should contain information about the changes made to the resource.",
-                        "x-qlik-customer-data": true
+                        "description": "Might be present if the action is of type \"updated\" and should contain information about the changes made to the resource."
                     },
                     "topLevelResourceId": {
                         "type": "string",
@@ -41708,9 +41645,7 @@
                         "items": {
                             "type": "object"
                         },
-                        "x-qlik-pii": true,
-                        "description": "List of archived events. The structure of the events depend on their type and version.",
-                        "x-qlik-customer-data": true
+                        "description": "List of archived events. The structure of the events depend on their type and version."
                     }
                 }
             },
@@ -41724,9 +41659,7 @@
                     },
                     "data": {
                         "type": "object",
-                        "x-qlik-pii": true,
-                        "description": "Additional information about the event's details. The structure depends on the type and version of the event.",
-                        "x-qlik-customer-data": true
+                        "description": "Additional information about the event's details. The structure depends on the type and version of the event."
                     },
                     "links": {
                         "$ref": "#/components/schemas/GetLinks"
@@ -41872,8 +41805,7 @@
                     "name": {
                         "type": "string",
                         "example": "auto conn",
-                        "description": "The name of an automation connection.",
-                        "x-qlik-customer-data": true
+                        "description": "The name of an automation connection."
                     },
                     "ownerId": {
                         "type": "string",
@@ -41940,12 +41872,10 @@
                     },
                     "workspace": {
                         "type": "object",
-                        "description": "The workspace generated by the Qlik Application Automations editor.",
-                        "x-qlik-customer-data": true
+                        "description": "The workspace generated by the Qlik Application Automations editor."
                     },
                     "description": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     }
                 }
             },
@@ -42016,8 +41946,7 @@
                     },
                     "workspace": {
                         "type": "object",
-                        "description": "The workspace generated by the Qlik Application Automations editor.",
-                        "x-qlik-customer-data": true
+                        "description": "The workspace generated by the Qlik Application Automations editor."
                     },
                     "snippetIds": {
                         "type": "array",
@@ -42028,12 +41957,10 @@
                             "e0e720d0-4947-11ec-a1d2-9559fa35801d"
                         ],
                         "readOnly": true,
-                        "description": "A list of snippets used inside the workspace.",
-                        "x-qlik-customer-data": true
+                        "description": "A list of snippets used inside the workspace."
                     },
                     "description": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "endpointIds": {
                         "type": "array",
@@ -42045,8 +41972,7 @@
                             "53a6fb70-b28f-11eb-b601-b545a40867e0"
                         ],
                         "readOnly": true,
-                        "description": "A list of endpoints used inside the workspace.",
-                        "x-qlik-customer-data": true
+                        "description": "A list of endpoints used inside the workspace."
                     },
                     "connectorIds": {
                         "type": "array",
@@ -42058,8 +41984,7 @@
                             "0d86ee8a-27c0-11ea-921c-022e6b5ea1e2"
                         ],
                         "readOnly": true,
-                        "description": "A list of connectors used inside the workspace.",
-                        "x-qlik-customer-data": true
+                        "description": "A list of connectors used inside the workspace."
                     },
                     "lastRunStatus": {
                         "enum": [
@@ -42080,8 +42005,7 @@
                     "executionToken": {
                         "type": "string",
                         "example": "aZXuEogT9X3le0k0WXMBnzuYKq4xRlkDnurjs8NVhEAAW1BYx8C1PpIl3ielgRb1",
-                        "readOnly": true,
-                        "x-qlik-customer-data": true
+                        "readOnly": true
                     }
                 }
             },
@@ -42159,8 +42083,7 @@
                         "readOnly": true
                     },
                     "description": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "lastRunStatus": {
                         "enum": [
@@ -42216,8 +42139,7 @@
                     },
                     "inputs": {
                         "type": "object",
-                        "x-qlik-stability": "private",
-                        "x-qlik-customer-data": true
+                        "x-qlik-stability": "private"
                     },
                     "context": {
                         "enum": [
@@ -42246,8 +42168,7 @@
                     },
                     "inputs": {
                         "type": "object",
-                        "x-qlik-stability": "private",
-                        "x-qlik-customer-data": true
+                        "x-qlik-stability": "private"
                     },
                     "status": {
                         "enum": [
@@ -42389,8 +42310,7 @@
                     },
                     "expectedInputs": {
                         "type": "object",
-                        "x-qlik-stability": "private",
-                        "x-qlik-customer-data": true
+                        "x-qlik-stability": "private"
                     },
                     "scheduledStartTime": {
                         "type": "string",
@@ -42762,8 +42682,7 @@
                         "readOnly": true
                     },
                     "name": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "files": {
                         "type": "array",
@@ -42799,8 +42718,7 @@
                         "description": "ID of a user that last updated the brand."
                     },
                     "description": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     }
                 },
                 "description": "A brand is a collection of assets for applying custom branding. Only a single brand can be active in a tenant."
@@ -43109,8 +43027,7 @@
                     },
                     "name": {
                         "type": "string",
-                        "minLength": 1,
-                        "x-qlik-customer-data": true
+                        "minLength": 1
                     },
                     "type": {
                         "enum": [
@@ -43152,8 +43069,7 @@
                         "description": "The ID of the user who last updated the collection. This property is only populated if the JWT contains a userId."
                     },
                     "description": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     }
                 },
                 "description": "A collection."
@@ -43303,8 +43219,7 @@
                         "items": {
                             "$ref": "#/components/schemas/itemTagResponseBody"
                         },
-                        "description": "An array of tags that the item is part of.",
-                        "x-qlik-customer-data": true
+                        "description": "An array of tags that the item is part of."
                     },
                     "actions": {
                         "type": "array",
@@ -43375,8 +43290,7 @@
                     },
                     "name": {
                         "type": "string",
-                        "minLength": 1,
-                        "x-qlik-customer-data": true
+                        "minLength": 1
                     },
                     "links": {
                         "$ref": "#/components/schemas/itemLinksResponseBody"
@@ -43426,8 +43340,7 @@
                         "description": "The case-sensitive string used to search for an item by resourceId. If resourceId is provided, then resourceType must be provided. Provide either the resourceId or resourceLink, but not both."
                     },
                     "description": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "isFavorited": {
                         "type": "boolean",
@@ -43471,9 +43384,7 @@
                     },
                     "resourceAttributes": {
                         "type": "object",
-                        "x-qlik-pii": true,
-                        "additionalProperties": true,
-                        "x-qlik-customer-data": true
+                        "additionalProperties": true
                     },
                     "resourceReloadStatus": {
                         "type": "string",
@@ -43486,8 +43397,7 @@
                     },
                     "resourceCustomAttributes": {
                         "type": "object",
-                        "additionalProperties": true,
-                        "x-qlik-customer-data": true
+                        "additionalProperties": true
                     }
                 },
                 "description": "An item."
@@ -43554,8 +43464,7 @@
                     },
                     "name": {
                         "type": "string",
-                        "description": "The name of the tag/collection.",
-                        "x-qlik-customer-data": true
+                        "description": "The name of the tag/collection."
                     }
                 },
                 "description": "Holds basic information about a tag or collection."
@@ -44785,8 +44694,7 @@
                     "name": {
                         "type": "string",
                         "maxLength": 512,
-                        "description": "The name for this entry.",
-                        "x-qlik-customer-data": true
+                        "description": "The name for this entry."
                     },
                     "imgSrc": {
                         "type": "boolean",
@@ -44795,8 +44703,7 @@
                     "origin": {
                         "type": "string",
                         "maxLength": 256,
-                        "description": "The origin that the CSP directives should be applied to.",
-                        "x-qlik-customer-data": true
+                        "description": "The origin that the CSP directives should be applied to."
                     },
                     "fontSrc": {
                         "type": "boolean",
@@ -44847,8 +44754,7 @@
                     "description": {
                         "type": "string",
                         "maxLength": 1024,
-                        "description": "The reason for adding this origin to the Content Security Policy.",
-                        "x-qlik-customer-data": true
+                        "description": "The reason for adding this origin to the Content Security Policy."
                     },
                     "modifiedDate": {
                         "type": "string",
@@ -44896,8 +44802,7 @@
                 "properties": {
                     "Content-Security-Policy": {
                         "type": "string",
-                        "description": "The compiled CSP header.",
-                        "x-qlik-customer-data": true
+                        "description": "The compiled CSP header."
                     }
                 }
             },
@@ -46161,14 +46066,12 @@
                     "name": {
                         "type": "string",
                         "maxLength": 255,
-                        "minLength": 0,
-                        "x-qlik-customer-data": true
+                        "minLength": 0
                     },
                     "tags": {
                         "type": "array",
                         "items": {
-                            "type": "string",
-                            "x-qlik-customer-data": true
+                            "type": "string"
                         },
                         "uniqueItems": true
                     },
@@ -46217,8 +46120,7 @@
                     "description": {
                         "type": "string",
                         "maxLength": 1024,
-                        "minLength": 0,
-                        "x-qlik-customer-data": true
+                        "minLength": 0
                     },
                     "dataStoreInfo": {
                         "$ref": "#/components/schemas/DataStoreInfo"
@@ -46226,8 +46128,7 @@
                     "technicalName": {
                         "type": "string",
                         "maxLength": 255,
-                        "minLength": 1,
-                        "x-qlik-customer-data": true
+                        "minLength": 1
                     },
                     "lastModifiedBy": {
                         "type": "string",
@@ -46243,8 +46144,7 @@
                     "technicalDescription": {
                         "type": "string",
                         "maxLength": 1024,
-                        "minLength": 0,
-                        "x-qlik-customer-data": true
+                        "minLength": 0
                     }
                 }
             },
@@ -47650,22 +47550,19 @@
                     "name": {
                         "type": "string",
                         "maxLength": 255,
-                        "minLength": 1,
-                        "x-qlik-customer-data": true
+                        "minLength": 1
                     },
                     "tags": {
                         "type": "array",
                         "items": {
                             "type": "string",
-                            "description": "An array of system tags",
-                            "x-qlik-customer-data": true
+                            "description": "An array of system tags"
                         },
                         "description": "An array of system tags",
                         "uniqueItems": true
                     },
                     "alias": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "index": {
                         "type": "integer",
@@ -47705,8 +47602,7 @@
                         }
                     },
                     "description": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "ordinalPositionInKey": {
                         "type": "integer",
@@ -47738,14 +47634,12 @@
                     "name": {
                         "type": "string",
                         "maxLength": 255,
-                        "minLength": 0,
-                        "x-qlik-customer-data": true
+                        "minLength": 0
                     },
                     "tags": {
                         "type": "array",
                         "items": {
-                            "type": "string",
-                            "x-qlik-customer-data": true
+                            "type": "string"
                         },
                         "uniqueItems": true
                     },
@@ -47797,8 +47691,7 @@
                     "description": {
                         "type": "string",
                         "maxLength": 1024,
-                        "minLength": 0,
-                        "x-qlik-customer-data": true
+                        "minLength": 0
                     },
                     "operational": {
                         "$ref": "#/components/schemas/Operational"
@@ -47809,8 +47702,7 @@
                     "technicalName": {
                         "type": "string",
                         "maxLength": 255,
-                        "minLength": 1,
-                        "x-qlik-customer-data": true
+                        "minLength": 1
                     },
                     "lastModifiedBy": {
                         "type": "string",
@@ -47833,8 +47725,7 @@
                     "technicalDescription": {
                         "type": "string",
                         "maxLength": 1024,
-                        "minLength": 0,
-                        "x-qlik-customer-data": true
+                        "minLength": 0
                     }
                 }
             },
@@ -47902,14 +47793,12 @@
                 "title": "Field Profile",
                 "properties": {
                     "name": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "tags": {
                         "type": "array",
                         "items": {
-                            "type": "string",
-                            "x-qlik-customer-data": true
+                            "type": "string"
                         }
                     },
                     "index": {
@@ -47962,8 +47851,7 @@
                         }
                     },
                     "technicalName": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "classification": {
                         "$ref": "#/components/schemas/Classification"
@@ -48220,8 +48108,7 @@
                         }
                     },
                     "schemaName": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "loadOptions": {
                         "type": "object",
@@ -48246,8 +48133,7 @@
                 "type": "object",
                 "properties": {
                     "tableName": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "selectionScript": {
                         "type": "string"
@@ -48266,8 +48152,7 @@
                 "properties": {
                     "name": {
                         "type": "string",
-                        "readOnly": true,
-                        "x-qlik-customer-data": true
+                        "readOnly": true
                     },
                     "sizeInBytes": {
                         "type": "integer",
@@ -48305,8 +48190,7 @@
                 "properties": {
                     "name": {
                         "type": "string",
-                        "readOnly": true,
-                        "x-qlik-customer-data": true
+                        "readOnly": true
                     },
                     "records": {
                         "type": "array",
@@ -48318,8 +48202,7 @@
                     "fieldNames": {
                         "type": "array",
                         "items": {
-                            "type": "string",
-                            "x-qlik-customer-data": true
+                            "type": "string"
                         },
                         "readOnly": true
                     }
@@ -48329,8 +48212,7 @@
                 "type": "object",
                 "properties": {
                     "tag": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "score": {
                         "type": "number",
@@ -48348,8 +48230,7 @@
                     "name": {
                         "type": "string",
                         "maxLength": 128,
-                        "minLength": 1,
-                        "x-qlik-customer-data": true
+                        "minLength": 1
                     }
                 },
                 "description": "An array of user-supplied tags"
@@ -48672,14 +48553,12 @@
                     "name": {
                         "type": "string",
                         "maxLength": 255,
-                        "minLength": 0,
-                        "x-qlik-customer-data": true
+                        "minLength": 0
                     },
                     "tags": {
                         "type": "array",
                         "items": {
-                            "type": "string",
-                            "x-qlik-customer-data": true
+                            "type": "string"
                         },
                         "uniqueItems": true
                     },
@@ -48727,14 +48606,12 @@
                     "description": {
                         "type": "string",
                         "maxLength": 1024,
-                        "minLength": 0,
-                        "x-qlik-customer-data": true
+                        "minLength": 0
                     },
                     "technicalName": {
                         "type": "string",
                         "maxLength": 255,
-                        "minLength": 1,
-                        "x-qlik-customer-data": true
+                        "minLength": 1
                     },
                     "lastModifiedBy": {
                         "type": "string",
@@ -48750,8 +48627,7 @@
                     "technicalDescription": {
                         "type": "string",
                         "maxLength": 1024,
-                        "minLength": 0,
-                        "x-qlik-customer-data": true
+                        "minLength": 0
                     }
                 }
             },
@@ -49061,8 +48937,7 @@
                         "type": "string"
                     },
                     "name": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "type": {
                         "$ref": "#/components/schemas/DataTaskType"
@@ -49074,8 +48949,7 @@
                         "type": "string"
                     },
                     "description": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     }
                 }
             },
@@ -49111,8 +48985,7 @@
                         "type": "string"
                     },
                     "name": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "ownerId": {
                         "type": "string"
@@ -49121,8 +48994,7 @@
                         "type": "string"
                     },
                     "description": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     }
                 }
             },
@@ -49191,7 +49063,6 @@
                 "properties": {
                     "arn": {
                         "type": "string",
-                        "x-qlik-pii": true,
                         "description": "The provider resource notation for the key."
                     },
                     "name": {
@@ -49236,7 +49107,6 @@
                             "properties": {
                                 "arn": {
                                     "type": "string",
-                                    "x-qlik-pii": true,
                                     "description": "Replica key keeps list of backup keys from the supported qcs secondary region."
                                 },
                                 "region": {
@@ -49460,12 +49330,10 @@
                     },
                     "migratingTo": {
                         "type": "string",
-                        "x-qlik-pii": true,
                         "description": "The new key ARN that keys should be migrated to."
                     },
                     "migratingFrom": {
                         "type": "string",
-                        "x-qlik-pii": true,
                         "description": "The key ARN being migrated from (in case of QlikVault, could be a short name only)."
                     },
                     "migratingToPrefix": {
@@ -49605,13 +49473,11 @@
                     },
                     "name": {
                         "type": "string",
-                        "description": "Name of the bundle.",
-                        "x-qlik-customer-data": true
+                        "description": "Name of the bundle."
                     },
                     "description": {
                         "type": "string",
-                        "description": "Description of the bundle.",
-                        "x-qlik-customer-data": true
+                        "description": "Description of the bundle."
                     }
                 },
                 "description": "Object containing meta data regarding the bundle the extension belongs to. If it does not belong to a bundle, this object is not defined."
@@ -49625,26 +49491,22 @@
                     },
                     "file": {
                         "type": "object",
-                        "description": "The file that was uploaded with the extension.",
-                        "x-qlik-customer-data": true
+                        "description": "The file that was uploaded with the extension."
                     },
                     "icon": {
                         "type": "string",
-                        "description": "Icon to show in the client.",
-                        "x-qlik-customer-data": true
+                        "description": "Icon to show in the client."
                     },
                     "name": {
                         "type": "string",
-                        "description": "The display name of this extension.",
-                        "x-qlik-customer-data": true
+                        "description": "The display name of this extension."
                     },
                     "tags": {
                         "type": "array",
                         "items": {
                             "type": "string"
                         },
-                        "description": "List of tags.",
-                        "x-qlik-customer-data": true
+                        "description": "List of tags."
                     },
                     "type": {
                         "type": "string",
@@ -49652,9 +49514,7 @@
                     },
                     "author": {
                         "type": "string",
-                        "x-qlik-pii": true,
-                        "description": "Author of the extension.",
-                        "x-qlik-customer-data": true
+                        "description": "Author of the extension."
                     },
                     "bundle": {
                         "$ref": "#/components/schemas/bundleMeta"
@@ -49669,18 +49529,15 @@
                     },
                     "license": {
                         "type": "string",
-                        "description": "Under which license this extension is published.",
-                        "x-qlik-customer-data": true
+                        "description": "Under which license this extension is published."
                     },
                     "preview": {
                         "type": "string",
-                        "description": "Path to an image that enables users to preview the extension.",
-                        "x-qlik-customer-data": true
+                        "description": "Path to an image that enables users to preview the extension."
                     },
                     "version": {
                         "type": "string",
-                        "description": "Version of the extension.",
-                        "x-qlik-customer-data": true
+                        "description": "Version of the extension."
                     },
                     "checksum": {
                         "type": "string",
@@ -49688,23 +49545,19 @@
                     },
                     "homepage": {
                         "type": "string",
-                        "description": "Home page of the extension.",
-                        "x-qlik-customer-data": true
+                        "description": "Home page of the extension."
                     },
                     "keywords": {
                         "type": "string",
-                        "description": "Keywords for the extension.",
-                        "x-qlik-customer-data": true
+                        "description": "Keywords for the extension."
                     },
                     "loadpath": {
                         "type": "string",
-                        "description": "Relative path to the extension's entry file, defaults to `filename` from the qext file.",
-                        "x-qlik-customer-data": true
+                        "description": "Relative path to the extension's entry file, defaults to `filename` from the qext file."
                     },
                     "supplier": {
                         "type": "string",
-                        "description": "Supplier of the extension.",
-                        "x-qlik-customer-data": true
+                        "description": "Supplier of the extension."
                     },
                     "tenantId": {
                         "type": "string",
@@ -49731,28 +49584,23 @@
                     },
                     "repository": {
                         "type": "string",
-                        "description": "Link to the extension source code.",
-                        "x-qlik-customer-data": true
+                        "description": "Link to the extension source code."
                     },
                     "description": {
                         "type": "string",
-                        "description": "Description of the extension.",
-                        "x-qlik-customer-data": true
+                        "description": "Description of the extension."
                     },
                     "qextVersion": {
                         "type": "string",
-                        "description": "The version from the qext file that was uploaded with this extension.",
-                        "x-qlik-customer-data": true
+                        "description": "The version from the qext file that was uploaded with this extension."
                     },
                     "dependencies": {
                         "type": "object",
-                        "description": "Map of dependencies describing version of the component it requires.",
-                        "x-qlik-customer-data": true
+                        "description": "Map of dependencies describing version of the component it requires."
                     },
                     "qextFilename": {
                         "type": "string",
-                        "description": "The name of the qext file that was uploaded with this extension.",
-                        "x-qlik-customer-data": true
+                        "description": "The name of the qext file that was uploaded with this extension."
                     }
                 },
                 "description": "The extension model."
@@ -49787,8 +49635,7 @@
                         "type": "string"
                     },
                     "typeName": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "attributes": {
                         "$ref": "#/components/schemas/atlanEntityAttributes"
@@ -49805,30 +49652,25 @@
                         "type": "string"
                     },
                     "name": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "usage": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "examples": {
                         "type": "array",
                         "items": {
                             "type": "string"
-                        },
-                        "x-qlik-customer-data": true
+                        }
                     },
                     "relations": {
                         "$ref": "#/components/schemas/atlanResourceLink"
                     },
                     "displayText": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "abbreviation": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "relationGuid": {
                         "type": "string"
@@ -49837,8 +49679,7 @@
                         "type": "string"
                     },
                     "userDescription": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     }
                 }
             },
@@ -49864,12 +49705,10 @@
                         "type": "string"
                     },
                     "typeName": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "displayText": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "entityStatus": {
                         "type": "string"
@@ -49909,12 +49748,10 @@
                 "type": "object",
                 "properties": {
                     "url": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "displayName": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     }
                 }
             },
@@ -49928,16 +49765,13 @@
                         "type": "string"
                     },
                     "expression": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "description": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "displayText": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "entityStatus": {
                         "type": "string"
@@ -49951,12 +49785,10 @@
                 "type": "object",
                 "properties": {
                     "description": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "displayText": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "categoryGuid": {
                         "type": "string"
@@ -49976,8 +49808,7 @@
                         "type": "string"
                     },
                     "name": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "terms": {
                         "type": "array",
@@ -49986,8 +49817,7 @@
                         }
                     },
                     "usage": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "language": {
                         "type": "string"
@@ -49999,16 +49829,13 @@
                         }
                     },
                     "qualifiedName": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "longDescription": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "shortDescription": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     }
                 }
             },
@@ -50028,16 +49855,13 @@
                         "type": "string"
                     },
                     "expression": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "description": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "displayText": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "relationGuid": {
                         "type": "string"
@@ -50083,8 +49907,7 @@
                         "example": "507f191e810c19729de860ea"
                     },
                     "name": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "parentId": {
                         "type": "string",
@@ -50134,8 +49957,7 @@
                         "example": "507f191e810c19729de860ea"
                     },
                     "description": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     }
                 }
             },
@@ -50149,8 +49971,7 @@
                     },
                     "name": {
                         "type": "string",
-                        "description": "The name of the category. May not be identical to another category belonging to the same parent.\n",
-                        "x-qlik-customer-data": true
+                        "description": "The name of the category. May not be identical to another category belonging to the same parent.\n"
                     },
                     "parentId": {
                         "type": "string",
@@ -50170,8 +49991,7 @@
                         "description": "This list contains the uuids of the stewards of the category."
                     },
                     "description": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     }
                 }
             },
@@ -50184,8 +50004,7 @@
                     "name": {
                         "type": "string",
                         "example": "Organization wide glossary",
-                        "description": "Name of the glossary",
-                        "x-qlik-customer-data": true
+                        "description": "Name of the glossary"
                     },
                     "tags": {
                         "type": "array",
@@ -50196,8 +50015,7 @@
                             "Red",
                             "Sales"
                         ],
-                        "description": "List of tags for glossary",
-                        "x-qlik-customer-data": true
+                        "description": "List of tags for glossary"
                     },
                     "spaceId": {
                         "type": "string",
@@ -50207,14 +50025,12 @@
                     },
                     "overview": {
                         "type": "string",
-                        "description": "Overview of the glossary content",
-                        "x-qlik-customer-data": true
+                        "description": "Overview of the glossary content"
                     },
                     "description": {
                         "type": "string",
                         "example": "This glossary contains definitions and concepts of business terms.",
-                        "description": "Description of the glossary",
-                        "x-qlik-customer-data": true
+                        "description": "Description of the glossary"
                     },
                     "termTemplate": {
                         "$ref": "#/components/schemas/termTemplate"
@@ -50229,8 +50045,7 @@
                 "properties": {
                     "name": {
                         "type": "string",
-                        "example": "Earnings Before Interest and Tax (EBIT)",
-                        "x-qlik-customer-data": true
+                        "example": "Earnings Before Interest and Tax (EBIT)"
                     },
                     "tags": {
                         "type": "array",
@@ -50240,8 +50055,7 @@
                         "example": [
                             "Finance",
                             "Accounting"
-                        ],
-                        "x-qlik-customer-data": true
+                        ]
                     },
                     "linksTo": {
                         "type": "array",
@@ -50279,18 +50093,15 @@
                         "description": "Category Ids that the term belongs to. NOTE! In case of import the string refers to the index of the category in the import document."
                     },
                     "description": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "abbreviation": {
                         "type": "string",
-                        "example": "EBIT",
-                        "x-qlik-customer-data": true
+                        "example": "EBIT"
                     },
                     "relatedInformation": {
                         "type": "string",
-                        "example": "In accounting and finance, earnings before interest and taxes (EBIT) is a measure of a firm's profit that includes all incomes and expenses (operating and non-operating) except interest expenses and income tax expenses.",
-                        "x-qlik-customer-data": true
+                        "example": "In accounting and finance, earnings before interest and taxes (EBIT) is a measure of a firm's profit that includes all incomes and expenses (operating and non-operating) except interest expenses and income tax expenses."
                     }
                 }
             },
@@ -50420,8 +50231,7 @@
                     },
                     "name": {
                         "type": "string",
-                        "description": "The name of the category. May not be identical to another category belonging to the same parent.\n",
-                        "x-qlik-customer-data": true
+                        "description": "The name of the category. May not be identical to another category belonging to the same parent.\n"
                     },
                     "parentId": {
                         "type": "string",
@@ -50429,8 +50239,7 @@
                         "example": "507f191e810c19729de860ea"
                     },
                     "description": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "stewardDetails": {
                         "type": "array",
@@ -50449,8 +50258,7 @@
                         "example": "507f191e810c19729de860ea"
                     },
                     "name": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "tags": {
                         "type": "array",
@@ -50460,8 +50268,7 @@
                         "example": [
                             "tag1",
                             "tag2"
-                        ],
-                        "x-qlik-customer-data": true
+                        ]
                     },
                     "terms": {
                         "type": "array",
@@ -50481,8 +50288,7 @@
                     },
                     "overview": {
                         "type": "string",
-                        "example": "glossary overview",
-                        "x-qlik-customer-data": true
+                        "example": "glossary overview"
                     },
                     "createdAt": {
                         "type": "string",
@@ -50516,8 +50322,7 @@
                         }
                     },
                     "description": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "termTemplate": {
                         "$ref": "#/components/schemas/termTemplate"
@@ -50534,8 +50339,7 @@
                     },
                     "name": {
                         "type": "string",
-                        "example": "name",
-                        "x-qlik-customer-data": true
+                        "example": "name"
                     },
                     "tags": {
                         "type": "array",
@@ -50545,8 +50349,7 @@
                         "example": [
                             "tag1",
                             "tag2"
-                        ],
-                        "x-qlik-customer-data": true
+                        ]
                     },
                     "owner": {
                         "type": "array",
@@ -50585,13 +50388,11 @@
                     },
                     "description": {
                         "type": "string",
-                        "example": "description",
-                        "x-qlik-customer-data": true
+                        "example": "description"
                     },
                     "abbreviation": {
                         "type": "string",
-                        "example": "abbr",
-                        "x-qlik-customer-data": true
+                        "example": "abbr"
                     },
                     "stewardDetails": {
                         "type": "array",
@@ -50644,8 +50445,7 @@
                     "name": {
                         "type": "string",
                         "example": "Organization wide glossary",
-                        "description": "Name of the glossary",
-                        "x-qlik-customer-data": true
+                        "description": "Name of the glossary"
                     },
                     "tags": {
                         "type": "array",
@@ -50656,8 +50456,7 @@
                             "Red",
                             "Sales"
                         ],
-                        "description": "List of tags associated with the glossary.",
-                        "x-qlik-customer-data": true
+                        "description": "List of tags associated with the glossary."
                     },
                     "ownerId": {
                         "type": "string",
@@ -50673,8 +50472,7 @@
                     },
                     "overview": {
                         "type": "string",
-                        "description": "Overview of the glossary contents",
-                        "x-qlik-customer-data": true
+                        "description": "Overview of the glossary contents"
                     },
                     "createdAt": {
                         "type": "string",
@@ -50707,8 +50505,7 @@
                     "description": {
                         "type": "string",
                         "example": "This glossary contains definitions and concepts of business terms.",
-                        "description": "Description of the glossary",
-                        "x-qlik-customer-data": true
+                        "description": "Description of the glossary"
                     },
                     "termTemplate": {
                         "$ref": "#/components/schemas/termTemplate"
@@ -50725,8 +50522,7 @@
                     },
                     "name": {
                         "type": "string",
-                        "description": "The name of the category. May not be identical to another category belonging to the same parent.\n",
-                        "x-qlik-customer-data": true
+                        "description": "The name of the category. May not be identical to another category belonging to the same parent.\n"
                     },
                     "parentId": {
                         "type": "string",
@@ -50742,8 +50538,7 @@
                         }
                     },
                     "description": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "stewardDetails": {
                         "type": "array",
@@ -50758,13 +50553,11 @@
                 "properties": {
                     "name": {
                         "type": "string",
-                        "example": "Joe Smith",
-                        "x-qlik-pii": true
+                        "example": "Joe Smith"
                     },
                     "email": {
                         "type": "string",
-                        "example": "joe.smith@qlik.com",
-                        "x-qlik-pii": true
+                        "example": "joe.smith@qlik.com"
                     },
                     "userId": {
                         "type": "string",
@@ -50783,8 +50576,7 @@
                     },
                     "name": {
                         "type": "string",
-                        "example": "name",
-                        "x-qlik-customer-data": true
+                        "example": "name"
                     },
                     "tags": {
                         "type": "array",
@@ -50794,8 +50586,7 @@
                         "example": [
                             "tag1",
                             "tag2"
-                        ],
-                        "x-qlik-customer-data": true
+                        ]
                     },
                     "owner": {
                         "type": "array",
@@ -50834,13 +50625,11 @@
                     },
                     "description": {
                         "type": "string",
-                        "example": "description",
-                        "x-qlik-customer-data": true
+                        "example": "description"
                     },
                     "abbreviation": {
                         "type": "string",
-                        "example": "abbr",
-                        "x-qlik-customer-data": true
+                        "example": "abbr"
                     },
                     "stewardDetails": {
                         "type": "array",
@@ -50900,8 +50689,7 @@
                                 "$ref": "#/components/schemas/AssignedRolesRefNames"
                             }
                         ],
-                        "description": "The value to be used for this operation.",
-                        "x-qlik-customer-data": true
+                        "description": "The value to be used for this operation."
                     }
                 },
                 "description": "A JSON Patch document as defined in http://tools.ietf.org/html/rfc6902."
@@ -50992,8 +50780,7 @@
                 "type": "object",
                 "properties": {
                     "name": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "tags": {
                         "type": "array",
@@ -51003,8 +50790,7 @@
                         "example": [
                             "tag1",
                             "tag2"
-                        ],
-                        "x-qlik-customer-data": true
+                        ]
                     },
                     "terms": {
                         "type": "array",
@@ -51027,8 +50813,7 @@
                         }
                     },
                     "description": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "termTemplate": {
                         "$ref": "#/components/schemas/termTemplate"
@@ -51047,12 +50832,10 @@
                 "type": "object",
                 "properties": {
                     "name": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "email": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "userId": {
                         "type": "string",
@@ -51086,8 +50869,7 @@
                     },
                     "name": {
                         "type": "string",
-                        "example": "Earnings Before Interest and Tax (EBIT)",
-                        "x-qlik-customer-data": true
+                        "example": "Earnings Before Interest and Tax (EBIT)"
                     },
                     "tags": {
                         "type": "array",
@@ -51097,8 +50879,7 @@
                         "example": [
                             "Finance",
                             "Accounting"
-                        ],
-                        "x-qlik-customer-data": true
+                        ]
                     },
                     "status": {
                         "$ref": "#/components/schemas/termStatus"
@@ -51172,18 +50953,15 @@
                         "example": "507f191e810c19729de860ea"
                     },
                     "description": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "abbreviation": {
                         "type": "string",
-                        "example": "EBIT",
-                        "x-qlik-customer-data": true
+                        "example": "EBIT"
                     },
                     "relatedInformation": {
                         "type": "string",
-                        "example": "In accounting and finance, earnings before interest and taxes (EBIT) is a measure of a firm's profit that includes all incomes and expenses (operating and non-operating) except interest expenses and income tax expenses.",
-                        "x-qlik-customer-data": true
+                        "example": "In accounting and finance, earnings before interest and taxes (EBIT) is a measure of a firm's profit that includes all incomes and expenses (operating and non-operating) except interest expenses and income tax expenses."
                     }
                 }
             },
@@ -51215,8 +50993,7 @@
                         "type": "string"
                     },
                     "subResourceName": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "subResourceType": {
                         "enum": [
@@ -51239,8 +51016,7 @@
                     },
                     "name": {
                         "type": "string",
-                        "example": "Sales App",
-                        "x-qlik-customer-data": true
+                        "example": "Sales App"
                     },
                     "type": {
                         "enum": [
@@ -51301,8 +51077,7 @@
                     },
                     "subResourceName": {
                         "type": "string",
-                        "example": "Sales YTD",
-                        "x-qlik-customer-data": true
+                        "example": "Sales YTD"
                     },
                     "subResourceType": {
                         "enum": [
@@ -51399,8 +51174,7 @@
                 "properties": {
                     "relatedInformation": {
                         "type": "string",
-                        "description": "Template text for new terms",
-                        "x-qlik-customer-data": true
+                        "description": "Template text for new terms"
                     }
                 }
             },
@@ -51523,8 +51297,7 @@
                         "maxLength": 256,
                         "minLength": 1,
                         "description": "The name of the group.",
-                        "x-qlik-filterable": true,
-                        "x-qlik-customer-data": true
+                        "x-qlik-filterable": true
                     },
                     "links": {
                         "type": "object",
@@ -51661,8 +51434,7 @@
                                 "$ref": "#/components/schemas/AssignedRolesRefNames"
                             }
                         ],
-                        "description": "The roles to assign to the group (limit of 100 roles per group).",
-                        "x-qlik-customer-data": true
+                        "description": "The roles to assign to the group (limit of 100 roles per group)."
                     }
                 },
                 "description": "A JSON Patch document."
@@ -51706,8 +51478,7 @@
                     "name": {
                         "type": "string",
                         "example": "Development",
-                        "description": "The name of the group (maximum length of 256 characters).",
-                        "x-qlik-customer-data": true
+                        "description": "The name of the group (maximum length of 256 characters)."
                     },
                     "status": {
                         "enum": [
@@ -52013,8 +51784,7 @@
                     },
                     "postLogoutRedirectUri": {
                         "type": "string",
-                        "description": "Direct the user on logout to a specific URI.",
-                        "x-qlik-customer-data": true
+                        "description": "Direct the user on logout to a specific URI."
                     }
                 }
             },
@@ -52026,8 +51796,7 @@
                 "properties": {
                     "name": {
                         "type": "string",
-                        "description": "Given name for this certificate.",
-                        "x-qlik-customer-data": true
+                        "description": "Given name for this certificate."
                     },
                     "signature": {
                         "type": "boolean",
@@ -52041,8 +51810,7 @@
                     },
                     "certificate": {
                         "type": "string",
-                        "description": "The X.509 certificate for validating signed SAML responses.",
-                        "x-qlik-customer-data": true
+                        "description": "The X.509 certificate for validating signed SAML responses."
                     }
                 }
             },
@@ -52213,13 +51981,11 @@
                                     "properties": {
                                         "kid": {
                                             "type": "string",
-                                            "description": "Key ID used to sign the JWTs.",
-                                            "x-qlik-customer-data": true
+                                            "description": "Key ID used to sign the JWTs."
                                         },
                                         "pem": {
                                             "type": "string",
-                                            "description": "Pem-encoded public key for verifying the JWTs.",
-                                            "x-qlik-customer-data": true
+                                            "description": "Pem-encoded public key for verifying the JWTs."
                                         }
                                     }
                                 },
@@ -52281,19 +52047,16 @@
                                 "type": "string",
                                 "pattern": "^[A-Za-z0-9][A-Za-z0-9.\\-_]+$",
                                 "maxLength": 254,
-                                "description": "The realm identifier for the IdP.",
-                                "x-qlik-customer-data": true
+                                "description": "The realm identifier for the IdP."
                             },
                             "audience": {
                                 "type": "string",
                                 "maxLength": 256,
-                                "description": "Allows for setting audience in access tokens.",
-                                "x-qlik-customer-data": true
+                                "description": "Allows for setting audience in access tokens."
                             },
                             "discoveryUrl": {
                                 "type": "string",
-                                "description": "The OpenID configuration endpoint. (Ex: https://<domain>/.well-known/openid-configuration). Required if openid_configuration is not given.",
-                                "x-qlik-customer-data": true
+                                "description": "The OpenID configuration endpoint. (Ex: https://<domain>/.well-known/openid-configuration). Required if openid_configuration is not given."
                             },
                             "claimsMapping": {
                                 "$ref": "#/components/schemas/claimsMappingNonInteractive"
@@ -52345,8 +52108,7 @@
                     },
                     "description": {
                         "type": "string",
-                        "maxLength": 128,
-                        "x-qlik-customer-data": true
+                        "maxLength": 128
                     },
                     "interactive": {
                         "type": "boolean",
@@ -52365,8 +52127,7 @@
                                 "type": "string",
                                 "pattern": "^[A-Za-z0-9][A-Za-z0-9.\\-_]+$",
                                 "maxLength": 254,
-                                "description": "The realm identifier for the IdP.",
-                                "x-qlik-customer-data": true
+                                "description": "The realm identifier for the IdP."
                             },
                             "scope": {
                                 "type": "string",
@@ -52375,18 +52136,15 @@
                             },
                             "clientId": {
                                 "type": "string",
-                                "description": "The client identifier used as part of authenticating an interactive identity provider.",
-                                "x-qlik-customer-data": true
+                                "description": "The client identifier used as part of authenticating an interactive identity provider."
                             },
                             "clientSecret": {
                                 "type": "string",
-                                "description": "The client secret used as part of authenticating an interactive identity provider.",
-                                "x-qlik-customer-data": true
+                                "description": "The client secret used as part of authenticating an interactive identity provider."
                             },
                             "discoveryUrl": {
                                 "type": "string",
-                                "description": "The OpenID configuration endpoint. (Ex: https://<domain>/.well-known/openid-configuration). Required if openid_configuration is not given.",
-                                "x-qlik-customer-data": true
+                                "description": "The OpenID configuration endpoint. (Ex: https://<domain>/.well-known/openid-configuration). Required if openid_configuration is not given."
                             },
                             "claimsMapping": {
                                 "$ref": "#/components/schemas/claimsMappingInteractive"
@@ -52424,8 +52182,7 @@
                     "postLogoutRedirectUri": {
                         "type": "string",
                         "maxLength": 2083,
-                        "description": "Direct the user on logout to a specific URI.",
-                        "x-qlik-customer-data": true
+                        "description": "Direct the user on logout to a specific URI."
                     }
                 },
                 "description": "Payload for creating an OIDC-compatible identity provider."
@@ -52446,8 +52203,7 @@
                         "properties": {
                             "entityId": {
                                 "type": "string",
-                                "description": "The entity ID for the SAML IdP. Required if metadata is not provided.",
-                                "x-qlik-customer-data": true
+                                "description": "The entity ID for the SAML IdP. Required if metadata is not provided."
                             },
                             "metadata": {
                                 "type": "object",
@@ -52458,16 +52214,14 @@
                                     "raw": {
                                         "type": "string",
                                         "format": "byte",
-                                        "description": "The IDP metadata XML in base64-encoded format.",
-                                        "x-qlik-customer-data": true
+                                        "description": "The IDP metadata XML in base64-encoded format."
                                     }
                                 },
                                 "description": "Metadata for the SAML IdP. Required if individual SAML parameters are not provided."
                             },
                             "signOnUrl": {
                                 "type": "string",
-                                "description": "The sign on URL for the SAML IdP. Required if metadata is not provided.",
-                                "x-qlik-customer-data": true
+                                "description": "The sign on URL for the SAML IdP. Required if metadata is not provided."
                             },
                             "certificates": {
                                 "type": "array",
@@ -52529,8 +52283,7 @@
                     },
                     "description": {
                         "type": "string",
-                        "maxLength": 128,
-                        "x-qlik-customer-data": true
+                        "maxLength": 128
                     },
                     "interactive": {
                         "type": "boolean",
@@ -52544,8 +52297,7 @@
                         "properties": {
                             "entityId": {
                                 "type": "string",
-                                "description": "The entity ID for the SAML IdP. Required if metadata is not provided.",
-                                "x-qlik-customer-data": true
+                                "description": "The entity ID for the SAML IdP. Required if metadata is not provided."
                             },
                             "metadata": {
                                 "type": "object",
@@ -52556,16 +52308,14 @@
                                     "raw": {
                                         "type": "string",
                                         "format": "byte",
-                                        "description": "The IDP metadata XML in base64-encoded format.",
-                                        "x-qlik-customer-data": true
+                                        "description": "The IDP metadata XML in base64-encoded format."
                                     }
                                 },
                                 "description": "Metadata for the SAML IdP. Required if individual SAML parameters are not provided."
                             },
                             "signOnUrl": {
                                 "type": "string",
-                                "description": "The sign on URL for the SAML IdP. Required if metadata is not provided.",
-                                "x-qlik-customer-data": true
+                                "description": "The sign on URL for the SAML IdP. Required if metadata is not provided."
                             },
                             "certificates": {
                                 "type": "array",
@@ -52609,8 +52359,7 @@
                     "postLogoutRedirectUri": {
                         "type": "string",
                         "maxLength": 2083,
-                        "description": "Direct the user on logout to a specific URI.",
-                        "x-qlik-customer-data": true
+                        "description": "Direct the user on logout to a specific URI."
                     }
                 },
                 "description": "Payload for creating a SAML compatible identity provider."
@@ -52668,13 +52417,11 @@
                                             "properties": {
                                                 "kid": {
                                                     "type": "string",
-                                                    "description": "Key ID used to sign the JWTs.",
-                                                    "x-qlik-customer-data": true
+                                                    "description": "Key ID used to sign the JWTs."
                                                 },
                                                 "pem": {
                                                     "type": "string",
-                                                    "description": "Pem-encoded public key for verifying the JWTs.",
-                                                    "x-qlik-customer-data": true
+                                                    "description": "Pem-encoded public key for verifying the JWTs."
                                                 }
                                             }
                                         }
@@ -52735,8 +52482,7 @@
                 "properties": {
                     "realm": {
                         "type": "string",
-                        "description": "The realm identifier for the IdP.",
-                        "x-qlik-customer-data": true
+                        "description": "The realm identifier for the IdP."
                     },
                     "scope": {
                         "type": "string",
@@ -52744,23 +52490,19 @@
                     },
                     "issuer": {
                         "type": "string",
-                        "description": "This field is only used in Qlik Sense Enterprise Client-Managed IdPs.",
-                        "x-qlik-customer-data": true
+                        "description": "This field is only used in Qlik Sense Enterprise Client-Managed IdPs."
                     },
                     "clientId": {
                         "type": "string",
-                        "description": "The client identifier used as part of authenticating an interactive identity provider.",
-                        "x-qlik-customer-data": true
+                        "description": "The client identifier used as part of authenticating an interactive identity provider."
                     },
                     "clientSecret": {
                         "type": "string",
-                        "description": "The client secret used as part of authenticating an interactive identity provider.",
-                        "x-qlik-customer-data": true
+                        "description": "The client secret used as part of authenticating an interactive identity provider."
                     },
                     "discoveryUrl": {
                         "type": "string",
-                        "description": "The OpenID configuration endpoint. (Ex: https://<domain>/.well-known/openid-configuration).",
-                        "x-qlik-customer-data": true
+                        "description": "The OpenID configuration endpoint. (Ex: https://<domain>/.well-known/openid-configuration)."
                     },
                     "claimsMapping": {
                         "$ref": "#/components/schemas/claimsMappingInteractive"
@@ -52877,13 +52619,11 @@
                 "properties": {
                     "entityId": {
                         "type": "string",
-                        "description": "The entity URL for the SAML IdP.",
-                        "x-qlik-customer-data": true
+                        "description": "The entity URL for the SAML IdP."
                     },
                     "signOnUrl": {
                         "type": "string",
-                        "description": "The sign on URL for the SAML IdP.",
-                        "x-qlik-customer-data": true
+                        "description": "The sign on URL for the SAML IdP."
                     },
                     "signingKeys": {
                         "type": "array",
@@ -52961,28 +52701,23 @@
                 "properties": {
                     "issuer": {
                         "type": "string",
-                        "description": "OpenID Provider issuer",
-                        "x-qlik-customer-data": true
+                        "description": "OpenID Provider issuer"
                     },
                     "jwks_uri": {
                         "type": "string",
-                        "description": "URL of the OP's JSON Web Key Set [JWK] document",
-                        "x-qlik-customer-data": true
+                        "description": "URL of the OP's JSON Web Key Set [JWK] document"
                     },
                     "token_endpoint": {
                         "type": "string",
-                        "description": "OAuth 2.0 Token Endpoint",
-                        "x-qlik-customer-data": true
+                        "description": "OAuth 2.0 Token Endpoint"
                     },
                     "userinfo_endpoint": {
                         "type": "string",
-                        "description": "URL of the OP's UserInfo Endpoint",
-                        "x-qlik-customer-data": true
+                        "description": "URL of the OP's UserInfo Endpoint"
                     },
                     "end_session_endpoint": {
                         "type": "string",
-                        "description": "URL at the OP to which an RP can perform a redirect to request that the End-User be logged out at the OP.",
-                        "x-qlik-customer-data": true
+                        "description": "URL at the OP to which an RP can perform a redirect to request that the End-User be logged out at the OP."
                     },
                     "authorization_endpoint": {
                         "type": "string",
@@ -52990,8 +52725,7 @@
                     },
                     "introspection_endpoint": {
                         "type": "string",
-                        "description": "The introspection endpoint is an OAuth 2.0 endpoint that takes a parameter representing an OAuth 2.0 token and returns a JSON [RFC7159] document representing the meta information.",
-                        "x-qlik-customer-data": true
+                        "description": "The introspection endpoint is an OAuth 2.0 endpoint that takes a parameter representing an OAuth 2.0 token and returns a JSON [RFC7159] document representing the meta information."
                     }
                 },
                 "description": "OpenID configuration"
@@ -53142,9 +52876,7 @@
                     },
                     "idpClaims": {
                         "type": "object",
-                        "x-qlik-pii": true,
-                        "description": "The claims retrieved from the external IdP.",
-                        "x-qlik-customer-data": true
+                        "description": "The claims retrieved from the external IdP."
                     },
                     "oauth2Error": {
                         "type": "object",
@@ -53168,9 +52900,7 @@
                     },
                     "resultantClaims": {
                         "type": "object",
-                        "x-qlik-pii": true,
-                        "description": "The resultant claims based on the claims received from the external IdP.",
-                        "x-qlik-customer-data": true
+                        "description": "The resultant claims based on the claims received from the external IdP."
                     }
                 }
             },
@@ -53369,7 +53099,8 @@
                                 },
                                 "userId": {
                                     "type": "string",
-                                    "description": "User ID"
+                                    "description": "User ID",
+                                    "x-qlik-deprecated": true
                                 },
                                 "subject": {
                                     "type": "string",
@@ -53428,7 +53159,6 @@
                                 },
                                 "subject": {
                                     "type": "string",
-                                    "x-qlik-pii": true,
                                     "description": "Subject"
                                 }
                             }
@@ -53519,7 +53249,6 @@
                                 },
                                 "subject": {
                                     "type": "string",
-                                    "x-qlik-pii": true,
                                     "description": "Subject"
                                 }
                             }
@@ -53617,7 +53346,6 @@
                                 },
                                 "subject": {
                                     "type": "string",
-                                    "x-qlik-pii": true,
                                     "description": "Subject"
                                 },
                                 "sourceType": {
@@ -53677,18 +53405,12 @@
                                     "type": "boolean",
                                     "description": "Assignment excess status."
                                 },
-                                "userId": {
-                                    "type": "string",
-                                    "description": "User ID",
-                                    "x-qlik-deprecated": true
-                                },
                                 "created": {
                                     "type": "string",
                                     "description": "Assignment created date."
                                 },
                                 "subject": {
                                     "type": "string",
-                                    "x-qlik-pii": true,
                                     "description": "Subject"
                                 }
                             }
@@ -54045,8 +53767,7 @@
                     "label": {
                         "type": "string",
                         "example": "example.Landing.Asset",
-                        "description": "The lable of the data asset",
-                        "x-qlik-customer-data": true
+                        "description": "The lable of the data asset"
                     },
                     "subtype": {
                         "type": "string",
@@ -54255,8 +53976,7 @@
                     },
                     "label": {
                         "type": "string",
-                        "description": "Label string for this graph.",
-                        "x-qlik-customer-data": true
+                        "description": "Label string for this graph."
                     },
                     "nodes": {
                         "$ref": "#/components/schemas/nodes"
@@ -54322,8 +54042,7 @@
                     "tableLabel": {
                         "type": "string",
                         "nullable": true,
-                        "description": "Table level label",
-                        "x-qlik-customer-data": true
+                        "description": "Table level label"
                     },
                     "resourceQRI": {
                         "type": "string",
@@ -54334,8 +54053,7 @@
                     "resourceLabel": {
                         "type": "string",
                         "nullable": true,
-                        "description": "Resource level label",
-                        "x-qlik-customer-data": true
+                        "description": "Resource level label"
                     }
                 }
             },
@@ -54375,8 +54093,7 @@
                 "properties": {
                     "label": {
                         "type": "string",
-                        "description": "Name label of the node.",
-                        "x-qlik-customer-data": true
+                        "description": "Name label of the node."
                     },
                     "metadata": {
                         "type": "object",
@@ -54423,8 +54140,7 @@
                             "filePath": {
                                 "type": "string",
                                 "example": "example.qvd",
-                                "description": "The file path of a node",
-                                "x-qlik-customer-data": true
+                                "description": "The file path of a node"
                             },
                             "dataAsset": {
                                 "$ref": "#/components/schemas/dataAsset"
@@ -54484,15 +54200,13 @@
                         "type": "string"
                     },
                     "name": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "space_id": {
                         "type": "string"
                     },
                     "space_name": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "space_type": {
                         "type": "string"
@@ -54521,8 +54235,7 @@
                     "sentence": {
                         "properties": {
                             "text": {
-                                "type": "string",
-                                "x-qlik-customer-data": true
+                                "type": "string"
                             }
                         }
                     },
@@ -54563,8 +54276,7 @@
             "NarrativeResponse": {
                 "properties": {
                     "text": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     }
                 },
                 "x-qlik-visibility": "public"
@@ -54577,16 +54289,14 @@
                         "items": {
                             "type": "string"
                         },
-                        "description": "Dimension(s) considered for recommendation",
-                        "x-qlik-customer-data": true
+                        "description": "Dimension(s) considered for recommendation"
                     },
                     "msrs": {
                         "type": "array",
                         "items": {
                             "type": "string"
                         },
-                        "description": "Measure(s) considered for recommendation",
-                        "x-qlik-customer-data": true
+                        "description": "Measure(s) considered for recommendation"
                     },
                     "analysis": {
                         "$ref": "#/components/schemas/Analysis"
@@ -54636,8 +54346,7 @@
                     },
                     "appName": {
                         "type": "string",
-                        "description": "Qlik sense app name that is being used to answer the question",
-                        "x-qlik-customer-data": true
+                        "description": "Qlik sense app name that is being used to answer the question"
                     },
                     "nluInfo": {
                         "type": "array",
@@ -54680,8 +54389,7 @@
                     },
                     "queryText": {
                         "type": "string",
-                        "description": "Query asked by user in insight advisor or insight advisor or third party api",
-                        "x-qlik-customer-data": true
+                        "description": "Query asked by user in insight advisor or insight advisor or third party api"
                     },
                     "queryType": {
                         "enum": [
@@ -54838,8 +54546,7 @@
             "NluInfoElements": {
                 "properties": {
                     "text": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "type": {
                         "type": "string"
@@ -54851,22 +54558,19 @@
                         "type": "boolean"
                     },
                     "typeName": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "errorText": {
                         "type": "string"
                     },
                     "filterText": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "typeTranslated": {
                         "type": "string"
                     },
                     "filterFieldName": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     }
                 },
                 "x-qlik-visibility": "public"
@@ -54877,8 +54581,7 @@
                         "type": "string"
                     },
                     "name": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     }
                 },
                 "x-qlik-visibility": "public"
@@ -54898,8 +54601,7 @@
                     },
                     "text": {
                         "type": "string",
-                        "description": "The sentence that will be parsed.",
-                        "x-qlik-customer-data": true
+                        "description": "The sentence that will be parsed."
                     },
                     "disableFollowups": {
                         "type": "boolean",
@@ -55004,16 +54706,14 @@
                     },
                     "contextInfo": {
                         "type": "string",
-                        "description": "For contextual responses, this string contains a list of entities that are used to produce the response.",
-                        "x-qlik-customer-data": true
+                        "description": "For contextual responses, this string contains a list of entities that are used to produce the response."
                     },
                     "drillDownURI": {
                         "type": "string",
                         "description": "The URL with the query injected to insight advisor of the app to which the query belongs."
                     },
                     "sentenceWithMatches": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     }
                 },
                 "x-qlik-visibility": "public"
@@ -55028,8 +54728,7 @@
                 ],
                 "properties": {
                     "comment": {
-                        "type": "string",
-                        "x-qlik-customer-data": true
+                        "type": "string"
                     },
                     "chartType": {
                         "type": "string"
@@ -55056,8 +54755,7 @@
                 "properties": {
                     "data": {
                         "type": "object",
-                        "description": "Data object should be used to render visualization",
-                        "x-qlik-customer-data": true
+                        "description": "Data object should be used to render visualization"
                     },
                     "language": {
                         "type": "string"
@@ -55785,8 +55483,7 @@
                     },
                     "redirect_uri": {
                         "type": "string",
-                        "description": "The original redirect URI provided during authorization. For verification purposes only.",
-                        "x-qlik-customer-data": true
+                        "description": "The original redirect URI provided during authorization. For verification purposes only."
                     },
                     "client_secret": {
                         "type": "string",
@@ -56197,8 +55894,7 @@
                                 "type": "string",
                                 "example": "scheduled_reload",
                                 "description": "Type of task being created - only contains the \"scheduled_reload\" value. Type value is not used for creating a schedule reload. It has been deprecated since 2022-04-05.",
-                                "x-qlik-deprecated": true,
-                                "x-qlik-customer-data": false
+                                "x-qlik-deprecated": true
                             }
                         }
                     }
@@ -56219,8 +55915,7 @@
                                 ],
                                 "type": "string",
                                 "example": "Disabled",
-                                "description": "Toggle for enabling and disabling the reload task",
-                                "x-qlik-customer-data": false
+                                "description": "Toggle for enabling and disabling the reload task"
                             }
                         }
                     }
@@ -56257,15 +55952,13 @@
                             "id": {
                                 "type": "string",
                                 "example": "5be59decca62aa00097268a4",
-                                "description": "The ID of the task.",
-                                "x-qlik-customer-data": false
+                                "description": "The ID of the task."
                             },
                             "log": {
                                 "type": "string",
                                 "example": "Scheduled reload has been disabled since exceeded limit of 5 consecutive reload failures. Please fix error and re-enable schedule.",
                                 "description": "The reason why the task was disabled.",
-                                "x-qlik-deprecated": true,
-                                "x-qlik-customer-data": false
+                                "x-qlik-deprecated": true
                             },
                             "links": {
                                 "$ref": "#/components/schemas/SelfLink"
@@ -56278,33 +55971,28 @@
                                 ],
                                 "type": "string",
                                 "example": "Enabled",
-                                "description": "Toggle for enabling and disabling the reload task",
-                                "x-qlik-customer-data": false
+                                "description": "Toggle for enabling and disabling the reload task"
                             },
                             "userId": {
                                 "type": "string",
                                 "example": "FyPG6xWp6prDU6BXQ3g7LY9gWR_YRkkx",
-                                "description": "The ID of the user who owns the task.",
-                                "x-qlik-customer-data": false
+                                "description": "The ID of the user who owns the task."
                             },
                             "spaceId": {
                                 "type": "string",
                                 "example": "602c2c2be2be220002a22a22",
-                                "description": "The space ID of the application",
-                                "x-qlik-customer-data": false
+                                "description": "The space ID of the application"
                             },
                             "tenantId": {
                                 "type": "string",
                                 "example": "efSCcpNYuayTysONkUcE3F80zYQ_LV9w",
-                                "description": "The ID of the tenant who owns the task.",
-                                "x-qlik-customer-data": false
+                                "description": "The ID of the tenant who owns the task."
                             },
                             "fortressId": {
                                 "type": "string",
                                 "example": "5c5b097116d25a0001a48b06",
                                 "description": "The fortress ID of the application",
-                                "x-qlik-deprecated": true,
-                                "x-qlik-customer-data": false
+                                "x-qlik-deprecated": true
                             },
                             "disabledCode": {
                                 "enum": [
@@ -56315,20 +56003,17 @@
                                 ],
                                 "type": "string",
                                 "example": "CONSECUTIVE-FAILURES",
-                                "description": "The reason why the task was disabled.",
-                                "x-qlik-customer-data": false
+                                "description": "The reason why the task was disabled."
                             },
                             "lastExecutionTime": {
                                 "type": "string",
                                 "example": "2022-09-20T17:17:00Z",
-                                "description": "The last time the task executed.",
-                                "x-qlik-customer-data": false
+                                "description": "The last time the task executed."
                             },
                             "nextExecutionTime": {
                                 "type": "string",
                                 "example": "2022-09-20T17:17:00Z",
-                                "description": "The next time the task will execute.",
-                                "x-qlik-customer-data": false
+                                "description": "The next time the task will execute."
                             }
                         }
                     }
@@ -56340,26 +56025,22 @@
                     "appId": {
                         "type": "string",
                         "example": "116dbfae-7fb9-4983-8e23-5ccd8c508722",
-                        "description": "The ID of the app.",
-                        "x-qlik-customer-data": false
+                        "description": "The ID of the app."
                     },
                     "partial": {
                         "type": "boolean",
                         "default": false,
-                        "description": "The task is partial reload or not",
-                        "x-qlik-customer-data": false
+                        "description": "The task is partial reload or not"
                     },
                     "timeZone": {
                         "type": "string",
                         "example": "America/Toronto",
-                        "description": "The time zone in which the time is specified. (Formatted as an IANA Time Zone Database name, e.g. Europe/Zurich.) This field specifies the time zone in which the event start/end are expanded. If missing the start/end fields must specify a UTC offset in RFC3339 format.",
-                        "x-qlik-customer-data": false
+                        "description": "The time zone in which the time is specified. (Formatted as an IANA Time Zone Database name, e.g. Europe/Zurich.) This field specifies the time zone in which the event start/end are expanded. If missing the start/end fields must specify a UTC offset in RFC3339 format."
                     },
                     "autoReload": {
                         "type": "boolean",
                         "default": false,
-                        "description": "A flag that indicates whether a reload is triggered when data of the app is changed",
-                        "x-qlik-customer-data": false
+                        "description": "A flag that indicates whether a reload is triggered when data of the app is changed"
                     },
                     "recurrence": {
                         "type": "array",
@@ -56370,26 +56051,22 @@
                             "RRULE:FREQ=DAILY;INTERVAL=1;BYHOUR=11;BYMINUTE=18;BYSECOND=0",
                             "RRULE:FREQ=WEEKLY;INTERVAL=2;BYDAY=MO,TU;BYHOUR=13;BYMINUTE=17;BYSECOND=0"
                         ],
-                        "description": "List of RECUR lines for a recurring event, as specified in RFC5545. Note that DTSTART and DTEND lines are not allowed in this field; event start and end times are specified in the start and end fields. This field is omitted for single events or instances of recurring events",
-                        "x-qlik-customer-data": false
+                        "description": "List of RECUR lines for a recurring event, as specified in RFC5545. Note that DTSTART and DTEND lines are not allowed in this field; event start and end times are specified in the start and end fields. This field is omitted for single events or instances of recurring events"
                     },
                     "endDateTime": {
                         "type": "string",
                         "example": "2022-10-12T23:59:00",
-                        "description": "The time that the task will stop recurring. If the time zone is missing, this is a combined date-time value expressing a time with a fixed UTC offset (formatted according to RFC3339). If a time zone is given, the zone offset must be omitted.",
-                        "x-qlik-customer-data": false
+                        "description": "The time that the task will stop recurring. If the time zone is missing, this is a combined date-time value expressing a time with a fixed UTC offset (formatted according to RFC3339). If a time zone is given, the zone offset must be omitted."
                     },
                     "startDateTime": {
                         "type": "string",
                         "example": "2022-09-19T11:18:00",
-                        "description": "The time that the task execution start recurring. If the time zone is missing, this is a combined date-time value expressing a time with a fixed UTC offset (formatted according to RFC3339). If a time zone is given, the zone offset must be omitted. Field startDateTime should not be before the Unix epoch 00:00:00 UTC on 1 January 1970. Note that the empty string value with the empty recurrence array indicates the scheduled job is not set.",
-                        "x-qlik-customer-data": false
+                        "description": "The time that the task execution start recurring. If the time zone is missing, this is a combined date-time value expressing a time with a fixed UTC offset (formatted according to RFC3339). If a time zone is given, the zone offset must be omitted. Field startDateTime should not be before the Unix epoch 00:00:00 UTC on 1 January 1970. Note that the empty string value with the empty recurrence array indicates the scheduled job is not set."
                     },
                     "autoReloadPartial": {
                         "type": "boolean",
                         "default": false,
-                        "description": "A flag that indicates whether it is a partial reload or not for the auto reload",
-                        "x-qlik-customer-data": false
+                        "description": "A flag that indicates whether it is a partial reload or not for the auto reload"
                     }
                 }
             },
@@ -56414,8 +56091,7 @@
             "Partial": {
                 "type": "boolean",
                 "example": false,
-                "description": "The boolean value used to present the reload is partial or not.",
-                "x-qlik-customer-data": false
+                "description": "The boolean value used to present the reload is partial or not."
             },
             "Reload": {
                 "type": "object",
@@ -56432,14 +56108,12 @@
                     "id": {
                         "type": "string",
                         "example": "5be59decca62aa00097268a4",
-                        "description": "The ID of the reload.",
-                        "x-qlik-customer-data": false
+                        "description": "The ID of the reload."
                     },
                     "log": {
                         "type": "string",
                         "example": "ReloadID: 5be59decca62aa00097268a4\\nStarted loading\\n(A detailed script progress log can be downloaded when the reload is finished)\\nApp saved\\nFinished successfully\\n",
-                        "description": "The log describing the result of the latest reload execution from the request.",
-                        "x-qlik-customer-data": true
+                        "description": "The log describing the result of the latest reload execution from the request."
                     },
                     "type": {
                         "$ref": "#/components/schemas/Type"
@@ -56447,8 +56121,7 @@
                     "appId": {
                         "type": "string",
                         "example": "116dbfae-7fb9-4983-8e23-5ccd8c508722",
-                        "description": "The ID of the app.",
-                        "x-qlik-customer-data": false
+                        "description": "The ID of the app."
                     },
                     "links": {
                         "$ref": "#/components/schemas/ReloadLinks"
@@ -56459,14 +56132,12 @@
                     "userId": {
                         "type": "string",
                         "example": "FyPG6xWp6prDU6BXQ3g7LY9gWR_YRkkx",
-                        "description": "The ID of the user who created the reload.",
-                        "x-qlik-customer-data": false
+                        "description": "The ID of the user who created the reload."
                     },
                     "endTime": {
                         "type": "string",
                         "example": "2020-11-03T17:00:11.865Z",
-                        "description": "The time the reload job finished.",
-                        "x-qlik-customer-data": false
+                        "description": "The time the reload job finished."
                     },
                     "partial": {
                         "$ref": "#/components/schemas/Partial"
@@ -56474,26 +56145,22 @@
                     "tenantId": {
                         "type": "string",
                         "example": "efSCcpNYuayTysONkUcE3F80zYQ_LV9w",
-                        "description": "The ID of the tenant who owns the reload.",
-                        "x-qlik-customer-data": false
+                        "description": "The ID of the tenant who owns the reload."
                     },
                     "startTime": {
                         "type": "string",
                         "example": "2020-11-03T17:00:06.351Z",
-                        "description": "The time the reload job was consumed from the queue.",
-                        "x-qlik-customer-data": false
+                        "description": "The time the reload job was consumed from the queue."
                     },
                     "engineTime": {
                         "type": "string",
                         "example": "2020-11-03T17:00:07.048Z",
-                        "description": "The timestamp returned from the Sense engine upon successful reload.",
-                        "x-qlik-customer-data": false
+                        "description": "The timestamp returned from the Sense engine upon successful reload."
                     },
                     "creationTime": {
                         "type": "string",
                         "example": "2020-11-03T17:00:00.164Z",
-                        "description": "The time the reload job was created.",
-                        "x-qlik-customer-data": false
+                        "description": "The time the reload job was created."
                     }
                 }
             },
@@ -56513,14 +56180,12 @@
                     "appId": {
                         "type": "string",
                         "example": "116dbfae-7fb9-4983-8e23-5ccd8c508722",
-                        "description": "The ID of the app to be reloaded.",
-                        "x-qlik-customer-data": false
+                        "description": "The ID of the app to be reloaded."
                     },
                     "partial": {
                         "type": "boolean",
                         "example": false,
-                        "description": "The boolean value used to present the reload is partial or not",
-                        "x-qlik-customer-data": false
+                        "description": "The boolean value used to present the reload is partial or not"
                     }
                 }
             },
@@ -56572,8 +56237,7 @@
                 ],
                 "type": "string",
                 "example": "SUCCEEDED",
-                "description": "The status of the reload. There are seven statuses. `QUEUED`, `RELOADING`, `CANCELING` are the active statuses. `SUCCEEDED`, `FAILED`, `CANCELED`, `EXCEEDED_LIMIT` are the end statuses.",
-                "x-qlik-customer-data": false
+                "description": "The status of the reload. There are seven statuses. `QUEUED`, `RELOADING`, `CANCELING` are the active statuses. `SUCCEEDED`, `FAILED`, `CANCELED`, `EXCEEDED_LIMIT` are the end statuses."
             },
             "Type": {
                 "enum": [
@@ -56585,8 +56249,7 @@
                 ],
                 "type": "string",
                 "example": "chronos",
-                "description": "What initiated the reload: hub = one-time reload manually triggered in hub, chronos = time based scheduled reload triggered by chronos, external = reload triggered via external API request, automations = reload triggered in automation, data-refresh = reload triggered by refresh of data.",
-                "x-qlik-customer-data": false
+                "description": "What initiated the reload: hub = one-time reload manually triggered in hub, chronos = time based scheduled reload triggered by chronos, external = reload triggered via external API request, automations = reload triggered in automation, data-refresh = reload triggered by refresh of data."
             },
             "CreateTemplateRequest": {
                 "type": "object",
@@ -56870,6 +56533,41 @@
                     },
                     "senseSheetTemplate": {
                         "$ref": "#/components/schemas/SenseSheetTemplate"
+                    }
+                }
+            },
+            "CyclableTemplate": {
+                "required": [
+                    "cycleTemplate"
+                ],
+                "properties": {
+                    "fields": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "maxItems": 3,
+                        "description": "The values of the field to be selected."
+                    },
+                    "cycleTemplate": {
+                        "$ref": "#/components/schemas/cycleTemplate"
+                    }
+                }
+            },
+            "cycleTemplate": {
+                "required": [
+                    "type"
+                ],
+                "properties": {
+                    "type": {
+                        "enum": [
+                            "sense-excel-template-1.0"
+                        ],
+                        "type": "string",
+                        "description": "Template type and version using semantic versioning. It must have the following name convention, dashed-separated-template-name-MAJOR.MINOR"
+                    },
+                    "SenseExcelTemplate": {
+                        "$ref": "#/components/schemas/SenseExcelTemplate"
                     }
                 }
             },
@@ -57226,8 +56924,7 @@
                     "text": {
                         "type": "string",
                         "example": "2021",
-                        "description": "String value of the field value.",
-                        "x-qlik-customer-data": true
+                        "description": "String value of the field value."
                     },
                     "number": {
                         "$ref": "#/components/schemas/Float64"
@@ -57259,8 +56956,7 @@
                     "fieldName": {
                         "type": "string",
                         "example": "Year",
-                        "description": "The name of the field to be selected.",
-                        "x-qlik-customer-data": true
+                        "description": "The name of the field to be selected."
                     },
                     "defaultIsNumeric": {
                         "type": "boolean",
@@ -57382,7 +57078,8 @@
                             "sense-story-1.0",
                             "qv-data-1.0",
                             "qv-data-2.0",
-                            "sense-excel-template-1.0"
+                            "sense-excel-template-1.0",
+                            "cycle-template-1.0"
                         ],
                         "type": "string",
                         "description": "Template type and version using semantic versioning. It must have the following name convention: dashed-separated-template-name-MAJOR.MINOR.\nPlease note that sense-story-x.0, sense-excel-template-1.0, sense-data-x.0 and qv-data-x.0 are only for internal use.\n\nEach type requires a specific template to be provided:\n  - composition-1.0 requires compositionTemplates to be set\n  - sense-excel-template-1.0 requires senseExcelTemplate to be set\n  - sense-image-1.0 requires senseImageTemplate to be set\n  - sense-sheet-1.0 requires senseSheetTemplate to be set\n\nEach template type supports specific output types:\n  - composition-1.0 supports only pdfcomposition output type\n  - sense-excel-template-1.0 supports only excel output type\n  - sense-image-1.0 supports pdf and png output types\n  - sense-sheet-1.0 supports only pdf output type\n"
@@ -57392,6 +57089,9 @@
                     },
                     "definitions": {
                         "$ref": "#/components/schemas/Definitions"
+                    },
+                    "cyclableTemplate": {
+                        "$ref": "#/components/schemas/CyclableTemplate"
                     },
                     "senseExcelTemplate": {
                         "$ref": "#/components/schemas/SenseExcelTemplate"
@@ -57521,8 +57221,7 @@
                     "fieldName": {
                         "type": "string",
                         "example": "Year",
-                        "description": "The field name that is missing.",
-                        "x-qlik-customer-data": true
+                        "description": "The field name that is missing."
                     },
                     "stateName": {
                         "type": "string",
@@ -57808,8 +57507,7 @@
                     "id": {
                         "type": "string",
                         "example": "QbtwdFg",
-                        "description": "The sense visualization id or json definition.",
-                        "x-qlik-customer-data": true
+                        "description": "The sense visualization id or json definition."
                     },
                     "type": {
                         "enum": [
@@ -58083,7 +57781,6 @@
                         "type": "string",
                         "format": "email",
                         "example": "abc@xyz.com",
-                        "x-qlik-pii": true,
                         "description": "Email of recipient (external user)."
                     },
                     "enabled": {
@@ -58842,7 +58539,6 @@
                     "ownerName": {
                         "type": "string",
                         "example": "Harley Kiffe",
-                        "x-qlik-pii": true,
                         "description": "User name of owner of the sharing task"
                     },
                     "startTime": {
@@ -59074,7 +58770,6 @@
                             "type": "string",
                             "format": "email",
                             "example": "abc@xyz.com",
-                            "x-qlik-pii": true,
                             "description": "Email of recipient (external user)."
                         }
                     }
@@ -60248,26 +59943,22 @@
                     },
                     "file": {
                         "type": "object",
-                        "description": "The file that was uploaded with the theme.",
-                        "x-qlik-customer-data": true
+                        "description": "The file that was uploaded with the theme."
                     },
                     "icon": {
                         "type": "string",
-                        "description": "Icon to show in the client.",
-                        "x-qlik-customer-data": true
+                        "description": "Icon to show in the client."
                     },
                     "name": {
                         "type": "string",
-                        "description": "The display name of this theme.",
-                        "x-qlik-customer-data": true
+                        "description": "The display name of this theme."
                     },
                     "tags": {
                         "type": "array",
                         "items": {
                             "type": "string"
                         },
-                        "description": "List of tags.",
-                        "x-qlik-customer-data": true
+                        "description": "List of tags."
                     },
                     "type": {
                         "type": "string",
@@ -60275,9 +59966,7 @@
                     },
                     "author": {
                         "type": "string",
-                        "x-qlik-pii": true,
-                        "description": "Author of the theme.",
-                        "x-qlik-customer-data": true
+                        "description": "Author of the theme."
                     },
                     "userId": {
                         "type": "string",
@@ -60285,28 +59974,23 @@
                     },
                     "license": {
                         "type": "string",
-                        "description": "Under which license this theme is published.",
-                        "x-qlik-customer-data": true
+                        "description": "Under which license this theme is published."
                     },
                     "version": {
                         "type": "string",
-                        "description": "Version of the theme.",
-                        "x-qlik-customer-data": true
+                        "description": "Version of the theme."
                     },
                     "homepage": {
                         "type": "string",
-                        "description": "Home page of the theme.",
-                        "x-qlik-customer-data": true
+                        "description": "Home page of the theme."
                     },
                     "keywords": {
                         "type": "string",
-                        "description": "Keywords for the theme.",
-                        "x-qlik-customer-data": true
+                        "description": "Keywords for the theme."
                     },
                     "supplier": {
                         "type": "string",
-                        "description": "Supplier of the theme.",
-                        "x-qlik-customer-data": true
+                        "description": "Supplier of the theme."
                     },
                     "tenantId": {
                         "type": "string",
@@ -60324,28 +60008,23 @@
                     },
                     "repository": {
                         "type": "string",
-                        "description": "Link to the theme source code.",
-                        "x-qlik-customer-data": true
+                        "description": "Link to the theme source code."
                     },
                     "description": {
                         "type": "string",
-                        "description": "Description of the theme.",
-                        "x-qlik-customer-data": true
+                        "description": "Description of the theme."
                     },
                     "qextVersion": {
                         "type": "string",
-                        "description": "The version from the qext file that was uploaded with this extension.",
-                        "x-qlik-customer-data": true
+                        "description": "The version from the qext file that was uploaded with this extension."
                     },
                     "dependencies": {
                         "type": "object",
-                        "description": "Map of dependencies describing version of the component it requires.",
-                        "x-qlik-customer-data": true
+                        "description": "Map of dependencies describing version of the component it requires."
                     },
                     "qextFilename": {
                         "type": "string",
-                        "description": "The name of the qext file that was uploaded with this theme.",
-                        "x-qlik-customer-data": true
+                        "description": "The name of the qext file that was uploaded with this theme."
                     }
                 },
                 "description": "The theme model."
@@ -60404,7 +60083,6 @@
                     },
                     "recipient": {
                         "type": "string",
-                        "x-qlik-pii": true,
                         "description": "email recipient (email address)"
                     }
                 }
@@ -60441,7 +60119,6 @@
                     "value": {
                         "type": "string",
                         "example": "john.smith@company.com",
-                        "x-qlik-pii": true,
                         "description": "The value to be used for this operation."
                     }
                 },
@@ -60466,7 +60143,6 @@
                     "username": {
                         "type": "string",
                         "example": "john.smith@company.com",
-                        "x-qlik-pii": true,
                         "description": "user name"
                     },
                     "serverPort": {
@@ -60483,7 +60159,6 @@
                     "emailAddress": {
                         "type": "string",
                         "example": "john.smith@company.com",
-                        "x-qlik-pii": true,
                         "description": "used for SMTP authentication"
                     },
                     "securityType": {
@@ -60727,8 +60402,7 @@
                             "type": "string",
                             "example": "Finance",
                             "readOnly": true,
-                            "description": "The group name",
-                            "x-qlik-customer-data": true
+                            "description": "The group name"
                         },
                         "assignedRoles": {
                             "$ref": "#/components/schemas/AssignedRoles"
@@ -60817,7 +60491,6 @@
                             },
                             "email": {
                                 "type": "string",
-                                "x-qlik-pii": true,
                                 "description": "Invitee email"
                             },
                             "status": {
@@ -60840,12 +60513,10 @@
                 "properties": {
                     "name": {
                         "type": "string",
-                        "x-qlik-pii": true,
                         "description": "Optional display name for this invitee. Example - \"Elvis Presley\"."
                     },
                     "email": {
                         "type": "string",
-                        "x-qlik-pii": true,
                         "description": "Email address for this invitee. Example - \"foo@qlik.com\"."
                     },
                     "resend": {
@@ -60902,7 +60573,6 @@
                 "properties": {
                     "email": {
                         "type": "string",
-                        "x-qlik-pii": true,
                         "description": "Email specified for this invitee"
                     },
                     "status": {
@@ -60921,7 +60591,6 @@
                     "subject": {
                         "type": "string",
                         "format": "uuid",
-                        "x-qlik-pii": true,
                         "description": "IdP generated UUID for this invitee"
                     }
                 },
@@ -60945,17 +60614,13 @@
                     },
                     "name": {
                         "type": "string",
-                        "x-qlik-pii": true,
                         "description": "The name of the user.",
-                        "x-qlik-filterable": true,
-                        "x-qlik-customer-data": true
+                        "x-qlik-filterable": true
                     },
                     "email": {
                         "type": "string",
-                        "x-qlik-pii": true,
                         "description": "The email address for the user.",
-                        "x-qlik-filterable": true,
-                        "x-qlik-customer-data": true
+                        "x-qlik-filterable": true
                     },
                     "links": {
                         "type": "object",
@@ -61001,8 +60666,7 @@
                     },
                     "locale": {
                         "type": "string",
-                        "description": "Represents the end-user's language tag.",
-                        "x-qlik-customer-data": true
+                        "description": "Represents the end-user's language tag."
                     },
                     "status": {
                         "enum": [
@@ -61025,16 +60689,12 @@
                     "picture": {
                         "type": "string",
                         "format": "url",
-                        "x-qlik-pii": true,
-                        "description": "A static url linking to the avatar of the user.",
-                        "x-qlik-customer-data": true
+                        "description": "A static url linking to the avatar of the user."
                     },
                     "subject": {
                         "type": "string",
-                        "x-qlik-pii": true,
                         "description": "The unique user identitier from an identity provider.",
-                        "x-qlik-filterable": true,
-                        "x-qlik-customer-data": true
+                        "x-qlik-filterable": true
                     },
                     "tenantId": {
                         "type": "string",
@@ -61043,8 +60703,7 @@
                     },
                     "zoneinfo": {
                         "type": "string",
-                        "description": "Represents the end-user's time zone.",
-                        "x-qlik-customer-data": true
+                        "description": "Represents the end-user's time zone."
                     },
                     "createdAt": {
                         "type": "string",
@@ -61124,15 +60783,11 @@
                 "properties": {
                     "name": {
                         "type": "string",
-                        "x-qlik-pii": true,
-                        "description": "The name of the user.",
-                        "x-qlik-customer-data": true
+                        "description": "The name of the user."
                     },
                     "email": {
                         "type": "string",
-                        "x-qlik-pii": true,
-                        "description": "The email address for the user. This is a required field when inviting a user.",
-                        "x-qlik-customer-data": true
+                        "description": "The email address for the user. This is a required field when inviting a user."
                     },
                     "roles": {
                         "type": "array",
@@ -61162,16 +60817,12 @@
                     "picture": {
                         "type": "string",
                         "format": "url",
-                        "x-qlik-pii": true,
-                        "description": "A static url linking to the avatar of the user.",
-                        "x-qlik-customer-data": true
+                        "description": "A static url linking to the avatar of the user."
                     },
                     "subject": {
                         "type": "string",
                         "example": "foo\\12345",
-                        "x-qlik-pii": true,
-                        "description": "The unique user identitier from an identity provider.",
-                        "x-qlik-customer-data": true
+                        "description": "The unique user identitier from an identity provider."
                     },
                     "tenantId": {
                         "type": "string",
@@ -61294,8 +60945,7 @@
                             "type": "string",
                             "format": "uri"
                         },
-                        "description": "The origins that are allowed to make requests to the tenant.",
-                        "x-qlik-customer-data": true
+                        "description": "The origins that are allowed to make requests to the tenant."
                     }
                 },
                 "description": "A web integration object."
@@ -61325,8 +60975,7 @@
                     },
                     "value": {
                         "type": "string",
-                        "description": "New value to be used for this operation.",
-                        "x-qlik-customer-data": true
+                        "description": "New value to be used for this operation."
                     }
                 },
                 "description": "A JSON Patch document as defined in http://tools.ietf.org/html/rfc6902."
@@ -61356,8 +61005,7 @@
                     "name": {
                         "type": "string",
                         "example": "My Web Integration",
-                        "description": "The name of the newly created web integration.",
-                        "x-qlik-customer-data": true
+                        "description": "The name of the newly created web integration."
                     },
                     "links": {
                         "type": "object",
@@ -61414,8 +61062,7 @@
                         "example": [
                             "https://thirdPartyApp.com"
                         ],
-                        "description": "The origins that are allowed to make requests to the tenant.",
-                        "x-qlik-customer-data": true
+                        "description": "The origins that are allowed to make requests to the tenant."
                     }
                 },
                 "description": "The creation of a web integration response."
@@ -61428,8 +61075,7 @@
                     "name": {
                         "type": "string",
                         "example": "My Web Integration",
-                        "description": "The name of the web integration to create.",
-                        "x-qlik-customer-data": true
+                        "description": "The name of the web integration to create."
                     },
                     "validOrigins": {
                         "type": "array",
@@ -61440,8 +61086,7 @@
                         "example": [
                             "https://thirdPartyApp.com"
                         ],
-                        "description": "The origins that are allowed to make requests to the tenant.",
-                        "x-qlik-customer-data": true
+                        "description": "The origins that are allowed to make requests to the tenant."
                     }
                 }
             },
@@ -61687,8 +61332,7 @@
                         "properties": {
                             "body": {
                                 "type": "string",
-                                "description": "The received body of the delivery",
-                                "x-qlik-customer-data": true
+                                "description": "The received body of the delivery"
                             },
                             "headers": {
                                 "type": "object",
@@ -61698,8 +61342,7 @@
                                 "description": "Headers received for this delivery",
                                 "additionalProperties": {
                                     "type": "string"
-                                },
-                                "x-qlik-customer-data": true
+                                }
                             },
                             "statusCode": {
                                 "type": "number",
@@ -61801,14 +61444,12 @@
                     "url": {
                         "type": "string",
                         "maxLength": 2048,
-                        "description": "Target URL for webhook HTTPS requests",
-                        "x-qlik-customer-data": true
+                        "description": "Target URL for webhook HTTPS requests"
                     },
                     "name": {
                         "type": "string",
                         "maxLength": 512,
-                        "description": "The name for the webhook",
-                        "x-qlik-customer-data": true
+                        "description": "The name for the webhook"
                     },
                     "level": {
                         "enum": [
@@ -61832,8 +61473,7 @@
                         "type": "string",
                         "maxLength": 64,
                         "minLength": 32,
-                        "description": "String used as secret for calculating HMAC hash sent as header",
-                        "x-qlik-customer-data": true
+                        "description": "String used as secret for calculating HMAC hash sent as header"
                     },
                     "enabled": {
                         "type": "boolean",
@@ -61848,8 +61488,7 @@
                         "description": "Additional headers in the post request",
                         "additionalProperties": {
                             "type": "string"
-                        },
-                        "x-qlik-customer-data": true
+                        }
                     },
                     "ownerId": {
                         "type": "string",
@@ -61877,8 +61516,7 @@
                     "description": {
                         "type": "string",
                         "maxLength": 1024,
-                        "description": "The reason for creating the webhook",
-                        "x-qlik-customer-data": true
+                        "description": "The reason for creating the webhook"
                     },
                     "disabledReason": {
                         "type": "string",

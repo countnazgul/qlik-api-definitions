@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.2002.0",
+        "version": "12.2009.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -14393,6 +14393,13 @@
                         "items": {
                             "$ref": "#/components/schemas/NxPatches"
                         }
+                    },
+                    "qCyclicGroupStates": {
+                        "type": "array",
+                        "description": "Information about cyclic groups.",
+                        "items": {
+                            "$ref": "#/components/schemas/CyclicGroupState"
+                        }
                     }
                 }
             },
@@ -14636,6 +14643,21 @@
                         "items": {
                             "$ref": "#/components/schemas/NxPatches"
                         }
+                    }
+                }
+            },
+            "CyclicGroupState": {
+                "type": "object",
+                "properties": {
+                    "qInfo": {
+                        "type": "object",
+                        "description": "Target cyclic group.",
+                        "$ref": "#/components/schemas/NxInfo"
+                    },
+                    "qActiveField": {
+                        "type": "integer",
+                        "description": "Active field of the cyclic group, identified by a zero-based index.",
+                        "format": "int32"
                     }
                 }
             },
