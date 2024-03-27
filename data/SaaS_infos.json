@@ -159,6 +159,10 @@
         "title": "oauth",
         "version": ""
     },
+    "Oauth Clients": {
+        "title": "oauth-clients",
+        "version": ""
+    },
     "OAuth Tokens": {
         "title": "oauth-tokens",
         "version": ""

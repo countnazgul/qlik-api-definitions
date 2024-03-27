@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.2009.0",
+        "version": "12.2030.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -8930,6 +8930,65 @@
             "x-qlik-stability": "locked"
         },
         {
+            "name": "Doc.GetGroupStates",
+            "description": "",
+            "params": [],
+            "result": {
+                "name": "Results for Doc.GetGroupStates",
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "qGroupStates": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/GroupState"
+                            }
+                        }
+                    }
+                }
+            },
+            "errors": [
+                {
+                    "$ref": "#/components/errors/GenericErrors"
+                }
+            ],
+            "x-qlik-stability": "experimental"
+        },
+        {
+            "name": "Doc.ApplyGroupStates",
+            "description": "",
+            "params": [
+                {
+                    "name": "qGroupStates",
+                    "required": true,
+                    "schema": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/GroupState"
+                        }
+                    }
+                }
+            ],
+            "result": {
+                "name": "Results for Doc.ApplyGroupStates",
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "qResult": {
+                            "type": "object",
+                            "$ref": "#/components/schemas/ApplyGroupStatesResult"
+                        }
+                    }
+                }
+            },
+            "errors": [
+                {
+                    "$ref": "#/components/errors/GenericErrors"
+                }
+            ],
+            "x-qlik-stability": "experimental"
+        },
+        {
             "name": "Doc.CreateBookmarkEx",
             "description": "Creates a bookmark with softpatches.",
             "params": [
@@ -14398,7 +14457,7 @@
                         "type": "array",
                         "description": "Information about cyclic groups.",
                         "items": {
-                            "$ref": "#/components/schemas/CyclicGroupState"
+                            "$ref": "#/components/schemas/CyclicGroupPosition"
                         }
                     }
                 }
@@ -14646,7 +14705,7 @@
                     }
                 }
             },
-            "CyclicGroupState": {
+            "CyclicGroupPosition": {
                 "type": "object",
                 "properties": {
                     "qInfo": {
@@ -15998,6 +16057,10 @@
                     "qLabelExpression": {
                         "type": "string",
                         "description": "Label expression.\nThis parameter is optional."
+                    },
+                    "qAlias": {
+                        "type": "string",
+                        "description": "Alias of the dimension."
                     }
                 }
             },
@@ -17464,6 +17527,10 @@
                     },
                     "qLabelExpression": {
                         "type": "string"
+                    },
+                    "qAlias": {
+                        "type": "string",
+                        "description": "Alias of the dimension."
                     }
                 }
             },
@@ -17491,6 +17558,10 @@
                     },
                     "qLabelExpression": {
                         "type": "string"
+                    },
+                    "qAlias": {
+                        "type": "string",
+                        "description": "Alias of the dimension."
                     }
                 }
             },
@@ -20984,6 +21055,32 @@
                         "description": "True if user is temporarily locked from modifying the script. Meta contains the ID of the last modifier. Only applicable to QCS."
                     }
                 }
+            },
+            "GroupState": {
+                "type": "object",
+                "properties": {
+                    "qInfo": {
+                        "type": "object",
+                        "description": "Target cyclic group.",
+                        "$ref": "#/components/schemas/NxInfo"
+                    },
+                    "qActiveFieldDef": {
+                        "type": "string",
+                        "description": "String defining the active field."
+                    }
+                },
+                "x-qlik-stability": "experimental"
+            },
+            "ApplyGroupStatesResult": {
+                "type": "object",
+                "description": "Result of applying GroupState to multiple cyclic groups.",
+                "properties": {
+                    "qApplySuccess": {
+                        "type": "boolean",
+                        "description": "When true, the cyclic group state was fully applied. *"
+                    }
+                },
+                "x-qlik-stability": "experimental"
             },
             "SearchValueOptions": {
                 "type": "object",
