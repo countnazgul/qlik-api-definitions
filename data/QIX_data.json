@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.2030.0",
+        "version": "12.2038.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -14455,9 +14455,16 @@
                     },
                     "qCyclicGroupStates": {
                         "type": "array",
-                        "description": "Information about cyclic groups.",
+                        "description": "Information about cyclic groups by zero-based index. This field is unused.",
                         "items": {
                             "$ref": "#/components/schemas/CyclicGroupPosition"
+                        }
+                    },
+                    "qGroupStates": {
+                        "type": "array",
+                        "description": "Information about cyclic groups indexed by field definition.",
+                        "items": {
+                            "$ref": "#/components/schemas/GroupState"
                         }
                     }
                 }
@@ -14719,6 +14726,21 @@
                         "format": "int32"
                     }
                 }
+            },
+            "GroupState": {
+                "type": "object",
+                "properties": {
+                    "qInfo": {
+                        "type": "object",
+                        "description": "Target cyclic group.",
+                        "$ref": "#/components/schemas/NxInfo"
+                    },
+                    "qActiveFieldDef": {
+                        "type": "string",
+                        "description": "String defining the active field."
+                    }
+                },
+                "x-qlik-stability": "experimental"
             },
             "Bookmark": {
                 "type": "object",
@@ -21055,21 +21077,6 @@
                         "description": "True if user is temporarily locked from modifying the script. Meta contains the ID of the last modifier. Only applicable to QCS."
                     }
                 }
-            },
-            "GroupState": {
-                "type": "object",
-                "properties": {
-                    "qInfo": {
-                        "type": "object",
-                        "description": "Target cyclic group.",
-                        "$ref": "#/components/schemas/NxInfo"
-                    },
-                    "qActiveFieldDef": {
-                        "type": "string",
-                        "description": "String defining the active field."
-                    }
-                },
-                "x-qlik-stability": "experimental"
             },
             "ApplyGroupStatesResult": {
                 "type": "object",
