@@ -2337,7 +2337,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "ef40567f-093b-45a1-be5f-17910738f1f8",
+                "x-qlik-entity-revision": "0055913e-e37a-40ed-abf1-58e2a41b456e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -2462,7 +2462,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "166d15d9-c31c-4772-8899-bd781505bba3",
+                "x-qlik-entity-revision": "772e3efc-55ff-4314-9f5c-98b08fca8a03",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -2577,7 +2577,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "8b164ad9-3081-4522-9916-0213f85ddc4a",
+                "x-qlik-entity-revision": "f1ed3014-e6ea-4501-beaf-a7ea46d16316",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -12775,7 +12775,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d6ce250a-109a-4e8e-bf2d-72b6b7f82461",
+                "x-qlik-entity-revision": "29b67a3d-e968-4a9d-89bd-936a7dd9f21d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -12868,7 +12868,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b133c015-f379-4810-8c83-ac3293f7c821",
+                "x-qlik-entity-revision": "13ad94fa-56ba-4567-9b9d-e7df05b52ff8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -12965,7 +12965,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b99fc1ba-8652-489e-a214-45786292f987",
+                "x-qlik-entity-revision": "8840f262-628a-41df-81ea-d697577065ec",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -13045,7 +13045,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0d168b8c-5738-4797-9578-62787c2d2253",
+                "x-qlik-entity-revision": "a9a7c7f4-65bc-448d-9951-00d9e43de2ff",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13128,7 +13128,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "9eecc134-7052-4097-8058-c7fe95d41c43",
+                "x-qlik-entity-revision": "997abfe1-fe4b-4ba8-8e0b-7db6dff469f2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13181,7 +13181,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0f2c8f64-98d6-4a7b-a897-abd51d2d7565",
+                "x-qlik-entity-revision": "9d15b6e0-9d69-4b0c-b34f-dd4f60837c48",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13242,7 +13242,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f78681ea-fee3-4a9f-ba3f-f5692a78aaeb",
+                "x-qlik-entity-revision": "18d91427-8027-4e6f-a577-dfd757edd6f4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13323,7 +13323,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c894541a-9783-476d-98a9-ca1f387ea213",
+                "x-qlik-entity-revision": "3720ccc8-2ebb-401d-a308-533cd5200180",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13384,7 +13384,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "8d2e1a87-542e-43d5-baa7-3d071914cc84",
+                "x-qlik-entity-revision": "6b1a2e55-d3b6-46f6-9b57-ce00a3e4acab",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13443,7 +13443,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "fcac36d5-a74f-4259-bd33-99f94be432da",
+                "x-qlik-entity-revision": "f6289ee1-23ae-4402-ba66-408e4821cad5",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -13513,7 +13513,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "4f8349c4-88c5-481c-a7ba-1eea6e01a095",
+                "x-qlik-entity-revision": "917a87c4-5070-4a90-845f-2ccf58a13b34",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13583,7 +13583,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "1e66bd88-6ce2-47d3-9f29-f6f3b92c3306",
+                "x-qlik-entity-revision": "b5872b82-b0c5-4a44-aeba-1192ad8ae75c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13623,7 +13623,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "153918b8-ca4e-4f72-8da4-3eb35a90831a",
+                "x-qlik-entity-revision": "d0fe7052-4044-4607-a76f-b57209eec041",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13766,7 +13766,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "4faf5d6c-7113-41be-b947-d8b8c36f4ea0",
+                "x-qlik-entity-revision": "df80fa50-12ac-4aff-93ff-e8c4d6db06e9",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -13916,7 +13916,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "de6ce592-09d5-4293-aba0-aeccedca5bdd",
+                "x-qlik-entity-revision": "6e561712-f2fb-4e38-873d-f87fae043d9c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13991,7 +13991,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "7f5b7aac-ca10-497d-82ef-1d22bec54a75",
+                "x-qlik-entity-revision": "e05bd0f5-5878-4281-9c1f-2a08612da682",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -14159,7 +14159,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "44c71b45-34d6-4d86-9af9-596986791518",
+                "x-qlik-entity-revision": "192da14c-d924-41b1-b5b0-b7aa6dad1588",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -14640,7 +14640,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "ffbb68b7-deba-4ca7-9d26-3895bddd92fb",
+                "x-qlik-entity-revision": "933cb292-d0d4-4143-a603-d17fc09a0298",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -14705,7 +14705,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "e7364aa5-18a7-48a5-ba3c-47bc6dc42225",
+                "x-qlik-entity-revision": "47e1c82a-0c7e-43ee-b7de-f6c8e1cea4d4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -22224,7 +22224,7 @@
                         "name": "next",
                         "schema": {
                             "type": "string",
-                            "format": "uuid",
+                            "format": "uid",
                             "example": "507f191e810c19729de860ea"
                         },
                         "description": "The next page cursor."
@@ -22234,7 +22234,7 @@
                         "name": "prev",
                         "schema": {
                             "type": "string",
-                            "format": "uuid",
+                            "format": "uid",
                             "example": "507f191e810c19729de860ga"
                         },
                         "description": "The previous page cursor."
@@ -22272,7 +22272,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "7db24c88-2e25-4c50-add8-eb9d6b5cc59e",
+                "x-qlik-entity-revision": "7e49a286-593b-4bed-9bdc-1b92929d5a49",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -22392,7 +22392,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "563f1acb-760c-41cf-a110-19dba9f09615",
+                "x-qlik-entity-revision": "aa474275-b7bc-453e-ab78-4564fb80c720",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -22485,7 +22485,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "cccbb49d-bdb3-4b3b-9808-7ee4d624bea8",
+                "x-qlik-entity-revision": "baa22878-4c67-4bb4-914e-373164d765a8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -22599,7 +22599,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "4915cdb8-50ff-48a1-b6f2-ca60e40fd3e3",
+                "x-qlik-entity-revision": "976f8a05-6dd0-4e36-a35e-80b7e20d174a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -22823,7 +22823,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b7c4e98b-d468-40f1-845c-091ee8d061aa",
+                "x-qlik-entity-revision": "9e442b74-9d73-4e23-af6b-cc8bf9815e08",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -22905,7 +22905,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0a161172-87bb-40d7-9719-af433d1e61ff",
+                "x-qlik-entity-revision": "c044a154-0a01-476d-a7ae-968ab51ec831",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -22997,7 +22997,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "58231ad2-f06d-4f7b-80e0-6fe20ff5f4cb",
+                "x-qlik-entity-revision": "33ef504e-dfe3-42d3-ad7d-4ff0e02ca9f1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -26949,728 +26949,6 @@
                 }
             }
         },
-        "/v1/notification-digests": {
-            "get": {
-                "tags": [
-                    "notification digests"
-                ],
-                "summary": "gets a single notification digest.",
-                "responses": {
-                    "200": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NotificationDigest"
-                                }
-                            }
-                        },
-                        "description": "Notification digest was successfully returned."
-                    },
-                    "400": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Bad request, malformed syntax or errors in parameters."
-                    },
-                    "404": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "digest not found."
-                    },
-                    "500": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Internal server error."
-                    },
-                    "default": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Error response."
-                    }
-                },
-                "operationId": "NotificationDigestGet",
-                "x-qlik-visibility": "public",
-                "x-qlik-stability": "stable",
-                "x-qlik-categories": [
-                    "external/manage"
-                ],
-                "x-qlik-deprecated": false,
-                "x-qlik-tier": {
-                    "tier": "1",
-                    "limit": 1000
-                }
-            },
-            "post": {
-                "tags": [
-                    "notification digests"
-                ],
-                "summary": "Creates a new notification digest.",
-                "responses": {
-                    "201": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NotificationDigest"
-                                }
-                            }
-                        },
-                        "description": "Notification digest was successfully created."
-                    },
-                    "400": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Bad request, malformed syntax or errors in parameters."
-                    },
-                    "500": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Internal server error."
-                    },
-                    "default": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Error response."
-                    }
-                },
-                "operationId": "NotificationDigestCreate",
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/NotificationDigestCreateRequest"
-                            }
-                        }
-                    },
-                    "required": true,
-                    "description": "The notification digest create request definition."
-                },
-                "x-qlik-visibility": "public",
-                "x-qlik-stability": "stable",
-                "x-qlik-categories": [
-                    "external/manage"
-                ],
-                "x-qlik-deprecated": false,
-                "x-qlik-tier": {
-                    "tier": "2",
-                    "limit": 100
-                }
-            },
-            "patch": {
-                "tags": [
-                    "notification digests"
-                ],
-                "summary": "Update a notification digest.",
-                "responses": {
-                    "204": {
-                        "description": "Notification digest was successfully updated."
-                    },
-                    "400": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Bad request, malformed syntax or errors in parameters."
-                    },
-                    "404": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "A notification digest with the specified ID was not found."
-                    },
-                    "500": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Internal server error."
-                    },
-                    "default": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Error response."
-                    }
-                },
-                "operationId": "NotificationDigestPatch",
-                "requestBody": {
-                    "$ref": "#/components/requestBodies/JsonPatches"
-                },
-                "x-qlik-visibility": "public",
-                "x-qlik-stability": "stable",
-                "x-qlik-categories": [
-                    "external/manage"
-                ],
-                "x-qlik-deprecated": false,
-                "x-qlik-tier": {
-                    "tier": "2",
-                    "limit": 100
-                }
-            },
-            "delete": {
-                "tags": [
-                    "notification digests"
-                ],
-                "summary": "deletes a notification digest.",
-                "responses": {
-                    "204": {
-                        "description": "The notification digest has been successfully deleted."
-                    },
-                    "400": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "The specified digest ID is invalid (e.g. not a number)."
-                    },
-                    "404": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "A notification digest with the specified ID was not found."
-                    },
-                    "500": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Internal server error."
-                    },
-                    "default": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Error response."
-                    }
-                },
-                "operationId": "NotificationDigestDelete",
-                "x-qlik-visibility": "public",
-                "x-qlik-stability": "stable",
-                "x-qlik-categories": [
-                    "external/manage"
-                ],
-                "x-qlik-deprecated": false,
-                "x-qlik-tier": {
-                    "tier": "2",
-                    "limit": 100
-                }
-            }
-        },
-        "/v1/notification-digests/{digestId}": {
-            "get": {
-                "tags": [
-                    "notification digests"
-                ],
-                "summary": "gets a single notification digest.",
-                "responses": {
-                    "200": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NotificationDigest"
-                                }
-                            }
-                        },
-                        "description": "Notification digest was successfully returned."
-                    },
-                    "400": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Bad request, malformed syntax or errors in parameters."
-                    },
-                    "404": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "digest not found."
-                    },
-                    "500": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Internal server error."
-                    },
-                    "default": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Error response."
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "digestId",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "required": true,
-                        "description": "The notification digest task identifier."
-                    }
-                ],
-                "operationId": "NotificationDigestIdGet",
-                "x-qlik-visibility": "public",
-                "x-qlik-stability": "stable",
-                "x-qlik-categories": [
-                    "external/manage"
-                ],
-                "x-qlik-deprecated": false,
-                "x-qlik-tier": {
-                    "tier": "1",
-                    "limit": 1000
-                }
-            },
-            "patch": {
-                "tags": [
-                    "notification digests"
-                ],
-                "summary": "Update a notification digest.",
-                "responses": {
-                    "204": {
-                        "description": "Notification digest was successfully updated."
-                    },
-                    "400": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Bad request, malformed syntax or errors in parameters."
-                    },
-                    "404": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "A notification digest with the specified ID was not found."
-                    },
-                    "500": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Internal server error."
-                    },
-                    "default": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Error response."
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "digestId",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "required": true,
-                        "description": "The notification digest task identifier."
-                    }
-                ],
-                "operationId": "NotificationDigestIdPatch",
-                "requestBody": {
-                    "$ref": "#/components/requestBodies/JsonPatches"
-                },
-                "x-qlik-visibility": "public",
-                "x-qlik-stability": "stable",
-                "x-qlik-categories": [
-                    "external/manage"
-                ],
-                "x-qlik-deprecated": false,
-                "x-qlik-tier": {
-                    "tier": "2",
-                    "limit": 100
-                }
-            },
-            "delete": {
-                "tags": [
-                    "notification digests"
-                ],
-                "summary": "deletes a notification digest.",
-                "responses": {
-                    "204": {
-                        "description": "The notification digest has been successfully deleted."
-                    },
-                    "400": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "The specified digest ID is invalid (e.g. not a number)."
-                    },
-                    "404": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "A notification digest with the specified ID was not found."
-                    },
-                    "500": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Internal server error."
-                    },
-                    "default": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Error response."
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "digestId",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "required": true,
-                        "description": "The notification digest task identifier."
-                    }
-                ],
-                "operationId": "NotificationDigestIdDelete",
-                "x-qlik-visibility": "public",
-                "x-qlik-stability": "stable",
-                "x-qlik-categories": [
-                    "external/manage"
-                ],
-                "x-qlik-deprecated": false,
-                "x-qlik-tier": {
-                    "tier": "2",
-                    "limit": 100
-                }
-            }
-        },
-        "/v1/notification-digests/{digestId}/executions": {
-            "get": {
-                "tags": [
-                    "notification digests executions"
-                ],
-                "summary": "List all notification digest executions based on filters.",
-                "responses": {
-                    "200": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NotificationDigestExecutions"
-                                }
-                            }
-                        },
-                        "description": "Notification digest executions were successfully returned."
-                    },
-                    "400": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Bad request, malformed syntax or errors in parameters."
-                    },
-                    "500": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Internal server error."
-                    },
-                    "default": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Error response."
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "digestId",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "required": true,
-                        "description": "The notification digest task identifier."
-                    },
-                    {
-                        "in": "query",
-                        "name": "limit",
-                        "schema": {
-                            "type": "integer",
-                            "default": 100,
-                            "maximum": 100,
-                            "minimum": 1
-                        },
-                        "required": false,
-                        "description": "Limit the returned result set"
-                    },
-                    {
-                        "in": "query",
-                        "name": "offset",
-                        "schema": {
-                            "type": "integer",
-                            "default": 0,
-                            "minimum": 0
-                        },
-                        "required": false,
-                        "description": "Offset for finding a list of entities - used for pagination"
-                    },
-                    {
-                        "in": "query",
-                        "name": "page",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "required": false,
-                        "description": "The cursor to the page of data."
-                    },
-                    {
-                        "in": "query",
-                        "name": "workflowId",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "required": false,
-                        "description": "The workflow Id for a specific digest"
-                    },
-                    {
-                        "in": "query",
-                        "name": "next",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "required": false,
-                        "description": "The cursor to the next page of data. Only one of next or previous may be specified.",
-                        "x-qlik-deprecated": true
-                    },
-                    {
-                        "in": "query",
-                        "name": "prev",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "required": false,
-                        "x-qlik-deprecated": true
-                    }
-                ],
-                "operationId": "NotificationDigestExecutionList",
-                "x-qlik-visibility": "public",
-                "x-qlik-stability": "stable",
-                "x-qlik-categories": [
-                    "external/manage"
-                ],
-                "x-qlik-deprecated": false,
-                "x-qlik-tier": {
-                    "tier": "1",
-                    "limit": 1000
-                }
-            }
-        },
-        "/v1/notification-digests/{digestId}/executions/{executionId}": {
-            "get": {
-                "tags": [
-                    "notification digests executions"
-                ],
-                "summary": "gets a single notification digest execution.",
-                "responses": {
-                    "200": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/NotificationDigestExecution"
-                                }
-                            }
-                        },
-                        "description": "Notification digest executions were successfully returned."
-                    },
-                    "400": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Bad request, malformed syntax or errors in parameters."
-                    },
-                    "404": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "execution not found."
-                    },
-                    "500": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Internal server error."
-                    },
-                    "default": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Error response."
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "digestId",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "required": true,
-                        "description": "The notification digest task identifier."
-                    },
-                    {
-                        "in": "path",
-                        "name": "executionId",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "required": true,
-                        "description": "The notification digest task identifier."
-                    }
-                ],
-                "operationId": "NotificationDigestExecutionIdGet",
-                "x-qlik-visibility": "public",
-                "x-qlik-stability": "stable",
-                "x-qlik-categories": [
-                    "external/manage"
-                ],
-                "x-qlik-deprecated": false,
-                "x-qlik-tier": {
-                    "tier": "1",
-                    "limit": 1000
-                }
-            }
-        },
         "/v1/notifications": {
             "get": {
                 "tags": [
@@ -29824,7 +29102,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "bb480790-3d5d-4411-8f0a-27fae7079bbc",
+                "x-qlik-entity-revision": "c215318f-2979-44b5-8cc1-c4fa1f2ea513",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -29925,7 +29203,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "7f7c2fbd-850e-4336-a806-0181c1280d4c",
+                "x-qlik-entity-revision": "bb4d1452-e643-43b3-af28-5d77aa580c68",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -30027,7 +29305,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b58f5b56-c7b7-4681-a103-2dfaa9d025f1",
+                "x-qlik-entity-revision": "c96ef283-fedb-47e5-a661-d7d7f18e2fe2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30926,7 +30204,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "24b3aabb-0076-4d8d-a583-2477dc1e3153",
+                "x-qlik-entity-revision": "21fd960e-32bc-4b61-a3ef-9a3782f865e0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -31103,7 +30381,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "607f5057-d04b-40d1-a664-19dc34e747a2",
+                "x-qlik-entity-revision": "a99ae16d-705d-4756-8246-b244d9af77ff",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -31203,7 +30481,7 @@
                         "name": "next",
                         "schema": {
                             "type": "string",
-                            "format": "uuid",
+                            "format": "uid",
                             "example": "507f191e810c19729de860ea"
                         },
                         "description": "The next page cursor."
@@ -31213,7 +30491,7 @@
                         "name": "prev",
                         "schema": {
                             "type": "string",
-                            "format": "uuid",
+                            "format": "uid",
                             "example": "507f191e810c19729de86gea"
                         },
                         "description": "The previous page cursor."
@@ -31242,7 +30520,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "9fbee38a-ba16-4998-a842-9088ef9019af",
+                "x-qlik-entity-revision": "94f56980-1e65-4f98-83d2-1963c0a99a84",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -31325,7 +30603,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "2d0a3c9e-8cde-439a-998f-b7a585b44fb2",
+                "x-qlik-entity-revision": "1eecac84-5da9-4c2d-95c3-ef9493e0970e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -31567,7 +30845,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "6cc5377a-e105-4a4f-bf43-5dadb3d93fe0",
+                "x-qlik-entity-revision": "d21e30f1-7d4c-47cd-b1c6-a362ebacb862",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -31639,7 +30917,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "2126d7a0-a687-49f7-8e19-9b2c706fa78d",
+                "x-qlik-entity-revision": "bee4f452-817d-4ff4-b189-98526cbab048",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -31723,7 +31001,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "a438b384-25f1-495d-ac97-1f2185f7ed11",
+                "x-qlik-entity-revision": "4f6f7056-f5e5-49b9-b040-fc521e4d8608",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -35614,7 +34892,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "ccd77d83-08ef-49e9-a146-b67081f7496c",
+                "x-qlik-entity-revision": "5970d7e7-428f-4815-aa4e-8bf26ccb6eb3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -35739,7 +35017,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "86cc5199-aa37-4bac-8d1e-952a9816258c",
+                "x-qlik-entity-revision": "b60f9fa5-b223-440c-9bb5-90c96060d268",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -35850,7 +35128,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c1e1a7e7-fb3c-43cd-a07b-cc7da00f9ddb",
+                "x-qlik-entity-revision": "8243c8fc-b747-437a-9520-9d6c03847beb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -35958,7 +35236,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "5e440011-c938-41fd-a9ba-d01b4dccf254",
+                "x-qlik-entity-revision": "3d3f35db-757b-4ea3-b381-2f5655954aac",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -36290,7 +35568,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "ed6e38c5-f613-4d73-ad92-a84ff470c503",
+                "x-qlik-entity-revision": "c55f25fb-96d9-47e0-97ff-26b9148a903e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -40160,7 +39438,8 @@
                     },
                     "filterVersion": {
                         "enum": [
-                            "filter-1.0"
+                            "filter-1.0",
+                            "filter-2.0"
                         ],
                         "type": "string",
                         "readOnly": true
@@ -40242,7 +39521,8 @@
                     },
                     "filterVersion": {
                         "enum": [
-                            "filter-1.0"
+                            "filter-1.0",
+                            "filter-2.0"
                         ],
                         "type": "string"
                     }
@@ -46489,21 +45769,27 @@
                 "properties": {
                     "op": {
                         "enum": [
-                            "replace",
+                            "add",
                             "remove",
-                            "add"
+                            "replace",
+                            "move",
+                            "copy",
+                            "test"
                         ],
                         "type": "string",
                         "description": "The operation to be performed."
                     },
+                    "from": {
+                        "type": "string",
+                        "description": "A JSON Pointer path pointing to the location to move/copy from."
+                    },
                     "path": {
                         "type": "string",
-                        "description": "The path for the given resource field to patch."
+                        "description": "A JSON pointer to the property being affected."
                     },
                     "value": {
                         "type": "object",
-                        "properties": {},
-                        "description": "The value to be used for this operation."
+                        "description": "The value to add, replace or test."
                     }
                 }
             },
@@ -51504,7 +50790,7 @@
                     "properties": {
                         "id": {
                             "type": "string",
-                            "format": "uuid",
+                            "format": "uid",
                             "example": "507f191e810c19729de860ea",
                             "description": "The unique role identitier"
                         },
@@ -51549,7 +50835,7 @@
                     "properties": {
                         "id": {
                             "type": "string",
-                            "format": "uuid",
+                            "format": "uid",
                             "example": "507f191e810c19729de860ea",
                             "description": "The unique role identitier"
                         }
@@ -51598,7 +50884,7 @@
                 "properties": {
                     "id": {
                         "type": "string",
-                        "format": "uuid",
+                        "format": "uid",
                         "example": "507f191e810c19729de860ea",
                         "readOnly": true,
                         "description": "The unique identifier for the group",
@@ -51647,8 +50933,8 @@
                     },
                     "tenantId": {
                         "type": "string",
-                        "format": "uuid",
-                        "example": "12345678-1234-5678-1234-567812345678",
+                        "format": "uid",
+                        "example": "q3VRZ4YMixRaLKEPhkZWM-XMIDN7cO8f",
                         "description": "The tenant identifier associated with the given group"
                     },
                     "createdAt": {
@@ -51671,7 +50957,7 @@
                             "properties": {
                                 "id": {
                                     "type": "string",
-                                    "format": "uuid",
+                                    "format": "uid",
                                     "example": "507f191e810c19729de860ea",
                                     "x-qlik-filterable": true
                                 },
@@ -51915,7 +51201,7 @@
                     },
                     "tenantId": {
                         "type": "string",
-                        "format": "UUID",
+                        "format": "uid",
                         "description": "The unique tenant identifier."
                     },
                     "systemGroups": {
@@ -55122,170 +54408,6 @@
                     }
                 }
             },
-            "JsonPatches": {
-                "type": "array",
-                "items": {
-                    "$ref": "#/components/schemas/JsonPatch"
-                },
-                "example": [
-                    {
-                        "op": "replace",
-                        "path": "/enabled",
-                        "value": false
-                    },
-                    {
-                        "op": "add",
-                        "path": "/frequency",
-                        "value": "RRULE:FREQ=WEEKLY"
-                    }
-                ],
-                "description": "A JSON Patch document as defined in https://datatracker.ietf.org/doc/html/rfc6902."
-            },
-            "NotificationDigest": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "type": "string",
-                        "description": "id of digest",
-                        "x-go-custom-tag": "bson:\"_id\""
-                    },
-                    "enabled": {
-                        "type": "boolean",
-                        "example": true,
-                        "description": "Whether the digest is enabled or not"
-                    },
-                    "ownerId": {
-                        "type": "string",
-                        "readOnly": true,
-                        "description": "Owner of the execution"
-                    },
-                    "tenantId": {
-                        "type": "string",
-                        "readOnly": true,
-                        "description": "The tenant that this execution belongs to"
-                    },
-                    "timezone": {
-                        "type": "string",
-                        "readOnly": true,
-                        "description": "the timezone for the chronos job"
-                    },
-                    "frequency": {
-                        "type": "string",
-                        "example": "RRULE:FREQ=DAILY",
-                        "description": "RRULE for SCHEDULED digest, as specified in RFC5545."
-                    },
-                    "startTime": {
-                        "type": "string",
-                        "readOnly": true,
-                        "description": "start time of the notification request"
-                    },
-                    "chronosJobId": {
-                        "type": "string",
-                        "readOnly": true,
-                        "description": "The chronos job identifier. It is set once the related chronos job is created."
-                    },
-                    "currentWorkflowId": {
-                        "type": "string",
-                        "readOnly": true,
-                        "description": "current workflowID to be written in the executions"
-                    }
-                }
-            },
-            "NotificationDigestCreateRequest": {
-                "type": "object",
-                "properties": {
-                    "enabled": {
-                        "type": "boolean",
-                        "example": true,
-                        "description": "Whether the digest is enabled or not"
-                    },
-                    "frequency": {
-                        "type": "string",
-                        "example": "RRULE:FREQ=DAILY",
-                        "description": "RRULE for SCHEDULED digest, as specified in RFC5545."
-                    }
-                }
-            },
-            "NotificationDigestExecution": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "type": "string",
-                        "description": "id of execution",
-                        "x-go-custom-tag": "bson:\"_id\""
-                    },
-                    "content": {
-                        "type": "object",
-                        "properties": {},
-                        "description": "digest buffer content received from notification-prep"
-                    },
-                    "ownerId": {
-                        "type": "string",
-                        "readOnly": true,
-                        "description": "Owner of the execution"
-                    },
-                    "expireAt": {
-                        "type": "string",
-                        "example": "2019-10-15T16:07:01.492Z",
-                        "description": "Timestamp for TTL document deleted after time stamp is reached"
-                    },
-                    "tenantId": {
-                        "type": "string",
-                        "readOnly": true,
-                        "description": "The tenant that this execution belongs to"
-                    },
-                    "resourceId": {
-                        "type": "string",
-                        "description": "resourceId for the digest execution"
-                    },
-                    "workflowId": {
-                        "type": "string",
-                        "description": "workflow Id of related digest"
-                    },
-                    "dateCreated": {
-                        "type": "string",
-                        "example": "2019-10-15T16:07:01.492Z",
-                        "description": "Timestamp for the creation of the task execution"
-                    },
-                    "resourceType": {
-                        "type": "string",
-                        "description": "resourceId for the digest execution"
-                    },
-                    "secureContent": {
-                        "type": "object",
-                        "properties": {},
-                        "description": "digest buffer secure content received from notification-prep"
-                    },
-                    "executionFlowStartTime": {
-                        "type": "string",
-                        "example": "2019-10-15T16:07:01.492Z",
-                        "description": "Timestamp of execution start"
-                    }
-                },
-                "description": "Notification Digest Execution."
-            },
-            "NotificationDigestExecutions": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/StandardListResponseProps"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "links": {
-                                "$ref": "#/components/schemas/ListLinks"
-                            },
-                            "executions": {
-                                "type": "array",
-                                "items": {
-                                    "$ref": "#/components/schemas/NotificationDigestExecution"
-                                }
-                            }
-                        }
-                    }
-                ],
-                "description": "list of Notification Digest Executions."
-            },
             "NotificationItem": {
                 "type": "object",
                 "required": [
@@ -56605,6 +55727,11 @@
                         "example": "efSCcpNYuayTysONkUcE3F80zYQ_LV9w",
                         "description": "The ID of the tenant who owns the reload."
                     },
+                    "errorCode": {
+                        "type": "string",
+                        "example": "EngineConnectionError",
+                        "description": "The error code when the status is FAILED."
+                    },
                     "startTime": {
                         "type": "string",
                         "example": "2020-11-03T17:00:06.351Z",
@@ -56619,6 +55746,11 @@
                         "type": "string",
                         "example": "2020-11-03T17:00:00.164Z",
                         "description": "The time the reload job was created."
+                    },
+                    "errorMessage": {
+                        "type": "string",
+                        "example": "failed to complete reload: unexpected EOF",
+                        "description": "The error message when the status is FAILED."
                     }
                 }
             },
@@ -56694,7 +55826,7 @@
                     "EXCEEDED_LIMIT"
                 ],
                 "type": "string",
-                "example": "SUCCEEDED",
+                "example": "FAILED",
                 "description": "The status of the reload. There are seven statuses. `QUEUED`, `RELOADING`, `CANCELING` are the active statuses. `SUCCEEDED`, `FAILED`, `CANCELED`, `EXCEEDED_LIMIT` are the end statuses."
             },
             "Type": {
@@ -56994,41 +56126,6 @@
                     }
                 }
             },
-            "CyclableTemplate": {
-                "required": [
-                    "cycleTemplate"
-                ],
-                "properties": {
-                    "fields": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        },
-                        "maxItems": 3,
-                        "description": "The values of the field to be selected."
-                    },
-                    "cycleTemplate": {
-                        "$ref": "#/components/schemas/cycleTemplate"
-                    }
-                }
-            },
-            "cycleTemplate": {
-                "required": [
-                    "type"
-                ],
-                "properties": {
-                    "type": {
-                        "enum": [
-                            "sense-excel-template-1.0"
-                        ],
-                        "type": "string",
-                        "description": "Template type and version using semantic versioning. It must have the following name convention, dashed-separated-template-name-MAJOR.MINOR"
-                    },
-                    "SenseExcelTemplate": {
-                        "$ref": "#/components/schemas/SenseExcelTemplate"
-                    }
-                }
-            },
             "Definitions": {
                 "properties": {
                     "selectionsByState": {
@@ -57188,7 +56285,8 @@
                             "excel",
                             "pptx",
                             "pptxcomposition",
-                            "csv"
+                            "csv",
+                            "cycle"
                         ],
                         "type": "string",
                         "description": "The generated report type.\n\nEach template type supports specific output types:\n   - composition-1.0 supports only pdfcomposition and pptxcomposition output types\n   - excel-1.0 supports only excel output type\n   - sense-image-1.0 supports pdf and image output types\n   - sense-sheet-1.0 supports only pdf output type\n\nEach output type requires a specific output to be provided:\n   - excel requires excelOutput to be set\n   - pdfcomposition requires pdfCompositionOutput to be set\n   - pptxcomposition requires pptxCompositionOutput to be set\n   - pdf requires pdfOuput to be set\n   - image requires imageOutput to be set\n   - csv doesn't have csv output.\n"
@@ -57540,16 +56638,13 @@
                             "cycle-template-1.0"
                         ],
                         "type": "string",
-                        "description": "Template type and version using semantic versioning. It must have the following name convention: dashed-separated-template-name-MAJOR.MINOR.\nPlease note that sense-story-x.0, sense-excel-template-1.0, sense-data-x.0 and qv-data-x.0 are only for internal use.\n\nEach type requires a specific template to be provided:\n  - composition-1.0 requires compositionTemplates to be set\n  - sense-excel-template-1.0 requires senseExcelTemplate to be set\n  - sense-image-1.0 requires senseImageTemplate to be set\n  - sense-sheet-1.0 requires senseSheetTemplate to be set\n\nEach template type supports specific output types:\n  - composition-1.0 supports only pdfcomposition output type\n  - sense-excel-template-1.0 supports only excel output type\n  - sense-image-1.0 supports pdf and png output types\n  - sense-sheet-1.0 supports only pdf output type\n"
+                        "description": "Template type and version using semantic versioning. It must have the following name convention: dashed-separated-template-name-MAJOR.MINOR.\nPlease note that sense-story-x.0, sense-excel-template-1.0, sense-data-x.0 and qv-data-x.0 are only for internal use.\n\nEach type requires a specific template to be provided:\n  - composition-1.0 requires compositionTemplates to be set\n  - sense-excel-template-1.0 requires senseExcelTemplate to be set\n  - sense-image-1.0 requires senseImageTemplate to be set\n  - sense-sheet-1.0 requires senseSheetTemplate to be set\n  - cycle-1.0 requires cycleTemplate to be set\n\nEach template type supports specific output types:\n  - composition-1.0 supports only pdfcomposition output type\n  - sense-excel-template-1.0 supports only excel output type\n  - sense-image-1.0 supports pdf and png output types\n  - sense-sheet-1.0 supports only pdf output type\n"
                     },
                     "output": {
                         "$ref": "#/components/schemas/OutputItem"
                     },
                     "definitions": {
                         "$ref": "#/components/schemas/Definitions"
-                    },
-                    "cyclableTemplate": {
-                        "$ref": "#/components/schemas/CyclableTemplate"
                     },
                     "senseExcelTemplate": {
                         "$ref": "#/components/schemas/SenseExcelTemplate"
@@ -58048,7 +57143,7 @@
                 "properties": {
                     "id": {
                         "type": "string",
-                        "format": "uuid",
+                        "format": "uid",
                         "example": "507f191e810c19729de860ea",
                         "readOnly": true,
                         "description": "The unique identifier for the role.",
@@ -58115,8 +57210,8 @@
                     },
                     "tenantId": {
                         "type": "string",
-                        "format": "uuid",
-                        "example": "12345678-1234-5678-1234-567812345678'",
+                        "format": "uid",
+                        "example": "q3VRZ4YMixRaLKEPhkZWM-XMIDN7cO8f",
                         "description": "The tenant unique identifier associated with the given Role.",
                         "x-qlik-filterable": true
                     },
@@ -60938,7 +60033,7 @@
                     "properties": {
                         "id": {
                             "type": "string",
-                            "format": "uuid",
+                            "format": "uid",
                             "example": "507f191e810c19729de860eb",
                             "description": "The unique group identitier"
                         },
@@ -62646,19 +61741,6 @@
                     "type": "string"
                 },
                 "description": "A comma-separated list of tus protocol versions supported by the server."
-            }
-        },
-        "requestBodies": {
-            "JsonPatches": {
-                "content": {
-                    "application/json": {
-                        "schema": {
-                            "$ref": "#/components/schemas/JsonPatches"
-                        }
-                    }
-                },
-                "required": true,
-                "description": "The notification digest patch operations."
             }
         },
         "examples": {

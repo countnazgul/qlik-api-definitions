@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.2038.0",
+        "version": "12.2057.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -18507,6 +18507,11 @@
                         "items": {
                             "$ref": "#/components/schemas/BookmarkFieldVerifyWarning"
                         }
+                    },
+                    "qGroupStateResult": {
+                        "type": "object",
+                        "description": "Result of applying group states (if any).",
+                        "$ref": "#/components/schemas/ApplyGroupStatesResult"
                     }
                 },
                 "x-qlik-stability": "experimental"
@@ -18559,6 +18564,60 @@
                     {
                         "x-qlik-const": 4,
                         "title": "STATE_MISSING"
+                    }
+                ]
+            },
+            "ApplyGroupStatesResult": {
+                "type": "object",
+                "description": "Result of applying GroupState to multiple cyclic groups.",
+                "properties": {
+                    "qApplySuccess": {
+                        "type": "boolean",
+                        "description": "When true, the operation was successful."
+                    },
+                    "qWarnings": {
+                        "type": "array",
+                        "description": "Lists which states failed to be applied and why.",
+                        "items": {
+                            "$ref": "#/components/schemas/ApplyGroupStateWarning"
+                        }
+                    }
+                },
+                "x-qlik-stability": "experimental"
+            },
+            "ApplyGroupStateWarning": {
+                "type": "object",
+                "properties": {
+                    "qState": {
+                        "type": "object",
+                        "description": "Group state that could not be applied.",
+                        "$ref": "#/components/schemas/GroupState"
+                    },
+                    "qType": {
+                        "type": "string",
+                        "description": "Nature of the warning.\n\nOne of:\n* group_missing or GROUP_MISSING\n* group_not_applicable or GROUP_NOT_APPLICABLE\n* fielddef_missing or FIELDDEF_MISSING",
+                        "$ref": "#/components/schemas/ApplyGroupStateWarningType"
+                    }
+                },
+                "x-qlik-stability": "experimental"
+            },
+            "ApplyGroupStateWarningType": {
+                "type": "string",
+                "oneOf": [
+                    {
+                        "x-qlik-const": 0,
+                        "title": "group_missing",
+                        "description": "GROUP_MISSING"
+                    },
+                    {
+                        "x-qlik-const": 1,
+                        "title": "group_not_applicable",
+                        "description": "GROUP_NOT_APPLICABLE"
+                    },
+                    {
+                        "x-qlik-const": 2,
+                        "title": "fielddef_missing",
+                        "description": "FIELDDEF_MISSING"
                     }
                 ]
             },
@@ -21077,17 +21136,6 @@
                         "description": "True if user is temporarily locked from modifying the script. Meta contains the ID of the last modifier. Only applicable to QCS."
                     }
                 }
-            },
-            "ApplyGroupStatesResult": {
-                "type": "object",
-                "description": "Result of applying GroupState to multiple cyclic groups.",
-                "properties": {
-                    "qApplySuccess": {
-                        "type": "boolean",
-                        "description": "When true, the cyclic group state was fully applied. *"
-                    }
-                },
-                "x-qlik-stability": "experimental"
             },
             "SearchValueOptions": {
                 "type": "object",
