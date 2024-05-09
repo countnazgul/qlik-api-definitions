@@ -19589,7 +19589,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "ac9da5d9-0847-4127-a09a-ea1671b502f2",
+                "x-qlik-entity-revision": "5d597519-672d-4343-b7b4-f1d16e0f724a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -19661,7 +19661,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c60bad89-a489-4519-943e-1f9cebe458a2",
+                "x-qlik-entity-revision": "ebfde9d4-886f-4818-b617-f45b58afadcb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -19738,7 +19738,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The id of the glossary to retrieve."
@@ -19749,7 +19749,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "9eb71e1c-cb76-4d5e-9398-4eda3034c62d",
+                "x-qlik-entity-revision": "5f8ac0ff-5ba6-4d86-9f64-7ac740ed00fb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -19846,7 +19846,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The glossary id."
@@ -19876,7 +19876,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "8c2d1e55-15b3-4bb2-885f-2ab5d2d772b4",
+                "x-qlik-entity-revision": "9421a674-8405-4286-a651-2293967a4bcf",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -19951,7 +19951,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The id of the glossary to update."
@@ -19980,7 +19980,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "87d4b345-ec83-4e0c-89a0-8f52e290e803",
+                "x-qlik-entity-revision": "8b1244f3-7801-4e81-951e-a1eecc3009fb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -20034,7 +20034,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The id of the glossary to delete."
@@ -20045,7 +20045,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "31c7c2e7-92ff-424d-8c06-fb0d4e563755",
+                "x-qlik-entity-revision": "bdfadf61-6bc9-4698-826b-576fb57fb8ff",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -20108,7 +20108,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The glossary id."
@@ -20119,7 +20119,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0b96cf33-5f6a-42d2-bef2-0ce033fc02f9",
+                "x-qlik-entity-revision": "71a710c2-c44e-4ae1-b9e6-ce4c5f8d58a1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -20182,7 +20182,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The glossary id."
@@ -20247,7 +20247,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "899120c7-9ca9-4e0e-b0ae-d714c1860451",
+                "x-qlik-entity-revision": "95844b14-5c67-4ee2-9b17-872132346a61",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -20322,7 +20322,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The glossary id."
@@ -20342,7 +20342,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "47fb75ca-6020-45db-bc09-6c84c7046e6b",
+                "x-qlik-entity-revision": "65917356-d984-4bc4-88be-be6beda7f7f0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -20419,7 +20419,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The category id."
@@ -20430,7 +20430,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The glossary id."
@@ -20450,7 +20450,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f6429e8d-f21d-4c64-9d58-4ec96c091169",
+                "x-qlik-entity-revision": "7c52a99c-ef23-484d-97b2-bd66365fab82",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -20547,7 +20547,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The category id."
@@ -20558,7 +20558,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The glossary id."
@@ -20588,7 +20588,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "4cf7d795-908b-471c-b81a-2e12d5d52e36",
+                "x-qlik-entity-revision": "19847bab-8620-47dd-b1eb-2e9ba27ae36d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -20663,7 +20663,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The category id."
@@ -20674,7 +20674,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The glossary id."
@@ -20703,7 +20703,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0472e31b-5ecc-4efb-90dc-b8703e5d717a",
+                "x-qlik-entity-revision": "f18130e4-5da7-45d4-880a-a68ccf4be3c3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -20757,7 +20757,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The id for the category to delete. All subcategories are also deleted"
@@ -20768,7 +20768,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The id of the glossary."
@@ -20779,7 +20779,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "aa8773fe-4887-4d3f-a75b-4191dd8decb8",
+                "x-qlik-entity-revision": "b5c0319a-4d1f-4f84-8bbc-c731126c11c9",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -20842,7 +20842,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The glossary id."
@@ -20921,7 +20921,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "6ba5fd2d-0cf8-4e6f-8db4-801cab836430",
+                "x-qlik-entity-revision": "41a34e7d-9e8a-4ec6-83d9-5e7cc17bed02",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -20996,7 +20996,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The glossary id."
@@ -21016,7 +21016,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "e4555cc0-fd70-4af7-bbb5-bdc0d364cfeb",
+                "x-qlik-entity-revision": "18fe835e-0503-49ad-8335-8d5053844a12",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -21093,7 +21093,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The glossary id."
@@ -21104,7 +21104,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The term id."
@@ -21115,7 +21115,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "beebfef7-4d4f-43ae-a491-53f1395db57b",
+                "x-qlik-entity-revision": "4b7844af-65bd-46b8-a44c-3d5271538c13",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -21222,7 +21222,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The glossary id."
@@ -21233,7 +21233,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The term id."
@@ -21263,7 +21263,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "5d3e5427-cd27-4a75-8edf-39bea06ba05b",
+                "x-qlik-entity-revision": "1a3844bc-4411-4bcf-86e4-6c7f858f08b5",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -21348,7 +21348,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The glossary id."
@@ -21359,7 +21359,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The term id."
@@ -21388,7 +21388,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "7588809c-c0ab-404f-b75e-deb03c91d17d",
+                "x-qlik-entity-revision": "7a27b82c-6f6e-4b5b-885c-0974afa349d4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -21442,7 +21442,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The glossary id."
@@ -21453,7 +21453,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The term id."
@@ -21464,7 +21464,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c8a2bef3-cabe-460f-8fe0-67ba75d532b7",
+                "x-qlik-entity-revision": "34eb0b26-f55f-4a56-b19a-19927a362736",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -21551,7 +21551,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The glossary id."
@@ -21562,7 +21562,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The term id."
@@ -21596,7 +21596,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "92284aed-84c2-4c5b-ab68-9f0928a3b260",
+                "x-qlik-entity-revision": "ea1401ff-da8f-4d77-a70b-cf667af876e0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -21659,7 +21659,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The glossary id."
@@ -21670,7 +21670,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The term id."
@@ -21743,7 +21743,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "cd1b34af-918c-4ea4-b738-eec0f503122e",
+                "x-qlik-entity-revision": "f0dd491d-55f7-4718-87d5-8d1f90ccabfe",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -21828,7 +21828,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The glossary id."
@@ -21839,7 +21839,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The term id."
@@ -21868,7 +21868,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0337d681-9b93-4382-bec3-463137ea63b3",
+                "x-qlik-entity-revision": "48304e6e-3158-44f1-93d4-9585c058b947",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -21931,7 +21931,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The glossary id."
@@ -21942,7 +21942,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "507f191e810c19729de860ea"
+                            "example": "123e4567-e89b-12d3-a456-426614174000"
                         },
                         "required": true,
                         "description": "The term id."
@@ -22001,7 +22001,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "6c977001-9cd9-4e17-8a91-293157eca450",
+                "x-qlik-entity-revision": "9576f5f7-d3d8-4325-8416-b3178db17201",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -22079,7 +22079,7 @@
                         "name": "spaceId",
                         "schema": {
                             "type": "string",
-                            "format": "uuid",
+                            "format": "uid",
                             "example": "507f191e810c19729de860ea"
                         },
                         "description": "The spaceId (leave blank or omit for personal)"
@@ -22114,7 +22114,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "1dddae95-2fa6-4caa-9456-4e14ba0e7d37",
+                "x-qlik-entity-revision": "15e5e769-f868-492a-8d12-4bf8afe043e4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -29526,7 +29526,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "af2211ab-6b80-44de-a381-786c190b2021",
+                "x-qlik-entity-revision": "b46c2317-1b1c-4566-adb2-1e31953eb533",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -29605,7 +29605,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "832137c3-476c-41fe-9cfa-b1b23e3b7398",
+                "x-qlik-entity-revision": "39234c68-11f0-4aed-b85f-a13d841cdf1f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -29678,7 +29678,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "d3f541d6-ca00-4ab4-9e3d-2db75505d999",
+                "x-qlik-entity-revision": "08898c82-b423-4012-b1b8-900455327dc2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -29884,7 +29884,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "900c6de7-8840-43c2-94d3-9dc0b00351a8",
+                "x-qlik-entity-revision": "d4570f79-7018-4169-a035-0a79bbea75cc",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30204,7 +30204,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "21fd960e-32bc-4b61-a3ef-9a3782f865e0",
+                "x-qlik-entity-revision": "ab8cf930-aabc-4dd9-9218-551970466b4e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -30381,7 +30381,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "a99ae16d-705d-4756-8246-b244d9af77ff",
+                "x-qlik-entity-revision": "ecb208e0-82e9-4a8a-ac66-78e3bcd48798",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30845,7 +30845,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "d21e30f1-7d4c-47cd-b1c6-a362ebacb862",
+                "x-qlik-entity-revision": "b4ee5df1-99a3-4459-845f-cf951e622b1c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30917,7 +30917,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "bee4f452-817d-4ff4-b189-98526cbab048",
+                "x-qlik-entity-revision": "2ebb2506-56b1-44ff-9c2f-6a884a54ddbd",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -31001,7 +31001,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "4f6f7056-f5e5-49b9-b040-fc521e4d8608",
+                "x-qlik-entity-revision": "ac55f170-ada1-4297-a600-508385cafd9c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -49503,7 +49503,7 @@
                     "id": {
                         "type": "string",
                         "format": "uuid",
-                        "example": "507f191e810c19729de860ea"
+                        "example": "123e4567-e89b-12d3-a456-426614174000"
                     },
                     "name": {
                         "type": "string"
@@ -49511,7 +49511,7 @@
                     "parentId": {
                         "type": "string",
                         "format": "uuid",
-                        "example": "507f191e810c19729de860ea"
+                        "example": "123e4567-e89b-12d3-a456-426614174000"
                     },
                     "stewards": {
                         "type": "array",
@@ -49523,7 +49523,7 @@
                             "6305e8691a1d504df06efab9",
                             "63075b341a1d504df06efabc"
                         ],
-                        "description": "This list contains the uuids of the stewards of the category."
+                        "description": "This list contains the uids of the stewards of the category."
                     },
                     "createdAt": {
                         "type": "string",
@@ -49533,7 +49533,7 @@
                     },
                     "createdBy": {
                         "type": "string",
-                        "format": "uuid",
+                        "format": "uid",
                         "example": "507f191e810c19729de860ea",
                         "readOnly": true
                     },
@@ -49545,15 +49545,15 @@
                     },
                     "updatedBy": {
                         "type": "string",
-                        "format": "uuid",
+                        "format": "uid",
                         "example": "507f191e810c19729de860ea",
                         "readOnly": true,
-                        "description": "The uuid of the user who last updated the category"
+                        "description": "The uid of the user who last updated the category"
                     },
                     "glossaryId": {
                         "type": "string",
                         "format": "uuid",
-                        "example": "507f191e810c19729de860ea"
+                        "example": "123e4567-e89b-12d3-a456-426614174000"
                     },
                     "description": {
                         "type": "string"
@@ -49565,7 +49565,7 @@
                 "properties": {
                     "id": {
                         "type": "string",
-                        "example": "507f191e810c19729de860ea",
+                        "example": "123e4567-e89b-12d3-a456-426614174000",
                         "description": "The id for resolving updates in future imports/updates. \nOpposed to the id of terms, id on category are not resolved by backend. Any category referred in the category array in terms will have to be identical to the id property of the category. If not, the category reference will be discarded.\n"
                     },
                     "name": {
@@ -49575,7 +49575,7 @@
                     "parentId": {
                         "type": "string",
                         "format": "uuid",
-                        "example": "507f191e810c19729de860ea"
+                        "example": "123e4567-e89b-12d3-a456-426614174000"
                     },
                     "stewards": {
                         "type": "array",
@@ -49587,7 +49587,7 @@
                             "6305e8691a1d504df06efab9",
                             "63075b341a1d504df06efabc"
                         ],
-                        "description": "This list contains the uuids of the stewards of the category."
+                        "description": "This list contains the uids of the stewards of the category."
                     },
                     "description": {
                         "type": "string"
@@ -49618,7 +49618,7 @@
                     },
                     "spaceId": {
                         "type": "string",
-                        "format": "uuid",
+                        "format": "uid",
                         "example": "507f191e810c19729de860ea",
                         "description": "Unique unique identifier of the space to contain the glossary"
                     },
@@ -49671,7 +49671,7 @@
                             "6305e8691a1d504df06efab9",
                             "63075b341a1d504df06efabc"
                         ],
-                        "description": "This list contain the uuids for the terms stewards"
+                        "description": "This list contain the uids for the term's stewards"
                     },
                     "relatesTo": {
                         "type": "array",
@@ -49686,8 +49686,8 @@
                             "format": "uuid"
                         },
                         "example": [
-                            "507f191e810c19729de860ea",
-                            "507f191e810c19729de860eb"
+                            "123e4567-e89b-12d3-a456-426614174000",
+                            "123e4567-e89b-12d3-a456-426614174001"
                         ],
                         "description": "Category Ids that the term belongs to. NOTE! In case of import the string refers to the index of the category in the import document."
                     },
@@ -49769,7 +49769,7 @@
                     },
                     "traceId": {
                         "type": "string",
-                        "example": "507f191e810c19729de860ea"
+                        "example": "795dedf8cf38b60088a6e4feb6eace75"
                     }
                 },
                 "description": "### Custom error codes\n* BG-1 - Context JWT is missing tenantId.\n* BG-2 - Context JWT is missing userId.\n* BG-4 - Invalid or unsupported Content Type. Valid types are: application/json, application/json+qlik, application/json+atlan, application/json+atlas\n* BG-5 - Failed to decode JSON payload.\n* BG-6 - A glossary name is required.\n* BG-7 - Two categories with the same name cannot have the same parent.\n* BG-11 - Glossary validation failed - A value or parameter is invalid or not set\n* BG-12 - Category validation failed - A value or parameter is invalid or not set\n* BG-13 - Term validation failed - A value or parameter is invalid or not set\n* BG-14 - Two or more categories share Id\n* BG-15 - Two or more terms share Id\n* BG-16 - Not detecting proper Atlas format\n* BG-17 - Not detecting proper Atlan format\n* BG-18 - Not detecting proper Qlik format\n* BG-19 - Invalid format in term\n* BG-20 - Duplicate link definition\n* BG-21 - Rich text validation failed\n* BG-22 - Import cancelled\n* BG-23 - Duplicate link related\n"
@@ -49799,7 +49799,7 @@
                     },
                     "traceId": {
                         "type": "string",
-                        "example": "507f191e810c19729de860ea"
+                        "example": "795dedf8cf38b60088a6e4feb6eace75"
                     }
                 },
                 "description": "### Custom error codes\n* BG-3 - Access denied, no read access\n"
@@ -49815,7 +49815,7 @@
                     },
                     "traceId": {
                         "type": "string",
-                        "example": "507f191e810c19729de860ea"
+                        "example": "795dedf8cf38b60088a6e4feb6eace75"
                     }
                 },
                 "description": "### Custom error codes\n* BG-8 - Glossary not found\n* BG-9 - Category not found\n* BG-10 - Term not found\n"
@@ -49825,7 +49825,7 @@
                 "properties": {
                     "id": {
                         "type": "string",
-                        "example": "507f191e810c19729de860ea",
+                        "example": "123e4567-e89b-12d3-a456-426614174000",
                         "description": "The id for resolving updates in future imports/updates. \nOpposed to the id of terms, id on category are not resolved by backend. Any category referred in the category array in terms will have to be identical to the id property of the category. If not, the category reference will be discarded.\n"
                     },
                     "name": {
@@ -49835,7 +49835,7 @@
                     "parentId": {
                         "type": "string",
                         "format": "uuid",
-                        "example": "507f191e810c19729de860ea"
+                        "example": "123e4567-e89b-12d3-a456-426614174000"
                     },
                     "description": {
                         "type": "string"
@@ -49854,7 +49854,7 @@
                     "id": {
                         "type": "string",
                         "format": "uuid",
-                        "example": "507f191e810c19729de860ea"
+                        "example": "123e4567-e89b-12d3-a456-426614174000"
                     },
                     "name": {
                         "type": "string"
@@ -49877,12 +49877,12 @@
                     },
                     "ownerId": {
                         "type": "string",
-                        "format": "uuid",
+                        "format": "uid",
                         "example": "507f191e810c19729de860ea"
                     },
                     "spaceId": {
                         "type": "string",
-                        "format": "uuid",
+                        "format": "uid",
                         "example": "507f191e810c19729de860ea"
                     },
                     "overview": {
@@ -49897,7 +49897,7 @@
                     },
                     "createdBy": {
                         "type": "string",
-                        "format": "uuid",
+                        "format": "uid",
                         "example": "507f191e810c19729de860ea",
                         "readOnly": true
                     },
@@ -49909,10 +49909,10 @@
                     },
                     "updatedBy": {
                         "type": "string",
-                        "format": "uuid",
+                        "format": "uid",
                         "example": "507f191e810c19729de860ea",
                         "readOnly": true,
-                        "description": "The uuid of the user who last updated the glossary"
+                        "description": "The uid of the user who last updated the glossary"
                     },
                     "categories": {
                         "type": "array",
@@ -49933,7 +49933,7 @@
                 "properties": {
                     "id": {
                         "type": "string",
-                        "example": "507f191e810c19729de860ea",
+                        "example": "123e4567-e89b-12d3-a456-426614174000",
                         "description": "The id of the term. Used to identify the term in future updates. If not provided, will use the leading 30 chars of the term name and an incremental index\n"
                     },
                     "name": {
@@ -49981,7 +49981,7 @@
                             "format": "uuid"
                         },
                         "example": [
-                            "507f191e810c19729de860ea"
+                            "123e4567-e89b-12d3-a456-426614174000"
                         ],
                         "description": "Categories that the term belongs to. Refers to the `id` property of the category object\n"
                     },
@@ -50038,7 +50038,7 @@
                     "id": {
                         "type": "string",
                         "format": "uuid",
-                        "example": "507f191e810c19729de860ea",
+                        "example": "123e4567-e89b-12d3-a456-426614174000",
                         "description": "Unique identifier of the glossary"
                     },
                     "name": {
@@ -50059,13 +50059,13 @@
                     },
                     "ownerId": {
                         "type": "string",
-                        "format": "uuid",
+                        "format": "uid",
                         "example": "507f191e810c19729de860ea",
                         "description": "The unique identifier of the glossary owner"
                     },
                     "spaceId": {
                         "type": "string",
-                        "format": "uuid",
+                        "format": "uid",
                         "example": "507f191e810c19729de860ea",
                         "description": "The unique identifier of the space containg the glossary"
                     },
@@ -50082,7 +50082,7 @@
                     },
                     "createdBy": {
                         "type": "string",
-                        "format": "uuid",
+                        "format": "uid",
                         "example": "507f191e810c19729de860ea",
                         "readOnly": true,
                         "description": "Unique identifier of the user who created the glossary"
@@ -50096,7 +50096,7 @@
                     },
                     "updatedBy": {
                         "type": "string",
-                        "format": "uuid",
+                        "format": "uid",
                         "example": "507f191e810c19729de860ea",
                         "readOnly": true,
                         "description": "The unique identifier of the user who last updated the glossary"
@@ -50116,7 +50116,7 @@
                 "properties": {
                     "id": {
                         "type": "string",
-                        "example": "507f191e810c19729de860ea",
+                        "example": "123e4567-e89b-12d3-a456-426614174000",
                         "description": "The id for resolving updates in future imports/updates. \nOpposed to the id of terms, id on category are not resolved by backend. Any category referred in the category array in terms will have to be identical to the id property of the category. If not, the category reference will be discarded.\n"
                     },
                     "name": {
@@ -50126,13 +50126,13 @@
                     "parentId": {
                         "type": "string",
                         "format": "uuid",
-                        "example": "507f191e810c19729de860ea"
+                        "example": "123e4567-e89b-12d3-a456-426614174000"
                     },
                     "stewards": {
                         "type": "array",
                         "items": {
                             "type": "string",
-                            "format": "uuid",
+                            "format": "uid",
                             "example": "507f191e810c19729de860ea"
                         }
                     },
@@ -50160,7 +50160,7 @@
                     },
                     "userId": {
                         "type": "string",
-                        "format": "uuid",
+                        "format": "uid",
                         "example": "507f191e810c19729de860ea"
                     }
                 }
@@ -50170,7 +50170,7 @@
                 "properties": {
                     "id": {
                         "type": "string",
-                        "example": "507f191e810c19729de860ea",
+                        "example": "123e4567-e89b-12d3-a456-426614174000",
                         "description": "The id of the term. Used to identify the term in future updates. If not provided, will use the leading 30 chars of the term name and an incremental index\n"
                     },
                     "name": {
@@ -50218,7 +50218,7 @@
                             "format": "uuid"
                         },
                         "example": [
-                            "507f191e810c19729de860ea"
+                            "123e4567-e89b-12d3-a456-426614174000"
                         ],
                         "description": "Categories that the term belongs to. Refers to the `id` property of the category object\n"
                     },
@@ -50399,7 +50399,7 @@
                     },
                     "spaceId": {
                         "type": "string",
-                        "format": "uuid",
+                        "format": "uid",
                         "example": "507f191e810c19729de860ea"
                     },
                     "overview": {
@@ -50438,7 +50438,7 @@
                     },
                     "userId": {
                         "type": "string",
-                        "format": "uuid"
+                        "format": "uid"
                     }
                 }
             },
@@ -50464,7 +50464,7 @@
                     "id": {
                         "type": "string",
                         "format": "uuid",
-                        "example": "507f191e810c19729de860ea"
+                        "example": "123e4567-e89b-12d3-a456-426614174000"
                     },
                     "name": {
                         "type": "string",
@@ -50502,7 +50502,7 @@
                             "6305e8691a1d504df06efab9",
                             "63075b341a1d504df06efabc"
                         ],
-                        "description": "This list contains the uuids of the terms data stewards."
+                        "description": "This list contains the uids of the terms data stewards."
                     },
                     "createdAt": {
                         "type": "string",
@@ -50512,7 +50512,7 @@
                     },
                     "createdBy": {
                         "type": "string",
-                        "format": "uuid",
+                        "format": "uid",
                         "example": "507f191e810c19729de860ea",
                         "readOnly": true
                     },
@@ -50530,10 +50530,10 @@
                     },
                     "updatedBy": {
                         "type": "string",
-                        "format": "uuid",
+                        "format": "uid",
                         "example": "507f191e810c19729de860ea",
                         "readOnly": true,
-                        "description": "The uuid of the user who last updated the term"
+                        "description": "The uid of the user who last updated the term"
                     },
                     "categories": {
                         "type": "array",
@@ -50542,14 +50542,14 @@
                             "format": "uuid"
                         },
                         "example": [
-                            "507f191e810c19729de860ea",
-                            "507f191e810c19729de860eb"
+                            "123e4567-e89b-12d3-a456-426614174000",
+                            "123e4567-e89b-12d3-a456-426614174001"
                         ]
                     },
                     "glossaryId": {
                         "type": "string",
                         "format": "uuid",
-                        "example": "507f191e810c19729de860ea"
+                        "example": "123e4567-e89b-12d3-a456-426614174000"
                     },
                     "description": {
                         "type": "string"
@@ -50610,7 +50610,7 @@
                     "id": {
                         "type": "string",
                         "format": "uuid",
-                        "example": "507f191e810c19729de860ea",
+                        "example": "123e4567-e89b-12d3-a456-426614174000",
                         "x-qlik-filterable": true
                     },
                     "name": {
@@ -50645,14 +50645,14 @@
                     },
                     "createdBy": {
                         "type": "string",
-                        "format": "uuid",
+                        "format": "uid",
                         "example": "507f191e810c19729de860ea",
                         "x-qlik-filterable": true
                     },
                     "resourceId": {
                         "type": "string",
-                        "format": "uuid",
-                        "example": "507f191e810c19729de860ea",
+                        "example": "123e4567-e89b-12d3-a456-426614174000",
+                        "description": "Different formats based on resource type. Could be e.g. OID or UUID.",
                         "x-qlik-filterable": true
                     },
                     "resourceType": {
@@ -50665,13 +50665,13 @@
                     },
                     "subResourceId": {
                         "type": "string",
-                        "format": "uuid",
-                        "example": "507f191e810c19729de860ea",
+                        "example": "123e4567-e89b-12d3-a456-426614174000",
+                        "description": "Different formats based on subresource type. Could be e.g. OID or UUID.",
                         "x-qlik-filterable": true
                     },
                     "resourceSpaceId": {
                         "type": "string",
-                        "format": "uuid",
+                        "format": "uid",
                         "example": "507f191e810c19729de860ea"
                     },
                     "subResourceName": {
@@ -50712,7 +50712,7 @@
                     "termId": {
                         "type": "string",
                         "format": "uuid",
-                        "example": "507f191e810c19729de860ea",
+                        "example": "123e4567-e89b-12d3-a456-426614174000",
                         "description": "The unique identifier of the related term. NOTE! In case of import the string refers to the index of the term in the import document."
                     }
                 }
@@ -50761,7 +50761,7 @@
                     },
                     "updatedBy": {
                         "type": "string",
-                        "format": "uuid",
+                        "format": "uid",
                         "example": "507f191e810c19729de860ea",
                         "description": "The unique identifier of the user who last changed the status of the term"
                     }
@@ -56184,7 +56184,7 @@
                 "properties": {
                     "code": {
                         "type": "string",
-                        "description": "The unique code for the error\n\n- \"REP-400000\" Bad request. The server could not understand the request due to invalid syntax.\n- \"REP-400008\" Selections error.\n- \"REP-400009\" Maximum 16384 columns limit exceeded. Download data in a visualization can't generate an .xlsx file due to limitations to the number of columns you can download.\n- \"REP-400010\" Maximum 1048566 rows limit exceeded. Download data in a visualization can't generate an .xlsx file due to limitations to the number of rows you can download.\n- \"REP-400011\" The size of the downloaded Excel file exceed 100 MB limit. Download data in a visualization can't generate an .xlsx file due to limitations to the amount of data you can download.\n- \"REP-400015\" Bad request in enigma request. The patch value has invalid JSON format.\n- \"REP-401000\" Unauthorized. The client must authenticate itself to get the requested response.\n- \"REP-401001\" Unauthorized, bad JWT.\n- \"REP-403000\" Forbidden. The client does not have access rights to the content.\n- \"REP-403001\" App forbidden, the user does not have read permission on the app.\n- \"REP-403002\" Chart type not supported.\n- \"REP-404000\" Not found. The server can not find the requested resource.\n- \"REP-404001\" App not found, the app does not exist or it has been deleted.\n- \"REP-404002\" Chart not found, the chart does not exist or it has been deleted.\n- \"REP-404003\" Sheet not found, the sheet does not exist or it has been deleted or it is unavailable.\n- \"REP-404004\" Story not found, the story does not exist or it has been deleted or it is unavailable.\n- \"REP-429000\" Too many request. The user has sent too many requests in a given amount of time (\"rate limiting\").\n- \"REP-429012\" Exceeded max session tenant quota. A tenant has opened too many different sessions at the same time.\n- \"REP-429014\" Reporting service was not able to return inside of request export deadline. Too many request at the same time for the same tenant.\n- \"REP-429016\" Exceeded max session tenant quota per day.\n- \"REP-500000\" Fail to resolve resource.\n- \"REP-500006\" Fail to get report session parameters.\n- \"REP-503005\" Engine unavailable, qix-sessions error no engines available.\n- \"REP-503013\" Session unavailable. The engine session used to create the report is unavailable.\n- \"REP-500100\" Image rendering generic error on Sense client.\n- \"REP-500101\" Image rendering could not set cookies error on Sense client.\n- \"REP-400102\" Image rendering invalid strategy error on Sense client.\n- \"REP-500103\" Image rendering JS timeout error on Sense client.\n- \"REP-500104\" Image rendering load URL timeout error on Sense client.\n- \"REP-500105\" Image rendering max paint attempts exceeded error on Sense client.\n- \"REP-500106\" Image rendering max JS attempts exceeded error on Sense client.\n- \"REP-500107\" Image rendering render timeout error on Sense client.\n- \"REP-500108\" Image rendering JS failure due to timeout error on Sense client.\n- \"REP-500109\" Image rendering generic JS failure error on Sense client.\n- \"REP-400029\" Reload Entitlement Limit Reached.\n- \"REP-409046\" Report aborted due to app reload.\n- \"REP-500047\" Error setting GroupState.\n"
+                        "description": "The unique code for the error\n\n- \"REP-400000\" Bad request. The server could not understand the request due to invalid syntax.\n- \"REP-400008\" Selections error.\n- \"REP-400009\" Maximum 16384 columns limit exceeded. Download data in a visualization can't generate an .xlsx file due to limitations to the number of columns you can download.\n- \"REP-400010\" Maximum 1048566 rows limit exceeded. Download data in a visualization can't generate an .xlsx file due to limitations to the number of rows you can download.\n- \"REP-400011\" The size of the downloaded Excel file exceed 100 MB limit. Download data in a visualization can't generate an .xlsx file due to limitations to the amount of data you can download.\n- \"REP-400015\" Bad request in enigma request. The patch value has invalid JSON format.\n- \"REP-401000\" Unauthorized. The client must authenticate itself to get the requested response.\n- \"REP-401001\" Unauthorized, bad JWT.\n- \"REP-403000\" Forbidden. The client does not have access rights to the content.\n- \"REP-403001\" App forbidden, the user does not have read permission on the app.\n- \"REP-403002\" Chart type not supported.\n- \"REP-404000\" Not found. The server can not find the requested resource.\n- \"REP-404001\" App not found, the app does not exist or it has been deleted.\n- \"REP-404002\" Chart not found, the chart does not exist or it has been deleted.\n- \"REP-404003\" Sheet not found, the sheet does not exist or it has been deleted or it is unavailable.\n- \"REP-404004\" Story not found, the story does not exist or it has been deleted or it is unavailable.\n- \"REP-429000\" Too many request. The user has sent too many requests in a given amount of time (\"rate limiting\").\n- \"REP-429012\" Exceeded max session tenant quota. A tenant has opened too many different sessions at the same time.\n- \"REP-429014\" Reporting service was not able to return inside of request export deadline. Too many request at the same time for the same tenant.\n- \"REP-429016\" Exceeded max session tenant quota per day.\n- \"REP-500000\" Fail to resolve resource.\n- \"REP-500006\" Fail to get report session parameters.\n- \"REP-503005\" Engine unavailable, qix-sessions error no engines available.\n- \"REP-503013\" Session unavailable. The engine session used to create the report is unavailable.\n- \"REP-500100\" Image rendering generic error on Sense client.\n- \"REP-500101\" Image rendering could not set cookies error on Sense client.\n- \"REP-400102\" Image rendering invalid strategy error on Sense client.\n- \"REP-500103\" Image rendering JS timeout error on Sense client.\n- \"REP-500104\" Image rendering load URL timeout error on Sense client.\n- \"REP-500105\" Image rendering max paint attempts exceeded error on Sense client.\n- \"REP-500106\" Image rendering max JS attempts exceeded error on Sense client.\n- \"REP-500107\" Image rendering render timeout error on Sense client.\n- \"REP-500108\" Image rendering JS failure due to timeout error on Sense client.\n- \"REP-500109\" Image rendering generic JS failure error on Sense client.\n- \"REP-400029\" Reload Entitlement Limit Reached.\n- \"REP-409046\" Report aborted due to app reload.\n- \"REP-500047\" Error setting GroupState.\n- \"REP-403048\" Forbidden. User does not have permission to export the report (access control usePermission)\n"
                     },
                     "meta": {
                         "$ref": "#/components/schemas/MetaExportError"
@@ -56467,10 +56467,10 @@
                     "imageRenderingDpi": {
                         "type": "number",
                         "format": "int32",
-                        "default": 200,
+                        "default": 300,
                         "maximum": 1000,
                         "x-nullable": true,
-                        "description": "This value is used for rendered images only, set to a default of 200 dpi."
+                        "description": "This value is used for rendered images only, set to a default of 300 dpi."
                     }
                 },
                 "description": "Output to be used to export a single visualization or a sheet as PowerPoint presentation."
@@ -57865,6 +57865,11 @@
                         "example": "Look at the presentation.",
                         "maxLength": 280,
                         "description": "Message along with sharing task"
+                    },
+                    "spaceId": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Space ID of the sharing task"
                     },
                     "subType": {
                         "enum": [
