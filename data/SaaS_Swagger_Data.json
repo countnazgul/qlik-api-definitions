@@ -4043,7 +4043,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "00289dd5-5f2b-45d8-8577-2b240d17f627",
+                "x-qlik-entity-revision": "bd0bcbbc-1d94-4d17-a71a-d1bd56fce196",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -4135,7 +4135,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "46c14a15-d647-4e83-b6aa-66504c68761d",
+                "x-qlik-entity-revision": "4c173ccf-c4d5-45cc-977d-d0ae2ea631cb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -4232,7 +4232,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "7afe9c30-d9f2-49bb-b36d-809ff9dcf9bf",
+                "x-qlik-entity-revision": "7b2557bd-725d-4033-9574-211700ab68b8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -4296,7 +4296,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "6ba2ec5c-af68-468c-9748-23de69ed8844",
+                "x-qlik-entity-revision": "70c80578-33aa-491f-b321-bd7981255773",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -4359,7 +4359,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d46fd130-b625-40c0-a50f-6f43536a904e",
+                "x-qlik-entity-revision": "f9a00548-da29-4a98-a81d-7a21b07bfea4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -4422,7 +4422,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "ff6dfc83-47f4-4a52-9ac2-10d12908c79e",
+                "x-qlik-entity-revision": "d3faa619-3d69-463e-b7cd-f07aa56b1f70",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -4554,6 +4554,17 @@
                 "parameters": [
                     {
                         "in": "query",
+                        "name": "fields",
+                        "schema": {
+                            "type": "string",
+                            "default": ""
+                        },
+                        "example": "lastRun,lastRunStatus,runMode,createdAt,updatedAt",
+                        "required": false,
+                        "description": "Allows to select the actual fields to be returned. When no fields are defined, all are returned."
+                    },
+                    {
+                        "in": "query",
                         "name": "filter",
                         "schema": {
                             "type": "string",
@@ -4588,6 +4599,7 @@
                                 "updatedAt",
                                 "lastRunAt",
                                 "lastRunStatus",
+                                "duration",
                                 "+id",
                                 "+name",
                                 "+runMode",
@@ -4603,7 +4615,9 @@
                                 "-createdAt",
                                 "-updatedAt",
                                 "-lastRunAt",
-                                "-lastRunStatus"
+                                "-lastRunStatus",
+                                "+duration",
+                                "-duration"
                             ],
                             "type": "string",
                             "default": "id",
@@ -4620,7 +4634,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "aaeae2c9-92d8-4aa6-abf8-eb8992d7aeeb",
+                "x-qlik-entity-revision": "82585b70-2bf0-4289-9ed0-2bd91d0f0148",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -4677,7 +4691,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "db7ecc38-68e6-4f5a-beff-715d93c21cd5",
+                "x-qlik-entity-revision": "59642588-3926-4c31-8d95-3d034d5ea5ca",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -4731,6 +4745,17 @@
                         },
                         "required": true,
                         "description": "The unique identifier for the automation."
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "schema": {
+                            "type": "string",
+                            "default": ""
+                        },
+                        "example": "snippetIds,endpointIds,connectorIds,workspace",
+                        "required": false,
+                        "description": "Allows to select the actual fields to be returned. Where the default is all fields"
                     }
                 ],
                 "operationId": "getAutomation",
@@ -4740,7 +4765,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "d563be4d-5a4e-4da4-9371-5e6cabc4bdf9",
+                "x-qlik-entity-revision": "cc8892ba-6863-48df-a667-d8f382c71c2a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -4812,7 +4837,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "86079f05-0330-4dc0-9ea2-10e0ad20b158",
+                "x-qlik-entity-revision": "6ac4f9fe-3fcb-429c-ab76-ab469f9bc9dc",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -5200,6 +5225,17 @@
                     },
                     {
                         "in": "query",
+                        "name": "fields",
+                        "schema": {
+                            "type": "string",
+                            "default": ""
+                        },
+                        "example": "isTestRun,isArchived,error,startTime,stopTime,duration,scheduledStartTIme",
+                        "required": false,
+                        "description": "Allows to select the actual fields to be returned. Where the default is all fields"
+                    },
+                    {
+                        "in": "query",
                         "name": "filter",
                         "schema": {
                             "type": "string",
@@ -5251,7 +5287,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "759f4903-820c-4304-8473-e6526c0b81ee",
+                "x-qlik-entity-revision": "9d3bfe03-c4f8-484d-a00d-1e198bcb9cb0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -5387,6 +5423,17 @@
                         },
                         "required": true,
                         "description": "The unique identifier for the run."
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "schema": {
+                            "type": "string",
+                            "default": ""
+                        },
+                        "example": "id,context,status,title,isTestRun,isArchived,expectedInputs,inputs,error,metrics,startTime,stopTime",
+                        "required": false,
+                        "description": "Allows to select the actual fields to be returned. Where the default is all fields"
                     }
                 ],
                 "operationId": "getRun",
@@ -5396,7 +5443,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "aa7b08a4-54d5-407c-b0bf-455c39c16fbe",
+                "x-qlik-entity-revision": "33addccf-450b-4e1c-bc90-41f7a630a15e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -5777,7 +5824,7 @@
                         "description": "If specified, result will be broken apart for each automation"
                     }
                 ],
-                "description": "**Limitations:** \n * **Maximum 1000 metrics per API call**",
+                "description": "Metrics for automations, paginated.",
                 "operationId": "getUsageMetrics",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
@@ -5785,7 +5832,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "d95f20bf-19cb-47dd-8ad3-e67f2bd34981",
+                "x-qlik-entity-revision": "c2c5e1d5-ea67-4f25-8b7c-fdad0ccf35d3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -23081,7 +23128,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "1dd573f6-dd13-4cd7-9e1c-409f1b97e579",
+                "x-qlik-entity-revision": "9c235548-faf7-432a-badd-abbf1d4515a9",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -23147,7 +23194,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "2c1cb436-dd1b-4374-8b79-a51c7b3506fe",
+                "x-qlik-entity-revision": "0a0618aa-2980-4870-8712-635b72ec962b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -23249,7 +23296,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "288d62fa-07c3-42e7-bd8f-cec31364d24c",
+                "x-qlik-entity-revision": "82fd7c81-25a8-4aac-ad53-f300ee5060d0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30197,14 +30244,14 @@
                         }
                     },
                     "required": true,
-                    "description": "Definition of the report request.\nPlease note that sense-story-x.0, sense-excel-template-1.0, sense-data-x.0 and qv-data-x.0 types are only for internal use.\n\nEach report request type requires a specific template to be provided:\n - composition-1.0 requires compositionTemplates to be set\n - sense-image-1.0 requires senseImageTemplate to be set\n - sense-sheet-1.0 requires senseSheetTemplate to be set\n\nEach template type supports specific output types:\n - composition-1.0 supports only pdfcomposition and pptxcomposition output types\n - sense-image-1.0 supports pdf and image output types\n - sense-sheet-1.0 supports only pdf output type\n\nEach output type requires a specific output to be provided:\n - pdfcomposition requires pdfCompositionOutput to be set\n - pptxcomposition requires pptxCompositionOutput to be set\n - pdf requires pdfOuput to be set\n - image requires imageOutput to be set\n"
+                    "description": "Definition of the report request.\nPlease note that sense-story-x.0, sense-data-x.0 and qv-data-x.0 types are only for internal use.\n\nEach report request type requires a specific template to be provided:\n - composition-1.0 requires compositionTemplates to be set\n - sense-image-1.0 requires senseImageTemplate to be set\n - sense-sheet-1.0 requires senseSheetTemplate to be set\n\nEach template type supports specific output types:\n - composition-1.0 supports only pdfcomposition and pptxcomposition output types\n - sense-image-1.0 supports pdf, pptx and image output types\n - sense-sheet-1.0 supports pdf and pptx output type\n\nEach output type requires a specific output to be provided:\n - pdfcomposition requires pdfCompositionOutput to be set\n - pptxcomposition requires pptxCompositionOutput to be set\n - pdf requires pdfOuput to be set\n - pptx requires pptxOuput to be set\n - image requires imageOutput to be set\n"
                 },
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "ab8cf930-aabc-4dd9-9218-551970466b4e",
+                "x-qlik-entity-revision": "9c680aea-0f29-49c9-b953-7da38387a80a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -41550,7 +41597,7 @@
                             "e0e720d0-4947-11ec-a1d2-9559fa35801d"
                         ],
                         "readOnly": true,
-                        "description": "A list of snippets used inside the workspace."
+                        "description": "A list of snippets that were detected inside the workspace. This includes snippet blocks that are not connected to other blocks. Order of guids is not guaranteed."
                     },
                     "description": {
                         "type": "string"
@@ -41565,7 +41612,7 @@
                             "53a6fb70-b28f-11eb-b601-b545a40867e0"
                         ],
                         "readOnly": true,
-                        "description": "A list of endpoints used inside the workspace."
+                        "description": "A list of endpoints that were detected inside the workspace. This includes Endpoints present in blocks which are not connected to other blocks. Order of guids is not guaranteed."
                     },
                     "connectorIds": {
                         "type": "array",
@@ -41577,7 +41624,7 @@
                             "0d86ee8a-27c0-11ea-921c-022e6b5ea1e2"
                         ],
                         "readOnly": true,
-                        "description": "A list of connectors used inside the workspace."
+                        "description": "A list of connectors that were detected the workspace. This includes Connectors present in blocks which are not connected to other blocks. Order of guids is not guaranteed."
                     },
                     "lastRunStatus": {
                         "enum": [
@@ -41639,6 +41686,9 @@
                         "default": "available",
                         "example": "available"
                     },
+                    "lastRun": {
+                        "$ref": "#/components/schemas/RunDetailResponseObject"
+                    },
                     "ownerId": {
                         "type": "string",
                         "example": "sWYAHxZxhtcmBT7Ptc5xJ5I6N7HxwnEy",
@@ -41655,6 +41705,13 @@
                         "type": "string",
                         "example": "triggered",
                         "readOnly": true,
+                        "x-qlik-filterable": true
+                    },
+                    "duration": {
+                        "type": "integer",
+                        "example": "9001",
+                        "readOnly": true,
+                        "description": "Duration of the last run, indicated in seconds. Calculated from start and stop times",
                         "x-qlik-filterable": true
                     },
                     "createdAt": {
@@ -41675,8 +41732,49 @@
                         "example": "2021-12-23T12:28:21.000000Z",
                         "readOnly": true
                     },
+                    "workspace": {
+                        "type": "object",
+                        "example": {},
+                        "readOnly": true,
+                        "description": "The workspace contains the JSON representation of the used blocks"
+                    },
+                    "snippetIds": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "example": [
+                            "e0e720d0-4947-11ec-a1d2-9559fa35801d"
+                        ],
+                        "readOnly": true,
+                        "description": "A list of snippets that were detected inside the workspace. This includes snippet blocks that are not connected to other blocks. Order of guids is not guaranteed."
+                    },
                     "description": {
                         "type": "string"
+                    },
+                    "endpointIds": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "example": [
+                            "9d94bef0-b28c-11eb-8dba-01593c457362",
+                            "53a6fb70-b28f-11eb-b601-b545a40867e0"
+                        ],
+                        "readOnly": true,
+                        "description": "A list of endpoints that were detected inside the workspace. This includes Endpoints present in blocks which are not connected to other blocks. Order of guids is not guaranteed."
+                    },
+                    "connectorIds": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "example": [
+                            "0d87808f-27c0-11ea-921c-022e6b5ea1e2",
+                            "0d86ee8a-27c0-11ea-921c-022e6b5ea1e2"
+                        ],
+                        "readOnly": true,
+                        "description": "A list of connectors that were detected the workspace. This includes Connectors present in blocks which are not connected to other blocks. Order of guids is not guaranteed."
                     },
                     "lastRunStatus": {
                         "enum": [
@@ -41694,6 +41792,11 @@
                         "example": "finished",
                         "readOnly": true,
                         "x-qlik-filterable": true
+                    },
+                    "executionToken": {
+                        "type": "string",
+                        "example": "aZXuEogT9X3le0k0WXMBnzuYKq4xRlkDnurjs8NVhEAAW1BYx8C1PpIl3ielgRb1",
+                        "readOnly": true
                     }
                 }
             },
@@ -41703,7 +41806,8 @@
                     "guid": {
                         "type": "string",
                         "example": "00000000-0000-0000-0000-000000000000",
-                        "description": "The unique identifier for the automation."
+                        "description": "The unique identifier for the automation.",
+                        "x-qlik-filterable": true
                     },
                     "name": {
                         "type": "string",
@@ -41714,7 +41818,14 @@
                     "ownerId": {
                         "type": "string",
                         "example": "KP1zJiPDn0gsla236GmETadFcxBW-J8F",
-                        "description": "The unique identifier for the user who owns the automation"
+                        "description": "The unique identifier for the user who owns the automation",
+                        "x-qlik-filterable": true
+                    },
+                    "duration": {
+                        "type": "integer",
+                        "example": 9001,
+                        "description": "Duration of the last run, indicated in seconds. Calculated from start and stop times",
+                        "x-qlik-filterable": true
                     }
                 }
             },
@@ -41966,7 +42077,15 @@
                             "webhook",
                             "lookup"
                         ],
-                        "type": "string"
+                        "type": "string",
+                        "x-qlik-filterable": true
+                    },
+                    "duration": {
+                        "type": "integer",
+                        "example": "9001",
+                        "readOnly": true,
+                        "description": "Duration of the run, indicated in seconds. Calculated from start and stop times",
+                        "x-qlik-filterable": true
                     },
                     "stopTime": {
                         "type": "string",
@@ -42077,6 +42196,9 @@
                         "items": {
                             "$ref": "#/components/schemas/UsageObject"
                         }
+                    },
+                    "links": {
+                        "$ref": "#/components/schemas/Links"
                     }
                 }
             },
@@ -51375,7 +51497,7 @@
                         "description": "The timestamp for when the IdP was last updated."
                     },
                     "clockToleranceSec": {
-                        "type": "number"
+                        "type": "integer"
                     },
                     "createNewUsersOnLogin": {
                         "type": "boolean",
@@ -51619,11 +51741,11 @@
                         "maxLength": 128
                     },
                     "clockToleranceSec": {
-                        "type": "number",
+                        "type": "integer",
                         "default": 5,
                         "maximum": 7200,
                         "minimum": 0,
-                        "description": "There can be clock skew between the IdP and Qlik's login server, in these cases a tolerance can be set, decimals will be rounded off."
+                        "description": "There can be clock skew between the IdP and Qlik's login server. In these cases, a tolerance can be set."
                     }
                 },
                 "description": "Payload for creating an identity provider using JWT authentication."
@@ -51767,11 +51889,11 @@
                         "description": "Required OIDC configurations for interactive IdPs that require verification."
                     },
                     "clockToleranceSec": {
-                        "type": "number",
+                        "type": "integer",
                         "default": 5,
                         "maximum": 7200,
                         "minimum": 0,
-                        "description": "There can be clock skew between the IdP and Qlik's login server. In these cases, a tolerance can be set, decimals will be rounded off."
+                        "description": "There can be clock skew between the IdP and Qlik's login server. In these cases, a tolerance can be set."
                     },
                     "createNewUsersOnLogin": {
                         "type": "boolean",
@@ -51944,11 +52066,11 @@
                         "description": "Required configurations for SAML IdPs that require verification."
                     },
                     "clockToleranceSec": {
-                        "type": "number",
+                        "type": "integer",
                         "default": 5,
                         "maximum": 7200,
                         "minimum": 0,
-                        "description": "There can be clock skew between the IdP and Qlik's login server. In these cases, a tolerance can be set, decimals will be rounded off."
+                        "description": "There can be clock skew between the IdP and Qlik's login server. In these cases, a tolerance can be set."
                     },
                     "createNewUsersOnLogin": {
                         "type": "boolean",
@@ -56289,7 +56411,7 @@
                             "cycle"
                         ],
                         "type": "string",
-                        "description": "The generated report type.\n\nEach template type supports specific output types:\n   - composition-1.0 supports only pdfcomposition and pptxcomposition output types\n   - excel-1.0 supports only excel output type\n   - sense-image-1.0 supports pdf and image output types\n   - sense-sheet-1.0 supports only pdf output type\n\nEach output type requires a specific output to be provided:\n   - excel requires excelOutput to be set\n   - pdfcomposition requires pdfCompositionOutput to be set\n   - pptxcomposition requires pptxCompositionOutput to be set\n   - pdf requires pdfOuput to be set\n   - image requires imageOutput to be set\n   - csv doesn't have csv output.\n"
+                        "description": "The generated report type.\n\nEach template type supports specific output types:\n   - composition-1.0 supports only pdfcomposition and pptxcomposition output types\n   - excel-1.0 supports only excel and pdf output type\n   - sense-image-1.0 supports pdf, pptx and image output types\n   - sense-sheet-1.0 supports pdf and pptx output type\n\nEach output type requires a specific output to be provided:\n   - excel requires excelOutput to be set\n   - pdfcomposition requires pdfCompositionOutput to be set\n   - pptxcomposition requires pptxCompositionOutput to be set\n   - pdf requires pdfOuput to be set\n   - pptx requires pptxOuput to be set\n   - image requires imageOutput to be set\n   - csv doesn't have csv output.\n"
                     },
                     "outputId": {
                         "type": "string",
@@ -56638,7 +56760,7 @@
                             "cycle-template-1.0"
                         ],
                         "type": "string",
-                        "description": "Template type and version using semantic versioning. It must have the following name convention: dashed-separated-template-name-MAJOR.MINOR.\nPlease note that sense-story-x.0, sense-excel-template-1.0, sense-data-x.0 and qv-data-x.0 are only for internal use.\n\nEach type requires a specific template to be provided:\n  - composition-1.0 requires compositionTemplates to be set\n  - sense-excel-template-1.0 requires senseExcelTemplate to be set\n  - sense-image-1.0 requires senseImageTemplate to be set\n  - sense-sheet-1.0 requires senseSheetTemplate to be set\n  - cycle-1.0 requires cycleTemplate to be set\n\nEach template type supports specific output types:\n  - composition-1.0 supports only pdfcomposition output type\n  - sense-excel-template-1.0 supports only excel output type\n  - sense-image-1.0 supports pdf and png output types\n  - sense-sheet-1.0 supports only pdf output type\n"
+                        "description": "Template type and version using semantic versioning. It must have the following name convention: dashed-separated-template-name-MAJOR.MINOR.\nPlease note that sense-story-x.0, sense-data-x.0 and qv-data-x.0 are only for internal use.\n\nEach type requires a specific template to be provided:\n  - composition-1.0 requires compositionTemplates to be set\n  - sense-excel-template-1.0 requires senseExcelTemplate to be set\n  - sense-image-1.0 requires senseImageTemplate to be set\n  - sense-sheet-1.0 requires senseSheetTemplate to be set\n  - cycle-1.0 requires cycleTemplate to be set\n\nEach template type supports specific output types:\n  - composition-1.0 supports pdfcomposition and pptxComposition output type\n  - sense-excel-template-1.0 supports excel and pdf output type\n  - sense-image-1.0 supports pdf, pptx and png output types\n  - sense-sheet-1.0 supports pdf, pptx output type\n"
                     },
                     "output": {
                         "$ref": "#/components/schemas/OutputItem"
@@ -56906,7 +57028,7 @@
                         "$ref": "#/components/schemas/reloadTimestampMatchType"
                     }
                 },
-                "description": "Used to export a single visualization as pdf or png."
+                "description": "Used to export a single visualization as pdf, pptx or png."
             },
             "SensePersistentBookmark": {
                 "type": "object",
@@ -56963,7 +57085,7 @@
                         "$ref": "#/components/schemas/reloadTimestampMatchType"
                     }
                 },
-                "description": "Used to export a sheet as pdf."
+                "description": "Used to export a sheet as pdf or pptx."
             },
             "SenseTemporaryBookmarkV2": {
                 "type": "object",
