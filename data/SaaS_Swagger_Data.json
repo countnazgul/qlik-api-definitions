@@ -2866,7 +2866,7 @@
                         "description": "Opaque definition of which page of the result set to return. Returned from a previous call using the same filter. Not yet supported."
                     }
                 ],
-                "description": "Retrieves the script history for an app.\nReturns information about the saved versions of the script.",
+                "description": "Retrieves the script history for an app.\nReturns information about the saved versions of the script in a list sorted with latest first.",
                 "x-qlik-access-control": [
                     "read"
                 ],
@@ -2876,7 +2876,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "b4ce019e-53ac-4a7d-b44f-efddfdb483f7",
+                "x-qlik-entity-revision": "cc7d078e-c577-4fc4-a3b9-b06617b8dc67",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -2939,7 +2939,7 @@
                 ]
             }
         },
-        "/v1/apps/{appId}/scripts/{version}": {
+        "/v1/apps/{appId}/scripts/{id}": {
             "get": {
                 "responses": {
                     "200": {
@@ -2966,7 +2966,7 @@
                     },
                     {
                         "in": "path",
-                        "name": "version",
+                        "name": "id",
                         "schema": {
                             "type": "string"
                         },
@@ -2984,7 +2984,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "117e28c0-ba97-4880-aaaf-de2cee3fe6be",
+                "x-qlik-entity-revision": "ff8b34f8-ce78-4d4c-85f0-dd7d23482c43",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -3016,7 +3016,7 @@
                     },
                     {
                         "in": "path",
-                        "name": "version",
+                        "name": "id",
                         "schema": {
                             "type": "string"
                         },
@@ -3029,12 +3029,15 @@
                     "content": {
                         "*/*": {
                             "schema": {
-                                "$ref": "#/components/schemas/NxPatch"
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/NxPatch"
+                                }
                             }
                         }
                     },
                     "required": true,
-                    "description": "Array of patches for the object ScriptVersion.\n<div class=note>Only /versionMessage can be modified using operations add, remove and replace.</div>"
+                    "description": "Array of patches for the object ScriptVersion.\n<div class=note>Patches have limited functionality for this object. Only /versionMessage can be modified using operations add, remove and replace.</div>"
                 },
                 "x-qlik-access-control": [
                     "update"
@@ -3045,7 +3048,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "e0e9d34e-514a-45c8-a289-104f25c4d73c",
+                "x-qlik-entity-revision": "1f71b25f-f0b9-4051-813c-d9bdaa8bdf6a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -3077,7 +3080,7 @@
                     },
                     {
                         "in": "path",
-                        "name": "version",
+                        "name": "id",
                         "schema": {
                             "type": "string"
                         },
@@ -3085,7 +3088,7 @@
                         "description": "Identifier of the script version"
                     }
                 ],
-                "description": "Deletes a specific version of the script for an app.\nFails if the version to delete is the current version.",
+                "description": "Deletes a specific version of the script for an app.\nFails if the supplied id is the current version.",
                 "x-qlik-access-control": [
                     "update"
                 ],
@@ -3095,7 +3098,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "9289a606-2938-434f-83ca-4e5a7ead6bda",
+                "x-qlik-entity-revision": "411deaa7-69bb-4696-abf5-02d660972a8c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -5928,6 +5931,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
+                "x-qlik-entity-revision": "6f99daec-0f69-4608-9458-7a247e82ace8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -5944,11 +5948,7 @@
                 "responses": {
                     "200": {
                         "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/automl-job"
-                                }
-                            }
+                            "application/json": {}
                         },
                         "description": "OK Response"
                     },
@@ -6024,6 +6024,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
+                "x-qlik-entity-revision": "3124110e-67e2-4a65-b8ec-267c3a56fffb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -6119,6 +6120,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
+                "x-qlik-entity-revision": "74ba0320-6f57-4f8e-ad0b-255296f950cc",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -6214,6 +6216,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
+                "x-qlik-entity-revision": "f6e8b1a2-744c-4212-a95b-d3b5549979b7",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -6309,6 +6312,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
+                "x-qlik-entity-revision": "d651b7c4-37de-4418-8b63-d312f3a47c3b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -6404,6 +6408,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
+                "x-qlik-entity-revision": "fe05d616-3ea2-4613-955e-11ce9c4b6684",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -6543,10 +6548,11 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
+                "x-qlik-entity-revision": "9344004f-6f32-4ce4-8f68-b814a07e07e7",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
-                    "tier": "2",
-                    "limit": 100
+                    "tier": "special",
+                    "limit": 300
                 }
             }
         },
@@ -10699,6 +10705,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
+                "x-qlik-entity-revision": "30c90df5-ab6b-4dc9-9667-f49f7f8be8d3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -10769,6 +10776,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
+                "x-qlik-entity-revision": "7933bd9b-89f2-4586-b063-5342d2449af3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -10851,6 +10859,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
+                "x-qlik-entity-revision": "4277e6bc-4b84-4992-a84c-59791b627834",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -10935,6 +10944,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
+                "x-qlik-entity-revision": "a8d751c6-c025-4a4b-b4ad-e1aef9578998",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -11008,6 +11018,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
+                "x-qlik-entity-revision": "c0edee30-bac1-4dc4-abd7-8f65268e1c1c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -11090,6 +11101,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
+                "x-qlik-entity-revision": "73348fea-5142-4580-a1f4-b2864bb56615",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -11181,6 +11193,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
+                "x-qlik-entity-revision": "600d5353-6ce6-4e30-9c2f-e938436e9499",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -11263,6 +11276,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
+                "x-qlik-entity-revision": "9f0bf143-be75-4c34-a9c8-664771b93cd2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -11392,6 +11406,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
+                "x-qlik-entity-revision": "bfcf2174-3d4b-4357-b749-406e29b848b0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -11688,6 +11703,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
+                "x-qlik-entity-revision": "5a47d692-68e4-4a18-bb38-bd577d5c9c27",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -11769,6 +11785,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
+                "x-qlik-entity-revision": "22fe3613-ef8c-4fdc-8001-3f6a234731d1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -11854,6 +11871,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
+                "x-qlik-entity-revision": "cb55a8e1-ad2f-42e7-8959-50896b2fe720",
                 "x-qlik-tier": {
                     "tier": "1",
                     "limit": 1000
@@ -11925,6 +11943,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
+                "x-qlik-entity-revision": "e5ad4d56-dfda-4540-8e54-f656199dd23d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -11997,6 +12016,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
+                "x-qlik-entity-revision": "e3752035-7584-427a-aca2-55347ffffe5e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -12048,6 +12068,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
+                "x-qlik-entity-revision": "97ae8d45-6da4-436b-a8c8-8395f21e8dfc",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -12121,6 +12142,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
+                "x-qlik-entity-revision": "31de7768-a071-4274-b9c1-633dcfa9440f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -17078,7 +17100,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "05e5e9c2-5d3b-4c97-b36f-fe47b60ea359",
+                "x-qlik-entity-revision": "bb1f8960-5385-421e-98af-8e05cf161841",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -17095,7 +17117,7 @@
                 "responses": {
                     "200": {
                         "content": {
-                            "application/yaml": {
+                            "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/GetConnectionResponse"
                                 }
@@ -17171,7 +17193,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "6b0c93a9-34b1-4aba-a7e7-bae4bd493046",
+                "x-qlik-entity-revision": "2cbc3f49-180f-42f4-94d8-e9a29d325ad5",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -17188,7 +17210,7 @@
                 "responses": {
                     "200": {
                         "content": {
-                            "application/yaml": {
+                            "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/ApiSpecResponse"
                                 }
@@ -17253,7 +17275,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "eb39bc1b-e49d-43fe-8595-a5ca33f2d326",
+                "x-qlik-entity-revision": "2c6666ac-780b-4dd1-9a1e-817bb88128a4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -35175,7 +35197,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "8243c8fc-b747-437a-9520-9d6c03847beb",
+                "x-qlik-entity-revision": "889d7faf-365d-4ba1-aa60-bfa60ec46ae3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -42251,83 +42273,6 @@
                     }
                 }
             },
-            "automl-job": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "type": "string",
-                        "format": "uuid",
-                        "description": "The unique ID of the job."
-                    },
-                    "corrId": {
-                        "type": "string",
-                        "format": "uuid",
-                        "description": "The ID of the correlation."
-                    },
-                    "status": {
-                        "enum": [
-                            "pending",
-                            "completed",
-                            "cancelled"
-                        ],
-                        "type": "string",
-                        "description": "The status of the job."
-                    },
-                    "jobType": {
-                        "enum": [
-                            "preprocess_dataset",
-                            "dataset_conversion",
-                            "train_model",
-                            "predict_dataset",
-                            "prediction",
-                            "data_sync"
-                        ],
-                        "type": "string",
-                        "description": "The job type."
-                    },
-                    "corrType": {
-                        "enum": [
-                            "experiment_version",
-                            "model",
-                            "prediction",
-                            "deployment",
-                            "realtime_prediction"
-                        ],
-                        "type": "string",
-                        "description": "The type of the correlation."
-                    },
-                    "tenantId": {
-                        "type": "string",
-                        "description": "The ID of the tenant that owns the job."
-                    },
-                    "createdAt": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "The UTC timestamp when the job was created."
-                    },
-                    "createdBy": {
-                        "type": "string",
-                        "description": "The user that created the job"
-                    },
-                    "deletedAt": {
-                        "type": "string",
-                        "format": "date-time",
-                        "nullable": true,
-                        "description": "The UTC timestamp when the job was deleted."
-                    },
-                    "updatedAt": {
-                        "type": "string",
-                        "format": "date-time",
-                        "description": "The UTC timestamp when the job was updated."
-                    },
-                    "parentJobId": {
-                        "type": "string",
-                        "nullable": true,
-                        "description": "The ID of the parent job."
-                    }
-                },
-                "x-qlik-visibility": "private"
-            },
             "error": {
                 "required": [
                     "code",
@@ -44975,7 +44920,8 @@
                             "CONVERSION_DENIED",
                             "EXPIRED",
                             "PARTIAL_SENT",
-                            "QUOTA_REACHED"
+                            "QUOTA_REACHED",
+                            "OWNER_HAS_NO_VALID_USER_ENTITLEMENT"
                         ],
                         "type": "string",
                         "description": "Identifier for type of error occurring on alerting task"
@@ -45542,11 +45488,20 @@
                     "userIds"
                 ],
                 "properties": {
+                    "DLUsers": {
+                        "type": "array"
+                    },
                     "userIds": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/UserIDRecipient"
                         }
+                    },
+                    "DLGroups": {
+                        "type": "array"
+                    },
+                    "DLListId": {
+                        "type": "string"
                     },
                     "groupIds": {
                         "type": "array",
@@ -48445,17 +48400,25 @@
             "ApiSpecResponse": {
                 "type": "object",
                 "required": [
-                    "x-qlik-connector-version",
+                    "connectorProvider",
+                    "connectorVersion",
                     "connectionProperties"
                 ],
                 "properties": {
+                    "connectorVersion": {
+                        "type": "string",
+                        "example": "1.180.0",
+                        "description": "Datasource provider (i.e. connector) version"
+                    },
+                    "connectorProvider": {
+                        "type": "string",
+                        "example": "QvRestConnector.exe",
+                        "description": "Datasource provider"
+                    },
                     "connectionProperties": {
                         "type": "object",
+                        "example": "{\"property1\": \"value\", \"property2\": \"value2\"}",
                         "description": "List of properties required for the given datasource"
-                    },
-                    "x-qlik-connector-version": {
-                        "type": "string",
-                        "description": "Datasource provider (i.e. connector) version"
                     }
                 }
             },
@@ -48467,9 +48430,11 @@
                 "properties": {
                     "authUrl": {
                         "type": "string",
+                        "example": "https://www.dropbox.com/oauth2/authorize?client_id=...",
                         "description": "Authentication URL for OAuth datasource"
                     }
-                }
+                },
+                "description": "Response returned when 'authUrlOnly' is set to true in the request body"
             },
             "CreateConnectionReq": {
                 "type": "object",
@@ -48483,30 +48448,37 @@
                         "type": "array",
                         "items": {
                             "type": "string",
+                            "example": "tag1",
                             "description": "tag string (256 bytes or less)"
                         },
+                        "example": "[\"tag1\", \"tag2\"]",
                         "description": "string tags (32 or less) persisted with the connection object"
                     },
                     "spaceId": {
                         "type": "string",
+                        "example": "6226583d53a69876774d4f96",
                         "description": "Target connection space ID"
                     },
                     "authUrlOnly": {
                         "type": "boolean",
                         "default": false,
-                        "description": "When set to true, authentication URL will be returned for OAuth request to datasource. This property will be ignored if the request is not OAuth or datasource doesn't support OAuth"
+                        "example": "false",
+                        "description": "When set to true, only authentication URL will be returned if datasource supports OAuth (other properties set in the request will ignored). This property will be ignored if the request is not OAuth or datasource doesn't support OAuth"
                     },
                     "dataSourceId": {
                         "type": "string",
+                        "example": "rest",
                         "description": "Datasource ID"
                     },
                     "connectionName": {
                         "type": "string",
+                        "example": "MyConnection",
                         "description": "Connection name"
                     },
                     "connectionProperties": {
                         "type": "object",
-                        "description": "List of connection properties required to create dataconnection for a given datasource, which is defined by the response of 'GET /actions/data-connections/api-specs'"
+                        "example": "{\"property1\": \"value\", \"property2\": \"value\"}",
+                        "description": "List of connection properties required to create dataconnection for a given datasource, which is defined by the response of 'GET /v1/data-datasources/:{datasourceId}/api-specs'"
                     }
                 }
             },
@@ -48524,6 +48496,7 @@
                 "properties": {
                     "userId": {
                         "type": "string",
+                        "example": "Ip1R89NWKqEYje6jxc6wEkJEQsiPG7uz",
                         "description": "User ID"
                     },
                     "spaceId": {
@@ -48533,6 +48506,7 @@
                     },
                     "tenantId": {
                         "type": "string",
+                        "example": "xqFQ0k66vSR8f9F7J-zZtHZQkiYrCpc2",
                         "description": "Tenant ID"
                     },
                     "updateAt": {
@@ -48552,6 +48526,7 @@
                     },
                     "dataSourceId": {
                         "type": "string",
+                        "example": "rest",
                         "description": "Datasource ID"
                     },
                     "credentialsId": {
@@ -48561,6 +48536,7 @@
                     },
                     "connectionName": {
                         "type": "string",
+                        "example": "My connection",
                         "description": "Connection name"
                     }
                 }
@@ -48582,8 +48558,10 @@
                         "type": "array",
                         "items": {
                             "type": "string",
+                            "example": "tag1",
                             "description": "tag string (256 bytes or less)"
                         },
+                        "example": "[\"tag1\", \"tag2\"]",
                         "description": "string tags associated with the connection"
                     },
                     "userId": {
@@ -48597,6 +48575,7 @@
                     },
                     "tenantId": {
                         "type": "string",
+                        "example": "1f25B1AD6zH6cQ-TovCAuXbCtgfSTrSC",
                         "description": "Tenant ID"
                     },
                     "updateAt": {
@@ -48616,6 +48595,7 @@
                     },
                     "dataSourceId": {
                         "type": "string",
+                        "example": "rest",
                         "description": "Datasource ID"
                     },
                     "credentialsId": {
@@ -48625,10 +48605,12 @@
                     },
                     "connectionName": {
                         "type": "string",
+                        "example": "My Connection 1",
                         "description": "Connection name"
                     },
                     "connectionProperties": {
                         "type": "object",
+                        "example": "{property1: \"value\"}",
                         "description": "List of connection properties"
                     }
                 }
