@@ -704,7 +704,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "a81b195a-4aec-4e83-88e6-4336569d9e0f",
+                "x-qlik-entity-revision": "d655c029-3819-4ed4-8c41-d10a9760a421",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -751,7 +751,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "ba092387-ff06-4924-8710-b5bbe3703a0a",
+                "x-qlik-entity-revision": "5261c743-02c2-49d9-b3e5-aa014274325f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -807,7 +807,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "1bf67333-bc94-434f-8618-f97d829b5527",
+                "x-qlik-entity-revision": "3b676241-17d4-4f74-b28c-113a7befa26a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -906,7 +906,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "dd0aaced-a03f-417b-9bbd-431c71dec61f",
+                "x-qlik-entity-revision": "4cb94d35-1c80-431b-b932-ead568adc4ef",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -1003,7 +1003,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "7c7e780b-e62d-4617-ad7f-77506154a6d1",
+                "x-qlik-entity-revision": "2db8e13a-e7fc-464c-99f0-88dc0cc4a089",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -1864,7 +1864,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "f98c1c46-926f-441a-87bb-2f4415629225",
+                "x-qlik-entity-revision": "e8208930-1e47-4544-b38a-90bf346c6bcb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -1922,7 +1922,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "1864fbee-8b17-4b2d-84ef-e21e3c5ca716",
+                "x-qlik-entity-revision": "f6bf8e43-1d49-4487-9f3c-9641dac2dad2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -1978,7 +1978,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "02c3d6c2-93d3-4e3a-9b5d-b1ebb4ca9f3d",
+                "x-qlik-entity-revision": "c422adf6-92d6-49cf-8069-5e6a7783aba0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -2337,7 +2337,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "0055913e-e37a-40ed-abf1-58e2a41b456e",
+                "x-qlik-entity-revision": "8a1acae0-0687-4a82-acaf-0fbc73fbc93f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -2462,7 +2462,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "772e3efc-55ff-4314-9f5c-98b08fca8a03",
+                "x-qlik-entity-revision": "0c53ce7e-44d8-4fd6-9333-ca9044f1b969",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -2577,11 +2577,138 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "f1ed3014-e6ea-4501-beaf-a7ea46d16316",
+                "x-qlik-entity-revision": "2bdc9c25-1ad9-4460-bd00-855e88be20a4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
                     "limit": 1000
+                }
+            },
+            "patch": {
+                "tags": [
+                    "filters"
+                ],
+                "summary": "Update a filter",
+                "responses": {
+                    "204": {
+                        "description": "The filter has been successfully patched."
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/FilterErrors"
+                                }
+                            }
+                        },
+                        "description": "Bad request. Malformed syntax, errors in params."
+                    },
+                    "401": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/FilterErrors"
+                                }
+                            }
+                        },
+                        "description": "Unauthorized, JWT invalid or not provided."
+                    },
+                    "403": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/FilterErrors"
+                                }
+                            }
+                        },
+                        "description": "Forbidden, user lacks sufficient permissions to access the resource."
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/FilterErrors"
+                                }
+                            }
+                        },
+                        "description": "Not found."
+                    },
+                    "409": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/FilterErrors"
+                                }
+                            }
+                        },
+                        "description": "Filter name conflict. A filter with the same name already exists."
+                    },
+                    "429": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/FilterErrors"
+                                }
+                            }
+                        },
+                        "description": "Too many request. Indicates the user has sent too many requests in a given amount of time, aka \"rate limiting\"."
+                    },
+                    "500": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/FilterErrors"
+                                }
+                            }
+                        },
+                        "description": "Internal server error."
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "appId",
+                        "schema": {
+                            "type": "string",
+                            "format": "uid",
+                            "example": "01562a37-23e3-4b43-865d-84c26122276c"
+                        },
+                        "required": true,
+                        "description": "Qlik Sense app identifier"
+                    },
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "schema": {
+                            "type": "string",
+                            "example": "01562a37-23e3-4b43-865d-84c26122276c"
+                        },
+                        "required": true,
+                        "description": "The filter id identifier (bookmarkId)."
+                    }
+                ],
+                "operationId": "filtersUpdate",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PatchFilter"
+                            }
+                        }
+                    },
+                    "required": true,
+                    "description": "The filter definition that will replace the existing one."
+                },
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/build"
+                ],
+                "x-qlik-entity-revision": "cf870361-59f8-4442-abe5-1813c64f151f",
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
                 }
             },
             "delete": {
@@ -3153,7 +3280,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "9c754a44-6448-472a-8fe4-0fc4c5a1cc44",
+                "x-qlik-entity-revision": "6e665db8-18fb-4b3d-a770-bc7124383cbd",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -3195,7 +3322,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "d4346461-0102-49b1-a7c3-dd13a4dd3fa4",
+                "x-qlik-entity-revision": "a05d9c01-80f2-4ddc-a289-ec0b7cadf34b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -3852,7 +3979,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "aeb6e207-aebb-42fb-99bd-63695027425a",
+                "x-qlik-entity-revision": "edfe1dfd-d57f-4865-ac8f-0b3aa8b607a2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -6332,7 +6459,9 @@
                 "responses": {
                     "200": {
                         "content": {
-                            "text/csv": {}
+                            "text/csv": {
+                                "schema": {}
+                            }
                         },
                         "description": "Stream of coordinate shap values returned successfully."
                     },
@@ -6411,7 +6540,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "6f99daec-0f69-4608-9458-7a247e82ace8",
+                "x-qlik-entity-revision": "2face669-f15c-4266-b2f7-d206a2613e5e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -6521,7 +6650,9 @@
                 "responses": {
                     "200": {
                         "content": {
-                            "text/csv": {}
+                            "text/csv": {
+                                "schema": {}
+                            }
                         },
                         "description": "Stream of not predicted reasons returned successfully."
                     },
@@ -6600,7 +6731,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "74ba0320-6f57-4f8e-ad0b-255296f950cc",
+                "x-qlik-entity-revision": "b1bc8235-545b-49cd-84c5-41d2560a2178",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -6809,7 +6940,9 @@
                 "responses": {
                     "200": {
                         "content": {
-                            "text/csv": {}
+                            "text/csv": {
+                                "schema": {}
+                            }
                         },
                         "description": "Stream of source values and index field returned successfully."
                     },
@@ -6888,7 +7021,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "fe05d616-3ea2-4613-955e-11ce9c4b6684",
+                "x-qlik-entity-revision": "d4b61428-653c-42e3-b645-ed3a1b3a65c9",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -7868,13 +8001,6 @@
                             "type": "string"
                         },
                         "examples": {
-                            "json": {
-                                "value": {
-                                    "sort": "-createdAt",
-                                    "limit": 10,
-                                    "resourceType": "app"
-                                }
-                            },
                             "deep object": {
                                 "value": "includeItems[limit]=10&includeItems[sort]=-createdAt&IncludeItems[resourceType]=app"
                             }
@@ -10073,20 +10199,12 @@
                     },
                     {
                         "in": "query",
-                        "name": "customerFacing",
-                        "schema": {
-                            "type": "boolean"
-                        },
-                        "required": false
-                    },
-                    {
-                        "in": "query",
                         "name": "filter",
                         "schema": {
                             "type": "string"
                         },
                         "required": false,
-                        "description": "The filter for finding entries."
+                        "description": "The advanced filtering to use for the query. Refer to [RFC 7644](https://datatracker.ietf.org/doc/rfc7644/) for the syntax.\n\nexample `taskName eq \"automation_run_ended\" or taskName eq \"report_triggered\" or or taskName eq \"dataVolumeAggregated\"`\n\nThe following fields are supported: `scope`, `resourcetype`, `resourceaction`, `resourceid`, `capacitylimit`,\n`localusage`, `globalusage`, `overage`, `blocked`, `periodtype`, `periodstart`, `periodend`, `consumptionreportid`,\n`blockedeventtime`, `overageeventtime`, `taskname`, `taskdescription`, `userid`, `tenantid`, `customerfacing`,\n`actiontoblock`\n"
                     },
                     {
                         "in": "query",
@@ -10163,7 +10281,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "8a653832-3ea6-430a-a87b-43139dc539ff",
+                "x-qlik-entity-revision": "7517e24a-255c-4579-b365-f6dfc2114b66",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -20668,7 +20786,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "71a710c2-c44e-4ae1-b9e6-ce4c5f8d58a1",
+                "x-qlik-entity-revision": "2c40e5bb-41ce-4876-870e-12bf8d0efa9a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -21470,7 +21588,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "41a34e7d-9e8a-4ec6-83d9-5e7cc17bed02",
+                "x-qlik-entity-revision": "f796ba14-7164-41c2-8470-721742e4e43e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -21565,7 +21683,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "18fe835e-0503-49ad-8335-8d5053844a12",
+                "x-qlik-entity-revision": "d76589d6-2569-48cf-84f2-e056a80c3175",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -21664,7 +21782,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "4b7844af-65bd-46b8-a44c-3d5271538c13",
+                "x-qlik-entity-revision": "ece673d3-d062-42bd-8045-e39bb2b3abb7",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -21937,7 +22055,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "7a27b82c-6f6e-4b5b-885c-0974afa349d4",
+                "x-qlik-entity-revision": "55538a94-9a71-49e7-b4dd-c547a9467cd8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -22145,7 +22263,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "ea1401ff-da8f-4d77-a70b-cf667af876e0",
+                "x-qlik-entity-revision": "f9a91ada-f761-4564-8ed6-1adb0e95e50c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -22292,7 +22410,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f0dd491d-55f7-4718-87d5-8d1f90ccabfe",
+                "x-qlik-entity-revision": "6bdb7766-a7b8-495d-bd11-a85b1ba23ec4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -22417,7 +22535,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "48304e6e-3158-44f1-93d4-9585c058b947",
+                "x-qlik-entity-revision": "7d672417-6430-4985-bbc6-baad2414026e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -22550,7 +22668,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "9576f5f7-d3d8-4325-8416-b3178db17201",
+                "x-qlik-entity-revision": "36ed3b08-417f-4b3a-982d-1a8cd6fa81e7",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -22663,7 +22781,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "15e5e769-f868-492a-8d12-4bf8afe043e4",
+                "x-qlik-entity-revision": "0c845f90-6b9e-405c-9dbe-6860f19cd9a5",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -23454,7 +23572,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c044a154-0a01-476d-a7ae-968ab51ec831",
+                "x-qlik-entity-revision": "66ab3a23-3f68-45a9-88f1-92eaf2314b47",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -27971,7 +28089,7 @@
                     "external/authenticate",
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c4bdab37-d29d-4ece-b8bf-514f6fc99b58",
+                "x-qlik-entity-revision": "1422bc05-409a-4a07-9ef7-ea0deb87370f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -28027,7 +28145,7 @@
                     "external/authenticate",
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "a84b5586-b909-4a09-80b3-e77bc9fa3bb8",
+                "x-qlik-entity-revision": "4caa1045-7d41-4559-a3f6-1465e5f8fb11",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -28096,7 +28214,7 @@
                     "external/authenticate",
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "a1620bd1-92a6-4f59-879f-5bf2093c53f7",
+                "x-qlik-entity-revision": "092cff5b-7d7e-4bcd-9359-6dea011d6d3a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -28351,7 +28469,7 @@
                     "external/authenticate",
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "4939dea7-c0a7-4e16-842d-6afc45bcd717",
+                "x-qlik-entity-revision": "07ba4b1c-db88-4cfe-a550-feb729b82a13",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30753,7 +30871,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "9c680aea-0f29-49c9-b953-7da38387a80a",
+                "x-qlik-entity-revision": "d5915621-93fa-4e47-8e60-ff12d9ccb8db",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -31069,7 +31187,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "94f56980-1e65-4f98-83d2-1963c0a99a84",
+                "x-qlik-entity-revision": "fbbfea62-0457-4a3c-a215-6393681bafef",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -31152,7 +31270,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "1eecac84-5da9-4c2d-95c3-ef9493e0970e",
+                "x-qlik-entity-revision": "b2acf9ac-5db4-44f2-a6d4-d7854cc8ad1b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -35441,7 +35559,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "5970d7e7-428f-4815-aa4e-8bf26ccb6eb3",
+                "x-qlik-entity-revision": "3e2d264b-5872-4072-89a3-43773c44d6c2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -35566,7 +35684,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b60f9fa5-b223-440c-9bb5-90c96060d268",
+                "x-qlik-entity-revision": "d23e5b02-793c-47ff-abd3-786d6f1e9c55",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -35677,7 +35795,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "889d7faf-365d-4ba1-aa60-bfa60ec46ae3",
+                "x-qlik-entity-revision": "44a796b1-52ba-4b66-9747-5ef0825e5af4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -36117,7 +36235,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c55f25fb-96d9-47e0-97ff-26b9148a903e",
+                "x-qlik-entity-revision": "1cf590bd-dd6d-4234-86fa-a1cad9a41966",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -39920,6 +40038,36 @@
                     }
                 }
             },
+            "FilterItemPatch": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "example": "Filter 1",
+                        "description": "The filter name."
+                    },
+                    "ownerId": {
+                        "type": "string",
+                        "example": "649173fbc8ffcfde27412b99",
+                        "description": "The user that owns the filter, if missing the same as the request user."
+                    },
+                    "filterV1_0": {
+                        "$ref": "#/components/schemas/FilterV1_0"
+                    },
+                    "description": {
+                        "type": "string",
+                        "example": "This is the filter description",
+                        "description": "The filter description."
+                    },
+                    "filterVersion": {
+                        "enum": [
+                            "filter-1.0",
+                            "filter-2.0"
+                        ],
+                        "type": "string"
+                    }
+                }
+            },
             "FilterList": {
                 "type": "object",
                 "readOnly": true,
@@ -40777,6 +40925,46 @@
                     }
                 },
                 "description": "Contains break down of the asked question in the form of tokens with their classification."
+            },
+            "PatchFilter": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/PatchFilterItem"
+                }
+            },
+            "PatchFilterItem": {
+                "type": "object",
+                "required": [
+                    "op",
+                    "path",
+                    "value"
+                ],
+                "properties": {
+                    "op": {
+                        "enum": [
+                            "replace"
+                        ],
+                        "type": "string",
+                        "description": "operation (replace)."
+                    },
+                    "path": {
+                        "enum": [
+                            "/filter"
+                        ],
+                        "type": "string",
+                        "description": "A JSON Pointer path (/)."
+                    },
+                    "value": {
+                        "type": "object",
+                        "properties": {
+                            "Filter": {
+                                "$ref": "#/components/schemas/FilterItemPatch"
+                            }
+                        },
+                        "description": "The value to be used for this operation. The properties that cannot be patched include id, filterType, appId"
+                    }
+                },
+                "additionalProperties": false
             },
             "PublishApp": {
                 "type": "object",
@@ -41707,6 +41895,10 @@
                     {
                         "title": "DATA_PREPARATION",
                         "x-qlik-const": 1
+                    },
+                    {
+                        "title": "DATAFLOW_PREP",
+                        "x-qlik-const": 2
                     }
                 ]
             },
@@ -50080,12 +50272,7 @@
                     "usage": {
                         "type": "string"
                     },
-                    "examples": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        }
-                    },
+                    "examples": {},
                     "relations": {
                         "$ref": "#/components/schemas/atlanResourceLink"
                     },
@@ -51421,7 +51608,8 @@
                     "subResourceType": {
                         "enum": [
                             "master_dimension",
-                            "master_measure"
+                            "master_measure",
+                            "field"
                         ],
                         "type": "string"
                     }
@@ -51505,7 +51693,8 @@
                     "subResourceType": {
                         "enum": [
                             "master_dimension",
-                            "master_measure"
+                            "master_measure",
+                            "field"
                         ],
                         "type": "string",
                         "x-qlik-filterable": true
@@ -51627,7 +51816,8 @@
                         },
                         "type": {
                             "enum": [
-                                "default"
+                                "default",
+                                "custom"
                             ],
                             "type": "string",
                             "example": "default",
@@ -55703,6 +55893,15 @@
                                     "type": "string",
                                     "maxLength": 5,
                                     "description": "Hint of a client application secret"
+                                },
+                                "createdAt": {
+                                    "type": "string",
+                                    "format": "date-time",
+                                    "description": "The timestamp for when the client-secret record was created."
+                                },
+                                "createdBy": {
+                                    "type": "string",
+                                    "description": "The identifier for the user that created the client-secret record."
                                 }
                             }
                         },
@@ -55760,6 +55959,11 @@
                         "type": "string",
                         "format": "date-time",
                         "description": "The timestamp for when the oauth-clients record was deleted."
+                    },
+                    "updatedAt": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "The timestamp for when the oauth-clients record was updated."
                     },
                     "clientName": {
                         "type": "string",
@@ -56012,6 +56216,15 @@
                         "type": "string",
                         "readOnly": true,
                         "description": "Client application id"
+                    },
+                    "createdAt": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "The timestamp for when the client-secret record was created."
+                    },
+                    "createdBy": {
+                        "type": "string",
+                        "description": "The identifier for the user that created the client-secret record."
                     },
                     "clientSecret": {
                         "type": "string",
@@ -57458,11 +57671,10 @@
                             "sense-story-1.0",
                             "qv-data-1.0",
                             "qv-data-2.0",
-                            "sense-excel-template-1.0",
-                            "cycle-template-1.0"
+                            "sense-excel-template-1.0"
                         ],
                         "type": "string",
-                        "description": "Template type and version using semantic versioning. It must have the following name convention: dashed-separated-template-name-MAJOR.MINOR.\nPlease note that sense-story-x.0, sense-data-x.0 and qv-data-x.0 are only for internal use.\n\nEach type requires a specific template to be provided:\n  - composition-1.0 requires compositionTemplates to be set\n  - sense-excel-template-1.0 requires senseExcelTemplate to be set\n  - sense-image-1.0 requires senseImageTemplate to be set\n  - sense-sheet-1.0 requires senseSheetTemplate to be set\n  - cycle-1.0 requires cycleTemplate to be set\n\nEach template type supports specific output types:\n  - composition-1.0 supports pdfcomposition and pptxComposition output type\n  - sense-excel-template-1.0 supports excel and pdf output type\n  - sense-image-1.0 supports pdf, pptx and png output types\n  - sense-sheet-1.0 supports pdf, pptx output type\n"
+                        "description": "Template type and version using semantic versioning. It must have the following name convention: dashed-separated-template-name-MAJOR.MINOR.\nPlease note that sense-story-x.0, sense-data-x.0 and qv-data-x.0 are only for internal use.\n\nEach type requires a specific template to be provided:\n  - composition-1.0 requires compositionTemplates to be set\n  - sense-excel-template-1.0 requires senseExcelTemplate to be set\n  - sense-image-1.0 requires senseImageTemplate to be set\n  - sense-sheet-1.0 requires senseSheetTemplate to be set\n\nEach template type supports specific output types:\n  - composition-1.0 supports pdfcomposition and pptxComposition output type\n  - sense-excel-template-1.0 supports excel and pdf output type\n  - sense-image-1.0 supports pdf, pptx and png output types\n  - sense-sheet-1.0 supports pdf, pptx output type\n"
                     },
                     "output": {
                         "$ref": "#/components/schemas/OutputItem"
@@ -57981,7 +58193,8 @@
                     },
                     "type": {
                         "enum": [
-                            "default"
+                            "default",
+                            "custom"
                         ],
                         "type": "string",
                         "example": "default",
@@ -58030,7 +58243,8 @@
                     "fullUser": {
                         "type": "boolean",
                         "readOnly": true,
-                        "description": "Indicate whether this role will trigger promotion of a user from a basic to a full user on tenants with a capacity-based subscription. Does not apply to tenants with a user-based subscription."
+                        "description": "DEPRECATED. Use userEntitlementType instead for impact of roles on user entitlements with a capacity-based subscription.",
+                        "x-qlik-deprecated": true
                     },
                     "tenantId": {
                         "type": "string",
@@ -58060,7 +58274,7 @@
                     "updatedBy": {
                         "type": "string",
                         "readOnly": true,
-                        "description": "Id of user that last updated`` role"
+                        "description": "Id of user that last updated this role"
                     },
                     "description": {
                         "type": "string",
@@ -58092,6 +58306,12 @@
                             "type": "string"
                         },
                         "description": "Selection of scopes added to this Role"
+                    },
+                    "userEntitlementType": {
+                        "type": "string",
+                        "example": "fullUser",
+                        "readOnly": true,
+                        "description": "Indicate whether this role will trigger promotion of a user from a basic to a full user on tenants with a capacity-based subscription. Does not apply to tenants with a user-based subscription. Returns fullUser if it will trigger promotion."
                     }
                 }
             },
@@ -62620,8 +62840,7 @@
                             "level": "user"
                         }
                     ],
-                    "lastUpdatedAt": "2022-06-24T18:28:31.301Z",
-                    "assignedGroups": []
+                    "lastUpdatedAt": "2022-06-24T18:28:31.301Z"
                 }
             }
         }

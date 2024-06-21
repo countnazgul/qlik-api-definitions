@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.2087.0",
+        "version": "12.2111.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -17777,11 +17777,19 @@
                     },
                     "qReadableName": {
                         "type": "string",
-                        "description": "Label that, if defined, is displayed in current selections instead of the actual expression."
+                        "description": "Label that, if defined, is displayed in current selections instead of the actual expression. ReadableName is only used with field-on-the-fly."
                     },
                     "qIsHidden": {
                         "type": "boolean",
                         "description": "Optional parameter. Indicates if the selection is to be hidden in the Selections bar.\nIs set to true if the current selection is hidden."
+                    },
+                    "qFieldReferenceInfo": {
+                        "type": "array",
+                        "description": "Information about objects in the app that refer to the data model field of an NxCurrentSelectionItem, including labels.",
+                        "items": {
+                            "$ref": "#/components/schemas/SelectionItemFieldReferenceInfo"
+                        },
+                        "x-qlik-stability": "experimental"
                     }
                 }
             },
@@ -17818,6 +17826,25 @@
                         "description": "SELECTION_MODE_NOT"
                     }
                 ]
+            },
+            "SelectionItemFieldReferenceInfo": {
+                "type": "object",
+                "description": "Structure that holds information connecting an app object to a data model field represented by an NxCurrentSelectionItem in the SelectionObject.\nThe SelectionItemFieldReferenceInfo structure points to an app object, such as a GenericDimension, and also holds a label.",
+                "properties": {
+                    "qId": {
+                        "type": "string",
+                        "description": "Identifier of the associated object."
+                    },
+                    "qType": {
+                        "type": "string",
+                        "description": "Type of object."
+                    },
+                    "qLabel": {
+                        "type": "string",
+                        "description": "Text label."
+                    }
+                },
+                "x-qlik-stability": "experimental"
             },
             "StaticContentUrlDef": {
                 "type": "object",
@@ -19636,7 +19663,7 @@
                     },
                     "qUsage": {
                         "type": "string",
-                        "description": "\nOne of:\n* ANALYTICS\n* DATA_PREPARATION",
+                        "description": "\nOne of:\n* ANALYTICS\n* DATA_PREPARATION\n* DATAFLOW_PREP",
                         "$ref": "#/components/schemas/UsageEnum"
                     }
                 }
@@ -19756,6 +19783,10 @@
                     {
                         "x-qlik-const": 1,
                         "title": "DATA_PREPARATION"
+                    },
+                    {
+                        "x-qlik-const": 2,
+                        "title": "DATAFLOW_PREP"
                     }
                 ]
             },
@@ -19790,7 +19821,7 @@
                     },
                     "qUsage": {
                         "type": "string",
-                        "description": "Indicates whether the app is used for Analytics or DataPreparation\n\nOne of:\n* ANALYTICS\n* DATA_PREPARATION",
+                        "description": "Indicates whether the app is used for Analytics or DataPreparation\n\nOne of:\n* ANALYTICS\n* DATA_PREPARATION\n* DATAFLOW_PREP",
                         "$ref": "#/components/schemas/UsageEnum"
                     }
                 }
@@ -21777,7 +21808,7 @@
                     },
                     "qUsage": {
                         "type": "string",
-                        "description": "\nOne of:\n* ANALYTICS\n* DATA_PREPARATION",
+                        "description": "\nOne of:\n* ANALYTICS\n* DATA_PREPARATION\n* DATAFLOW_PREP",
                         "$ref": "#/components/schemas/UsageEnum"
                     }
                 }
