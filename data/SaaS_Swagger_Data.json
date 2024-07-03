@@ -10281,7 +10281,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "7517e24a-255c-4579-b365-f6dfc2114b66",
+                "x-qlik-entity-revision": "e290707a-8a1e-4596-a902-febf51024a77",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -22939,7 +22939,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "7e49a286-593b-4bed-9bdc-1b92929d5a49",
+                "x-qlik-entity-revision": "87d2a70e-7519-4681-bdd3-6ee2f86eb55e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -23059,7 +23059,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "aa474275-b7bc-453e-ab78-4564fb80c720",
+                "x-qlik-entity-revision": "98bc524d-36b8-4f86-a070-49a6c6d0f57b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -23152,7 +23152,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "baa22878-4c67-4bb4-914e-373164d765a8",
+                "x-qlik-entity-revision": "ac2d4b0f-2fd5-4484-bc79-14138552fd6d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -23490,7 +23490,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "9e442b74-9d73-4e23-af6b-cc8bf9815e08",
+                "x-qlik-entity-revision": "0a1308a2-b268-4778-8d3e-f10ba322d909",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -23572,7 +23572,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "66ab3a23-3f68-45a9-88f1-92eaf2314b47",
+                "x-qlik-entity-revision": "d784f1b7-bee0-4173-b23c-dec549901824",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30172,7 +30172,10 @@
                                     "-createdAt",
                                     "updatedAt",
                                     "+updatedAt",
-                                    "-updatedAt"
+                                    "-updatedAt",
+                                    "type",
+                                    "+type",
+                                    "-type"
                                 ],
                                 "type": "string"
                             }
@@ -30193,7 +30196,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "b46c2317-1b1c-4566-adb2-1e31953eb533",
+                "x-qlik-entity-revision": "06d1ae55-7710-4a6a-91ad-eead54c818a4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30272,7 +30275,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "39234c68-11f0-4aed-b85f-a13d841cdf1f",
+                "x-qlik-entity-revision": "44bc2612-1eab-4c23-8e05-94fa8908260f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30345,7 +30348,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "08898c82-b423-4012-b1b8-900455327dc2",
+                "x-qlik-entity-revision": "82e36f64-8f09-4589-9a53-de4fd5675e4f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30551,7 +30554,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "d4570f79-7018-4169-a035-0a79bbea75cc",
+                "x-qlik-entity-revision": "76b5dc7b-0c2e-48f9-b16e-a369af993919",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30864,14 +30867,14 @@
                         }
                     },
                     "required": true,
-                    "description": "Definition of the report request.\nPlease note that sense-story-x.0, sense-data-x.0 and qv-data-x.0 types are only for internal use.\n\nEach report request type requires a specific template to be provided:\n - composition-1.0 requires compositionTemplates to be set\n - sense-image-1.0 requires senseImageTemplate to be set\n - sense-sheet-1.0 requires senseSheetTemplate to be set\n\nEach template type supports specific output types:\n - composition-1.0 supports only pdfcomposition and pptxcomposition output types\n - sense-image-1.0 supports pdf, pptx and image output types\n - sense-sheet-1.0 supports pdf and pptx output type\n\nEach output type requires a specific output to be provided:\n - pdfcomposition requires pdfCompositionOutput to be set\n - pptxcomposition requires pptxCompositionOutput to be set\n - pdf requires pdfOuput to be set\n - pptx requires pptxOuput to be set\n - image requires imageOutput to be set\n"
+                    "description": "Definition of the report request.\nPlease note that sense-pixel-perfect-template-1.0, sense-story-x.0, sense-data-x.0 and qv-data-x.0 types are only for internal use.\n\nEach report request type requires a specific template to be provided:\n - composition-1.0 requires compositionTemplates to be set\n - sense-excel-template-1.0 requires senseExcelTemplate to be set\n - sense-image-1.0 requires senseImageTemplate to be set\n - sense-sheet-1.0 requires senseSheetTemplate to be set\n\nEach template type supports specific output types:\n - composition-1.0 supports only pdfcomposition and pptxcomposition output types\n - sense-excel-template-1.0 supports excel and pdf output type\n - sense-image-1.0 supports pdf, pptx and image output types\n - sense-sheet-1.0 supports pdf and pptx output type\n\nEach output type requires a specific output to be provided:\n - pdfcomposition requires pdfCompositionOutput to be set\n - pptxcomposition requires pptxCompositionOutput to be set\n - pdf requires pdfOuput to be set\n - pptx requires pptxOuput to be set\n - image requires imageOutput to be set\n"
                 },
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "d5915621-93fa-4e47-8e60-ff12d9ccb8db",
+                "x-qlik-entity-revision": "6645ef21-944e-46e2-9be6-8267e02763fd",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -31512,7 +31515,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "b4ee5df1-99a3-4459-845f-cf951e622b1c",
+                "x-qlik-entity-revision": "0227cae6-4f4e-4c26-b503-e2d083dbd92b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -31584,7 +31587,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "2ebb2506-56b1-44ff-9c2f-6a884a54ddbd",
+                "x-qlik-entity-revision": "7b6b57fe-5ac0-417b-8d0b-d8a7d6548148",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -31668,7 +31671,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "ac55f170-ada1-4297-a600-508385cafd9c",
+                "x-qlik-entity-revision": "25e95e37-1209-467a-bd8c-a543b98b07cf",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -33996,7 +33999,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "fb2ed5af-23b8-43b8-8d01-626d138e4d50",
+                "x-qlik-entity-revision": "47eb69a2-a81d-4f97-94fe-ae1b674c7789",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -34061,7 +34064,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "333ccfd2-2423-45f3-ae45-466d7c143030",
+                "x-qlik-entity-revision": "e8cf8c9d-84d6-459b-b928-faa8696ac932",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -35559,7 +35562,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "3e2d264b-5872-4072-89a3-43773c44d6c2",
+                "x-qlik-entity-revision": "1c292d44-7b62-414f-b2c6-7aa22b973801",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -35684,7 +35687,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d23e5b02-793c-47ff-abd3-786d6f1e9c55",
+                "x-qlik-entity-revision": "3c469872-e260-448a-8927-3d33f6156efe",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -35795,7 +35798,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "44a796b1-52ba-4b66-9747-5ef0825e5af4",
+                "x-qlik-entity-revision": "4d18bffe-f22d-42d0-a200-30b1a2f085f1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -36235,7 +36238,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "1cf590bd-dd6d-4234-86fa-a1cad9a41966",
+                "x-qlik-entity-revision": "d78ca966-ecbe-4a08-9559-b11d233852df",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -45023,7 +45026,8 @@
                             "day",
                             "month",
                             "year",
-                            ""
+                            "",
+                            "fixed"
                         ],
                         "type": "string",
                         "example": "month",
@@ -51837,7 +51841,7 @@
                     },
                     "description": "represents a role entity stored in the database"
                 },
-                "description": "An array of role references."
+                "description": "An array of role references. Visibility dependant on access level. Must have access to roles to view other users' assigned roles."
             },
             "AssignedRolesRefIDs": {
                 "type": "array",
@@ -51959,50 +51963,7 @@
                         "x-qlik-filterable": true
                     },
                     "assignedRoles": {
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "required": [
-                                "id",
-                                "name",
-                                "type",
-                                "level"
-                            ],
-                            "properties": {
-                                "id": {
-                                    "type": "string",
-                                    "format": "uid",
-                                    "example": "507f191e810c19729de860ea",
-                                    "x-qlik-filterable": true
-                                },
-                                "name": {
-                                    "type": "string",
-                                    "example": "Developer",
-                                    "readOnly": true,
-                                    "x-qlik-filterable": true
-                                },
-                                "type": {
-                                    "enum": [
-                                        "default"
-                                    ],
-                                    "type": "string",
-                                    "example": "default",
-                                    "readOnly": true,
-                                    "x-qlik-filterable": true
-                                },
-                                "level": {
-                                    "enum": [
-                                        "admin",
-                                        "user"
-                                    ],
-                                    "type": "string",
-                                    "example": "admin",
-                                    "readOnly": true,
-                                    "x-qlik-filterable": true
-                                }
-                            },
-                            "description": "represents a role entity to be stored on a Group entity, either default or custom role"
-                        }
+                        "$ref": "#/components/schemas/AssignedRoles"
                     },
                     "lastUpdatedAt": {
                         "type": "string",
@@ -57326,7 +57287,7 @@
                             "cycle"
                         ],
                         "type": "string",
-                        "description": "The generated report type.\n\nEach template type supports specific output types:\n   - composition-1.0 supports only pdfcomposition and pptxcomposition output types\n   - excel-1.0 supports only excel and pdf output type\n   - sense-image-1.0 supports pdf, pptx and image output types\n   - sense-sheet-1.0 supports pdf and pptx output type\n\nEach output type requires a specific output to be provided:\n   - excel requires excelOutput to be set\n   - pdfcomposition requires pdfCompositionOutput to be set\n   - pptxcomposition requires pptxCompositionOutput to be set\n   - pdf requires pdfOuput to be set\n   - pptx requires pptxOuput to be set\n   - image requires imageOutput to be set\n   - csv doesn't have csv output.\n"
+                        "description": "The generated report type.\n\nEach template type supports specific output types:\n   - composition-1.0 supports only pdfcomposition and pptxcomposition output types\n   - sense-excel-template-1.0 supports only excel and pdf output type\n   - sense-image-1.0 supports pdf, pptx and image output types\n   - sense-sheet-1.0 supports pdf and pptx output type\n\nEach output type requires a specific output to be provided:\n   - excel requires excelOutput to be set\n   - pdfcomposition requires pdfCompositionOutput to be set\n   - pptxcomposition requires pptxCompositionOutput to be set\n   - pdf requires pdfOuput to be set\n   - pptx requires pptxOuput to be set\n   - image requires imageOutput to be set\n   - csv doesn't have csv output.\n"
                     },
                     "outputId": {
                         "type": "string",
@@ -57671,10 +57632,11 @@
                             "sense-story-1.0",
                             "qv-data-1.0",
                             "qv-data-2.0",
-                            "sense-excel-template-1.0"
+                            "sense-excel-template-1.0",
+                            "sense-pixel-perfect-template-1.0"
                         ],
                         "type": "string",
-                        "description": "Template type and version using semantic versioning. It must have the following name convention: dashed-separated-template-name-MAJOR.MINOR.\nPlease note that sense-story-x.0, sense-data-x.0 and qv-data-x.0 are only for internal use.\n\nEach type requires a specific template to be provided:\n  - composition-1.0 requires compositionTemplates to be set\n  - sense-excel-template-1.0 requires senseExcelTemplate to be set\n  - sense-image-1.0 requires senseImageTemplate to be set\n  - sense-sheet-1.0 requires senseSheetTemplate to be set\n\nEach template type supports specific output types:\n  - composition-1.0 supports pdfcomposition and pptxComposition output type\n  - sense-excel-template-1.0 supports excel and pdf output type\n  - sense-image-1.0 supports pdf, pptx and png output types\n  - sense-sheet-1.0 supports pdf, pptx output type\n"
+                        "description": "Template type and version using semantic versioning. It must have the following name convention: dashed-separated-template-name-MAJOR.MINOR.\nPlease note that sense-pixel-perfect-template-1.0, sense-story-x.0, sense-data-x.0 and qv-data-x.0 are only for internal use.\n\nEach type requires a specific template to be provided:\n  - composition-1.0 requires compositionTemplates to be set\n  - sense-excel-template-1.0 requires senseExcelTemplate to be set\n  - sense-image-1.0 requires senseImageTemplate to be set\n  - sense-sheet-1.0 requires senseSheetTemplate to be set\n\nEach template type supports specific output types:\n  - composition-1.0 supports pdfcomposition and pptxComposition output type\n  - sense-excel-template-1.0 supports excel and pdf output type\n  - sense-image-1.0 supports pdf, pptx and png output types\n  - sense-sheet-1.0 supports pdf, pptx output type\n"
                     },
                     "output": {
                         "$ref": "#/components/schemas/OutputItem"
@@ -57683,7 +57645,7 @@
                         "$ref": "#/components/schemas/Definitions"
                     },
                     "senseExcelTemplate": {
-                        "$ref": "#/components/schemas/SenseExcelTemplate"
+                        "$ref": "#/components/schemas/SenseFileTemplate"
                     },
                     "senseImageTemplate": {
                         "$ref": "#/components/schemas/SenseImageTemplate"
@@ -57698,6 +57660,9 @@
                         },
                         "minItems": 1,
                         "description": "Composition of senseSheetTemplate and/or senseImageTemplate templates."
+                    },
+                    "sensePixelPerfectTemplate": {
+                        "$ref": "#/components/schemas/SenseFileTemplate"
                     }
                 }
             },
@@ -57880,7 +57845,7 @@
                 "type": "string",
                 "default": "ignoreErrorsNoDetails"
             },
-            "SenseExcelTemplate": {
+            "SenseFileTemplate": {
                 "required": [
                     "templateLocation"
                 ],
@@ -57899,7 +57864,7 @@
                         "$ref": "#/components/schemas/reloadTimestampMatchType"
                     }
                 },
-                "description": "Used to export an excel template."
+                "description": "Used to produce reports from a template file."
             },
             "SenseImageTemplate": {
                 "required": [
@@ -59338,6 +59303,10 @@
                     "isCandidateForVerification": {
                         "type": "boolean",
                         "description": "true if the sharing task is a candidate for verification"
+                    },
+                    "persistentBookmarkIncludeVariables": {
+                        "type": "boolean",
+                        "description": "flag sent by UI to configure the persistent bookmark to use variables"
                     }
                 },
                 "description": "Type of object stored in the database. Required fields mean that property cannot be null"
@@ -60265,6 +60234,14 @@
                     "id"
                 ],
                 "properties": {
+                    "id": {
+                        "type": "string",
+                        "format": "uid",
+                        "example": "TiQ8GPVr8qI714Lp5ChAAFFaU24MJy69",
+                        "readOnly": true,
+                        "description": "The unique tenant identifier.",
+                        "x-qlik-visibility": "public"
+                    },
                     "name": {
                         "type": "string",
                         "example": "QlikTenant",

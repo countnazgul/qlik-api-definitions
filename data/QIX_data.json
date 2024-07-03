@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.2111.0",
+        "version": "12.2117.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -757,7 +757,7 @@
         },
         {
             "name": "GenericObject.GetLayout",
-            "description": "Evaluates an object and displays its properties including the dynamic properties.\nIf the member _delta_ is set to true in the request object, only the delta is evaluated. A _GetLayout_ call on a generic object, returns up to one level down in the hierarchy.\n\n### Example:\n_A_ is a generic object and is the parent of the objects B and C. _B_ is the parent of the objects D and E.\n<br>![](images/dr_gen_QVCPMethodGetLayoutHierarchy.png)<br>\nA _GetLayout_ call on A returns information on the objects A, B and C.\nA _GetLayout_ call on B returns information on the objects B, D and E.\nA  _GetLayout_ call on C returns information on the object C.\n\n<div class=note>\nIn addition to the parameters displayed above, the **GetLayout** method can return other properties according to what is defined in the generic object.\nFor example, if **qHyperCubeDef** is defined in the generic object, the **GetLayout** method returns the properties described in _HyperCube_.\n</div>",
+            "description": "Evaluates an object and displays its properties including the dynamic properties.\nIf the member _delta_ is set to true in the request object, only the delta is evaluated. A _GetLayout_ call on a generic object, returns up to one level down in the hierarchy.\n\n### Example:\n_A_ is a generic object and is the parent of the objects B and C. _B_ is the parent of the objects D and E.\nA _GetLayout_ call on A returns information on the objects A, B and C.\nA _GetLayout_ call on B returns information on the objects B, D and E.\nA  _GetLayout_ call on C returns information on the object C.\n<div class=note>\nIn addition to the parameters displayed above, the **GetLayout** method can return other properties according to what is defined in the generic object.\nFor example, if **qHyperCubeDef** is defined in the generic object, the **GetLayout** method returns the properties described in _HyperCube_.\n</div>",
             "params": [],
             "result": {
                 "name": "Results for GenericObject.GetLayout",
@@ -2448,7 +2448,7 @@
         },
         {
             "name": "GenericObject.SelectPivotCells",
-            "description": "<div class=note>This method only applies to hypercubes that are not represented as straight tables. The parameter _qMode_ in _HyperCubeDef_ must be set either to _P_  or _K_ . </div>\n\n### Pivot table\nMakes selections in the top or left dimension cells of a pivot table or in the data matrix. Only expanded dimensions can be selected.\n\n### Stacked table\nMakes selections in the left dimension cells of a stacked table or in the data matrix.\n<div class=note>There is no top dimensions in a stacked table. A stacked table can only contain one measure.</div>\n\n### Example of a pivot table\n![](images/ui_gen_ExampleQVCPPivotTableDescription.png)<br>\nIn the representation above:\n<table>\n<tbody>\n<tr>\n<td>Sum(OrderTotal)<br>Count(OrderTotal)</td>\n<td>Are pseudo dimensions.</td>\n</tr>\n<tr>\n<td>CategoryName</td>\n<td>Is a left dimension.<br><i>Beverages</i> , <i>Condiments</i> ... are left dimension values.</td>\n</tr>\n<tr>\n<td>ProductName</td>\n<td>Is a top dimension.<br><i>Chef Anton's Cajun Seasoning</i> is a top dimension value. </td>\n</tr>\n<tr>\n<td>Numeric values</td>\n<td>Are calculated values in the data matrix.<br><i>626291,832</i> is a calculated value.</td>\n</tr>\n</tbody>\n</table>\n\nThe member **Change** returns the handles of the objects that are updated following the selections.\n_qSuccess_ is set to _true_ if the selections are successful and is set to _false_ in the following cases:\n* The object contains some invalid fields (fields that are not in the data model).\n* The selection applies to a locked field.\n* A range selection is performed and the parameter _OneAndOnlyOne_ is set to true in the definition of the object.",
+            "description": "<div class=note>This method only applies to hypercubes that are not represented as straight tables. The parameter _qMode_ in _HyperCubeDef_ must be set either to _P_  or _K_ . </div>\n\n### Pivot table\nMakes selections in the top or left dimension cells of a pivot table or in the data matrix. Only expanded dimensions can be selected.\n\n### Stacked table\nMakes selections in the left dimension cells of a stacked table or in the data matrix.\n<div class=note>There is no top dimensions in a stacked table. A stacked table can only contain one measure.</div>\n\nThe member **Change** returns the handles of the objects that are updated following the selections.\n_qSuccess_ is set to _true_ if the selections are successful and is set to _false_ in the following cases:\n* The object contains some invalid fields (fields that are not in the data model).\n* The selection applies to a locked field.\n* A range selection is performed and the parameter _OneAndOnlyOne_ is set to true in the definition of the object.",
             "params": [
                 {
                     "name": "qPath",
@@ -5035,7 +5035,7 @@
         },
         {
             "name": "Doc.GetViewDlgSaveInfo",
-            "description": "Returns information about the position of the tables in the data model viewer.\n<div class=note>The position of the broom points and the position of the connection points cannot be retrieved in Qlik Sense.</div>\n\n### Representation of tables, broom points and connection points\n![](images/ui_gen_BroomConnectionPoints_dmv.png)<br>\nThe green circles represent the broom points.\nThe red circle represents a connection point.",
+            "description": "Returns information about the position of the tables in the data model viewer.\n<div class=note>The position of the broom points and the position of the connection points cannot be retrieved in Qlik Sense.</div>",
             "params": [],
             "result": {
                 "name": "Results for Doc.GetViewDlgSaveInfo",
@@ -5058,7 +5058,7 @@
         },
         {
             "name": "Doc.SetViewDlgSaveInfo",
-            "description": "Sets the positions of the tables in the data model viewer.\n<div class=note>The position of the broom points and the position of the connection points cannot be set in Qlik Sense.</div>\n\n### Representation of tables, broom points and connection points\n![](images/ui_gen_BroomConnectionPoints_dmv.png)<br>\nThe green circles represent the broom points.\nThe red circle represents a connection point.",
+            "description": "Sets the positions of the tables in the data model viewer.\n<div class=note>The position of the broom points and the position of the connection points cannot be set in Qlik Sense.</div>",
             "params": [
                 {
                     "name": "qInfo",
@@ -17783,11 +17783,11 @@
                         "type": "boolean",
                         "description": "Optional parameter. Indicates if the selection is to be hidden in the Selections bar.\nIs set to true if the current selection is hidden."
                     },
-                    "qFieldReferenceInfo": {
+                    "qDimensionReferences": {
                         "type": "array",
-                        "description": "Information about objects in the app that refer to the data model field of an NxCurrentSelectionItem, including labels.",
+                        "description": "List of dimensions in the app that refer to the data model field of an NxCurrentSelectionItem.",
                         "items": {
-                            "$ref": "#/components/schemas/SelectionItemFieldReferenceInfo"
+                            "$ref": "#/components/schemas/DimensionReference"
                         },
                         "x-qlik-stability": "experimental"
                     }
@@ -17827,17 +17827,13 @@
                     }
                 ]
             },
-            "SelectionItemFieldReferenceInfo": {
+            "DimensionReference": {
                 "type": "object",
-                "description": "Structure that holds information connecting an app object to a data model field represented by an NxCurrentSelectionItem in the SelectionObject.\nThe SelectionItemFieldReferenceInfo structure points to an app object, such as a GenericDimension, and also holds a label.",
+                "description": "The DimensionReference structure points to a GenericDimension.",
                 "properties": {
                     "qId": {
                         "type": "string",
-                        "description": "Identifier of the associated object."
-                    },
-                    "qType": {
-                        "type": "string",
-                        "description": "Type of object."
+                        "description": "Identifier of the associated dimension."
                     },
                     "qLabel": {
                         "type": "string",
