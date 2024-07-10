@@ -21588,7 +21588,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f796ba14-7164-41c2-8470-721742e4e43e",
+                "x-qlik-entity-revision": "14517fac-836b-4fd5-a010-de922d662ff0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -21683,7 +21683,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d76589d6-2569-48cf-84f2-e056a80c3175",
+                "x-qlik-entity-revision": "417c02b9-368f-49b5-ac50-96f5b57cc26b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -21782,7 +21782,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "ece673d3-d062-42bd-8045-e39bb2b3abb7",
+                "x-qlik-entity-revision": "87c3c05d-f168-46bb-9539-22319d131b08",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -22055,7 +22055,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "55538a94-9a71-49e7-b4dd-c547a9467cd8",
+                "x-qlik-entity-revision": "15eac325-b419-4c69-9b01-a651e27f81d5",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -22263,7 +22263,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f9a91ada-f761-4564-8ed6-1adb0e95e50c",
+                "x-qlik-entity-revision": "da23fe14-2f6f-4789-9b3c-82cc87029eff",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -22410,7 +22410,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "6bdb7766-a7b8-495d-bd11-a85b1ba23ec4",
+                "x-qlik-entity-revision": "0ea2c391-8217-4fbd-8e9e-8fe549cbed91",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -22535,7 +22535,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "7d672417-6430-4985-bbc6-baad2414026e",
+                "x-qlik-entity-revision": "ea4d8564-b8ad-4974-90af-e9744f760543",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -22668,7 +22668,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "36ed3b08-417f-4b3a-982d-1a8cd6fa81e7",
+                "x-qlik-entity-revision": "56f7920c-ee59-4fc3-8932-3cab1c751a8b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -25766,7 +25766,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "ef2c0f74-01d1-44b4-b514-c50a61c49142",
+                "x-qlik-entity-revision": "f9376579-ea6f-4a27-af69-bd9e0dfb0bcc",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30867,14 +30867,14 @@
                         }
                     },
                     "required": true,
-                    "description": "Definition of the report request.\nPlease note that sense-pixel-perfect-template-1.0, sense-story-x.0, sense-data-x.0 and qv-data-x.0 types are only for internal use.\n\nEach report request type requires a specific template to be provided:\n - composition-1.0 requires compositionTemplates to be set\n - sense-excel-template-1.0 requires senseExcelTemplate to be set\n - sense-image-1.0 requires senseImageTemplate to be set\n - sense-sheet-1.0 requires senseSheetTemplate to be set\n\nEach template type supports specific output types:\n - composition-1.0 supports only pdfcomposition and pptxcomposition output types\n - sense-excel-template-1.0 supports excel and pdf output type\n - sense-image-1.0 supports pdf, pptx and image output types\n - sense-sheet-1.0 supports pdf and pptx output type\n\nEach output type requires a specific output to be provided:\n - pdfcomposition requires pdfCompositionOutput to be set\n - pptxcomposition requires pptxCompositionOutput to be set\n - pdf requires pdfOuput to be set\n - pptx requires pptxOuput to be set\n - image requires imageOutput to be set\n"
+                    "description": "Definition of the report request.\nPlease note that sense-pixel-perfect-template-1.0, sense-story-x.0 and qv-data-x.0 types are only for internal use.\n\nEach report request type requires a specific template to be provided:\n - composition-1.0 requires compositionTemplates to be set\n - sense-excel-template-1.0 requires senseExcelTemplate to be set\n - sense-image-1.0 requires senseImageTemplate to be set\n - sense-sheet-1.0 requires senseSheetTemplate to be set\n - sense-data-1.0 requires senseDataTemplate to be set\n\nEach template type supports specific output types:\n - composition-1.0 supports only pdfcomposition and pptxcomposition output types\n - sense-excel-template-1.0 supports excel and pdf output type\n - sense-image-1.0 supports pdf, pptx and image output types\n - sense-sheet-1.0 supports pdf and pptx output type\n - sense-data-1.0 supports xlsx output type\n\nEach output type requires a specific output to be provided:\n - pdfcomposition requires pdfCompositionOutput to be set\n - pptxcomposition requires pptxCompositionOutput to be set\n - pdf requires pdfOuput to be set\n - pptx requires pptxOuput to be set\n - image requires imageOutput to be set\n - xlsx requires xlsxOutput to be set\n"
                 },
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "6645ef21-944e-46e2-9be6-8267e02763fd",
+                "x-qlik-entity-revision": "33424173-b942-41f9-8dad-4592b79d22b5",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -51702,6 +51702,10 @@
                         ],
                         "type": "string",
                         "x-qlik-filterable": true
+                    },
+                    "subResourceInvalid": {
+                        "type": "boolean",
+                        "description": "Populated and true if no matching subresource is found on parent resource. E.g. if a dataset field no longer exist but a link to that field exists."
                     }
                 },
                 "description": "Describes links to other entities such as qlik charts, dataset columns etc."
@@ -53850,9 +53854,7 @@
                         "items": {
                             "type": "object",
                             "required": [
-                                "subject",
-                                "sourceType",
-                                "type"
+                                "subject"
                             ],
                             "properties": {
                                 "type": {
@@ -53861,11 +53863,15 @@
                                 },
                                 "subject": {
                                     "type": "string",
-                                    "description": "User subject"
+                                    "description": "User subject, the current or the desired after the patch."
                                 },
                                 "sourceType": {
                                     "type": "string",
                                     "description": "Current assignment type."
+                                },
+                                "sourceSubject": {
+                                    "type": "string",
+                                    "description": "The current user subject, in case that should be patched."
                                 }
                             }
                         }
@@ -53920,11 +53926,15 @@
                                 },
                                 "subject": {
                                     "type": "string",
-                                    "description": "Subject"
+                                    "description": "Target subject."
                                 },
                                 "sourceType": {
                                     "type": "string",
                                     "description": "Current allotment type."
+                                },
+                                "sourceSubject": {
+                                    "type": "string",
+                                    "description": "Current subject."
                                 }
                             }
                         }
@@ -57287,7 +57297,7 @@
                             "cycle"
                         ],
                         "type": "string",
-                        "description": "The generated report type.\n\nEach template type supports specific output types:\n   - composition-1.0 supports only pdfcomposition and pptxcomposition output types\n   - sense-excel-template-1.0 supports only excel and pdf output type\n   - sense-image-1.0 supports pdf, pptx and image output types\n   - sense-sheet-1.0 supports pdf and pptx output type\n\nEach output type requires a specific output to be provided:\n   - excel requires excelOutput to be set\n   - pdfcomposition requires pdfCompositionOutput to be set\n   - pptxcomposition requires pptxCompositionOutput to be set\n   - pdf requires pdfOuput to be set\n   - pptx requires pptxOuput to be set\n   - image requires imageOutput to be set\n   - csv doesn't have csv output.\n"
+                        "description": "The generated report type.\n\nEach template type supports specific output types:\n   - composition-1.0 supports only pdfcomposition and pptxcomposition output types\n   - sense-excel-template-1.0 supports only excel and pdf output type\n   - sense-image-1.0 supports pdf, pptx and image output types\n   - sense-sheet-1.0 supports pdf and pptx output type\n   - sense-data-1.0 supports xlsx output type\n\nEach output type requires a specific output to be provided:\n   - excel requires excelOutput to be set\n   - pdfcomposition requires pdfCompositionOutput to be set\n   - pptxcomposition requires pptxCompositionOutput to be set\n   - pdf requires pdfOuput to be set\n   - pptx requires pptxOuput to be set\n   - image requires imageOutput to be set\n   - csv doesn't have csv output\n   - xlsx requires xlsxOutput to be set\n"
                     },
                     "outputId": {
                         "type": "string",
@@ -57636,13 +57646,16 @@
                             "sense-pixel-perfect-template-1.0"
                         ],
                         "type": "string",
-                        "description": "Template type and version using semantic versioning. It must have the following name convention: dashed-separated-template-name-MAJOR.MINOR.\nPlease note that sense-pixel-perfect-template-1.0, sense-story-x.0, sense-data-x.0 and qv-data-x.0 are only for internal use.\n\nEach type requires a specific template to be provided:\n  - composition-1.0 requires compositionTemplates to be set\n  - sense-excel-template-1.0 requires senseExcelTemplate to be set\n  - sense-image-1.0 requires senseImageTemplate to be set\n  - sense-sheet-1.0 requires senseSheetTemplate to be set\n\nEach template type supports specific output types:\n  - composition-1.0 supports pdfcomposition and pptxComposition output type\n  - sense-excel-template-1.0 supports excel and pdf output type\n  - sense-image-1.0 supports pdf, pptx and png output types\n  - sense-sheet-1.0 supports pdf, pptx output type\n"
+                        "description": "Template type and version using semantic versioning. It must have the following name convention: dashed-separated-template-name-MAJOR.MINOR.\nPlease note that sense-pixel-perfect-template-1.0, sense-story-x.0 and qv-data-x.0 are only for internal use.\n\nEach type requires a specific template to be provided:\n  - composition-1.0 requires compositionTemplates to be set\n  - sense-excel-template-1.0 requires senseExcelTemplate to be set\n  - sense-image-1.0 requires senseImageTemplate to be set\n  - sense-sheet-1.0 requires senseSheetTemplate to be set\n  - sense-data-1.0 requires senseDataTemplate to be set\n\nEach template type supports specific output types:\n  - composition-1.0 supports pdfcomposition and pptxComposition output type\n  - sense-excel-template-1.0 supports excel and pdf output type\n  - sense-image-1.0 supports pdf, pptx and png output types\n  - sense-sheet-1.0 supports pdf, pptx output type\n  - sense-data-1.0 supports xlsx output type\n"
                     },
                     "output": {
                         "$ref": "#/components/schemas/OutputItem"
                     },
                     "definitions": {
                         "$ref": "#/components/schemas/Definitions"
+                    },
+                    "senseDataTemplate": {
+                        "$ref": "#/components/schemas/SenseDataTemplate"
                     },
                     "senseExcelTemplate": {
                         "$ref": "#/components/schemas/SenseFileTemplate"
@@ -57844,6 +57857,56 @@
                 ],
                 "type": "string",
                 "default": "ignoreErrorsNoDetails"
+            },
+            "SenseDataTemplate": {
+                "required": [
+                    "appId",
+                    "id"
+                ],
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "example": "QbtwdFg",
+                        "description": "Sense visualization id. Visualizations created \"on the fly\" are not supported."
+                    },
+                    "appId": {
+                        "type": "string"
+                    },
+                    "patches": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/NxPatch"
+                        },
+                        "maxItems": 100
+                    },
+                    "variables": {
+                        "type": "array",
+                        "maxItems": 1100
+                    },
+                    "selectionStrategy": {
+                        "$ref": "#/components/schemas/SelectionStrategy"
+                    },
+                    "selectionsByState": {
+                        "type": "object",
+                        "description": "Map of selections to apply by state. Maximum number of states allowed is 125. Maximum number of fields allowed is 125 and maximum number of overall field values allowed is 150000.",
+                        "additionalProperties": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/components/schemas/QSelection"
+                            },
+                            "maxItems": 125
+                        }
+                    },
+                    "persistentBookmark": {
+                        "$ref": "#/components/schemas/SensePersistentBookmark"
+                    },
+                    "temporaryBookmarkV2": {
+                        "$ref": "#/components/schemas/SenseTemporaryBookmarkV2"
+                    },
+                    "reloadTimestampMatchType": {
+                        "$ref": "#/components/schemas/reloadTimestampMatchType"
+                    }
+                }
             },
             "SenseFileTemplate": {
                 "required": [
