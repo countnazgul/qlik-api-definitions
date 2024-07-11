@@ -16301,6 +16301,204 @@
                 }
             }
         },
+        "/v1/data-sources/{dataSourceId}/api-specs": {
+            "get": {
+                "tags": [
+                    "data-sources"
+                ],
+                "summary": "Get 'connectionProperties' for a given datasource",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ApiSpecResponse"
+                                }
+                            }
+                        },
+                        "description": "API spec returned"
+                    },
+                    "401": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseErrors"
+                                }
+                            }
+                        },
+                        "description": "Unauthorized request (Bad JWT token etc)"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseErrors"
+                                }
+                            }
+                        },
+                        "description": "Datasource not found or it is not enabled"
+                    },
+                    "500": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseErrors"
+                                }
+                            }
+                        },
+                        "description": "Internal errors"
+                    },
+                    "503": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseErrors"
+                                }
+                            }
+                        },
+                        "description": "Service unavailable, happens when request to connector or down stream services fails"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "dataSourceId",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "rest",
+                        "required": true,
+                        "description": "Datasource ID"
+                    }
+                ],
+                "x-qlik-stability": "stable",
+                "x-qlik-visibility": "public",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-entity-revision": "93e20cdf-7095-44ee-b61d-7c293d193fe4",
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "1",
+                    "limit": 1000
+                }
+            }
+        },
+        "/v1/data-sources/{dataSourceId}/gateways": {
+            "get": {
+                "tags": [
+                    "data-sources"
+                ],
+                "summary": "Get list available gateway ID's for a given datasource",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "gateways": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "string",
+                                                        "example": "051YTx0OGDlfQ_66H3NyXwK24HEEyyJI::a6CxFtkInvsJnrNXCOVWR8pQOwaphpU0",
+                                                        "description": "Gateway ID"
+                                                    },
+                                                    "name": {
+                                                        "type": "string",
+                                                        "example": "MyGateway",
+                                                        "description": "Gateway name"
+                                                    },
+                                                    "default": {
+                                                        "type": "boolean",
+                                                        "example": true,
+                                                        "description": "Whether the gateway is default"
+                                                    }
+                                                },
+                                                "description": "Gateway data"
+                                            },
+                                            "description": "List of gateway ID's for given datasource ID"
+                                        },
+                                        "refreshedAt": {
+                                            "type": "string",
+                                            "example": "2024-01-18T02:25:59.521Z",
+                                            "description": "Time stamp when the gateways data were refreshed"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "description": "Gateways list returned"
+                    },
+                    "401": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseErrors"
+                                }
+                            }
+                        },
+                        "description": "Unauthorized request (Bad JWT token etc)"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseErrors"
+                                }
+                            }
+                        },
+                        "description": "Datasource not found (or not enabled), or no gateway is configured for the tenant"
+                    },
+                    "500": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseErrors"
+                                }
+                            }
+                        },
+                        "description": "General internal errors"
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "dataSourceId",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "rest",
+                        "required": true,
+                        "description": "Datasource ID"
+                    },
+                    {
+                        "in": "query",
+                        "name": "forceRefresh",
+                        "schema": {
+                            "type": "boolean"
+                        },
+                        "example": true,
+                        "required": false,
+                        "description": "Force to get a refreshed list from backend. Cached list will be returned if not set or set to false."
+                    }
+                ],
+                "x-qlik-stability": "stable",
+                "x-qlik-visibility": "public",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-entity-revision": "d6e80394-c941-4d96-8794-5f012c0eaee8",
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "1",
+                    "limit": 1000
+                }
+            }
+        },
         "/v1/data-stores": {
             "get": {
                 "tags": [
@@ -31515,7 +31713,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "0227cae6-4f4e-4c26-b503-e2d083dbd92b",
+                "x-qlik-entity-revision": "64cab572-d045-4032-bf80-757fe55be286",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -31587,7 +31785,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "7b6b57fe-5ac0-417b-8d0b-d8a7d6548148",
+                "x-qlik-entity-revision": "8ceccf86-1ce0-44b4-992c-af0c7a674602",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -31671,7 +31869,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "25e95e37-1209-467a-bd8c-a543b98b07cf",
+                "x-qlik-entity-revision": "a43ae471-9266-4a98-b0dc-c4374dcaef12",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -48827,6 +49025,31 @@
                 },
                 "description": "An array of user-supplied tags"
             },
+            "ApiSpecResponse": {
+                "type": "object",
+                "required": [
+                    "connectorProvider",
+                    "connectorVersion",
+                    "connectionProperties"
+                ],
+                "properties": {
+                    "connectorVersion": {
+                        "type": "string",
+                        "example": "1.180.0",
+                        "description": "Datasource provider (i.e. connector) version"
+                    },
+                    "connectorProvider": {
+                        "type": "string",
+                        "example": "QvRestConnector.exe",
+                        "description": "Datasource provider"
+                    },
+                    "connectionProperties": {
+                        "type": "object",
+                        "example": "{\"property1\": \"value\", \"property2\": \"value2\"}",
+                        "description": "List of properties required for the given datasource"
+                    }
+                }
+            },
             "ConnectorNodesInfo": {
                 "type": "object",
                 "required": [
@@ -49310,31 +49533,6 @@
                     "total": {
                         "type": "integer",
                         "format": "int64"
-                    }
-                }
-            },
-            "ApiSpecResponse": {
-                "type": "object",
-                "required": [
-                    "connectorProvider",
-                    "connectorVersion",
-                    "connectionProperties"
-                ],
-                "properties": {
-                    "connectorVersion": {
-                        "type": "string",
-                        "example": "1.180.0",
-                        "description": "Datasource provider (i.e. connector) version"
-                    },
-                    "connectorProvider": {
-                        "type": "string",
-                        "example": "QvRestConnector.exe",
-                        "description": "Datasource provider"
-                    },
-                    "connectionProperties": {
-                        "type": "object",
-                        "example": "{\"property1\": \"value\", \"property2\": \"value2\"}",
-                        "description": "List of properties required for the given datasource"
                     }
                 }
             },
