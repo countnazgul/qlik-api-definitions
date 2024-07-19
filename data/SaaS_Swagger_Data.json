@@ -4718,7 +4718,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "45213ddd-9810-4a7c-891d-1f5b24e6f5b0",
+                "x-qlik-entity-revision": "35ab8c91-b408-4d6a-aa0b-bff916b62556",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -4782,7 +4782,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "c6f16884-b96b-43bd-9d04-56bd1fbb9a84",
+                "x-qlik-entity-revision": "9beb74e1-092d-4ba6-b37c-ec9c4ba49ca9",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -4855,7 +4855,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "3194c4a5-8c54-4c4e-b2d0-554736cc0b36",
+                "x-qlik-entity-revision": "4703919e-1996-4aba-bfc0-62d21857a7a0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -10281,7 +10281,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "e290707a-8a1e-4596-a902-febf51024a77",
+                "x-qlik-entity-revision": "136f87de-bfe4-408a-bf8a-4e8aad3b8781",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -14003,7 +14003,7 @@
                 "tags": [
                     "data-connections"
                 ],
-                "summary": "Update multiple connections, only available to Admin",
+                "summary": "Update multiple connections, only available to Admin. When update is to change ownership of a connection, note that the credentials associated with the connection will NOT be transfored to the new owner, and new owner is expected to provide their own crednetials for the connection.",
                 "responses": {
                     "207": {
                         "content": {
@@ -14051,7 +14051,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "6b1a2e55-d3b6-46f6-9b57-ce00a3e4acab",
+                "x-qlik-entity-revision": "16b1e8ff-65d6-43e9-b75e-5ea78752226d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -28287,7 +28287,7 @@
                     "external/authenticate",
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "1422bc05-409a-4a07-9ef7-ea0deb87370f",
+                "x-qlik-entity-revision": "fc9b8470-8dbe-45ec-bffb-51518862eb5c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -28343,7 +28343,7 @@
                     "external/authenticate",
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "4caa1045-7d41-4559-a3f6-1465e5f8fb11",
+                "x-qlik-entity-revision": "8f3e319f-da02-4fdb-90cf-cb7012a008e0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -28412,7 +28412,7 @@
                     "external/authenticate",
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "092cff5b-7d7e-4bcd-9359-6dea011d6d3a",
+                "x-qlik-entity-revision": "7870edf6-cc25-4344-9335-f20ddeb4ba33",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30394,7 +30394,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "06d1ae55-7710-4a6a-91ad-eead54c818a4",
+                "x-qlik-entity-revision": "c8c97a63-59d6-4030-9c89-7ecc2f009f6d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -37620,11 +37620,11 @@
                     },
                     {
                         "in": "query",
-                        "name": "eventType",
+                        "name": "eventTypes",
                         "schema": {
                             "type": "string"
                         },
-                        "description": "Filter resources by event-type"
+                        "description": "Filter resources by event-type/types, a single webhook item can have multiple event-types"
                     },
                     {
                         "in": "query",
@@ -37660,6 +37660,19 @@
                             "type": "string"
                         },
                         "description": "Cursor to the next page"
+                    },
+                    {
+                        "in": "query",
+                        "name": "origins",
+                        "schema": {
+                            "enum": [
+                                "api",
+                                "automations",
+                                "management-console"
+                            ],
+                            "type": "string"
+                        },
+                        "description": "Filter resources by origins, supports multiorigin"
                     },
                     {
                         "in": "query",
@@ -37723,7 +37736,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "bcd313bd-cb30-4442-a917-a82d3d029552",
+                "x-qlik-entity-revision": "b0274338-47d1-45ca-86c5-93119eb538b0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -42373,7 +42386,7 @@
                     }
                 }
             },
-            "AutomationConnectionDetailObject": {
+            "AutomationConnectionDataObject": {
                 "type": "object",
                 "properties": {
                     "id": {
@@ -42383,8 +42396,12 @@
                     },
                     "name": {
                         "type": "string",
-                        "example": "conneciton",
+                        "example": "connection",
                         "description": "The name of the automation connection."
+                    },
+                    "error": {
+                        "type": "object",
+                        "description": "This contains the error message if a connection is being created with an issue."
                     },
                     "params": {
                         "type": "array",
@@ -42425,7 +42442,76 @@
                     },
                     "isConnected": {
                         "type": "boolean",
-                        "example": "true",
+                        "example": true,
+                        "description": "The connection status of the automation connection. When true, the automation connection is connected."
+                    },
+                    "oauthAccountName": {
+                        "type": "string",
+                        "example": "oauth",
+                        "description": "The name of the OAuth account associated with the automation connection."
+                    }
+                }
+            },
+            "AutomationConnectionDetailObject": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "example": "e0e720d0-4947-11ec-a1d2-9559fa35801d",
+                        "description": "The unique identifier of the automation connection."
+                    },
+                    "data": {
+                        "$ref": "#/components/schemas/AutomationConnectionDataObject"
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "connection",
+                        "description": "The name of the automation connection."
+                    },
+                    "error": {
+                        "type": "object",
+                        "description": "This contains the error message if a connection is being created with an issue."
+                    },
+                    "params": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/AutomationConnectionParamObject"
+                        }
+                    },
+                    "ownerId": {
+                        "type": "string",
+                        "example": "sWYAHxZxhtcmBT7Ptc5xJ5I6N7HxwnEy",
+                        "description": "The unique identifier of the owner of the automation connection."
+                    },
+                    "spaceId": {
+                        "type": "string",
+                        "example": "5f0f78b239ff4f0001234567",
+                        "description": "The space ID of the automation connection."
+                    },
+                    "redirect": {
+                        "type": "string",
+                        "description": "The redirect of the OAuth account."
+                    },
+                    "createdAt": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2021-12-23T12:28:21.000000Z",
+                        "description": "The timestamp when the automation connection was created."
+                    },
+                    "updatedAt": {
+                        "type": "string",
+                        "format": "date-time",
+                        "example": "2021-12-23T12:28:21.000000Z",
+                        "description": "The timestamp when the automation connection was updated."
+                    },
+                    "connectorId": {
+                        "type": "string",
+                        "example": "e0e720d0-4947-11ec-a1d2-9559fa35801d",
+                        "description": "The unique identifier of the automation connector."
+                    },
+                    "isConnected": {
+                        "type": "boolean",
+                        "example": true,
                         "description": "The connection status of the automation connection. When true, the automation connection is connected."
                     },
                     "oauthAccountName": {
@@ -45323,7 +45409,8 @@
                             "aggregation",
                             "import",
                             "updated",
-                            "deployed"
+                            "deployed",
+                            "3rd_party_executed"
                         ],
                         "type": "string",
                         "example": "reload",
@@ -56103,7 +56190,8 @@
                         "enum": [
                             "web",
                             "native",
-                            "spa"
+                            "spa",
+                            "anonymous-embed"
                         ],
                         "type": "string",
                         "maxLength": 64,
@@ -56199,7 +56287,8 @@
                         "enum": [
                             "web",
                             "native",
-                            "spa"
+                            "spa",
+                            "anonymous-embed"
                         ],
                         "type": "string",
                         "maxLength": 64,
