@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.2136.0",
+        "version": "12.2140.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -114,7 +114,7 @@
             "params": [
                 {
                     "name": "qMatch",
-                    "description": "String to search for.\nCan contain wild cards or numeric search criteria.",
+                    "description": "String to search for.\nCan contain wild cards or numeric search criteria.\nThe characters &lt;&gt;\"~()='[] have pre-defined meanings when used at the start of the string.\nTo use them, EnableSpecialCharacterEscapingInSearch needs to be enabled and the delimiter \\ needs to precede the special character.",
                     "required": true,
                     "schema": {
                         "type": "string"
