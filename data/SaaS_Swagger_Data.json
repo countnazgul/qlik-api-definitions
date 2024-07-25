@@ -4718,7 +4718,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "35ab8c91-b408-4d6a-aa0b-bff916b62556",
+                "x-qlik-entity-revision": "ac484c36-8d91-487d-8ee8-b903eea6e395",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -4782,7 +4782,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "9beb74e1-092d-4ba6-b37c-ec9c4ba49ca9",
+                "x-qlik-entity-revision": "8b7e33eb-94ec-4d57-829d-6c03c003623e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -4855,7 +4855,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "4703919e-1996-4aba-bfc0-62d21857a7a0",
+                "x-qlik-entity-revision": "e54146c7-72c0-4508-a39e-d960b3b504f7",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -42461,7 +42461,13 @@
                         "description": "The unique identifier of the automation connection."
                     },
                     "data": {
-                        "$ref": "#/components/schemas/AutomationConnectionDataObject"
+                        "allOf": [
+                            {
+                                "$ref": "#/components/schemas/AutomationConnectionDataObject"
+                            }
+                        ],
+                        "description": "DEPRECATED. The content inside this property is also on the top level. Hense, this will be removed as duplicate.",
+                        "x-qlik-deprecated": true
                     },
                     "name": {
                         "type": "string",
