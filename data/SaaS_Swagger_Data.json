@@ -13387,7 +13387,7 @@
                                 }
                             }
                         },
-                        "description": "Bad gateway, this happens when the requests to dependency services are timedout"
+                        "description": "Bad gateway, this happens when requests to required (dependent) services time out"
                     }
                 },
                 "parameters": [
@@ -13442,7 +13442,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "29b67a3d-e968-4a9d-89bd-936a7dd9f21d",
+                "x-qlik-entity-revision": "438fc9e3-f0b5-4ebf-a599-5cf7940b8c52",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -13535,7 +13535,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "13ad94fa-56ba-4567-9b9d-e7df05b52ff8",
+                "x-qlik-entity-revision": "9f251201-3bba-44f4-a491-4a8438a77319",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13632,7 +13632,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "8840f262-628a-41df-81ea-d697577065ec",
+                "x-qlik-entity-revision": "da9cd77a-59a5-4e28-8909-2833e56b5e50",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -13795,7 +13795,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "997abfe1-fe4b-4ba8-8e0b-7db6dff469f2",
+                "x-qlik-entity-revision": "87994283-11c2-40ba-ac47-93b0daafc0a4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13972,7 +13972,7 @@
                                 }
                             }
                         },
-                        "description": "Duplicated connection would result in a name conficts with the connections in the scope"
+                        "description": "Duplicated connection would result in a name conflict with the connections in the scope"
                     }
                 },
                 "requestBody": {
@@ -13990,7 +13990,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "3720ccc8-2ebb-401d-a308-533cd5200180",
+                "x-qlik-entity-revision": "f157bc48-469e-447c-aba1-e57082fae008",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -14003,7 +14003,7 @@
                 "tags": [
                     "data-connections"
                 ],
-                "summary": "Update multiple connections, only available to Admin. When update is to change ownership of a connection, note that the credentials associated with the connection will NOT be transfored to the new owner, and new owner is expected to provide their own crednetials for the connection.",
+                "summary": "Update multiple connections, only available to Admin. When update is to change ownership of a connection, the credentials associated with the connection will NOT be transferred to the new owner, and new owner is expected to provide their own credentials for the connection.",
                 "responses": {
                     "207": {
                         "content": {
@@ -14051,7 +14051,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "16b1e8ff-65d6-43e9-b75e-5ea78752226d",
+                "x-qlik-entity-revision": "4c37ff5a-d09e-4e23-bccc-ce9248c89230",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -14110,7 +14110,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f6289ee1-23ae-4402-ba66-408e4821cad5",
+                "x-qlik-entity-revision": "58089aa2-ceb6-4b0f-a8df-0bd1fda58e6e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -14180,7 +14180,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "917a87c4-5070-4a90-845f-2ccf58a13b34",
+                "x-qlik-entity-revision": "608d90fb-f997-46ea-899c-f8ad7a125cdd",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -14250,7 +14250,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b5872b82-b0c5-4a44-aeba-1192ad8ae75c",
+                "x-qlik-entity-revision": "434cdcd7-b439-4245-82ae-55a2fc998e32",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -14290,7 +14290,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d0fe7052-4044-4607-a76f-b57209eec041",
+                "x-qlik-entity-revision": "e4ea0957-ffed-4a3f-be0c-1a7a42984050",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -17811,7 +17811,7 @@
                 "tags": [
                     "data-connections"
                 ],
-                "summary": "Create a dataconnection against a datasource",
+                "summary": "DEPRECATED. Use POST /v1/data-connections to create connection.",
                 "responses": {
                     "201": {
                         "content": {
@@ -17892,12 +17892,12 @@
                     "required": true
                 },
                 "x-qlik-stability": "stable",
+                "x-qlik-deprecated": true,
                 "x-qlik-visibility": "public",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "bb1f8960-5385-421e-98af-8e05cf161841",
-                "x-qlik-deprecated": false,
+                "x-qlik-entity-revision": "fea82a66-6a26-43f4-a48c-b10122dbfaa7",
                 "x-qlik-tier": {
                     "tier": "2",
                     "limit": 100
@@ -17909,7 +17909,7 @@
                 "tags": [
                     "data-connections"
                 ],
-                "summary": "Get data connection for a given ID",
+                "summary": "DEPRECATED. Use GET /v1/data-connections/{connectionId}?parseConnection=true to get connection with parsed connection properties.",
                 "responses": {
                     "200": {
                         "content": {
@@ -17985,12 +17985,12 @@
                     }
                 ],
                 "x-qlik-stability": "stable",
+                "x-qlik-deprecated": true,
                 "x-qlik-visibility": "public",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "2cbc3f49-180f-42f4-94d8-e9a29d325ad5",
-                "x-qlik-deprecated": false,
+                "x-qlik-entity-revision": "b8398570-5cd5-4d0e-ba02-8f02464134b0",
                 "x-qlik-tier": {
                     "tier": "1",
                     "limit": 1000
@@ -18002,7 +18002,7 @@
                 "tags": [
                     "data-connections"
                 ],
-                "summary": "Get 'connectionProperties' for a given datasource",
+                "summary": "DEPRECATED. Use GET /v1/data-sources/{dataSourceId}/api-specs to return 'connectionProperties' for a given datasource.",
                 "responses": {
                     "200": {
                         "content": {
@@ -18067,12 +18067,12 @@
                     }
                 ],
                 "x-qlik-stability": "stable",
+                "x-qlik-deprecated": true,
                 "x-qlik-visibility": "public",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "2c6666ac-780b-4dd1-9a1e-817bb88128a4",
-                "x-qlik-deprecated": false,
+                "x-qlik-entity-revision": "a1c5f22f-e2e6-40c5-9e95-7b36aa8da4f8",
                 "x-qlik-tier": {
                     "tier": "1",
                     "limit": 1000
@@ -47700,7 +47700,7 @@
                     "qConnectionSecret": {
                         "type": "string",
                         "example": "connection specific secret string",
-                        "description": "String that contains connection level secret (or password). If this field presents in request, then existing connection secret will be updated to its value. If is an empty string, then eixsting connection secret will be cleared. If this field is missing, existing secret will not be updated."
+                        "description": "String that contains connection level secret (or password). If this field presents in request, then existing connection secret will be updated to its value. If is an empty string, then existing connection secret will be cleared. If this field is missing, existing secret will not be updated."
                     },
                     "qSeparateCredentials": {
                         "type": "boolean",
@@ -47855,7 +47855,7 @@
                         "properties": {
                             "href": {
                                 "type": "string",
-                                "example": "https://mytenant.us.qlik-stage.com/...",
+                                "example": "https://mytenant.us.qlikcloud.com/...",
                                 "description": "URL pointing to the next page of resources"
                             }
                         },
@@ -47869,7 +47869,7 @@
                         "properties": {
                             "href": {
                                 "type": "string",
-                                "example": "https://mytenant.us.qlik-stage.com/...",
+                                "example": "https://mytenant.us.qlikcloud.com/...",
                                 "description": "URL pointing to the previous page of resources"
                             }
                         },
@@ -47883,11 +47883,11 @@
                         "properties": {
                             "href": {
                                 "type": "string",
-                                "example": "https://mytenant.us.qlik-stage.com/.../0e445014-a564-496a-9a8d-28baadcc3ef9",
+                                "example": "https://mytenant.us.qlikcloud.com/.../0e445014-a564-496a-9a8d-28baadcc3ef9",
                                 "description": "URL pointing to the resource"
                             }
                         },
-                        "description": "Link to cirrent query"
+                        "description": "Link to current query"
                     }
                 }
             },
@@ -62834,7 +62834,7 @@
                 },
                 "example": false,
                 "required": false,
-                "description": "If set to true, credentialId in the query will be intepreted as credential's name"
+                "description": "If set to true, credentialId in the query will be interpreted as credential's name"
             },
             "caseinsensitive": {
                 "in": "query",
@@ -62969,7 +62969,7 @@
                 },
                 "example": "page=JwAAAAljcmVhdGVkAPfQ-sx0AQAAB19pZABfb93nZcM4SN1M0e8A",
                 "required": false,
-                "description": "Pagination sursor string, which is generated auotmatically in previous pagination query."
+                "description": "Pagination cursor string, which is generated automatically in previous pagination query."
             },
             "parseConnection": {
                 "in": "query",
