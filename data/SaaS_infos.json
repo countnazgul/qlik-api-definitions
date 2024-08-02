@@ -1,8 +1,4 @@
 {
-    ".Well Known": {
-        "title": ".well-known",
-        "version": ""
-    },
     "API Keys": {
         "title": "api-keys",
         "version": ""
@@ -43,10 +39,6 @@
         "title": "conditions",
         "version": ""
     },
-    "Consumption": {
-        "title": "consumption",
-        "version": ""
-    },
     "CSP Origins": {
         "title": "csp-origins",
         "version": ""
@@ -67,12 +59,20 @@
         "title": "data-connections",
         "version": ""
     },
+    "Data Connectivity (Deprecated)": {
+        "title": "dcaas",
+        "version": ""
+    },
     "Data Credentials": {
         "title": "data-credentials",
         "version": ""
     },
     "Data Files": {
         "title": "data-files",
+        "version": ""
+    },
+    "Data Integration Projects": {
+        "title": "di-projects",
         "version": ""
     },
     "Data Sets": {
@@ -87,16 +87,16 @@
         "title": "data-stores",
         "version": ""
     },
-    "Dcaas": {
-        "title": "dcaas",
-        "version": ""
-    },
-    "Di Projects": {
-        "title": "di-projects",
+    "Email Configuration": {
+        "title": "transports",
         "version": ""
     },
     "Encryption": {
         "title": "encryption",
+        "version": ""
+    },
+    "Entitlement Consumption": {
+        "title": "consumption",
         "version": ""
     },
     "Evaluations": {
@@ -159,6 +159,10 @@
         "title": "oauth-tokens",
         "version": ""
     },
+    "OAuth Well-Known Configuration": {
+        "title": ".well-known",
+        "version": ""
+    },
     "Quotas": {
         "title": "quotas",
         "version": ""
@@ -191,7 +195,7 @@
         "title": "spaces",
         "version": ""
     },
-    "Temp Contents": {
+    "Temporary Contents": {
         "title": "temp-contents",
         "version": ""
     },
@@ -201,10 +205,6 @@
     },
     "Themes": {
         "title": "themes",
-        "version": ""
-    },
-    "Transports": {
-        "title": "transports",
         "version": ""
     },
     "Users": {
