@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.2140.0",
+        "version": "12.2143.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -3632,7 +3632,7 @@
                 },
                 {
                     "name": "qGetExcludedValues",
-                    "description": "If set to true, only excluded values are returned.",
+                    "description": "If set to true, only NOT-selected values are returned.",
                     "required": true,
                     "schema": {
                         "type": "boolean"
@@ -3686,7 +3686,7 @@
                 },
                 {
                     "name": "qGetExcludedValues",
-                    "description": "When to true, only excluded values are returned.",
+                    "description": "When to true, only NOT-selected values are returned.",
                     "required": true,
                     "schema": {
                         "type": "boolean"

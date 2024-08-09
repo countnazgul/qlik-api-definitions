@@ -5213,7 +5213,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "82585b70-2bf0-4289-9ed0-2bd91d0f0148",
+                "x-qlik-entity-revision": "a4dd75c3-325b-4a47-b29c-1f0507214335",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -5270,7 +5270,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "59642588-3926-4c31-8d95-3d034d5ea5ca",
+                "x-qlik-entity-revision": "c15b2e08-7810-4405-9148-1a0c4de34e8b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -5344,7 +5344,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "cc8892ba-6863-48df-a667-d8f382c71c2a",
+                "x-qlik-entity-revision": "3dc413d4-49f8-4509-a027-7a3483fd8be7",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -5416,7 +5416,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "6ac4f9fe-3fcb-429c-ab76-ab469f9bc9dc",
+                "x-qlik-entity-revision": "97943f9b-91fb-4ec4-914a-a6e956c90bad",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -5866,7 +5866,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "9d3bfe03-c4f8-484d-a00d-1e198bcb9cb0",
+                "x-qlik-entity-revision": "1da003b6-5a01-4011-a43f-e8ce4c996dbe",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -5938,7 +5938,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "b9d57958-8b69-4f6a-918a-5236189f3aed",
+                "x-qlik-entity-revision": "60ee0a2a-41c5-4dea-9ed8-80fc5bbca581",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -6022,7 +6022,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "33addccf-450b-4e1c-bc90-41f7a630a15e",
+                "x-qlik-entity-revision": "474dc877-235d-41ff-aa91-4c20525eacaf",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -12672,7 +12672,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "65095de7-c9e6-4d3d-aad1-1e0226d1872c",
+                "x-qlik-entity-revision": "b5e110b2-1fd5-4702-8b4e-c0f6749126c9",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -12900,7 +12900,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "8a1a5b53-861c-4dd6-ad24-5b575af206ca",
+                "x-qlik-entity-revision": "d20284d0-389d-4bab-8605-78d345a337f3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -13034,7 +13034,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "be2de806-4f48-4729-9d6b-2978c2332b52",
+                "x-qlik-entity-revision": "d64d31e9-3cc0-465a-957f-8995163cfe7d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -13154,7 +13154,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "91505984-1967-4e75-a826-6140267f03e6",
+                "x-qlik-entity-revision": "3f2b12b1-85aa-442c-babe-7c3b37b282d1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -17980,7 +17980,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "09c1f258-b650-46a3-94ef-8a067895a832",
+                "x-qlik-entity-revision": "1759b09a-7af5-43fa-b609-dd81a54d20a8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -18730,9 +18730,9 @@
         "/v1/encryption/keyproviders": {
             "get": {
                 "tags": [
-                    "tenant key providers management"
+                    "tenant key provider management"
                 ],
-                "summary": "Lists keyproviders registered for the tenant",
+                "summary": "List AWS key providers registered for the tenant.",
                 "responses": {
                     "200": {
                         "content": {
@@ -18762,7 +18762,7 @@
                                 }
                             }
                         },
-                        "description": "Failed to load key providers from the registry"
+                        "description": "Failed to load list of key providers"
                     }
                 },
                 "parameters": [
@@ -18778,15 +18778,16 @@
                             }
                         ],
                         "required": true,
-                        "description": "The JWT used for authentication. Send the JWT in the AuthRequest header using the Bearer schema."
+                        "description": "The JWT used for authentication. Send the JWT in the request header using the Bearer schema."
                     }
                 ],
+                "description": "Returns a list of AWS key providers in the tenant. Use /actions/list to return all key providers.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d3729f75-62e4-48b2-8019-4c11ab9461cc",
+                "x-qlik-entity-revision": "014ac36d-d2fe-4bee-b618-798cd203b242",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -18795,9 +18796,9 @@
             },
             "post": {
                 "tags": [
-                    "tenant key providers management"
+                    "tenant key provider management"
                 ],
-                "summary": "Registers a multi-region AWS-KMS key for the specific tenant",
+                "summary": "Register a new multi-region AWS-KMS key.",
                 "responses": {
                     "201": {
                         "content": {
@@ -18807,7 +18808,7 @@
                                 }
                             }
                         },
-                        "description": "Successfully registered the AWS-KMS key"
+                        "description": "Successfully registered the provided AWS-KMS key"
                     },
                     "400": {
                         "content": {
@@ -18827,7 +18828,7 @@
                                 }
                             }
                         },
-                        "description": "Unauthorized, Invalid JWT"
+                        "description": "Unauthorized, invalid JWT"
                     },
                     "403": {
                         "content": {
@@ -18837,7 +18838,7 @@
                                 }
                             }
                         },
-                        "description": "Provided AWS-KMS key access forbidden. Check if key policy allows access from Qlik Cloud."
+                        "description": "Unable to access the provided AWS-KMS key, access is forbidden. Check if AWS key policy allows access from Qlik Cloud."
                     },
                     "406": {
                         "content": {
@@ -18847,7 +18848,7 @@
                                 }
                             }
                         },
-                        "description": "Failed to register key"
+                        "description": "Failed to register the provided AWS-KMS key"
                     },
                     "408": {
                         "content": {
@@ -18867,7 +18868,7 @@
                                 }
                             }
                         },
-                        "description": "The specified key is already registered"
+                        "description": "The provided key is already registered"
                     },
                     "417": {
                         "content": {
@@ -18893,9 +18894,10 @@
                             }
                         ],
                         "required": true,
-                        "description": "The JWT used for authentication. Send the JWT in the AuthRequest header using the Bearer schema."
+                        "description": "The JWT used for authentication. Send the JWT in the request header using the Bearer schema."
                     }
                 ],
+                "description": "The AWS-KMS key configuration must match the Qlik Cloud region configuration requirements. Most regions should have a key deployed to the same AWS region as the Qlik Cloud tenant, with a replica key in the relevant Qlik Cloud DR region. Consult the documentation for DR region mappings.",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -18910,7 +18912,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "49a397ce-bffa-407b-a690-ccc3e758ea1a",
+                "x-qlik-entity-revision": "88efbdff-b5f2-4ba0-a81d-25d2a510f984",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -18923,7 +18925,7 @@
                 "tags": [
                     "tenant key provider operations"
                 ],
-                "summary": "Retrieves key for a given fingerprint",
+                "summary": "Retrieve key for a given ARN fingerprint.",
                 "responses": {
                     "200": {
                         "content": {
@@ -18988,15 +18990,16 @@
                             }
                         ],
                         "required": true,
-                        "description": "The JWT used for authentication. Send the JWT in the AuthRequest header using the Bearer schema."
+                        "description": "The JWT used for authentication. Send the JWT in the request header using the Bearer schema."
                     }
                 ],
+                "description": "Retrieve key provider detail by passing the ARN fingerprint as parameter.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "6ea822bc-72d7-4802-83ce-7601a31e9d45",
+                "x-qlik-entity-revision": "5ea5ff7b-2e6a-49e6-9496-e7c5050186d8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -19007,7 +19010,7 @@
                 "tags": [
                     "tenant key provider operations"
                 ],
-                "summary": "Patches Name & Description of keyprovider information",
+                "summary": "Patches Name & Description of a given key provider.",
                 "responses": {
                     "204": {
                         "description": "Successfully patched key provider information"
@@ -19030,7 +19033,7 @@
                                 }
                             }
                         },
-                        "description": "Unauthorized, Invalid JWT"
+                        "description": "Unauthorized, invalid JWT"
                     },
                     "404": {
                         "content": {
@@ -19061,7 +19064,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "The fingerprint of an existing keyprovider key."
+                        "description": "The ARN fingerprint of an existing key provider key."
                     },
                     {
                         "in": "header",
@@ -19075,9 +19078,10 @@
                             }
                         ],
                         "required": true,
-                        "description": "The JWT used for authentication. Send the JWT in the AuthRequest header using the Bearer schema."
+                        "description": "The JWT used for authentication. Send the JWT in the request header using the Bearer schema."
                     }
                 ],
+                "description": "Update the name and/or description of a key provider.",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -19093,7 +19097,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "2ca95b87-c19e-410c-809a-0dc008d56e26",
+                "x-qlik-entity-revision": "4347570b-f4d4-4179-af9d-53ba62492279",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -19104,7 +19108,7 @@
                 "tags": [
                     "tenant key provider operations"
                 ],
-                "summary": "Deletes the key information",
+                "summary": "Deletes the given key from the tenant.",
                 "responses": {
                     "204": {
                         "content": {
@@ -19144,7 +19148,7 @@
                                 }
                             }
                         },
-                        "description": "Failed to delete keyprovider information"
+                        "description": "Failed to delete key provider information"
                     },
                     "424": {
                         "content": {
@@ -19165,7 +19169,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "The fingerprint of the requested provider key."
+                        "description": "The fingerprint of the key provider you wish to delete."
                     },
                     {
                         "in": "header",
@@ -19179,15 +19183,16 @@
                             }
                         ],
                         "required": true,
-                        "description": "The JWT used for authentication. Send the JWT in the AuthRequest header using the Bearer schema."
+                        "description": "The JWT used for authentication. Send the JWT in the request header using the Bearer schema."
                     }
                 ],
+                "description": "Delete a key configuration from the tenant. Not supported for the default Qlik managed key provider. Key must not be in use.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "e2960433-aa42-4f28-9344-2eb12c84b6be",
+                "x-qlik-entity-revision": "bd747ac2-dd53-4426-a068-ac337099a3be",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -19200,7 +19205,7 @@
                 "tags": [
                     "tenant key provider operations"
                 ],
-                "summary": "Migrates existing cipherkeys from current key provider to requested key provider.",
+                "summary": "Migrate existing cipherkeys from current key provider to requested key provider.",
                 "responses": {
                     "200": {
                         "content": {
@@ -19230,7 +19235,7 @@
                                 }
                             }
                         },
-                        "description": "Unauthorized, Invalid JWT"
+                        "description": "Unauthorized, invalid JWT"
                     },
                     "404": {
                         "content": {
@@ -19295,15 +19300,16 @@
                             }
                         ],
                         "required": true,
-                        "description": "The JWT used for authentication. Send the JWT in the AuthRequest header using the Bearer schema."
+                        "description": "The JWT used for authentication. Send the JWT in the request header using the Bearer schema."
                     }
                 ],
+                "description": "Migrate the active key from one provider to another. The migration process may take some time to complete, however this process will not impact users, and the tenant will continue to function normally during the migration. Use the migration details endpoint to monitor migration progress.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "9c5d8965-675e-484b-92fb-05ab573ff1dd",
+                "x-qlik-entity-revision": "076b0bac-37f1-4422-8350-6cf8f4b37efb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -19316,7 +19322,7 @@
                 "tags": [
                     "tenant key provider operations"
                 ],
-                "summary": "Validates AWS-KMS key access and usage",
+                "summary": "Validate AWS-KMS key access.",
                 "responses": {
                     "201": {
                         "content": {
@@ -19346,7 +19352,7 @@
                                 }
                             }
                         },
-                        "description": "Unauthorized, Invalid JWT"
+                        "description": "Unauthorized, invalid JWT"
                     },
                     "404": {
                         "content": {
@@ -19377,7 +19383,7 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "The fingerprint of an existing keyprovider key."
+                        "description": "The fingerprint of an existing key provider key."
                     },
                     {
                         "in": "header",
@@ -19391,15 +19397,16 @@
                             }
                         ],
                         "required": true,
-                        "description": "The JWT used for authentication. Send the JWT in the AuthRequest header using the Bearer schema."
+                        "description": "The JWT used for authentication. Send the JWT in the request header using the Bearer schema."
                     }
                 ],
+                "description": "Validate a key to check if Qlik Cloud has required access to your AWS account and key policy, and the key configuration. If the key policy or configuration are changed from the required configuration, this may impact your ability to access your tenant.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "788a62ab-68bf-4e31-b6cd-ff31e265578d",
+                "x-qlik-entity-revision": "97f47e20-33fb-42a8-8e97-d6992ced2a81",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -19410,9 +19417,9 @@
         "/v1/encryption/keyproviders/actions/list": {
             "get": {
                 "tags": [
-                    "tenant key providers management"
+                    "tenant key provider management"
                 ],
-                "summary": "Lists keyproviders registered for the tenant [Qlik, AWS-KMS]",
+                "summary": "Lists all key providers registered for the tenant.",
                 "responses": {
                     "200": {
                         "content": {
@@ -19442,7 +19449,7 @@
                                 }
                             }
                         },
-                        "description": "Failed to load key providers from the registry"
+                        "description": "Failed to load list of key providers"
                     }
                 },
                 "parameters": [
@@ -19458,15 +19465,16 @@
                             }
                         ],
                         "required": true,
-                        "description": "The JWT used for authentication. Send the JWT in the AuthRequest header using the Bearer schema."
+                        "description": "The JWT used for authentication. Send the JWT in the request header using the Bearer schema."
                     }
                 ],
+                "description": "Returns a list of all key providers in the tenant, including the default Qlik key provider.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b96abaf4-7367-4986-a22a-eae6d3c9a1f0",
+                "x-qlik-entity-revision": "7b534385-8fa4-40f5-9830-428e207fc767",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -19477,10 +19485,20 @@
         "/v1/encryption/keyproviders/actions/reset-to-default-provider": {
             "post": {
                 "tags": [
-                    "tenant key providers management"
+                    "tenant key provider management"
                 ],
-                "summary": "Resets tenant key provider to Qlik managed provider",
+                "summary": "Reset tenant key provider to default Qlik managed provider.",
                 "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResetMigrationNotNeeded"
+                                }
+                            }
+                        },
+                        "description": "Tenant is already using Qlik Managed provider, no action taken"
+                    },
                     "205": {
                         "content": {
                             "application/json": {
@@ -19499,7 +19517,7 @@
                                 }
                             }
                         },
-                        "description": "Unauthorized, Invalid JWT"
+                        "description": "Unauthorized, invalid JWT"
                     },
                     "406": {
                         "content": {
@@ -19509,7 +19527,7 @@
                                 }
                             }
                         },
-                        "description": "There is already an ongoing migration in progress for the tenant"
+                        "description": "There is already an ongoing migration in progress for this tenant, this must complete before a new migration can be started"
                     },
                     "412": {
                         "content": {
@@ -19545,15 +19563,16 @@
                             }
                         ],
                         "required": true,
-                        "description": "The JWT used for authentication. Send the JWT in the AuthRequest header using the Bearer schema."
+                        "description": "The JWT used for authentication. Send the JWT in the request header using the Bearer schema."
                     }
                 ],
+                "description": "Reset the encryption key back to the default Qlik managed provider. No action will be taken if tenant is already using the Qlik provider.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0c984a7e-16b3-4d5e-9d71-f5fad0e08a82",
+                "x-qlik-entity-revision": "5692d47e-b6ff-405d-94f9-aad373d2afe9",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -19566,7 +19585,7 @@
                 "tags": [
                     "tenant key migration information"
                 ],
-                "summary": "Gets ongoing migration details",
+                "summary": "Retrieve most recent migration details.",
                 "responses": {
                     "200": {
                         "content": {
@@ -19596,7 +19615,7 @@
                                 }
                             }
                         },
-                        "description": "Unauthorized, Invalid JWT"
+                        "description": "Unauthorized, invalid JWT"
                     },
                     "404": {
                         "content": {
@@ -19632,15 +19651,16 @@
                             }
                         ],
                         "required": true,
-                        "description": "The JWT used for authentication. Send the JWT in the AuthRequest header using the Bearer schema."
+                        "description": "The JWT used for authentication. Send the JWT in the request header using the Bearer schema."
                     }
                 ],
+                "description": "Retrieve details for the ongoing or last completed migration for the tenant.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "4e9c0b90-cefd-4435-8cb6-73bf396f2a43",
+                "x-qlik-entity-revision": "e7adb3d8-18bd-4c28-9626-c77e18df558f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30732,7 +30752,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "c8c97a63-59d6-4030-9c89-7ecc2f009f6d",
+                "x-qlik-entity-revision": "e9d114c3-e188-4eef-896b-404dc11ace86",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30811,7 +30831,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "44bc2612-1eab-4c23-8e05-94fa8908260f",
+                "x-qlik-entity-revision": "723cd641-f7f5-4222-b642-53dae3c5b794",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30884,7 +30904,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "82e36f64-8f09-4589-9a53-de4fd5675e4f",
+                "x-qlik-entity-revision": "1f63b20e-d498-4a4f-b775-2a4f459d6e8a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -31090,7 +31110,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "76b5dc7b-0c2e-48f9-b16e-a369af993919",
+                "x-qlik-entity-revision": "fdcf2264-0d50-47a2-9f2a-02e40ea25d2a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -31410,7 +31430,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "33424173-b942-41f9-8dad-4592b79d22b5",
+                "x-qlik-entity-revision": "2e34cba5-189f-4e5f-9464-d638a4aa3532",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -32051,7 +32071,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "64cab572-d045-4032-bf80-757fe55be286",
+                "x-qlik-entity-revision": "485ed60d-1760-493f-9ac1-c9052aa001a3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -32123,7 +32143,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "8ceccf86-1ce0-44b4-992c-af0c7a674602",
+                "x-qlik-entity-revision": "2ac2c370-5101-488c-9b0a-b4793ddec9e6",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -32207,7 +32227,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "a43ae471-9266-4a98-b0dc-c4374dcaef12",
+                "x-qlik-entity-revision": "f012d197-ddb7-4529-b1c5-a409f76135bb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -37179,6 +37199,16 @@
                     },
                     {
                         "in": "query",
+                        "name": "resourceType",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "example": "app,space",
+                        "required": false,
+                        "description": "Filter by resource types. If passing more than 1 resource type, use comma seperated string."
+                    },
+                    {
+                        "in": "query",
                         "name": "sort",
                         "schema": {
                             "enum": [
@@ -37200,7 +37230,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "56a1247d-4295-479a-9b4a-1bb8d3f690f0",
+                "x-qlik-entity-revision": "2eda1224-b604-47e7-9877-f9d9b437029a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -46679,6 +46709,11 @@
                         "maxLength": 1024,
                         "minLength": 0
                     },
+                    "dataFreshness": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "The date-time when the source data was last changed"
+                    },
                     "dataStoreInfo": {
                         "$ref": "#/components/schemas/DataStoreInfo"
                     },
@@ -50222,7 +50257,7 @@
             "KeyProvidersDeleteResponseBody": {
                 "type": "object",
                 "example": {
-                    "message": "Keyprovider metadata deleted successfully"
+                    "message": "Key provider metadata deleted successfully"
                 },
                 "required": [
                     "message"
@@ -50356,6 +50391,16 @@
                     "migratingToFingerprint": {
                         "type": "string",
                         "description": "The new key ARN fingerprint."
+                    }
+                }
+            },
+            "ResetMigrationNotNeeded": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "type": "string",
+                        "example": "Tenant is already using Qlik KMS, no migration is required.",
+                        "description": "Tenant is already using Qlik KMS, no migration is required."
                     }
                 }
             },
@@ -58599,6 +58644,9 @@
                         "type": "array",
                         "maxItems": 1100
                     },
+                    "selectionType": {
+                        "$ref": "#/components/schemas/SenseSelectionType"
+                    },
                     "selectionStrategy": {
                         "$ref": "#/components/schemas/SelectionStrategy"
                     },
@@ -58654,6 +58702,9 @@
                     "appId": {
                         "type": "string"
                     },
+                    "selectionType": {
+                        "$ref": "#/components/schemas/SenseSelectionType"
+                    },
                     "visualization": {
                         "$ref": "#/components/schemas/Visualization"
                     },
@@ -58701,6 +58752,16 @@
                     }
                 }
             },
+            "SenseSelectionType": {
+                "enum": [
+                    "selectionsByState",
+                    "temporaryBookmark",
+                    "persistentBookmark",
+                    "temporaryBookmarkV2"
+                ],
+                "type": "string",
+                "default": "selectionsByState"
+            },
             "SenseSheetTemplate": {
                 "required": [
                     "appId",
@@ -58713,6 +58774,9 @@
                     },
                     "sheet": {
                         "$ref": "#/components/schemas/Sheet"
+                    },
+                    "selectionType": {
+                        "$ref": "#/components/schemas/SenseSelectionType"
                     },
                     "selectionStrategy": {
                         "$ref": "#/components/schemas/SelectionStrategy"
@@ -60319,7 +60383,8 @@
                             "story",
                             "sheet",
                             "multi-sheet",
-                            "excel"
+                            "excel",
+                            "pixel-perfect"
                         ],
                         "type": "string",
                         "example": "file"
@@ -60330,7 +60395,8 @@
                             "snapshot",
                             "pdf",
                             "pptx",
-                            "xlsx"
+                            "xlsx",
+                            "qpxp"
                         ],
                         "type": "string",
                         "default": "image"
