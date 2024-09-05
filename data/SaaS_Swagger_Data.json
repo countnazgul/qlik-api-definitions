@@ -9,7 +9,7 @@
                 "tags": [
                     "api-keys"
                 ],
-                "summary": "Lists API keys for a given tenant ID.",
+                "summary": "List API keys",
                 "responses": {
                     "200": {
                         "content": {
@@ -19,7 +19,7 @@
                                 }
                             }
                         },
-                        "description": "The API keys page result."
+                        "description": "The list API keys result."
                     },
                     "400": {
                         "content": {
@@ -58,7 +58,8 @@
                         "name": "createdByUser",
                         "schema": {
                             "type": "string",
-                            "format": "uid"
+                            "format": "uid",
+                            "example": "64ef645a3b7009d55dee5a2b"
                         },
                         "description": "The user ID that created the API key."
                     },
@@ -131,7 +132,7 @@
                                 "revoked"
                             ],
                             "type": "string",
-                            "format": "uid"
+                            "format": "text"
                         },
                         "required": false,
                         "description": "The status of the API key."
@@ -141,19 +142,21 @@
                         "name": "sub",
                         "schema": {
                             "type": "string",
-                            "format": "uid"
+                            "format": "uid",
+                            "example": "SCIM\\\\215g5595380d646163cadbb9"
                         },
                         "required": false,
-                        "description": "The ID of the subject."
+                        "description": "The ID of the subject. For SCIM the format is `SCIM\\\\{{IDP-ID}}`, where `{{IDP-ID}}` is the ID of the IDP in Qlik. For users, use their user ID, e.g. `64ef645a3b7009d55dee5a2b`."
                     }
                 ],
+                "description": "Lists API keys for the tenant. To list API keys owned by other users, requesting user must be assigned the `TenantAdmin` role.",
                 "operationId": "getApiKeys",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "7bde482a-1dbf-4f40-b016-efd731e54d89",
+                "x-qlik-entity-revision": "b8507d3b-9d15-4d70-b84d-d95d6c4e62fe",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -164,7 +167,7 @@
                 "tags": [
                     "api-keys"
                 ],
-                "summary": "Creates an API key resource.",
+                "summary": "Create API key",
                 "responses": {
                     "201": {
                         "content": {
@@ -217,6 +220,7 @@
                         "description": "Unexpected error."
                     }
                 },
+                "description": "Creates an API key, either for a user, or for configuring SCIM for a compatible Identity Provider.\nSending `sub` and `subType` is required only for creating SCIM keys.\n",
                 "operationId": "createApiKey",
                 "requestBody": {
                     "content": {
@@ -234,7 +238,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "db89a8ed-edbb-4c16-bf90-0c145333f254",
+                "x-qlik-entity-revision": "97ec6356-5781-4d1c-b38a-67417dc9426f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -247,7 +251,7 @@
                 "tags": [
                     "api-keys"
                 ],
-                "summary": "Gets the API key for a given ID.",
+                "summary": "Get API key for a given ID",
                 "responses": {
                     "200": {
                         "content": {
@@ -309,16 +313,17 @@
                             "format": "uid"
                         },
                         "required": true,
-                        "description": "The ID of the API key resource to be retrieved."
+                        "description": "The ID of the API key to be retrieved."
                     }
                 ],
+                "description": "Returns the API key for a given API key ID.",
                 "operationId": "getApiKeyById",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "ec0e233c-03b5-4a87-9f49-20d6c083ac94",
+                "x-qlik-entity-revision": "c3f54bf6-83ae-4be8-8255-5cb72551361b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -329,7 +334,7 @@
                 "tags": [
                     "api-keys"
                 ],
-                "summary": "Updates an API key for a given ID.",
+                "summary": "Update API key description",
                 "responses": {
                     "204": {
                         "content": {
@@ -390,6 +395,7 @@
                         "description": "The ID of the API key resource to be updated."
                     }
                 ],
+                "description": "Updates an API key description for a given API key ID.",
                 "operationId": "updateApiKey",
                 "requestBody": {
                     "content": {
@@ -407,7 +413,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "bcba9ad3-a0ce-4a0d-a578-2b49de472c42",
+                "x-qlik-entity-revision": "222f7e0b-ddd3-46f5-8007-18bd27e664b7",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -418,12 +424,9 @@
                 "tags": [
                     "api-keys"
                 ],
-                "summary": "Deletes or revokes an API key.",
+                "summary": "Delete or revoke an API key",
                 "responses": {
                     "204": {
-                        "content": {
-                            "application/json": {}
-                        },
                         "description": "Deleted or revoked an API key resource."
                     },
                     "403": {
@@ -466,17 +469,17 @@
                             "format": "uid"
                         },
                         "required": true,
-                        "description": "The ID of the API key resource to be retrieved."
+                        "description": "The ID of the API key to be retrieved."
                     }
                 ],
-                "description": "When the owner of the API key sends the request, the key will be removed. When a TenantAdmin sends the request, the key will be revoked.",
+                "description": "Deletes or revokes an API key for a given API key ID. When the owner of the API key sends the request, the key will be deleted and removed from the tenant. When a user assigned the `TenantAdmin` role sends the request, the key will be disabled and marked as revoked.",
                 "operationId": "deleteApiKeyById",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "5557dd4d-c9e6-42e8-b5fd-ce87c5dbf82e",
+                "x-qlik-entity-revision": "a226b17b-b88c-4d2c-9f1f-538e6f79e245",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -489,7 +492,7 @@
                 "tags": [
                     "api-keys configurations"
                 ],
-                "summary": "Gets the API keys configuration for a given tenant ID.",
+                "summary": "Get API key configuration",
                 "responses": {
                     "200": {
                         "content": {
@@ -528,19 +531,21 @@
                         "name": "tenantId",
                         "schema": {
                             "type": "string",
-                            "format": "uid"
+                            "format": "uid",
+                            "example": "Hj5p89bylz1r2AUC6joLNuHzVx5Ya8cF"
                         },
                         "required": true,
-                        "description": "The tenant ID of the API keys configuration to be retrieved."
+                        "description": "The tenant ID from which you wish to retrieve the API key configuration."
                     }
                 ],
+                "description": "Retrieves the API key configuration for a tenant.",
                 "operationId": "getApiKeysConfiguration",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "c8ab3252-359c-4027-825b-02c62b3d922e",
+                "x-qlik-entity-revision": "b3deed9a-947f-4c25-8a09-cbb2aeec0e67",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -551,7 +556,7 @@
                 "tags": [
                     "api-keys configurations"
                 ],
-                "summary": "Updates the API keys configuration for a given tenant ID.",
+                "summary": "Update API keys configuration",
                 "responses": {
                     "204": {
                         "content": {
@@ -612,6 +617,7 @@
                         "description": "The tenant ID of the API keys configuration to be retrieved."
                     }
                 ],
+                "description": "Updates the API keys configuration for a given tenant ID.",
                 "operationId": "updateApiKeyConfiguration",
                 "requestBody": {
                     "content": {
@@ -629,7 +635,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "525d5882-c3e4-43e8-846b-2168caebe818",
+                "x-qlik-entity-revision": "962fcd8d-d596-48f5-97a6-b82c94296d5c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -673,7 +679,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "d655c029-3819-4ed4-8c41-d10a9760a421",
+                "x-qlik-entity-revision": "a409f5d5-69d4-4738-be15-54bdbbd1db4f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -720,7 +726,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "5261c743-02c2-49d9-b3e5-aa014274325f",
+                "x-qlik-entity-revision": "8ab8c511-8862-448d-bf70-122a68ab8b13",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -776,7 +782,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "3b676241-17d4-4f74-b28c-113a7befa26a",
+                "x-qlik-entity-revision": "8ad62bd3-71ba-4207-9790-579a35654edb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -875,7 +881,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "4cb94d35-1c80-431b-b932-ead568adc4ef",
+                "x-qlik-entity-revision": "51192669-344a-4fae-b6ad-48f6a42d5de0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -972,7 +978,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "2db8e13a-e7fc-464c-99f0-88dc0cc4a089",
+                "x-qlik-entity-revision": "e7d4ed4c-0ca6-4f94-a99c-8e01234ebfa5",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -1833,7 +1839,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "e8208930-1e47-4544-b38a-90bf346c6bcb",
+                "x-qlik-entity-revision": "1ad59afb-49ac-41cb-a1b9-e3314c789aa2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -1891,7 +1897,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "f6bf8e43-1d49-4487-9f3c-9641dac2dad2",
+                "x-qlik-entity-revision": "35594c41-e6e6-4a37-853f-03b3fdb21ebe",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -1947,7 +1953,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "c422adf6-92d6-49cf-8069-5e6a7783aba0",
+                "x-qlik-entity-revision": "7094acfa-1bf5-4026-bec2-d06a6f137a58",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -3249,7 +3255,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "6e665db8-18fb-4b3d-a770-bc7124383cbd",
+                "x-qlik-entity-revision": "2ce1b528-7eb8-459f-86f9-86e77f33c096",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -3291,7 +3297,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "a05d9c01-80f2-4ddc-a289-ec0b7cadf34b",
+                "x-qlik-entity-revision": "219ad865-e720-4ebf-9632-3e7ead8bbb4e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -3948,7 +3954,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "edfe1dfd-d57f-4865-ac8f-0b3aa8b607a2",
+                "x-qlik-entity-revision": "7a3b854c-b0bc-42ed-84b6-a616ebf1c925",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -10853,7 +10859,7 @@
                 "tags": [
                     "csrf"
                 ],
-                "summary": "Returns CSRF token via the qlik-csrf-token header.",
+                "summary": "Get CSRF token",
                 "responses": {
                     "204": {
                         "headers": {
@@ -10907,12 +10913,13 @@
                         "description": "Token not found"
                     }
                 },
+                "description": "Returns CSRF token via the qlik-csrf-token header.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/embed"
                 ],
-                "x-qlik-entity-revision": "0b526ee8-7bc8-440b-a593-3855c911217e",
+                "x-qlik-entity-revision": "ceaa79a2-76cd-4245-97bc-8e6c31c58caa",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -27668,7 +27675,7 @@
                 "tags": [
                     "login"
                 ],
-                "summary": "Login using interactive identity provider associated with the tenant.",
+                "summary": "Login using interactive identity provider",
                 "responses": {
                     "302": {
                         "content": {
@@ -27705,8 +27712,9 @@
                         "schema": {
                             "type": "string"
                         },
+                        "example": "automations/editor/fef1ba5f-facb-4cd1-9c69-8ddc6c61b7e3",
                         "required": false,
-                        "description": "Relative or full URL to redirect to after successful login."
+                        "description": "Relative or full URL on the tenant to redirect to after successful login."
                     },
                     {
                         "in": "header",
@@ -27714,16 +27722,18 @@
                         "schema": {
                             "type": "string"
                         },
+                        "example": "OG_YzbL1zweMS4XQcv88J_n0853IbM0R",
                         "required": false,
                         "description": "Web Integration ID associated with origin whitelist used to validate returnto value."
                     }
                 ],
+                "description": "Initiates login using the active interactive identity provider associated with the tenant. Uses default Qlik identity provider if no customer-configured interactive identity provider is active.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "82a46587-fbfe-4d2a-9614-2cebf5c39ff6",
+                "x-qlik-entity-revision": "d3a9078d-8d3a-4202-89a2-bd1b4bd1ac7b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -27736,7 +27746,7 @@
                 "tags": [
                     "tokens"
                 ],
-                "summary": "Exchanges a token in the form of a user JWT for a session cookie.",
+                "summary": "Exchange a token",
                 "responses": {
                     "200": {
                         "content": {
@@ -27768,13 +27778,13 @@
                         "description": "Unauthorized."
                     }
                 },
-                "description": "The JWT should be securely signed with an algorithm other than HS,\nand it should contain the following claims:\n1. iss: identifies the principal that issued the JWT; it must match the issuer in the IDP definition.\n2. aud: identifies the recipients of the JWT, which in this case is \"qlik.api/login/jwt-session\".\n3. sub: identifies the subject of the JWT.\n4. subType: the type of identifier the sub represents, which in this case is \"user\".\n5. name: the name of the user.\n6. email: the email address of the user.\n7. email_verified: a claim indicating to Qlik that the JWT source has verified that the email address belongs to the subject.\n9. jti: JWT ID; it should be unique for each consumed JWT token.\n10. iat: identifies the time at which the JWT was issued.\n11. nbf: identifies the starting time on which the JWT is accepted. The current unix time must be passed this value.\n12. exp: identifies the expiration time after which the JWT is not accepted.\n13. keyid: identifies the KeyID used to sign the JWT; it must match the KeyID in the IDP definition.\n\nAnd the time window between exp and nbf should not exceed 1 hour.\n",
+                "description": "Exchanges a token in the form of a user JWT for a session cookie.\nThe JWT should be securely signed with an algorithm other than HS, and it should contain the following claims:\n1. iss: identifies the principal that issued the JWT; it must match the issuer in the IDP definition.\n2. aud: identifies the recipients of the JWT, which in this case is \"qlik.api/login/jwt-session\".\n3. sub: identifies the subject of the JWT.\n4. subType: the type of identifier the sub represents, which in this case is \"user\".\n5. name: the name of the user.\n6. email: the email address of the user.\n7. email_verified: a claim indicating to Qlik that the JWT source has verified that the email address belongs to the subject.\n9. jti: JWT ID; it should be unique for each consumed JWT token.\n10. iat: identifies the time at which the JWT was issued.\n11. nbf: identifies the starting time on which the JWT is accepted. The current unix time must be passed this value.\n12. exp: identifies the expiration time after which the JWT is not accepted.\n13. keyid: identifies the KeyID used to sign the JWT; it must match the KeyID in the IDP definition.\n\nAnd the time window between exp and nbf should not exceed 1 hour.\n",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "7259e025-2e84-496f-913c-9aa232217f33",
+                "x-qlik-entity-revision": "eed74183-fa04-4a39-ac22-b23e8373e01d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -28228,7 +28238,7 @@
                 "tags": [
                     "oauth"
                 ],
-                "summary": "Allows a client application to use an OAuth flow to request user authorization.",
+                "summary": "Authorize a client application",
                 "responses": {
                     "302": {
                         "content": {
@@ -28307,7 +28317,8 @@
                                 "user_default",
                                 "offline_access"
                             ],
-                            "type": "array"
+                            "type": "array",
+                            "example": "user_default"
                         },
                         "explode": false,
                         "required": true,
@@ -28350,12 +28361,13 @@
                         "description": "Specifies whether the Authorization Server prompts the End-User for re-authentication and consent."
                     }
                 ],
+                "description": "Allows a client application to use an OAuth flow to request user authorization.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "542e1d73-375a-4e07-96a5-7639170586b3",
+                "x-qlik-entity-revision": "34355600-9ccc-4e0e-8168-98a0c30837bb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -28368,7 +28380,7 @@
                 "tags": [
                     "oauth"
                 ],
-                "summary": "Allows a client to revoke their token",
+                "summary": "Revoke OAuth token provided by client",
                 "responses": {
                     "200": {
                         "content": {
@@ -28387,6 +28399,7 @@
                         "description": "Invalid request."
                     }
                 },
+                "description": "Allows a client to revoke their token.",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -28408,7 +28421,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "1e63db13-5522-431d-8c45-fff469affbb2",
+                "x-qlik-entity-revision": "7dd39499-5b82-4483-a460-248a7777d184",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -28421,7 +28434,7 @@
                 "tags": [
                     "oauth"
                 ],
-                "summary": "Allows a client to perform an OAuth flow to obtain a token set.",
+                "summary": "Retrieve OAuth token",
                 "responses": {
                     "200": {
                         "content": {
@@ -28464,6 +28477,7 @@
                         "description": "Forbidden because user is disabled or has reached the maximum number of tokens."
                     }
                 },
+                "description": "Allows a client to perform an OAuth flow to obtain a token set.",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -28512,7 +28526,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "24c54416-bdd5-4ef8-b9fc-7b1fea327176",
+                "x-qlik-entity-revision": "b08fb281-bd8f-4125-b486-094b79b859d5",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -29329,12 +29343,13 @@
                         "description": "The ID of the user to limit results to."
                     }
                 ],
+                "description": "Retrieve list of OAuth tokens that the user has access to. Users assigned with a `TenantAdmin` role can list OAuth tokens generated for all users in the tenant.",
                 "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "f71e9a6b-3667-4e10-a78e-6667d5e4eccf",
+                "x-qlik-entity-revision": "73a0143f-7465-4d30-9cd7-a2b241396eda",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -29388,12 +29403,13 @@
                         "description": "The ID of the token to revoke."
                     }
                 ],
+                "description": "Revokes a specific OAuth token by ID. Requesting user must have `TenantAdmin` role assigned to delete tokens owned by other users.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "39e149c0-a407-42b8-ae9e-751c4fe44e79",
+                "x-qlik-entity-revision": "c834e4f9-fe72-4376-b194-af1a19ed367c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -29406,7 +29422,7 @@
                 "tags": [
                     "metadata"
                 ],
-                "summary": "Returns authorization server metadata.",
+                "summary": "Get authorization server metadata",
                 "responses": {
                     "200": {
                         "content": {
@@ -29419,12 +29435,13 @@
                         "description": "Returns authorization server metadata."
                     }
                 },
+                "description": "Returns authorization server metadata.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "869daac2-91b9-4f98-9297-d60af19a7228",
+                "x-qlik-entity-revision": "20a4aa0d-5df5-4563-9bd5-a9632871132a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -29582,7 +29599,7 @@
                 "tags": [
                     "reload-tasks"
                 ],
-                "summary": "Find and return the tasks that the user can access.\n",
+                "summary": "Find and return tasks\n",
                 "responses": {
                     "200": {
                         "content": {
@@ -29725,12 +29742,13 @@
                         "description": "JWT containing tenant credentials."
                     }
                 ],
+                "description": "Finds and returns the tasks that the user has access to.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "fa38a705-a011-4447-9c2f-c5d3ad173997",
+                "x-qlik-entity-revision": "4f5e86dc-dc36-472c-af6f-87268a649be7",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -29741,7 +29759,7 @@
                 "tags": [
                     "reload-tasks"
                 ],
-                "summary": "Create a task for a specified app.\n",
+                "summary": "Create a task \n",
                 "responses": {
                     "201": {
                         "content": {
@@ -29825,6 +29843,7 @@
                         "description": "JWT containing tenant credentials."
                     }
                 ],
+                "description": "Creates a task for a specified app.",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -29841,7 +29860,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c073952b-46de-4c34-a012-53841de2f63d",
+                "x-qlik-entity-revision": "9552dfd2-c2c8-45e9-95dd-d5c8d5cb3379",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -29854,7 +29873,7 @@
                 "tags": [
                     "reload-tasks"
                 ],
-                "summary": "Find and return a task.\n",
+                "summary": "Find a task\n",
                 "responses": {
                     "200": {
                         "content": {
@@ -29957,12 +29976,13 @@
                         "description": "JWT containing tenant credentials."
                     }
                 ],
+                "description": "Finds and returns a task.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "06dddcec-cf54-40a5-84a3-9cb93cb5b6fa",
+                "x-qlik-entity-revision": "491ae07e-6287-40a6-876f-307c74936d8b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -29973,7 +29993,7 @@
                 "tags": [
                     "reload-tasks"
                 ],
-                "summary": "Update an existing task.\n",
+                "summary": "Update an existing task\n",
                 "responses": {
                     "200": {
                         "content": {
@@ -30066,6 +30086,7 @@
                         "description": "JWT containing tenant credentials."
                     }
                 ],
+                "description": "Updates an existing task",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -30082,7 +30103,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "79943efe-6a8c-46bf-8519-da6900ead47a",
+                "x-qlik-entity-revision": "37a5efa3-a8c4-43ca-9729-97af2b35fae5",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30093,7 +30114,7 @@
                 "tags": [
                     "reload-tasks"
                 ],
-                "summary": "Delete a task.\n",
+                "summary": "Delete a task\n",
                 "responses": {
                     "204": {
                         "description": "Task deleted successfully."
@@ -30169,12 +30190,13 @@
                         "description": "JWT containing tenant credentials."
                     }
                 ],
+                "description": "Deletes a task",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "374511c7-8193-4923-a116-7fed07a56a54",
+                "x-qlik-entity-revision": "300ec445-5b82-4c3b-8ad6-ff24f425ad88",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30187,7 +30209,7 @@
                 "tags": [
                     "reloads"
                 ],
-                "summary": "Finds and returns the reloads that the user has access to.",
+                "summary": "Find and return reloads",
                 "responses": {
                     "200": {
                         "content": {
@@ -30320,12 +30342,13 @@
                         "description": "JWT containing tenant credentials."
                     }
                 ],
+                "description": "Finds and returns the reloads that the user has access to.",
                 "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c215318f-2979-44b5-8cc1-c4fa1f2ea513",
+                "x-qlik-entity-revision": "e0fad2fc-26fd-4afd-930d-c7a8f562b6d8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30336,7 +30359,7 @@
                 "tags": [
                     "reloads"
                 ],
-                "summary": "Reloads an app specified by an app ID.",
+                "summary": "Reload an app",
                 "responses": {
                     "201": {
                         "content": {
@@ -30410,6 +30433,7 @@
                         "description": "JWT containing tenant credentials."
                     }
                 ],
+                "description": "Reloads an app specified by an app ID.",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -30426,7 +30450,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "bb4d1452-e643-43b3-af28-5d77aa580c68",
+                "x-qlik-entity-revision": "3483951c-57fb-4f0d-959e-51217293e22e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -30522,13 +30546,13 @@
                         "description": "JWT containing tenant credentials."
                     }
                 ],
-                "description": "Finds and returns a reload record",
+                "description": "Finds and returns a reload record.",
                 "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c96ef283-fedb-47e5-a661-d7d7f18e2fe2",
+                "x-qlik-entity-revision": "ff93f579-3351-480e-97fc-f4dd25d88a3c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30541,7 +30565,7 @@
                 "tags": [
                     "reloads"
                 ],
-                "summary": "Cancels a reload",
+                "summary": "Cancel a reload",
                 "responses": {
                     "202": {
                         "description": "Reload is being cancelled."
@@ -30636,7 +30660,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "de27b3b4-bcfc-4685-bdb2-0f995c658779",
+                "x-qlik-entity-revision": "50160f65-2b27-422f-8f14-aedbbf5c1206",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -31430,7 +31454,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "2e34cba5-189f-4e5f-9464-d638a4aa3532",
+                "x-qlik-entity-revision": "b782f59e-c170-4db9-b110-0f9e2a38ab83",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -31607,7 +31631,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "ecb208e0-82e9-4a8a-ac66-78e3bcd48798",
+                "x-qlik-entity-revision": "83a66353-c0fb-4f71-84a1-4d880891a3ab",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -31893,7 +31917,7 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "the filter by sharing task resource app id."
+                        "description": "the filter by sharing task resource app id. TenantAdmin users may omit this parameter to list all sharing-tasks in the tenant."
                     },
                     {
                         "in": "query",
@@ -32041,7 +32065,7 @@
                             }
                         },
                         "required": false,
-                        "description": "the filter by sharing task resource type."
+                        "description": "the filter by sharing task resource type. If type is template-sharing only and user is not tenant admin, appid is also required."
                     },
                     {
                         "in": "query",
@@ -32071,7 +32095,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "485ed60d-1760-493f-9ac1-c9052aa001a3",
+                "x-qlik-entity-revision": "61bd8a05-9f0b-4be5-ba18-35cd821c1020",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -32873,7 +32897,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "a86c268e-28ae-42be-be53-982d314375aa",
+                "x-qlik-entity-revision": "740a2e83-2e7a-46de-abf2-df68e4396f80",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -32954,7 +32978,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "12821155-e725-4b1d-9f1d-850603f3b67e",
+                "x-qlik-entity-revision": "09e0ff77-2aca-44db-8d0e-6e83a94fd77e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -33038,7 +33062,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0c09a773-a3d0-46f3-9290-aa5cd280f862",
+                "x-qlik-entity-revision": "27d4774a-0b3b-43ef-907a-fe75abda3357",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -33131,7 +33155,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "863a452a-0435-4f45-a07e-2bfccc65b975",
+                "x-qlik-entity-revision": "ce078eca-7aa5-4a7c-b6c6-8f04194aa8f2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -33224,7 +33248,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f7b794d9-8d83-4e42-8011-54c676f69086",
+                "x-qlik-entity-revision": "0bef2ac3-b0cb-471b-acd2-8d68a499d1f2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -38441,7 +38465,7 @@
                     "sub": {
                         "type": "string",
                         "example": "SCIM\\\\215g5595380d646163cadbb9",
-                        "description": "The ID of the subject for the API key. For SCIM the format is `SCIM\\\\{{IDP-ID}}`, where `{{IDP-ID}}` is the ID of the IDP in Qlik."
+                        "description": "The ID of the subject for the API key. For SCIM the format is `SCIM\\\\{{IDP-ID}}`, where `{{IDP-ID}}` is the ID of the IDP in Qlik. For users, use their user ID, e.g. `64ef645a3b7009d55dee5a2b`."
                     },
                     "expiry": {
                         "type": "string",
@@ -38501,11 +38525,12 @@
                     "sub": {
                         "type": "string",
                         "example": "SCIM\\\\215g5595380d646163cadbb9",
-                        "description": "The ID of the subject for the API key. For SCIM the format is `SCIM\\\\{{IDP-ID}}`, where `{{IDP-ID}}` is the ID of the IDP in Qlik."
+                        "description": "The ID of the subject for the API key. For SCIM the format is `SCIM\\\\{{IDP-ID}}`, where `{{IDP-ID}}` is the ID of the IDP in Qlik. When creating an API key for a user, this is their user ID, e.g. `64ef645a3b7009d55dee5a2b`, and will default to the requesting user if not provided. User must be assigned the `Developer` role."
                     },
                     "expiry": {
                         "type": "string",
-                        "description": "The expiry of the API key, in ISO8601 duration format."
+                        "example": "P7D",
+                        "description": "The expiry of the API key, in ISO8601 duration format. For example, `P7D` sets expiry after 7 days. If not provided, defaults to the maximum API key or SCIM key expiry configured in the tenant."
                     },
                     "subType": {
                         "enum": [
@@ -38513,7 +38538,8 @@
                             "externalClient"
                         ],
                         "type": "string",
-                        "description": "Type of the subject. For SCIM, it should be `externalClient`."
+                        "default": "user",
+                        "description": "Type of the subject. For SCIM, it should be `externalClient`. If not specified, defaults to `user`."
                     },
                     "description": {
                         "type": "string",
@@ -38540,7 +38566,8 @@
                         "enum": [
                             "/api_keys_enabled",
                             "/max_api_key_expiry",
-                            "/max_keys_per_user"
+                            "/max_keys_per_user",
+                            "/scim_externalClient_expiry"
                         ],
                         "type": "string",
                         "description": "The path for the given resource field to patch."
@@ -38586,7 +38613,7 @@
                     "api_keys_enabled": {
                         "type": "boolean",
                         "default": false,
-                        "description": "Enables or disables API key functionality for the specified tenant."
+                        "description": "Enables or disables user API key functionality for the specified tenant."
                     },
                     "max_keys_per_user": {
                         "type": "number",
@@ -38598,7 +38625,14 @@
                     "max_api_key_expiry": {
                         "type": "string",
                         "default": "PT24H",
-                        "description": "The maximum lifetime, in ISO8601 duration format, for which an API key can be issued for the specified tenant."
+                        "example": "PT24H",
+                        "description": "The maximum lifetime, in ISO8601 duration format, for which an API key can be issued for the specified tenant, e.g. `P7D` for 7 days."
+                    },
+                    "scim_externalClient_expiry": {
+                        "type": "string",
+                        "default": "P365D",
+                        "example": "P365D",
+                        "description": "The expiry of the scim `externalClient` token in ISO8601 duration format, e.g. `P365D` for 365 days. Used during the creation of an `externalClient` API key for configuring a SCIM compatible Identity Provider."
                     }
                 }
             },
@@ -40869,7 +40903,7 @@
                     },
                     "owner": {
                         "type": "string",
-                        "description": "Deprecated. Use user api to fetch user metadata.",
+                        "description": "Deprecated. Use the Users API to fetch user metadata.",
                         "x-qlik-deprecated": true
                     },
                     "usage": {
@@ -42106,6 +42140,10 @@
                     {
                         "title": "DATAFLOW_PREP",
                         "x-qlik-const": 2
+                    },
+                    {
+                        "title": "SINGLE_TABLE_PREP",
+                        "x-qlik-const": 3
                     }
                 ]
             },
@@ -56268,6 +56306,7 @@
                 "properties": {
                     "scope": {
                         "type": "string",
+                        "example": "user_default offline_access",
                         "description": "The scope of access that is being requested. The scope should already be assigned to the OAuth client. For a list of available scopes, visit: https://qlik.dev/authenticate/oauth/scopes/#available-scopes"
                     },
                     "grant_type": {
@@ -56275,6 +56314,7 @@
                             "client_credentials"
                         ],
                         "type": "string",
+                        "example": "client_credentials",
                         "description": "The grant type used to obtain an access token outside of the context of a user."
                     }
                 }
@@ -56290,6 +56330,7 @@
                             "refresh_token"
                         ],
                         "type": "string",
+                        "example": "refresh_token",
                         "description": "The grant type used to exchange a refresh token for an access token."
                     },
                     "client_secret": {
@@ -56359,6 +56400,7 @@
                             "urn:ietf:params:oauth:token-type:access_token"
                         ],
                         "type": "string",
+                        "example": "urn:ietf:params:oauth:token-type:access_token",
                         "description": "The type of the subject token."
                     }
                 },
@@ -56421,7 +56463,8 @@
                 "properties": {
                     "scope": {
                         "type": "string",
-                        "description": "The scope of access that is being requested."
+                        "example": "user_default offline_usage",
+                        "description": "The scope of access that is being requested. The scope should already be assigned to the OAuth client. For a list of available scopes, visit: https://qlik.dev/authenticate/oauth/scopes/#available-scopes"
                     },
                     "client_id": {
                         "type": "string",
@@ -57092,21 +57135,25 @@
                 "properties": {
                     "issuer": {
                         "type": "string",
+                        "example": "https://your-tenant.us.qlikcloud.com",
                         "description": "The issuer of the tokens."
                     },
                     "jwks_uri": {
                         "type": "string",
                         "format": "uri",
+                        "example": "https://your-tenant.us.qlikcloud.com/.well-known/jwks.json",
                         "description": "The public keys endpoint."
                     },
                     "token_endpoint": {
                         "type": "string",
                         "format": "uri",
+                        "example": "https://your-tenant.us.qlikcloud.com/oauth/token",
                         "description": "The token endpoint."
                     },
                     "revocation_endpoint": {
                         "type": "string",
                         "format": "uri",
+                        "example": "https://your-tenant.us.qlikcloud.com/oauth/revoke",
                         "description": "The token endpoint."
                     },
                     "grant_types_supported": {
@@ -57116,6 +57163,7 @@
                     "authorization_endpoint": {
                         "type": "string",
                         "format": "uri",
+                        "example": "https://your-tenant.us.qlikcloud.com/oauth/authorize",
                         "description": "The authorization endpoint."
                     },
                     "response_types_supported": {
@@ -57953,7 +58001,7 @@
                 "properties": {
                     "code": {
                         "type": "string",
-                        "description": "The unique code for the error\n\n- \"REP-400000\" Bad request. The server could not understand the request due to invalid syntax.\n- \"REP-400008\" Selections error.\n- \"REP-400009\" Maximum 16384 columns limit exceeded. Download data in a visualization can't generate an .xlsx file due to limitations to the number of columns you can download.\n- \"REP-400010\" Maximum 1048566 rows limit exceeded. Download data in a visualization can't generate an .xlsx file due to limitations to the number of rows you can download.\n- \"REP-400011\" The size of the downloaded Excel file exceed 100 MB limit. Download data in a visualization can't generate an .xlsx file due to limitations to the amount of data you can download.\n- \"REP-400015\" Bad request in enigma request. The patch value has invalid JSON format.\n- \"REP-401000\" Unauthorized. The client must authenticate itself to get the requested response.\n- \"REP-401001\" Unauthorized, bad JWT.\n- \"REP-403000\" Forbidden. The client does not have access rights to the content.\n- \"REP-403001\" App forbidden, the user does not have read permission on the app.\n- \"REP-403002\" Chart type not supported.\n- \"REP-404000\" Not found. The server can not find the requested resource.\n- \"REP-404001\" App not found, the app does not exist or it has been deleted.\n- \"REP-404002\" Chart not found, the chart does not exist or it has been deleted.\n- \"REP-404003\" Sheet not found, the sheet does not exist or it has been deleted or it is unavailable.\n- \"REP-404004\" Story not found, the story does not exist or it has been deleted or it is unavailable.\n- \"REP-429000\" Too many request. The user has sent too many requests in a given amount of time (\"rate limiting\").\n- \"REP-429012\" Exceeded max session tenant quota. A tenant has opened too many different sessions at the same time.\n- \"REP-429014\" Reporting service was not able to return inside of request export deadline. Too many request at the same time for the same tenant.\n- \"REP-429016\" Exceeded max session tenant quota per day.\n- \"REP-500000\" Fail to resolve resource.\n- \"REP-500006\" Fail to get report session parameters.\n- \"REP-503005\" Engine unavailable, qix-sessions error no engines available.\n- \"REP-503013\" Session unavailable. The engine session used to create the report is unavailable.\n- \"REP-500100\" Image rendering generic error on Sense client.\n- \"REP-500101\" Image rendering could not set cookies error on Sense client.\n- \"REP-400102\" Image rendering invalid strategy error on Sense client.\n- \"REP-500103\" Image rendering JS timeout error on Sense client.\n- \"REP-500104\" Image rendering load URL timeout error on Sense client.\n- \"REP-500105\" Image rendering max paint attempts exceeded error on Sense client.\n- \"REP-500106\" Image rendering max JS attempts exceeded error on Sense client.\n- \"REP-500107\" Image rendering render timeout error on Sense client.\n- \"REP-500108\" Image rendering JS failure due to timeout error on Sense client.\n- \"REP-500109\" Image rendering generic JS failure error on Sense client.\n- \"REP-400029\" Reload Entitlement Limit Reached.\n- \"REP-409046\" Report aborted due to app reload.\n- \"REP-500047\" Error setting GroupState.\n- \"REP-403048\" Forbidden. User does not have permission to export the report (access control usePermission)\n"
+                        "description": "The unique code for the error\n\n- \"REP-400000\" Bad request. The server could not understand the request due to invalid syntax.\n- \"REP-400008\" Selections error.\n- \"REP-400009\" Maximum 16384 columns limit exceeded. Download data in a visualization can't generate an .xlsx file due to limitations to the number of columns you can download.\n- \"REP-400010\" Maximum 1048566 rows limit exceeded. Download data in a visualization can't generate an .xlsx file due to limitations to the number of rows you can download.\n- \"REP-400011\" The size of the downloaded Excel file exceed 100 MB limit. Download data in a visualization can't generate an .xlsx file due to limitations to the amount of data you can download.\n- \"REP-400015\" Bad request in enigma request. The patch value has invalid JSON format.\n- \"REP-401000\" Unauthorized. The client must authenticate itself to get the requested response.\n- \"REP-401001\" Unauthorized, bad JWT.\n- \"REP-403000\" Forbidden. The client does not have access rights to the content.\n- \"REP-403001\" App forbidden, the user does not have read permission on the app.\n- \"REP-403002\" Chart type not supported.\n- \"REP-404000\" Not found. The server can not find the requested resource.\n- \"REP-404001\" App not found, the app does not exist or it has been deleted.\n- \"REP-404002\" Chart not found, the chart does not exist or it has been deleted.\n- \"REP-404003\" Sheet not found, the sheet does not exist or it has been deleted or it is unavailable.\n- \"REP-404004\" Story not found, the story does not exist or it has been deleted or it is unavailable.\n- \"REP-429000\" Too many request. The user has sent too many requests in a given amount of time (\"rate limiting\").\n- \"REP-429012\" Exceeded max session tenant quota. A tenant has opened too many different sessions at the same time.\n- \"REP-429014\" The export could not be completed within the requested deadline.\n- \"REP-429016\" Exceeded max session tenant quota per day.\n- \"REP-500000\" Fail to resolve resource.\n- \"REP-500006\" Fail to get report session parameters.\n- \"REP-503005\" Engine unavailable, qix-sessions error no engines available.\n- \"REP-503013\" Session unavailable. The engine session used to create the report is unavailable.\n- \"REP-500100\" Image rendering generic error on Sense client.\n- \"REP-500101\" Image rendering could not set cookies error on Sense client.\n- \"REP-400102\" Image rendering invalid strategy error on Sense client.\n- \"REP-500103\" Image rendering JS timeout error on Sense client.\n- \"REP-500104\" Image rendering load URL timeout error on Sense client.\n- \"REP-500105\" Image rendering max paint attempts exceeded error on Sense client.\n- \"REP-500106\" Image rendering max JS attempts exceeded error on Sense client.\n- \"REP-500107\" Image rendering render timeout error on Sense client.\n- \"REP-500108\" Image rendering JS failure due to timeout error on Sense client.\n- \"REP-500109\" Image rendering generic JS failure error on Sense client.\n- \"REP-400029\" Reload Entitlement Limit Reached.\n- \"REP-409046\" Report aborted due to app reload.\n- \"REP-500047\" Error setting GroupState.\n- \"REP-403048\" Forbidden. User does not have permission to export the report (access control usePermission)\n- \"REP-422051\" There is no report to produce due to empty dataset or missing fields (the measure/dimension was removed or omitted in Section Access)\n- \"REP-500014\" The app did not open within 5 minutes.\n"
                     },
                     "meta": {
                         "$ref": "#/components/schemas/MetaExportError"

@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.2143.0",
+        "version": "12.2168.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -788,7 +788,7 @@
         },
         {
             "name": "GenericObject.GetListObjectData",
-            "description": "Retrieves the values of a list object.\nA data set is returned.",
+            "description": "Retrieves the values of a list object.\nA data set is returned.\n\n### Default limitations on the number of cells\nThe default maximum for the combined total of cells across all pages is:\n* 10,000 cells. If this limit is exceeded, a calc-pages-too-large error with code 7009 is returned.",
             "params": [
                 {
                     "name": "qPath",
@@ -836,7 +836,7 @@
         },
         {
             "name": "GenericObject.GetHyperCubeData",
-            "description": "Retrieves the calculated data for a chart, a table, or a scatter plot. It is possible to retrieve specific pages of data.\n<div class=note>This method works for a hypercube in DATA_MODE_STRAIGHT.</div>\nA data set is returned.",
+            "description": "Retrieves the calculated data for a chart, a table, or a scatter plot. It is possible to retrieve specific pages of data.\n<div class=note>This method works for a hypercube in DATA_MODE_STRAIGHT.</div>\nA data set is returned.\n\n### Default limitations on the number of cells\nThe default maximum for the combined total of cells across all pages is:\n* 10,000 cells. If this limit is exceeded, a calc-pages-too-large error with code 7009 is returned.",
             "params": [
                 {
                     "name": "qPath",
@@ -19767,7 +19767,7 @@
                     },
                     "qUsage": {
                         "type": "string",
-                        "description": "\nOne of:\n* ANALYTICS\n* DATA_PREPARATION\n* DATAFLOW_PREP",
+                        "description": "\nOne of:\n* ANALYTICS\n* DATA_PREPARATION\n* DATAFLOW_PREP\n* SINGLE_TABLE_PREP",
                         "$ref": "#/components/schemas/UsageEnum"
                     }
                 }
@@ -19891,6 +19891,10 @@
                     {
                         "x-qlik-const": 2,
                         "title": "DATAFLOW_PREP"
+                    },
+                    {
+                        "x-qlik-const": 3,
+                        "title": "SINGLE_TABLE_PREP"
                     }
                 ]
             },
@@ -19925,7 +19929,7 @@
                     },
                     "qUsage": {
                         "type": "string",
-                        "description": "Indicates whether the app is used for Analytics or DataPreparation\n\nOne of:\n* ANALYTICS\n* DATA_PREPARATION\n* DATAFLOW_PREP",
+                        "description": "Indicates whether the app is used for Analytics or DataPreparation\n\nOne of:\n* ANALYTICS\n* DATA_PREPARATION\n* DATAFLOW_PREP\n* SINGLE_TABLE_PREP",
                         "$ref": "#/components/schemas/UsageEnum"
                     }
                 }
@@ -21912,7 +21916,7 @@
                     },
                     "qUsage": {
                         "type": "string",
-                        "description": "\nOne of:\n* ANALYTICS\n* DATA_PREPARATION\n* DATAFLOW_PREP",
+                        "description": "\nOne of:\n* ANALYTICS\n* DATA_PREPARATION\n* DATAFLOW_PREP\n* SINGLE_TABLE_PREP",
                         "$ref": "#/components/schemas/UsageEnum"
                     }
                 }
@@ -23329,7 +23333,7 @@
             },
             "LOCERR_GENERIC_MEMORY_LIMIT_REACHED": {
                 "code": 19,
-                "message": "Your quota limit of {0}MB was exceeded. You loaded {1}MB. Reduce your data within this application or buy additional capacity."
+                "message": "Memory limit reached"
             },
             "LOCERR_GENERIC_NOT_IMPLEMENTED": {
                 "code": 20,
