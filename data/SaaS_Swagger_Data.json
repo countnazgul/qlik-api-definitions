@@ -7887,7 +7887,7 @@
                 "tags": [
                     "collections"
                 ],
-                "summary": "Retrieves collections that the user has access to.",
+                "summary": "List collections",
                 "responses": {
                     "200": {
                         "content": {
@@ -8055,7 +8055,7 @@
                             "$ref": "#/components/schemas/CollectionTypes"
                         },
                         "required": false,
-                        "description": "The case-sensitive string used to filter for a collection by type."
+                        "description": "The case-sensitive string used to filter for a collection by type. Retrieve private collections with `private`, public collections with `publicgoverned`, and tags with `public`.\n"
                     },
                     {
                         "in": "query",
@@ -8070,14 +8070,14 @@
                         "description": "A commaseparated case-sensitive string used to filter by multiple types."
                     }
                 ],
-                "description": "Finds and returns the collections that the user can access. This endpoint does not return the user's favorites collection.\n",
+                "description": "Retrieves the collections that the user has access to. This endpoint does not return the user's favorites collection, which can be retrieved with `/v1/collections/favorites`.\n",
                 "operationId": "collections#listCollections",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "58e188db-b72f-4e37-b0b0-49a503314626",
+                "x-qlik-entity-revision": "1f5a77a7-e3c8-44e6-9fc8-86fd6879c2c5",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -8088,7 +8088,7 @@
                 "tags": [
                     "collections"
                 ],
-                "summary": "Creates a new collection.",
+                "summary": "Create a new collection.",
                 "responses": {
                     "201": {
                         "content": {
@@ -8181,7 +8181,7 @@
                         "description": "Internal Server Error response."
                     }
                 },
-                "description": "Creates and returns a new collection. Collections can have the same name.\n",
+                "description": "Creates and returns a new collection. Collections of type `public` (shown as tags in the user interface) must have unique names. Other collection types can reuse names.\n",
                 "operationId": "collections#createCollection",
                 "requestBody": {
                     "content": {
@@ -8198,7 +8198,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d135b4a4-07ac-4f6f-9eb4-0616c95032c1",
+                "x-qlik-entity-revision": "d9df2c76-9af6-42d9-909c-df2d3fa4fcd1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -8211,7 +8211,7 @@
                 "tags": [
                     "collections"
                 ],
-                "summary": "Returns a collection.",
+                "summary": "Get a collection",
                 "responses": {
                     "200": {
                         "content": {
@@ -8307,7 +8307,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c02b389c-ecd5-4432-bc01-f9103f409abf",
+                "x-qlik-entity-revision": "65b5027e-90dc-4545-8808-f15413b07be0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -8318,7 +8318,7 @@
                 "tags": [
                     "collections"
                 ],
-                "summary": "Patches collection fields.",
+                "summary": "Update collection",
                 "responses": {
                     "200": {
                         "content": {
@@ -8422,7 +8422,7 @@
                         "description": "The collection's unique identifier."
                     }
                 ],
-                "description": "Updates the collection fields provided in the patch body.",
+                "description": "Updates the name, description, or type fields provided in the patch body. Can be used to publish a `private` collection as a `publicgoverned` collection by patching `/type` with `publicgoverned` once the collection contains at least 1 item. Can also be used to return a `publicgoverned` collection to `private`. Cannot be used to change between `public` (tag) and `private / publicgoverned` (collection).",
                 "operationId": "collections#PatchCollection",
                 "requestBody": {
                     "content": {
@@ -8439,7 +8439,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "dc7335ae-468a-479b-aa7f-4f1f3d84b52b",
+                "x-qlik-entity-revision": "519448b4-b0b4-4e98-adef-76099f2dfec1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -8450,7 +8450,7 @@
                 "tags": [
                     "collections"
                 ],
-                "summary": "Updates a collection.",
+                "summary": "Update a collection's name and description",
                 "responses": {
                     "200": {
                         "content": {
@@ -8554,7 +8554,7 @@
                         "description": "The collection's unique identifier."
                     }
                 ],
-                "description": "Updates a collection and returns the new collection. Omitted and unsupported fields are ignored. To unset a field, provide the field's zero value.\n",
+                "description": "Updates a collection's name and description and returns the updated collection. Omitted and unsupported fields are ignored. To unset a field, provide the field's zero value.\n",
                 "operationId": "collections#updateCollection",
                 "requestBody": {
                     "content": {
@@ -8571,7 +8571,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d0f5213e-aedc-4fd0-9cc4-7ed0c75ec0f5",
+                "x-qlik-entity-revision": "9d4f1801-8391-447e-a359-76508979e2fc",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -8582,7 +8582,7 @@
                 "tags": [
                     "collections"
                 ],
-                "summary": "Deletes a collection.",
+                "summary": "Delete a collection",
                 "responses": {
                     "204": {
                         "headers": {
@@ -8656,7 +8656,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "44d14160-1f12-40b2-a7f7-86091d42df04",
+                "x-qlik-entity-revision": "1d00a1f6-2a82-4c7a-9a84-cd1eafa42921",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -8669,7 +8669,7 @@
                 "tags": [
                     "collections"
                 ],
-                "summary": "Retrieves items in a collection.",
+                "summary": "List items in a collection",
                 "responses": {
                     "200": {
                         "content": {
@@ -8872,14 +8872,14 @@
                         "$ref": "#/components/parameters/noActionParam"
                     }
                 ],
-                "description": "Finds and returns items from a collection that the user has access to.\n",
+                "description": "Retrieves items from a collection that the user has access to.\n",
                 "operationId": "collections#listCollectionItems",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "62765c6d-b8b0-4016-8109-ff7921db45f4",
+                "x-qlik-entity-revision": "70b34b66-a7b5-46e4-84c7-d09075c2c47e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -8890,7 +8890,7 @@
                 "tags": [
                     "collections"
                 ],
-                "summary": "Adds an item to a collection.",
+                "summary": "Add an item to a collection",
                 "responses": {
                     "201": {
                         "content": {
@@ -9026,7 +9026,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "90378677-4f18-41cb-948b-6734886d362f",
+                "x-qlik-entity-revision": "707d33a9-a445-4f46-8672-f8ecd17fddb0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -9039,7 +9039,7 @@
                 "tags": [
                     "collections"
                 ],
-                "summary": "Returns an item in a specific collection.",
+                "summary": "Get an item",
                 "responses": {
                     "200": {
                         "content": {
@@ -9137,14 +9137,14 @@
                         "description": "The item's unique identifier."
                     }
                 ],
-                "description": "Finds and returns an item. See GET /items/{id}\n",
+                "description": "Finds and returns an item in a specific collection. See GET `/items/{id}`.\n",
                 "operationId": "collections#getCollectionItem",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "5b2fa9ff-544c-4fed-9acd-53ed590cdad4",
+                "x-qlik-entity-revision": "dbaa2425-18fd-40db-9175-6a8d24b56bc3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -9155,7 +9155,7 @@
                 "tags": [
                     "collections"
                 ],
-                "summary": "Removes an item from a collection.",
+                "summary": "Remove an item",
                 "responses": {
                     "204": {
                         "description": "No Content response."
@@ -9248,7 +9248,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b52785d6-3b84-4518-ba9f-ecdf6e447a8e",
+                "x-qlik-entity-revision": "f502ad28-bf8c-4d4d-9ea0-892fd907085f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -9261,7 +9261,7 @@
                 "tags": [
                     "collections"
                 ],
-                "summary": "Retrieves the user's favorites collection.",
+                "summary": "Get user's favorites collection",
                 "responses": {
                     "302": {
                         "content": {
@@ -9329,14 +9329,14 @@
                         "description": "Internal Server Error response."
                     }
                 },
-                "description": "Finds and returns the user's favorites collection.\n",
+                "description": "Lists the user's favorites collection.\n",
                 "operationId": "collections#getFavoritesCollection",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "264b2a6c-5a3b-4b7d-b781-dacada3902bc",
+                "x-qlik-entity-revision": "5b3289ea-820b-4685-aeb3-84deddfbec56",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -19824,359 +19824,12 @@
                 }
             }
         },
-        "/v1/evaluations": {
-            "get": {
-                "tags": [
-                    "evaluation"
-                ],
-                "summary": "Retrieve a list of all historic evaluations for app item id or an app GUID",
-                "responses": {
-                    "200": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/evaluations"
-                                }
-                            }
-                        },
-                        "description": "Evaluation(s) retrieved successfully."
-                    },
-                    "404": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Error"
-                                }
-                            }
-                        },
-                        "description": "Not Found."
-                    },
-                    "500": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Error"
-                                }
-                            }
-                        },
-                        "description": "Internal server error."
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "query",
-                        "name": "all",
-                        "schema": {
-                            "type": "boolean"
-                        },
-                        "required": false,
-                        "description": "Get the full data of the evaluation"
-                    },
-                    {
-                        "in": "query",
-                        "name": "appId",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "required": false,
-                        "description": "The app guid."
-                    },
-                    {
-                        "in": "query",
-                        "name": "fileMode",
-                        "schema": {
-                            "type": "boolean"
-                        },
-                        "required": false,
-                        "description": "Add file transfer headers to response"
-                    },
-                    {
-                        "in": "query",
-                        "name": "format",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "required": false,
-                        "description": "Specify output format, currently supported are 'json' and 'xml'"
-                    },
-                    {
-                        "in": "query",
-                        "name": "itemId",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "required": false,
-                        "description": "The app item id."
-                    },
-                    {
-                        "in": "query",
-                        "name": "limit",
-                        "schema": {
-                            "type": "integer",
-                            "format": "int32",
-                            "default": 20,
-                            "maximum": 100,
-                            "minimum": 1
-                        },
-                        "required": false,
-                        "description": "Number of results to return per page."
-                    },
-                    {
-                        "in": "query",
-                        "name": "next",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "required": false,
-                        "description": "The app evaluation id to get next page from"
-                    },
-                    {
-                        "in": "query",
-                        "name": "prev",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "required": false,
-                        "description": "The app evaluation id to get previous page from"
-                    }
-                ],
-                "description": "Find all evaluations for an app item id or GUID. appId or itemId has to be set in a query parameter.\nNOTE: It is preferred to use the app item id as this lookup is more performant.\nSupports paging via next, prev which are sent in the response body\n",
-                "operationId": "evaluation#getEvaluations",
-                "x-qlik-stability": "stable",
-                "x-qlik-visibility": "public",
-                "x-qlik-categories": [
-                    "external/build"
-                ],
-                "x-qlik-deprecated": true,
-                "x-qlik-tier": {
-                    "tier": "1",
-                    "limit": 1000
-                }
-            },
-            "post": {
-                "tags": [
-                    "evaluation"
-                ],
-                "summary": "Queue an app evaluation",
-                "responses": {
-                    "201": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/evaluation"
-                                }
-                            }
-                        },
-                        "description": "App evaluation queued."
-                    },
-                    "400": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Error"
-                                }
-                            }
-                        },
-                        "description": "Bad request, incorrect body."
-                    },
-                    "403": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Error"
-                                }
-                            }
-                        },
-                        "description": "User lacks permissions to evaluate app."
-                    },
-                    "500": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Error"
-                                }
-                            }
-                        },
-                        "description": "Internal server error."
-                    }
-                },
-                "description": "Queue an app evaluation by its item id or app guid.\nNOTE: It is preferred to use the app item id as this lookup is more performant.\n",
-                "operationId": "evaluation#queueEvaluation",
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/PostBody"
-                            }
-                        }
-                    },
-                    "required": true,
-                    "description": "The parameters of the evaluation"
-                },
-                "x-qlik-stability": "stable",
-                "x-qlik-visibility": "public",
-                "x-qlik-categories": [
-                    "external/build"
-                ],
-                "x-qlik-deprecated": true,
-                "x-qlik-tier": {
-                    "tier": "2",
-                    "limit": 100
-                }
-            }
-        },
-        "/v1/evaluations/{id}": {
-            "get": {
-                "tags": [
-                    "evaluation"
-                ],
-                "summary": "Retrieve a specific evaluation",
-                "responses": {
-                    "200": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/evaluation"
-                                }
-                            }
-                        },
-                        "description": "Evaluation(s) retrieved successfully."
-                    },
-                    "404": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Error"
-                                }
-                            }
-                        },
-                        "description": "Not Found."
-                    },
-                    "500": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Error"
-                                }
-                            }
-                        },
-                        "description": "Internal server error."
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "example": "abcdefghijklmnopq",
-                        "required": true,
-                        "description": "Id of the desired evaluation."
-                    },
-                    {
-                        "in": "query",
-                        "name": "all",
-                        "schema": {
-                            "type": "boolean"
-                        },
-                        "required": false,
-                        "description": "Get the full data of the evaluation"
-                    },
-                    {
-                        "in": "query",
-                        "name": "format",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "required": false,
-                        "description": "Specify output format, currently supported are 'json' and 'xml'"
-                    }
-                ],
-                "description": "Find an evaluation by a specific id.\n",
-                "operationId": "evaluation#getOneEvaluation",
-                "x-qlik-stability": "stable",
-                "x-qlik-visibility": "public",
-                "x-qlik-categories": [
-                    "external/build"
-                ],
-                "x-qlik-deprecated": true,
-                "x-qlik-tier": {
-                    "tier": "1",
-                    "limit": 1000
-                }
-            }
-        },
-        "/v1/evaluations/{id}/download": {
-            "get": {
-                "tags": [
-                    "evaluation"
-                ],
-                "summary": "Download a detailed XML log of a specific evaluation",
-                "responses": {
-                    "200": {
-                        "content": {
-                            "application/xml": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/evaluation"
-                                }
-                            }
-                        },
-                        "description": "Evaluation(s) retrieved successfully."
-                    },
-                    "404": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Error"
-                                }
-                            }
-                        },
-                        "description": "Not Found."
-                    },
-                    "500": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Error"
-                                }
-                            }
-                        },
-                        "description": "Internal server error."
-                    }
-                },
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "schema": {
-                            "type": "string"
-                        },
-                        "example": "abcdefghijklmnopq",
-                        "required": true,
-                        "description": "Id of the desired evaluation."
-                    }
-                ],
-                "description": "Find and download an evaluation log by a specific evaluation id.\n",
-                "operationId": "evaluation#downloadOneEvaluation",
-                "x-qlik-stability": "stable",
-                "x-qlik-visibility": "public",
-                "x-qlik-categories": [
-                    "external/build"
-                ],
-                "x-qlik-deprecated": true,
-                "x-qlik-tier": {
-                    "tier": "1",
-                    "limit": 1000
-                }
-            }
-        },
         "/v1/extensions": {
             "get": {
                 "tags": [
                     "extensions"
                 ],
-                "summary": "Lists all extensions.",
+                "summary": "List all extensions",
                 "responses": {
                     "200": {
                         "content": {
@@ -20189,13 +19842,14 @@
                         "description": "OK. Lists all extensions."
                     }
                 },
+                "description": "Lists all imported extensions in the tenant.",
                 "operationId": "getExtensions",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "adbc2ded-b141-48ee-a556-1d23b1df2d96",
+                "x-qlik-entity-revision": "2c370ad0-8312-41ca-8873-dc47094699e3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -20206,7 +19860,7 @@
                 "tags": [
                     "extensions"
                 ],
-                "summary": "Creates a new extension. If a file is provided, the data field is not required.",
+                "summary": "Create a new extension",
                 "responses": {
                     "201": {
                         "content": {
@@ -20259,6 +19913,7 @@
                         "description": "Unexpected error."
                     }
                 },
+                "description": "Creates a new extension. Accepts either provided file or data object. The name of the new extension must be different to any existing extensions.",
                 "operationId": "createExtension",
                 "requestBody": {
                     "content": {
@@ -20285,7 +19940,7 @@
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "5e39a18d-87ef-4998-b0e8-28d85d7baec0",
+                "x-qlik-entity-revision": "c3b8134c-231b-4d6c-a97b-5573e2b2dc4c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -20298,7 +19953,7 @@
                 "tags": [
                     "extensions"
                 ],
-                "summary": "Returns a specific extension.",
+                "summary": "Get a specific extension",
                 "responses": {
                     "200": {
                         "content": {
@@ -20352,13 +20007,14 @@
                         "description": "Extension identifier or its qextFilename."
                     }
                 ],
+                "description": "Returns a specific extension matching either extension ID or extension name.",
                 "operationId": "getExtensionById",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "ce5082ec-7e5a-43a6-93d5-6f5578ffab41",
+                "x-qlik-entity-revision": "a766c6cc-40f3-4913-a1ff-ac1111056d67",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -20369,7 +20025,7 @@
                 "tags": [
                     "extensions"
                 ],
-                "summary": "Updates a specific extension with provided data. If a file is provided, the data field is not required.",
+                "summary": "Update a specific extension",
                 "responses": {
                     "200": {
                         "content": {
@@ -20453,6 +20109,7 @@
                         "description": "Extension identifier or its qextFilename."
                     }
                 ],
+                "description": "Updates a specific extension matching either extension ID or extension name. Accepts either provided file or data object.",
                 "operationId": "updateExtensionById",
                 "requestBody": {
                     "content": {
@@ -20479,7 +20136,7 @@
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "efe1615e-cc3e-4b93-81be-ce88b5237361",
+                "x-qlik-entity-revision": "c7476a32-76bc-4a0f-b401-62c322802dca",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -20490,7 +20147,7 @@
                 "tags": [
                     "extensions"
                 ],
-                "summary": "Deletes a specific extension.",
+                "summary": "Delete a specific extension",
                 "responses": {
                     "204": {
                         "description": "No content. Soft deletes the extension."
@@ -20537,13 +20194,14 @@
                         "description": "Extension identifier or its qextFilename."
                     }
                 ],
+                "description": "Deletes a specific extension matching either extension ID or extension name.",
                 "operationId": "deleteExtensionById",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "4a41f434-9cb6-4684-aaae-81a7b2488473",
+                "x-qlik-entity-revision": "1424fa59-e575-4033-b55d-90f613ab2e29",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -20556,7 +20214,7 @@
                 "tags": [
                     "extensions"
                 ],
-                "summary": "Downloads the extension as an archive.",
+                "summary": "Download extension as an archive",
                 "responses": {
                     "200": {
                         "description": "OK. Extension exists. Returns the extension archive."
@@ -20603,13 +20261,14 @@
                         "description": "Extension identifier or its qextFilename."
                     }
                 ],
+                "description": "Downloads all files in the extension matching either extension ID or extension name as a `.zip` archive.",
                 "operationId": "getExtensionArchive",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "3b45c2c9-afe0-4784-9ebd-1c4628af72d1",
+                "x-qlik-entity-revision": "3b60626c-43bb-4eb8-b419-2cbe6b98bda2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -20622,7 +20281,7 @@
                 "tags": [
                     "extensions"
                 ],
-                "summary": "Downloads a file from the extension archive.",
+                "summary": "Download file from extension archive.",
                 "responses": {
                     "200": {
                         "description": "OK. Extension exists and the file specified exists. Returns the specific file."
@@ -20663,10 +20322,11 @@
                         "in": "path",
                         "name": "filepath",
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "example": "css/styles.css"
                         },
                         "required": true,
-                        "description": "Path to the file archive for the specified extension archive. Folders separated with forward slashes."
+                        "description": "Path to the file location within the specified extension archive. Folders separated with forward slashes."
                     },
                     {
                         "in": "path",
@@ -20678,13 +20338,14 @@
                         "description": "Extension identifier or its qextFilename."
                     }
                 ],
+                "description": "Downloads a specific file from the extension matching either extension ID or extension name, identified by the file path within the imported extension.",
                 "operationId": "getFileFromExtensionArchive",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "4562b371-d6b9-4921-94c1-a6efd9349f00",
+                "x-qlik-entity-revision": "0ac5f3f2-88cb-45df-8214-f948e51a1be8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -24346,7 +24007,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0a0618aa-2980-4870-8712-635b72ec962b",
+                "x-qlik-entity-revision": "8d724b13-896b-4176-9654-d255deaf7b81",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -24556,7 +24217,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "1e8d7643-8f67-4148-991b-8cdc212069bc",
+                "x-qlik-entity-revision": "43c50ba7-27f5-4c10-996e-07fbd41f4211",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -24750,7 +24411,7 @@
                 "tags": [
                     "items"
                 ],
-                "summary": "Retrieves items that the user has access to.",
+                "summary": "List items",
                 "responses": {
                     "200": {
                         "content": {
@@ -24836,7 +24497,7 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "The collection's unique identifier."
+                        "description": "The collection's unique identifier. Used to filter for items with a specific tag (collection type `public`), or collection."
                     },
                     {
                         "in": "query",
@@ -25025,14 +24686,14 @@
                         "$ref": "#/components/parameters/noActionParam"
                     }
                 ],
-                "description": "Finds and returns items that the user has access to.\n",
+                "description": "Lists items that the user has access to.\n",
                 "operationId": "items#listItems",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "a92de7b9-4745-4a34-92fd-18d3fa9b7783",
+                "x-qlik-entity-revision": "e06fcdf9-5684-44b3-892d-1f0b542b9883",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -25045,7 +24706,7 @@
                 "tags": [
                     "items"
                 ],
-                "summary": "Returns an item.",
+                "summary": "Get an item",
                 "responses": {
                     "200": {
                         "content": {
@@ -25141,7 +24802,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0d61daf6-13a0-420a-8429-acc057c4e7da",
+                "x-qlik-entity-revision": "1a9a4e3c-edc5-4417-b4dc-706b1eabdf82",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -25152,7 +24813,7 @@
                 "tags": [
                     "items"
                 ],
-                "summary": "Updates an item.",
+                "summary": "Update an item",
                 "responses": {
                     "200": {
                         "content": {
@@ -25288,7 +24949,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "5f1b922d-5497-4db7-9c1f-7f70c580a237",
+                "x-qlik-entity-revision": "b5854ec5-2693-40ea-82b7-31c2a13a451e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -25299,7 +24960,7 @@
                 "tags": [
                     "items"
                 ],
-                "summary": "Deletes an item.",
+                "summary": "Delete an item",
                 "responses": {
                     "204": {
                         "headers": {
@@ -25388,7 +25049,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b5aa08c3-ea69-4d84-94a4-0e21193dcc92",
+                "x-qlik-entity-revision": "54e92b7c-612d-4da3-8334-126f224496f2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -25401,7 +25062,7 @@
                 "tags": [
                     "items"
                 ],
-                "summary": "Returns the collections of an item.",
+                "summary": "List collections of an item",
                 "responses": {
                     "200": {
                         "content": {
@@ -25564,14 +25225,14 @@
                         "description": "The case-sensitive string used to search for a collection by type."
                     }
                 ],
-                "description": "Finds and returns the collections of an item. This endpoint does not return the user's favorites collection.\n",
+                "description": "Finds and returns the collections (and tags) of an item. This endpoint does not return the user's favorites collection.\n",
                 "operationId": "items#listItemCollections",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "47addb70-fadf-48b9-a424-8aa1811bc191",
+                "x-qlik-entity-revision": "54411f52-3939-4a63-919e-ea4005272dd5",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -25584,7 +25245,7 @@
                 "tags": [
                     "items"
                 ],
-                "summary": "Returns published items for a given item.",
+                "summary": "List published items",
                 "responses": {
                     "200": {
                         "content": {
@@ -25736,7 +25397,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "cf9e98c4-5f24-4d94-b268-5d97e5e4e5a0",
+                "x-qlik-entity-revision": "117b3ab3-816a-437e-a6b1-f61e7f6e4afe",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -25749,7 +25410,7 @@
                 "tags": [
                     "items-settings"
                 ],
-                "summary": "Returns tenant specific settings.",
+                "summary": "Get items settings",
                 "responses": {
                     "200": {
                         "content": {
@@ -25812,14 +25473,14 @@
                         "description": "Internal Server Error response."
                     }
                 },
-                "description": "Finds and returns the settings for the current tenant.\n",
+                "description": "Finds and returns the items service settings for the current tenant. Currently used to enable or disable usage metrics in the tenant.\n",
                 "operationId": "items#GetSettings",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d8e39fdd-9c12-4c42-a9ae-361aad9e3690",
+                "x-qlik-entity-revision": "de8b0472-62d3-47a2-bc1b-e8d54d2489d3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -25830,7 +25491,7 @@
                 "tags": [
                     "items-settings"
                 ],
-                "summary": "Patches tenant specific settings.",
+                "summary": "Update items settings",
                 "responses": {
                     "200": {
                         "content": {
@@ -25908,7 +25569,7 @@
                         "description": "Internal Server Error response."
                     }
                 },
-                "description": "Updates the settings provided in the patch body.",
+                "description": "Updates the settings provided in the patch body. Currently used to enable or disable usage metrics in the tenant.",
                 "operationId": "items#PatchSettings",
                 "requestBody": {
                     "content": {
@@ -25925,7 +25586,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f91cde88-2349-4e0f-b5a7-468a03f88fb1",
+                "x-qlik-entity-revision": "a930afe7-2e1a-48ec-9029-bd46215141c7",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -26753,6 +26414,25 @@
                         },
                         "description": "The record is not found."
                     },
+                    "429": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/errorResponse-429"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "Retry-After": {
+                                "schema": {
+                                    "type": "integer",
+                                    "example": 15
+                                },
+                                "description": "The number of seconds until new requests are allowed"
+                            }
+                        },
+                        "description": "Too many requests"
+                    },
                     "500": {
                         "content": {
                             "application/json": {
@@ -26824,11 +26504,11 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "04e27649-3385-4d5b-a225-6a7cb771160b",
+                "x-qlik-entity-revision": "b4f9c58d-522c-460b-be60-789bcef7d89f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
-                    "tier": "1",
-                    "limit": 1000
+                    "tier": "special",
+                    "limit": 20
                 }
             }
         },
@@ -26878,6 +26558,25 @@
                             }
                         },
                         "description": "The record is not found."
+                    },
+                    "429": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/errorResponse-429"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "Retry-After": {
+                                "schema": {
+                                    "type": "integer",
+                                    "example": 15
+                                },
+                                "description": "The number of seconds until new requests are allowed"
+                            }
+                        },
+                        "description": "Too many requests"
                     },
                     "500": {
                         "content": {
@@ -26937,11 +26636,11 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0d80f766-4cd4-4ea7-a1bd-a7236eea8438",
+                "x-qlik-entity-revision": "a865127b-4513-42db-81f2-a6d0fa169df3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
-                    "tier": "1",
-                    "limit": 1000
+                    "tier": "special",
+                    "limit": 20
                 }
             }
         },
@@ -26992,6 +26691,25 @@
                         },
                         "description": "The record is not found."
                     },
+                    "429": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/errorResponse-429"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "Retry-After": {
+                                "schema": {
+                                    "type": "integer",
+                                    "example": 15
+                                },
+                                "description": "The number of seconds until new requests are allowed"
+                            }
+                        },
+                        "description": "Too many requests"
+                    },
                     "500": {
                         "content": {
                             "application/json": {
@@ -27040,11 +26758,11 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "7c4ff81e-bacb-450e-bc49-be16015c45ac",
+                "x-qlik-entity-revision": "5fab65a0-c88e-44f8-94e3-d46098f092c0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
-                    "tier": "1",
-                    "limit": 1000
+                    "tier": "special",
+                    "limit": 20
                 }
             }
         },
@@ -27095,6 +26813,25 @@
                         },
                         "description": "The record is not found."
                     },
+                    "429": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/errorResponse-429"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "Retry-After": {
+                                "schema": {
+                                    "type": "integer",
+                                    "example": 15
+                                },
+                                "description": "The number of seconds until new requests are allowed"
+                            }
+                        },
+                        "description": "Too many requests"
+                    },
                     "500": {
                         "content": {
                             "application/json": {
@@ -27133,11 +26870,11 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "63ba778e-14d1-4800-a67a-fc8d858587c7",
+                "x-qlik-entity-revision": "7d507680-89fd-43b5-aba6-b6bbc61a5df4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
-                    "tier": "1",
-                    "limit": 1000
+                    "tier": "special",
+                    "limit": 20
                 }
             }
         },
@@ -27187,6 +26924,25 @@
                             }
                         },
                         "description": "The record is not found."
+                    },
+                    "429": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/errorResponse-429"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "Retry-After": {
+                                "schema": {
+                                    "type": "integer",
+                                    "example": 15
+                                },
+                                "description": "The number of seconds until new requests are allowed"
+                            }
+                        },
+                        "description": "Too many requests"
                     },
                     "500": {
                         "content": {
@@ -27261,11 +27017,11 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "8decd6cb-0562-4ac9-8504-9c952d989996",
+                "x-qlik-entity-revision": "51a7c04e-9797-40c9-b3fb-3718ab22a713",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
-                    "tier": "1",
-                    "limit": 1000
+                    "tier": "special",
+                    "limit": 20
                 }
             }
         },
@@ -27315,6 +27071,25 @@
                             }
                         },
                         "description": "The record is not found."
+                    },
+                    "429": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/errorResponse-429"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "Retry-After": {
+                                "schema": {
+                                    "type": "integer",
+                                    "example": 15
+                                },
+                                "description": "The number of seconds until new requests are allowed"
+                            }
+                        },
+                        "description": "Too many requests"
                     },
                     "500": {
                         "content": {
@@ -27397,11 +27172,11 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "cfe22d8e-a493-4dfb-a435-46484489153b",
+                "x-qlik-entity-revision": "72d00315-d449-427f-8de8-d1153ec7ca72",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
-                    "tier": "1",
-                    "limit": 1000
+                    "tier": "special",
+                    "limit": 20
                 }
             }
         },
@@ -27451,6 +27226,25 @@
                             }
                         },
                         "description": "The record is not found."
+                    },
+                    "429": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/errorResponse-429"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "Retry-After": {
+                                "schema": {
+                                    "type": "integer",
+                                    "example": 15
+                                },
+                                "description": "The number of seconds until new requests are allowed"
+                            }
+                        },
+                        "description": "Too many requests"
                     },
                     "500": {
                         "content": {
@@ -27520,11 +27314,11 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "211c2b79-41e2-41e4-8a74-e56dc855ab9e",
+                "x-qlik-entity-revision": "b73de1c3-133e-429e-aa52-15309f28885c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
-                    "tier": "1",
-                    "limit": 1000
+                    "tier": "special",
+                    "limit": 20
                 }
             }
         },
@@ -28515,6 +28309,9 @@
                                     },
                                     {
                                         "$ref": "#/components/schemas/oauth-token-exchange"
+                                    },
+                                    {
+                                        "$ref": "#/components/schemas/oauth-user-impersonation-request"
                                     }
                                 ]
                             }
@@ -28526,7 +28323,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "b08fb281-bd8f-4125-b486-094b79b859d5",
+                "x-qlik-entity-revision": "188dc76c-b5c8-475c-92a7-422bf310d2e1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -35032,7 +34829,7 @@
                 "tags": [
                     "themes"
                 ],
-                "summary": "Lists all themes.",
+                "summary": "List all themes",
                 "responses": {
                     "200": {
                         "content": {
@@ -35045,13 +34842,14 @@
                         "description": "OK. Lists all themes."
                     }
                 },
+                "description": "Lists all imported themes in the tenant.",
                 "operationId": "getThemes",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "35870afe-2f6a-4768-b25f-91e9ce4bc770",
+                "x-qlik-entity-revision": "2e15cf3e-fb18-48d6-b1bc-dc184c08d184",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -35062,7 +34860,7 @@
                 "tags": [
                     "themes"
                 ],
-                "summary": "Creates a new theme. If a file is provided, the data field is not required.",
+                "summary": "Create a new theme",
                 "responses": {
                     "201": {
                         "content": {
@@ -35115,6 +34913,7 @@
                         "description": "Unexpected error."
                     }
                 },
+                "description": "Creates a new theme. Accepts either provided file or data object. The name of the new theme must be different to any existing themes.",
                 "operationId": "createTheme",
                 "requestBody": {
                     "content": {
@@ -35141,7 +34940,7 @@
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "abafe341-1cc3-46ee-9826-6b2d502de843",
+                "x-qlik-entity-revision": "d5da5561-c6b7-4d4d-9ddb-3855abb5fc77",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -35154,7 +34953,7 @@
                 "tags": [
                     "themes"
                 ],
-                "summary": "Returns a specific theme.",
+                "summary": "Return specific theme",
                 "responses": {
                     "200": {
                         "content": {
@@ -35208,13 +35007,14 @@
                         "description": "Theme identifier or its qextFilename"
                     }
                 ],
+                "description": "Returns a specific theme matching either theme ID or theme name.",
                 "operationId": "getThemeById",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "eefef154-3650-43f3-9c73-9910fe26577d",
+                "x-qlik-entity-revision": "bddb31ff-97f9-47c3-b7dd-ede424a5c31d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -35225,7 +35025,7 @@
                 "tags": [
                     "themes"
                 ],
-                "summary": "Updates a specific theme with provided data. If a file is provided, the data field is not required.",
+                "summary": "Update a specific theme",
                 "responses": {
                     "200": {
                         "content": {
@@ -35309,6 +35109,7 @@
                         "description": "Theme identifier or its qextFilename."
                     }
                 ],
+                "description": "Updates a specific theme matching either theme ID or theme name. Accepts either provided file or data object.",
                 "operationId": "updateThemeById",
                 "requestBody": {
                     "content": {
@@ -35335,7 +35136,7 @@
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "3de47702-fd18-4120-b587-969c4d2628d1",
+                "x-qlik-entity-revision": "3a94a530-fb9f-4e06-80d2-848133df539e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -35346,7 +35147,7 @@
                 "tags": [
                     "themes"
                 ],
-                "summary": "Deletes a specific theme.",
+                "summary": "Delete specific theme",
                 "responses": {
                     "204": {
                         "description": "No content. Soft deletes the theme."
@@ -35393,13 +35194,14 @@
                         "description": "Theme identifier or its qextFilename."
                     }
                 ],
+                "description": "Deletes a specific theme matching either theme ID or theme name.",
                 "operationId": "deleteThemeById",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "cec17d0b-08b5-42df-861d-3a5398fda28f",
+                "x-qlik-entity-revision": "8fb27a8c-f8e6-45c2-a216-4ccf9064bb99",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -35412,7 +35214,7 @@
                 "tags": [
                     "themes"
                 ],
-                "summary": "Downloads the theme as an archive.",
+                "summary": "Download theme as an archive",
                 "responses": {
                     "200": {
                         "description": "OK. Theme exists. Returns the theme archive."
@@ -35459,13 +35261,14 @@
                         "description": "Theme identifier or its qextFilename"
                     }
                 ],
+                "description": "Downloads all files in the theme matching either theme ID or theme name as a `.zip` archive.",
                 "operationId": "getThemeArchive",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "6f341b5a-2227-4a29-871b-e9007452130f",
+                "x-qlik-entity-revision": "5c155695-d56d-4cb5-bcd1-409eaae548da",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -35478,7 +35281,7 @@
                 "tags": [
                     "themes"
                 ],
-                "summary": "Downloads a file from the theme archive.",
+                "summary": "Download file from theme archive",
                 "responses": {
                     "200": {
                         "description": "OK. Theme exists and the file specified exists. Returns the specific file."
@@ -35519,10 +35322,11 @@
                         "in": "path",
                         "name": "filepath",
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "example": "css/styles.css"
                         },
                         "required": true,
-                        "description": "Path to the file archive for the specified theme archive. Folders separated with forward slashes."
+                        "description": "Path to the file location within the specified theme archive. Folders separated with forward slashes."
                     },
                     {
                         "in": "path",
@@ -35534,13 +35338,14 @@
                         "description": "Theme identifier or its qextFilename."
                     }
                 ],
+                "description": "Downloads a file from the theme matching either theme ID or theme name, identified by the file path within the imported extension.",
                 "operationId": "getFileFromThemeArchive",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/extend"
                 ],
-                "x-qlik-entity-revision": "af6faf18-4cb0-40ec-99f7-8eca201521b0",
+                "x-qlik-entity-revision": "696c0178-8e0f-46f6-a8e9-9c3a938cae88",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -39616,11 +39421,6 @@
                         "format": "string",
                         "example": "finished"
                     },
-                    "userId": {
-                        "type": "string",
-                        "format": "string",
-                        "example": "CGMCdm9v4kuTdfimNMacdnsaFI9njcmB"
-                    },
                     "appName": {
                         "type": "string",
                         "format": "string",
@@ -39637,9 +39437,6 @@
                                     "example": "this is an error"
                                 }
                             },
-                            "openApp": {
-                                "$ref": "#/components/schemas/objectmetrics"
-                            },
                             "warnings": {
                                 "type": "array",
                                 "items": {
@@ -39650,20 +39447,14 @@
                             },
                             "dedicated": {
                                 "type": "boolean",
-                                "example": false
-                            },
-                            "fileSizeMiB": {
-                                "type": "number",
-                                "example": 12.3
+                                "example": false,
+                                "deprecated": true
                             },
                             "objectMetrics": {
                                 "type": "object",
                                 "additionalProperties": {
                                     "$ref": "#/components/schemas/resultentry"
                                 }
-                            },
-                            "openAppCached": {
-                                "$ref": "#/components/schemas/objectmetrics"
                             },
                             "engineHasCache": {
                                 "type": "boolean",
@@ -39672,39 +39463,10 @@
                             "concurrentReload": {
                                 "type": "boolean",
                                 "example": false
-                            },
-                            "minMemoryFreeMiB": {
-                                "type": "number",
-                                "example": 12.3
-                            },
-                            "maxMemoryUsageMiB": {
-                                "type": "number",
-                                "example": 12.3
-                            },
-                            "physicalMemoryMiB": {
-                                "type": "number",
-                                "example": 12.3
-                            },
-                            "maxMemoryCachedMiB": {
-                                "type": "number",
-                                "example": 12.3
-                            },
-                            "maxMemoryNotFreeMiB": {
-                                "type": "number",
-                                "example": 12.3
-                            },
-                            "maxMemoryWorkingMiB": {
-                                "type": "number",
-                                "example": 12.3
                             }
                         }
                     },
                     "sheetId": {
-                        "type": "string",
-                        "format": "string",
-                        "example": "zyb2bQTeFmPVt9TXZOS0I5GZCFn"
-                    },
-                    "spaceId": {
                         "type": "string",
                         "format": "string",
                         "example": "zyb2bQTeFmPVt9TXZOS0I5GZCFn"
@@ -39746,26 +39508,31 @@
             "evaluations": {
                 "type": "object",
                 "properties": {
-                    "links": {
-                        "type": "object",
-                        "example": {
-                            "next": "/api/v1/evaluations/appId=a84c22cf-31e5-41fe-9e8f-544b85513484&prev=5f5201908b3fc5fc132dbd35"
-                        },
-                        "properties": {
-                            "next": {
-                                "type": "string",
-                                "example": "/api/v1/evaluations/appId=a84c22cf-31e5-41fe-9e8f-544b85513484&prev=5f5201908b3fc5fc132dbd35"
-                            },
-                            "prev": {
-                                "type": "string",
-                                "example": "/api/v1/evaluations/appId=a84c22cf-31e5-41fe-9e8f-544b85513484&prev=5f5201908b3fc5fc132dbd35"
-                            }
-                        }
-                    },
-                    "evaluations": {
+                    "data": {
                         "type": "array",
                         "items": {
                             "$ref": "#/components/schemas/evaluation"
+                        }
+                    },
+                    "links": {
+                        "type": "object",
+                        "properties": {
+                            "next": {
+                                "type": "object",
+                                "properties": {
+                                    "href": {
+                                        "$ref": "#/components/schemas/href"
+                                    }
+                                }
+                            },
+                            "prev": {
+                                "type": "object",
+                                "properties": {
+                                    "href": {
+                                        "$ref": "#/components/schemas/href"
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -41107,8 +40874,8 @@
                         "example": "41dbb01c-d1bd-4528-be05-910ee565988b"
                     },
                     "objectType": {
-                        "type": "number",
-                        "example": 1
+                        "type": "string",
+                        "example": "table"
                     }
                 }
             },
@@ -41545,12 +41312,6 @@
                             "$ref": "#/components/schemas/resultobjsheet"
                         }
                     },
-                    "objHeavy": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/resultobjheavy"
-                        }
-                    },
                     "rowCount": {
                         "type": "number",
                         "example": 20000
@@ -41565,22 +41326,20 @@
                         "type": "number",
                         "example": 5
                     },
-                    "fileSizeMiB": {
-                        "type": "number",
-                        "example": 12.3
-                    },
                     "objectCount": {
                         "type": "number",
                         "example": 33
                     },
-                    "maxMemoryMiB": {
-                        "type": "number",
-                        "example": 12.3
-                    },
                     "objSlowCached": {
                         "type": "array",
                         "items": {
-                            "$ref": "#/components/schemas/resultobjsinglethreaded"
+                            "$ref": "#/components/schemas/resultobjresponsetime"
+                        }
+                    },
+                    "objMemoryLimit": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/resultobjMemoryLimit"
                         }
                     },
                     "documentSizeMiB": {
@@ -41592,10 +41351,6 @@
                         "items": {
                             "$ref": "#/components/schemas/resultobjresponsetime"
                         }
-                    },
-                    "dataModelSizeMiB": {
-                        "type": "number",
-                        "example": 654.6
                     },
                     "hasSectionAccess": {
                         "type": "boolean",
@@ -41616,12 +41371,8 @@
                     "objSingleThreaded": {
                         "type": "array",
                         "items": {
-                            "$ref": "#/components/schemas/resultobjheavy"
+                            "$ref": "#/components/schemas/resultsingle"
                         }
-                    },
-                    "appOpenTimeSeconds": {
-                        "type": "number",
-                        "example": 12.3
                     }
                 }
             },
@@ -41655,19 +41406,7 @@
                                 "type": "string",
                                 "example": "a"
                             },
-                            "cardinal": {
-                                "type": "number",
-                                "example": 1112
-                            },
                             "byte_size": {
-                                "type": "number",
-                                "example": 1234
-                            },
-                            "is_system": {
-                                "type": "boolean",
-                                "example": false
-                            },
-                            "total_count": {
                                 "type": "number",
                                 "example": 1234
                             }
@@ -41688,14 +41427,6 @@
                                 "example": "a"
                             },
                             "byte_size": {
-                                "type": "number",
-                                "example": 1234
-                            },
-                            "is_system": {
-                                "type": "boolean",
-                                "example": false
-                            },
-                            "no_of_rows": {
                                 "type": "number",
                                 "example": 1234
                             }
@@ -41727,11 +41458,11 @@
                     {
                         "type": "object",
                         "properties": {
-                            "responseTimeSeconds1": {
-                                "type": "number",
-                                "example": 12.3
+                            "timeoutStatusCode": {
+                                "type": "string",
+                                "example": "CALC-TIMEOUT"
                             },
-                            "responseTimeSeconds2": {
+                            "responseTimeSeconds": {
                                 "type": "number",
                                 "example": 12.3
                             }
@@ -43991,7 +43722,8 @@
                 "properties": {
                     "name": {
                         "type": "string",
-                        "minLength": 1
+                        "minLength": 1,
+                        "description": "For `public` collections (tags), if name already exists in the tenant as a `public` collection, this call will fail with a `409` response."
                     },
                     "type": {
                         "$ref": "#/components/schemas/CollectionTypes"
@@ -50764,86 +50496,6 @@
                     }
                 ]
             },
-            "PostBody": {
-                "type": "object",
-                "properties": {
-                    "appId": {
-                        "type": "string",
-                        "example": "7c2ce11d-4d10-4414-a9b0-620e57298038",
-                        "description": "The app guid of the app"
-                    },
-                    "itemId": {
-                        "type": "string",
-                        "example": "5e6f8cc63d33cc00018db30b",
-                        "description": "The item id of the app in collection service"
-                    }
-                }
-            },
-            "resultobjheavy": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/objectspec"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "cpuSeconds1": {
-                                "type": "number",
-                                "example": 12.3
-                            },
-                            "cpuSeconds2": {
-                                "type": "number",
-                                "example": 12.3
-                            },
-                            "cpuQuotient1": {
-                                "type": "number",
-                                "example": 12.3
-                            },
-                            "cpuQuotient2": {
-                                "type": "number",
-                                "example": 12.3
-                            }
-                        }
-                    }
-                ]
-            },
-            "resultobjsinglethreaded": {
-                "allOf": [
-                    {
-                        "$ref": "#/components/schemas/objectspec"
-                    },
-                    {
-                        "type": "object",
-                        "properties": {
-                            "schema": {
-                                "$ref": "#/components/schemas/objectspec"
-                            },
-                            "cpuQuotients1": {
-                                "type": "array",
-                                "items": {
-                                    "type": "number",
-                                    "example": 12.3
-                                }
-                            },
-                            "cpuQuotients2": {
-                                "type": "array",
-                                "items": {
-                                    "type": "number",
-                                    "example": 12.3
-                                }
-                            },
-                            "responseTimeSeconds1": {
-                                "type": "number",
-                                "example": 12.3
-                            },
-                            "responseTimeSeconds2": {
-                                "type": "number",
-                                "example": 12.3
-                            }
-                        }
-                    }
-                ]
-            },
             "bundleMeta": {
                 "properties": {
                     "id": {
@@ -53487,6 +53139,15 @@
                             "claimsMapping": {
                                 "$ref": "#/components/schemas/claimsMappingInteractive"
                             },
+                            "idTokenSignatureAlg": {
+                                "enum": [
+                                    "RS256",
+                                    "RS512"
+                                ],
+                                "type": "string",
+                                "default": "RS256",
+                                "description": "The algorithm used to sign the ID token. The default algorithm is RS256."
+                            },
                             "openid_configuration": {
                                 "$ref": "#/components/schemas/OpenIDConfiguration"
                             },
@@ -54125,7 +53786,8 @@
                             "/pendingOptions/emailVerifiedAlwaysTrue",
                             "/pendingOptions/claimsMapping",
                             "/postLogoutRedirectUri",
-                            "/clockToleranceSec"
+                            "/clockToleranceSec",
+                            "/pendingOptions/idTokenSignatureAlg"
                         ],
                         "type": "string",
                         "description": "The \"path\" to the part of the IdP document."
@@ -55242,6 +54904,19 @@
                     },
                     "traceId": {
                         "type": "string"
+                    }
+                }
+            },
+            "errorResponse-429": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "example": "RATE-001"
+                    },
+                    "title": {
+                        "type": "string",
+                        "example": "Too many requests"
                     }
                 }
             },
