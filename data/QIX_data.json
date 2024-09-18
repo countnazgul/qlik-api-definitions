@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.2168.0",
+        "version": "12.2184.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -24161,7 +24161,7 @@
             },
             "LOCERR_EXTENGINE_GRPC_STATUS_CANCELLED": {
                 "code": 22001,
-                "message": "The operation was cancelled."
+                "message": "Operation cancelled."
             },
             "LOCERR_EXTENGINE_GRPC_STATUS_UNKNOWN": {
                 "code": 22002,
@@ -24169,51 +24169,51 @@
             },
             "LOCERR_EXTENGINE_GRPC_STATUS_INVALID_ARGUMENT": {
                 "code": 22003,
-                "message": "Client specified an invalid argument."
+                "message": "Invalid argument."
             },
             "LOCERR_EXTENGINE_GRPC_STATUS_DEADLINE_EXCEEDED": {
                 "code": 22004,
-                "message": "Deadline expired before operation could complete."
+                "message": "Deadline exceeded."
             },
             "LOCERR_EXTENGINE_GRPC_STATUS_NOT_FOUND": {
                 "code": 22005,
-                "message": "Some requested entity (e.g., file or directory) was not found."
+                "message": "Resource not found."
             },
             "LOCERR_EXTENGINE_GRPC_STATUS_ALREADY_EXISTS": {
                 "code": 22006,
-                "message": "Some entity that we attempted to create (e.g., file or directory) already exists."
+                "message": "Resource already exists."
             },
             "LOCERR_EXTENGINE_GRPC_STATUS_PERMISSION_DENIED": {
                 "code": 22007,
-                "message": "The caller does not have permission to execute the specified operation."
+                "message": "Permission Denied."
             },
             "LOCERR_EXTENGINE_GRPC_STATUS_RESOURCE_EXHAUSTED": {
                 "code": 22008,
-                "message": "Some resource has been exhausted, perhaps a per-user quota, or perhaps the entire file system is out of space."
+                "message": "Resource exhausted."
             },
             "LOCERR_EXTENGINE_GRPC_STATUS_FAILED_PRECONDITION": {
                 "code": 22009,
-                "message": "Operation was rejected because the system is not in a state required for the operation's execution."
+                "message": "Operation rejected, failed precondition."
             },
             "LOCERR_EXTENGINE_GRPC_STATUS_ABORTED": {
                 "code": 22010,
-                "message": "The operation was aborted, typically due to a concurrency issue like sequencer check failures, transaction aborts, etc."
+                "message": "Operation aborted."
             },
             "LOCERR_EXTENGINE_GRPC_STATUS_OUT_OF_RANGE": {
                 "code": 22011,
-                "message": "Operation was attempted past the valid range. E.g., seeking or reading past end of file."
+                "message": "Operation out of range."
             },
             "LOCERR_EXTENGINE_GRPC_STATUS_UNIMPLEMENTED": {
                 "code": 22012,
-                "message": "Operation is not implemented or not supported/enabled in this service."
+                "message": "Operation not implemented."
             },
             "LOCERR_EXTENGINE_GRPC_STATUS_INTERNAL": {
                 "code": 22013,
-                "message": "Internal errors. Means some invariants expected by underlying System has been broken. If you see one of these errors, Something is very broken."
+                "message": "Internal error."
             },
             "LOCERR_EXTENGINE_GRPC_STATUS_UNAVAILABLE": {
                 "code": 22014,
-                "message": "The service is currently unavailable. This is a most likely a transient condition and may be corrected by retrying with a backoff."
+                "message": "Service unavailable."
             },
             "LOCERR_EXTENGINE_GRPC_STATUS_DATA_LOSS": {
                 "code": 22015,
@@ -24221,7 +24221,7 @@
             },
             "LOCERR_EXTENGINE_GRPC_STATUS_UNAUTHENTICATED": {
                 "code": 22016,
-                "message": "The request does not have valid authentication credentials for the operation."
+                "message": "Invalid authentication."
             },
             "LOCERR_LXW_INVALID_OBJ": {
                 "code": 23001,

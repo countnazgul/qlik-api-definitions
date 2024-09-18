@@ -4009,7 +4009,7 @@
                 "tags": [
                     "audits"
                 ],
-                "summary": "Finds and returns the persisted audit events for the given tenant.",
+                "summary": "List recent audit events",
                 "responses": {
                     "200": {
                         "content": {
@@ -4069,7 +4069,7 @@
                         "schema": {
                             "type": "string"
                         },
-                        "description": "The case-sensitive string used to search by eventType."
+                        "description": "The case-sensitive string used to search by eventType. Retrieve a list of possible eventTypes with `/v1/audits/types`."
                     },
                     {
                         "in": "query",
@@ -4120,9 +4120,10 @@
                         "in": "query",
                         "name": "source",
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "example": "com.qlik/licenses"
                         },
-                        "description": "The case-sensitive string used to search by source."
+                        "description": "The case-sensitive string used to search by source. Retrieve a list of possible sources with `/v1/audits/sources`."
                     },
                     {
                         "in": "query",
@@ -4142,13 +4143,14 @@
                         "description": "The JWT used for authentication. Send the JWT in the AuthRequest header using the Bearer schema."
                     }
                 ],
+                "description": "Retrieves list of events for subscribed services for your tenant. Stores events for 90 days, after which they can be accessed via `/v1/audits/archive`.",
                 "operationId": "audits",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "bd0bcbbc-1d94-4d17-a71a-d1bd56fce196",
+                "x-qlik-entity-revision": "9ea60f18-361c-4955-a629-9e79ae277687",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -4161,7 +4163,7 @@
                 "tags": [
                     "audits"
                 ],
-                "summary": "Finds and returns the persisted audit events for the given tenant.",
+                "summary": "Get a specific audit event",
                 "responses": {
                     "200": {
                         "content": {
@@ -4234,13 +4236,14 @@
                         "description": "The JWT used for authentication. Send the JWT in the AuthRequest header using the Bearer schema."
                     }
                 ],
+                "description": "Finds and returns a specific audit events for the given event ID.",
                 "operationId": "audit",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "4c173ccf-c4d5-45cc-977d-d0ae2ea631cb",
+                "x-qlik-entity-revision": "db9df3ae-1f65-4eea-b442-8f6169929fc2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -4253,7 +4256,7 @@
                 "tags": [
                     "audits"
                 ],
-                "summary": "Retrieves audit events from long term storage.",
+                "summary": "List archived audit events",
                 "responses": {
                     "200": {
                         "content": {
@@ -4327,17 +4330,17 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "The JWT used for authentication. Send the JWT in the AuthRequest header using the Bearer schema."
+                        "description": "The JWT is used for authentication. Send the JWT in the AuthRequest header using the Bearer schema."
                     }
                 ],
-                "description": "Finds and returns audit events from the archive, formatted as a JSON array, for the given date and tenant (in JWT).",
+                "description": "Retrieves audit events from long term storage. Finds and returns audit events from the archive, formatted as a JSON array, for the given date and tenant (in JWT). Archived events are not removed.",
                 "operationId": "archive",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "7b2557bd-725d-4033-9574-211700ab68b8",
+                "x-qlik-entity-revision": "9020c96f-3e04-4f47-ac83-ff18ac3e7a82",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -4350,7 +4353,7 @@
                 "tags": [
                     "audits"
                 ],
-                "summary": "Returns the server configuration options.",
+                "summary": "Get server configuration options",
                 "responses": {
                     "200": {
                         "content": {
@@ -4394,14 +4397,14 @@
                         "description": "The JWT used for authentication. Send the JWT in the AuthRequest header using the Bearer schema."
                     }
                 ],
-                "description": "It includes options that represent the server configuration state and parameters that were used to run the server with certain functionality.",
+                "description": "Returns the server configuration options. It includes options that represent the server configuration state and parameters that were used to run the server with certain functionality.",
                 "operationId": "getSettings",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "70c80578-33aa-491f-b321-bd7981255773",
+                "x-qlik-entity-revision": "0cbf6ff8-eba9-4764-bb60-dc592de9b6d4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -4414,7 +4417,7 @@
                 "tags": [
                     "audits"
                 ],
-                "summary": "Finds and returns the distinct list of unique event sources.",
+                "summary": "List possible event sources",
                 "responses": {
                     "200": {
                         "content": {
@@ -4458,13 +4461,14 @@
                         "description": "The JWT used for authentication. Send the JWT in the AuthRequest header using the Bearer schema."
                     }
                 ],
+                "description": "Finds and returns the list of possible event sources for this tenant.",
                 "operationId": "sources",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f9a00548-da29-4a98-a81d-7a21b07bfea4",
+                "x-qlik-entity-revision": "05d8bc93-1abc-485d-b630-8e168203a69a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -4477,7 +4481,7 @@
                 "tags": [
                     "audits"
                 ],
-                "summary": "Finds and returns the distinct list of unique event types.",
+                "summary": "List possible event types",
                 "responses": {
                     "200": {
                         "content": {
@@ -4521,13 +4525,14 @@
                         "description": "The JWT used for authentication. Send the JWT in the AuthRequest header using the Bearer schema."
                     }
                 ],
+                "description": "Finds and returns the list of possible event types for this tenant.",
                 "operationId": "eventTypes",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d3faa619-3d69-463e-b7cd-f07aa56b1f70",
+                "x-qlik-entity-revision": "e2f3c998-831e-47c6-8630-b5a198e403fc",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30573,7 +30578,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "e9d114c3-e188-4eef-896b-404dc11ace86",
+                "x-qlik-entity-revision": "a4bb598f-21f6-4f6e-bc27-ca66b36ea85a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30652,7 +30657,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "723cd641-f7f5-4222-b642-53dae3c5b794",
+                "x-qlik-entity-revision": "333bc463-4002-4ce8-a3d4-f073d494a15b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30725,7 +30730,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "1f63b20e-d498-4a4f-b775-2a4f459d6e8a",
+                "x-qlik-entity-revision": "0e095f0b-14d9-4fa4-af79-2ced4769df9a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30931,7 +30936,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "fdcf2264-0d50-47a2-9f2a-02e40ea25d2a",
+                "x-qlik-entity-revision": "f7ee5809-7e11-47c4-89d9-994b0e581c30",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -57523,6 +57528,14 @@
                         "nullable": true,
                         "maxLength": 255,
                         "description": "Template description"
+                    },
+                    "sourceAppAction": {
+                        "enum": [
+                            "validate",
+                            "replace"
+                        ],
+                        "type": "string",
+                        "description": "Specifies the action to perform with the new source app. Use \"validate\" to verify that the source app of the uploaded template matches the target app. Use \"replace\" to migrate the uploaded template to the target app by replacing the source app id."
                     },
                     "temporaryContentId": {
                         "type": "string",
