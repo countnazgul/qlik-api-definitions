@@ -4640,7 +4640,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "e49d1a39-6794-4009-babb-87b345641cbd",
+                "x-qlik-entity-revision": "af43a8ee-3a15-42e8-b9b5-254948c01771",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -5100,7 +5100,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "cae41549-ee77-4392-b026-47d783e4115b",
+                "x-qlik-entity-revision": "0d426646-edb1-4488-816b-db2b698d49ac",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -5224,7 +5224,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "a4dd75c3-325b-4a47-b29c-1f0507214335",
+                "x-qlik-entity-revision": "9065dff1-dacd-4530-a85a-0d9d2570e865",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -6422,7 +6422,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "c2c5e1d5-ea67-4f25-8b7c-fdad0ccf35d3",
+                "x-qlik-entity-revision": "fb847ebd-3f18-431a-82d8-6dd3f1c07dd9",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -22992,7 +22992,7 @@
                 "tags": [
                     "groups"
                 ],
-                "summary": "List groups.",
+                "summary": "List groups",
                 "responses": {
                     "200": {
                         "content": {
@@ -23137,7 +23137,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "87d2a70e-7519-4681-bdd3-6ee2f86eb55e",
+                "x-qlik-entity-revision": "ee2b1a9f-6544-4c38-93a7-8f2eb224e03b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -23148,7 +23148,7 @@
                 "tags": [
                     "groups"
                 ],
-                "summary": "Create group.",
+                "summary": "Create group",
                 "responses": {
                     "201": {
                         "content": {
@@ -23257,7 +23257,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "98bc524d-36b8-4f86-a070-49a6c6d0f57b",
+                "x-qlik-entity-revision": "ad32a42b-f557-452c-9f05-e5de3c69b40e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -23270,7 +23270,7 @@
                 "tags": [
                     "groups"
                 ],
-                "summary": "Get group by id",
+                "summary": "Get group by ID",
                 "responses": {
                     "200": {
                         "content": {
@@ -23350,7 +23350,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "ac2d4b0f-2fd5-4484-bc79-14138552fd6d",
+                "x-qlik-entity-revision": "0a182819-8b5f-45b9-873c-cd42ee79a614",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -23361,7 +23361,7 @@
                 "tags": [
                     "groups"
                 ],
-                "summary": "Update group by id",
+                "summary": "Update group by ID",
                 "responses": {
                     "204": {
                         "description": "Group updated successfully."
@@ -23448,6 +23448,7 @@
                         "description": "The ID of the group to update."
                     }
                 ],
+                "description": "Updates the requested group.",
                 "operationId": "updateGroupById",
                 "requestBody": {
                     "content": {
@@ -23464,7 +23465,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "976f8a05-6dd0-4e36-a35e-80b7e20d174a",
+                "x-qlik-entity-revision": "93f6a845-9b66-4ccd-a945-eca89cef31cb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -23475,7 +23476,7 @@
                 "tags": [
                     "groups"
                 ],
-                "summary": "Delete group by id",
+                "summary": "Delete group by ID",
                 "responses": {
                     "204": {
                         "description": "Group deleted successfully."
@@ -23532,13 +23533,14 @@
                         "description": "The ID of the group to delete."
                     }
                 ],
+                "description": "Deletes the requested group.",
                 "operationId": "deleteGroupById",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "945c735d-a468-44d8-ac8f-fe41b0dd318b",
+                "x-qlik-entity-revision": "88f33066-3dea-4fb3-a802-c1433653fc3b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -23763,14 +23765,14 @@
                         "description": "Internal server error."
                     }
                 },
-                "description": "Returns the active tenant's group settings.",
+                "description": "Returns the tenant's group settings, such as whether automatic group creation and IdP group synchronization are enabled or disabled, and roles assigned to system groups.",
                 "operationId": "groups_api_get_settings",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d784f1b7-bee0-4173-b23c-dec549901824",
+                "x-qlik-entity-revision": "ada1654e-8b24-4657-8c6a-5a941050b32e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -23846,6 +23848,7 @@
                         "description": "Internal server error."
                     }
                 },
+                "description": "Updates the tenant's group settings, such as whether automatic group creation and IdP group synchronization are enabled or disabled, and roles assigned to system groups.",
                 "operationId": "patchSettings",
                 "requestBody": {
                     "content": {
@@ -23862,7 +23865,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "33ef504e-dfe3-42d3-ad7d-4ff0e02ca9f1",
+                "x-qlik-entity-revision": "53d52fd3-f76f-4687-89c6-7fbc68fb7f48",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -26383,7 +26386,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/graph"
+                                    "$ref": "#/components/schemas/graphResponse"
                                 }
                             }
                         },
@@ -26509,7 +26512,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b4f9c58d-522c-460b-be60-789bcef7d89f",
+                "x-qlik-entity-revision": "5e8d3902-9150-4772-bbd8-750dd8cc3d89",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -26528,7 +26531,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/graphs"
+                                    "$ref": "#/components/schemas/graphsResponse"
                                 }
                             }
                         },
@@ -26641,7 +26644,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "a865127b-4513-42db-81f2-a6d0fa169df3",
+                "x-qlik-entity-revision": "3683bdba-67a3-445e-a5ea-1b5bf5615900",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -26660,7 +26663,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/graph"
+                                    "$ref": "#/components/schemas/graphResponse"
                                 }
                             }
                         },
@@ -26763,7 +26766,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "5fab65a0-c88e-44f8-94e3-d46098f092c0",
+                "x-qlik-entity-revision": "320f5212-e4f3-4e0e-8e56-e6ec6894aa75",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -26782,7 +26785,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/graphs"
+                                    "$ref": "#/components/schemas/graphsResponse"
                                 }
                             }
                         },
@@ -26875,7 +26878,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "7d507680-89fd-43b5-aba6-b6bbc61a5df4",
+                "x-qlik-entity-revision": "9f36ce4f-e66a-4ed2-876d-e4f90df930d6",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -26888,13 +26891,13 @@
                 "tags": [
                     "lineage-graphs"
                 ],
-                "summary": "Returns a lineage graph of a source node. \nThe id (QRI) can point to an item on the field, table and resource level.\n",
+                "summary": "Returns lineage graphs for requested levels of a source node. \nThe id (QRI) can point to an item on the field, table and resource level.\n",
                 "responses": {
                     "200": {
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/graph"
+                                    "$ref": "#/components/schemas/graphLevelsResponse"
                                 }
                             }
                         },
@@ -26998,7 +27001,8 @@
                             "enum": [
                                 "field",
                                 "table",
-                                "resource"
+                                "resource",
+                                "all"
                             ],
                             "type": "string",
                             "default": "resource"
@@ -27022,7 +27026,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "51a7c04e-9797-40c9-b3fb-3718ab22a713",
+                "x-qlik-entity-revision": "d5071eba-7035-446d-ab85-d7a366200f7b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -27041,7 +27045,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/graph"
+                                    "$ref": "#/components/schemas/graphResponse"
                                 }
                             }
                         },
@@ -27177,7 +27181,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "72d00315-d449-427f-8de8-d1153ec7ca72",
+                "x-qlik-entity-revision": "f3eed29a-7a5b-457d-aa40-645d4ac6ac0b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -27196,7 +27200,7 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/graphs"
+                                    "$ref": "#/components/schemas/graphsResponse"
                                 }
                             }
                         },
@@ -27319,7 +27323,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b73de1c3-133e-429e-aa52-15309f28885c",
+                "x-qlik-entity-revision": "b58dfd9d-d955-42a0-84dc-f5e60ae0fbcd",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -55041,6 +55045,27 @@
                 },
                 "description": "The lineage graph containing the node."
             },
+            "graphLevelsResponse": {
+                "type": "object",
+                "title": "Response with graphs for requested levels",
+                "properties": {
+                    "graph": {
+                        "$ref": "#/components/schemas/graph"
+                    },
+                    "graphs": {
+                        "$ref": "#/components/schemas/graphs"
+                    }
+                }
+            },
+            "graphResponse": {
+                "type": "object",
+                "title": "Response with a single graph",
+                "properties": {
+                    "graph": {
+                        "$ref": "#/components/schemas/graph"
+                    }
+                }
+            },
             "graphs": {
                 "type": "object",
                 "title": "Graphs",
@@ -55053,6 +55078,15 @@
                     }
                 },
                 "description": "The list of lineage graphs."
+            },
+            "graphsResponse": {
+                "type": "object",
+                "title": "Response with all graphs",
+                "properties": {
+                    "graphs": {
+                        "$ref": "#/components/schemas/graphs"
+                    }
+                }
             },
             "lineageOverviewInfo": {
                 "type": "object",
