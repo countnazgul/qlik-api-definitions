@@ -30260,7 +30260,7 @@
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
-                    "limit": 10
+                    "limit": 50
                 }
             }
         },
@@ -30470,7 +30470,7 @@
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
-                    "limit": 10
+                    "limit": 50
                 }
             }
         },
@@ -31437,7 +31437,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "83a66353-c0fb-4f71-84a1-4d880891a3ab",
+                "x-qlik-entity-revision": "4b289754-5204-45a6-bfb5-e6e35330b6db",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -58254,6 +58254,9 @@
                             "$ref": "#/components/schemas/Result"
                         },
                         "description": "Present when the status is \"done\"."
+                    },
+                    "requestErrors": {
+                        "$ref": "#/components/schemas/ExportErrors"
                     },
                     "statusLocation": {
                         "type": "string",
