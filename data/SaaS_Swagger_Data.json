@@ -6435,7 +6435,7 @@
                 "tags": [
                     "automl-predictions"
                 ],
-                "summary": "Return a file containing the shapley values in coordinate form that are associated with a predictionId.",
+                "summary": "Get shapley values in coordinate form",
                 "responses": {
                     "200": {
                         "content": {
@@ -6514,13 +6514,14 @@
                         "$ref": "#/components/parameters/predictionId"
                     }
                 ],
+                "description": "Returns a file containing the shapley values in coordinate form that are associated with a prediction ID.",
                 "operationId": "getCoordinateShapForPrediction",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "2face669-f15c-4266-b2f7-d206a2613e5e",
+                "x-qlik-entity-revision": "cdea558d-39a9-4b05-91af-728f59e5ac22",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -6533,7 +6534,7 @@
                 "tags": [
                     "automl-predictions"
                 ],
-                "summary": "Retrieve jobs that are associated with a prediction. Job with correlation type \"prediction\"",
+                "summary": "Retrieve jobs associated with a prediction",
                 "responses": {
                     "200": {
                         "content": {
@@ -6607,13 +6608,14 @@
                         "$ref": "#/components/parameters/predictionId"
                     }
                 ],
+                "description": "Retrieve jobs that are associated with a prediction. Job with correlation type `prediction`.",
                 "operationId": "getPredictionJobs",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "3124110e-67e2-4a65-b8ec-267c3a56fffb",
+                "x-qlik-entity-revision": "84cdfa67-de52-4321-bbb4-47172d8b5723",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -6626,7 +6628,7 @@
                 "tags": [
                     "automl-predictions"
                 ],
-                "summary": "Return a file containing any rows in a prediction operation where a prediction was unable to be produced.",
+                "summary": "Get any rows where a prediction was not produced",
                 "responses": {
                     "200": {
                         "content": {
@@ -6705,13 +6707,14 @@
                         "$ref": "#/components/parameters/predictionId"
                     }
                 ],
+                "description": "Returns a file containing any rows in a prediction operation where a prediction was unable to be produced.",
                 "operationId": "getErrorsForPrediction",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "b1bc8235-545b-49cd-84c5-41d2560a2178",
+                "x-qlik-entity-revision": "af4f5aab-ebb9-4ab6-9cf3-7c52064ea0f2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -6724,7 +6727,7 @@
                 "tags": [
                     "automl-predictions"
                 ],
-                "summary": "Return a file containing the predicted values that are associated with a predictionId.",
+                "summary": "Get a file containing predicted values",
                 "responses": {
                     "200": {
                         "content": {
@@ -6801,13 +6804,14 @@
                         "$ref": "#/components/parameters/predictionId"
                     }
                 ],
+                "description": "Returns a file containing the predicted values that are associated with a prediction ID.",
                 "operationId": "getConfigurationsForPrediction",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "f6e8b1a2-744c-4212-a95b-d3b5549979b7",
+                "x-qlik-entity-revision": "ca410b54-af56-44c2-a337-374266b4245d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -6820,7 +6824,7 @@
                 "tags": [
                     "automl-predictions"
                 ],
-                "summary": "Return a file containing the shapley values that are associated with a predictionId.",
+                "summary": "Return a file containing shapley values",
                 "responses": {
                     "200": {
                         "content": {
@@ -6897,13 +6901,14 @@
                         "$ref": "#/components/parameters/predictionId"
                     }
                 ],
+                "description": "Returns a file containing the shapley values that are associated with a prediction ID.",
                 "operationId": "getShapForPrediction",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "d651b7c4-37de-4418-8b63-d312f3a47c3b",
+                "x-qlik-entity-revision": "6aad19d3-c2bd-4fad-9228-a7cc305c6b4d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -6916,7 +6921,7 @@
                 "tags": [
                     "automl-predictions"
                 ],
-                "summary": "Return a file containing the source values and an index field that are associated with a predictionId .",
+                "summary": "Return a file containing source values",
                 "responses": {
                     "200": {
                         "content": {
@@ -6995,13 +7000,14 @@
                         "$ref": "#/components/parameters/predictionId"
                     }
                 ],
+                "description": "Returns a file containing the source values and an index field that are associated with a prediction ID.",
                 "operationId": "getSourceForPrediction",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "d4b61428-653c-42e3-b645-ed3a1b3a65c9",
+                "x-qlik-entity-revision": "3d99d3a3-55f1-4d6c-8ade-5122f84ab7bd",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -7014,7 +7020,7 @@
                 "tags": [
                     "automl-deployments"
                 ],
-                "summary": "Generate predictions in a synchronous request and response.",
+                "summary": "Generate predictions",
                 "responses": {
                     "200": {
                         "content": {
@@ -7126,6 +7132,7 @@
                         "$ref": "#/components/parameters/deploymentId"
                     }
                 ],
+                "description": "Generates predictions in a synchronous request and response.",
                 "operationId": "postRealtimePredictions",
                 "requestBody": {
                     "content": {
@@ -7141,7 +7148,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "9344004f-6f32-4ce4-8f68-b814a07e07e7",
+                "x-qlik-entity-revision": "9eb62eed-b0bc-4050-9ef9-06991c3b030e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -28345,7 +28352,7 @@
                 "tags": [
                     "oauth-clients"
                 ],
-                "summary": "Read all OAuth clients",
+                "summary": "List OAuth clients",
                 "responses": {
                     "200": {
                         "content": {
@@ -28384,8 +28391,9 @@
                         "schema": {
                             "type": "string"
                         },
+                        "example": "appType eq \"spa\" and clientId eq \"b3ee66d6f21d1611efa89a425f656f6f\"",
                         "required": false,
-                        "description": "The filter query that should be used to filter the list of oauth clients. Valid attributes for filtering are clientId, clientName, appType, and tenantId."
+                        "description": "The filter query that should be used to filter the list of oauth clients.  The filter syntax is defined in RFC 7644. Valid attributes for filtering are `clientId`, `clientName`, `appType`, and `tenantId`."
                     },
                     {
                         "in": "query",
@@ -28426,7 +28434,7 @@
                         "description": "The attribute to sort by, beginning with + for ascending and - for descending. Valid attributes for sorting are clientId, clientName, appType, tenantId."
                     }
                 ],
-                "description": "Read all OAuth clients",
+                "description": "Retrieve all OAuth clients.",
                 "operationId": "readAllOAuthClients",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
@@ -28434,7 +28442,7 @@
                     "external/authenticate",
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "fc9b8470-8dbe-45ec-bffb-51518862eb5c",
+                "x-qlik-entity-revision": "cb4f39de-e808-468a-9445-bb6831e7c366",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -28473,6 +28481,7 @@
                         "$ref": "#/components/responses/ServiceUnavailable"
                     }
                 },
+                "description": "Create a new OAuth client. Requires `TenantAdmin` role when created in-tenant. `appType` cannot be changed after creation. Consent method and published state can be changed after creation. For supported `appType`, use `PATCH /oauth-clients/{id}/connection-configs/me` to change consent method, and `POST /oauth-clients/{id}/actions/publish` to change the client to published after creation.",
                 "operationId": "createOAuthClient",
                 "requestBody": {
                     "content": {
@@ -28490,7 +28499,7 @@
                     "external/authenticate",
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "8f3e319f-da02-4fdb-90cf-cb7012a008e0",
+                "x-qlik-entity-revision": "4fefca06-192c-4748-b18e-d8d8045a29e7",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -28503,7 +28512,7 @@
                 "tags": [
                     "oauth-clients"
                 ],
-                "summary": "Read an OAuth client",
+                "summary": "Get an OAuth client",
                 "responses": {
                     "200": {
                         "content": {
@@ -28552,6 +28561,7 @@
                         "description": "The unique identifier for the OAuth client"
                     }
                 ],
+                "description": "Retrieves the specified OAuth client.",
                 "operationId": "readOAuthClient",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
@@ -28559,7 +28569,7 @@
                     "external/authenticate",
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "7870edf6-cc25-4344-9335-f20ddeb4ba33",
+                "x-qlik-entity-revision": "1ac739ef-fcf3-4985-a0a5-08f4944874c6",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -28605,6 +28615,7 @@
                         "description": "The unique identifier for the OAuth client"
                     }
                 ],
+                "description": "Updates the specified OAuth client.",
                 "operationId": "patchOAuthClient",
                 "requestBody": {
                     "content": {
@@ -28625,7 +28636,7 @@
                     "external/authenticate",
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "6fb91c2f-60b1-46a0-9ce8-640a567c935c",
+                "x-qlik-entity-revision": "ec580a47-dd8a-43d5-97a3-bd925672adb1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -28680,6 +28691,7 @@
                         "description": "A confirmation string that should match the id of the oauth-client resource to be deleted"
                     }
                 ],
+                "description": "Delete the specified OAuth client.",
                 "operationId": "deleteOAuthClient",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
@@ -28687,7 +28699,7 @@
                     "external/authenticate",
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "81f52d98-3a82-4f4a-b50b-f51ca2a36e2e",
+                "x-qlik-entity-revision": "bddf5597-1a0a-4be9-b708-2c2a85b80a9f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -28742,6 +28754,7 @@
                         "description": "The unique identifier for the OAuth client"
                     }
                 ],
+                "description": "Publishes the specified OAuth client. By default, OAuth clients are bound to the tenant that created it. Publishing shares the client and makes it available to all other tenants within a region. Third-party applications connecting to Qlik Cloud can then have the same client ID for all Qlik Cloud tenants.",
                 "operationId": "publishOAuthClient",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
@@ -28749,7 +28762,7 @@
                     "external/authenticate",
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "bf8c41e8-b867-4ff9-8963-cd4b5c14e82b",
+                "x-qlik-entity-revision": "4734d8b8-a1f6-44c6-9213-20f241501f85",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -28807,6 +28820,7 @@
                         "description": "The unique identifier for the OAuth client"
                     }
                 ],
+                "description": "Create a new client secret for the specified OAuth client. An OAuth client can have a maximum of 5 client secrets at one time.",
                 "operationId": "createOAuthClientSecret",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
@@ -28814,7 +28828,7 @@
                     "external/authenticate",
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "07ba4b1c-db88-4cfe-a550-feb729b82a13",
+                "x-qlik-entity-revision": "ca47b538-74d9-455d-bbaf-16d668dab018",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -28871,6 +28885,7 @@
                         "description": "The unique identifier for the OAuth client"
                     }
                 ],
+                "description": "Deletes a specific client secret for an OAuth client.",
                 "operationId": "deleteOAuthClientSecret",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
@@ -28878,7 +28893,7 @@
                     "external/authenticate",
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f4ab9d7a-87c4-4348-9a5e-4ba21d5cbdcd",
+                "x-qlik-entity-revision": "bd5bfd92-a152-4caf-9419-6ea043d9f03c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -28891,7 +28906,7 @@
                 "tags": [
                     "oauth-clients"
                 ],
-                "summary": "Read a connection config",
+                "summary": "Get connection config for an OAuth client",
                 "responses": {
                     "200": {
                         "content": {
@@ -28930,9 +28945,10 @@
                             "type": "string"
                         },
                         "required": true,
-                        "description": "The unique identifier for the OAuth client"
+                        "description": "The unique identifier for an OAuth client"
                     }
                 ],
+                "description": "Get configuration for consent method and status.",
                 "operationId": "readConnectionConfig",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
@@ -28940,7 +28956,7 @@
                     "external/authenticate",
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c62e6944-67a0-4c4a-a178-bbb8c7048709",
+                "x-qlik-entity-revision": "49322002-2a07-44e0-b576-318b981889d4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -28951,7 +28967,7 @@
                 "tags": [
                     "oauth-clients"
                 ],
-                "summary": "Updated the connection config for the calling tenant, related to the supplied client id.",
+                "summary": "Update connection config for an OAuth client",
                 "responses": {
                     "204": {
                         "description": "No Content"
@@ -28986,6 +29002,7 @@
                         "description": "The unique identifier for the OAuth client"
                     }
                 ],
+                "description": "Updates the consent method for the specified OAuth client.",
                 "operationId": "patchConnectionConfig",
                 "requestBody": {
                     "content": {
@@ -29006,7 +29023,7 @@
                     "external/authenticate",
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "1a47dba1-2f03-4687-8064-5edcbf948447",
+                "x-qlik-entity-revision": "e40d607c-b9c6-46d1-8c2b-1cd58ff2833d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -29017,7 +29034,7 @@
                 "tags": [
                     "oauth-clients"
                 ],
-                "summary": "Deletes the connection config for the calling tenant, related to the supplied client id.",
+                "summary": "Delete connection config for an OAuth client",
                 "responses": {
                     "204": {
                         "description": "No Content"
@@ -29052,6 +29069,7 @@
                         "description": "The unique identifier for the OAuth client"
                     }
                 ],
+                "description": "Deletes the connection config for the calling tenant, related to the supplied client id.",
                 "operationId": "deleteConnectionConfig",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
@@ -29059,7 +29077,7 @@
                     "external/authenticate",
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c909245c-e99a-4446-9dae-7b7f898ad874",
+                "x-qlik-entity-revision": "7f91ee3a-a5c0-45e5-884f-754b334023c7",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30106,10 +30124,10 @@
                         "name": "log",
                         "schema": {
                             "type": "boolean",
-                            "default": true
+                            "default": false
                         },
                         "required": false,
-                        "description": "The boolean value used to include the log field or not, default is included, set log=false to exclude the log field."
+                        "description": "The boolean value used to include the log field or not, set log=true to include the log field."
                     },
                     {
                         "in": "query",
@@ -30154,7 +30172,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "e0fad2fc-26fd-4afd-930d-c7a8f562b6d8",
+                "x-qlik-entity-revision": "4e3cc9ee-2d67-4c72-b2bd-9fd27b9e5b38",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -56443,7 +56461,7 @@
                             "maxLength": 256,
                             "uniqueItems": true
                         },
-                        "description": "List of allowed scopes for this client"
+                        "description": "List of allowed scopes for this client. For a full list of scopes see [qlik.dev/authenticate/oauth/scopes/](https://qlik.dev/authenticate/oauth/scopes/)."
                     },
                     "allowedGrantTypes": {
                         "type": "array",
@@ -56466,17 +56484,6 @@
                     "clientName"
                 ],
                 "properties": {
-                    "appSub": {
-                        "enum": [
-                            "fortress",
-                            "data-gateway"
-                        ],
-                        "type": "string",
-                        "maxLength": 64,
-                        "description": "Application subject",
-                        "x-qlik-stability": "experimental",
-                        "x-qlik-visibiliy": "private"
-                    },
                     "appType": {
                         "enum": [
                             "web",
@@ -56525,7 +56532,7 @@
                             "maxLength": 256,
                             "uniqueItems": true
                         },
-                        "description": "List of allowed scopes for this client"
+                        "description": "List of allowed scopes for this client. For a full list of scopes see [qlik.dev/authenticate/oauth/scopes/](https://qlik.dev/authenticate/oauth/scopes/)."
                     },
                     "allowedOrigins": {
                         "type": "array",
