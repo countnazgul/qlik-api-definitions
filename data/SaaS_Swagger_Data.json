@@ -16138,7 +16138,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "abc73221-4edd-4a16-ae9e-79b0160f2b31",
+                "x-qlik-entity-revision": "88ac099c-fb86-4622-863c-2ea85f6df2a8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -16366,7 +16366,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "0a4b22b1-6a50-4c12-aee5-7adbd5de1dc1",
+                "x-qlik-entity-revision": "a45c2df9-1ff5-48fb-83e7-d05ce3250b09",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -16500,7 +16500,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "888a1116-54c9-4cf9-acef-0b48c6c10072",
+                "x-qlik-entity-revision": "826475ae-8980-4e8a-a313-b15b55da6f65",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -16620,7 +16620,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "a76ef655-aaa5-4fbb-bcb3-0c52975b4ef2",
+                "x-qlik-entity-revision": "2267a4dd-7414-48ed-9ffa-41a6964dae87",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -18281,7 +18281,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "0f1baa36-aedc-4d80-96c8-2711e6211a7a",
+                "x-qlik-entity-revision": "9947e21f-b823-453c-b6ed-85fa23fe8582",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -25974,7 +25974,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f9376579-ea6f-4a27-af69-bd9e0dfb0bcc",
+                "x-qlik-entity-revision": "d156ce19-48ea-4ea2-b8da-77c54827a8c8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -30172,7 +30172,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "4e3cc9ee-2d67-4c72-b2bd-9fd27b9e5b38",
+                "x-qlik-entity-revision": "c08ec119-79cc-43ac-b288-f5bbbee7b2ad",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -30274,7 +30274,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "3483951c-57fb-4f0d-959e-51217293e22e",
+                "x-qlik-entity-revision": "39263806-c474-418c-9c79-4401d7ec7d57",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -30376,7 +30376,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "ff93f579-3351-480e-97fc-f4dd25d88a3c",
+                "x-qlik-entity-revision": "61ca0612-a161-48be-ade6-7bfe7310e7d2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -31278,7 +31278,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "b782f59e-c170-4db9-b110-0f9e2a38ab83",
+                "x-qlik-entity-revision": "c94af0b7-81c1-477c-ab15-8579d828a87e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -35636,7 +35636,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "1c292d44-7b62-414f-b2c6-7aa22b973801",
+                "x-qlik-entity-revision": "c7748bed-10fb-499f-aa54-e80b7cc47898",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -35761,7 +35761,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "3c469872-e260-448a-8927-3d33f6156efe",
+                "x-qlik-entity-revision": "d2b08449-e6cb-49cb-a827-42f1e1442cb8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -35872,7 +35872,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "4d18bffe-f22d-42d0-a200-30b1a2f085f1",
+                "x-qlik-entity-revision": "48074bcd-4ee8-4d37-836b-cee9abe09589",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -36312,7 +36312,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d78ca966-ecbe-4a08-9559-b11d233852df",
+                "x-qlik-entity-revision": "6f5b216c-633d-4c75-a744-2ff92065e3d9",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -37459,7 +37459,7 @@
                 "tags": [
                     "webhooks"
                 ],
-                "summary": "Retrieves all webhooks entries for a tenant",
+                "summary": "List webhooks",
                 "responses": {
                     "200": {
                         "content": {
@@ -37616,13 +37616,14 @@
                         "description": "Filter resources by url (wildcard and case insensitive)"
                     }
                 ],
+                "description": "Retrieves all webhooks entries for a tenant that the user has access to. Users assigned the `TenantAdmin` role can retrieve all webhooks. A user can have up to 150 webhooks at one time.",
                 "operationId": "listWebhookEntries",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b0274338-47d1-45ca-86c5-93119eb538b0",
+                "x-qlik-entity-revision": "e9864b60-8fbb-4ca2-bd9f-24d7823b944c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -37633,7 +37634,7 @@
                 "tags": [
                     "webhooks"
                 ],
-                "summary": "Creates a new webhook",
+                "summary": "Create a new webhook",
                 "responses": {
                     "201": {
                         "content": {
@@ -37661,6 +37662,7 @@
                         "$ref": "#/components/responses/ServiceUnavailable"
                     }
                 },
+                "description": "Creates a new webhook. User must be assigned the `TenantAdmin` role to create `tenant` level webhooks.",
                 "operationId": "createWebhook",
                 "requestBody": {
                     "content": {
@@ -37677,7 +37679,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "1d9ecaa2-26ec-4b6e-a963-158a3f734eef",
+                "x-qlik-entity-revision": "8dc940a6-36b8-4f49-aa7e-bdce90307be8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -37690,7 +37692,7 @@
                 "tags": [
                     "webhooks"
                 ],
-                "summary": "Returns details for a specific webhook",
+                "summary": "Get a webhook",
                 "responses": {
                     "200": {
                         "content": {
@@ -37732,13 +37734,14 @@
                         "description": "The webhook's unique identifier."
                     }
                 ],
+                "description": "Returns details for a specific webhook.",
                 "operationId": "getWebhook",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "1804a26c-471a-45a3-a272-f9ce88900442",
+                "x-qlik-entity-revision": "c40872a9-6b1c-47f9-9742-f9f727141f1c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -37749,7 +37752,7 @@
                 "tags": [
                     "webhooks"
                 ],
-                "summary": "Patches a webhook",
+                "summary": "Update one or more webhook properties",
                 "responses": {
                     "204": {
                         "description": "No Content response."
@@ -37784,6 +37787,7 @@
                         "description": "The webhook's unique identifier."
                     }
                 ],
+                "description": "Patches a webhook to update one or more properties.",
                 "operationId": "patchWebhook",
                 "requestBody": {
                     "content": {
@@ -37803,7 +37807,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "27564bc9-d606-4167-b152-70bfc3c0ede0",
+                "x-qlik-entity-revision": "fa611a27-f1ae-4e6c-8736-cc9194415763",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -37814,7 +37818,7 @@
                 "tags": [
                     "webhooks"
                 ],
-                "summary": "Updates a webhook",
+                "summary": "Update all webhook properties",
                 "responses": {
                     "200": {
                         "content": {
@@ -37856,6 +37860,7 @@
                         "description": "The webhook's unique identifier."
                     }
                 ],
+                "description": "Updates a webhook, any omitted fields will be cleared, returns updated webhook.",
                 "operationId": "updateWebhook",
                 "requestBody": {
                     "content": {
@@ -37872,7 +37877,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "cd5500d6-4d55-4977-bd68-0cc648a2133d",
+                "x-qlik-entity-revision": "2c25193d-7c41-4082-aa8c-5ca18e244afd",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -37883,7 +37888,7 @@
                 "tags": [
                     "webhooks"
                 ],
-                "summary": "Deletes a specific webhook",
+                "summary": "Delete a webhook",
                 "responses": {
                     "204": {
                         "description": "No Content response."
@@ -37918,13 +37923,14 @@
                         "description": "The webhook's unique identifier."
                     }
                 ],
+                "description": "Deletes a specific webhook.",
                 "operationId": "deleteWebhook",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "084f7186-009b-4ce0-a705-b6e69fec5b8d",
+                "x-qlik-entity-revision": "f3637783-5dd1-49be-9f0f-4115e14f9665",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -37937,7 +37943,7 @@
                 "tags": [
                     "deliveries"
                 ],
-                "summary": "Returns deliveries for a specific webhook",
+                "summary": "Return deliveries for a webhook",
                 "responses": {
                     "200": {
                         "content": {
@@ -38043,13 +38049,14 @@
                         "description": "Filter resources by status (success or fail)"
                     }
                 ],
+                "description": "Returns deliveries for a specific webhook. Delivery history is stored for 1 week.",
                 "operationId": "getWebhookDeliveryList",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "7a421cd0-3634-49c2-9ac3-2fb73fa86880",
+                "x-qlik-entity-revision": "372fae94-acdb-42ab-bfdb-ad61dea61548",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -38062,7 +38069,7 @@
                 "tags": [
                     "deliveries"
                 ],
-                "summary": "Returns details for a specific delivery",
+                "summary": "Return details for specific delivery",
                 "responses": {
                     "200": {
                         "content": {
@@ -38113,13 +38120,14 @@
                         "description": "The webhook's unique identifier."
                     }
                 ],
+                "description": "Returns details for a specific delivery.",
                 "operationId": "getWebhookDelivery",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "fac0d2b5-9bed-4b9d-a446-60ea68ac3783",
+                "x-qlik-entity-revision": "e15ac17f-f2b2-4fd2-984c-f8f76eb852f6",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -38132,7 +38140,7 @@
                 "tags": [
                     "deliveries"
                 ],
-                "summary": "Resend the delivery with the same payload",
+                "summary": "Resend delivery",
                 "responses": {
                     "201": {
                         "content": {
@@ -38184,13 +38192,14 @@
                         "description": "The webhook's unique identifier."
                     }
                 ],
+                "description": "Resends the delivery with the same payload.",
                 "operationId": "resendDelivery",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b0cca309-dc86-4c31-a33c-700f9fef73fc",
+                "x-qlik-entity-revision": "88a66057-290c-4797-97f3-8327fc26189c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -38203,7 +38212,7 @@
                 "tags": [
                     "webhooks"
                 ],
-                "summary": "List of event-types that are possible to subscribe to.",
+                "summary": "List event-types",
                 "responses": {
                     "200": {
                         "content": {
@@ -38225,13 +38234,14 @@
                         "$ref": "#/components/responses/ServiceUnavailable"
                     }
                 },
+                "description": "Lists event-types that are possible to subscribe to.",
                 "operationId": "listEventTypes",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "e678c77a-f345-4b78-a785-5cb62a4f70d2",
+                "x-qlik-entity-revision": "aece3f71-4f69-4f56-8141-0094ee69cd08",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -48470,6 +48480,10 @@
                         "readOnly": true,
                         "description": "The value is automatically set by the application. User defined value is ignored."
                     },
+                    "appTypeOverride": {
+                        "type": "string",
+                        "description": "Optional override of DataAsset appType."
+                    },
                     "lastModifiedTime": {
                         "type": "string",
                         "format": "date-time",
@@ -48487,6 +48501,10 @@
                         "type": "string",
                         "maxLength": 1024,
                         "minLength": 0
+                    },
+                    "createdByConnectionId": {
+                        "type": "string",
+                        "description": "The connectionId that created the Dataset. Optional."
                     }
                 }
             },
@@ -54371,7 +54389,7 @@
                                 },
                                 "status": {
                                     "type": "integer",
-                                    "description": "Response status"
+                                    "description": "HTTP status code indicating the result of the individual assignment operation. A value of 200 represents a successful update, while 201 indicates a new resource was created due to a subject update. Any 400-level status codes indicate an error."
                                 },
                                 "subject": {
                                     "type": "string",
@@ -57373,11 +57391,12 @@
                     "external",
                     "chronos",
                     "automations",
-                    "data-refresh"
+                    "data-refresh",
+                    "choreographer"
                 ],
                 "type": "string",
                 "example": "chronos",
-                "description": "What initiated the reload: hub = one-time reload manually triggered in hub, chronos = time based scheduled reload triggered by chronos, external = reload triggered via external API request, automations = reload triggered in automation, data-refresh = reload triggered by refresh of data."
+                "description": "What initiated the reload: hub = one-time reload manually triggered in hub, chronos = time based scheduled reload triggered by chronos, external = reload triggered via external API request, automations = reload triggered in automation, data-refresh = reload triggered by refresh of data, choreographer = reload triggered by choreographer."
             },
             "CreateTemplateRequest": {
                 "type": "object",
@@ -61271,6 +61290,15 @@
                             "readOnly": true,
                             "description": "The group name"
                         },
+                        "providerType": {
+                            "enum": [
+                                "idp",
+                                "custom"
+                            ],
+                            "type": "string",
+                            "example": "idp",
+                            "description": "The provider type of the group"
+                        },
                         "assignedRoles": {
                             "$ref": "#/components/schemas/AssignedRoles"
                         }
@@ -62384,7 +62412,7 @@
                         "items": {
                             "type": "string"
                         },
-                        "description": "Types of events for which the webhook should trigger."
+                        "description": "Types of events for which the webhook should trigger. Retrieve available types from `/v1/webhooks/event-types`."
                     },
                     "description": {
                         "type": "string",

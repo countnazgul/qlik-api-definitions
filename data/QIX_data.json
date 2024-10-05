@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.2184.0",
+        "version": "12.2202.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -788,7 +788,7 @@
         },
         {
             "name": "GenericObject.GetListObjectData",
-            "description": "Retrieves the values of a list object.\nA data set is returned.\n\n### Default limitations on the number of cells\nThe default maximum for the combined total of cells across all pages is:\n* 10,000 cells. If this limit is exceeded, a calc-pages-too-large error with code 7009 is returned.",
+            "description": "Retrieves the values of a list object.\nA data set is returned.\n\n### Limitations on the number of cells\nThe maximum for the combined total number of cells across all pages is:\n* 10,000 cells. If this limit is exceeded, a calc-pages-too-large error with code 7009 is returned.",
             "params": [
                 {
                     "name": "qPath",
@@ -836,7 +836,7 @@
         },
         {
             "name": "GenericObject.GetHyperCubeData",
-            "description": "Retrieves the calculated data for a chart, a table, or a scatter plot. It is possible to retrieve specific pages of data.\n<div class=note>This method works for a hypercube in DATA_MODE_STRAIGHT.</div>\nA data set is returned.\n\n### Default limitations on the number of cells\nThe default maximum for the combined total of cells across all pages is:\n* 10,000 cells. If this limit is exceeded, a calc-pages-too-large error with code 7009 is returned.",
+            "description": "Retrieves the calculated data for a chart, a table, or a scatter plot. It is possible to retrieve specific pages of data.\n<div class=note>This method works for a hypercube in DATA_MODE_STRAIGHT.</div>\nA data set is returned.\n\n### Limitations on the number of cells\nThe maximum for the combined total number of cells across all pages is:\n* 10,000 cells. If this limit is exceeded, a calc-pages-too-large error with code 7009 is returned.",
             "params": [
                 {
                     "name": "qPath",
