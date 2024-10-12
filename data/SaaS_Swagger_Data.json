@@ -2312,7 +2312,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "8a1acae0-0687-4a82-acaf-0fbc73fbc93f",
+                "x-qlik-entity-revision": "6bb9b466-73dd-4276-b597-d3ed24b10778",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -2437,7 +2437,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "0c53ce7e-44d8-4fd6-9333-ca9044f1b969",
+                "x-qlik-entity-revision": "00ebc032-0313-470f-bf59-40e863ea67b8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -2552,7 +2552,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "2bdc9c25-1ad9-4460-bd00-855e88be20a4",
+                "x-qlik-entity-revision": "f85efe9f-4421-4fb9-bed9-eace9efeb346",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -2679,7 +2679,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "cf870361-59f8-4442-abe5-1813c64f151f",
+                "x-qlik-entity-revision": "c9be54dc-ed00-4723-b97b-5de3f3b73ec0",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -2785,7 +2785,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "34a7c75e-aed9-4111-8dad-5902d2c02327",
+                "x-qlik-entity-revision": "a77996df-a293-4e86-8f24-610d34af0746",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -2910,7 +2910,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "c58b2356-146e-48b2-9224-dade548152e1",
+                "x-qlik-entity-revision": "e68b0fa2-9844-47e0-9b0b-c4952455d010",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -7161,7 +7161,7 @@
                 "tags": [
                     "brands"
                 ],
-                "summary": "Lists all brand entries for a tenant",
+                "summary": "List brands",
                 "responses": {
                     "200": {
                         "content": {
@@ -7239,12 +7239,13 @@
                         "description": "Cursor to the next page."
                     }
                 ],
+                "description": "Lists all brand entries for a tenant.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "21fbfce3-abff-4368-8a47-46e991f1fcad",
+                "x-qlik-entity-revision": "74fec104-c946-4d57-be85-1a4703956214",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -7255,7 +7256,7 @@
                 "tags": [
                     "brands"
                 ],
-                "summary": "Creates a new brand",
+                "summary": "Create a new brand",
                 "responses": {
                     "201": {
                         "content": {
@@ -7280,6 +7281,7 @@
                         "$ref": "#/components/responses/InternalServerError"
                     }
                 },
+                "description": "Creates a new brand.",
                 "requestBody": {
                     "content": {
                         "multipart/form-data": {
@@ -7340,7 +7342,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "8fd56133-9139-4e3a-a0aa-558501ceb4fd",
+                "x-qlik-entity-revision": "31f6e1ba-6894-49d7-8a02-16a02d2eecaf",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -7353,7 +7355,7 @@
                 "tags": [
                     "brands"
                 ],
-                "summary": "Retrieves a specific brand",
+                "summary": "Retrieve a brand",
                 "responses": {
                     "200": {
                         "content": {
@@ -7386,12 +7388,13 @@
                         "$ref": "#/components/parameters/brand-id"
                     }
                 ],
+                "description": "Returns a specific brand.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "8dd15e03-be2e-4e9f-9889-68ae310b869b",
+                "x-qlik-entity-revision": "0cff6de5-77fc-4819-84c1-8e89cfb6414b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -7402,7 +7405,7 @@
                 "tags": [
                     "brands"
                 ],
-                "summary": "Patches a brand",
+                "summary": "Update a brand",
                 "responses": {
                     "204": {
                         "description": "No Content Response."
@@ -7428,6 +7431,7 @@
                         "$ref": "#/components/parameters/brand-id"
                     }
                 ],
+                "description": "Patches a brand.",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -7446,7 +7450,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "347ecfd0-f5bc-48db-a780-b901b19ccedf",
+                "x-qlik-entity-revision": "61010e8c-2a12-48b5-bcc2-f0b5bf7572ac",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -7457,7 +7461,7 @@
                 "tags": [
                     "brands"
                 ],
-                "summary": "Deletes a specific brand",
+                "summary": "Delete a brand",
                 "responses": {
                     "204": {
                         "description": "No Content Response."
@@ -7483,12 +7487,13 @@
                         "$ref": "#/components/parameters/brand-id"
                     }
                 ],
+                "description": "Deletes a specific brand. If the active brand is deleted, the tenant will return to the Qlik default.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "ffa4ae4b-6b60-4bae-af7c-d16d429c943d",
+                "x-qlik-entity-revision": "474c7271-db43-4e43-b4ad-275c8dfcae92",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -7501,7 +7506,7 @@
                 "tags": [
                     "brands"
                 ],
-                "summary": "Activates a brand",
+                "summary": "Activate a brand",
                 "responses": {
                     "200": {
                         "content": {
@@ -7545,7 +7550,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f7495682-2bec-4a1a-8000-3451cbfc75cc",
+                "x-qlik-entity-revision": "0abe9896-60fc-4827-8e78-d6df0af710ec",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -7558,7 +7563,7 @@
                 "tags": [
                     "brands"
                 ],
-                "summary": "Deactivates a brand",
+                "summary": "Deactivate a brand",
                 "responses": {
                     "200": {
                         "content": {
@@ -7591,7 +7596,7 @@
                         "$ref": "#/components/parameters/brand-id"
                     }
                 ],
-                "description": "Sets the brand so it is no longer active. If the brand is already inactive, no action is taken.",
+                "description": "Sets the brand so it is no longer active, returning the tenant the Qlik default brand. If the brand is already inactive, no action is taken.",
                 "requestBody": {
                     "content": {
                         "application/json": {}
@@ -7602,7 +7607,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f7157942-3838-46c2-a0df-be4dfa320648",
+                "x-qlik-entity-revision": "e95edcea-8966-4ec8-b7c8-533890015351",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -7615,7 +7620,7 @@
                 "tags": [
                     "brands"
                 ],
-                "summary": "Downloads the brand file",
+                "summary": "Download brand file",
                 "responses": {
                     "200": {
                         "content": {
@@ -7652,12 +7657,13 @@
                         "$ref": "#/components/parameters/brand-file-id"
                     }
                 ],
+                "description": "Downloads the specified brand file.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "79018466-6967-45d2-b069-325fd2813424",
+                "x-qlik-entity-revision": "d334a718-6147-49da-b979-74fd36da6dab",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -7704,6 +7710,7 @@
                         "$ref": "#/components/parameters/brand-file-id"
                     }
                 ],
+                "description": "Creates a brand file for the specified identifier.",
                 "requestBody": {
                     "content": {
                         "multipart/form-data": {
@@ -7732,7 +7739,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d76f3a41-ad89-4472-90e7-2914dfd977ee",
+                "x-qlik-entity-revision": "f3497859-6d2c-4fb6-9163-eef2e4d000a4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -7743,7 +7750,7 @@
                 "tags": [
                     "brands"
                 ],
-                "summary": "Updates existing file",
+                "summary": "Update a brand file",
                 "responses": {
                     "200": {
                         "content": {
@@ -7779,6 +7786,7 @@
                         "$ref": "#/components/parameters/brand-file-id"
                     }
                 ],
+                "description": "Updates the specified brand file.",
                 "requestBody": {
                     "content": {
                         "multipart/form-data": {
@@ -7807,7 +7815,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "879b2912-19f3-4038-a4f1-b9af1491f6e9",
+                "x-qlik-entity-revision": "e66db066-7f6c-4904-933b-9f7e7a4912c2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -7818,7 +7826,7 @@
                 "tags": [
                     "brands"
                 ],
-                "summary": "Deletes a specific brand file",
+                "summary": "Delete a brand file",
                 "responses": {
                     "204": {
                         "description": "No content response."
@@ -7847,12 +7855,13 @@
                         "$ref": "#/components/parameters/brand-file-id"
                     }
                 ],
+                "description": "Deletes the specified brand file.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "e6b6da11-9e4c-44a6-ac19-acc476547940",
+                "x-qlik-entity-revision": "7ca18c0c-a319-465d-b7ed-f93621f47dc9",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -7865,7 +7874,7 @@
                 "tags": [
                     "brands"
                 ],
-                "summary": "Retrieves the current active brand",
+                "summary": "Retrieve active brand",
                 "responses": {
                     "200": {
                         "content": {
@@ -7881,12 +7890,13 @@
                         "description": "Successful redirect."
                     }
                 },
+                "description": "Returns the current active brand. If using the Qlik default brand, no value is returned.",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "44094d35-db51-4a5b-a5c0-efeb11bf9a1e",
+                "x-qlik-entity-revision": "097b89ce-cc07-4fcd-a31f-0721040d65e1",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -23885,7 +23895,7 @@
                 "tags": [
                     "idp"
                 ],
-                "summary": "Retrieves one or more IdPs for a specified tenantId.",
+                "summary": "List IdPs",
                 "responses": {
                     "200": {
                         "content": {
@@ -23949,14 +23959,14 @@
                         "description": "The previous page cursor."
                     }
                 ],
-                "description": "This endpoint retrieves one or more identity providers from the service. The tenantID in the JWT will be used to fetch the identity provider.",
+                "description": "This endpoint retrieves any IdPs registered on the tenant.",
                 "operationId": "getIdps",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "9c235548-faf7-432a-badd-abbf1d4515a9",
+                "x-qlik-entity-revision": "05c1ba0d-645e-4d16-b8db-d7f5d892622d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -23967,7 +23977,7 @@
                 "tags": [
                     "idp"
                 ],
-                "summary": "Creates a new IdP",
+                "summary": "Create a new IdP",
                 "responses": {
                     "201": {
                         "content": {
@@ -24002,10 +24012,10 @@
                                 }
                             }
                         },
-                        "description": "Forbidden"
+                        "description": "Forbidden. User missing `TenantAdmin` role, or the tenantID in the JWT does not match any of the tenantIDs in the payload."
                     }
                 },
-                "description": "This endpoint creates an identity provider resource. It returns a 201 Created when creation is successful with a header \"QLIK-IDP-POPTS\" (A unique string representing a hash of the current configuration being tested), returns a 403 Forbidden for a non TenantAdmin user JWT or if the tenantID in the JWT does not match with any of the tenantIDs in the payload. An IdP can be created with Pending Options or options depending whether the IdP is interactive or not.",
+                "description": "Creates a new IdP on a tenant. Requesting user must be assigned the `TenantAdmin` role. For non-interactive IdPs (e.g. JWT), IdP must be created by sending `options` payload. For interactive IdPs (e.g. SAML or OIDC), send `pendingOptions` payload to require the interactive verification step; or send `options` payload with `skipVerify` set to `true` to skip validation step and make IdP immediately available.",
                 "operationId": "createIdp",
                 "requestBody": {
                     "content": {
@@ -24022,7 +24032,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "8d724b13-896b-4176-9654-d255deaf7b81",
+                "x-qlik-entity-revision": "9c1fc355-3f55-4a64-b7c0-333349094ca2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -24035,7 +24045,7 @@
                 "tags": [
                     "idp"
                 ],
-                "summary": "Returns identity providers' metadata",
+                "summary": "Return IdP configuration metadata",
                 "responses": {
                     "200": {
                         "content": {
@@ -24048,14 +24058,14 @@
                         "description": "Success"
                     }
                 },
-                "description": "This endpoint retrieves identity providers' metadata.",
+                "description": "Returns IdP configuration metadata supported on the tenant. Clients can use this information to programmatically configure their interactions with Qlik Cloud.",
                 "operationId": "getWellKnownMetaData",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "a2a337b8-5649-45c2-a903-7b1e7d8f7dca",
+                "x-qlik-entity-revision": "fd5a5789-1b0b-416a-8eae-ece078df539c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -24068,7 +24078,7 @@
                 "tags": [
                     "idp"
                 ],
-                "summary": "Returns the IdP with the specified ID",
+                "summary": "Get an IdP",
                 "responses": {
                     "200": {
                         "content": {
@@ -24117,14 +24127,14 @@
                         "description": "The identity provider ID."
                     }
                 ],
-                "description": "This endpoint is used to retrieve an identity provider from the service. It returns a valid 200 OK response when the IdP exists and the user (TenantAdmin) or service (edge-auth) is authorized to view the contents. Additionally, returns a header \"QLIK-IDP-POPTS\" (A unique string representing a hash of the current configuration being tested). It returns a 404 Not Found if the criteria is not met.",
+                "description": "Retrieves a specific IdP. Requesting user must be assigned the `TenantAdmin` role.",
                 "operationId": "getIdp",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "82fd7c81-25a8-4aac-ad53-f300ee5060d0",
+                "x-qlik-entity-revision": "fbc834a4-2800-4915-ae30-4c7266295e93",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -24135,7 +24145,7 @@
                 "tags": [
                     "idp"
                 ],
-                "summary": "Updates the IdP with the specified ID",
+                "summary": "Update an IdP",
                 "responses": {
                     "204": {
                         "description": "Success"
@@ -24215,7 +24225,7 @@
                         "$ref": "#/components/parameters/qlikIdpPoptsMatch"
                     }
                 ],
-                "description": "This endpoint patches an identity provider from the service. It returns a valid 204 when the IdP is patched. Only an edge-auth service request or a user with the role of TenantAdmin can patch an associated IdP. Partial failure is treated as complete failure and returns an error.",
+                "description": "Updates the configuration of an IdP. Requesting user must be assigned the `TenantAdmin` role. Partial failure is treated as complete failure and returns an error.",
                 "operationId": "updateIdp",
                 "requestBody": {
                     "content": {
@@ -24232,7 +24242,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "43c50ba7-27f5-4c10-996e-07fbd41f4211",
+                "x-qlik-entity-revision": "551c5749-406c-4746-927f-b2af70fafbfe",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -24243,7 +24253,7 @@
                 "tags": [
                     "idp"
                 ],
-                "summary": "Deletes the IdP with the specified ID",
+                "summary": "Delete an IdP",
                 "responses": {
                     "204": {
                         "description": "Success"
@@ -24280,14 +24290,14 @@
                         "description": "The identity provider ID."
                     }
                 ],
-                "description": "This endpoint deletes an identity provider from the service. It returns a valid 204 when the IdP is deleted. Only a user with the role of TenantAdmin and tenant access can delete an associated IdP. Edge-auth service can also delete.",
+                "description": "Deletes an identity provider. Requesting user must be assigned the `TenantAdmin` role.",
                 "operationId": "deleteIdp",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c06f551d-9269-4bfd-9e0a-e095983b19bf",
+                "x-qlik-entity-revision": "9521b6c0-d27a-481f-b682-96a0a309d424",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -24300,7 +24310,7 @@
                 "tags": [
                     "idp"
                 ],
-                "summary": "Returns the active interactive IdP metadata",
+                "summary": "Return active interactive IdP metadata",
                 "responses": {
                     "200": {
                         "content": {
@@ -24343,14 +24353,14 @@
                         "description": "Internal server error"
                     }
                 },
-                "description": "This endpoint retrieves IdP metadata.",
+                "description": "Retrieves default IdP metadata when no interactive IdP is enabled.",
                 "operationId": "getMeMeta",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "2f61689c-cea7-45df-b38f-414b90a2d339",
+                "x-qlik-entity-revision": "c4e28336-80f7-41d7-beda-650cc54fcc29",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -24363,7 +24373,7 @@
                 "tags": [
                     "idp"
                 ],
-                "summary": "Returns the current status of IdP configurations",
+                "summary": "List IdP statuses",
                 "responses": {
                     "200": {
                         "content": {
@@ -24406,14 +24416,14 @@
                         "description": "Internal Server Error"
                     }
                 },
-                "description": "This endpoint retrieves the status of IdP configurations. Requires TenantAdmin role.",
+                "description": "Retrieves the status of all IdP configurations. Requires `TenantAdmin` role.",
                 "operationId": "getStatus",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c11ae1f3-c79f-4e01-96bf-3163a96b4dc9",
+                "x-qlik-entity-revision": "c7d05f72-1e9e-496a-b5b1-61f4c73c290f",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -31278,7 +31288,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "c94af0b7-81c1-477c-ab15-8579d828a87e",
+                "x-qlik-entity-revision": "a7d6e456-bd18-4848-b62c-e1781dd4ebce",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -31455,7 +31465,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "4b289754-5204-45a6-bfb5-e6e35330b6db",
+                "x-qlik-entity-revision": "779ebf2d-b83e-48b7-b4d8-325015658a5a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -40002,7 +40012,7 @@
                     "code": {
                         "type": "string",
                         "example": "REP-400000",
-                        "description": "The unique code for the error\n\n- \"REP-400000\" Bad request. The server could not understand the request due to invalid syntax.\n- \"REP-400008\" Selections error.\n- \"REP-400015\" Bad request in enigma request. The patch value has invalid JSON format.\n- \"REP-401000\" Unauthorized. The client must authenticate itself to get the requested response.\n- \"REP-401001\" Unauthorized, bad JWT.\n- \"REP-403000\" Forbidden. The client does not have access rights to the content.\n- \"REP-403001\" App forbidden, the user does not have read permission on the app.\n- \"REP-403002\" Chart type not supported.\n- \"REP-404000\" Not found. The server can not find the requested resource.\n- \"REP-409043\" Filter name conflict. The filter name must be unique.\n- \"REP-429000\" Too many request. The user has sent too many requests in a given amount of time (\"rate limiting\").\n- \"REP-429012\" Exceeded max session tenant quota. A tenant has opened too many different sessions at the same time.\n- \"REP-429016\" Exceeded max session tenant quota per day.\n- \"REP-500000\" Fail to resolve resource.\n- \"REP-503005\" Engine unavailable, qix-sessions error no engines available.\n- \"REP-503013\" Session unavailable. The engine session used to create the report is unavailable.\n- \"REP-504042\" Context deadline exceeded applying selections of the Filter.\n"
+                        "description": "The unique code for the error\n\n- \"REP-400000\" Bad request. The server could not understand the request due to invalid syntax.\n- \"REP-400008\" Selections error.\n- \"REP-400015\" Bad request in enigma request. The patch value has invalid JSON format.\n- \"REP-401000\" Unauthorized. The client must authenticate itself to get the requested response.\n- \"REP-401001\" Unauthorized, bad JWT.\n- \"REP-403000\" Forbidden. The client does not have access rights to the content.\n- \"REP-403001\" App forbidden, the user does not have read permission on the app.\n- \"REP-403002\" Chart type not supported.\n- \"REP-404000\" Not found. The server can not find the requested resource.\n- \"REP-409043\" Filter name conflict. The filter name must be unique.\n- \"REP-429000\" Too many request. The user has sent too many requests in a given amount of time (\"rate limiting\").\n- \"REP-429012\" Exceeded max session tenant quota. A tenant has opened too many different sessions at the same time.\n- \"REP-429016\" Exceeded max session tenant quota per day.\n- \"REP-500000\" Fail to resolve resource.\n- \"REP-503005\" Engine unavailable, qix-sessions error no engines available.\n- \"REP-503013\" Session unavailable. The engine session used to create the report is unavailable.\n- \"REP-504042\" Context deadline exceeded applying selections of the Filter.\n- \"REP-500031\" Error creating bookmark.\n- \"REP-404032\" Bookmark not found after creating the bookmark.\n- \"REP-500033\" Error destroying bookmark.\n- \"REP-404033\" Bookmark not found destroying the bookmark.\n- \"REP-409043\" Dupliacate bookmark name.\n- \"REP-429034\" Filters quota exceeded.\n- \"REP-400044\" Missing or renamed field.\n- \"REP-403049\" Report filter access not allowed.\n"
                     },
                     "title": {
                         "type": "string",
@@ -57749,7 +57759,7 @@
                 "properties": {
                     "code": {
                         "type": "string",
-                        "description": "The unique code for the error\n\n- \"REP-400000\" Bad request. The server could not understand the request due to invalid syntax.\n- \"REP-400008\" Selections error.\n- \"REP-400009\" Maximum 16384 columns limit exceeded. Download data in a visualization can't generate an .xlsx file due to limitations to the number of columns you can download.\n- \"REP-400010\" Maximum 1048566 rows limit exceeded. Download data in a visualization can't generate an .xlsx file due to limitations to the number of rows you can download.\n- \"REP-400011\" The size of the downloaded Excel file exceed 100 MB limit. Download data in a visualization can't generate an .xlsx file due to limitations to the amount of data you can download.\n- \"REP-400015\" Bad request in enigma request. The patch value has invalid JSON format.\n- \"REP-401000\" Unauthorized. The client must authenticate itself to get the requested response.\n- \"REP-401001\" Unauthorized, bad JWT.\n- \"REP-403000\" Forbidden. The client does not have access rights to the content.\n- \"REP-403001\" App forbidden, the user does not have read permission on the app.\n- \"REP-403002\" Chart type not supported.\n- \"REP-404000\" Not found. The server can not find the requested resource.\n- \"REP-404001\" App not found, the app does not exist or it has been deleted.\n- \"REP-404002\" Chart not found, the chart does not exist or it has been deleted.\n- \"REP-404003\" Sheet not found, the sheet does not exist or it has been deleted or it is unavailable.\n- \"REP-404004\" Story not found, the story does not exist or it has been deleted or it is unavailable.\n- \"REP-429000\" Too many request. The user has sent too many requests in a given amount of time (\"rate limiting\").\n- \"REP-429012\" Exceeded max session tenant quota. A tenant has opened too many different sessions at the same time.\n- \"REP-429014\" The export could not be completed within the requested deadline.\n- \"REP-429016\" Exceeded max session tenant quota per day.\n- \"REP-500000\" Fail to resolve resource.\n- \"REP-500006\" Fail to get report session parameters.\n- \"REP-503005\" Engine unavailable, qix-sessions error no engines available.\n- \"REP-503013\" Session unavailable. The engine session used to create the report is unavailable.\n- \"REP-500100\" Image rendering generic error on Sense client.\n- \"REP-500101\" Image rendering could not set cookies error on Sense client.\n- \"REP-400102\" Image rendering invalid strategy error on Sense client.\n- \"REP-500103\" Image rendering JS timeout error on Sense client.\n- \"REP-500104\" Image rendering load URL timeout error on Sense client.\n- \"REP-500105\" Image rendering max paint attempts exceeded error on Sense client.\n- \"REP-500106\" Image rendering max JS attempts exceeded error on Sense client.\n- \"REP-500107\" Image rendering render timeout error on Sense client.\n- \"REP-500108\" Image rendering JS failure due to timeout error on Sense client.\n- \"REP-500109\" Image rendering generic JS failure error on Sense client.\n- \"REP-400029\" Reload Entitlement Limit Reached.\n- \"REP-409046\" Report aborted due to app reload.\n- \"REP-500047\" Error setting GroupState.\n- \"REP-403048\" Forbidden. User does not have permission to export the report (access control usePermission)\n- \"REP-422051\" There is no report to produce due to empty dataset or missing fields (the measure/dimension was removed or omitted in Section Access)\n- \"REP-500014\" The app did not open within 5 minutes.\n"
+                        "description": "The unique code for the error\n\n- \"REP-400000\" Bad request. The server could not understand the request due to invalid syntax.\n- \"REP-400008\" Selections error.\n- \"REP-400009\" Maximum 16384 columns limit exceeded. Download data in a visualization can't generate an .xlsx file due to limitations to the number of columns you can download.\n- \"REP-400010\" Maximum 1048566 rows limit exceeded. Download data in a visualization can't generate an .xlsx file due to limitations to the number of rows you can download.\n- \"REP-400011\" The size of the downloaded Excel file exceed 100 MB limit. Download data in a visualization can't generate an .xlsx file due to limitations to the amount of data you can download.\n- \"REP-400015\" Bad request in enigma request. The patch value has invalid JSON format.\n- \"REP-401000\" Unauthorized. The client must authenticate itself to get the requested response.\n- \"REP-401001\" Unauthorized, bad JWT.\n- \"REP-403000\" Forbidden. The client does not have access rights to the content.\n- \"REP-403001\" App forbidden, the user does not have read permission on the app.\n- \"REP-403002\" Chart type not supported.\n- \"REP-404000\" Not found. The server can not find the requested resource.\n- \"REP-404001\" App not found, the app does not exist or it has been deleted.\n- \"REP-404002\" Chart not found, the chart does not exist or it has been deleted.\n- \"REP-404003\" Sheet not found, the sheet does not exist or it has been deleted or it is unavailable.\n- \"REP-404004\" Story not found, the story does not exist or it has been deleted or it is unavailable.\n- \"REP-429000\" Too many request. The user has sent too many requests in a given amount of time (\"rate limiting\").\n- \"REP-429012\" Exceeded max session tenant quota. A tenant has opened too many different sessions at the same time.\n- \"REP-429014\" The export could not be completed within the requested deadline.\n- \"REP-429016\" Exceeded max session tenant quota per day.\n- \"REP-500000\" Fail to resolve resource.\n- \"REP-500006\" Fail to get report session parameters.\n- \"REP-503005\" Engine unavailable, qix-sessions error no engines available.\n- \"REP-503013\" Session unavailable. The engine session used to create the report is unavailable.\n- \"REP-500100\" Image rendering generic error on Sense client.\n- \"REP-500101\" Image rendering could not set cookies error on Sense client.\n- \"REP-400102\" Image rendering invalid strategy error on Sense client.\n- \"REP-500103\" Image rendering JS timeout error on Sense client.\n- \"REP-500104\" Image rendering load URL timeout error on Sense client.\n- \"REP-500105\" Image rendering max paint attempts exceeded error on Sense client.\n- \"REP-500106\" Image rendering max JS attempts exceeded error on Sense client.\n- \"REP-500107\" Image rendering render timeout error on Sense client.\n- \"REP-500108\" Image rendering JS failure due to timeout error on Sense client.\n- \"REP-500109\" Image rendering generic JS failure error on Sense client.\n- \"REP-400029\" Reload Entitlement Limit Reached.\n- \"REP-409046\" Report aborted due to app reload.\n- \"REP-500047\" Error setting GroupState.\n- \"REP-403048\" Forbidden. User does not have permission to export the report (access control usePermission)\n- \"REP-422051\" There is no report to produce due to empty dataset or missing fields (the measure/dimension was removed or omitted in Section Access)\n- \"REP-500014\" The app did not open within 10 minutes.\n- \"REP-400017\" Static App size exceeded.\n- \"REP-400018\" Excel string length exceeded.\n- \"REP-403019\" Export is not available for app with enabled directQuery feature.\n- \"REP-409001\" App conflict.\n- \"REP-503001\" Rest Engine Error.\n- \"REP-400020\" Invalid Issuer.\n- \"REP-400028\" Invalid Tags.\n- \"REP-409021\" Reload timestamp constraint not met.\n- \"REP-429022\" Enigma generic abort.\n- \"REP-500023\" Validate Report Request Tags failure.\n- \"REP-400024\" Cannot extract claims from JWT.\n- \"REP-403025\" No entitlement to perform the operation.\n- \"REP-403026\" No entitlement to perform the operation. Export capability is off.\n- \"REP-403027\" Object without Hypercube or unsupported object type.\n- \"REP-422030\" Apply variables error.\n- \"REP-500200\" Report Generator error.\n- \"REP-400035\" Multiple selections detected in a field having OneAndOnlyone attribute.\n- \"REP-400036\" No selection detected in a field having OneAndOnlyone attribute.\n- \"REP-400037\" Max number of images exceeded in a report.\n- \"REP-400038\" Max number of nested levels exceeded in report.\n- \"REP-400039\" Max number of objects exceeded in a report.\n- \"REP-400040\" Max number of templates exceeded in a report.\n- \"REP-400041\" Unsupported dimension type for level tag.\n- \"REP-500240\" Engine Global generic closure error.\n- \"REP-500260\" Engine Websocket generic closure error.\n- \"REP-500280\" Engine proxy generic closure error.\n- \"REP-400240\" Engine Client Global generic closure error\n- \"REP-400260\" Engine Client generic closure error.\n- \"REP-400280\" Engine Client proxy generic closure error.\n- \"REP-500045\" Failure setting Bookmark timestamp.\n- \"REP-400050\" Error retrieving outputs.\n- \"REP-400052\" Report Request Aborted from internal error.\n- \"REP-500053\" Unexpected number of generated cycle reports.\n- \"REP-400054\" The number of generated cycle reports exceeds the maximum allowed.\n"
                     },
                     "meta": {
                         "$ref": "#/components/schemas/MetaExportError"
@@ -58230,6 +58240,9 @@
                         },
                         "minItems": 1,
                         "description": "Composition of senseSheetTemplate and/or senseImageTemplate templates."
+                    },
+                    "requestCallBackAction": {
+                        "$ref": "#/components/schemas/CallBackAction"
                     },
                     "sensePixelPerfectTemplate": {
                         "$ref": "#/components/schemas/SenseFileTemplate"
