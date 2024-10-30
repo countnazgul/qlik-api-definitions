@@ -4698,7 +4698,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "ac484c36-8d91-487d-8ee8-b903eea6e395",
+                "x-qlik-entity-revision": "ca66fd01-06bd-4a52-a5dd-7759f51382bb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -4762,7 +4762,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "8b7e33eb-94ec-4d57-829d-6c03c003623e",
+                "x-qlik-entity-revision": "dcc08b7a-caeb-4e0d-be89-05b493a5bff6",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -4835,7 +4835,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "e54146c7-72c0-4508-a39e-d960b3b504f7",
+                "x-qlik-entity-revision": "3c1eb2b6-fa91-4bdc-bd6c-34d6081733bc",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -6249,110 +6249,6 @@
                 ],
                 "x-qlik-entity-revision": "c91dc93e-7493-4ccf-b6d4-5ce8e786e237",
                 "x-qlik-deprecated": false,
-                "x-qlik-tier": {
-                    "tier": "2",
-                    "limit": 100
-                }
-            }
-        },
-        "/v1/automations/settings": {
-            "get": {
-                "tags": [
-                    "automations"
-                ],
-                "summary": "Retrieves the automation settings.",
-                "responses": {
-                    "200": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SettingsObject"
-                                }
-                            }
-                        },
-                        "description": "OK Response"
-                    },
-                    "400": {
-                        "$ref": "#/components/responses/BadRequest"
-                    },
-                    "401": {
-                        "$ref": "#/components/responses/Unauthorized"
-                    },
-                    "403": {
-                        "$ref": "#/components/responses/Forbidden"
-                    },
-                    "500": {
-                        "$ref": "#/components/responses/InternalServerError"
-                    },
-                    "503": {
-                        "$ref": "#/components/responses/ServiceUnavailable"
-                    }
-                },
-                "operationId": "getSettings",
-                "x-qlik-deprecated": true,
-                "x-qlik-visibility": "public",
-                "x-qlik-stability": "stable",
-                "x-qlik-categories": [
-                    "external/manage",
-                    "external/build"
-                ],
-                "x-qlik-entity-revision": "06327531-c034-4dbf-bdd7-5e97ef17f0a7",
-                "x-qlik-tier": {
-                    "tier": "1",
-                    "limit": 1000
-                }
-            },
-            "put": {
-                "tags": [
-                    "automations"
-                ],
-                "summary": "Update the automation settings.",
-                "responses": {
-                    "200": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/SettingsObject"
-                                }
-                            }
-                        },
-                        "description": "OK Response"
-                    },
-                    "400": {
-                        "$ref": "#/components/responses/BadRequest"
-                    },
-                    "401": {
-                        "$ref": "#/components/responses/Unauthorized"
-                    },
-                    "403": {
-                        "$ref": "#/components/responses/Forbidden"
-                    },
-                    "500": {
-                        "$ref": "#/components/responses/InternalServerError"
-                    },
-                    "503": {
-                        "$ref": "#/components/responses/ServiceUnavailable"
-                    }
-                },
-                "operationId": "putSettings",
-                "requestBody": {
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/SettingsObject"
-                            }
-                        }
-                    },
-                    "required": true
-                },
-                "x-qlik-deprecated": true,
-                "x-qlik-visibility": "public",
-                "x-qlik-stability": "stable",
-                "x-qlik-categories": [
-                    "external/manage",
-                    "external/build"
-                ],
-                "x-qlik-entity-revision": "bc159094-53c9-4a29-9e1a-5b429b6c65c2",
                 "x-qlik-tier": {
                     "tier": "2",
                     "limit": 100
@@ -13291,7 +13187,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "438fc9e3-f0b5-4ebf-a599-5cf7940b8c52",
+                "x-qlik-entity-revision": "2b84813b-857a-460c-a4a8-023d16d9bb5a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -13481,7 +13377,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "da9cd77a-59a5-4e28-8909-2833e56b5e50",
+                "x-qlik-entity-revision": "0e80d84e-3471-41f0-9b5c-a5113bec1a5d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -14232,7 +14128,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "58089aa2-ceb6-4b0f-a8df-0bd1fda58e6e",
+                "x-qlik-entity-revision": "4ef58718-07e7-4658-b664-0781007987a6",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -14413,6 +14309,65 @@
                     "external/manage"
                 ],
                 "x-qlik-entity-revision": "e4ea0957-ffed-4a3f-be0c-1a7a42984050",
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            }
+        },
+        "/v1/data-credentials/actions/filter-orphan": {
+            "post": {
+                "tags": [
+                    "data-credentials"
+                ],
+                "summary": "Gets list of orphan data credentials (i.e. credentials that are not associated to any data connection) filtering on properties defined in request body",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ActionFilterOrphanResponse"
+                                }
+                            }
+                        },
+                        "description": "Orphan credentials returned"
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseErrors"
+                                }
+                            }
+                        },
+                        "description": "Bad request (Missing required field in request body)"
+                    },
+                    "403": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ResponseErrors"
+                                }
+                            }
+                        },
+                        "description": "User has no access to credentials"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ActionFilterOrphanRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [],
+                "x-qlik-entity-revision": "4a3ab913-c34c-45a4-bcaa-b9bbbf944d06",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -33408,6 +33363,15 @@
                     },
                     {
                         "in": "query",
+                        "name": "assigneeId",
+                        "schema": {
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "Filters assignment for a specific assigneeid."
+                    },
+                    {
+                        "in": "query",
                         "name": "limit",
                         "schema": {
                             "type": "integer",
@@ -33451,7 +33415,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "036f08f4-305b-4405-9b90-5bdfe672ad9a",
+                "x-qlik-entity-revision": "f3c2b31c-88f0-47c0-ad2e-f9232310112d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -36156,7 +36120,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "3d3f35db-757b-4ea3-b381-2f5655954aac",
+                "x-qlik-entity-revision": "070c4fbc-5fa2-425b-ae8f-d17dfede2849",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -36622,77 +36586,6 @@
                 ],
                 "x-qlik-entity-revision": "2e6c32e0-8b9f-473b-88e5-d0c2cb2c129f",
                 "x-qlik-deprecated": false,
-                "x-qlik-tier": {
-                    "tier": "1",
-                    "limit": 1000
-                }
-            }
-        },
-        "/v1/users/metadata": {
-            "get": {
-                "tags": [
-                    "users"
-                ],
-                "summary": "Get configuration metadata",
-                "responses": {
-                    "200": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Metadata"
-                                }
-                            }
-                        },
-                        "description": "User configuration"
-                    },
-                    "401": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Unauthorized."
-                    },
-                    "429": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "headers": {
-                            "retry-after": {
-                                "schema": {
-                                    "type": "integer",
-                                    "default": 1
-                                },
-                                "description": "The amount of seconds to wait before retrying the request."
-                            }
-                        },
-                        "description": "Request has been rate limited."
-                    },
-                    "500": {
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Errors"
-                                }
-                            }
-                        },
-                        "description": "Internal server error."
-                    }
-                },
-                "description": "Returns the metadata with regard to the user configuration. Deprecated, use GET /v1/roles instead.",
-                "x-qlik-deprecated": true,
-                "x-qlik-visibility": "public",
-                "x-qlik-stability": "stable",
-                "x-qlik-categories": [
-                    "external/manage"
-                ],
-                "x-qlik-entity-revision": "54c27104-3707-4067-9ac4-d620ca8b67b3",
                 "x-qlik-tier": {
                     "tier": "1",
                     "limit": 1000
@@ -42361,72 +42254,6 @@
                     }
                 }
             },
-            "AutomationConnectionDataObject": {
-                "type": "object",
-                "properties": {
-                    "id": {
-                        "type": "string",
-                        "example": "e0e720d0-4947-11ec-a1d2-9559fa35801d",
-                        "description": "The unique identifier of the automation connection."
-                    },
-                    "name": {
-                        "type": "string",
-                        "example": "connection",
-                        "description": "The name of the automation connection."
-                    },
-                    "error": {
-                        "type": "object",
-                        "description": "This contains the error message if a connection is being created with an issue."
-                    },
-                    "params": {
-                        "type": "array",
-                        "items": {
-                            "$ref": "#/components/schemas/AutomationConnectionParamObject"
-                        }
-                    },
-                    "ownerId": {
-                        "type": "string",
-                        "example": "sWYAHxZxhtcmBT7Ptc5xJ5I6N7HxwnEy",
-                        "description": "The unique identifier of the owner of the automation connection."
-                    },
-                    "spaceId": {
-                        "type": "string",
-                        "example": "5f0f78b239ff4f0001234567",
-                        "description": "The space ID of the automation connection."
-                    },
-                    "redirect": {
-                        "type": "string",
-                        "description": "The redirect of the OAuth account."
-                    },
-                    "createdAt": {
-                        "type": "string",
-                        "format": "date-time",
-                        "example": "2021-12-23T12:28:21.000000Z",
-                        "description": "The timestamp when the automation connection was created."
-                    },
-                    "updatedAt": {
-                        "type": "string",
-                        "format": "date-time",
-                        "example": "2021-12-23T12:28:21.000000Z",
-                        "description": "The timestamp when the automation connection was updated."
-                    },
-                    "connectorId": {
-                        "type": "string",
-                        "example": "e0e720d0-4947-11ec-a1d2-9559fa35801d",
-                        "description": "The unique identifier of the automation connector."
-                    },
-                    "isConnected": {
-                        "type": "boolean",
-                        "example": true,
-                        "description": "The connection status of the automation connection. When true, the automation connection is connected."
-                    },
-                    "oauthAccountName": {
-                        "type": "string",
-                        "example": "oauth",
-                        "description": "The name of the OAuth account associated with the automation connection."
-                    }
-                }
-            },
             "AutomationConnectionDetailObject": {
                 "type": "object",
                 "properties": {
@@ -42434,15 +42261,6 @@
                         "type": "string",
                         "example": "e0e720d0-4947-11ec-a1d2-9559fa35801d",
                         "description": "The unique identifier of the automation connection."
-                    },
-                    "data": {
-                        "allOf": [
-                            {
-                                "$ref": "#/components/schemas/AutomationConnectionDataObject"
-                            }
-                        ],
-                        "description": "DEPRECATED. The content inside this property is also on the top level. Hense, this will be removed as duplicate.",
-                        "x-qlik-deprecated": true
                     },
                     "name": {
                         "type": "string",
@@ -43379,14 +43197,6 @@
                         "type": "string",
                         "format": "date-time",
                         "example": "2022-01-01T12:28:21.000000Z"
-                    }
-                }
-            },
-            "SettingsObject": {
-                "type": "object",
-                "properties": {
-                    "automationsEnabled": {
-                        "type": "boolean"
                     }
                 }
             },
@@ -47227,12 +47037,14 @@
                     "created": {
                         "type": "string",
                         "example": "2022-04-08T10:00:28.287Z",
-                        "description": "Datetime when the connection was created"
+                        "description": "Datetime when the connection was created",
+                        "x-qlik-filterable": true
                     },
                     "updated": {
                         "type": "string",
                         "example": "2022-04-09T10:00:28.287Z",
-                        "description": "Datetime when the connection was last updated"
+                        "description": "Datetime when the connection was last updated",
+                        "x-qlik-filterable": true
                     },
                     "privileges": {
                         "type": "array",
@@ -47836,6 +47648,50 @@
                     }
                 }
             },
+            "ActionFilterOrphanRequest": {
+                "type": "object",
+                "properties": {
+                    "qType": {
+                        "type": "string",
+                        "example": "QvOdbcConnectorPackage.exe",
+                        "description": "Filtering on type of credentials"
+                    },
+                    "qSeparated": {
+                        "enum": [
+                            0,
+                            1
+                        ],
+                        "type": "integer",
+                        "example": 0,
+                        "description": "Filtering on separate status of credentials: * 0 - embedded credential * 1 - separated credential\n"
+                    },
+                    "datasourceID": {
+                        "type": "string",
+                        "example": "snowflake",
+                        "description": "Filtering on datasource ID of credentials"
+                    }
+                }
+            },
+            "ActionFilterOrphanResponse": {
+                "type": "object",
+                "required": [
+                    "data",
+                    "count"
+                ],
+                "properties": {
+                    "data": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/OrphanCredentialResItem"
+                        }
+                    },
+                    "count": {
+                        "type": "integer",
+                        "example": 1,
+                        "description": "Number of orphan credentials found"
+                    }
+                }
+            },
             "Credential": {
                 "type": "object",
                 "required": [
@@ -47856,12 +47712,25 @@
                     "qName": {
                         "type": "string",
                         "example": "MyCredential for REST datasource",
-                        "description": "Name of the credential"
+                        "description": "Name of the credential",
+                        "x-qlik-filterable": true
                     },
                     "qType": {
                         "type": "string",
                         "example": "QvWebStorageProviderConnectorPackage.exe",
                         "description": "Type of credential",
+                        "x-qlik-filterable": true
+                    },
+                    "created": {
+                        "type": "string",
+                        "example": "2022-04-08T10:00:28.287Z",
+                        "description": "Datetime when the credential was created",
+                        "x-qlik-filterable": true
+                    },
+                    "updated": {
+                        "type": "string",
+                        "example": "2022-04-09T10:00:28.287Z",
+                        "description": "Datetime when the credential was last updated",
                         "x-qlik-filterable": true
                     },
                     "qConnCount": {
@@ -47927,6 +47796,60 @@
                     }
                 },
                 "description": "Credential"
+            },
+            "OrphanCredentialResItem": {
+                "required": [
+                    "qID",
+                    "qName",
+                    "qType",
+                    "userId",
+                    "tenantId",
+                    "created",
+                    "updated"
+                ],
+                "properties": {
+                    "qID": {
+                        "type": "string",
+                        "example": "c2dd20e3-1842-42d0-81fe-1ecf08e6abde",
+                        "description": "UUID of the credential"
+                    },
+                    "user": {
+                        "type": "string",
+                        "example": "rFdHeUOiVYgPX5iTbvL0x0Cs6F62QI",
+                        "description": "User ID of the credential's owner"
+                    },
+                    "qName": {
+                        "type": "string",
+                        "example": "MyCredential for REST datasource",
+                        "description": "Name of the credential"
+                    },
+                    "qType": {
+                        "type": "string",
+                        "example": "QvWebStorageProviderConnectorPackage.exe",
+                        "description": "Type of credential (i.e. connector provider of the corresponding connection)"
+                    },
+                    "tenant": {
+                        "type": "string",
+                        "example": "xqFQ0k34vSR0d9G7J-vZtHZQkiYrCqc8",
+                        "description": "Tenant ID of the credential's owner"
+                    },
+                    "created": {
+                        "type": "string",
+                        "example": "2022-04-08T10:00:28.287Z",
+                        "description": "Datetime when the credential was created"
+                    },
+                    "updated": {
+                        "type": "string",
+                        "example": "2022-04-09T10:00:28.287Z",
+                        "description": "Datetime when the credential was last updated"
+                    },
+                    "datasourceID": {
+                        "type": "string",
+                        "example": "rest",
+                        "description": "ID datasource that the credential is created for"
+                    }
+                },
+                "description": "Orphan credential"
             },
             "BatchChangeSpaceItem": {
                 "type": "object",
@@ -52225,7 +52148,8 @@
                             "/inviteExpiry",
                             "/preferredZoneinfo",
                             "/preferredLocale",
-                            "/status"
+                            "/status",
+                            "/assignedGroups"
                         ],
                         "type": "string",
                         "description": "A JSON Pointer."
@@ -61930,24 +61854,6 @@
                     }
                 }
             },
-            "Metadata": {
-                "type": "object",
-                "properties": {
-                    "valid_roles": {
-                        "type": "array",
-                        "items": {
-                            "type": "string"
-                        },
-                        "example": [
-                            "TenantAdmin",
-                            "Developer"
-                        ],
-                        "description": "List of system roles to which the user can be assigned."
-                    }
-                },
-                "description": "An object containing the metadata for the user configuration.",
-                "x-qlik-deprecated": true
-            },
             "ResultItem": {
                 "type": "object",
                 "required": [
@@ -63247,10 +63153,10 @@
                 "name": "filter",
                 "schema": {
                     "type": "string",
-                    "example": "qName co \"abc\" or qName sw \"dd\" and qType eq \"rest\""
+                    "example": "qName co \"abc\" or qName sw \"dd\" and qType eq \"rest\" and created gt \"2000-01-10T15:04:05Z\""
                 },
                 "required": false,
-                "description": "Filtering resources by properties (filterable properties only) using SCIM filter string. Note the filter string only applies to connections managed by data-connections service, i.e. filtering doesn't apply to DataFile connections."
+                "description": "Filtering resources by properties (filterable properties only) using SCIM filter string. Note the filter string only applies to connections managed by data-connections service, i.e. filtering doesn't apply to DataFile connections. When filtering on datetime property (e.g. created, updated), datetime should be in RFC3339 format."
             },
             "includeQris": {
                 "in": "query",
