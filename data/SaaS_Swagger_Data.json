@@ -49,6 +49,13 @@
                                 }
                             }
                         },
+                        "headers": {
+                            "retry-after": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/RetryAfterHeader"
+                                }
+                            }
+                        },
                         "description": "Request has been rate limited."
                     }
                 },
@@ -156,7 +163,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "b8507d3b-9d15-4d70-b84d-d95d6c4e62fe",
+                "x-qlik-entity-revision": "899017f8-621f-4887-8378-f2344a539cdf",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -207,6 +214,13 @@
                                 }
                             }
                         },
+                        "headers": {
+                            "retry-after": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/RetryAfterHeader"
+                                }
+                            }
+                        },
                         "description": "Request has been rate limited."
                     },
                     "default": {
@@ -238,7 +252,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "97ec6356-5781-4d1c-b38a-67417dc9426f",
+                "x-qlik-entity-revision": "f54421b0-5c3f-44c3-a709-bc6a53677c14",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -291,6 +305,13 @@
                                 }
                             }
                         },
+                        "headers": {
+                            "retry-after": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/RetryAfterHeader"
+                                }
+                            }
+                        },
                         "description": "Request has been rate limited."
                     },
                     "default": {
@@ -323,7 +344,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "c3f54bf6-83ae-4be8-8255-5cb72551361b",
+                "x-qlik-entity-revision": "f490e309-83c2-4246-ab94-67c2421206b3",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -337,9 +358,6 @@
                 "summary": "Update API key description",
                 "responses": {
                     "204": {
-                        "content": {
-                            "application/json": {}
-                        },
                         "description": "API key updated successfully."
                     },
                     "400": {
@@ -380,6 +398,13 @@
                                 }
                             }
                         },
+                        "headers": {
+                            "retry-after": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/RetryAfterHeader"
+                                }
+                            }
+                        },
                         "description": "Request has been rate limited."
                     }
                 },
@@ -413,7 +438,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "222f7e0b-ddd3-46f5-8007-18bd27e664b7",
+                "x-qlik-entity-revision": "494614e8-a373-47c8-b9b9-8d9d5d6ff4c6",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -457,6 +482,13 @@
                                 }
                             }
                         },
+                        "headers": {
+                            "retry-after": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/RetryAfterHeader"
+                                }
+                            }
+                        },
                         "description": "Request has been rate limited."
                     }
                 },
@@ -479,7 +511,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "a226b17b-b88c-4d2c-9f1f-538e6f79e245",
+                "x-qlik-entity-revision": "6195797a-d75d-4417-91cd-ef48dc9f08ad",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -509,6 +541,13 @@
                             "application/json": {
                                 "schema": {
                                     "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "retry-after": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/RetryAfterHeader"
                                 }
                             }
                         },
@@ -545,7 +584,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "b3deed9a-947f-4c25-8a09-cbb2aeec0e67",
+                "x-qlik-entity-revision": "7e8a9f69-6a0a-491e-b0d9-bae912783407",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -559,9 +598,6 @@
                 "summary": "Update API keys configuration",
                 "responses": {
                     "204": {
-                        "content": {
-                            "application/json": {}
-                        },
                         "description": "API keys configuration updated successfully."
                     },
                     "400": {
@@ -602,6 +638,13 @@
                                 }
                             }
                         },
+                        "headers": {
+                            "retry-after": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/RetryAfterHeader"
+                                }
+                            }
+                        },
                         "description": "Request has been rate limited."
                     }
                 },
@@ -635,7 +678,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "962fcd8d-d596-48f5-97a6-b82c94296d5c",
+                "x-qlik-entity-revision": "3eb03ba5-19db-41f5-8537-ccd20a38d846",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -4150,7 +4193,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "9ea60f18-361c-4955-a629-9e79ae277687",
+                "x-qlik-entity-revision": "214d398b-a038-4146-9150-c790f0b4bf63",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -4243,7 +4286,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "db9df3ae-1f65-4eea-b442-8f6169929fc2",
+                "x-qlik-entity-revision": "1d5b51fe-2a3d-409b-9456-a23b2aad8b31",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -4468,7 +4511,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "05d8bc93-1abc-485d-b630-8e168203a69a",
+                "x-qlik-entity-revision": "4f1baeb4-9a2b-4bf1-9e15-0a2c643b963b",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -4532,7 +4575,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "e2f3c998-831e-47c6-8630-b5a198e403fc",
+                "x-qlik-entity-revision": "35b21374-5801-4021-a2bf-309ff0a6a88d",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -14691,7 +14734,7 @@
                                 }
                             }
                         },
-                        "description": "Server Error"
+                        "description": "Not Implemented"
                     }
                 },
                 "requestBody": {
@@ -14781,7 +14824,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "24bf525b-e27c-4878-8511-b786435bf301",
+                "x-qlik-entity-revision": "4d8e5fb6-333a-4322-b6ae-8b6ae0afe0e4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -15546,7 +15589,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "119ebd4f-c385-4015-9c82-db9bf0f825ee",
+                "x-qlik-entity-revision": "5296eacf-4248-4f2e-9f1b-657dc9e62a72",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -15611,7 +15654,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "e5f3093f-dd7e-4da1-88cb-4315aaecf45d",
+                "x-qlik-entity-revision": "dc0c72b3-75bc-4727-b2ae-147b0a1ac388",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -20875,7 +20918,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "9421a674-8405-4286-a651-2293967a4bcf",
+                "x-qlik-entity-revision": "034fc68e-4925-4313-8198-f4aaa938de76",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -21246,7 +21289,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "95844b14-5c67-4ee2-9b17-872132346a61",
+                "x-qlik-entity-revision": "b246f0d0-1637-4c4d-b4b2-a4ae0afa8eff",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -21341,7 +21384,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "65917356-d984-4bc4-88be-be6beda7f7f0",
+                "x-qlik-entity-revision": "a57c1d72-ee12-4c05-bc71-7a3ba3d6cc63",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -21449,7 +21492,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "7c52a99c-ef23-484d-97b2-bd66365fab82",
+                "x-qlik-entity-revision": "46bcbfd4-3271-4e18-acfe-3390ff28712a",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -21587,7 +21630,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "19847bab-8620-47dd-b1eb-2e9ba27ae36d",
+                "x-qlik-entity-revision": "b1fe1605-b932-406e-b089-a823be27e8e6",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -21702,7 +21745,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "f18130e4-5da7-45d4-880a-a68ccf4be3c3",
+                "x-qlik-entity-revision": "f6b0a821-ae11-4cdc-91a9-616a07560fd9",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -22262,7 +22305,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "1a3844bc-4411-4bcf-86e4-6c7f858f08b5",
+                "x-qlik-entity-revision": "bcb776d5-690f-41b3-8f86-ed04dd5c14a7",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -26285,7 +26328,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "78b49c2f-8de3-4389-915e-54a39b5678b1",
+                "x-qlik-entity-revision": "69d506a4-05ce-4b69-ba60-9a287eb3addc",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -28466,7 +28509,7 @@
                 "x-qlik-categories": [
                     "external/authenticate"
                 ],
-                "x-qlik-entity-revision": "188dc76c-b5c8-475c-92a7-422bf310d2e1",
+                "x-qlik-entity-revision": "9a844068-7e1b-4f48-b6c9-153c90f53fc8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -28559,6 +28602,17 @@
                         },
                         "required": false,
                         "description": "The attribute to sort by, beginning with + for ascending and - for descending. Valid attributes for sorting are clientId, clientName, appType, tenantId."
+                    },
+                    {
+                        "in": "query",
+                        "name": "totalResults",
+                        "schema": {
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "example": true,
+                        "required": false,
+                        "description": "Boolean query parameter that determines if the total count of results should be included in the response. If true, the response includes the total number of results in the `totalResults` field. If false or not included in the query, `totalResults` will be excluded from the response."
                     }
                 ],
                 "description": "Retrieve all OAuth clients.",
@@ -28569,7 +28623,7 @@
                     "external/authenticate",
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "cb4f39de-e808-468a-9445-bb6831e7c366",
+                "x-qlik-entity-revision": "faead24b-d3bb-4ea5-8a12-08bdad79a7f9",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -31582,7 +31636,7 @@
                 "x-qlik-categories": [
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "779ebf2d-b83e-48b7-b4d8-325015658a5a",
+                "x-qlik-entity-revision": "6aae6790-de85-44c5-8c05-eb3dcd5eda36",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -31721,11 +31775,111 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "fbbfea62-0457-4a3c-a215-6393681bafef",
+                "x-qlik-entity-revision": "036a6b28-a27d-46eb-a0b2-b17c7ccf7bb5",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
                     "limit": 1000
+                }
+            },
+            "post": {
+                "tags": [
+                    "roles"
+                ],
+                "summary": "Create role",
+                "responses": {
+                    "201": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Role"
+                                }
+                            }
+                        },
+                        "description": "Created"
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Invalid request was made."
+                    },
+                    "401": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Unauthorized to create role."
+                    },
+                    "403": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Forbidden from creating role."
+                    },
+                    "429": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "retry-after": {
+                                "schema": {
+                                    "type": "integer",
+                                    "default": 1
+                                },
+                                "description": "The amount of seconds to wait before retrying the request."
+                            }
+                        },
+                        "description": "Request has been rate limited."
+                    },
+                    "500": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Internal server error."
+                    }
+                },
+                "description": "Creates a custom role. Role names must be unique, and there is a maximum of 500 custom roles per tenant. Requestor must be assigned the `TenantAdmin` role.",
+                "operationId": "createRole",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CreateRole"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-entity-revision": "c0ca6da2-d3a5-4a3d-86eb-3a2c025ec5f0",
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
                 }
             }
         },
@@ -31791,10 +31945,10 @@
                         "in": "path",
                         "name": "id",
                         "schema": {
-                            "type": "string"
+                            "$ref": "#/components/schemas/Role/properties/id"
                         },
                         "required": true,
-                        "description": "The role's unique identifier"
+                        "description": "The unique identifier for the role."
                     }
                 ],
                 "description": "Returns the requested role.",
@@ -31804,11 +31958,247 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "b2acf9ac-5db4-44f2-a6d4-d7854cc8ad1b",
+                "x-qlik-entity-revision": "b6254fb5-3eea-417e-8a47-186d1d867661",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
                     "limit": 1000
+                }
+            },
+            "patch": {
+                "tags": [
+                    "roles"
+                ],
+                "summary": "Update role by ID",
+                "responses": {
+                    "204": {
+                        "content": {
+                            "application/json": {}
+                        },
+                        "description": "Updated"
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Invalid request was made."
+                    },
+                    "401": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Unauthorized to update role."
+                    },
+                    "403": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Forbidden from updating role."
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Role ID not found or Invalid format."
+                    },
+                    "429": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "retry-after": {
+                                "schema": {
+                                    "type": "integer",
+                                    "default": 1
+                                },
+                                "description": "The amount of seconds to wait before retrying the request."
+                            }
+                        },
+                        "description": "Request has been rate limited."
+                    },
+                    "500": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Internal server error."
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "schema": {
+                            "$ref": "#/components/schemas/Role/properties/id"
+                        },
+                        "required": true,
+                        "description": "The unique identifier for the role."
+                    }
+                ],
+                "description": "Updates the requested role. Only applicable to roles of type `custom`. Requestor must be assigned the `TenantAdmin` role.",
+                "operationId": "updateRoleById",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/components/schemas/PatchRoles"
+                                },
+                                "example": [
+                                    {
+                                        "op": "replace",
+                                        "path": "/name",
+                                        "value": "Role1"
+                                    },
+                                    {
+                                        "op": "replace",
+                                        "path": "/assignedScopes",
+                                        "value": [
+                                            "knowledgebase"
+                                        ]
+                                    },
+                                    {
+                                        "op": "replace",
+                                        "path": "/description",
+                                        "value": "My custom role description"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-entity-revision": "62a2e900-869b-4fbe-af95-4c8aadd843ba",
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            },
+            "delete": {
+                "tags": [
+                    "roles"
+                ],
+                "summary": "Delete role by ID",
+                "responses": {
+                    "204": {
+                        "content": {
+                            "application/json": {}
+                        },
+                        "description": "Deleted successfully."
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Invalid request was made."
+                    },
+                    "401": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Unauthorized to delete role."
+                    },
+                    "403": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Forbidden from deleting role."
+                    },
+                    "429": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "retry-after": {
+                                "schema": {
+                                    "type": "integer",
+                                    "default": 1
+                                },
+                                "description": "The amount of seconds to wait before retrying the request."
+                            }
+                        },
+                        "description": "Request has been rate limited."
+                    },
+                    "500": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Errors"
+                                }
+                            }
+                        },
+                        "description": "Internal server error."
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "schema": {
+                            "$ref": "#/components/schemas/Role/properties/id"
+                        },
+                        "required": true,
+                        "description": "The unique identifier for the role."
+                    }
+                ],
+                "description": "Deletes the requested role. Role can only be deleted if it has been unassigned from all users and groups. Only applicable to roles of type `custom`. Requestor must be assigned the `TenantAdmin` role.",
+                "operationId": "deleteRoleById",
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [
+                    "external/manage"
+                ],
+                "x-qlik-entity-revision": "022b40cc-3e2f-4817-8a9b-df0925eed9fb",
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
                 }
             }
         },
@@ -32046,7 +32436,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "61bd8a05-9f0b-4be5-ba18-35cd821c1020",
+                "x-qlik-entity-revision": "fbe18001-4134-449d-8fa7-5452976dfb96",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -32118,7 +32508,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "2ac2c370-5101-488c-9b0a-b4793ddec9e6",
+                "x-qlik-entity-revision": "46034a4f-0a52-4b9b-9afb-2e695714dae8",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -32202,7 +32592,7 @@
                     "external/manage",
                     "external/build"
                 ],
-                "x-qlik-entity-revision": "f012d197-ddb7-4529-b1c5-a409f76135bb",
+                "x-qlik-entity-revision": "a9d0a508-c7d9-4d10-b079-a9672b8194fb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -33865,7 +34255,7 @@
                 "tags": [
                     "Temporary contents"
                 ],
-                "summary": "Uploads a temporary content file",
+                "summary": "Upload a file",
                 "responses": {
                     "201": {
                         "headers": {
@@ -33906,7 +34296,7 @@
                         "description": "The TTL parameter is used to define the time-to-live for the content resource in seconds.\nIt defaults to one hour (3600) if no input is provided. Max TTL is 259200 (3 days).'\n"
                     }
                 ],
-                "description": "This endpoint is used to upload a file as a temporary content resource. It returns a `201 Created` with a location header that contains the location of the created resource. If filename or TTL is not properly set, a `400 Bad request` is returned. For internal issues, a `500 Internal Server Error` is returned.",
+                "description": "Upload a file as a temporary content resource. It returns a `201 Created` with a location header that contains the location of the created resource. If filename or TTL is not properly set, a `400 Bad request` is returned. For internal issues, a `500 Internal Server Error` is returned.",
                 "operationId": "TempContentsPost",
                 "requestBody": {
                     "content": {
@@ -33925,7 +34315,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "fa81ced7-fad0-4f83-af92-67fc26dd095a",
+                "x-qlik-entity-revision": "ed28afb2-0f86-4058-a648-ce4c0a822195",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -33938,7 +34328,7 @@
                 "tags": [
                     "Temporary contents"
                 ],
-                "summary": "Download a temporary content file",
+                "summary": "Download a file",
                 "responses": {
                     "200": {
                         "content": {
@@ -34052,7 +34442,7 @@
                             "type": "string"
                         },
                         "required": false,
-                        "description": "Set to `unit=start-end` (for example, bytes=0-100) where unit = bytes (only supported unit), and start/end is a positive integer, where start <= end. Will also handle \"start-\" and \"-end as described in https://tools.ietf.org/html/rfc7233\"."
+                        "description": "Set to `unit=start-end` (for example, `bytes=0-100`) where `unit` = `bytes` (only supported unit), and start/end is a positive integer, where start <= end. Will also handle `start-` and `-end` as described in https://tools.ietf.org/html/rfc7233."
                     }
                 ],
                 "description": "This endpoint is used to retrieve a temporary content file. It returns a valid (`200 OK`) in case the file exists and the user is authorized to view the contents. It returns a `410 Gone` if the file has expired and `404 Not Found` if the criteria is not met.",
@@ -34062,7 +34452,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "12b670ca-eda4-4481-ba8c-d0344a44ecbe",
+                "x-qlik-entity-revision": "8bf41631-5237-4131-a00d-2a35b41ba259",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -34075,7 +34465,7 @@
                 "tags": [
                     "Temporary contents"
                 ],
-                "summary": "Retrieve temporary content details",
+                "summary": "Retrieve file details",
                 "responses": {
                     "200": {
                         "content": {
@@ -34132,14 +34522,14 @@
                         "description": "The temporary contents ID."
                     }
                 ],
-                "description": "This endpoint is used to retrieve a summary of the metadata associated with a temporary content resource. It returns a `200 OK` with a model if the temporary resource is valid. It returns a `410 Gone` if the file has expired and `404 Not Found` if the criteria is not met.",
+                "description": "Retrieve a summary of the metadata associated with a temporary content resource. It returns a `200 OK` with a model if the temporary resource is valid. It returns a `410 Gone` if the file has expired and `404 Not Found` if the criteria is not met.",
                 "operationId": "TempContentsDetails",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "aeb96293-6e18-4def-9db4-06f6e6cd95f0",
+                "x-qlik-entity-revision": "2b0bf7be-1672-417b-ada3-6d2edf0b830e",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -34152,7 +34542,7 @@
                 "tags": [
                     "Temporary contents"
                 ],
-                "summary": "Creates a new upload resource (tus protocol `creation` extension POST request)",
+                "summary": "Create a new upload resource (tus)",
                 "responses": {
                     "201": {
                         "headers": {
@@ -34231,14 +34621,14 @@
                         "description": "One or more comma-separated key-value pairs. The key and value must be separated by a space.\nThe key should be ASCII encoded, and the value must be Base64 encoded. All keys must be unique.\nSee [tus.io](http://tus.io) for details.\n\nThe following keys are used; any other keys are ignored.\n- `filename` - the name of the file.\n- `ttl` - the time-to-live for the uploaded file in seconds. Note that the time is counted from the _start_ of\n  the upload creation, not when the upload has finished. The server will keep the file available for access for\n  this period of time. The server may then delete it. The time defaults to one hour (3600) if not provided.\n  The maximum value is 259200 (3 days).'\n"
                     }
                 ],
-                "description": "Request used to create a new upload resource.\nSee [tus.io](http://tus.io) for details.\n",
+                "description": "Create a new upload resource (tus protocol `creation` extension POST request). See [tus.io](http://tus.io) for details.",
                 "operationId": "postTus",
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "62464290-956f-4b64-8d63-bb895bd11fca",
+                "x-qlik-entity-revision": "eceebdde-f746-4aea-9b63-afabd215d289",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -34251,7 +34641,7 @@
                 "tags": [
                     "Temporary contents"
                 ],
-                "summary": "Apply bytes contained in the message at a given offset (tus protocol PATCH request)",
+                "summary": "Apply bytes at a given offset (tus)",
                 "responses": {
                     "204": {
                         "description": "No Content. Patch successfully applied to upload."
@@ -34383,7 +34773,7 @@
                         "description": "Standard HTTP `Content-Length` header."
                     }
                 ],
-                "description": "Request used to apply the bytes contained in the message at a given offset. Note that the tus server only\naccepts that the Content-Type response header is set to \"application/offset+octet-stream\".\nSee [tus.io](http://tus.io) for details.\n\nNote that the server may return `423 Locked` on this request. This happens if the client attempts to perform\nconcurrent access to the resource, for example, if attempting to do a `HEAD` request during an ongoing `PATCH` request.\nIt can also occur in situations where the connection is unexpectedly dropped between the client and the server\nand the client attempts to make a new request when the server is still busy processing the upload. When this\nhappens, the client shall, after some period of time, try to resume the upload again.\n",
+                "description": "Apply bytes contained in the message at a given offset (tus protocol PATCH request). Note that the tus server only\naccepts that the Content-Type response header is set to `application/offset+octet-stream`.\nSee [tus.io](http://tus.io) for details.\n\nNote that the server may return `423 Locked` on this request. This happens if the client attempts to perform\nconcurrent access to the resource, for example, if attempting to do a `HEAD` request during an ongoing `PATCH` request.\nIt can also occur in situations where the connection is unexpectedly dropped between the client and the server\nand the client attempts to make a new request when the server is still busy processing the upload. When this\nhappens, the client shall, after some period of time, try to resume the upload again.\n",
                 "operationId": "patchTus",
                 "requestBody": {
                     "content": {
@@ -34402,7 +34792,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "68f1f676-e9ad-4bde-a48b-8a2ff44bd303",
+                "x-qlik-entity-revision": "9db846d4-99bc-48c5-85ab-96a067fc8f21",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -34535,12 +34925,12 @@
                     },
                     "required": true
                 },
-                "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "3267a623-9bbb-4266-845e-c76803293dc1",
+                "x-qlik-entity-revision": "f26bd4af-949d-4b52-97e5-e27635162cb6",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -34601,12 +34991,12 @@
                 ],
                 "description": "Retrieves a specific tenant by ID.",
                 "operationId": "getTenantById",
-                "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "84f4552a-64b9-447d-8ea8-dff46224d54b",
+                "x-qlik-entity-revision": "df700dbc-13ba-43a9-8464-9f1bfe34d5cc",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -34698,12 +35088,12 @@
                     },
                     "required": true
                 },
-                "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d0ea0e77-489e-4ed8-85d9-0d769e0f53cd",
+                "x-qlik-entity-revision": "17e18f38-2d50-4365-a87f-7a9db9992b2c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -34824,12 +35214,12 @@
                         }
                     }
                 },
-                "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "5a898b1d-9924-493a-aa59-07d70411b0c8",
+                "x-qlik-entity-revision": "b48526af-a54c-401d-b689-9d844a025ffc",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -34939,12 +35329,12 @@
                         }
                     }
                 },
-                "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "93bd4cb3-144c-4e48-a0a7-87f71da951c4",
+                "x-qlik-entity-revision": "6b6096bf-8392-428f-83db-db7699854b98",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -34978,12 +35368,12 @@
                     }
                 },
                 "description": "Redirects to current tenant.",
-                "x-qlik-stability": "stable",
                 "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "a68a9544-50cd-414d-8308-34e673942e29",
+                "x-qlik-entity-revision": "d671672d-8438-4b80-a751-f98add85c762",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -35776,7 +36166,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "c7748bed-10fb-499f-aa54-e80b7cc47898",
+                "x-qlik-entity-revision": "d1e807b6-0a7c-4299-b56d-df894fcc3193",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -35901,7 +36291,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "d2b08449-e6cb-49cb-a827-42f1e1442cb8",
+                "x-qlik-entity-revision": "38b48683-616f-440a-91e4-c8678f96836c",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -36012,7 +36402,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "48074bcd-4ee8-4d37-836b-cee9abe09589",
+                "x-qlik-entity-revision": "14ffc629-45f8-452f-86d9-4afad5ae6443",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -36452,7 +36842,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "6f5b216c-633d-4c75-a744-2ff92065e3d9",
+                "x-qlik-entity-revision": "1007a64c-fcda-4330-aad6-b8ae91019797",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -38429,6 +38819,7 @@
                 }
             },
             "ApiKeyBody": {
+                "type": "object",
                 "required": [
                     "description"
                 ],
@@ -38691,6 +39082,15 @@
                     "href": {
                         "type": "string",
                         "description": "URL to a resource request"
+                    }
+                }
+            },
+            "RetryAfterHeader": {
+                "type": "object",
+                "properties": {
+                    "retry-after": {
+                        "type": "integer",
+                        "description": "The amount of seconds to wait before retrying the request."
                     }
                 }
             },
@@ -42122,9 +42522,6 @@
                 "type": "object",
                 "title": "GetLinks are the HAL links for a single result.",
                 "properties": {
-                    "Self": {
-                        "$ref": "#/components/schemas/Href"
-                    },
                     "self": {
                         "$ref": "#/components/schemas/href"
                     }
@@ -47964,7 +48361,7 @@
                     },
                     "connectStatement": {
                         "type": "string",
-                        "example": "CUSTOM CONNECT TO \"provider=qix-datafiles.exe;path=mydatafiles;\"",
+                        "example": "CUSTOM CONNECT TO \\\"provider=qix-datafiles.exe;path=mydatafiles;\\\"",
                         "description": "The connect statement that will be passed to the connector when invoked."
                     }
                 },
@@ -51386,7 +51783,8 @@
                     "id": {
                         "type": "string",
                         "format": "uuid",
-                        "example": "123e4567-e89b-12d3-a456-426614174000"
+                        "example": "123e4567-e89b-12d3-a456-426614174000",
+                        "description": "The id for resolving updates in future imports/updates. \nOpposed to the id of terms, id on category are not resolved by backend. Any category referred in the category array in terms will have to be identical to the id property of the category. If not, the category reference will be discarded.\n"
                     },
                     "name": {
                         "type": "string"
@@ -51446,11 +51844,6 @@
             "createCategory": {
                 "type": "object",
                 "properties": {
-                    "id": {
-                        "type": "string",
-                        "example": "123e4567-e89b-12d3-a456-426614174000",
-                        "description": "The id for resolving updates in future imports/updates. \nOpposed to the id of terms, id on category are not resolved by backend. Any category referred in the category array in terms will have to be identical to the id property of the category. If not, the category reference will be discarded.\n"
-                    },
                     "name": {
                         "type": "string",
                         "description": "The name of the category. May not be identical to another category belonging to the same parent.\n"
@@ -55135,6 +55528,10 @@
                     "secondaryNumber": {
                         "type": "string",
                         "description": "The secondary number of a definition."
+                    },
+                    "parentLicenseNumber": {
+                        "type": "string",
+                        "description": "the parent number of the license. can be shared by multiple license numbers"
                     }
                 }
             },
@@ -56463,6 +56860,8 @@
             },
             "oauth-client-credentials-request": {
                 "required": [
+                    "client_id",
+                    "client_secret",
                     "grant_type"
                 ],
                 "properties": {
@@ -56471,6 +56870,10 @@
                         "example": "user_default offline_access",
                         "description": "The scope of access that is being requested. The scope should already be assigned to the OAuth client. For a list of available scopes, visit: https://qlik.dev/authenticate/oauth/scopes/#available-scopes"
                     },
+                    "client_id": {
+                        "type": "string",
+                        "description": "The client identifier."
+                    },
                     "grant_type": {
                         "enum": [
                             "client_credentials"
@@ -56478,6 +56881,10 @@
                         "type": "string",
                         "example": "client_credentials",
                         "description": "The grant type used to obtain an access token outside of the context of a user."
+                    },
+                    "client_secret": {
+                        "type": "string",
+                        "description": "The client secret."
                     }
                 }
             },
@@ -56748,6 +57155,11 @@
                     },
                     "links": {
                         "$ref": "#/components/schemas/Links"
+                    },
+                    "totalResults": {
+                        "type": "integer",
+                        "nullable": true,
+                        "description": "Total number of oauth clients, included only if `totalResults` query parameter is set to true."
                     }
                 },
                 "description": "Response schema for listing OAuth clients as an admin user"
@@ -59162,6 +59574,29 @@
                     }
                 }
             },
+            "CreateRole": {
+                "type": "object",
+                "required": [
+                    "name"
+                ],
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "Role name, needs to be unique"
+                    },
+                    "description": {
+                        "type": "string",
+                        "description": "Role description"
+                    },
+                    "assignedScopes": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "Selection of scopes to assign to role"
+                    }
+                }
+            },
             "ListRolesResult": {
                 "type": "object",
                 "required": [
@@ -59185,6 +59620,52 @@
                     }
                 }
             },
+            "PatchRole": {
+                "type": "object",
+                "required": [
+                    "op",
+                    "path",
+                    "value"
+                ],
+                "properties": {
+                    "op": {
+                        "enum": [
+                            "replace"
+                        ],
+                        "type": "string",
+                        "example": "replace"
+                    },
+                    "path": {
+                        "enum": [
+                            "/name",
+                            "/description",
+                            "/assignedScopes"
+                        ],
+                        "type": "string"
+                    },
+                    "value": {
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "description": "A JSON Patch document as defined in http://tools.ietf.org/html/rfc6902."
+            },
+            "PatchRoles": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/components/schemas/PatchRole"
+                },
+                "description": "An array of JSON Patch documents"
+            },
             "Role": {
                 "type": "object",
                 "required": [
@@ -59195,8 +59676,7 @@
                     "description",
                     "createdAt",
                     "lastUpdatedAt",
-                    "links",
-                    "isCustom"
+                    "links"
                 ],
                 "properties": {
                     "id": {
@@ -60572,7 +61052,8 @@
                             "REPORTING_CAPABILITY_NOT_FOUND",
                             "EXECUTION_TIME_OUT",
                             "OWNER_INSUFFICIENT_PERMISSIONS",
-                            "MAX_UNIQUE_REPORTS_LIMIT_REACHED"
+                            "MAX_UNIQUE_REPORTS_LIMIT_REACHED",
+                            "MISSING_DISTRIBUTION_LIST"
                         ],
                         "type": "string",
                         "description": "Identifier for type of error occurring on sharing task"
@@ -62013,7 +62494,7 @@
                     "inviteExpiry": {
                         "type": "number",
                         "readOnly": true,
-                        "description": "The number of seconds until the user invitation will expire."
+                        "description": "The Unix timestamp indicating when the invite will expire."
                     },
                     "assignedRoles": {
                         "$ref": "#/components/schemas/AssignedRoles"
