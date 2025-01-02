@@ -7,6 +7,7 @@ import { readFileSync, writeFileSync } from "fs";
 import puppeteer from "puppeteer";
 import axios from "axios";
 import { QlikProxyClient, QlikRepositoryClient } from "qlik-rest-api";
+// import SwaggerParser from "@apidevtools/swagger-parser";
 
 const baseUrl = "https://qlik.dev";
 const downloadPath = path.resolve(`${process.cwd()}/data`);
@@ -97,6 +98,8 @@ function combineFiles(rawData) {
     }
   }
 
+  flatten.paths = Object.fromEntries(Object.entries(flatten.paths).sort());
+
   writeFileSync(
     `${process.cwd()}/data/SaaS_infos.json`,
     JSON.stringify(info, null, 4)
@@ -133,24 +136,19 @@ async function downloadSaaSData() {
     deviceScaleFactor: 1,
   });
 
-  await page.goto(`${baseUrl}/apis#rest`, { waitUntil: "load" });
+  await page.goto(`${baseUrl}/apis/rest`, { waitUntil: "load" });
 
   try {
     await page.click("#onetrust-accept-btn-handler");
-  } catch (e) {}
+  } catch (e) { }
 
-  await page.goto(`${baseUrl}/apis#rest`, { waitUntil: "load" });
-
-  await page.click(".items > li:nth-of-type(4) > a");
-
-  const areasAll = await page.$$eval(`.api`, (nodes) =>
+  const areasAll = await page.$$eval(`.category-overview-card`, (nodes) =>
     nodes.map((element) => {
       const title = element
-        .querySelector("div > h3")
+        .querySelector("h3")
         .innerText.replace("# ", "");
 
       const referenceLink = element
-        .querySelector("div > div:nth-of-type(2) > a")
         .getAttribute("href");
 
       return {
@@ -173,7 +171,7 @@ async function downloadSaaSData() {
 
     try {
       await page.click("#onetrust-accept-btn-handler");
-    } catch (e) {}
+    } catch (e) { }
 
     const downloadLinks = await page.$$eval(".download-link", (elements) =>
       elements.map((element) => element.getAttribute("href"))
@@ -189,8 +187,7 @@ async function downloadSaaSData() {
     });
 
     console.log(
-      `${index + 1}/${areasRest.length} ${area.title} --> ${
-        area.referenceLink
+      `${index + 1}/${areasRest.length} ${area.title} --> ${area.referenceLink
       } `
     );
   }
@@ -278,3 +275,16 @@ async function downloadRepoData() {
     JSON.stringify(data.data, null, 4)
   );
 }
+
+// async function validate() {
+//   try {
+//     const myAPI = readFileSync(`${process.cwd()}/data/SaaS_Swagger_Data.json`);
+//     let api = await SwaggerParser.validate(JSON.parse(myAPI));
+
+//     console.log("API name: %s, Version: %s", api.info.title, api.info.version);
+//   } catch (err) {
+//     console.error(err);
+//   }
+// }
+
+// validate();

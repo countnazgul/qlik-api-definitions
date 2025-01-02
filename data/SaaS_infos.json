@@ -1,9 +1,5 @@
 {
-    ".Well Known": {
-        "title": ".well-known",
-        "version": ""
-    },
-    "API Keys": {
+    "API keys": {
         "title": "api-keys",
         "version": ""
     },
@@ -15,7 +11,7 @@
         "title": "audits",
         "version": ""
     },
-    "Automation Connections": {
+    "Automation connections": {
         "title": "automation-connections",
         "version": ""
     },
@@ -23,11 +19,11 @@
         "title": "automations",
         "version": ""
     },
-    "AutoML Dataset Predictions": {
+    "AutoML dataset predictions": {
         "title": "automl-predictions",
         "version": ""
     },
-    "AutoML Real-Time Predictions": {
+    "AutoML real-time predictions": {
         "title": "automl-deployments",
         "version": ""
     },
@@ -43,56 +39,60 @@
         "title": "conditions",
         "version": ""
     },
-    "Consumption": {
-        "title": "consumption",
-        "version": ""
-    },
-    "CSP Origins": {
+    "CSP origins": {
         "title": "csp-origins",
         "version": ""
     },
-    "CSRF Token": {
+    "CSRF token": {
         "title": "csrf-token",
         "version": ""
     },
-    "Data Alerts": {
+    "Data alerts": {
         "title": "data-alerts",
         "version": ""
     },
-    "Data Assets": {
+    "Data assets": {
         "title": "data-assets",
         "version": ""
     },
-    "Data Connections": {
+    "Data connections": {
         "title": "data-connections",
         "version": ""
     },
-    "Data Credentials": {
+    "Data credentials": {
         "title": "data-credentials",
         "version": ""
     },
-    "Data Files": {
+    "Data files": {
         "title": "data-files",
         "version": ""
     },
-    "Data Sets": {
+    "Data integration projects": {
+        "title": "di-projects",
+        "version": ""
+    },
+    "Data sets": {
         "title": "data-sets",
         "version": ""
     },
-    "Data Stores": {
+    "Data sources": {
+        "title": "data-sources",
+        "version": ""
+    },
+    "Data stores": {
         "title": "data-stores",
         "version": ""
     },
-    "Dcaas": {
-        "title": "dcaas",
+    "Email configuration": {
+        "title": "transports",
         "version": ""
     },
     "Encryption": {
         "title": "encryption",
         "version": ""
     },
-    "Evaluations": {
-        "title": "evaluations",
+    "Entitlement consumption": {
+        "title": "consumption",
         "version": ""
     },
     "Extensions": {
@@ -107,7 +107,7 @@
         "title": "groups",
         "version": ""
     },
-    "Identity Providers": {
+    "Identity providers": {
         "title": "identity-providers",
         "version": ""
     },
@@ -119,7 +119,7 @@
         "title": "licenses",
         "version": ""
     },
-    "Lineage Graphs": {
+    "Lineage graphs": {
         "title": "lineage-graphs",
         "version": ""
     },
@@ -127,20 +127,16 @@
         "title": "login",
         "version": ""
     },
-    "Natural Language": {
+    "Machine Learning": {
+        "title": "ml",
+        "version": ""
+    },
+    "Natural language": {
         "title": "questions",
         "version": ""
     },
     "Notes": {
         "title": "notes",
-        "version": ""
-    },
-    "Notification Channels": {
-        "title": "notification-channels",
-        "version": ""
-    },
-    "Notification Digests": {
-        "title": "notification-digests",
         "version": ""
     },
     "Notifications": {
@@ -151,15 +147,23 @@
         "title": "oauth",
         "version": ""
     },
-    "OAuth Tokens": {
+    "OAuth clients": {
+        "title": "oauth-clients",
+        "version": ""
+    },
+    "OAuth tokens": {
         "title": "oauth-tokens",
+        "version": ""
+    },
+    "OAuth well-known configuration": {
+        "title": ".well-known",
         "version": ""
     },
     "Quotas": {
         "title": "quotas",
         "version": ""
     },
-    "Reload Tasks": {
+    "Reload tasks": {
         "title": "reload-tasks",
         "version": ""
     },
@@ -167,7 +171,7 @@
         "title": "reloads",
         "version": ""
     },
-    "Report Templates": {
+    "Report templates": {
         "title": "report-templates",
         "version": ""
     },
@@ -179,7 +183,7 @@
         "title": "roles",
         "version": ""
     },
-    "Sharing Tasks": {
+    "Sharing tasks": {
         "title": "sharing-tasks",
         "version": ""
     },
@@ -187,7 +191,7 @@
         "title": "spaces",
         "version": ""
     },
-    "Temp Contents": {
+    "Temporary contents": {
         "title": "temp-contents",
         "version": ""
     },
@@ -199,19 +203,15 @@
         "title": "themes",
         "version": ""
     },
-    "Transports": {
-        "title": "transports",
-        "version": ""
-    },
     "Users": {
         "title": "users",
         "version": ""
     },
-    "Web Integrations": {
+    "Web integrations": {
         "title": "web-integrations",
         "version": ""
     },
-    "Web Notifications": {
+    "Web notifications": {
         "title": "web-notifications",
         "version": ""
     },
