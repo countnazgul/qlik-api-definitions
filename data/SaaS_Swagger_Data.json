@@ -4526,7 +4526,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -4536,7 +4537,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -4645,7 +4647,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -4655,7 +4658,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -4709,7 +4713,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -4719,7 +4724,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -4729,7 +4735,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -4782,7 +4789,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -4792,7 +4800,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -4802,7 +4811,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -4864,7 +4874,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -4874,7 +4885,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -4884,7 +4896,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -4992,7 +5005,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5002,7 +5016,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5012,7 +5027,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5074,7 +5090,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5084,7 +5101,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5094,7 +5112,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5170,7 +5189,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5180,7 +5200,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5190,7 +5211,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5254,7 +5276,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5264,7 +5287,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5274,7 +5298,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5352,7 +5377,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5362,7 +5388,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5372,7 +5399,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5447,7 +5475,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5457,7 +5486,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5467,7 +5497,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5542,7 +5573,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5552,7 +5584,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5562,7 +5595,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5698,7 +5732,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5708,7 +5743,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5718,7 +5754,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5759,6 +5796,250 @@
                 }
             }
         },
+        "/v1/assistants/{assistantId}/threads/{threadId}/actions/invoke": {
+            "post": {
+                "tags": [
+                    "chat"
+                ],
+                "summary": "Execute synchronous prompt",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/promptOutputInvoke"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "Etag": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "description": "Assistant version"
+                            },
+                            "Last-Modified": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "description": "Last modified date and time of the Assistant"
+                            }
+                        },
+                        "description": "Prompt is successfully executed."
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/errorResponse"
+                                }
+                            }
+                        },
+                        "description": "The request is in incorrect format"
+                    },
+                    "403": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/errorResponse"
+                                }
+                            }
+                        },
+                        "description": "The user does not have privileges to perform the requested action."
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/errorResponse"
+                                }
+                            }
+                        },
+                        "description": "Assistant is not found."
+                    },
+                    "500": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/errorResponse"
+                                }
+                            }
+                        },
+                        "description": "Prompt processing error."
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "assistantId",
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid",
+                            "example": "507f191e810c19729de860ea"
+                        },
+                        "required": true,
+                        "description": "The id of the Assistant containing requested Thread"
+                    },
+                    {
+                        "in": "path",
+                        "name": "threadId",
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid",
+                            "example": "507f191e810c19729de860ea"
+                        },
+                        "required": true,
+                        "description": "The id of the Thread to retrieve"
+                    }
+                ],
+                "description": "Execute prompt in synchronous non-streaming mode.",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/promptInput"
+                            }
+                        }
+                    }
+                },
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [],
+                "x-qlik-entity-revision": "efc69451-bb2d-44b1-8eca-015377ec0130",
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            }
+        },
+        "/v1/assistants/{assistantId}/threads/{threadId}/actions/stream": {
+            "post": {
+                "tags": [
+                    "chat"
+                ],
+                "summary": "Execute asynchronous prompt",
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/promptOutput"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "Etag": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "description": "Assistant version"
+                            },
+                            "Last-Modified": {
+                                "schema": {
+                                    "type": "string"
+                                },
+                                "description": "Last modified date and time of the Assistant"
+                            }
+                        },
+                        "description": "Prompt is successfully executed."
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/errorResponse"
+                                }
+                            }
+                        },
+                        "description": "The request is in incorrect format"
+                    },
+                    "403": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/errorResponse"
+                                }
+                            }
+                        },
+                        "description": "The user does not have privileges to perform the requested action."
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/errorResponse"
+                                }
+                            }
+                        },
+                        "description": "Method is not allowed."
+                    },
+                    "405": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/errorResponse"
+                                }
+                            }
+                        },
+                        "description": "Assistant is not found."
+                    },
+                    "500": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/errorResponse"
+                                }
+                            }
+                        },
+                        "description": "Prompt processing error."
+                    }
+                },
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "assistantId",
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid",
+                            "example": "507f191e810c19729de860ea"
+                        },
+                        "required": true,
+                        "description": "The id of the Assistant containing requested Thread"
+                    },
+                    {
+                        "in": "path",
+                        "name": "threadId",
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid",
+                            "example": "507f191e810c19729de860ea"
+                        },
+                        "required": true,
+                        "description": "The id of the Thread to retrieve"
+                    }
+                ],
+                "description": "Execute prompt in asynchronous streaming mode.",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/promptInput"
+                            }
+                        }
+                    }
+                },
+                "x-qlik-visibility": "public",
+                "x-qlik-stability": "stable",
+                "x-qlik-categories": [],
+                "x-qlik-entity-revision": "c2ae6289-c721-4f32-bb9d-be7834a02e06",
+                "x-qlik-deprecated": false,
+                "x-qlik-tier": {
+                    "tier": "2",
+                    "limit": 100
+                }
+            }
+        },
         "/v1/assistants/{assistantId}/threads/{threadId}/interactions": {
             "get": {
                 "tags": [
@@ -5780,7 +6061,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5790,7 +6072,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5800,7 +6083,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5917,7 +6201,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5927,7 +6212,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -5937,7 +6223,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6010,7 +6297,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6020,7 +6308,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6030,7 +6319,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6096,7 +6386,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6106,7 +6397,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6116,7 +6408,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6205,7 +6498,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6215,7 +6509,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6225,7 +6520,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6316,7 +6612,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6326,7 +6623,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6336,7 +6634,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6445,7 +6744,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6455,7 +6755,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6465,7 +6766,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6549,7 +6851,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6559,7 +6862,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6569,7 +6873,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6624,7 +6929,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6634,7 +6940,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6644,7 +6951,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6654,7 +6962,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6664,7 +6973,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6738,7 +7048,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6748,7 +7059,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6758,7 +7070,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6836,7 +7149,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6846,7 +7160,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6856,7 +7171,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6914,7 +7230,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6924,7 +7241,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6934,7 +7252,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6944,7 +7263,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -6954,7 +7274,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -7026,7 +7347,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -7036,7 +7358,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -7046,7 +7369,8 @@
                         "content": {
                             "application/json": {
                                 "schema": {
-                                    "$ref": "#/components/schemas/errorResponse"
+                                    "$ref": "#/components/schemas/errorResponseCopy",
+                                    "x-qlik-merge-conflict": true
                                 }
                             }
                         },
@@ -7321,7 +7645,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "9020c96f-3e04-4f47-ac83-ff18ac3e7a82",
+                "x-qlik-entity-revision": "59765ef8-fdae-44ce-97d0-4fe286e59fe2",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "special",
@@ -23640,7 +23964,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "0c845f90-6b9e-405c-9dbe-6860f19cd9a5",
+                "x-qlik-entity-revision": "37631589-222f-4c91-9b1b-561f948da8d4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -24045,6 +24369,12 @@
                                 "schema": {
                                     "$ref": "#/components/schemas/exportGlossary"
                                 }
+                            },
+                            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": {
+                                "schema": {
+                                    "type": "string",
+                                    "format": "binary"
+                                }
                             }
                         },
                         "description": "Successfully exported the glossary."
@@ -24091,6 +24421,19 @@
                         },
                         "required": true,
                         "description": "The glossary id."
+                    },
+                    {
+                        "in": "query",
+                        "name": "format",
+                        "schema": {
+                            "enum": [
+                                "json",
+                                "xlsx"
+                            ],
+                            "type": "string"
+                        },
+                        "required": false,
+                        "description": "The output format"
                     }
                 ],
                 "x-qlik-visibility": "public",
@@ -24098,7 +24441,7 @@
                 "x-qlik-categories": [
                     "external/manage"
                 ],
-                "x-qlik-entity-revision": "2c40e5bb-41ce-4876-870e-12bf8d0efa9a",
+                "x-qlik-entity-revision": "722f5b5e-407f-4029-a0c1-035d7bcd5365",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -32092,7 +32435,7 @@
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [],
-                "x-qlik-entity-revision": "1fad845c-530a-4e64-ba32-4c80a466354f",
+                "x-qlik-entity-revision": "b3ed0b45-0e6a-4a83-a205-3b1cc2df2d53",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -32150,7 +32493,7 @@
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [],
-                "x-qlik-entity-revision": "e14f94c3-660c-4151-82e9-0cf488aaf680",
+                "x-qlik-entity-revision": "faf8a46e-29f5-4f1b-abc9-a861152403bd",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -32209,7 +32552,7 @@
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [],
-                "x-qlik-entity-revision": "7e576dda-0776-40bb-8316-3ffb30108aae",
+                "x-qlik-entity-revision": "2fa456cd-9360-41fe-af1c-4eb67c9207a4",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -32493,7 +32836,7 @@
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [],
-                "x-qlik-entity-revision": "1eb20cdb-a692-4e86-ae27-77345aae20b7",
+                "x-qlik-entity-revision": "5cdb61fb-3cd3-4f31-8705-d7d09824f900",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -32559,7 +32902,7 @@
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [],
-                "x-qlik-entity-revision": "14ace4f7-8a00-406e-af92-44c7aaa0825f",
+                "x-qlik-entity-revision": "6d160686-7b55-46e9-93fb-112de0f22fae",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "2",
@@ -32621,7 +32964,7 @@
                 "x-qlik-visibility": "public",
                 "x-qlik-stability": "stable",
                 "x-qlik-categories": [],
-                "x-qlik-entity-revision": "8437849a-84f5-4b67-814c-c4f08868f741",
+                "x-qlik-entity-revision": "85b6d5ce-d430-43c5-bf2d-222a718b3aeb",
                 "x-qlik-deprecated": false,
                 "x-qlik-tier": {
                     "tier": "1",
@@ -49337,6 +49680,36 @@
                     }
                 }
             },
+            "errorResponseCodeCopy": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "detail": {
+                        "type": "string"
+                    }
+                }
+            },
+            "errorResponseCopy": {
+                "type": "object",
+                "properties": {
+                    "errors": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/errorResponseCodeCopy",
+                            "x-qlik-merge-conflict": true
+                        }
+                    },
+                    "traceId": {
+                        "type": "string",
+                        "example": "507f191e810c19729de860ea"
+                    }
+                }
+            },
             "Feedback": {
                 "type": "object",
                 "required": [
@@ -49804,6 +50177,73 @@
                     }
                 }
             },
+            "promptInput": {
+                "type": "object",
+                "properties": {
+                    "input": {
+                        "type": "object",
+                        "properties": {
+                            "prompt": {
+                                "type": "string",
+                                "example": "What is a LLM?",
+                                "description": "Input prompt string for the Assistant to respond to."
+                            },
+                            "promptType": {
+                                "enum": [
+                                    "thread"
+                                ],
+                                "type": "string",
+                                "example": "thread",
+                                "description": "Sets the prompt type to thread."
+                            },
+                            "includeText": {
+                                "type": "boolean",
+                                "example": true,
+                                "description": "Returns text from chunks in sources output. Default value is false."
+                            }
+                        }
+                    }
+                }
+            },
+            "promptOutput": {
+                "type": "object",
+                "properties": {
+                    "output": {
+                        "type": "string",
+                        "example": "LLM stands for Large Language Model",
+                        "description": "Assistant's response to the prompt"
+                    },
+                    "sources": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/source"
+                        },
+                        "description": "List of sources used to generate AI messages"
+                    }
+                }
+            },
+            "promptOutputInvoke": {
+                "type": "object",
+                "properties": {
+                    "output": {
+                        "type": "string",
+                        "example": "LLM stands for Large Language Model",
+                        "description": "Assistant's response to the prompt"
+                    },
+                    "sources": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/source"
+                        },
+                        "description": "List of sources used to generate AI messages"
+                    },
+                    "question": {
+                        "type": "string",
+                        "example": "What was the primary goal of the Apollo program?",
+                        "description": "Question asked by the user for assistant to answer"
+                    }
+                }
+            },
             "recommendedAnswer": {
                 "type": "object",
                 "required": [
@@ -49837,6 +50277,45 @@
                 "properties": {
                     "countTotal": {
                         "type": "integer"
+                    }
+                }
+            },
+            "source": {
+                "type": "object",
+                "properties": {
+                    "chunks": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "example": {
+                                "text": "LLM stands for Large Language Model",
+                                "chunkId": "10d347c4-f28a-4faf-93f0-48e781aaf303"
+                            }
+                        },
+                        "description": "List of Chunks used for \"AI\" generated messages"
+                    },
+                    "source": {
+                        "type": "string",
+                        "example": "Reference.md",
+                        "description": "path to the document used"
+                    },
+                    "documentId": {
+                        "type": "string",
+                        "format": "uuid",
+                        "example": "10d347c4-f28a-4faf-93f0-48e781aaf303",
+                        "description": "reference to Document used for \"AI\" generated messages"
+                    },
+                    "datasourceId": {
+                        "type": "string",
+                        "format": "uuid",
+                        "example": "10d347c4-f28a-4faf-93f0-48e781aaf303",
+                        "description": "reference to DataSource used for \"AI\" generated messages"
+                    },
+                    "knowledgebaseId": {
+                        "type": "string",
+                        "format": "uuid",
+                        "example": "10d347c4-f28a-4faf-93f0-48e781aaf303",
+                        "description": "reference to KnowledgeBase used for \"AI\" generated messages"
                     }
                 }
             },
@@ -50101,6 +50580,52 @@
                     }
                 }
             },
+            "ArchiveItem": {
+                "type": "object",
+                "title": "ArchiveItem is schema for the achived audit entry.",
+                "properties": {
+                    "data": {
+                        "type": "object",
+                        "description": "Additional information about the event's details. The structure depends on the type and version of the event."
+                    },
+                    "source": {
+                        "type": "string",
+                        "description": "The source of the event message, usually the producing service."
+                    },
+                    "userId": {
+                        "type": "string",
+                        "description": "The ID of the user who performed the action that triggered the event."
+                    },
+                    "eventId": {
+                        "type": "string",
+                        "description": "The event's unique identifier."
+                    },
+                    "tenantId": {
+                        "type": "string",
+                        "description": "The ID of the tenant that owns the item. This is populated using the JWT."
+                    },
+                    "eventTime": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "The RFC3339 datetime when the event happened."
+                    },
+                    "eventType": {
+                        "type": "string",
+                        "description": "The type of event that describes committed action."
+                    },
+                    "extensions": {
+                        "$ref": "#/components/schemas/EventExtensions"
+                    },
+                    "contentType": {
+                        "type": "string",
+                        "description": "The type that content is encoded in, always \"application/json\"."
+                    },
+                    "eventTypeVersion": {
+                        "type": "string",
+                        "description": "The version of the event type."
+                    }
+                }
+            },
             "ErrorResponse": {
                 "type": "object",
                 "properties": {
@@ -50159,7 +50684,7 @@
                     "data": {
                         "type": "array",
                         "items": {
-                            "type": "object"
+                            "$ref": "#/components/schemas/ArchiveItem"
                         },
                         "description": "List of archived events. The structure of the events depend on their type and version."
                     }
@@ -59618,7 +60143,7 @@
                         "example": "795dedf8cf38b60088a6e4feb6eace75"
                     }
                 },
-                "description": "### Custom error codes\n* BG-3 - Access denied, no read access\n"
+                "description": "### Custom error codes\n* BG-3 - Access denied, no read access\n* BG-30 - Feature not enabled on tenant.\n"
             },
             "errorResponseNotFound": {
                 "type": "object",

@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.2287.0",
+        "version": "12.2309.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -12439,6 +12439,14 @@
                         "title": "LOCERR_FEATURE_DISABLED"
                     },
                     {
+                        "x-qlik-const": 21000,
+                        "title": "LOCERR_LOAD_TOO_MANY_FIELDS"
+                    },
+                    {
+                        "x-qlik-const": 21001,
+                        "title": "LOCERR_LOAD_TOO_MANY_TABLES"
+                    },
+                    {
                         "x-qlik-const": -32600,
                         "title": "LOCERR_JSON_RPC_INVALID_REQUEST"
                     },
@@ -14664,6 +14672,18 @@
                     "qOneAndOnlyOne": {
                         "type": "boolean",
                         "description": "If set to true, the field has always one selection (not 0 and not more than 1). If another value is selected, the previous one is unselected.\nThe default value is false. This parameter is not returned if set to false."
+                    },
+                    "qValuesCount": {
+                        "type": "integer",
+                        "description": "Count of selected values. Indicates if the Values field is loaded.",
+                        "format": "int32",
+                        "default": -1
+                    },
+                    "qExcludedValuesCount": {
+                        "type": "integer",
+                        "description": "Count of excluded values. Indicates if the ExcludedValues field is loaded.",
+                        "format": "int32",
+                        "default": -1
                     }
                 }
             },
@@ -22994,6 +23014,12 @@
                         "$ref": "#/components/errors/LOCERR_FEATURE_DISABLED"
                     },
                     {
+                        "$ref": "#/components/errors/LOCERR_LOAD_TOO_MANY_FIELDS"
+                    },
+                    {
+                        "$ref": "#/components/errors/LOCERR_LOAD_TOO_MANY_TABLES"
+                    },
+                    {
                         "$ref": "#/components/errors/LOCERR_JSON_RPC_INVALID_REQUEST"
                     },
                     {
@@ -24186,6 +24212,14 @@
             "LOCERR_FEATURE_DISABLED": {
                 "code": 20000,
                 "message": "Feature disabled"
+            },
+            "LOCERR_LOAD_TOO_MANY_FIELDS": {
+                "code": 21000,
+                "message": "Too many fields in file"
+            },
+            "LOCERR_LOAD_TOO_MANY_TABLES": {
+                "code": 21001,
+                "message": "Too many tables in file"
             },
             "LOCERR_JSON_RPC_INVALID_REQUEST": {
                 "code": -32600,
