@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.2309.0",
+        "version": "12.2329.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -17106,6 +17106,11 @@
                     "qLibraryId": {
                         "type": "string",
                         "description": "Refers to a dimension stored in the library."
+                    },
+                    "qEffectiveDimensionName": {
+                        "type": "string",
+                        "description": "The expanded and stripped dimension name used internally in engine.",
+                        "x-qlik-stability": "experimental"
                     }
                 }
             },
@@ -18403,6 +18408,11 @@
                     "qLibraryId": {
                         "type": "string",
                         "description": "Refers to a dimension stored in the library."
+                    },
+                    "qEffectiveDimensionName": {
+                        "type": "string",
+                        "description": "The expanded and stripped dimension name used internally in engine.",
+                        "x-qlik-stability": "experimental"
                     }
                 },
                 "x-qlik-stability": "stable"
