@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.2335.0",
+        "version": "12.2351.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -17720,6 +17720,10 @@
                     "qAlias": {
                         "type": "string",
                         "description": "Alias of the dimension."
+                    },
+                    "qScriptGenerated": {
+                        "type": "boolean",
+                        "default": false
                     }
                 }
             },
@@ -17751,6 +17755,9 @@
                     "qAlias": {
                         "type": "string",
                         "description": "Alias of the dimension."
+                    },
+                    "qScriptGenerated": {
+                        "type": "boolean"
                     }
                 }
             },
@@ -17790,6 +17797,10 @@
                         "type": "object",
                         "description": "Format of the field.\nThis parameter is optional.",
                         "$ref": "#/components/schemas/FieldAttributes"
+                    },
+                    "qScriptGenerated": {
+                        "type": "boolean",
+                        "default": false
                     }
                 }
             },
@@ -17825,6 +17836,9 @@
                         "type": "object",
                         "description": "Format of the field.\nThis parameter is optional.",
                         "$ref": "#/components/schemas/FieldAttributes"
+                    },
+                    "qScriptGenerated": {
+                        "type": "boolean"
                     }
                 }
             },
