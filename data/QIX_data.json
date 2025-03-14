@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.2354.0",
+        "version": "12.2368.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -9795,7 +9795,7 @@
                     "$ref": "#/components/errors/GenericErrors"
                 }
             ],
-            "x-qlik-stability": "experimental",
+            "x-qlik-stability": "locked",
             "x-qlik-access-control": [
                 "update"
             ]
