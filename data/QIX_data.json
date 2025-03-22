@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.2369.0",
+        "version": "12.2375.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -12463,6 +12463,10 @@
                         "title": "LOCERR_JSON_RPC_INTERNAL_ERROR"
                     },
                     {
+                        "x-qlik-const": -32604,
+                        "title": "LOCERR_JSON_RPC_RESPONSE_TOO_LARGE"
+                    },
+                    {
                         "x-qlik-const": -32700,
                         "title": "LOCERR_JSON_RPC_PARSE_ERROR"
                     },
@@ -23056,6 +23060,9 @@
                         "$ref": "#/components/errors/LOCERR_JSON_RPC_INTERNAL_ERROR"
                     },
                     {
+                        "$ref": "#/components/errors/LOCERR_JSON_RPC_RESPONSE_TOO_LARGE"
+                    },
+                    {
                         "$ref": "#/components/errors/LOCERR_JSON_RPC_PARSE_ERROR"
                     },
                     {
@@ -24260,6 +24267,10 @@
             "LOCERR_JSON_RPC_INTERNAL_ERROR": {
                 "code": -32603,
                 "message": "Internal JSON-RPC error"
+            },
+            "LOCERR_JSON_RPC_RESPONSE_TOO_LARGE": {
+                "code": -32604,
+                "message": "Response too large"
             },
             "LOCERR_JSON_RPC_PARSE_ERROR": {
                 "code": -32700,
