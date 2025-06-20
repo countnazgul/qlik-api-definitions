@@ -2,7 +2,7 @@
     "openrpc": "1.0.0",
     "info": {
         "title": "QIX",
-        "version": "12.2471.0",
+        "version": "12.2472.0",
         "description": "The JSON-RPC API over websocket that enables you to interact with the Qlik Associative Engine."
     },
     "methods": [
@@ -3345,7 +3345,7 @@
         },
         {
             "name": "GenericObject.CreateGroup",
-            "description": "You can use the CreateGroup method with any object that contains an object grouping definition.\nThis method allows you to create a new subgroup of objects directly and add it to a groups members.",
+            "description": "You can use the CreateGroup method with any object that contains an object grouping definition.\nThis method allows you to create a new subgroup of objects directly and add it to a group's members.\nReturns the ID of the created subgroup.",
             "params": [
                 {
                     "name": "qPath",
@@ -15854,9 +15854,15 @@
                         "description": "Specifies the class of the group's object members.\n\nOne of:\n* bookmark or MEMBER_BOOKMARK\n* object or MEMBER_OBJECT",
                         "$ref": "#/components/schemas/NxGroupMemberClass"
                     },
-                    "qType": {
+                    "qObjectType": {
                         "type": "string",
-                        "description": "Specifies the type of the group's object members."
+                        "description": "Specifies the type of the group's object members.",
+                        "default": "bookmark"
+                    },
+                    "qGroupType": {
+                        "type": "string",
+                        "description": "Specifies the type of the group's subgroup members.",
+                        "default": "objectgroup"
                     },
                     "qLabel": {
                         "type": "string",
