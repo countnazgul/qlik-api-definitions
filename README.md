@@ -1,5 +1,9 @@
 # Qlik SaaS API definitions
 
+## Not updating anymore and will be archived soon in favour of [qlikapi-ts.qlik.dev](https://qlikapi-ts.qlik.dev/)
+## For the definitions have a look at [withdave/qc-specs](https://github.com/withdave/qc-specs)
+
+
 Qlik SaaS API definitions can be browsed from [qlik.dev](https://qlik.dev/apis) and can be downloaded individually. Although full list do not currently exists.
 
 The aim of this project is to download and combine these definitions.
